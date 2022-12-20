@@ -681,11 +681,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -709,11 +709,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -737,11 +737,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -760,11 +760,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -788,11 +788,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -816,11 +816,11 @@ namespace Google.Cloud.Iap.V1
         /// Required. The TunnelDestGroup to create.
         /// </param>
         /// <param name="tunnelDestGroupId">
-        /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-        /// the resource name.
+        /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+        /// component of the resource name.
         /// 
         /// This value must be 4-63 characters, and valid characters
-        /// are `[a-z][0-9]-`.
+        /// are `[a-z]-`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

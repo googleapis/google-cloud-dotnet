@@ -61,140 +61,155 @@ namespace Google.Cloud.Iap.V1 {
             "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EECEjwKD2FjY2Vzc19zZXR0aW5ncxgF",
             "IAEoCzIjLmdvb2dsZS5jbG91ZC5pYXAudjEuQWNjZXNzU2V0dGluZ3MSRgoU",
             "YXBwbGljYXRpb25fc2V0dGluZ3MYBiABKAsyKC5nb29nbGUuY2xvdWQuaWFw",
-            "LnYxLkFwcGxpY2F0aW9uU2V0dGluZ3Mi/gEKDkFjY2Vzc1NldHRpbmdzEjgK",
+            "LnYxLkFwcGxpY2F0aW9uU2V0dGluZ3MizQIKDkFjY2Vzc1NldHRpbmdzEjgK",
             "DWdjaXBfc2V0dGluZ3MYASABKAsyIS5nb29nbGUuY2xvdWQuaWFwLnYxLkdj",
             "aXBTZXR0aW5ncxI4Cg1jb3JzX3NldHRpbmdzGAIgASgLMiEuZ29vZ2xlLmNs",
             "b3VkLmlhcC52MS5Db3JzU2V0dGluZ3MSOgoOb2F1dGhfc2V0dGluZ3MYAyAB",
             "KAsyIi5nb29nbGUuY2xvdWQuaWFwLnYxLk9BdXRoU2V0dGluZ3MSPAoPcmVh",
             "dXRoX3NldHRpbmdzGAYgASgLMiMuZ29vZ2xlLmNsb3VkLmlhcC52MS5SZWF1",
-            "dGhTZXR0aW5ncyJYCgxHY2lwU2V0dGluZ3MSEgoKdGVuYW50X2lkcxgBIAMo",
-            "CRI0Cg5sb2dpbl9wYWdlX3VyaRgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJpbmdWYWx1ZSJGCgxDb3JzU2V0dGluZ3MSNgoSYWxsb3dfaHR0cF9vcHRp",
-            "b25zGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZSJBCg1PQXV0",
-            "aFNldHRpbmdzEjAKCmxvZ2luX2hpbnQYAiABKAsyHC5nb29nbGUucHJvdG9i",
-            "dWYuU3RyaW5nVmFsdWUizQIKDlJlYXV0aFNldHRpbmdzEjoKBm1ldGhvZBgB",
-            "IAEoDjIqLmdvb2dsZS5jbG91ZC5pYXAudjEuUmVhdXRoU2V0dGluZ3MuTWV0",
-            "aG9kEioKB21heF9hZ2UYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SQwoLcG9saWN5X3R5cGUYAyABKA4yLi5nb29nbGUuY2xvdWQuaWFwLnYx",
-            "LlJlYXV0aFNldHRpbmdzLlBvbGljeVR5cGUiSQoGTWV0aG9kEhYKEk1FVEhP",
-            "RF9VTlNQRUNJRklFRBAAEgkKBUxPR0lOEAESDAoIUEFTU1dPUkQQAhIOCgpT",
-            "RUNVUkVfS0VZEAMiQwoKUG9saWN5VHlwZRIbChdQT0xJQ1lfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEgsKB01JTklNVU0QARILCgdERUZBVUxUEAIi1gEKE0FwcGxp",
-            "Y2F0aW9uU2V0dGluZ3MSNgoMY3NtX3NldHRpbmdzGAEgASgLMiAuZ29vZ2xl",
-            "LmNsb3VkLmlhcC52MS5Dc21TZXR0aW5ncxJSChthY2Nlc3NfZGVuaWVkX3Bh",
-            "Z2Vfc2V0dGluZ3MYAiABKAsyLS5nb29nbGUuY2xvdWQuaWFwLnYxLkFjY2Vz",
-            "c0RlbmllZFBhZ2VTZXR0aW5ncxIzCg1jb29raWVfZG9tYWluGAMgASgLMhwu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIkAKC0NzbVNldHRpbmdzEjEK",
-            "C3JjdG9rZW5fYXVkGAEgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
-            "bHVlIpoBChhBY2Nlc3NEZW5pZWRQYWdlU2V0dGluZ3MSPAoWYWNjZXNzX2Rl",
-            "bmllZF9wYWdlX3VyaRgBIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdW",
-            "YWx1ZRJAChxnZW5lcmF0ZV90cm91Ymxlc2hvb3RpbmdfdXJpGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZSIoChFMaXN0QnJhbmRzUmVxdWVz",
-            "dBITCgZwYXJlbnQYASABKAlCA+BBAiJAChJMaXN0QnJhbmRzUmVzcG9uc2US",
-            "KgoGYnJhbmRzGAEgAygLMhouZ29vZ2xlLmNsb3VkLmlhcC52MS5CcmFuZCJZ",
-            "ChJDcmVhdGVCcmFuZFJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISLgoF",
-            "YnJhbmQYAiABKAsyGi5nb29nbGUuY2xvdWQuaWFwLnYxLkJyYW5kQgPgQQIi",
-            "JAoPR2V0QnJhbmRSZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BBAiJiCiRMaXN0",
-            "SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50c1JlcXVlc3QSEwoGcGFyZW50GAEg",
-            "ASgJQgPgQQISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkilQEKJUxpc3RJZGVudGl0eUF3YXJlUHJveHlDbGllbnRzUmVzcG9uc2US",
-            "UwocaWRlbnRpdHlfYXdhcmVfcHJveHlfY2xpZW50cxgBIAMoCzItLmdvb2ds",
-            "ZS5jbG91ZC5pYXAudjEuSWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50EhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSKVAQolQ3JlYXRlSWRlbnRpdHlBd2FyZVBy",
-            "b3h5Q2xpZW50UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJXChtpZGVu",
-            "dGl0eV9hd2FyZV9wcm94eV9jbGllbnQYAiABKAsyLS5nb29nbGUuY2xvdWQu",
-            "aWFwLnYxLklkZW50aXR5QXdhcmVQcm94eUNsaWVudEID4EECIjcKIkdldElk",
-            "ZW50aXR5QXdhcmVQcm94eUNsaWVudFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID",
-            "4EECIj8KKlJlc2V0SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50U2VjcmV0UmVx",
-            "dWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiOgolRGVsZXRlSWRlbnRpdHlBd2Fy",
-            "ZVByb3h5Q2xpZW50UmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIibAoFQnJh",
-            "bmQSEQoEbmFtZRgBIAEoCUID4EEDEhUKDXN1cHBvcnRfZW1haWwYAiABKAkS",
-            "GQoRYXBwbGljYXRpb25fdGl0bGUYAyABKAkSHgoRb3JnX2ludGVybmFsX29u",
-            "bHkYBCABKAhCA+BBAyJYChhJZGVudGl0eUF3YXJlUHJveHlDbGllbnQSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhMKBnNlY3JldBgCIAEoCUID4EEDEhQKDGRpc3Bs",
-            "YXlfbmFtZRgDIAEoCTLADgoeSWRlbnRpdHlBd2FyZVByb3h5QWRtaW5TZXJ2",
-            "aWNlEnQKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9s",
-            "aWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IimC0+STAiMiHi92",
-            "MS97cmVzb3VyY2U9Kip9OnNldElhbVBvbGljeToBKhJ0CgxHZXRJYW1Qb2xp",
-            "Y3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
-            "bGUuaWFtLnYxLlBvbGljeSIpgtPkkwIjIh4vdjEve3Jlc291cmNlPSoqfTpn",
-            "ZXRJYW1Qb2xpY3k6ASoSmgEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2ds",
-            "ZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5p",
-            "YW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiL4LT5JMCKSIkL3Yx",
-            "L3tyZXNvdXJjZT0qKn06dGVzdElhbVBlcm1pc3Npb25zOgEqEoEBCg5HZXRJ",
-            "YXBTZXR0aW5ncxIqLmdvb2dsZS5jbG91ZC5pYXAudjEuR2V0SWFwU2V0dGlu",
-            "Z3NSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLmlhcC52MS5JYXBTZXR0aW5ncyIh",
-            "gtPkkwIbEhkvdjEve25hbWU9Kip9OmlhcFNldHRpbmdzEqIBChFVcGRhdGVJ",
-            "YXBTZXR0aW5ncxItLmdvb2dsZS5jbG91ZC5pYXAudjEuVXBkYXRlSWFwU2V0",
-            "dGluZ3NSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLmlhcC52MS5JYXBTZXR0aW5n",
-            "cyI8gtPkkwI2MiYvdjEve2lhcF9zZXR0aW5ncy5uYW1lPSoqfTppYXBTZXR0",
-            "aW5nczoMaWFwX3NldHRpbmdzEscBChRMaXN0VHVubmVsRGVzdEdyb3VwcxIw",
-            "Lmdvb2dsZS5jbG91ZC5pYXAudjEuTGlzdFR1bm5lbERlc3RHcm91cHNSZXF1",
-            "ZXN0GjEuZ29vZ2xlLmNsb3VkLmlhcC52MS5MaXN0VHVubmVsRGVzdEdyb3Vw",
-            "c1Jlc3BvbnNlIkqC0+STAjsSOS92MS97cGFyZW50PXByb2plY3RzLyovaWFw",
-            "X3R1bm5lbC9sb2NhdGlvbnMvKn0vZGVzdEdyb3Vwc9pBBnBhcmVudBL3AQoV",
-            "Q3JlYXRlVHVubmVsRGVzdEdyb3VwEjEuZ29vZ2xlLmNsb3VkLmlhcC52MS5D",
-            "cmVhdGVUdW5uZWxEZXN0R3JvdXBSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmlh",
-            "cC52MS5UdW5uZWxEZXN0R3JvdXAihAGC0+STAk4iOS92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovaWFwX3R1bm5lbC9sb2NhdGlvbnMvKn0vZGVzdEdyb3VwczoR",
-            "dHVubmVsX2Rlc3RfZ3JvdXDaQS1wYXJlbnQsdHVubmVsX2Rlc3RfZ3JvdXAs",
-            "dHVubmVsX2Rlc3RfZ3JvdXBfaWQStAEKEkdldFR1bm5lbERlc3RHcm91cBIu",
-            "Lmdvb2dsZS5jbG91ZC5pYXAudjEuR2V0VHVubmVsRGVzdEdyb3VwUmVxdWVz",
-            "dBokLmdvb2dsZS5jbG91ZC5pYXAudjEuVHVubmVsRGVzdEdyb3VwIkiC0+ST",
-            "AjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2lhcF90dW5uZWwvbG9jYXRpb25z",
-            "LyovZGVzdEdyb3Vwcy8qfdpBBG5hbWUSrAEKFURlbGV0ZVR1bm5lbERlc3RH",
-            "cm91cBIxLmdvb2dsZS5jbG91ZC5pYXAudjEuRGVsZXRlVHVubmVsRGVzdEdy",
-            "b3VwUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJIgtPkkwI7Kjkv",
-            "djEve25hbWU9cHJvamVjdHMvKi9pYXBfdHVubmVsL2xvY2F0aW9ucy8qL2Rl",
-            "c3RHcm91cHMvKn3aQQRuYW1lEvkBChVVcGRhdGVUdW5uZWxEZXN0R3JvdXAS",
-            "MS5nb29nbGUuY2xvdWQuaWFwLnYxLlVwZGF0ZVR1bm5lbERlc3RHcm91cFJl",
-            "cXVlc3QaJC5nb29nbGUuY2xvdWQuaWFwLnYxLlR1bm5lbERlc3RHcm91cCKG",
-            "AYLT5JMCYDJLL3YxL3t0dW5uZWxfZGVzdF9ncm91cC5uYW1lPXByb2plY3Rz",
-            "LyovaWFwX3R1bm5lbC9sb2NhdGlvbnMvKi9kZXN0R3JvdXBzLyp9OhF0dW5u",
-            "ZWxfZGVzdF9ncm91cNpBHXR1bm5lbF9kZXN0X2dyb3VwLHVwZGF0ZV9tYXNr",
-            "GkbKQRJpYXAuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtMqgMCh5JZGVudGl0eUF3YXJl",
-            "UHJveHlPQXV0aFNlcnZpY2UShQEKCkxpc3RCcmFuZHMSJi5nb29nbGUuY2xv",
-            "dWQuaWFwLnYxLkxpc3RCcmFuZHNSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmlh",
-            "cC52MS5MaXN0QnJhbmRzUmVzcG9uc2UiJoLT5JMCIBIeL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKn0vYnJhbmRzEoEBCgtDcmVhdGVCcmFuZBInLmdvb2dsZS5j",
-            "bG91ZC5pYXAudjEuQ3JlYXRlQnJhbmRSZXF1ZXN0GhouZ29vZ2xlLmNsb3Vk",
-            "LmlhcC52MS5CcmFuZCItgtPkkwInIh4vdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9icmFuZHM6BWJyYW5kEnQKCEdldEJyYW5kEiQuZ29vZ2xlLmNsb3VkLmlh",
-            "cC52MS5HZXRCcmFuZFJlcXVlc3QaGi5nb29nbGUuY2xvdWQuaWFwLnYxLkJy",
-            "YW5kIiaC0+STAiASHi92MS97bmFtZT1wcm9qZWN0cy8qL2JyYW5kcy8qfRLs",
-            "AQoeQ3JlYXRlSWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50EjouZ29vZ2xlLmNs",
-            "b3VkLmlhcC52MS5DcmVhdGVJZGVudGl0eUF3YXJlUHJveHlDbGllbnRSZXF1",
-            "ZXN0Gi0uZ29vZ2xlLmNsb3VkLmlhcC52MS5JZGVudGl0eUF3YXJlUHJveHlD",
-            "bGllbnQiX4LT5JMCWSI6L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9icmFuZHMv",
-            "Kn0vaWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50czobaWRlbnRpdHlfYXdhcmVf",
-            "cHJveHlfY2xpZW50EtoBCh1MaXN0SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50",
-            "cxI5Lmdvb2dsZS5jbG91ZC5pYXAudjEuTGlzdElkZW50aXR5QXdhcmVQcm94",
-            "eUNsaWVudHNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLmlhcC52MS5MaXN0SWRl",
-            "bnRpdHlBd2FyZVByb3h5Q2xpZW50c1Jlc3BvbnNlIkKC0+STAjwSOi92MS97",
-            "cGFyZW50PXByb2plY3RzLyovYnJhbmRzLyp9L2lkZW50aXR5QXdhcmVQcm94",
-            "eUNsaWVudHMSyQEKG0dldElkZW50aXR5QXdhcmVQcm94eUNsaWVudBI3Lmdv",
-            "b2dsZS5jbG91ZC5pYXAudjEuR2V0SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50",
-            "UmVxdWVzdBotLmdvb2dsZS5jbG91ZC5pYXAudjEuSWRlbnRpdHlBd2FyZVBy",
-            "b3h5Q2xpZW50IkKC0+STAjwSOi92MS97bmFtZT1wcm9qZWN0cy8qL2JyYW5k",
-            "cy8qL2lkZW50aXR5QXdhcmVQcm94eUNsaWVudHMvKn0S6AEKI1Jlc2V0SWRl",
-            "bnRpdHlBd2FyZVByb3h5Q2xpZW50U2VjcmV0Ej8uZ29vZ2xlLmNsb3VkLmlh",
-            "cC52MS5SZXNldElkZW50aXR5QXdhcmVQcm94eUNsaWVudFNlY3JldFJlcXVl",
-            "c3QaLS5nb29nbGUuY2xvdWQuaWFwLnYxLklkZW50aXR5QXdhcmVQcm94eUNs",
-            "aWVudCJRgtPkkwJLIkYvdjEve25hbWU9cHJvamVjdHMvKi9icmFuZHMvKi9p",
-            "ZGVudGl0eUF3YXJlUHJveHlDbGllbnRzLyp9OnJlc2V0U2VjcmV0OgEqErgB",
-            "Ch5EZWxldGVJZGVudGl0eUF3YXJlUHJveHlDbGllbnQSOi5nb29nbGUuY2xv",
-            "dWQuaWFwLnYxLkRlbGV0ZUlkZW50aXR5QXdhcmVQcm94eUNsaWVudFJlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQoLT5JMCPCo6L3YxL3tuYW1l",
-            "PXByb2plY3RzLyovYnJhbmRzLyovaWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50",
-            "cy8qfRpGykESaWFwLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULyAQoXY29tLmdvb2ds",
-            "ZS5jbG91ZC5pYXAudjFQAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC9pYXAvdjE7aWFwqgITR29vZ2xlLkNsb3VkLklh",
-            "cC5WMcoCE0dvb2dsZVxDbG91ZFxJYXBcVjHqAhZHb29nbGU6OkNsb3VkOjpJ",
-            "YXA6OlYx6kFXCiFpYXAuZ29vZ2xlYXBpcy5jb20vVHVubmVsTG9jYXRpb24S",
-            "MnByb2plY3RzL3twcm9qZWN0fS9pYXBfdHVubmVsL2xvY2F0aW9ucy97bG9j",
-            "YXRpb259YgZwcm90bzM="));
+            "dGhTZXR0aW5ncxJNChhhbGxvd2VkX2RvbWFpbnNfc2V0dGluZ3MYByABKAsy",
+            "Ky5nb29nbGUuY2xvdWQuaWFwLnYxLkFsbG93ZWREb21haW5zU2V0dGluZ3Mi",
+            "WAoMR2NpcFNldHRpbmdzEhIKCnRlbmFudF9pZHMYASADKAkSNAoObG9naW5f",
+            "cGFnZV91cmkYAiABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUi",
+            "RgoMQ29yc1NldHRpbmdzEjYKEmFsbG93X2h0dHBfb3B0aW9ucxgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUiQQoNT0F1dGhTZXR0aW5ncxIw",
+            "Cgpsb2dpbl9oaW50GAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
+            "bHVlItECCg5SZWF1dGhTZXR0aW5ncxI6CgZtZXRob2QYASABKA4yKi5nb29n",
+            "bGUuY2xvdWQuaWFwLnYxLlJlYXV0aFNldHRpbmdzLk1ldGhvZBIqCgdtYXhf",
+            "YWdlGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkMKC3BvbGlj",
+            "eV90eXBlGAMgASgOMi4uZ29vZ2xlLmNsb3VkLmlhcC52MS5SZWF1dGhTZXR0",
+            "aW5ncy5Qb2xpY3lUeXBlIk0KBk1ldGhvZBIWChJNRVRIT0RfVU5TUEVDSUZJ",
+            "RUQQABIJCgVMT0dJThABEhAKCFBBU1NXT1JEEAIaAggBEg4KClNFQ1VSRV9L",
+            "RVkQAyJDCgpQb2xpY3lUeXBlEhsKF1BPTElDWV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCwoHTUlOSU1VTRABEgsKB0RFRkFVTFQQAiJJChZBbGxvd2VkRG9tYWlu",
+            "c1NldHRpbmdzEhMKBmVuYWJsZRgBIAEoCEgAiAEBEg8KB2RvbWFpbnMYAiAD",
+            "KAlCCQoHX2VuYWJsZSKxAgoTQXBwbGljYXRpb25TZXR0aW5ncxI2Cgxjc21f",
+            "c2V0dGluZ3MYASABKAsyIC5nb29nbGUuY2xvdWQuaWFwLnYxLkNzbVNldHRp",
+            "bmdzElIKG2FjY2Vzc19kZW5pZWRfcGFnZV9zZXR0aW5ncxgCIAEoCzItLmdv",
+            "b2dsZS5jbG91ZC5pYXAudjEuQWNjZXNzRGVuaWVkUGFnZVNldHRpbmdzEjMK",
+            "DWNvb2tpZV9kb21haW4YAyABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
+            "VmFsdWUSWQoeYXR0cmlidXRlX3Byb3BhZ2F0aW9uX3NldHRpbmdzGAQgASgL",
+            "MjEuZ29vZ2xlLmNsb3VkLmlhcC52MS5BdHRyaWJ1dGVQcm9wYWdhdGlvblNl",
+            "dHRpbmdzIkAKC0NzbVNldHRpbmdzEjEKC3JjdG9rZW5fYXVkGAEgASgLMhwu",
+            "Z29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIpICChhBY2Nlc3NEZW5pZWRQ",
+            "YWdlU2V0dGluZ3MSPAoWYWNjZXNzX2RlbmllZF9wYWdlX3VyaRgBIAEoCzIc",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRJAChxnZW5lcmF0ZV90cm91",
+            "Ymxlc2hvb3RpbmdfdXJpGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xW",
+            "YWx1ZRJNCiRyZW1lZGlhdGlvbl90b2tlbl9nZW5lcmF0aW9uX2VuYWJsZWQY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlSACIAQFCJwolX3Jl",
+            "bWVkaWF0aW9uX3Rva2VuX2dlbmVyYXRpb25fZW5hYmxlZCKiAgocQXR0cmli",
+            "dXRlUHJvcGFnYXRpb25TZXR0aW5ncxIXCgpleHByZXNzaW9uGAEgASgJSACI",
+            "AQESXwoSb3V0cHV0X2NyZWRlbnRpYWxzGAIgAygOMkMuZ29vZ2xlLmNsb3Vk",
+            "LmlhcC52MS5BdHRyaWJ1dGVQcm9wYWdhdGlvblNldHRpbmdzLk91dHB1dENy",
+            "ZWRlbnRpYWxzEhMKBmVuYWJsZRgDIAEoCEgBiAEBIlkKEU91dHB1dENyZWRl",
+            "bnRpYWxzEiIKHk9VVFBVVF9DUkVERU5USUFMU19VTlNQRUNJRklFRBAAEgoK",
+            "BkhFQURFUhABEgcKA0pXVBACEgsKB1JDVE9LRU4QA0INCgtfZXhwcmVzc2lv",
+            "bkIJCgdfZW5hYmxlIigKEUxpc3RCcmFuZHNSZXF1ZXN0EhMKBnBhcmVudBgB",
+            "IAEoCUID4EECIkAKEkxpc3RCcmFuZHNSZXNwb25zZRIqCgZicmFuZHMYASAD",
+            "KAsyGi5nb29nbGUuY2xvdWQuaWFwLnYxLkJyYW5kIlkKEkNyZWF0ZUJyYW5k",
+            "UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIuCgVicmFuZBgCIAEoCzIa",
+            "Lmdvb2dsZS5jbG91ZC5pYXAudjEuQnJhbmRCA+BBAiIkCg9HZXRCcmFuZFJl",
+            "cXVlc3QSEQoEbmFtZRgBIAEoCUID4EECImIKJExpc3RJZGVudGl0eUF3YXJl",
+            "UHJveHlDbGllbnRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKVAQolTGlzdElk",
+            "ZW50aXR5QXdhcmVQcm94eUNsaWVudHNSZXNwb25zZRJTChxpZGVudGl0eV9h",
+            "d2FyZV9wcm94eV9jbGllbnRzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmlhcC52",
+            "MS5JZGVudGl0eUF3YXJlUHJveHlDbGllbnQSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIpUBCiVDcmVhdGVJZGVudGl0eUF3YXJlUHJveHlDbGllbnRSZXF1",
+            "ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECElcKG2lkZW50aXR5X2F3YXJlX3By",
+            "b3h5X2NsaWVudBgCIAEoCzItLmdvb2dsZS5jbG91ZC5pYXAudjEuSWRlbnRp",
+            "dHlBd2FyZVByb3h5Q2xpZW50QgPgQQIiNwoiR2V0SWRlbnRpdHlBd2FyZVBy",
+            "b3h5Q2xpZW50UmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiPwoqUmVzZXRJ",
+            "ZGVudGl0eUF3YXJlUHJveHlDbGllbnRTZWNyZXRSZXF1ZXN0EhEKBG5hbWUY",
+            "ASABKAlCA+BBAiI6CiVEZWxldGVJZGVudGl0eUF3YXJlUHJveHlDbGllbnRS",
+            "ZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BBAiJsCgVCcmFuZBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSFQoNc3VwcG9ydF9lbWFpbBgCIAEoCRIZChFhcHBsaWNhdGlv",
+            "bl90aXRsZRgDIAEoCRIeChFvcmdfaW50ZXJuYWxfb25seRgEIAEoCEID4EED",
+            "IlgKGElkZW50aXR5QXdhcmVQcm94eUNsaWVudBIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSEwoGc2VjcmV0GAIgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAMgASgJ",
+            "MsAOCh5JZGVudGl0eUF3YXJlUHJveHlBZG1pblNlcnZpY2USdAoMU2V0SWFt",
+            "UG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUu",
+            "Z29vZ2xlLmlhbS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3tyZXNvdXJjZT0q",
+            "Kn06c2V0SWFtUG9saWN5OgEqEnQKDEdldElhbVBvbGljeRIiLmdvb2dsZS5p",
+            "YW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9s",
+            "aWN5IimC0+STAiMiHi92MS97cmVzb3VyY2U9Kip9OmdldElhbVBvbGljeToB",
+            "KhKaAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0",
+            "SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFt",
+            "UGVybWlzc2lvbnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jlc291cmNlPSoq",
+            "fTp0ZXN0SWFtUGVybWlzc2lvbnM6ASoSgQEKDkdldElhcFNldHRpbmdzEiou",
+            "Z29vZ2xlLmNsb3VkLmlhcC52MS5HZXRJYXBTZXR0aW5nc1JlcXVlc3QaIC5n",
+            "b29nbGUuY2xvdWQuaWFwLnYxLklhcFNldHRpbmdzIiGC0+STAhsSGS92MS97",
+            "bmFtZT0qKn06aWFwU2V0dGluZ3MSogEKEVVwZGF0ZUlhcFNldHRpbmdzEi0u",
+            "Z29vZ2xlLmNsb3VkLmlhcC52MS5VcGRhdGVJYXBTZXR0aW5nc1JlcXVlc3Qa",
+            "IC5nb29nbGUuY2xvdWQuaWFwLnYxLklhcFNldHRpbmdzIjyC0+STAjYyJi92",
+            "MS97aWFwX3NldHRpbmdzLm5hbWU9Kip9OmlhcFNldHRpbmdzOgxpYXBfc2V0",
+            "dGluZ3MSxwEKFExpc3RUdW5uZWxEZXN0R3JvdXBzEjAuZ29vZ2xlLmNsb3Vk",
+            "LmlhcC52MS5MaXN0VHVubmVsRGVzdEdyb3Vwc1JlcXVlc3QaMS5nb29nbGUu",
+            "Y2xvdWQuaWFwLnYxLkxpc3RUdW5uZWxEZXN0R3JvdXBzUmVzcG9uc2UiSoLT",
+            "5JMCOxI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pYXBfdHVubmVsL2xvY2F0",
+            "aW9ucy8qfS9kZXN0R3JvdXBz2kEGcGFyZW50EvcBChVDcmVhdGVUdW5uZWxE",
+            "ZXN0R3JvdXASMS5nb29nbGUuY2xvdWQuaWFwLnYxLkNyZWF0ZVR1bm5lbERl",
+            "c3RHcm91cFJlcXVlc3QaJC5nb29nbGUuY2xvdWQuaWFwLnYxLlR1bm5lbERl",
+            "c3RHcm91cCKEAYLT5JMCTiI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pYXBf",
+            "dHVubmVsL2xvY2F0aW9ucy8qfS9kZXN0R3JvdXBzOhF0dW5uZWxfZGVzdF9n",
+            "cm91cNpBLXBhcmVudCx0dW5uZWxfZGVzdF9ncm91cCx0dW5uZWxfZGVzdF9n",
+            "cm91cF9pZBK0AQoSR2V0VHVubmVsRGVzdEdyb3VwEi4uZ29vZ2xlLmNsb3Vk",
+            "LmlhcC52MS5HZXRUdW5uZWxEZXN0R3JvdXBSZXF1ZXN0GiQuZ29vZ2xlLmNs",
+            "b3VkLmlhcC52MS5UdW5uZWxEZXN0R3JvdXAiSILT5JMCOxI5L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovaWFwX3R1bm5lbC9sb2NhdGlvbnMvKi9kZXN0R3JvdXBz",
+            "Lyp92kEEbmFtZRKsAQoVRGVsZXRlVHVubmVsRGVzdEdyb3VwEjEuZ29vZ2xl",
+            "LmNsb3VkLmlhcC52MS5EZWxldGVUdW5uZWxEZXN0R3JvdXBSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IkiC0+STAjsqOS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2lhcF90dW5uZWwvbG9jYXRpb25zLyovZGVzdEdyb3Vwcy8qfdpB",
+            "BG5hbWUS+QEKFVVwZGF0ZVR1bm5lbERlc3RHcm91cBIxLmdvb2dsZS5jbG91",
+            "ZC5pYXAudjEuVXBkYXRlVHVubmVsRGVzdEdyb3VwUmVxdWVzdBokLmdvb2ds",
+            "ZS5jbG91ZC5pYXAudjEuVHVubmVsRGVzdEdyb3VwIoYBgtPkkwJgMksvdjEv",
+            "e3R1bm5lbF9kZXN0X2dyb3VwLm5hbWU9cHJvamVjdHMvKi9pYXBfdHVubmVs",
+            "L2xvY2F0aW9ucy8qL2Rlc3RHcm91cHMvKn06EXR1bm5lbF9kZXN0X2dyb3Vw",
+            "2kEddHVubmVsX2Rlc3RfZ3JvdXAsdXBkYXRlX21hc2saRspBEmlhcC5nb29n",
+            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0yqAwKHklkZW50aXR5QXdhcmVQcm94eU9BdXRoU2Vy",
+            "dmljZRKFAQoKTGlzdEJyYW5kcxImLmdvb2dsZS5jbG91ZC5pYXAudjEuTGlz",
+            "dEJyYW5kc1JlcXVlc3QaJy5nb29nbGUuY2xvdWQuaWFwLnYxLkxpc3RCcmFu",
+            "ZHNSZXNwb25zZSImgtPkkwIgEh4vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9i",
+            "cmFuZHMSgQEKC0NyZWF0ZUJyYW5kEicuZ29vZ2xlLmNsb3VkLmlhcC52MS5D",
+            "cmVhdGVCcmFuZFJlcXVlc3QaGi5nb29nbGUuY2xvdWQuaWFwLnYxLkJyYW5k",
+            "Ii2C0+STAiciHi92MS97cGFyZW50PXByb2plY3RzLyp9L2JyYW5kczoFYnJh",
+            "bmQSdAoIR2V0QnJhbmQSJC5nb29nbGUuY2xvdWQuaWFwLnYxLkdldEJyYW5k",
+            "UmVxdWVzdBoaLmdvb2dsZS5jbG91ZC5pYXAudjEuQnJhbmQiJoLT5JMCIBIe",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovYnJhbmRzLyp9EuwBCh5DcmVhdGVJZGVu",
+            "dGl0eUF3YXJlUHJveHlDbGllbnQSOi5nb29nbGUuY2xvdWQuaWFwLnYxLkNy",
+            "ZWF0ZUlkZW50aXR5QXdhcmVQcm94eUNsaWVudFJlcXVlc3QaLS5nb29nbGUu",
+            "Y2xvdWQuaWFwLnYxLklkZW50aXR5QXdhcmVQcm94eUNsaWVudCJfgtPkkwJZ",
+            "IjovdjEve3BhcmVudD1wcm9qZWN0cy8qL2JyYW5kcy8qfS9pZGVudGl0eUF3",
+            "YXJlUHJveHlDbGllbnRzOhtpZGVudGl0eV9hd2FyZV9wcm94eV9jbGllbnQS",
+            "2gEKHUxpc3RJZGVudGl0eUF3YXJlUHJveHlDbGllbnRzEjkuZ29vZ2xlLmNs",
+            "b3VkLmlhcC52MS5MaXN0SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50c1JlcXVl",
+            "c3QaOi5nb29nbGUuY2xvdWQuaWFwLnYxLkxpc3RJZGVudGl0eUF3YXJlUHJv",
+            "eHlDbGllbnRzUmVzcG9uc2UiQoLT5JMCPBI6L3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9icmFuZHMvKn0vaWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50cxLJAQob",
+            "R2V0SWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50EjcuZ29vZ2xlLmNsb3VkLmlh",
+            "cC52MS5HZXRJZGVudGl0eUF3YXJlUHJveHlDbGllbnRSZXF1ZXN0Gi0uZ29v",
+            "Z2xlLmNsb3VkLmlhcC52MS5JZGVudGl0eUF3YXJlUHJveHlDbGllbnQiQoLT",
+            "5JMCPBI6L3YxL3tuYW1lPXByb2plY3RzLyovYnJhbmRzLyovaWRlbnRpdHlB",
+            "d2FyZVByb3h5Q2xpZW50cy8qfRLoAQojUmVzZXRJZGVudGl0eUF3YXJlUHJv",
+            "eHlDbGllbnRTZWNyZXQSPy5nb29nbGUuY2xvdWQuaWFwLnYxLlJlc2V0SWRl",
+            "bnRpdHlBd2FyZVByb3h5Q2xpZW50U2VjcmV0UmVxdWVzdBotLmdvb2dsZS5j",
+            "bG91ZC5pYXAudjEuSWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50IlGC0+STAksi",
+            "Ri92MS97bmFtZT1wcm9qZWN0cy8qL2JyYW5kcy8qL2lkZW50aXR5QXdhcmVQ",
+            "cm94eUNsaWVudHMvKn06cmVzZXRTZWNyZXQ6ASoSuAEKHkRlbGV0ZUlkZW50",
+            "aXR5QXdhcmVQcm94eUNsaWVudBI6Lmdvb2dsZS5jbG91ZC5pYXAudjEuRGVs",
+            "ZXRlSWRlbnRpdHlBd2FyZVByb3h5Q2xpZW50UmVxdWVzdBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSJCgtPkkwI8KjovdjEve25hbWU9cHJvamVjdHMvKi9i",
+            "cmFuZHMvKi9pZGVudGl0eUF3YXJlUHJveHlDbGllbnRzLyp9GkbKQRJpYXAu",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQvIBChdjb20uZ29vZ2xlLmNsb3VkLmlhcC52",
+            "MVABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2lhcC92MTtpYXCqAhNHb29nbGUuQ2xvdWQuSWFwLlYxygITR29vZ2xl",
+            "XENsb3VkXElhcFxWMeoCFkdvb2dsZTo6Q2xvdWQ6OklhcDo6VjHqQVcKIWlh",
+            "cC5nb29nbGVhcGlzLmNvbS9UdW5uZWxMb2NhdGlvbhIycHJvamVjdHMve3By",
+            "b2plY3R9L2lhcF90dW5uZWwvbG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -208,14 +223,16 @@ namespace Google.Cloud.Iap.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.GetIapSettingsRequest), global::Google.Cloud.Iap.V1.GetIapSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest), global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest.Parser, new[]{ "IapSettings", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.IapSettings), global::Google.Cloud.Iap.V1.IapSettings.Parser, new[]{ "Name", "AccessSettings", "ApplicationSettings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AccessSettings), global::Google.Cloud.Iap.V1.AccessSettings.Parser, new[]{ "GcipSettings", "CorsSettings", "OauthSettings", "ReauthSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AccessSettings), global::Google.Cloud.Iap.V1.AccessSettings.Parser, new[]{ "GcipSettings", "CorsSettings", "OauthSettings", "ReauthSettings", "AllowedDomainsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.GcipSettings), global::Google.Cloud.Iap.V1.GcipSettings.Parser, new[]{ "TenantIds", "LoginPageUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.CorsSettings), global::Google.Cloud.Iap.V1.CorsSettings.Parser, new[]{ "AllowHttpOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.OAuthSettings), global::Google.Cloud.Iap.V1.OAuthSettings.Parser, new[]{ "LoginHint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.ReauthSettings), global::Google.Cloud.Iap.V1.ReauthSettings.Parser, new[]{ "Method", "MaxAge", "PolicyType" }, null, new[]{ typeof(global::Google.Cloud.Iap.V1.ReauthSettings.Types.Method), typeof(global::Google.Cloud.Iap.V1.ReauthSettings.Types.PolicyType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.ApplicationSettings), global::Google.Cloud.Iap.V1.ApplicationSettings.Parser, new[]{ "CsmSettings", "AccessDeniedPageSettings", "CookieDomain" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AllowedDomainsSettings), global::Google.Cloud.Iap.V1.AllowedDomainsSettings.Parser, new[]{ "Enable", "Domains" }, new[]{ "Enable" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.ApplicationSettings), global::Google.Cloud.Iap.V1.ApplicationSettings.Parser, new[]{ "CsmSettings", "AccessDeniedPageSettings", "CookieDomain", "AttributePropagationSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.CsmSettings), global::Google.Cloud.Iap.V1.CsmSettings.Parser, new[]{ "RctokenAud" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AccessDeniedPageSettings), global::Google.Cloud.Iap.V1.AccessDeniedPageSettings.Parser, new[]{ "AccessDeniedPageUri", "GenerateTroubleshootingUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AccessDeniedPageSettings), global::Google.Cloud.Iap.V1.AccessDeniedPageSettings.Parser, new[]{ "AccessDeniedPageUri", "GenerateTroubleshootingUri", "RemediationTokenGenerationEnabled" }, new[]{ "RemediationTokenGenerationEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.AttributePropagationSettings), global::Google.Cloud.Iap.V1.AttributePropagationSettings.Parser, new[]{ "Expression", "OutputCredentials", "Enable" }, new[]{ "Expression", "Enable" }, new[]{ typeof(global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.ListBrandsRequest), global::Google.Cloud.Iap.V1.ListBrandsRequest.Parser, new[]{ "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.ListBrandsResponse), global::Google.Cloud.Iap.V1.ListBrandsResponse.Parser, new[]{ "Brands" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iap.V1.CreateBrandRequest), global::Google.Cloud.Iap.V1.CreateBrandRequest.Parser, new[]{ "Parent", "Brand" }, null, null, null, null),
@@ -830,11 +847,11 @@ namespace Google.Cloud.Iap.V1 {
     public const int TunnelDestGroupIdFieldNumber = 3;
     private string tunnelDestGroupId_ = "";
     /// <summary>
-    /// Required. The ID to use for the TunnelDestGroup, which becomes the final component of
-    /// the resource name.
+    /// Required. The ID to use for the TunnelDestGroup, which becomes the final
+    /// component of the resource name.
     ///
     /// This value must be 4-63 characters, and valid characters
-    /// are `[a-z][0-9]-`.
+    /// are `[a-z]-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1737,8 +1754,9 @@ namespace Google.Cloud.Iap.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
-    /// project.
+    /// Required. Immutable. Identifier for the TunnelDestGroup. Must be unique
+    /// within the project and contain only lower case letters (a-z) and dashes
+    /// (-).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1755,7 +1773,7 @@ namespace Google.Cloud.Iap.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> cidrs_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// null List of CIDRs that this group applies to.
+    /// Unordered list. List of CIDRs that this group applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1769,7 +1787,7 @@ namespace Google.Cloud.Iap.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> fqdns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// null List of FQDNs that this group applies to.
+    /// Unordered list. List of FQDNs that this group applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2726,6 +2744,7 @@ namespace Google.Cloud.Iap.V1 {
       corsSettings_ = other.corsSettings_ != null ? other.corsSettings_.Clone() : null;
       oauthSettings_ = other.oauthSettings_ != null ? other.oauthSettings_.Clone() : null;
       reauthSettings_ = other.reauthSettings_ != null ? other.reauthSettings_.Clone() : null;
+      allowedDomainsSettings_ = other.allowedDomainsSettings_ != null ? other.allowedDomainsSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2795,6 +2814,21 @@ namespace Google.Cloud.Iap.V1 {
       }
     }
 
+    /// <summary>Field number for the "allowed_domains_settings" field.</summary>
+    public const int AllowedDomainsSettingsFieldNumber = 7;
+    private global::Google.Cloud.Iap.V1.AllowedDomainsSettings allowedDomainsSettings_;
+    /// <summary>
+    /// Settings to configure and enable allowed domains.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Iap.V1.AllowedDomainsSettings AllowedDomainsSettings {
+      get { return allowedDomainsSettings_; }
+      set {
+        allowedDomainsSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2814,6 +2848,7 @@ namespace Google.Cloud.Iap.V1 {
       if (!object.Equals(CorsSettings, other.CorsSettings)) return false;
       if (!object.Equals(OauthSettings, other.OauthSettings)) return false;
       if (!object.Equals(ReauthSettings, other.ReauthSettings)) return false;
+      if (!object.Equals(AllowedDomainsSettings, other.AllowedDomainsSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2825,6 +2860,7 @@ namespace Google.Cloud.Iap.V1 {
       if (corsSettings_ != null) hash ^= CorsSettings.GetHashCode();
       if (oauthSettings_ != null) hash ^= OauthSettings.GetHashCode();
       if (reauthSettings_ != null) hash ^= ReauthSettings.GetHashCode();
+      if (allowedDomainsSettings_ != null) hash ^= AllowedDomainsSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2859,6 +2895,10 @@ namespace Google.Cloud.Iap.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReauthSettings);
       }
+      if (allowedDomainsSettings_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AllowedDomainsSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2885,6 +2925,10 @@ namespace Google.Cloud.Iap.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReauthSettings);
       }
+      if (allowedDomainsSettings_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AllowedDomainsSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2906,6 +2950,9 @@ namespace Google.Cloud.Iap.V1 {
       }
       if (reauthSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReauthSettings);
+      }
+      if (allowedDomainsSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowedDomainsSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2942,6 +2989,12 @@ namespace Google.Cloud.Iap.V1 {
           ReauthSettings = new global::Google.Cloud.Iap.V1.ReauthSettings();
         }
         ReauthSettings.MergeFrom(other.ReauthSettings);
+      }
+      if (other.allowedDomainsSettings_ != null) {
+        if (allowedDomainsSettings_ == null) {
+          AllowedDomainsSettings = new global::Google.Cloud.Iap.V1.AllowedDomainsSettings();
+        }
+        AllowedDomainsSettings.MergeFrom(other.AllowedDomainsSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2986,6 +3039,13 @@ namespace Google.Cloud.Iap.V1 {
             input.ReadMessage(ReauthSettings);
             break;
           }
+          case 58: {
+            if (allowedDomainsSettings_ == null) {
+              AllowedDomainsSettings = new global::Google.Cloud.Iap.V1.AllowedDomainsSettings();
+            }
+            input.ReadMessage(AllowedDomainsSettings);
+            break;
+          }
         }
       }
     #endif
@@ -3027,6 +3087,13 @@ namespace Google.Cloud.Iap.V1 {
               ReauthSettings = new global::Google.Cloud.Iap.V1.ReauthSettings();
             }
             input.ReadMessage(ReauthSettings);
+            break;
+          }
+          case 58: {
+            if (allowedDomainsSettings_ == null) {
+              AllowedDomainsSettings = new global::Google.Cloud.Iap.V1.AllowedDomainsSettings();
+            }
+            input.ReadMessage(AllowedDomainsSettings);
             break;
           }
         }
@@ -3741,7 +3808,7 @@ namespace Google.Cloud.Iap.V1 {
     public const int MethodFieldNumber = 1;
     private global::Google.Cloud.Iap.V1.ReauthSettings.Types.Method method_ = global::Google.Cloud.Iap.V1.ReauthSettings.Types.Method.Unspecified;
     /// <summary>
-    /// Reauth method required by the policy.
+    /// Reauth method requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3986,15 +4053,11 @@ namespace Google.Cloud.Iap.V1 {
         /// </summary>
         [pbr::OriginalName("METHOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Mimics the behavior as if the user had logged out and tried to log in
-        /// again. Users with 2SV (2-step verification) enabled see their 2SV
-        /// challenges if they did not opt to have their second factor responses
-        /// saved. Apps Core (GSuites) admins can configure settings to disable 2SV
-        /// cookies and require 2SV for all Apps Core users in their domains.
+        /// Prompts the user to log in again.
         /// </summary>
         [pbr::OriginalName("LOGIN")] Login = 1,
         /// <summary>
-        /// User must type their password.
+        /// Deprecated, no longer accepted by IAP APIs.
         /// </summary>
         [pbr::OriginalName("PASSWORD")] Password = 2,
         /// <summary>
@@ -4028,6 +4091,246 @@ namespace Google.Cloud.Iap.V1 {
   }
 
   /// <summary>
+  /// Configuration for IAP allowed domains. Lets you to restrict access to an app
+  /// and allow access to only the domains that you list.
+  /// </summary>
+  public sealed partial class AllowedDomainsSettings : pb::IMessage<AllowedDomainsSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AllowedDomainsSettings> _parser = new pb::MessageParser<AllowedDomainsSettings>(() => new AllowedDomainsSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AllowedDomainsSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllowedDomainsSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllowedDomainsSettings(AllowedDomainsSettings other) : this() {
+      _hasBits0 = other._hasBits0;
+      enable_ = other.enable_;
+      domains_ = other.domains_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllowedDomainsSettings Clone() {
+      return new AllowedDomainsSettings(this);
+    }
+
+    /// <summary>Field number for the "enable" field.</summary>
+    public const int EnableFieldNumber = 1;
+    private bool enable_;
+    /// <summary>
+    /// Configuration for customers to opt in for the feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enable {
+      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return false; } }
+      set {
+        _hasBits0 |= 1;
+        enable_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enable" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnable {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "enable" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnable() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "domains" field.</summary>
+    public const int DomainsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_domains_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> domains_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// List of trusted domains.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Domains {
+      get { return domains_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AllowedDomainsSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AllowedDomainsSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Enable != other.Enable) return false;
+      if(!domains_.Equals(other.domains_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasEnable) hash ^= Enable.GetHashCode();
+      hash ^= domains_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasEnable) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enable);
+      }
+      domains_.WriteTo(output, _repeated_domains_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasEnable) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enable);
+      }
+      domains_.WriteTo(ref output, _repeated_domains_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasEnable) {
+        size += 1 + 1;
+      }
+      size += domains_.CalculateSize(_repeated_domains_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AllowedDomainsSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasEnable) {
+        Enable = other.Enable;
+      }
+      domains_.Add(other.domains_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Enable = input.ReadBool();
+            break;
+          }
+          case 18: {
+            domains_.AddEntriesFrom(input, _repeated_domains_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Enable = input.ReadBool();
+            break;
+          }
+          case 18: {
+            domains_.AddEntriesFrom(ref input, _repeated_domains_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Wrapper over application specific settings for IAP.
   /// </summary>
   public sealed partial class ApplicationSettings : pb::IMessage<ApplicationSettings>
@@ -4044,7 +4347,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4067,6 +4370,7 @@ namespace Google.Cloud.Iap.V1 {
       csmSettings_ = other.csmSettings_ != null ? other.csmSettings_.Clone() : null;
       accessDeniedPageSettings_ = other.accessDeniedPageSettings_ != null ? other.accessDeniedPageSettings_.Clone() : null;
       CookieDomain = other.CookieDomain;
+      attributePropagationSettings_ = other.attributePropagationSettings_ != null ? other.attributePropagationSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4080,7 +4384,7 @@ namespace Google.Cloud.Iap.V1 {
     public const int CsmSettingsFieldNumber = 1;
     private global::Google.Cloud.Iap.V1.CsmSettings csmSettings_;
     /// <summary>
-    /// Settings to configure IAP's behavior for a CSM mesh.
+    /// Settings to configure IAP's behavior for a service mesh.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4124,6 +4428,21 @@ namespace Google.Cloud.Iap.V1 {
     }
 
 
+    /// <summary>Field number for the "attribute_propagation_settings" field.</summary>
+    public const int AttributePropagationSettingsFieldNumber = 4;
+    private global::Google.Cloud.Iap.V1.AttributePropagationSettings attributePropagationSettings_;
+    /// <summary>
+    /// Settings to configure attribute propagation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Iap.V1.AttributePropagationSettings AttributePropagationSettings {
+      get { return attributePropagationSettings_; }
+      set {
+        attributePropagationSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4142,6 +4461,7 @@ namespace Google.Cloud.Iap.V1 {
       if (!object.Equals(CsmSettings, other.CsmSettings)) return false;
       if (!object.Equals(AccessDeniedPageSettings, other.AccessDeniedPageSettings)) return false;
       if (CookieDomain != other.CookieDomain) return false;
+      if (!object.Equals(AttributePropagationSettings, other.AttributePropagationSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4152,6 +4472,7 @@ namespace Google.Cloud.Iap.V1 {
       if (csmSettings_ != null) hash ^= CsmSettings.GetHashCode();
       if (accessDeniedPageSettings_ != null) hash ^= AccessDeniedPageSettings.GetHashCode();
       if (cookieDomain_ != null) hash ^= CookieDomain.GetHashCode();
+      if (attributePropagationSettings_ != null) hash ^= AttributePropagationSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4181,6 +4502,10 @@ namespace Google.Cloud.Iap.V1 {
       if (cookieDomain_ != null) {
         _single_cookieDomain_codec.WriteTagAndValue(output, CookieDomain);
       }
+      if (attributePropagationSettings_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AttributePropagationSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4202,6 +4527,10 @@ namespace Google.Cloud.Iap.V1 {
       if (cookieDomain_ != null) {
         _single_cookieDomain_codec.WriteTagAndValue(ref output, CookieDomain);
       }
+      if (attributePropagationSettings_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AttributePropagationSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4220,6 +4549,9 @@ namespace Google.Cloud.Iap.V1 {
       }
       if (cookieDomain_ != null) {
         size += _single_cookieDomain_codec.CalculateSizeWithTag(CookieDomain);
+      }
+      if (attributePropagationSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AttributePropagationSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4249,6 +4581,12 @@ namespace Google.Cloud.Iap.V1 {
         if (cookieDomain_ == null || other.CookieDomain != "") {
           CookieDomain = other.CookieDomain;
         }
+      }
+      if (other.attributePropagationSettings_ != null) {
+        if (attributePropagationSettings_ == null) {
+          AttributePropagationSettings = new global::Google.Cloud.Iap.V1.AttributePropagationSettings();
+        }
+        AttributePropagationSettings.MergeFrom(other.AttributePropagationSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4284,6 +4622,13 @@ namespace Google.Cloud.Iap.V1 {
             if (cookieDomain_ == null || value != "") {
               CookieDomain = value;
             }
+            break;
+          }
+          case 34: {
+            if (attributePropagationSettings_ == null) {
+              AttributePropagationSettings = new global::Google.Cloud.Iap.V1.AttributePropagationSettings();
+            }
+            input.ReadMessage(AttributePropagationSettings);
             break;
           }
         }
@@ -4322,6 +4667,13 @@ namespace Google.Cloud.Iap.V1 {
             }
             break;
           }
+          case 34: {
+            if (attributePropagationSettings_ == null) {
+              AttributePropagationSettings = new global::Google.Cloud.Iap.V1.AttributePropagationSettings();
+            }
+            input.ReadMessage(AttributePropagationSettings);
+            break;
+          }
         }
       }
     }
@@ -4330,10 +4682,10 @@ namespace Google.Cloud.Iap.V1 {
   }
 
   /// <summary>
-  /// Configuration for RCTokens generated for CSM workloads protected by IAP.
-  /// RCTokens are IAP generated JWTs that can be verified at the application. The
-  /// RCToken is primarily used for ISTIO deployments, and can be scoped to a
-  /// single mesh by configuring the audience field accordingly
+  /// Configuration for RCToken generated for service mesh workloads protected by
+  /// IAP. RCToken are IAP generated JWTs that can be verified at the application.
+  /// The RCToken is primarily used for service mesh deployments, and can be scoped
+  /// to a single mesh by configuring the audience field accordingly.
   /// </summary>
   public sealed partial class CsmSettings : pb::IMessage<CsmSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4349,7 +4701,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4556,7 +4908,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4578,6 +4930,7 @@ namespace Google.Cloud.Iap.V1 {
     public AccessDeniedPageSettings(AccessDeniedPageSettings other) : this() {
       AccessDeniedPageUri = other.AccessDeniedPageUri;
       GenerateTroubleshootingUri = other.GenerateTroubleshootingUri;
+      RemediationTokenGenerationEnabled = other.RemediationTokenGenerationEnabled;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4622,6 +4975,24 @@ namespace Google.Cloud.Iap.V1 {
     }
 
 
+    /// <summary>Field number for the "remediation_token_generation_enabled" field.</summary>
+    public const int RemediationTokenGenerationEnabledFieldNumber = 3;
+    private static readonly pb::FieldCodec<bool?> _single_remediationTokenGenerationEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(26);
+    private bool? remediationTokenGenerationEnabled_;
+    /// <summary>
+    /// Whether to generate remediation token on access denied events to this
+    /// application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool? RemediationTokenGenerationEnabled {
+      get { return remediationTokenGenerationEnabled_; }
+      set {
+        remediationTokenGenerationEnabled_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4639,6 +5010,7 @@ namespace Google.Cloud.Iap.V1 {
       }
       if (AccessDeniedPageUri != other.AccessDeniedPageUri) return false;
       if (GenerateTroubleshootingUri != other.GenerateTroubleshootingUri) return false;
+      if (RemediationTokenGenerationEnabled != other.RemediationTokenGenerationEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4648,6 +5020,7 @@ namespace Google.Cloud.Iap.V1 {
       int hash = 1;
       if (accessDeniedPageUri_ != null) hash ^= AccessDeniedPageUri.GetHashCode();
       if (generateTroubleshootingUri_ != null) hash ^= GenerateTroubleshootingUri.GetHashCode();
+      if (remediationTokenGenerationEnabled_ != null) hash ^= RemediationTokenGenerationEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4672,6 +5045,9 @@ namespace Google.Cloud.Iap.V1 {
       if (generateTroubleshootingUri_ != null) {
         _single_generateTroubleshootingUri_codec.WriteTagAndValue(output, GenerateTroubleshootingUri);
       }
+      if (remediationTokenGenerationEnabled_ != null) {
+        _single_remediationTokenGenerationEnabled_codec.WriteTagAndValue(output, RemediationTokenGenerationEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4688,6 +5064,9 @@ namespace Google.Cloud.Iap.V1 {
       if (generateTroubleshootingUri_ != null) {
         _single_generateTroubleshootingUri_codec.WriteTagAndValue(ref output, GenerateTroubleshootingUri);
       }
+      if (remediationTokenGenerationEnabled_ != null) {
+        _single_remediationTokenGenerationEnabled_codec.WriteTagAndValue(ref output, RemediationTokenGenerationEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4703,6 +5082,9 @@ namespace Google.Cloud.Iap.V1 {
       }
       if (generateTroubleshootingUri_ != null) {
         size += _single_generateTroubleshootingUri_codec.CalculateSizeWithTag(GenerateTroubleshootingUri);
+      }
+      if (remediationTokenGenerationEnabled_ != null) {
+        size += _single_remediationTokenGenerationEnabled_codec.CalculateSizeWithTag(RemediationTokenGenerationEnabled);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4724,6 +5106,11 @@ namespace Google.Cloud.Iap.V1 {
       if (other.generateTroubleshootingUri_ != null) {
         if (generateTroubleshootingUri_ == null || other.GenerateTroubleshootingUri != false) {
           GenerateTroubleshootingUri = other.GenerateTroubleshootingUri;
+        }
+      }
+      if (other.remediationTokenGenerationEnabled_ != null) {
+        if (remediationTokenGenerationEnabled_ == null || other.RemediationTokenGenerationEnabled != false) {
+          RemediationTokenGenerationEnabled = other.RemediationTokenGenerationEnabled;
         }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4752,6 +5139,13 @@ namespace Google.Cloud.Iap.V1 {
             bool? value = _single_generateTroubleshootingUri_codec.Read(input);
             if (generateTroubleshootingUri_ == null || value != false) {
               GenerateTroubleshootingUri = value;
+            }
+            break;
+          }
+          case 26: {
+            bool? value = _single_remediationTokenGenerationEnabled_codec.Read(input);
+            if (remediationTokenGenerationEnabled_ == null || value != false) {
+              RemediationTokenGenerationEnabled = value;
             }
             break;
           }
@@ -4784,10 +5178,370 @@ namespace Google.Cloud.Iap.V1 {
             }
             break;
           }
+          case 26: {
+            bool? value = _single_remediationTokenGenerationEnabled_codec.Read(ref input);
+            if (remediationTokenGenerationEnabled_ == null || value != false) {
+              RemediationTokenGenerationEnabled = value;
+            }
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for propagating attributes to applications protected
+  /// by IAP.
+  /// </summary>
+  public sealed partial class AttributePropagationSettings : pb::IMessage<AttributePropagationSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AttributePropagationSettings> _parser = new pb::MessageParser<AttributePropagationSettings>(() => new AttributePropagationSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AttributePropagationSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributePropagationSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributePropagationSettings(AttributePropagationSettings other) : this() {
+      _hasBits0 = other._hasBits0;
+      expression_ = other.expression_;
+      outputCredentials_ = other.outputCredentials_.Clone();
+      enable_ = other.enable_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AttributePropagationSettings Clone() {
+      return new AttributePropagationSettings(this);
+    }
+
+    /// <summary>Field number for the "expression" field.</summary>
+    public const int ExpressionFieldNumber = 1;
+    private string expression_;
+    /// <summary>
+    /// Raw string CEL expression. Must return a list of attributes. Maximum of 45
+    /// attributes can be selected. Expressions can select different attribute
+    /// types from `attributes`: `attributes.saml_attributes`,
+    /// `attributes.iap_attributes`. Limited functions are supported:
+    ///  - `filter: &lt;list>.filter(&lt;iter_var>, &lt;predicate>)` -> returns a subset of
+    ///  `&lt;list>` where `&lt;predicate>` is true for every item.
+    ///  - `in: &lt;var> in &lt;list>` -> returns true if `&lt;list>` contains `&lt;var>`
+    ///  - `selectByName: &lt;list>.selectByName(&lt;string>)` -> returns the attribute
+    ///  in
+    ///  `&lt;list>` with the given `&lt;string>` name, otherwise returns empty.
+    ///  - `emitAs: &lt;attribute>.emitAs(&lt;string>)` -> sets the `&lt;attribute>` name
+    ///  field to the given `&lt;string>` for propagation in selected output
+    ///  credentials.
+    ///  - `strict: &lt;attribute>.strict()` -> ignore the `x-goog-iap-attr-` prefix
+    ///  for the provided `&lt;attribute>` when propagating via the `HEADER` output
+    ///  credential, i.e. request headers.
+    ///  - `append: &lt;target_list>.append(&lt;attribute>)` OR
+    ///  `&lt;target_list>.append(&lt;list>)` -> append the provided `&lt;attribute>` or
+    ///  `&lt;list>` onto the end of `&lt;target_list>`.
+    ///
+    /// Example expression: `attributes.saml_attributes.filter(x, x.name in
+    /// ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Expression {
+      get { return expression_ ?? ""; }
+      set {
+        expression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "expression" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExpression {
+      get { return expression_ != null; }
+    }
+    /// <summary>Clears the value of the "expression" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpression() {
+      expression_ = null;
+    }
+
+    /// <summary>Field number for the "output_credentials" field.</summary>
+    public const int OutputCredentialsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials> _repeated_outputCredentials_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials> outputCredentials_ = new pbc::RepeatedField<global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials>();
+    /// <summary>
+    /// Which output credentials attributes selected by the CEL expression should
+    /// be propagated in. All attributes will be fully duplicated in each selected
+    /// output credential.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Iap.V1.AttributePropagationSettings.Types.OutputCredentials> OutputCredentials {
+      get { return outputCredentials_; }
+    }
+
+    /// <summary>Field number for the "enable" field.</summary>
+    public const int EnableFieldNumber = 3;
+    private bool enable_;
+    /// <summary>
+    /// Whether the provided attribute propagation settings should be evaluated on
+    /// user requests. If set to true, attributes returned from the expression will
+    /// be propagated in the set output credentials.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enable {
+      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return false; } }
+      set {
+        _hasBits0 |= 1;
+        enable_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enable" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnable {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "enable" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnable() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AttributePropagationSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AttributePropagationSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Expression != other.Expression) return false;
+      if(!outputCredentials_.Equals(other.outputCredentials_)) return false;
+      if (Enable != other.Enable) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasExpression) hash ^= Expression.GetHashCode();
+      hash ^= outputCredentials_.GetHashCode();
+      if (HasEnable) hash ^= Enable.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasExpression) {
+        output.WriteRawTag(10);
+        output.WriteString(Expression);
+      }
+      outputCredentials_.WriteTo(output, _repeated_outputCredentials_codec);
+      if (HasEnable) {
+        output.WriteRawTag(24);
+        output.WriteBool(Enable);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasExpression) {
+        output.WriteRawTag(10);
+        output.WriteString(Expression);
+      }
+      outputCredentials_.WriteTo(ref output, _repeated_outputCredentials_codec);
+      if (HasEnable) {
+        output.WriteRawTag(24);
+        output.WriteBool(Enable);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasExpression) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Expression);
+      }
+      size += outputCredentials_.CalculateSize(_repeated_outputCredentials_codec);
+      if (HasEnable) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AttributePropagationSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasExpression) {
+        Expression = other.Expression;
+      }
+      outputCredentials_.Add(other.outputCredentials_);
+      if (other.HasEnable) {
+        Enable = other.Enable;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Expression = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            outputCredentials_.AddEntriesFrom(input, _repeated_outputCredentials_codec);
+            break;
+          }
+          case 24: {
+            Enable = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Expression = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            outputCredentials_.AddEntriesFrom(ref input, _repeated_outputCredentials_codec);
+            break;
+          }
+          case 24: {
+            Enable = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AttributePropagationSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Supported output credentials for attribute propagation. Each output
+      /// credential maps to a "field" in the response. For example, selecting JWT
+      /// will propagate all attributes in the IAP JWT, header in the headers, etc.
+      /// </summary>
+      public enum OutputCredentials {
+        /// <summary>
+        /// No output credential. This is an unsupported default.
+        /// </summary>
+        [pbr::OriginalName("OUTPUT_CREDENTIALS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Propagate attributes in the headers with "x-goog-iap-attr-" prefix.
+        /// </summary>
+        [pbr::OriginalName("HEADER")] Header = 1,
+        /// <summary>
+        /// Propagate attributes in the JWT of the form: `"additional_claims": {
+        /// "my_attribute": ["value1", "value2"] }`
+        /// </summary>
+        [pbr::OriginalName("JWT")] Jwt = 2,
+        /// <summary>
+        /// Propagate attributes in the RCToken of the form: `"additional_claims": {
+        /// "my_attribute": ["value1", "value2"] }`
+        /// </summary>
+        [pbr::OriginalName("RCTOKEN")] Rctoken = 3,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -4808,7 +5562,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5004,7 +5758,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5188,7 +5942,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5433,7 +6187,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5629,7 +6383,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5913,7 +6667,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6138,7 +6892,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6385,7 +7139,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6582,7 +7336,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6779,7 +7533,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6977,7 +7731,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7295,7 +8049,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Iap.V1.ServiceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
