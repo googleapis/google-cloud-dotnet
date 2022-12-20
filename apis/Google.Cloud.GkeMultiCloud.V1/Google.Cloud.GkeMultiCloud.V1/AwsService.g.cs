@@ -225,8 +225,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-    /// will be created.
+    /// Required. The parent location where this
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+    /// created.
     ///
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
@@ -246,7 +247,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsClusterFieldNumber = 2;
     private global::Google.Cloud.GkeMultiCloud.V1.AwsCluster awsCluster_;
     /// <summary>
-    /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+    /// Required. The specification of the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,14 +263,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsClusterIdFieldNumber = 3;
     private string awsClusterId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the parent
-    /// resource.
+    /// Required. A client provided ID the resource. Must be unique within the
+    /// parent resource.
     ///
-    /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-    /// resource name formatted as
+    /// The provided ID will be part of the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
     ///
-    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -561,7 +564,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsClusterFieldNumber = 1;
     private global::Google.Cloud.GkeMultiCloud.V1.AwsCluster awsCluster_;
     /// <summary>
-    /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to update.
+    /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+    /// resource to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -607,14 +611,17 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `control_plane.proxy_config`.
     ///  *   `control_plane.proxy_config.secret_arn`.
     ///  *   `control_plane.proxy_config.secret_version`.
+    ///  *   `control_plane.root_volume.size_gib`.
+    ///  *   `control_plane.root_volume.volume_type`.
     ///  *   `control_plane.root_volume.iops`.
     ///  *   `control_plane.root_volume.kms_key_arn`.
-    ///  *   `control_plane.root_volume.volume_type`.
-    ///  *   `control_plane.root_volume.size_gib`.
     ///  *   `control_plane.ssh_config`.
     ///  *   `control_plane.ssh_config.ec2_key_pair`.
     ///  *   `control_plane.instance_placement.tenancy`.
-    ///  *   `logging_config`.
+    ///  *   `control_plane.iam_instance_profile`.
+    ///  *   `logging_config.component_config.enable_components`.
+    ///  *   `control_plane.tags`.
+    ///  *   `monitoring_config.managed_prometheus_config.enabled`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -875,7 +882,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+    /// Required. The name of the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+    /// describe.
     ///
     /// `AwsCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
@@ -1104,8 +1113,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// If not specified, a default value of 50 will be used by the service.
     /// Regardless of the pageSize value, the response can include a partial list
     /// and a caller should only rely on response's
-    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAwsClustersResponse.next_page_token] to determine if
-    /// there are more instances left to be queried.
+    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAwsClustersResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1121,7 +1130,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `nextPageToken` value returned from a previous
-    /// [awsClusters.list][google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters] request, if any.
+    /// [awsClusters.list][google.cloud.gkemulticloud.v1.AwsClusters.ListAwsClusters]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1367,8 +1377,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeMultiCloud.V1.AwsCluster.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> awsClusters_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster>();
     /// <summary>
-    /// A list of [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources in the specified GCP
-    /// project and region region.
+    /// A list of [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+    /// in the specified GCP project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1593,7 +1603,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+    /// Required. The resource name the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
     ///
     /// `AwsCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
@@ -1629,9 +1640,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource is not found,
-    /// the request will succeed but no action will be taken on the server and a
-    /// completed [Operation][google.longrunning.Operation] will be returned.
+    /// If set to true, and the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource is not
+    /// found, the request will succeed but no action will be taken on the server
+    /// and a completed [Operation][google.longrunning.Operation] will be returned.
     ///
     /// Useful for idempotent deletion.
     /// </summary>
@@ -1648,7 +1660,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int EtagFieldNumber = 4;
     private string etag_ = "";
     /// <summary>
-    /// The current etag of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+    /// The current etag of the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
     ///
     /// Allows clients to perform deletions through optimistic concurrency control.
     ///
@@ -1923,7 +1936,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+    /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+    /// resource where this node pool will be created.
     ///
     /// `AwsCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
@@ -1944,7 +1958,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsNodePoolFieldNumber = 2;
     private global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool awsNodePool_;
     /// <summary>
-    /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+    /// Required. The specification of the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1959,14 +1974,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsNodePoolIdFieldNumber = 3;
     private string awsNodePoolId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the parent
-    /// resource.
+    /// Required. A client provided ID the resource. Must be unique within the
+    /// parent resource.
     ///
-    /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-    /// resource name formatted as
+    /// The provided ID will be part of the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>/awsNodePools/&lt;node-pool-id>`.
     ///
-    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2260,7 +2276,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsNodePoolFieldNumber = 1;
     private global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool awsNodePool_;
     /// <summary>
-    /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to update.
+    /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+    /// resource to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2309,6 +2326,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `config.proxy_config.secret_version`.
     ///  *   `config.ssh_config`.
     ///  *   `config.ssh_config.ec2_key_pair`.
+    ///  *   `config.instance_placement.tenancy`.
+    ///  *   `config.iam_instance_profile`.
+    ///  *   `config.labels`.
+    ///  *   `config.tags`.
+    ///  *   `config.autoscaling_metrics_collection`.
+    ///  *   `config.autoscaling_metrics_collection.granularity`.
+    ///  *   `config.autoscaling_metrics_collection.metrics`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2569,7 +2593,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+    /// Required. The name of the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+    /// describe.
     ///
     /// `AwsNodePool` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>/awsNodePools/&lt;node-pool-id>`.
@@ -2799,8 +2825,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// If not specified, a default value of 50 will be used by the service.
     /// Regardless of the pageSize value, the response can include a partial list
     /// and a caller should only rely on response's
-    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAwsNodePoolsResponse.next_page_token] to determine if
-    /// there are more instances left to be queried.
+    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAwsNodePoolsResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2816,7 +2842,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `nextPageToken` value returned from a previous
-    /// [awsNodePools.list][google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools] request, if any.
+    /// [awsNodePools.list][google.cloud.gkemulticloud.v1.AwsClusters.ListAwsNodePools]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3062,7 +3089,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool> awsNodePools_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool>();
     /// <summary>
-    /// A list of [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources in the specified `AwsCluster`.
+    /// A list of [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+    /// resources in the specified `AwsCluster`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3234,7 +3262,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   }
 
   /// <summary>
-  /// Request message for `AwsClusters.DeleteNodePool` method.
+  /// Request message for `AwsClusters.DeleteAwsNodePool` method.
   /// </summary>
   public sealed partial class DeleteAwsNodePoolRequest : pb::IMessage<DeleteAwsNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3287,7 +3315,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+    /// Required. The resource name the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
     ///
     /// `AwsNodePool` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>/awsNodePools/&lt;node-pool-id>`.
@@ -3324,9 +3353,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource is not found,
-    /// the request will succeed but no action will be taken on the server and a
-    /// completed [Operation][google.longrunning.Operation] will be returned.
+    /// If set to true, and the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource is not
+    /// found, the request will succeed but no action will be taken on the server
+    /// and a completed [Operation][google.longrunning.Operation] will be returned.
     ///
     /// Useful for idempotent deletion.
     /// </summary>
@@ -3343,7 +3373,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int EtagFieldNumber = 4;
     private string etag_ = "";
     /// <summary>
-    /// The current ETag of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
+    /// The current ETag of the
+    /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
     ///
     /// Allows clients to perform deletions through optimistic concurrency control.
     ///
@@ -3615,7 +3646,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+    /// Required. The name of the
+    /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+    /// to describe.
     ///
     /// `AwsServerConfig` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsServerConfig`.
@@ -3816,7 +3849,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AwsClusterFieldNumber = 1;
     private string awsCluster_ = "";
     /// <summary>
-    /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to authenticate to.
+    /// Required. The name of the
+    /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+    /// authenticate to.
     ///
     /// `AwsCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.

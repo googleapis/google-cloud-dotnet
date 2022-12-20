@@ -5,6 +5,63 @@
   "protoPackage": "google.cloud.gkemulticloud.v1",
   "libraryPackage": "Google.Cloud.GkeMultiCloud.V1",
   "services": {
+    "AttachedClusters": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AttachedClustersClient",
+          "rpcs": {
+            "CreateAttachedCluster": {
+              "methods": [
+                "CreateAttachedCluster",
+                "CreateAttachedClusterAsync"
+              ]
+            },
+            "DeleteAttachedCluster": {
+              "methods": [
+                "DeleteAttachedCluster",
+                "DeleteAttachedClusterAsync"
+              ]
+            },
+            "GenerateAttachedClusterInstallManifest": {
+              "methods": [
+                "GenerateAttachedClusterInstallManifest",
+                "GenerateAttachedClusterInstallManifestAsync"
+              ]
+            },
+            "GetAttachedCluster": {
+              "methods": [
+                "GetAttachedCluster",
+                "GetAttachedClusterAsync"
+              ]
+            },
+            "GetAttachedServerConfig": {
+              "methods": [
+                "GetAttachedServerConfig",
+                "GetAttachedServerConfigAsync"
+              ]
+            },
+            "ImportAttachedCluster": {
+              "methods": [
+                "ImportAttachedCluster",
+                "ImportAttachedClusterAsync"
+              ]
+            },
+            "ListAttachedClusters": {
+              "methods": [
+                "ListAttachedClusters",
+                "ListAttachedClustersAsync"
+              ]
+            },
+            "UpdateAttachedCluster": {
+              "methods": [
+                "UpdateAttachedCluster",
+                "UpdateAttachedClusterAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "AwsClusters": {
       "clients": {
         "grpc": {

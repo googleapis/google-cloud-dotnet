@@ -254,8 +254,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public abstract partial class AzureClustersBase
     {
       /// <summary>
-      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-      /// and region.
+      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource on a given Google Cloud project and region.
       ///
       /// `AzureClient` resources hold client authentication
       /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -275,7 +275,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Describes a specific
+      /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -287,8 +288,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -300,7 +301,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource.
       ///
       /// If the client is used by one or more clusters, deletion will
       /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -319,7 +321,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -347,7 +350,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Describes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -359,8 +363,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -372,10 +376,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Deletes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       ///
-      /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -404,7 +409,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+      /// attached to a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -432,7 +439,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Describes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -444,7 +452,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+      /// resources on a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -456,7 +466,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Deletes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -514,8 +525,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-      /// and region.
+      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource on a given Google Cloud project and region.
       ///
       /// `AzureClient` resources hold client authentication
       /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -536,8 +547,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-      /// and region.
+      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource on a given Google Cloud project and region.
       ///
       /// `AzureClient` resources hold client authentication
       /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -556,8 +567,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAzureClient, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-      /// and region.
+      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource on a given Google Cloud project and region.
       ///
       /// `AzureClient` resources hold client authentication
       /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -578,8 +589,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-      /// and region.
+      /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource on a given Google Cloud project and region.
       ///
       /// `AzureClient` resources hold client authentication
       /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -598,7 +609,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAzureClient, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Describes a specific
+      /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -611,7 +623,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Describes a specific
+      /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -622,7 +635,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAzureClient, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Describes a specific
+      /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -635,7 +649,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Describes a specific
+      /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -646,8 +661,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAzureClient, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -660,8 +675,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureClients(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -672,8 +687,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAzureClients, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -686,8 +701,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureClientsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -698,7 +713,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAzureClients, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource.
       ///
       /// If the client is used by one or more clusters, deletion will
       /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -718,7 +734,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource.
       ///
       /// If the client is used by one or more clusters, deletion will
       /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -736,7 +753,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAzureClient, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource.
       ///
       /// If the client is used by one or more clusters, deletion will
       /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -756,7 +774,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+      /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+      /// resource.
       ///
       /// If the client is used by one or more clusters, deletion will
       /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -774,7 +793,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAzureClient, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -791,7 +811,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -806,7 +827,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAzureCluster, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -823,7 +845,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+      /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -886,7 +909,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAzureCluster, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Describes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -899,7 +923,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Describes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -910,7 +935,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAzureCluster, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Describes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -923,7 +949,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Describes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -934,8 +961,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAzureCluster, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -948,8 +975,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -960,8 +987,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAzureClusters, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -974,8 +1001,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+      /// resources on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -986,10 +1013,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAzureClusters, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Deletes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       ///
-      /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1006,10 +1034,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Deletes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       ///
-      /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1024,10 +1053,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAzureCluster, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Deletes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       ///
-      /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1044,10 +1074,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+      /// Deletes a specific
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       ///
-      /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1114,7 +1145,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAzureAccessToken, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+      /// attached to a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1131,7 +1164,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+      /// attached to a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1146,7 +1181,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAzureNodePool, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+      /// attached to a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1163,7 +1200,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAzureNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+      /// attached to a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1226,7 +1265,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAzureNodePool, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Describes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1239,7 +1279,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Describes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1250,7 +1291,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAzureNodePool, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Describes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1263,7 +1305,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAzureNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Describes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1274,7 +1317,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAzureNodePool, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+      /// resources on a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1287,7 +1332,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureNodePools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+      /// resources on a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1298,7 +1345,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAzureNodePools, null, options, request);
       }
       /// <summary>
-      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+      /// resources on a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1311,7 +1360,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAzureNodePoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+      /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+      /// resources on a given
+      /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1322,7 +1373,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAzureNodePools, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Deletes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1339,7 +1391,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Deletes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1354,7 +1407,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAzureNodePool, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Deletes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1371,7 +1425,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAzureNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+      /// Deletes a specific
+      /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be

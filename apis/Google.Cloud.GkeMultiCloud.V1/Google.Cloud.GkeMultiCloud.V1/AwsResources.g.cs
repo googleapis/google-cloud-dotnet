@@ -29,7 +29,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxo0Z29vZ2xlL2Nsb3VkL2drZW11bHRpY2xvdWQvdjEvY29tbW9u",
             "X3Jlc291cmNlcy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90byKwCQoKQXdzQ2x1c3RlchIMCgRuYW1lGAEgASgJEhgKC2Rlc2NyaXB0",
+            "cm90byLGCgoKQXdzQ2x1c3RlchIMCgRuYW1lGAEgASgJEhgKC2Rlc2NyaXB0",
             "aW9uGAIgASgJQgPgQQESTAoKbmV0d29ya2luZxgDIAEoCzIzLmdvb2dsZS5j",
             "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0NsdXN0ZXJOZXR3b3JraW5nQgPg",
             "QQISFwoKYXdzX3JlZ2lvbhgEIAEoCUID4EECEkoKDWNvbnRyb2xfcGxhbmUY",
@@ -47,106 +47,117 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "bnRpdHlfY29uZmlnGBAgASgLMjUuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
             "dWQudjEuV29ya2xvYWRJZGVudGl0eUNvbmZpZ0ID4EEDEiMKFmNsdXN0ZXJf",
             "Y2FfY2VydGlmaWNhdGUYESABKAlCA+BBAxI4CgVmbGVldBgSIAEoCzIkLmdv",
-            "b2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkZsZWV0QgPgQQESSQoObG9n",
+            "b2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkZsZWV0QgPgQQISSQoObG9n",
             "Z2luZ19jb25maWcYEyABKAsyLC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
-            "ZC52MS5Mb2dnaW5nQ29uZmlnQgPgQQEaMgoQQW5ub3RhdGlvbnNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInUKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoHUlVOTklO",
-            "RxACEg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVFUlJPUhAF",
-            "EgwKCERFR1JBREVEEAY6b+pBbAonZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlz",
-            "LmNvbS9Bd3NDbHVzdGVyEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vYXdzQ2x1c3RlcnMve2F3c19jbHVzdGVyfSKoBwoPQXdz",
-            "Q29udHJvbFBsYW5lEhQKB3ZlcnNpb24YASABKAlCA+BBAhIaCg1pbnN0YW5j",
-            "ZV90eXBlGAIgASgJQgPgQQESRAoKc3NoX2NvbmZpZxgOIAEoCzIrLmdvb2ds",
-            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1NzaENvbmZpZ0ID4EEBEhcK",
-            "CnN1Ym5ldF9pZHMYBCADKAlCA+BBAhIfChJzZWN1cml0eV9ncm91cF9pZHMY",
-            "BSADKAlCA+BBARIhChRpYW1faW5zdGFuY2VfcHJvZmlsZRgHIAEoCUID4EEC",
-            "EkoKC3Jvb3Rfdm9sdW1lGAggASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
-            "Y2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGVCA+BBARJKCgttYWluX3ZvbHVt",
-            "ZRgJIAEoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Zv",
-            "bHVtZVRlbXBsYXRlQgPgQQESVgoTZGF0YWJhc2VfZW5jcnlwdGlvbhgKIAEo",
-            "CzI0Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0RhdGFiYXNl",
-            "RW5jcnlwdGlvbkID4EECEksKBHRhZ3MYCyADKAsyOC5nb29nbGUuY2xvdWQu",
-            "Z2tlbXVsdGljbG91ZC52MS5Bd3NDb250cm9sUGxhbmUuVGFnc0VudHJ5QgPg",
-            "QQESYgobYXdzX3NlcnZpY2VzX2F1dGhlbnRpY2F0aW9uGAwgASgLMjguZ29v",
-            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzU2VydmljZXNBdXRoZW50",
-            "aWNhdGlvbkID4EECEkgKDHByb3h5X2NvbmZpZxgQIAEoCzItLmdvb2dsZS5j",
-            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQESUgoR",
-            "Y29uZmlnX2VuY3J5cHRpb24YESABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVs",
-            "dGljbG91ZC52MS5Bd3NDb25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5zdGFu",
-            "Y2VfcGxhY2VtZW50GBIgASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
-            "dWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnRCA+BBARorCglUYWdzRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJSChlBd3NTZXJ2aWNl",
-            "c0F1dGhlbnRpY2F0aW9uEhUKCHJvbGVfYXJuGAEgASgJQgPgQQISHgoRcm9s",
-            "ZV9zZXNzaW9uX25hbWUYAiABKAlCA+BBASJbChBBd3NBdXRob3JpemF0aW9u",
-            "EkcKC2FkbWluX3VzZXJzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
-            "Y2xvdWQudjEuQXdzQ2x1c3RlclVzZXJCA+BBAiInCg5Bd3NDbHVzdGVyVXNl",
-            "chIVCgh1c2VybmFtZRgBIAEoCUID4EECIjEKFUF3c0RhdGFiYXNlRW5jcnlw",
-            "dGlvbhIYCgtrbXNfa2V5X2FybhgBIAEoCUID4EECIusBChFBd3NWb2x1bWVU",
-            "ZW1wbGF0ZRIVCghzaXplX2dpYhgBIAEoBUID4EEBElUKC3ZvbHVtZV90eXBl",
-            "GAIgASgOMjsuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzVm9s",
-            "dW1lVGVtcGxhdGUuVm9sdW1lVHlwZUID4EEBEhEKBGlvcHMYAyABKAVCA+BB",
-            "ARIYCgtrbXNfa2V5X2FybhgEIAEoCUID4EEBIjsKClZvbHVtZVR5cGUSGwoX",
-            "Vk9MVU1FX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNHUDIQARIHCgNHUDMQAiJ7",
-            "ChRBd3NDbHVzdGVyTmV0d29ya2luZxITCgZ2cGNfaWQYASABKAlCA+BBAhIk",
-            "Chdwb2RfYWRkcmVzc19jaWRyX2Jsb2NrcxgCIAMoCUID4EECEigKG3NlcnZp",
-            "Y2VfYWRkcmVzc19jaWRyX2Jsb2NrcxgDIAMoCUID4EECIrAHCgtBd3NOb2Rl",
-            "UG9vbBIMCgRuYW1lGAEgASgJEhQKB3ZlcnNpb24YAyABKAlCA+BBAhJBCgZj",
-            "b25maWcYHCABKAsyLC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
-            "d3NOb2RlQ29uZmlnQgPgQQISTwoLYXV0b3NjYWxpbmcYGSABKAsyNS5nb29n",
-            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlUG9vbEF1dG9zY2Fs",
-            "aW5nQgPgQQISFgoJc3VibmV0X2lkGAYgASgJQgPgQQISRAoFc3RhdGUYECAB",
-            "KA4yMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlUG9v",
-            "bC5TdGF0ZUID4EEDEhAKA3VpZBgRIAEoCUID4EEDEhgKC3JlY29uY2lsaW5n",
-            "GBIgASgIQgPgQQMSNAoLY3JlYXRlX3RpbWUYEyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYFCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSDAoEZXRhZxgVIAEoCRJV",
-            "Cgthbm5vdGF0aW9ucxgWIAMoCzI7Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkF3c05vZGVQb29sLkFubm90YXRpb25zRW50cnlCA+BBARJSChNt",
-            "YXhfcG9kc19jb25zdHJhaW50GBsgASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11",
-            "bHRpY2xvdWQudjEuTWF4UG9kc0NvbnN0cmFpbnRCA+BBAhoyChBBbm5vdGF0",
-            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEidQoF",
-            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQ",
-            "ARILCgdSVU5OSU5HEAISDwoLUkVDT05DSUxJTkcQAxIMCghTVE9QUElORxAE",
-            "EgkKBUVSUk9SEAUSDAoIREVHUkFERUQQBjqOAepBigEKKGdrZW11bHRpY2xv",
-            "dWQuZ29vZ2xlYXBpcy5jb20vQXdzTm9kZVBvb2wSXnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hd3NDbHVzdGVycy97YXdzX2Ns",
-            "dXN0ZXJ9L2F3c05vZGVQb29scy97YXdzX25vZGVfcG9vbH0iwwYKDUF3c05v",
-            "ZGVDb25maWcSGgoNaW5zdGFuY2VfdHlwZRgBIAEoCUID4EEBEkoKC3Jvb3Rf",
-            "dm9sdW1lGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEu",
-            "QXdzVm9sdW1lVGVtcGxhdGVCA+BBARI9CgZ0YWludHMYAyADKAsyKC5nb29n",
-            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Ob2RlVGFpbnRCA+BBARJNCgZs",
-            "YWJlbHMYBCADKAsyOC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
-            "d3NOb2RlQ29uZmlnLkxhYmVsc0VudHJ5QgPgQQESSQoEdGFncxgFIAMoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVDb25maWcu",
-            "VGFnc0VudHJ5QgPgQQESIQoUaWFtX2luc3RhbmNlX3Byb2ZpbGUYBiABKAlC",
-            "A+BBAhIXCgppbWFnZV90eXBlGAsgASgJQgPgQQESRAoKc3NoX2NvbmZpZxgJ",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1NzaENv",
-            "bmZpZ0ID4EEBEh8KEnNlY3VyaXR5X2dyb3VwX2lkcxgKIAMoCUID4EEBEkgK",
-            "DHByb3h5X2NvbmZpZxgMIAEoCzItLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQESUgoRY29uZmlnX2VuY3J5cHRp",
-            "b24YDSABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3ND",
-            "b25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5zdGFuY2VfcGxhY2VtZW50GA4g",
-            "ASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzSW5zdGFu",
-            "Y2VQbGFjZW1lbnRCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBGisKCVRhZ3NFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIlIKFkF3c05vZGVQb29sQXV0b3NjYWxpbmcS",
-            "GwoObWluX25vZGVfY291bnQYASABKAVCA+BBAhIbCg5tYXhfbm9kZV9jb3Vu",
-            "dBgCIAEoBUID4EECIvQBCg9Bd3NTZXJ2ZXJDb25maWcSDAoEbmFtZRgBIAEo",
-            "CRJICg52YWxpZF92ZXJzaW9ucxgCIAMoCzIwLmdvb2dsZS5jbG91ZC5na2Vt",
-            "dWx0aWNsb3VkLnYxLkF3c0s4c1ZlcnNpb25JbmZvEh0KFXN1cHBvcnRlZF9h",
-            "d3NfcmVnaW9ucxgDIAMoCTpq6kFnCixna2VtdWx0aWNsb3VkLmdvb2dsZWFw",
-            "aXMuY29tL0F3c1NlcnZlckNvbmZpZxI3cHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2F3c1NlcnZlckNvbmZpZyIkChFBd3NLOHNW",
-            "ZXJzaW9uSW5mbxIPCgd2ZXJzaW9uGAEgASgJIikKDEF3c1NzaENvbmZpZxIZ",
-            "CgxlYzJfa2V5X3BhaXIYASABKAlCA+BBAiI8Cg5Bd3NQcm94eUNvbmZpZxIS",
-            "CgpzZWNyZXRfYXJuGAEgASgJEhYKDnNlY3JldF92ZXJzaW9uGAIgASgJIi8K",
-            "E0F3c0NvbmZpZ0VuY3J5cHRpb24SGAoLa21zX2tleV9hcm4YASABKAlCA+BB",
-            "AiKzAQoUQXdzSW5zdGFuY2VQbGFjZW1lbnQSUQoHdGVuYW5jeRgBIAEoDjI7",
+            "ZC52MS5Mb2dnaW5nQ29uZmlnQgPgQQESQwoGZXJyb3JzGBQgAygLMi4uZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzQ2x1c3RlckVycm9yQgPg",
+            "QQMSTwoRbW9uaXRvcmluZ19jb25maWcYFSABKAsyLy5nb29nbGUuY2xvdWQu",
+            "Z2tlbXVsdGljbG91ZC52MS5Nb25pdG9yaW5nQ29uZmlnQgPgQQEaMgoQQW5u",
+            "b3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "InUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9O",
+            "SU5HEAESCwoHUlVOTklORxACEg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJ",
+            "TkcQBBIJCgVFUlJPUhAFEgwKCERFR1JBREVEEAY6b+pBbAonZ2tlbXVsdGlj",
+            "bG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NDbHVzdGVyEkFwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXdzQ2x1c3RlcnMve2F3c19j",
+            "bHVzdGVyfSKoBwoPQXdzQ29udHJvbFBsYW5lEhQKB3ZlcnNpb24YASABKAlC",
+            "A+BBAhIaCg1pbnN0YW5jZV90eXBlGAIgASgJQgPgQQESRAoKc3NoX2NvbmZp",
+            "ZxgOIAEoCzIrLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Nz",
+            "aENvbmZpZ0ID4EEBEhcKCnN1Ym5ldF9pZHMYBCADKAlCA+BBAhIfChJzZWN1",
+            "cml0eV9ncm91cF9pZHMYBSADKAlCA+BBARIhChRpYW1faW5zdGFuY2VfcHJv",
+            "ZmlsZRgHIAEoCUID4EECEkoKC3Jvb3Rfdm9sdW1lGAggASgLMjAuZ29vZ2xl",
+            "LmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGVCA+BB",
+            "ARJKCgttYWluX3ZvbHVtZRgJIAEoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0",
+            "aWNsb3VkLnYxLkF3c1ZvbHVtZVRlbXBsYXRlQgPgQQESVgoTZGF0YWJhc2Vf",
+            "ZW5jcnlwdGlvbhgKIAEoCzI0Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLkF3c0RhdGFiYXNlRW5jcnlwdGlvbkID4EECEksKBHRhZ3MYCyADKAsy",
+            "OC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NDb250cm9sUGxh",
+            "bmUuVGFnc0VudHJ5QgPgQQESYgobYXdzX3NlcnZpY2VzX2F1dGhlbnRpY2F0",
+            "aW9uGAwgASgLMjguZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdz",
+            "U2VydmljZXNBdXRoZW50aWNhdGlvbkID4EECEkgKDHByb3h5X2NvbmZpZxgQ",
+            "IAEoCzItLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Byb3h5",
+            "Q29uZmlnQgPgQQESUgoRY29uZmlnX2VuY3J5cHRpb24YESABKAsyMi5nb29n",
+            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NDb25maWdFbmNyeXB0aW9u",
+            "QgPgQQISVAoSaW5zdGFuY2VfcGxhY2VtZW50GBIgASgLMjMuZ29vZ2xlLmNs",
+            "b3VkLmdrZW11bHRpY2xvdWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnRCA+BB",
+            "ARorCglUYWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASJSChlBd3NTZXJ2aWNlc0F1dGhlbnRpY2F0aW9uEhUKCHJvbGVfYXJuGAEg",
+            "ASgJQgPgQQISHgoRcm9sZV9zZXNzaW9uX25hbWUYAiABKAlCA+BBASJbChBB",
+            "d3NBdXRob3JpemF0aW9uEkcKC2FkbWluX3VzZXJzGAEgAygLMi0uZ29vZ2xl",
+            "LmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzQ2x1c3RlclVzZXJCA+BBAiIn",
+            "Cg5Bd3NDbHVzdGVyVXNlchIVCgh1c2VybmFtZRgBIAEoCUID4EECIjEKFUF3",
+            "c0RhdGFiYXNlRW5jcnlwdGlvbhIYCgtrbXNfa2V5X2FybhgBIAEoCUID4EEC",
+            "IusBChFBd3NWb2x1bWVUZW1wbGF0ZRIVCghzaXplX2dpYhgBIAEoBUID4EEB",
+            "ElUKC3ZvbHVtZV90eXBlGAIgASgOMjsuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGUuVm9sdW1lVHlwZUID4EEBEhEK",
+            "BGlvcHMYAyABKAVCA+BBARIYCgtrbXNfa2V5X2FybhgEIAEoCUID4EEBIjsK",
+            "ClZvbHVtZVR5cGUSGwoXVk9MVU1FX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNH",
+            "UDIQARIHCgNHUDMQAiJ7ChRBd3NDbHVzdGVyTmV0d29ya2luZxITCgZ2cGNf",
+            "aWQYASABKAlCA+BBAhIkChdwb2RfYWRkcmVzc19jaWRyX2Jsb2NrcxgCIAMo",
+            "CUID4EECEigKG3NlcnZpY2VfYWRkcmVzc19jaWRyX2Jsb2NrcxgDIAMoCUID",
+            "4EECIvYHCgtBd3NOb2RlUG9vbBIMCgRuYW1lGAEgASgJEhQKB3ZlcnNpb24Y",
+            "AyABKAlCA+BBAhJBCgZjb25maWcYHCABKAsyLC5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5Bd3NOb2RlQ29uZmlnQgPgQQISTwoLYXV0b3NjYWxp",
+            "bmcYGSABKAsyNS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NO",
+            "b2RlUG9vbEF1dG9zY2FsaW5nQgPgQQISFgoJc3VibmV0X2lkGAYgASgJQgPg",
+            "QQISRAoFc3RhdGUYECABKA4yMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
+            "ZC52MS5Bd3NOb2RlUG9vbC5TdGF0ZUID4EEDEhAKA3VpZBgRIAEoCUID4EED",
+            "EhgKC3JlY29uY2lsaW5nGBIgASgIQgPgQQMSNAoLY3JlYXRlX3RpbWUYEyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYFCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "DAoEZXRhZxgVIAEoCRJVCgthbm5vdGF0aW9ucxgWIAMoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sLkFubm90YXRpb25z",
+            "RW50cnlCA+BBARJSChNtYXhfcG9kc19jb25zdHJhaW50GBsgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuTWF4UG9kc0NvbnN0cmFpbnRC",
+            "A+BBAhJECgZlcnJvcnMYHSADKAsyLy5nb29nbGUuY2xvdWQuZ2tlbXVsdGlj",
+            "bG91ZC52MS5Bd3NOb2RlUG9vbEVycm9yQgPgQQMaMgoQQW5ub3RhdGlvbnNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInUKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoH",
+            "UlVOTklORxACEg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVF",
+            "UlJPUhAFEgwKCERFR1JBREVEEAY6jgHqQYoBCihna2VtdWx0aWNsb3VkLmdv",
+            "b2dsZWFwaXMuY29tL0F3c05vZGVQb29sEl5wcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vYXdzQ2x1c3RlcnMve2F3c19jbHVzdGVy",
+            "fS9hd3NOb2RlUG9vbHMve2F3c19ub2RlX3Bvb2x9IrUHCg1Bd3NOb2RlQ29u",
+            "ZmlnEhoKDWluc3RhbmNlX3R5cGUYASABKAlCA+BBARJKCgtyb290X3ZvbHVt",
+            "ZRgCIAEoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Zv",
+            "bHVtZVRlbXBsYXRlQgPgQQESPQoGdGFpbnRzGAMgAygLMiguZ29vZ2xlLmNs",
+            "b3VkLmdrZW11bHRpY2xvdWQudjEuTm9kZVRhaW50QgPgQQESTQoGbGFiZWxz",
+            "GAQgAygLMjguZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9k",
+            "ZUNvbmZpZy5MYWJlbHNFbnRyeUID4EEBEkkKBHRhZ3MYBSADKAsyNi5nb29n",
+            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlQ29uZmlnLlRhZ3NF",
+            "bnRyeUID4EEBEiEKFGlhbV9pbnN0YW5jZV9wcm9maWxlGAYgASgJQgPgQQIS",
+            "FwoKaW1hZ2VfdHlwZRgLIAEoCUID4EEBEkQKCnNzaF9jb25maWcYCSABKAsy",
+            "Ky5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NTc2hDb25maWdC",
+            "A+BBARIfChJzZWN1cml0eV9ncm91cF9pZHMYCiADKAlCA+BBARJICgxwcm94",
+            "eV9jb25maWcYDCABKAsyLS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52",
+            "MS5Bd3NQcm94eUNvbmZpZ0ID4EEBElIKEWNvbmZpZ19lbmNyeXB0aW9uGA0g",
+            "ASgLMjIuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzQ29uZmln",
+            "RW5jcnlwdGlvbkID4EECElQKEmluc3RhbmNlX3BsYWNlbWVudBgOIAEoCzIz",
             "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0luc3RhbmNlUGxh",
-            "Y2VtZW50LlRlbmFuY3lCA+BBAiJICgdUZW5hbmN5EhcKE1RFTkFOQ1lfVU5T",
-            "UEVDSUZJRUQQABILCgdERUZBVUxUEAESDQoJREVESUNBVEVEEAISCAoESE9T",
-            "VBADQucBCiFjb20uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjFCEUF3",
+            "Y2VtZW50QgPgQQEScAoeYXV0b3NjYWxpbmdfbWV0cmljc19jb2xsZWN0aW9u",
+            "GA8gASgLMkMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzQXV0",
+            "b3NjYWxpbmdHcm91cE1ldHJpY3NDb2xsZWN0aW9uQgPgQQEaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARorCglUYWdz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJSChZBd3NO",
+            "b2RlUG9vbEF1dG9zY2FsaW5nEhsKDm1pbl9ub2RlX2NvdW50GAEgASgFQgPg",
+            "QQISGwoObWF4X25vZGVfY291bnQYAiABKAVCA+BBAiL0AQoPQXdzU2VydmVy",
+            "Q29uZmlnEgwKBG5hbWUYASABKAkSSAoOdmFsaWRfdmVyc2lvbnMYAiADKAsy",
+            "MC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NLOHNWZXJzaW9u",
+            "SW5mbxIdChVzdXBwb3J0ZWRfYXdzX3JlZ2lvbnMYAyADKAk6aupBZwosZ2tl",
+            "bXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NTZXJ2ZXJDb25maWcSN3By",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hd3NTZXJ2",
+            "ZXJDb25maWciJAoRQXdzSzhzVmVyc2lvbkluZm8SDwoHdmVyc2lvbhgBIAEo",
+            "CSIpCgxBd3NTc2hDb25maWcSGQoMZWMyX2tleV9wYWlyGAEgASgJQgPgQQIi",
+            "PAoOQXdzUHJveHlDb25maWcSEgoKc2VjcmV0X2FybhgBIAEoCRIWCg5zZWNy",
+            "ZXRfdmVyc2lvbhgCIAEoCSIvChNBd3NDb25maWdFbmNyeXB0aW9uEhgKC2tt",
+            "c19rZXlfYXJuGAEgASgJQgPgQQIiswEKFEF3c0luc3RhbmNlUGxhY2VtZW50",
+            "ElEKB3RlbmFuY3kYASABKA4yOy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
+            "ZC52MS5Bd3NJbnN0YW5jZVBsYWNlbWVudC5UZW5hbmN5QgPgQQIiSAoHVGVu",
+            "YW5jeRIXChNURU5BTkNZX1VOU1BFQ0lGSUVEEAASCwoHREVGQVVMVBABEg0K",
+            "CURFRElDQVRFRBACEggKBEhPU1QQAyJWCiRBd3NBdXRvc2NhbGluZ0dyb3Vw",
+            "TWV0cmljc0NvbGxlY3Rpb24SGAoLZ3JhbnVsYXJpdHkYASABKAlCA+BBAhIU",
+            "CgdtZXRyaWNzGAIgAygJQgPgQQEiIgoPQXdzQ2x1c3RlckVycm9yEg8KB21l",
+            "c3NhZ2UYASABKAkiIwoQQXdzTm9kZVBvb2xFcnJvchIPCgdtZXNzYWdlGAEg",
+            "ASgJQucBCiFjb20uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjFCEUF3",
             "c1Jlc291cmNlc1Byb3RvUAFaSmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
             "L2dvb2dsZWFwaXMvY2xvdWQvZ2tlbXVsdGljbG91ZC92MTtna2VtdWx0aWNs",
             "b3VkqgIdR29vZ2xlLkNsb3VkLkdrZU11bHRpQ2xvdWQuVjHKAh1Hb29nbGVc",
@@ -155,7 +166,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsCluster), global::Google.Cloud.GkeMultiCloud.V1.AwsCluster.Parser, new[]{ "Name", "Description", "Networking", "AwsRegion", "ControlPlane", "Authorization", "State", "Endpoint", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "WorkloadIdentityConfig", "ClusterCaCertificate", "Fleet", "LoggingConfig" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsCluster), global::Google.Cloud.GkeMultiCloud.V1.AwsCluster.Parser, new[]{ "Name", "Description", "Networking", "AwsRegion", "ControlPlane", "Authorization", "State", "Endpoint", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "WorkloadIdentityConfig", "ClusterCaCertificate", "Fleet", "LoggingConfig", "Errors", "MonitoringConfig" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsControlPlane), global::Google.Cloud.GkeMultiCloud.V1.AwsControlPlane.Parser, new[]{ "Version", "InstanceType", "SshConfig", "SubnetIds", "SecurityGroupIds", "IamInstanceProfile", "RootVolume", "MainVolume", "DatabaseEncryption", "Tags", "AwsServicesAuthentication", "ProxyConfig", "ConfigEncryption", "InstancePlacement" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsServicesAuthentication), global::Google.Cloud.GkeMultiCloud.V1.AwsServicesAuthentication.Parser, new[]{ "RoleArn", "RoleSessionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsAuthorization), global::Google.Cloud.GkeMultiCloud.V1.AwsAuthorization.Parser, new[]{ "AdminUsers" }, null, null, null, null),
@@ -163,15 +174,18 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsDatabaseEncryption), global::Google.Cloud.GkeMultiCloud.V1.AwsDatabaseEncryption.Parser, new[]{ "KmsKeyArn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate), global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate.Parser, new[]{ "SizeGib", "VolumeType", "Iops", "KmsKeyArn" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate.Types.VolumeType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsClusterNetworking), global::Google.Cloud.GkeMultiCloud.V1.AwsClusterNetworking.Parser, new[]{ "VpcId", "PodAddressCidrBlocks", "ServiceAddressCidrBlocks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Parser, new[]{ "Name", "Version", "Config", "Autoscaling", "SubnetId", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "MaxPodsConstraint" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig), global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig.Parser, new[]{ "InstanceType", "RootVolume", "Taints", "Labels", "Tags", "IamInstanceProfile", "ImageType", "SshConfig", "SecurityGroupIds", "ProxyConfig", "ConfigEncryption", "InstancePlacement" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Parser, new[]{ "Name", "Version", "Config", "Autoscaling", "SubnetId", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "Annotations", "MaxPodsConstraint", "Errors" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig), global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig.Parser, new[]{ "InstanceType", "RootVolume", "Taints", "Labels", "Tags", "IamInstanceProfile", "ImageType", "SshConfig", "SecurityGroupIds", "ProxyConfig", "ConfigEncryption", "InstancePlacement", "AutoscalingMetricsCollection" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolAutoscaling), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolAutoscaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig), global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig.Parser, new[]{ "Name", "ValidVersions", "SupportedAwsRegions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsK8sVersionInfo), global::Google.Cloud.GkeMultiCloud.V1.AwsK8sVersionInfo.Parser, new[]{ "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsSshConfig), global::Google.Cloud.GkeMultiCloud.V1.AwsSshConfig.Parser, new[]{ "Ec2KeyPair" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsProxyConfig), global::Google.Cloud.GkeMultiCloud.V1.AwsProxyConfig.Parser, new[]{ "SecretArn", "SecretVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsConfigEncryption), global::Google.Cloud.GkeMultiCloud.V1.AwsConfigEncryption.Parser, new[]{ "KmsKeyArn" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement), global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement.Parser, new[]{ "Tenancy" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement.Types.Tenancy) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement), global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement.Parser, new[]{ "Tenancy" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement.Types.Tenancy) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection), global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection.Parser, new[]{ "Granularity", "Metrics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError), global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError), global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError.Parser, new[]{ "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -233,6 +247,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       clusterCaCertificate_ = other.clusterCaCertificate_;
       fleet_ = other.fleet_ != null ? other.fleet_.Clone() : null;
       loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
+      errors_ = other.errors_.Clone();
+      monitoringConfig_ = other.monitoringConfig_ != null ? other.monitoringConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -509,7 +525,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int FleetFieldNumber = 18;
     private global::Google.Cloud.GkeMultiCloud.V1.Fleet fleet_;
     /// <summary>
-    /// Optional. Fleet configuration.
+    /// Required. Fleet configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -532,6 +548,35 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       get { return loggingConfig_; }
       set {
         loggingConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 20;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(162, global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError> errors_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError>();
+    /// <summary>
+    /// Output only. A set of errors found in the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError> Errors {
+      get { return errors_; }
+    }
+
+    /// <summary>Field number for the "monitoring_config" field.</summary>
+    public const int MonitoringConfigFieldNumber = 21;
+    private global::Google.Cloud.GkeMultiCloud.V1.MonitoringConfig monitoringConfig_;
+    /// <summary>
+    /// Optional. Monitoring configuration for this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeMultiCloud.V1.MonitoringConfig MonitoringConfig {
+      get { return monitoringConfig_; }
+      set {
+        monitoringConfig_ = value;
       }
     }
 
@@ -568,6 +613,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (ClusterCaCertificate != other.ClusterCaCertificate) return false;
       if (!object.Equals(Fleet, other.Fleet)) return false;
       if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
+      if(!errors_.Equals(other.errors_)) return false;
+      if (!object.Equals(MonitoringConfig, other.MonitoringConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -593,6 +640,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (ClusterCaCertificate.Length != 0) hash ^= ClusterCaCertificate.GetHashCode();
       if (fleet_ != null) hash ^= Fleet.GetHashCode();
       if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
+      hash ^= errors_.GetHashCode();
+      if (monitoringConfig_ != null) hash ^= MonitoringConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -680,6 +729,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(LoggingConfig);
       }
+      errors_.WriteTo(output, _repeated_errors_codec);
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -759,6 +813,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(LoggingConfig);
       }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -820,6 +879,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
       if (loggingConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(LoggingConfig);
+      }
+      size += errors_.CalculateSize(_repeated_errors_codec);
+      if (monitoringConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MonitoringConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -908,6 +971,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           LoggingConfig = new global::Google.Cloud.GkeMultiCloud.V1.LoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
+      }
+      errors_.Add(other.errors_);
+      if (other.monitoringConfig_ != null) {
+        if (monitoringConfig_ == null) {
+          MonitoringConfig = new global::Google.Cloud.GkeMultiCloud.V1.MonitoringConfig();
+        }
+        MonitoringConfig.MergeFrom(other.MonitoringConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1020,6 +1090,17 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(LoggingConfig);
             break;
           }
+          case 162: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
+          case 170: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.GkeMultiCloud.V1.MonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
+            break;
+          }
         }
       }
     #endif
@@ -1129,6 +1210,17 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               LoggingConfig = new global::Google.Cloud.GkeMultiCloud.V1.LoggingConfig();
             }
             input.ReadMessage(LoggingConfig);
+            break;
+          }
+          case 162: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+          case 170: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.GkeMultiCloud.V1.MonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
             break;
           }
         }
@@ -1334,8 +1426,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int IamInstanceProfileFieldNumber = 7;
     private string iamInstanceProfile_ = "";
     /// <summary>
-    /// Required. The name or ARN of the AWS IAM instance profile to assign to each control
-    /// plane replica.
+    /// Required. The name or ARN of the AWS IAM instance profile to assign to each
+    /// control plane replica.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1410,8 +1502,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. A set of AWS resource tags to propagate to all underlying managed AWS
-    /// resources.
+    /// Optional. A set of AWS resource tags to propagate to all underlying managed
+    /// AWS resources.
     ///
     /// Specify at most 50 pairs containing alphanumerics, spaces, and symbols
     /// (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to
@@ -2023,8 +2115,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int RoleArnFieldNumber = 1;
     private string roleArn_ = "";
     /// <summary>
-    /// Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API
-    /// will assume when managing AWS resources on your account.
+    /// Required. The Amazon Resource Name (ARN) of the role that the Anthos
+    /// Multi-Cloud API will assume when managing AWS resources on your account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2877,7 +2969,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int IopsFieldNumber = 3;
     private int iops_;
     /// <summary>
-    /// Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
+    /// Optional. The number of I/O operations per second (IOPS) to provision for
+    /// GP3 volume.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2892,8 +2985,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int KmsKeyArnFieldNumber = 4;
     private string kmsKeyArn_ = "";
     /// <summary>
-    /// Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to
-    /// encrypt AWS EBS volumes.
+    /// Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK)
+    /// used to encrypt AWS EBS volumes.
     ///
     /// If not specified, the default Amazon managed key associated to
     /// the AWS region where this cluster runs will be used.
@@ -3217,9 +3310,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> podAddressCidrBlocks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. All pods in the cluster are assigned an IPv4 address from these ranges.
-    /// Only a single range is supported.
-    /// This field cannot be changed after creation.
+    /// Required. All pods in the cluster are assigned an IPv4 address from these
+    /// ranges. Only a single range is supported. This field cannot be changed
+    /// after creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3233,9 +3326,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> serviceAddressCidrBlocks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. All services in the cluster are assigned an IPv4 address from these ranges.
-    /// Only a single range is supported.
-    /// This field cannot be changed after creation.
+    /// Required. All services in the cluster are assigned an IPv4 address from
+    /// these ranges. Only a single range is supported. This field cannot be
+    /// changed after creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3454,6 +3547,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       etag_ = other.etag_;
       annotations_ = other.annotations_.Clone();
       maxPodsConstraint_ = other.maxPodsConstraint_ != null ? other.maxPodsConstraint_.Clone() : null;
+      errors_ = other.errors_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3488,7 +3582,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int VersionFieldNumber = 3;
     private string version_ = "";
     /// <summary>
-    /// Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`).
+    /// Required. The Kubernetes version to run on this node pool (e.g.
+    /// `1.19.10-gke.1000`).
     ///
     /// You can list all supported versions on a given Google Cloud region by
     /// calling
@@ -3681,6 +3776,20 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
     }
 
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 29;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(234, global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError> errors_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError>();
+    /// <summary>
+    /// Output only. A set of errors found in the node pool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError> Errors {
+      get { return errors_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3709,6 +3818,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (Etag != other.Etag) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (!object.Equals(MaxPodsConstraint, other.MaxPodsConstraint)) return false;
+      if(!errors_.Equals(other.errors_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3729,6 +3839,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (maxPodsConstraint_ != null) hash ^= MaxPodsConstraint.GetHashCode();
+      hash ^= errors_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3796,6 +3907,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(Config);
       }
+      errors_.WriteTo(output, _repeated_errors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3855,6 +3967,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(Config);
       }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3902,6 +4015,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (maxPodsConstraint_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaxPodsConstraint);
       }
+      size += errors_.CalculateSize(_repeated_errors_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3966,6 +4080,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         }
         MaxPodsConstraint.MergeFrom(other.MaxPodsConstraint);
       }
+      errors_.Add(other.errors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4048,6 +4163,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(Config);
             break;
           }
+          case 234: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4128,6 +4247,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               Config = new global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig();
             }
             input.ReadMessage(Config);
+            break;
+          }
+          case 234: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
             break;
           }
         }
@@ -4231,6 +4354,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       proxyConfig_ = other.proxyConfig_ != null ? other.proxyConfig_.Clone() : null;
       configEncryption_ = other.configEncryption_ != null ? other.configEncryption_.Clone() : null;
       instancePlacement_ = other.instancePlacement_ != null ? other.instancePlacement_.Clone() : null;
+      autoscalingMetricsCollection_ = other.autoscalingMetricsCollection_ != null ? other.autoscalingMetricsCollection_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4312,10 +4436,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Key/value metadata to assign to each underlying AWS resource. Specify at
-    /// most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/).
-    /// Keys can be up to 127 Unicode characters.
-    /// Values can be up to 255 Unicode characters.
+    /// Optional. Key/value metadata to assign to each underlying AWS resource.
+    /// Specify at most 50 pairs containing alphanumerics, spaces, and symbols
+    /// (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to
+    /// 255 Unicode characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4327,7 +4451,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int IamInstanceProfileFieldNumber = 6;
     private string iamInstanceProfile_ = "";
     /// <summary>
-    /// Required. The name or ARN of the AWS IAM role assigned to nodes in the pool.
+    /// Required. The name or ARN of the AWS IAM role assigned to nodes in the
+    /// pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4378,9 +4503,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForString(82);
     private readonly pbc::RepeatedField<string> securityGroupIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The IDs of additional security groups to add to nodes in this pool. The
-    /// manager will automatically create security groups with minimum rules
-    /// needed for a functioning cluster.
+    /// Optional. The IDs of additional security groups to add to nodes in this
+    /// pool. The manager will automatically create security groups with minimum
+    /// rules needed for a functioning cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4434,6 +4559,24 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
     }
 
+    /// <summary>Field number for the "autoscaling_metrics_collection" field.</summary>
+    public const int AutoscalingMetricsCollectionFieldNumber = 15;
+    private global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection autoscalingMetricsCollection_;
+    /// <summary>
+    /// Optional. Configuration related to CloudWatch metrics collection on the
+    /// Auto Scaling group of the node pool.
+    ///
+    /// When unspecified, metrics collection is disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection AutoscalingMetricsCollection {
+      get { return autoscalingMetricsCollection_; }
+      set {
+        autoscalingMetricsCollection_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4461,6 +4604,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (!object.Equals(ProxyConfig, other.ProxyConfig)) return false;
       if (!object.Equals(ConfigEncryption, other.ConfigEncryption)) return false;
       if (!object.Equals(InstancePlacement, other.InstancePlacement)) return false;
+      if (!object.Equals(AutoscalingMetricsCollection, other.AutoscalingMetricsCollection)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4480,6 +4624,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (proxyConfig_ != null) hash ^= ProxyConfig.GetHashCode();
       if (configEncryption_ != null) hash ^= ConfigEncryption.GetHashCode();
       if (instancePlacement_ != null) hash ^= InstancePlacement.GetHashCode();
+      if (autoscalingMetricsCollection_ != null) hash ^= AutoscalingMetricsCollection.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4534,6 +4679,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(InstancePlacement);
       }
+      if (autoscalingMetricsCollection_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AutoscalingMetricsCollection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4580,6 +4729,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(InstancePlacement);
       }
+      if (autoscalingMetricsCollection_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AutoscalingMetricsCollection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4617,6 +4770,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
       if (instancePlacement_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstancePlacement);
+      }
+      if (autoscalingMetricsCollection_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingMetricsCollection);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4672,6 +4828,12 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           InstancePlacement = new global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement();
         }
         InstancePlacement.MergeFrom(other.InstancePlacement);
+      }
+      if (other.autoscalingMetricsCollection_ != null) {
+        if (autoscalingMetricsCollection_ == null) {
+          AutoscalingMetricsCollection = new global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection();
+        }
+        AutoscalingMetricsCollection.MergeFrom(other.AutoscalingMetricsCollection);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4749,6 +4911,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               InstancePlacement = new global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement();
             }
             input.ReadMessage(InstancePlacement);
+            break;
+          }
+          case 122: {
+            if (autoscalingMetricsCollection_ == null) {
+              AutoscalingMetricsCollection = new global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection();
+            }
+            input.ReadMessage(AutoscalingMetricsCollection);
             break;
           }
         }
@@ -4829,6 +4998,13 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(InstancePlacement);
             break;
           }
+          case 122: {
+            if (autoscalingMetricsCollection_ == null) {
+              AutoscalingMetricsCollection = new global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection();
+            }
+            input.ReadMessage(AutoscalingMetricsCollection);
+            break;
+          }
         }
       }
     }
@@ -4889,8 +5065,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int MinNodeCountFieldNumber = 1;
     private int minNodeCount_;
     /// <summary>
-    /// Required. Minimum number of nodes in the node pool. Must be greater than or equal to
-    /// 1 and less than or equal to max_node_count.
+    /// Required. Minimum number of nodes in the node pool. Must be greater than or
+    /// equal to 1 and less than or equal to max_node_count.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4905,8 +5081,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int MaxNodeCountFieldNumber = 2;
     private int maxNodeCount_;
     /// <summary>
-    /// Required. Maximum number of nodes in the node pool. Must be greater than or equal to
-    /// min_node_count and less than or equal to 50.
+    /// Required. Maximum number of nodes in the node pool. Must be greater than or
+    /// equal to min_node_count and less than or equal to 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5771,6 +5947,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy
     /// configuration.
+    ///
+    /// The secret must be a JSON encoded proxy configuration
+    /// as described in
+    /// https://cloud.google.com/anthos/clusters/docs/multi-cloud/aws/how-to/use-a-proxy#create_a_proxy_configuration_file
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6375,6 +6555,625 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Configuration related to CloudWatch metrics collection in an AWS
+  /// Auto Scaling group.
+  /// </summary>
+  public sealed partial class AwsAutoscalingGroupMetricsCollection : pb::IMessage<AwsAutoscalingGroupMetricsCollection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsAutoscalingGroupMetricsCollection> _parser = new pb::MessageParser<AwsAutoscalingGroupMetricsCollection>(() => new AwsAutoscalingGroupMetricsCollection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsAutoscalingGroupMetricsCollection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeMultiCloud.V1.AwsResourcesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsAutoscalingGroupMetricsCollection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsAutoscalingGroupMetricsCollection(AwsAutoscalingGroupMetricsCollection other) : this() {
+      granularity_ = other.granularity_;
+      metrics_ = other.metrics_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsAutoscalingGroupMetricsCollection Clone() {
+      return new AwsAutoscalingGroupMetricsCollection(this);
+    }
+
+    /// <summary>Field number for the "granularity" field.</summary>
+    public const int GranularityFieldNumber = 1;
+    private string granularity_ = "";
+    /// <summary>
+    /// Required. The frequency at which EC2 Auto Scaling sends aggregated data to
+    /// AWS CloudWatch. The only valid value is "1Minute".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Granularity {
+      get { return granularity_; }
+      set {
+        granularity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_metrics_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> metrics_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The metrics to enable. For a list of valid metrics, see
+    /// https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html.
+    /// If you specify Granularity and don't specify any metrics, all metrics are
+    /// enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Metrics {
+      get { return metrics_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsAutoscalingGroupMetricsCollection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsAutoscalingGroupMetricsCollection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Granularity != other.Granularity) return false;
+      if(!metrics_.Equals(other.metrics_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Granularity.Length != 0) hash ^= Granularity.GetHashCode();
+      hash ^= metrics_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Granularity.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Granularity);
+      }
+      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Granularity.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Granularity);
+      }
+      metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Granularity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Granularity);
+      }
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsAutoscalingGroupMetricsCollection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Granularity.Length != 0) {
+        Granularity = other.Granularity;
+      }
+      metrics_.Add(other.metrics_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Granularity = input.ReadString();
+            break;
+          }
+          case 18: {
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Granularity = input.ReadString();
+            break;
+          }
+          case 18: {
+            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// AwsClusterError describes errors found on AWS clusters.
+  /// </summary>
+  public sealed partial class AwsClusterError : pb::IMessage<AwsClusterError>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsClusterError> _parser = new pb::MessageParser<AwsClusterError>(() => new AwsClusterError());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsClusterError> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeMultiCloud.V1.AwsResourcesReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsClusterError() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsClusterError(AwsClusterError other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsClusterError Clone() {
+      return new AwsClusterError(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    /// <summary>
+    /// Human-friendly description of the error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsClusterError);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsClusterError other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsClusterError other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// AwsNodePoolError describes errors found on AWS node pools.
+  /// </summary>
+  public sealed partial class AwsNodePoolError : pb::IMessage<AwsNodePoolError>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsNodePoolError> _parser = new pb::MessageParser<AwsNodePoolError>(() => new AwsNodePoolError());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsNodePoolError> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeMultiCloud.V1.AwsResourcesReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsNodePoolError() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsNodePoolError(AwsNodePoolError other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsNodePoolError Clone() {
+      return new AwsNodePoolError(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    /// <summary>
+    /// Human-friendly description of the error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsNodePoolError);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsNodePoolError other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsNodePoolError other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
