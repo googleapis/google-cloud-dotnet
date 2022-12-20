@@ -4724,7 +4724,12 @@ namespace Google.Cloud.Batch.V1 {
         public const int NetworkFieldNumber = 1;
         private string network_ = "";
         /// <summary>
-        /// The URL of the network resource.
+        /// The URL of an existing network resource.
+        /// You can specify the network as a full or partial URL.
+        /// For example, the following are all valid URLs:
+        /// https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+        /// projects/{project}/global/networks/{network}
+        /// global/networks/{network}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4739,7 +4744,12 @@ namespace Google.Cloud.Batch.V1 {
         public const int SubnetworkFieldNumber = 2;
         private string subnetwork_ = "";
         /// <summary>
-        /// The URL of the Subnetwork resource.
+        /// The URL of an existing subnetwork resource in the network.
+        /// You can specify the subnetwork as a full or partial URL.
+        /// For example, the following are all valid URLs:
+        /// https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
+        /// projects/{project}/regions/{region}/subnetworks/{subnetwork}
+        /// regions/{region}/subnetworks/{subnetwork}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
