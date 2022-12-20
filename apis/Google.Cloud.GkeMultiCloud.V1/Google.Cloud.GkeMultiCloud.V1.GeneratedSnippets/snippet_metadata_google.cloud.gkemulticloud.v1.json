@@ -11,6 +11,1747 @@
   },
   "snippets": [
     {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_sync",
+      "title": "CreateAttachedClusterRequestObject",
+      "description": "Snippet for CreateAttachedCluster",
+      "file": "AttachedClustersClient.CreateAttachedClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_async",
+      "title": "CreateAttachedClusterRequestObjectAsync",
+      "description": "Snippet for CreateAttachedClusterAsync",
+      "file": "AttachedClustersClient.CreateAttachedClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_sync_flattened",
+      "title": "CreateAttachedCluster",
+      "description": "Snippet for CreateAttachedCluster",
+      "file": "AttachedClustersClient.CreateAttachedClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_async_flattened",
+      "title": "CreateAttachedClusterAsync",
+      "description": "Snippet for CreateAttachedClusterAsync",
+      "file": "AttachedClustersClient.CreateAttachedClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_sync_flattened_resourceNames",
+      "title": "CreateAttachedClusterResourceNames",
+      "description": "Snippet for CreateAttachedCluster",
+      "file": "AttachedClustersClient.CreateAttachedClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_CreateAttachedCluster_async_flattened_resourceNames",
+      "title": "CreateAttachedClusterResourceNamesAsync",
+      "description": "Snippet for CreateAttachedClusterAsync",
+      "file": "AttachedClustersClient.CreateAttachedClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "CreateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.CreateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_UpdateAttachedCluster_sync",
+      "title": "UpdateAttachedClusterRequestObject",
+      "description": "Snippet for UpdateAttachedCluster",
+      "file": "AttachedClustersClient.UpdateAttachedClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.UpdateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_UpdateAttachedCluster_async",
+      "title": "UpdateAttachedClusterRequestObjectAsync",
+      "description": "Snippet for UpdateAttachedClusterAsync",
+      "file": "AttachedClustersClient.UpdateAttachedClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.UpdateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_UpdateAttachedCluster_sync_flattened",
+      "title": "UpdateAttachedCluster",
+      "description": "Snippet for UpdateAttachedCluster",
+      "file": "AttachedClustersClient.UpdateAttachedClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.UpdateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_UpdateAttachedCluster_async_flattened",
+      "title": "UpdateAttachedClusterAsync",
+      "description": "Snippet for UpdateAttachedClusterAsync",
+      "file": "AttachedClustersClient.UpdateAttachedClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "UpdateAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.UpdateAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_sync",
+      "title": "ImportAttachedClusterRequestObject",
+      "description": "Snippet for ImportAttachedCluster",
+      "file": "AttachedClustersClient.ImportAttachedClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_async",
+      "title": "ImportAttachedClusterRequestObjectAsync",
+      "description": "Snippet for ImportAttachedClusterAsync",
+      "file": "AttachedClustersClient.ImportAttachedClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_sync_flattened",
+      "title": "ImportAttachedCluster",
+      "description": "Snippet for ImportAttachedCluster",
+      "file": "AttachedClustersClient.ImportAttachedClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_async_flattened",
+      "title": "ImportAttachedClusterAsync",
+      "description": "Snippet for ImportAttachedClusterAsync",
+      "file": "AttachedClustersClient.ImportAttachedClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_sync_flattened_resourceNames",
+      "title": "ImportAttachedClusterResourceNames",
+      "description": "Snippet for ImportAttachedCluster",
+      "file": "AttachedClustersClient.ImportAttachedClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_async_flattened_resourceNames",
+      "title": "ImportAttachedClusterResourceNamesAsync",
+      "description": "Snippet for ImportAttachedClusterAsync",
+      "file": "AttachedClustersClient.ImportAttachedClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ImportAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ImportAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_sync",
+      "title": "GetAttachedClusterRequestObject",
+      "description": "Snippet for GetAttachedCluster",
+      "file": "AttachedClustersClient.GetAttachedClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_async",
+      "title": "GetAttachedClusterRequestObjectAsync",
+      "description": "Snippet for GetAttachedClusterAsync",
+      "file": "AttachedClustersClient.GetAttachedClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_sync_flattened",
+      "title": "GetAttachedCluster",
+      "description": "Snippet for GetAttachedCluster",
+      "file": "AttachedClustersClient.GetAttachedClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_async_flattened",
+      "title": "GetAttachedClusterAsync",
+      "description": "Snippet for GetAttachedClusterAsync",
+      "file": "AttachedClustersClient.GetAttachedClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_sync_flattened_resourceNames",
+      "title": "GetAttachedClusterResourceNames",
+      "description": "Snippet for GetAttachedCluster",
+      "file": "AttachedClustersClient.GetAttachedClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedCluster_async_flattened_resourceNames",
+      "title": "GetAttachedClusterResourceNamesAsync",
+      "description": "Snippet for GetAttachedClusterAsync",
+      "file": "AttachedClustersClient.GetAttachedClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_sync",
+      "title": "ListAttachedClustersRequestObject",
+      "description": "Snippet for ListAttachedClusters",
+      "file": "AttachedClustersClient.ListAttachedClustersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_async",
+      "title": "ListAttachedClustersRequestObjectAsync",
+      "description": "Snippet for ListAttachedClustersAsync",
+      "file": "AttachedClustersClient.ListAttachedClustersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_sync_flattened",
+      "title": "ListAttachedClusters",
+      "description": "Snippet for ListAttachedClusters",
+      "file": "AttachedClustersClient.ListAttachedClustersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_async_flattened",
+      "title": "ListAttachedClustersAsync",
+      "description": "Snippet for ListAttachedClustersAsync",
+      "file": "AttachedClustersClient.ListAttachedClustersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_sync_flattened_resourceNames",
+      "title": "ListAttachedClustersResourceNames",
+      "description": "Snippet for ListAttachedClusters",
+      "file": "AttachedClustersClient.ListAttachedClustersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClusters",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_ListAttachedClusters_async_flattened_resourceNames",
+      "title": "ListAttachedClustersResourceNamesAsync",
+      "description": "Snippet for ListAttachedClustersAsync",
+      "file": "AttachedClustersClient.ListAttachedClustersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachedClustersAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "ListAttachedClusters",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.ListAttachedClusters",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_sync",
+      "title": "DeleteAttachedClusterRequestObject",
+      "description": "Snippet for DeleteAttachedCluster",
+      "file": "AttachedClustersClient.DeleteAttachedClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_async",
+      "title": "DeleteAttachedClusterRequestObjectAsync",
+      "description": "Snippet for DeleteAttachedClusterAsync",
+      "file": "AttachedClustersClient.DeleteAttachedClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_sync_flattened",
+      "title": "DeleteAttachedCluster",
+      "description": "Snippet for DeleteAttachedCluster",
+      "file": "AttachedClustersClient.DeleteAttachedClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_async_flattened",
+      "title": "DeleteAttachedClusterAsync",
+      "description": "Snippet for DeleteAttachedClusterAsync",
+      "file": "AttachedClustersClient.DeleteAttachedClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_sync_flattened_resourceNames",
+      "title": "DeleteAttachedClusterResourceNames",
+      "description": "Snippet for DeleteAttachedCluster",
+      "file": "AttachedClustersClient.DeleteAttachedClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedCluster",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_DeleteAttachedCluster_async_flattened_resourceNames",
+      "title": "DeleteAttachedClusterResourceNamesAsync",
+      "description": "Snippet for DeleteAttachedClusterAsync",
+      "file": "AttachedClustersClient.DeleteAttachedClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAttachedClusterAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "DeleteAttachedCluster",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.DeleteAttachedCluster",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_sync",
+      "title": "GetAttachedServerConfigRequestObject",
+      "description": "Snippet for GetAttachedServerConfig",
+      "file": "AttachedClustersClient.GetAttachedServerConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_async",
+      "title": "GetAttachedServerConfigRequestObjectAsync",
+      "description": "Snippet for GetAttachedServerConfigAsync",
+      "file": "AttachedClustersClient.GetAttachedServerConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_sync_flattened",
+      "title": "GetAttachedServerConfig",
+      "description": "Snippet for GetAttachedServerConfig",
+      "file": "AttachedClustersClient.GetAttachedServerConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_async_flattened",
+      "title": "GetAttachedServerConfigAsync",
+      "description": "Snippet for GetAttachedServerConfigAsync",
+      "file": "AttachedClustersClient.GetAttachedServerConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_sync_flattened_resourceNames",
+      "title": "GetAttachedServerConfigResourceNames",
+      "description": "Snippet for GetAttachedServerConfig",
+      "file": "AttachedClustersClient.GetAttachedServerConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GetAttachedServerConfig_async_flattened_resourceNames",
+      "title": "GetAttachedServerConfigResourceNamesAsync",
+      "description": "Snippet for GetAttachedServerConfigAsync",
+      "file": "AttachedClustersClient.GetAttachedServerConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachedServerConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GetAttachedServerConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GetAttachedServerConfig",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_sync",
+      "title": "GenerateAttachedClusterInstallManifestRequestObject",
+      "description": "Snippet for GenerateAttachedClusterInstallManifest",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifest",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_async",
+      "title": "GenerateAttachedClusterInstallManifestRequestObjectAsync",
+      "description": "Snippet for GenerateAttachedClusterInstallManifestAsync",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifestAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_sync_flattened",
+      "title": "GenerateAttachedClusterInstallManifest",
+      "description": "Snippet for GenerateAttachedClusterInstallManifest",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifest",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_async_flattened",
+      "title": "GenerateAttachedClusterInstallManifestAsync",
+      "description": "Snippet for GenerateAttachedClusterInstallManifestAsync",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifestAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_sync_flattened_resourceNames",
+      "title": "GenerateAttachedClusterInstallManifestResourceNames",
+      "description": "Snippet for GenerateAttachedClusterInstallManifest",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifest",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_async_flattened_resourceNames",
+      "title": "GenerateAttachedClusterInstallManifestResourceNamesAsync",
+      "description": "Snippet for GenerateAttachedClusterInstallManifestAsync",
+      "file": "AttachedClustersClient.GenerateAttachedClusterInstallManifestResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterInstallManifestAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterInstallManifest",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterInstallManifest",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_sync",
       "title": "CreateAwsClusterRequestObject",
       "description": "Snippet for CreateAwsCluster",

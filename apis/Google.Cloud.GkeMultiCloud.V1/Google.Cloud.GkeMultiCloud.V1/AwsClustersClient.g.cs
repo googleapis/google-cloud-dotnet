@@ -501,7 +501,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public virtual AwsClusters.AwsClustersClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -514,7 +515,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -527,7 +529,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -566,15 +569,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<AwsCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsClusterOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -582,17 +587,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -605,15 +612,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -621,17 +630,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -644,15 +655,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -660,17 +673,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -678,15 +693,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAwsClusterAsync(parent, awsCluster, awsClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -694,17 +711,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -717,15 +736,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -733,17 +754,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -756,15 +779,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -772,17 +797,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsCluster">
-        /// Required. The specification of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
+        /// Required. The specification of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
         /// </param>
         /// <param name="awsClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -846,7 +873,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="awsCluster">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to update.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -865,14 +893,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.proxy_config`.
         /// *   `control_plane.proxy_config.secret_arn`.
         /// *   `control_plane.proxy_config.secret_version`.
+        /// *   `control_plane.root_volume.size_gib`.
+        /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
         /// *   `control_plane.root_volume.kms_key_arn`.
-        /// *   `control_plane.root_volume.volume_type`.
-        /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
         /// *   `control_plane.instance_placement.tenancy`.
-        /// *   `logging_config`.
+        /// *   `control_plane.iam_instance_profile`.
+        /// *   `logging_config.component_config.enable_components`.
+        /// *   `control_plane.tags`.
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -887,7 +918,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="awsCluster">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to update.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -906,14 +938,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.proxy_config`.
         /// *   `control_plane.proxy_config.secret_arn`.
         /// *   `control_plane.proxy_config.secret_version`.
+        /// *   `control_plane.root_volume.size_gib`.
+        /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
         /// *   `control_plane.root_volume.kms_key_arn`.
-        /// *   `control_plane.root_volume.volume_type`.
-        /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
         /// *   `control_plane.instance_placement.tenancy`.
-        /// *   `logging_config`.
+        /// *   `control_plane.iam_instance_profile`.
+        /// *   `logging_config.component_config.enable_components`.
+        /// *   `control_plane.tags`.
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -928,7 +963,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="awsCluster">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to update.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -947,14 +983,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.proxy_config`.
         /// *   `control_plane.proxy_config.secret_arn`.
         /// *   `control_plane.proxy_config.secret_version`.
+        /// *   `control_plane.root_volume.size_gib`.
+        /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
         /// *   `control_plane.root_volume.kms_key_arn`.
-        /// *   `control_plane.root_volume.volume_type`.
-        /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
         /// *   `control_plane.instance_placement.tenancy`.
-        /// *   `logging_config`.
+        /// *   `control_plane.iam_instance_profile`.
+        /// *   `logging_config.component_config.enable_components`.
+        /// *   `control_plane.tags`.
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -962,7 +1001,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             UpdateAwsClusterAsync(awsCluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -971,7 +1011,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -980,7 +1021,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -989,10 +1031,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1009,10 +1054,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1029,10 +1077,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1046,10 +1097,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1066,10 +1120,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1086,10 +1143,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to describe.
+        /// Required. The name of the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource to
+        /// describe.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1103,8 +1163,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1113,8 +1173,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1123,8 +1183,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1154,8 +1214,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1185,8 +1245,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1216,8 +1276,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1247,10 +1307,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1263,10 +1324,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1279,10 +1341,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1321,17 +1384,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsClusterOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1348,17 +1413,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1375,17 +1442,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1399,17 +1468,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1426,17 +1497,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1453,17 +1526,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
+        /// Required. The resource name the
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to delete.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1507,7 +1582,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GenerateAwsAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1520,7 +1596,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1533,7 +1610,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1573,14 +1651,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsNodePoolOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1589,17 +1669,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1612,14 +1694,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1628,17 +1712,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1651,14 +1737,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1667,17 +1755,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1685,14 +1775,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAwsNodePoolAsync(parent, awsNodePool, awsNodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1701,17 +1793,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1724,14 +1818,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1740,17 +1836,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1763,14 +1861,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource where this node pool will be created.
+        /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource where this node pool will be created.
         /// 
         /// `AwsCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
@@ -1779,17 +1879,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="awsNodePool">
-        /// Required. The specification of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
+        /// Required. The specification of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
         /// </param>
         /// <param name="awsNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1854,7 +1956,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
         /// </summary>
         /// <param name="awsNodePool">
-        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to update.
+        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1876,6 +1979,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.proxy_config.secret_version`.
         /// *   `config.ssh_config`.
         /// *   `config.ssh_config.ec2_key_pair`.
+        /// *   `config.instance_placement.tenancy`.
+        /// *   `config.iam_instance_profile`.
+        /// *   `config.labels`.
+        /// *   `config.tags`.
+        /// *   `config.autoscaling_metrics_collection`.
+        /// *   `config.autoscaling_metrics_collection.granularity`.
+        /// *   `config.autoscaling_metrics_collection.metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1890,7 +2000,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
         /// </summary>
         /// <param name="awsNodePool">
-        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to update.
+        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1912,6 +2023,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.proxy_config.secret_version`.
         /// *   `config.ssh_config`.
         /// *   `config.ssh_config.ec2_key_pair`.
+        /// *   `config.instance_placement.tenancy`.
+        /// *   `config.iam_instance_profile`.
+        /// *   `config.labels`.
+        /// *   `config.tags`.
+        /// *   `config.autoscaling_metrics_collection`.
+        /// *   `config.autoscaling_metrics_collection.granularity`.
+        /// *   `config.autoscaling_metrics_collection.metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1926,7 +2044,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
         /// </summary>
         /// <param name="awsNodePool">
-        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to update.
+        /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1948,6 +2067,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.proxy_config.secret_version`.
         /// *   `config.ssh_config`.
         /// *   `config.ssh_config.ec2_key_pair`.
+        /// *   `config.instance_placement.tenancy`.
+        /// *   `config.iam_instance_profile`.
+        /// *   `config.labels`.
+        /// *   `config.tags`.
+        /// *   `config.autoscaling_metrics_collection`.
+        /// *   `config.autoscaling_metrics_collection.granularity`.
+        /// *   `config.autoscaling_metrics_collection.metrics`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1955,7 +2081,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             UpdateAwsNodePoolAsync(awsNodePool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1964,7 +2091,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1973,7 +2101,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1982,10 +2111,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2002,10 +2134,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2022,10 +2157,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2039,10 +2177,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2059,10 +2200,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2079,10 +2223,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// describe.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2096,7 +2243,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2105,7 +2254,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2114,7 +2265,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AwsCluster` which owns this collection of
@@ -2145,7 +2298,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AwsCluster` which owns this collection of
@@ -2176,7 +2331,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AwsCluster` which owns this collection of
@@ -2207,7 +2364,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AwsCluster` which owns this collection of
@@ -2238,7 +2397,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2251,7 +2411,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2264,7 +2425,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2304,14 +2466,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsNodePoolOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2328,14 +2492,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2352,14 +2518,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2373,14 +2541,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2397,14 +2567,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2421,14 +2593,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
+        /// Required. The resource name the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to delete.
         /// 
         /// `AwsNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
@@ -2476,7 +2650,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2497,7 +2673,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2518,7 +2696,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2536,7 +2716,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2557,7 +2739,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2578,7 +2762,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AwsServerConfig][google.cloud.gkemulticloud.v1.AwsServerConfig] resource
+        /// to describe.
         /// 
         /// `AwsServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsServerConfig`.
@@ -2738,7 +2924,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient CreateAwsClusterOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2754,7 +2941,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+        /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2797,7 +2985,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2809,7 +2998,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2821,8 +3011,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2834,8 +3024,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+        /// on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2850,10 +3040,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient DeleteAwsClusterOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2869,10 +3060,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+        /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+        /// resource.
         /// 
-        /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2917,7 +3109,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient CreateAwsNodePoolOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2933,7 +3126,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+        /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2976,7 +3170,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2988,7 +3183,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Describes a specific
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3000,7 +3196,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3012,7 +3210,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+        /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resources on a given
+        /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3027,7 +3227,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient DeleteAwsNodePoolOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3043,7 +3244,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+        /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+        /// resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be

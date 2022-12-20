@@ -210,7 +210,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public abstract partial class AwsClustersBase
     {
       /// <summary>
-      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -238,7 +239,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -250,8 +252,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+      /// on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -263,10 +265,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       ///
-      /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -295,7 +298,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+      /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -323,7 +327,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Describes a specific
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -335,7 +340,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resources on a given
+      /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -347,7 +354,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -405,7 +413,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
-      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -422,7 +431,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAwsCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -437,7 +447,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAwsCluster, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -454,7 +465,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAwsClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource on a given GCP project and region.
+      /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource on a given GCP project and region.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -517,7 +529,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAwsCluster, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -530,7 +543,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAwsCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -541,7 +555,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAwsCluster, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -554,7 +569,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAwsClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Describes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -565,8 +581,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAwsCluster, null, options, request);
       }
       /// <summary>
-      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+      /// on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -579,8 +595,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAwsClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+      /// on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -591,8 +607,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAwsClusters, null, options, request);
       }
       /// <summary>
-      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+      /// on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -605,8 +621,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAwsClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources on a given Google Cloud project and
-      /// region.
+      /// Lists all [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
+      /// on a given Google Cloud project and region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -617,10 +633,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAwsClusters, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       ///
-      /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -637,10 +654,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAwsCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       ///
-      /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -655,10 +673,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAwsCluster, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       ///
-      /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -675,10 +694,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAwsClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
+      /// Deletes a specific [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
+      /// resource.
       ///
-      /// Fails if the cluster has one or more associated [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
-      /// resources.
+      /// Fails if the cluster has one or more associated
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -745,7 +765,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAwsAccessToken, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+      /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -762,7 +783,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAwsNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+      /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -777,7 +799,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAwsNodePool, null, options, request);
       }
       /// <summary>
-      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+      /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -794,7 +817,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CreateAwsNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool], attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
+      /// attached to a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -857,7 +881,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAwsNodePool, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Describes a specific
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -870,7 +895,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAwsNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Describes a specific
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -881,7 +907,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAwsNodePool, null, options, request);
       }
       /// <summary>
-      /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Describes a specific
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -894,7 +921,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return GetAwsNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Describes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Describes a specific
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -905,7 +933,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAwsNodePool, null, options, request);
       }
       /// <summary>
-      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resources on a given
+      /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -918,7 +948,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAwsNodePools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resources on a given
+      /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -929,7 +961,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAwsNodePools, null, options, request);
       }
       /// <summary>
-      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resources on a given
+      /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -942,7 +976,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return ListAwsNodePoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resources on a given [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
+      /// Lists all [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resources on a given
+      /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -953,7 +989,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAwsNodePools, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -970,7 +1007,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAwsNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -985,7 +1023,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAwsNodePool, null, options, request);
       }
       /// <summary>
-      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be
@@ -1002,7 +1041,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return DeleteAwsNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource.
+      /// Deletes a specific [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
+      /// resource.
       ///
       /// If successful, the response contains a newly created
       /// [Operation][google.longrunning.Operation] resource that can be

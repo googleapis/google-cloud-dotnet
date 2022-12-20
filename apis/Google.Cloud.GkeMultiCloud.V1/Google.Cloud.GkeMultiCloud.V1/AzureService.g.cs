@@ -269,8 +269,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-    /// will be created.
+    /// Required. The parent location where this
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+    /// created.
     ///
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
@@ -290,7 +291,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClusterFieldNumber = 2;
     private global::Google.Cloud.GkeMultiCloud.V1.AzureCluster azureCluster_;
     /// <summary>
-    /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+    /// Required. The specification of the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -305,14 +307,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClusterIdFieldNumber = 3;
     private string azureClusterId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the parent
-    /// resource.
+    /// Required. A client provided ID the resource. Must be unique within the
+    /// parent resource.
     ///
-    /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-    /// resource name formatted as
+    /// The provided ID will be part of the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>`.
     ///
-    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -605,7 +608,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClusterFieldNumber = 1;
     private global::Google.Cloud.GkeMultiCloud.V1.AzureCluster azureCluster_;
     /// <summary>
-    /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to update.
+    /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+    /// resource to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -640,13 +644,18 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// fields from [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]:
     ///
     ///  *   `description`.
-    ///  *   `annotations`.
     ///  *   `azureClient`.
     ///  *   `control_plane.version`.
     ///  *   `control_plane.vm_size`.
+    ///  *   `annotations`.
     ///  *   `authorization.admin_users`.
     ///  *   `control_plane.root_volume.size_gib`.
-    ///  *   `logging_config`
+    ///  *   `control_plane.proxy_config`.
+    ///  *   `control_plane.proxy_config.resource_group_id`.
+    ///  *   `control_plane.proxy_config.secret_id`.
+    ///  *   `control_plane.ssh_config.authorized_key`.
+    ///  *   `logging_config.component_config.enable_components`
+    ///  *   `monitoring_config.managed_prometheus_config.enabled`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -907,7 +916,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+    /// Required. The name of the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+    /// describe.
     ///
     /// `AzureCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>`.
@@ -1136,8 +1147,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// If not specified, a default value of 50 will be used by the service.
     /// Regardless of the pageSize value, the response can include a partial list
     /// and a caller should only rely on response's
-    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureClustersResponse.next_page_token] to determine if
-    /// there are more instances left to be queried.
+    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureClustersResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1153,7 +1164,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `nextPageToken` value returned from a previous
-    /// [azureClusters.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters] request, if any.
+    /// [azureClusters.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClusters]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1399,8 +1411,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeMultiCloud.V1.AzureCluster.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureCluster> azureClusters_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureCluster>();
     /// <summary>
-    /// A list of [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources in the specified GCP
-    /// project and region region.
+    /// A list of [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+    /// resources in the specified GCP project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1625,7 +1637,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+    /// Required. The resource name the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
     ///
     /// `AzureCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>`.
@@ -1646,9 +1659,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource is not found,
-    /// the request will succeed but no action will be taken on the server and a
-    /// completed [Operation][google.longrunning.Operation] will be returned.
+    /// If set to true, and the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource is not
+    /// found, the request will succeed but no action will be taken on the server
+    /// and a completed [Operation][google.longrunning.Operation] will be returned.
     ///
     /// Useful for idempotent deletion.
     /// </summary>
@@ -1680,7 +1694,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int EtagFieldNumber = 4;
     private string etag_ = "";
     /// <summary>
-    /// The current etag of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+    /// The current etag of the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
     ///
     /// Allows clients to perform deletions through optimistic concurrency control.
     ///
@@ -1955,7 +1970,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+    /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+    /// resource where this node pool will be created.
     ///
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
@@ -1975,7 +1991,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureNodePoolFieldNumber = 2;
     private global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool azureNodePool_;
     /// <summary>
-    /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+    /// Required. The specification of the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1990,14 +2007,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureNodePoolIdFieldNumber = 3;
     private string azureNodePoolId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the parent
-    /// resource.
+    /// Required. A client provided ID the resource. Must be unique within the
+    /// parent resource.
     ///
-    /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-    /// resource name formatted as
+    /// The provided ID will be part of the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>/azureNodePools/&lt;node-pool-id>`.
     ///
-    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2291,7 +2309,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureNodePoolFieldNumber = 1;
     private global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool azureNodePool_;
     /// <summary>
-    /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to update.
+    /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+    /// resource to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2329,7 +2348,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `version`.
     ///  *   `autoscaling.min_node_count`.
     ///  *   `autoscaling.max_node_count`.
-    ///  *   `config.vm_size`.
+    ///  *   `config.ssh_config.authorized_key`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2590,7 +2609,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+    /// Required. The name of the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+    /// describe.
     ///
     /// `AzureNodePool` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>/azureNodePools/&lt;node-pool-id>`.
@@ -2820,8 +2841,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// If not specified, a default value of 50 will be used by the service.
     /// Regardless of the pageSize value, the response can include a partial list
     /// and a caller should only rely on response's
-    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureNodePoolsResponse.next_page_token] to determine if
-    /// there are more instances left to be queried.
+    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureNodePoolsResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2837,7 +2858,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `nextPageToken` value returned from a previous
-    /// [azureNodePools.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools] request, if any.
+    /// [azureNodePools.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureNodePools]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3083,7 +3105,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool> azureNodePools_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool>();
     /// <summary>
-    /// A list of [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources in the specified `AzureCluster`.
+    /// A list of [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+    /// resources in the specified `AzureCluster`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3255,7 +3278,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   }
 
   /// <summary>
-  /// Delete message for `AzureClusters.DeleteNodePool` method.
+  /// Delete message for `AzureClusters.DeleteAzureNodePool` method.
   /// </summary>
   public sealed partial class DeleteAzureNodePoolRequest : pb::IMessage<DeleteAzureNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3308,7 +3331,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+    /// Required. The resource name the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
     ///
     /// `AzureNodePool` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>/azureNodePools/&lt;node-pool-id>`.
@@ -3345,9 +3369,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource is not found,
-    /// the request will succeed but no action will be taken on the server and a
-    /// completed [Operation][google.longrunning.Operation] will be returned.
+    /// If set to true, and the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource is
+    /// not found, the request will succeed but no action will be taken on the
+    /// server and a completed [Operation][google.longrunning.Operation] will be
+    /// returned.
     ///
     /// Useful for idempotent deletion.
     /// </summary>
@@ -3364,7 +3390,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int EtagFieldNumber = 4;
     private string etag_ = "";
     /// <summary>
-    /// The current ETag of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool].
+    /// The current ETag of the
+    /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool].
     ///
     /// Allows clients to perform deletions through optimistic concurrency control.
     ///
@@ -3636,7 +3663,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+    /// Required. The name of the
+    /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+    /// resource to describe.
     ///
     /// `AzureServerConfig` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureServerConfig`.
@@ -3840,8 +3869,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-    /// will be created.
+    /// Required. The parent location where this
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+    /// created.
     ///
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
@@ -3861,7 +3891,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClientFieldNumber = 2;
     private global::Google.Cloud.GkeMultiCloud.V1.AzureClient azureClient_;
     /// <summary>
-    /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+    /// Required. The specification of the
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3876,14 +3907,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClientIdFieldNumber = 4;
     private string azureClientId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the parent
-    /// resource.
+    /// Required. A client provided ID the resource. Must be unique within the
+    /// parent resource.
     ///
-    /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-    /// resource name formatted as
+    /// The provided ID will be part of the
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClients/&lt;client-id>`.
     ///
-    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+    /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4174,9 +4206,12 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+    /// Required. The name of the
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+    /// describe.
     ///
-    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClients/&lt;client-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -4403,8 +4438,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// If not specified, a default value of 50 will be used by the service.
     /// Regardless of the pageSize value, the response can include a partial list
     /// and a caller should only rely on response's
-    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureClientsResponse.next_page_token] to determine if
-    /// there are more instances left to be queried.
+    /// [nextPageToken][google.cloud.gkemulticloud.v1.ListAzureClientsResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4420,7 +4455,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `nextPageToken` value returned from a previous
-    /// [azureClients.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients] request, if any.
+    /// [azureClients.list][google.cloud.gkemulticloud.v1.AzureClusters.ListAzureClients]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4666,8 +4702,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeMultiCloud.V1.AzureClient.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureClient> azureClients_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureClient>();
     /// <summary>
-    /// A list of [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources in the specified Google Cloud
-    /// project and region region.
+    /// A list of [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+    /// resources in the specified Google Cloud project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4891,9 +4927,11 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+    /// Required. The resource name the
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
     ///
-    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+    /// formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClients/&lt;client-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -4912,9 +4950,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource is not found,
-    /// the request will succeed but no action will be taken on the server and a
-    /// completed [Operation][google.longrunning.Operation] will be returned.
+    /// If set to true, and the
+    /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource is not
+    /// found, the request will succeed but no action will be taken on the server
+    /// and a completed [Operation][google.longrunning.Operation] will be returned.
     ///
     /// Useful for idempotent deletion.
     /// </summary>
@@ -5174,7 +5213,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AzureClusterFieldNumber = 1;
     private string azureCluster_ = "";
     /// <summary>
-    /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to authenticate to.
+    /// Required. The name of the
+    /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+    /// authenticate to.
     ///
     /// `AzureCluster` names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/AzureClusters/&lt;cluster-id>`.

@@ -605,8 +605,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public virtual AzureClusters.AzureClustersClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -623,8 +623,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -641,8 +641,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -686,8 +686,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<AzureClient, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAzureClientOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -698,8 +698,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -707,17 +708,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -730,8 +733,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -742,8 +745,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -751,17 +755,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -774,8 +780,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -786,8 +792,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -795,17 +802,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -813,8 +822,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAzureClientAsync(parent, azureClient, azureClientId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -825,8 +834,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -834,17 +844,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -857,8 +869,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -869,8 +881,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -878,17 +891,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -901,8 +916,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -913,8 +928,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -922,17 +938,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureClient">
-        /// Required. The specification of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
+        /// Required. The specification of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to create.
         /// </param>
         /// <param name="azureClientId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -940,7 +958,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAzureClientAsync(parent, azureClient, azureClientId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -949,7 +968,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -958,7 +978,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -967,12 +988,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClientAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -987,12 +1012,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1007,12 +1036,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1024,12 +1057,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClientAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1044,12 +1081,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1064,12 +1105,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to describe.
+        /// Required. The name of the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource to
+        /// describe.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1081,8 +1126,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClientAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,8 +1136,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1101,8 +1146,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1132,8 +1177,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1163,8 +1208,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1194,8 +1239,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -1225,7 +1270,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1241,7 +1287,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1257,7 +1304,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1300,7 +1348,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAzureClientOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1310,9 +1359,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1327,7 +1378,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1337,9 +1389,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1354,7 +1408,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1364,9 +1419,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1378,7 +1435,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureClientAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1388,9 +1446,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1405,7 +1465,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1415,9 +1476,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1432,7 +1495,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -1442,9 +1506,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
+        /// Required. The resource name the
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] to delete.
         /// 
-        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are formatted as
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] names are
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
@@ -1456,7 +1522,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureClientAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1469,7 +1536,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1482,7 +1550,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1522,15 +1591,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<AzureCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAzureClusterOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1538,17 +1609,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1561,15 +1634,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1577,17 +1652,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1600,15 +1677,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1616,17 +1695,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1634,15 +1715,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAzureClusterAsync(parent, azureCluster, azureClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1650,17 +1733,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1673,15 +1758,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1689,17 +1776,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1712,15 +1801,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location where this [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource
-        /// will be created.
+        /// Required. The parent location where this
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource will be
+        /// created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -1728,17 +1819,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureCluster">
-        /// Required. The specification of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
+        /// Required. The specification of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to create.
         /// </param>
         /// <param name="azureClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1803,7 +1896,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="azureCluster">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to update.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1811,13 +1905,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]:
         /// 
         /// *   `description`.
-        /// *   `annotations`.
         /// *   `azureClient`.
         /// *   `control_plane.version`.
         /// *   `control_plane.vm_size`.
+        /// *   `annotations`.
         /// *   `authorization.admin_users`.
         /// *   `control_plane.root_volume.size_gib`.
-        /// *   `logging_config`
+        /// *   `control_plane.proxy_config`.
+        /// *   `control_plane.proxy_config.resource_group_id`.
+        /// *   `control_plane.proxy_config.secret_id`.
+        /// *   `control_plane.ssh_config.authorized_key`.
+        /// *   `logging_config.component_config.enable_components`
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1832,7 +1931,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="azureCluster">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to update.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1840,13 +1940,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]:
         /// 
         /// *   `description`.
-        /// *   `annotations`.
         /// *   `azureClient`.
         /// *   `control_plane.version`.
         /// *   `control_plane.vm_size`.
+        /// *   `annotations`.
         /// *   `authorization.admin_users`.
         /// *   `control_plane.root_volume.size_gib`.
-        /// *   `logging_config`
+        /// *   `control_plane.proxy_config`.
+        /// *   `control_plane.proxy_config.resource_group_id`.
+        /// *   `control_plane.proxy_config.secret_id`.
+        /// *   `control_plane.ssh_config.authorized_key`.
+        /// *   `logging_config.component_config.enable_components`
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1861,7 +1966,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="azureCluster">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to update.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -1869,13 +1975,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]:
         /// 
         /// *   `description`.
-        /// *   `annotations`.
         /// *   `azureClient`.
         /// *   `control_plane.version`.
         /// *   `control_plane.vm_size`.
+        /// *   `annotations`.
         /// *   `authorization.admin_users`.
         /// *   `control_plane.root_volume.size_gib`.
-        /// *   `logging_config`
+        /// *   `control_plane.proxy_config`.
+        /// *   `control_plane.proxy_config.resource_group_id`.
+        /// *   `control_plane.proxy_config.secret_id`.
+        /// *   `control_plane.ssh_config.authorized_key`.
+        /// *   `logging_config.component_config.enable_components`
+        /// *   `monitoring_config.managed_prometheus_config.enabled`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1883,7 +1994,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             UpdateAzureClusterAsync(azureCluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1892,7 +2004,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1901,7 +2014,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1910,10 +2024,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -1930,10 +2047,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -1950,10 +2070,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -1967,10 +2090,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -1987,10 +2113,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2007,10 +2136,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to describe.
+        /// Required. The name of the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource to
+        /// describe.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2024,8 +2156,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2034,8 +2166,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2044,8 +2176,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -2075,8 +2207,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -2106,8 +2238,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -2137,8 +2269,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent location which owns this collection of
@@ -2168,10 +2300,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2184,10 +2317,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2200,10 +2334,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2243,17 +2378,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAzureClusterOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2270,17 +2407,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2297,17 +2436,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2321,17 +2462,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2348,17 +2491,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2375,17 +2520,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
+        /// Required. The resource name the
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] to delete.
         /// 
         /// `AzureCluster` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
@@ -2429,7 +2576,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GenerateAzureAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2442,7 +2591,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2455,7 +2606,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2495,14 +2648,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<AzureNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAzureNodePoolOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2510,17 +2666,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2533,14 +2691,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2548,17 +2709,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2571,14 +2734,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2586,17 +2752,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2604,14 +2772,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             CreateAzureNodePoolAsync(parent, azureNodePool, azureNodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2619,17 +2790,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2642,14 +2815,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2657,17 +2833,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2680,14 +2858,17 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource where this node pool will be created.
+        /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource where this node pool will be created.
         /// 
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
@@ -2695,17 +2876,19 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="azureNodePool">
-        /// Required. The specification of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
+        /// Required. The specification of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to create.
         /// </param>
         /// <param name="azureNodePoolId">
-        /// Required. A client provided ID the resource. Must be unique within the parent
-        /// resource.
+        /// Required. A client provided ID the resource. Must be unique within the
+        /// parent resource.
         /// 
-        /// The provided ID will be part of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resource name formatted as
+        /// The provided ID will be part of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource name
+        /// formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
         /// 
-        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 40 characters.
+        /// Valid characters are `/[a-z][0-9]-/`. Cannot be longer than 63 characters.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2770,7 +2953,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool].
         /// </summary>
         /// <param name="azureNodePool">
-        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to update.
+        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -2781,7 +2965,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `version`.
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
-        /// *   `config.vm_size`.
+        /// *   `config.ssh_config.authorized_key`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2796,7 +2980,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool].
         /// </summary>
         /// <param name="azureNodePool">
-        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to update.
+        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -2807,7 +2992,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `version`.
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
-        /// *   `config.vm_size`.
+        /// *   `config.ssh_config.authorized_key`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2822,7 +3007,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Updates an [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool].
         /// </summary>
         /// <param name="azureNodePool">
-        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to update.
+        /// Required. The [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resource to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
@@ -2833,7 +3019,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `version`.
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
-        /// *   `config.vm_size`.
+        /// *   `config.ssh_config.authorized_key`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2841,7 +3027,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             UpdateAzureNodePoolAsync(azureNodePool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2850,7 +3037,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2859,7 +3047,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2868,10 +3057,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2888,10 +3080,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2908,10 +3103,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2925,10 +3123,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2945,10 +3146,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2965,10 +3169,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to describe.
+        /// Required. The name of the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource to
+        /// describe.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -2982,7 +3189,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             GetAzureNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2991,7 +3200,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3000,7 +3211,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AzureCluster` which owns this collection of
@@ -3031,7 +3244,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AzureCluster` which owns this collection of
@@ -3062,7 +3277,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AzureCluster` which owns this collection of
@@ -3093,7 +3310,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent `AzureCluster` which owns this collection of
@@ -3124,7 +3343,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3137,7 +3357,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3150,7 +3371,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3190,14 +3412,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAzureNodePoolOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3214,14 +3438,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3238,14 +3464,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3259,14 +3487,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3283,14 +3513,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3307,14 +3539,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
         /// described to track the status of the operation.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name the [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
+        /// Required. The resource name the
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] to delete.
         /// 
         /// `AzureNodePool` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;/azureNodePools/&lt;node-pool-id&gt;`.
@@ -3362,7 +3596,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3383,7 +3619,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3404,7 +3642,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3422,7 +3662,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3443,7 +3685,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3464,7 +3708,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// versions, on a given Google Cloud location.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig] resource to describe.
+        /// Required. The name of the
+        /// [AzureServerConfig][google.cloud.gkemulticloud.v1.AzureServerConfig]
+        /// resource to describe.
         /// 
         /// `AzureServerConfig` names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureServerConfig`.
@@ -3662,8 +3908,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient CreateAzureClientOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -3683,8 +3929,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource on a given Google Cloud project
-        /// and region.
+        /// Creates a new [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource on a given Google Cloud project and region.
         /// 
         /// `AzureClient` resources hold client authentication
         /// information needed by the Anthos Multicloud API to manage Azure resources
@@ -3704,7 +3950,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3716,7 +3963,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Describes a specific
+        /// [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3728,8 +3976,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3741,8 +3989,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3757,7 +4005,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient DeleteAzureClientOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -3776,7 +4025,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient] resource.
+        /// Deletes a specific [AzureClient][google.cloud.gkemulticloud.v1.AzureClient]
+        /// resource.
         /// 
         /// If the client is used by one or more clusters, deletion will
         /// fail and a `FAILED_PRECONDITION` error will be returned.
@@ -3798,7 +4048,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient CreateAzureClusterOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3814,7 +4065,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource on a given GCP project and region.
+        /// Creates a new [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resource on a given GCP project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3857,7 +4109,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3869,7 +4122,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Describes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3881,8 +4135,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3894,8 +4148,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resources on a given Google Cloud project and
-        /// region.
+        /// Lists all [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
+        /// resources on a given Google Cloud project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3910,10 +4164,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient DeleteAzureClusterOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3929,10 +4184,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Deletes a specific [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
+        /// Deletes a specific
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// 
-        /// Fails if the cluster has one or more associated [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
-        /// resources.
+        /// Fails if the cluster has one or more associated
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3977,7 +4233,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient CreateAzureNodePoolOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -3993,7 +4251,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool], attached to a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Creates a new [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool],
+        /// attached to a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -4036,7 +4296,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4048,7 +4309,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Describes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Describes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4060,7 +4322,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4072,7 +4336,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resources on a given [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
+        /// Lists all [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool]
+        /// resources on a given
+        /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4087,7 +4353,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         public override lro::OperationsClient DeleteAzureNodePoolOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -4103,7 +4370,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
-        /// Deletes a specific [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
+        /// Deletes a specific
+        /// [AzureNodePool][google.cloud.gkemulticloud.v1.AzureNodePool] resource.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
