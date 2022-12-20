@@ -245,8 +245,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int VersionFieldNumber = 5;
     private string version_ = "";
     /// <summary>
-    /// Immutable. The Apache Hive metastore version of the federation. All backend metastore
-    /// versions must be compatible with the federation version.
+    /// Immutable. The Apache Hive metastore version of the federation. All backend
+    /// metastore versions must be compatible with the federation version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -310,8 +310,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int StateMessageFieldNumber = 9;
     private string stateMessage_ = "";
     /// <summary>
-    /// Output only. Additional information about the current state of the metastore federation,
-    /// if available.
+    /// Output only. Additional information about the current state of the
+    /// metastore federation, if available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,7 +326,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int UidFieldNumber = 10;
     private string uid_ = "";
     /// <summary>
-    /// Output only. The globally unique resource identifier of the metastore federation.
+    /// Output only. The globally unique resource identifier of the metastore
+    /// federation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1049,8 +1050,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location of metastore federations
-    /// to list, in the following form:
+    /// Required. The relative resource name of the location of metastore
+    /// federations to list, in the following form:
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1066,9 +1067,10 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of federations to return. The response may contain less
-    /// than the maximum number. If unspecified, no more than 500 services are
-    /// returned. The maximum value is 1000; values above 1000 are changed to 1000.
+    /// Optional. The maximum number of federations to return. The response may
+    /// contain less than the maximum number. If unspecified, no more than 500
+    /// services are returned. The maximum value is 1000; values above 1000 are
+    /// changed to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1667,8 +1669,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore federation to retrieve,
-    /// in the following form:
+    /// Required. The relative resource name of the metastore federation to
+    /// retrieve, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
     /// </summary>
@@ -1868,8 +1870,8 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location in which to create a federation
-    /// service, in the following form:
+    /// Required. The relative resource name of the location in which to create a
+    /// federation service, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
@@ -1923,10 +1925,10 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -2249,10 +2251,10 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -2540,10 +2542,10 @@ namespace Google.Cloud.Metastore.V1Alpha {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent

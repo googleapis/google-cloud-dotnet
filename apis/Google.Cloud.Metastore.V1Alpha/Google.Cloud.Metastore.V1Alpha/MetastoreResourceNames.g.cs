@@ -1670,4 +1670,52 @@ namespace Google.Cloud.Metastore.V1Alpha
             set => Backup = value?.ToString() ?? "";
         }
     }
+
+    public partial class RemoveIamPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ResourceAsResourceName
+        {
+            get => string.IsNullOrEmpty(Resource) ? null : gax::UnparsedResourceName.Parse(Resource);
+            set => Resource = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryMetadataRequest
+    {
+        /// <summary>
+        /// <see cref="ServiceName"/>-typed view over the <see cref="Service"/> resource name property.
+        /// </summary>
+        public ServiceName ServiceAsServiceName
+        {
+            get => string.IsNullOrEmpty(Service) ? null : ServiceName.Parse(Service, allowUnparsed: true);
+            set => Service = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MoveTableToDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="ServiceName"/>-typed view over the <see cref="Service"/> resource name property.
+        /// </summary>
+        public ServiceName ServiceAsServiceName
+        {
+            get => string.IsNullOrEmpty(Service) ? null : ServiceName.Parse(Service, allowUnparsed: true);
+            set => Service = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AlterMetadataResourceLocationRequest
+    {
+        /// <summary>
+        /// <see cref="ServiceName"/>-typed view over the <see cref="Service"/> resource name property.
+        /// </summary>
+        public ServiceName ServiceAsServiceName
+        {
+            get => string.IsNullOrEmpty(Service) ? null : ServiceName.Parse(Service, allowUnparsed: true);
+            set => Service = value?.ToString() ?? "";
+        }
+    }
 }
