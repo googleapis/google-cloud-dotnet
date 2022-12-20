@@ -118,68 +118,71 @@ namespace Google.Cloud.Dataplex.V1 {
             "CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghSRVFVSVJFRBABEgwK",
             "CE5VTExBQkxFEAISDAoIUkVQRUFURUQQAyJGCg5QYXJ0aXRpb25TdHlsZRIf",
             "ChtQQVJUSVRJT05fU1RZTEVfVU5TUEVDSUZJRUQQABITCg9ISVZFX0NPTVBB",
-            "VElCTEUQASLyBQoNU3RvcmFnZUZvcm1hdBJDCgZmb3JtYXQYASABKA4yLi5n",
+            "VElCTEUQASL0BgoNU3RvcmFnZUZvcm1hdBJDCgZmb3JtYXQYASABKA4yLi5n",
             "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Gb3JtYXRC",
             "A+BBAxJaChJjb21wcmVzc2lvbl9mb3JtYXQYAiABKA4yOS5nb29nbGUuY2xv",
             "dWQuZGF0YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Db21wcmVzc2lvbkZvcm1h",
             "dEID4EEBEhYKCW1pbWVfdHlwZRgDIAEoCUID4EECEkYKA2NzdhgKIAEoCzIy",
             "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdG9yYWdlRm9ybWF0LkNzdk9w",
             "dGlvbnNCA+BBAUgAEkgKBGpzb24YCyABKAsyMy5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Kc29uT3B0aW9uc0ID4EEBSAAaaQoK",
-            "Q3N2T3B0aW9ucxIVCghlbmNvZGluZxgBIAEoCUID4EEBEhgKC2hlYWRlcl9y",
-            "b3dzGAIgASgFQgPgQQESFgoJZGVsaW1pdGVyGAMgASgJQgPgQQESEgoFcXVv",
-            "dGUYBCABKAlCA+BBARokCgtKc29uT3B0aW9ucxIVCghlbmNvZGluZxgBIAEo",
-            "CUID4EEBIqsBCgZGb3JtYXQSFgoSRk9STUFUX1VOU1BFQ0lGSUVEEAASCwoH",
-            "UEFSUVVFVBABEggKBEFWUk8QAhIHCgNPUkMQAxIHCgNDU1YQZBIICgRKU09O",
-            "EGUSCgoFSU1BR0UQyAESCgoFQVVESU8QyQESCgoFVklERU8QygESCQoEVEVY",
-            "VBDLARINCghURlJFQ09SRBDMARIKCgVPVEhFUhDoBxIMCgdVTktOT1dOEOkH",
-            "IkwKEUNvbXByZXNzaW9uRm9ybWF0EiIKHkNPTVBSRVNTSU9OX0ZPUk1BVF9V",
-            "TlNQRUNJRklFRBAAEggKBEdaSVAQAhIJCgVCWklQMhADQgkKB29wdGlvbnMq",
-            "UAoNU3RvcmFnZVN5c3RlbRIeChpTVE9SQUdFX1NZU1RFTV9VTlNQRUNJRklF",
-            "RBAAEhEKDUNMT1VEX1NUT1JBR0UQARIMCghCSUdRVUVSWRACMokOCg9NZXRh",
-            "ZGF0YVNlcnZpY2USvQEKDENyZWF0ZUVudGl0eRItLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5DcmVhdGVFbnRpdHlSZXF1ZXN0GiAuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkVudGl0eSJcgtPkkwJGIjwvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKn0vZW50aXRpZXM6",
-            "BmVudGl0edpBDXBhcmVudCxlbnRpdHkStAEKDFVwZGF0ZUVudGl0eRItLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRhdGVFbnRpdHlSZXF1ZXN0GiAu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudGl0eSJTgtPkkwJNGkMvdjEv",
-            "e2VudGl0eS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbGFrZXMvKi96",
-            "b25lcy8qL2VudGl0aWVzLyp9OgZlbnRpdHkSogEKDERlbGV0ZUVudGl0eRIt",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EZWxldGVFbnRpdHlSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkuC0+STAj4qPC92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKi9lbnRpdGll",
-            "cy8qfdpBBG5hbWUSpgEKCUdldEVudGl0eRIqLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5HZXRFbnRpdHlSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkVudGl0eSJLgtPkkwI+EjwvdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKn3aQQRuYW1l",
-            "ErwBCgxMaXN0RW50aXRpZXMSLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "TGlzdEVudGl0aWVzUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5MaXN0RW50aXRpZXNSZXNwb25zZSJNgtPkkwI+EjwvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKn0vZW50aXRp",
-            "ZXPaQQZwYXJlbnQS2QEKD0NyZWF0ZVBhcnRpdGlvbhIwLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5DcmVhdGVQYXJ0aXRpb25SZXF1ZXN0GiMuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLlBhcnRpdGlvbiJvgtPkkwJWIkkvdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKi9l",
-            "bnRpdGllcy8qfS9wYXJ0aXRpb25zOglwYXJ0aXRpb27aQRBwYXJlbnQscGFy",
-            "dGl0aW9uErYBCg9EZWxldGVQYXJ0aXRpb24SMC5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuRGVsZXRlUGFydGl0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSJZgtPkkwJMKkovdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKi9wYXJ0aXRpb25z",
-            "LyoqfdpBBG5hbWUSvQEKDEdldFBhcnRpdGlvbhItLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5HZXRQYXJ0aXRpb25SZXF1ZXN0GiMuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLlBhcnRpdGlvbiJZgtPkkwJMEkovdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMv",
-            "Ki9wYXJ0aXRpb25zLyoqfdpBBG5hbWUSzwEKDkxpc3RQYXJ0aXRpb25zEi8u",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RQYXJ0aXRpb25zUmVxdWVz",
-            "dBowLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0UGFydGl0aW9uc1Jl",
-            "c3BvbnNlIlqC0+STAksSSS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovbGFrZXMvKi96b25lcy8qL2VudGl0aWVzLyp9L3BhcnRpdGlvbnPa",
-            "QQZwYXJlbnQaS8pBF2RhdGFwbGV4Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJxChxj",
-            "b20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQg1NZXRhZGF0YVByb3RvUAFa",
-            "QGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "ZGF0YXBsZXgvdjE7ZGF0YXBsZXhiBnByb3RvMw=="));
+            "YXBsZXgudjEuU3RvcmFnZUZvcm1hdC5Kc29uT3B0aW9uc0ID4EEBSAASTgoH",
+            "aWNlYmVyZxgMIAEoCzI2Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdG9y",
+            "YWdlRm9ybWF0LkljZWJlcmdPcHRpb25zQgPgQQFIABppCgpDc3ZPcHRpb25z",
+            "EhUKCGVuY29kaW5nGAEgASgJQgPgQQESGAoLaGVhZGVyX3Jvd3MYAiABKAVC",
+            "A+BBARIWCglkZWxpbWl0ZXIYAyABKAlCA+BBARISCgVxdW90ZRgEIAEoCUID",
+            "4EEBGiQKC0pzb25PcHRpb25zEhUKCGVuY29kaW5nGAEgASgJQgPgQQEaMAoO",
+            "SWNlYmVyZ09wdGlvbnMSHgoRbWV0YWRhdGFfbG9jYXRpb24YASABKAlCA+BB",
+            "ASKrAQoGRm9ybWF0EhYKEkZPUk1BVF9VTlNQRUNJRklFRBAAEgsKB1BBUlFV",
+            "RVQQARIICgRBVlJPEAISBwoDT1JDEAMSBwoDQ1NWEGQSCAoESlNPThBlEgoK",
+            "BUlNQUdFEMgBEgoKBUFVRElPEMkBEgoKBVZJREVPEMoBEgkKBFRFWFQQywES",
+            "DQoIVEZSRUNPUkQQzAESCgoFT1RIRVIQ6AcSDAoHVU5LTk9XThDpByJMChFD",
+            "b21wcmVzc2lvbkZvcm1hdBIiCh5DT01QUkVTU0lPTl9GT1JNQVRfVU5TUEVD",
+            "SUZJRUQQABIICgRHWklQEAISCQoFQlpJUDIQA0IJCgdvcHRpb25zKlAKDVN0",
+            "b3JhZ2VTeXN0ZW0SHgoaU1RPUkFHRV9TWVNURU1fVU5TUEVDSUZJRUQQABIR",
+            "Cg1DTE9VRF9TVE9SQUdFEAESDAoIQklHUVVFUlkQAjKJDgoPTWV0YWRhdGFT",
+            "ZXJ2aWNlEr0BCgxDcmVhdGVFbnRpdHkSLS5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuQ3JlYXRlRW50aXR5UmVxdWVzdBogLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5FbnRpdHkiXILT5JMCRiI8L3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyp9L2VudGl0aWVzOgZlbnRp",
+            "dHnaQQ1wYXJlbnQsZW50aXR5ErQBCgxVcGRhdGVFbnRpdHkSLS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRW50aXR5UmVxdWVzdBogLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5FbnRpdHkiU4LT5JMCTRpDL3YxL3tlbnRp",
+            "dHkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMv",
+            "Ki9lbnRpdGllcy8qfToGZW50aXR5EqIBCgxEZWxldGVFbnRpdHkSLS5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGVsZXRlRW50aXR5UmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJLgtPkkwI+KjwvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRpZXMvKn3a",
+            "QQRuYW1lEqYBCglHZXRFbnRpdHkSKi5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuR2V0RW50aXR5UmVxdWVzdBogLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5FbnRpdHkiS4LT5JMCPhI8L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbGFrZXMvKi96b25lcy8qL2VudGl0aWVzLyp92kEEbmFtZRK8AQoM",
+            "TGlzdEVudGl0aWVzEi0uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RF",
+            "bnRpdGllc1JlcXVlc3QaLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlz",
+            "dEVudGl0aWVzUmVzcG9uc2UiTYLT5JMCPhI8L3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyp9L2VudGl0aWVz2kEG",
+            "cGFyZW50EtkBCg9DcmVhdGVQYXJ0aXRpb24SMC5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuQ3JlYXRlUGFydGl0aW9uUmVxdWVzdBojLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5QYXJ0aXRpb24ib4LT5JMCViJJL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9sYWtlcy8qL3pvbmVzLyovZW50aXRp",
+            "ZXMvKn0vcGFydGl0aW9uczoJcGFydGl0aW9u2kEQcGFyZW50LHBhcnRpdGlv",
+            "bhK2AQoPRGVsZXRlUGFydGl0aW9uEjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLkRlbGV0ZVBhcnRpdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiWYLT5JMCTCpKL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovbGFrZXMvKi96b25lcy8qL2VudGl0aWVzLyovcGFydGl0aW9ucy8qKn3a",
+            "QQRuYW1lEr0BCgxHZXRQYXJ0aXRpb24SLS5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuR2V0UGFydGl0aW9uUmVxdWVzdBojLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5QYXJ0aXRpb24iWYLT5JMCTBJKL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovbGFrZXMvKi96b25lcy8qL2VudGl0aWVzLyovcGFy",
+            "dGl0aW9ucy8qKn3aQQRuYW1lEs8BCg5MaXN0UGFydGl0aW9ucxIvLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0UGFydGl0aW9uc1JlcXVlc3QaMC5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdFBhcnRpdGlvbnNSZXNwb25z",
+            "ZSJagtPkkwJLEkkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2xha2VzLyovem9uZXMvKi9lbnRpdGllcy8qfS9wYXJ0aXRpb25z2kEGcGFy",
+            "ZW50GkvKQRdkYXRhcGxleC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CcQocY29tLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MUINTWV0YWRhdGFQcm90b1ABWkBnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFw",
+            "bGV4L3YxO2RhdGFwbGV4YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.StorageSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -198,8 +201,9 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Partition), global::Google.Cloud.Dataplex.V1.Partition.Parser, new[]{ "Name", "Values", "Location", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Schema), global::Google.Cloud.Dataplex.V1.Schema.Parser, new[]{ "UserManaged", "Fields", "PartitionFields", "PartitionStyle" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Schema.Types.Type), typeof(global::Google.Cloud.Dataplex.V1.Schema.Types.Mode), typeof(global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionStyle) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Schema.Types.SchemaField), global::Google.Cloud.Dataplex.V1.Schema.Types.SchemaField.Parser, new[]{ "Name", "Description", "Type", "Mode", "Fields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionField), global::Google.Cloud.Dataplex.V1.Schema.Types.PartitionField.Parser, new[]{ "Name", "Type" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat), global::Google.Cloud.Dataplex.V1.StorageFormat.Parser, new[]{ "Format", "CompressionFormat", "MimeType", "Csv", "Json" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format), typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CompressionFormat) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CsvOptions.Parser, new[]{ "Encoding", "HeaderRows", "Delimiter", "Quote" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.StorageFormat.Types.JsonOptions.Parser, new[]{ "Encoding" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat), global::Google.Cloud.Dataplex.V1.StorageFormat.Parser, new[]{ "Format", "CompressionFormat", "MimeType", "Csv", "Json", "Iceberg" }, new[]{ "Options" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.Format), typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CompressionFormat) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.StorageFormat.Types.CsvOptions.Parser, new[]{ "Encoding", "HeaderRows", "Delimiter", "Quote" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.StorageFormat.Types.JsonOptions.Parser, new[]{ "Encoding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions), global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions.Parser, new[]{ "MetadataLocation" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -5929,6 +5933,9 @@ namespace Google.Cloud.Dataplex.V1 {
         case OptionsOneofCase.Json:
           Json = other.Json.Clone();
           break;
+        case OptionsOneofCase.Iceberg:
+          Iceberg = other.Iceberg.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5983,6 +5990,9 @@ namespace Google.Cloud.Dataplex.V1 {
     /// - application/x-avro
     /// - application/x-orc
     /// - application/x-tfrecord
+    /// - application/x-parquet+iceberg
+    /// - application/x-avro+iceberg
+    /// - application/x-orc+iceberg
     /// - application/json
     /// - application/{subtypes}
     /// - text/csv
@@ -6030,12 +6040,28 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "iceberg" field.</summary>
+    public const int IcebergFieldNumber = 12;
+    /// <summary>
+    /// Optional. Additional information about iceberg tables.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions Iceberg {
+      get { return optionsCase_ == OptionsOneofCase.Iceberg ? (global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions) options_ : null; }
+      set {
+        options_ = value;
+        optionsCase_ = value == null ? OptionsOneofCase.None : OptionsOneofCase.Iceberg;
+      }
+    }
+
     private object options_;
     /// <summary>Enum of possible cases for the "options" oneof.</summary>
     public enum OptionsOneofCase {
       None = 0,
       Csv = 10,
       Json = 11,
+      Iceberg = 12,
     }
     private OptionsOneofCase optionsCase_ = OptionsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6071,6 +6097,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (MimeType != other.MimeType) return false;
       if (!object.Equals(Csv, other.Csv)) return false;
       if (!object.Equals(Json, other.Json)) return false;
+      if (!object.Equals(Iceberg, other.Iceberg)) return false;
       if (OptionsCase != other.OptionsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6084,6 +6111,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       if (optionsCase_ == OptionsOneofCase.Csv) hash ^= Csv.GetHashCode();
       if (optionsCase_ == OptionsOneofCase.Json) hash ^= Json.GetHashCode();
+      if (optionsCase_ == OptionsOneofCase.Iceberg) hash ^= Iceberg.GetHashCode();
       hash ^= (int) optionsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6123,6 +6151,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Json);
       }
+      if (optionsCase_ == OptionsOneofCase.Iceberg) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Iceberg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6153,6 +6185,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Json);
       }
+      if (optionsCase_ == OptionsOneofCase.Iceberg) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Iceberg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6177,6 +6213,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (optionsCase_ == OptionsOneofCase.Json) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Json);
+      }
+      if (optionsCase_ == OptionsOneofCase.Iceberg) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Iceberg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6211,6 +6250,12 @@ namespace Google.Cloud.Dataplex.V1 {
             Json = new global::Google.Cloud.Dataplex.V1.StorageFormat.Types.JsonOptions();
           }
           Json.MergeFrom(other.Json);
+          break;
+        case OptionsOneofCase.Iceberg:
+          if (Iceberg == null) {
+            Iceberg = new global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions();
+          }
+          Iceberg.MergeFrom(other.Iceberg);
           break;
       }
 
@@ -6259,6 +6304,15 @@ namespace Google.Cloud.Dataplex.V1 {
             Json = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions subBuilder = new global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions();
+            if (optionsCase_ == OptionsOneofCase.Iceberg) {
+              subBuilder.MergeFrom(Iceberg);
+            }
+            input.ReadMessage(subBuilder);
+            Iceberg = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -6302,6 +6356,15 @@ namespace Google.Cloud.Dataplex.V1 {
             }
             input.ReadMessage(subBuilder);
             Json = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions subBuilder = new global::Google.Cloud.Dataplex.V1.StorageFormat.Types.IcebergOptions();
+            if (optionsCase_ == OptionsOneofCase.Iceberg) {
+              subBuilder.MergeFrom(Iceberg);
+            }
+            input.ReadMessage(subBuilder);
+            Iceberg = subBuilder;
             break;
           }
         }
@@ -6896,6 +6959,202 @@ namespace Google.Cloud.Dataplex.V1 {
                 break;
               case 10: {
                 Encoding = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Describes Iceberg data format.
+      /// </summary>
+      public sealed partial class IcebergOptions : pb::IMessage<IcebergOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IcebergOptions> _parser = new pb::MessageParser<IcebergOptions>(() => new IcebergOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IcebergOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.StorageFormat.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IcebergOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IcebergOptions(IcebergOptions other) : this() {
+          metadataLocation_ = other.metadataLocation_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IcebergOptions Clone() {
+          return new IcebergOptions(this);
+        }
+
+        /// <summary>Field number for the "metadata_location" field.</summary>
+        public const int MetadataLocationFieldNumber = 1;
+        private string metadataLocation_ = "";
+        /// <summary>
+        /// Optional. The location of where the iceberg metadata is present, must be
+        /// within the table path
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MetadataLocation {
+          get { return metadataLocation_; }
+          set {
+            metadataLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IcebergOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IcebergOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MetadataLocation != other.MetadataLocation) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MetadataLocation.Length != 0) hash ^= MetadataLocation.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MetadataLocation.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MetadataLocation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MetadataLocation.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MetadataLocation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MetadataLocation.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MetadataLocation);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IcebergOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MetadataLocation.Length != 0) {
+            MetadataLocation = other.MetadataLocation;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                MetadataLocation = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MetadataLocation = input.ReadString();
                 break;
               }
             }

@@ -1449,6 +1449,1747 @@
       ]
     },
     {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_sync",
+      "title": "CreateDataScanRequestObject",
+      "description": "Snippet for CreateDataScan",
+      "file": "DataScanServiceClient.CreateDataScanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_async",
+      "title": "CreateDataScanRequestObjectAsync",
+      "description": "Snippet for CreateDataScanAsync",
+      "file": "DataScanServiceClient.CreateDataScanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_sync_flattened",
+      "title": "CreateDataScan",
+      "description": "Snippet for CreateDataScan",
+      "file": "DataScanServiceClient.CreateDataScanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_async_flattened",
+      "title": "CreateDataScanAsync",
+      "description": "Snippet for CreateDataScanAsync",
+      "file": "DataScanServiceClient.CreateDataScanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_sync_flattened_resourceNames",
+      "title": "CreateDataScanResourceNames",
+      "description": "Snippet for CreateDataScan",
+      "file": "DataScanServiceClient.CreateDataScanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CreateDataScan_async_flattened_resourceNames",
+      "title": "CreateDataScanResourceNamesAsync",
+      "description": "Snippet for CreateDataScanAsync",
+      "file": "DataScanServiceClient.CreateDataScanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CreateDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CreateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_UpdateDataScan_sync",
+      "title": "UpdateDataScanRequestObject",
+      "description": "Snippet for UpdateDataScan",
+      "file": "DataScanServiceClient.UpdateDataScanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.UpdateDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.UpdateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_UpdateDataScan_async",
+      "title": "UpdateDataScanRequestObjectAsync",
+      "description": "Snippet for UpdateDataScanAsync",
+      "file": "DataScanServiceClient.UpdateDataScanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.UpdateDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.UpdateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_UpdateDataScan_sync_flattened",
+      "title": "UpdateDataScan",
+      "description": "Snippet for UpdateDataScan",
+      "file": "DataScanServiceClient.UpdateDataScanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.UpdateDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.UpdateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_UpdateDataScan_async_flattened",
+      "title": "UpdateDataScanAsync",
+      "description": "Snippet for UpdateDataScanAsync",
+      "file": "DataScanServiceClient.UpdateDataScanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.UpdateDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataScan, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.UpdateDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_sync",
+      "title": "DeleteDataScanRequestObject",
+      "description": "Snippet for DeleteDataScan",
+      "file": "DataScanServiceClient.DeleteDataScanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_async",
+      "title": "DeleteDataScanRequestObjectAsync",
+      "description": "Snippet for DeleteDataScanAsync",
+      "file": "DataScanServiceClient.DeleteDataScanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_sync_flattened",
+      "title": "DeleteDataScan",
+      "description": "Snippet for DeleteDataScan",
+      "file": "DataScanServiceClient.DeleteDataScanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_async_flattened",
+      "title": "DeleteDataScanAsync",
+      "description": "Snippet for DeleteDataScanAsync",
+      "file": "DataScanServiceClient.DeleteDataScanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_sync_flattened_resourceNames",
+      "title": "DeleteDataScanResourceNames",
+      "description": "Snippet for DeleteDataScan",
+      "file": "DataScanServiceClient.DeleteDataScanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScan",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_DeleteDataScan_async_flattened_resourceNames",
+      "title": "DeleteDataScanResourceNamesAsync",
+      "description": "Snippet for DeleteDataScanAsync",
+      "file": "DataScanServiceClient.DeleteDataScanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.DeleteDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.DeleteDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_sync",
+      "title": "GetDataScanRequestObject",
+      "description": "Snippet for GetDataScan",
+      "file": "DataScanServiceClient.GetDataScanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScan",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_async",
+      "title": "GetDataScanRequestObjectAsync",
+      "description": "Snippet for GetDataScanAsync",
+      "file": "DataScanServiceClient.GetDataScanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_sync_flattened",
+      "title": "GetDataScan",
+      "description": "Snippet for GetDataScan",
+      "file": "DataScanServiceClient.GetDataScanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScan",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_async_flattened",
+      "title": "GetDataScanAsync",
+      "description": "Snippet for GetDataScanAsync",
+      "file": "DataScanServiceClient.GetDataScanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_sync_flattened_resourceNames",
+      "title": "GetDataScanResourceNames",
+      "description": "Snippet for GetDataScan",
+      "file": "DataScanServiceClient.GetDataScanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScan",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScan_async_flattened_resourceNames",
+      "title": "GetDataScanResourceNamesAsync",
+      "description": "Snippet for GetDataScanAsync",
+      "file": "DataScanServiceClient.GetDataScanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_sync",
+      "title": "ListDataScansRequestObject",
+      "description": "Snippet for ListDataScans",
+      "file": "DataScanServiceClient.ListDataScansRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScans",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScans",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_async",
+      "title": "ListDataScansRequestObjectAsync",
+      "description": "Snippet for ListDataScansAsync",
+      "file": "DataScanServiceClient.ListDataScansRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScansAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScansAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_sync_flattened",
+      "title": "ListDataScans",
+      "description": "Snippet for ListDataScans",
+      "file": "DataScanServiceClient.ListDataScansSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScans",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScans",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_async_flattened",
+      "title": "ListDataScansAsync",
+      "description": "Snippet for ListDataScansAsync",
+      "file": "DataScanServiceClient.ListDataScansAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScansAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScansAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_sync_flattened_resourceNames",
+      "title": "ListDataScansResourceNames",
+      "description": "Snippet for ListDataScans",
+      "file": "DataScanServiceClient.ListDataScansResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScans",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScans",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScans_async_flattened_resourceNames",
+      "title": "ListDataScansResourceNamesAsync",
+      "description": "Snippet for ListDataScansAsync",
+      "file": "DataScanServiceClient.ListDataScansResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScansAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScansAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScansResponse, Google.Cloud.Dataplex.V1.DataScan>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScans",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScans",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_sync",
+      "title": "RunDataScanRequestObject",
+      "description": "Snippet for RunDataScan",
+      "file": "DataScanServiceClient.RunDataScanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.RunDataScanResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_async",
+      "title": "RunDataScanRequestObjectAsync",
+      "description": "Snippet for RunDataScanAsync",
+      "file": "DataScanServiceClient.RunDataScanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RunDataScanResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_sync_flattened",
+      "title": "RunDataScan",
+      "description": "Snippet for RunDataScan",
+      "file": "DataScanServiceClient.RunDataScanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.RunDataScanResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_async_flattened",
+      "title": "RunDataScanAsync",
+      "description": "Snippet for RunDataScanAsync",
+      "file": "DataScanServiceClient.RunDataScanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RunDataScanResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_sync_flattened_resourceNames",
+      "title": "RunDataScanResourceNames",
+      "description": "Snippet for RunDataScan",
+      "file": "DataScanServiceClient.RunDataScanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScan",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScan",
+        "resultType": "Google.Cloud.Dataplex.V1.RunDataScanResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_RunDataScan_async_flattened_resourceNames",
+      "title": "RunDataScanResourceNamesAsync",
+      "description": "Snippet for RunDataScanAsync",
+      "file": "DataScanServiceClient.RunDataScanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDataScanAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.RunDataScanAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RunDataScanResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "RunDataScan",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.RunDataScan",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_sync",
+      "title": "GetDataScanJobRequestObject",
+      "description": "Snippet for GetDataScanJob",
+      "file": "DataScanServiceClient.GetDataScanJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJob",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScanJob",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_async",
+      "title": "GetDataScanJobRequestObjectAsync",
+      "description": "Snippet for GetDataScanJobAsync",
+      "file": "DataScanServiceClient.GetDataScanJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_sync_flattened",
+      "title": "GetDataScanJob",
+      "description": "Snippet for GetDataScanJob",
+      "file": "DataScanServiceClient.GetDataScanJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJob",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScanJob",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_async_flattened",
+      "title": "GetDataScanJobAsync",
+      "description": "Snippet for GetDataScanJobAsync",
+      "file": "DataScanServiceClient.GetDataScanJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_sync_flattened_resourceNames",
+      "title": "GetDataScanJobResourceNames",
+      "description": "Snippet for GetDataScanJob",
+      "file": "DataScanServiceClient.GetDataScanJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJob",
+        "resultType": "Google.Cloud.Dataplex.V1.DataScanJob",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_GetDataScanJob_async_flattened_resourceNames",
+      "title": "GetDataScanJobResourceNamesAsync",
+      "description": "Snippet for GetDataScanJobAsync",
+      "file": "DataScanServiceClient.GetDataScanJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.GetDataScanJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.GetDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_sync",
+      "title": "ListDataScanJobsRequestObject",
+      "description": "Snippet for ListDataScanJobs",
+      "file": "DataScanServiceClient.ListDataScanJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_async",
+      "title": "ListDataScanJobsRequestObjectAsync",
+      "description": "Snippet for ListDataScanJobsAsync",
+      "file": "DataScanServiceClient.ListDataScanJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_sync_flattened",
+      "title": "ListDataScanJobs",
+      "description": "Snippet for ListDataScanJobs",
+      "file": "DataScanServiceClient.ListDataScanJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_async_flattened",
+      "title": "ListDataScanJobsAsync",
+      "description": "Snippet for ListDataScanJobsAsync",
+      "file": "DataScanServiceClient.ListDataScanJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_sync_flattened_resourceNames",
+      "title": "ListDataScanJobsResourceNames",
+      "description": "Snippet for ListDataScanJobs",
+      "file": "DataScanServiceClient.ListDataScanJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobs",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_ListDataScanJobs_async_flattened_resourceNames",
+      "title": "ListDataScanJobsResourceNamesAsync",
+      "description": "Snippet for ListDataScanJobsAsync",
+      "file": "DataScanServiceClient.ListDataScanJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataScanJobsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.ListDataScanJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataScanJobsResponse, Google.Cloud.Dataplex.V1.DataScanJob>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataScanJobs",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.ListDataScanJobs",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataplex_v1_generated_DataplexService_CreateLake_sync",
       "title": "CreateLakeRequestObject",
       "description": "Snippet for CreateLake",
