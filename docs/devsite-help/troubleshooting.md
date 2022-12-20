@@ -214,6 +214,35 @@ In that case, the simplest fix is to add a direct dependency to
 `Grpc.Core` from your application, which will ensure that the
 native libraries are copied appropriately.
 
+## How to get ErrorInfo from SpannerException
+
+The ErrorInfo message provides error information that both humans and
+applications can depend on. If SpannerException contains RPCException
+as it's inner execption, we can extract ErrorInfo from SpannerException.
+
+The recommended way of doing this:
+
+```csharp
+try
+{
+  // some spanner code
+}
+catch (SpannerException ex) when (ex.InnerException is RpcException rpcException )
+ {
+   var errorInfo = rpcException.GetErrorInfo();
+
+   // Domain is the logical grouping to which the "reason" belongs.   
+   var domain = errorInfo.Domain;
+
+   // The reason for the error. Error reasons are unique within a particular domain of errors.
+   var reason = errorInfo.Reason;
+
+   // Additional structured details about this error.
+   var metadata = errorInfo.Metadata;
+
+   // Log domain , reason and metadata of ErrorInfo.
+    }
+```
 ## How can I modify repeated fields and maps in protobuf messages?
 
 This information is now in the [protocol buffers guide](protobuf.md#repeated-fields-and-maps); this section has been
