@@ -3116,6 +3116,314 @@
       ]
     },
     {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_RemoveIamPolicy_sync",
+      "title": "RemoveIamPolicyRequestObject",
+      "description": "Snippet for RemoveIamPolicy",
+      "file": "DataprocMetastoreClient.RemoveIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveIamPolicy",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.RemoveIamPolicy",
+        "resultType": "Google.Cloud.Metastore.V1Beta.RemoveIamPolicyResponse",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "RemoveIamPolicy",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.RemoveIamPolicy",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_RemoveIamPolicy_async",
+      "title": "RemoveIamPolicyRequestObjectAsync",
+      "description": "Snippet for RemoveIamPolicyAsync",
+      "file": "DataprocMetastoreClient.RemoveIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveIamPolicyAsync",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.RemoveIamPolicyAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Beta.RemoveIamPolicyResponse>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "RemoveIamPolicy",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.RemoveIamPolicy",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_QueryMetadata_sync",
+      "title": "QueryMetadataRequestObject",
+      "description": "Snippet for QueryMetadata",
+      "file": "DataprocMetastoreClient.QueryMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryMetadata",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.QueryMetadata",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.QueryMetadataResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "QueryMetadata",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.QueryMetadata",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_QueryMetadata_async",
+      "title": "QueryMetadataRequestObjectAsync",
+      "description": "Snippet for QueryMetadataAsync",
+      "file": "DataprocMetastoreClient.QueryMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryMetadataAsync",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.QueryMetadataAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.QueryMetadataResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "QueryMetadata",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.QueryMetadata",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_MoveTableToDatabase_sync",
+      "title": "MoveTableToDatabaseRequestObject",
+      "description": "Snippet for MoveTableToDatabase",
+      "file": "DataprocMetastoreClient.MoveTableToDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveTableToDatabase",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.MoveTableToDatabase",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.MoveTableToDatabaseResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "MoveTableToDatabase",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.MoveTableToDatabase",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_MoveTableToDatabase_async",
+      "title": "MoveTableToDatabaseRequestObjectAsync",
+      "description": "Snippet for MoveTableToDatabaseAsync",
+      "file": "DataprocMetastoreClient.MoveTableToDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveTableToDatabaseAsync",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.MoveTableToDatabaseAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.MoveTableToDatabaseResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "MoveTableToDatabase",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.MoveTableToDatabase",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_AlterMetadataResourceLocation_sync",
+      "title": "AlterMetadataResourceLocationRequestObject",
+      "description": "Snippet for AlterMetadataResourceLocation",
+      "file": "DataprocMetastoreClient.AlterMetadataResourceLocationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AlterMetadataResourceLocation",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.AlterMetadataResourceLocation",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.AlterMetadataResourceLocationResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "AlterMetadataResourceLocation",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.AlterMetadataResourceLocation",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "metastore_v1beta_generated_DataprocMetastore_AlterMetadataResourceLocation_async",
+      "title": "AlterMetadataResourceLocationRequestObjectAsync",
+      "description": "Snippet for AlterMetadataResourceLocationAsync",
+      "file": "DataprocMetastoreClient.AlterMetadataResourceLocationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AlterMetadataResourceLocationAsync",
+        "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient.AlterMetadataResourceLocationAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Beta.AlterMetadataResourceLocationResponse, Google.Cloud.Metastore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "DataprocMetastoreClient",
+          "fullName": "Google.Cloud.Metastore.V1Beta.DataprocMetastoreClient"
+        },
+        "method": {
+          "shortName": "AlterMetadataResourceLocation",
+          "fullName": "google.cloud.metastore.v1beta.DataprocMetastore.AlterMetadataResourceLocation",
+          "service": {
+            "shortName": "DataprocMetastore",
+            "fullName": "google.cloud.metastore.v1beta.DataprocMetastore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "metastore_v1beta_generated_DataprocMetastoreFederation_ListFederations_sync",
       "title": "ListFederationsRequestObject",
       "description": "Snippet for ListFederations",

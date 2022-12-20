@@ -2612,5 +2612,247 @@ namespace Google.Cloud.Metastore.V1Beta.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for RemoveIamPolicy</summary>
+        public void RemoveIamPolicyRequestObject()
+        {
+            // Snippet: RemoveIamPolicy(RemoveIamPolicyRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            RemoveIamPolicyRequest request = new RemoveIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Asynchronous = false,
+            };
+            // Make the request
+            RemoveIamPolicyResponse response = dataprocMetastoreClient.RemoveIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIamPolicyAsync</summary>
+        public async Task RemoveIamPolicyRequestObjectAsync()
+        {
+            // Snippet: RemoveIamPolicyAsync(RemoveIamPolicyRequest, CallSettings)
+            // Additional: RemoveIamPolicyAsync(RemoveIamPolicyRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveIamPolicyRequest request = new RemoveIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Asynchronous = false,
+            };
+            // Make the request
+            RemoveIamPolicyResponse response = await dataprocMetastoreClient.RemoveIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryMetadata</summary>
+        public void QueryMetadataRequestObject()
+        {
+            // Snippet: QueryMetadata(QueryMetadataRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            QueryMetadataRequest request = new QueryMetadataRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                Query = "",
+            };
+            // Make the request
+            Operation<QueryMetadataResponse, OperationMetadata> response = dataprocMetastoreClient.QueryMetadata(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QueryMetadataResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QueryMetadataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QueryMetadataResponse, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceQueryMetadata(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QueryMetadataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryMetadataAsync</summary>
+        public async Task QueryMetadataRequestObjectAsync()
+        {
+            // Snippet: QueryMetadataAsync(QueryMetadataRequest, CallSettings)
+            // Additional: QueryMetadataAsync(QueryMetadataRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryMetadataRequest request = new QueryMetadataRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                Query = "",
+            };
+            // Make the request
+            Operation<QueryMetadataResponse, OperationMetadata> response = await dataprocMetastoreClient.QueryMetadataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QueryMetadataResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QueryMetadataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QueryMetadataResponse, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceQueryMetadataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QueryMetadataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveTableToDatabase</summary>
+        public void MoveTableToDatabaseRequestObject()
+        {
+            // Snippet: MoveTableToDatabase(MoveTableToDatabaseRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            MoveTableToDatabaseRequest request = new MoveTableToDatabaseRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                TableName = "",
+                DbName = "",
+                DestinationDbName = "",
+            };
+            // Make the request
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> response = dataprocMetastoreClient.MoveTableToDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MoveTableToDatabaseResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceMoveTableToDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MoveTableToDatabaseResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveTableToDatabaseAsync</summary>
+        public async Task MoveTableToDatabaseRequestObjectAsync()
+        {
+            // Snippet: MoveTableToDatabaseAsync(MoveTableToDatabaseRequest, CallSettings)
+            // Additional: MoveTableToDatabaseAsync(MoveTableToDatabaseRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveTableToDatabaseRequest request = new MoveTableToDatabaseRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                TableName = "",
+                DbName = "",
+                DestinationDbName = "",
+            };
+            // Make the request
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> response = await dataprocMetastoreClient.MoveTableToDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MoveTableToDatabaseResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MoveTableToDatabaseResponse, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceMoveTableToDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MoveTableToDatabaseResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AlterMetadataResourceLocation</summary>
+        public void AlterMetadataResourceLocationRequestObject()
+        {
+            // Snippet: AlterMetadataResourceLocation(AlterMetadataResourceLocationRequest, CallSettings)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = DataprocMetastoreClient.Create();
+            // Initialize request argument(s)
+            AlterMetadataResourceLocationRequest request = new AlterMetadataResourceLocationRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ResourceName = "",
+                LocationUri = "",
+            };
+            // Make the request
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> response = dataprocMetastoreClient.AlterMetadataResourceLocation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AlterMetadataResourceLocationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> retrievedResponse = dataprocMetastoreClient.PollOnceAlterMetadataResourceLocation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AlterMetadataResourceLocationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AlterMetadataResourceLocationAsync</summary>
+        public async Task AlterMetadataResourceLocationRequestObjectAsync()
+        {
+            // Snippet: AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest, CallSettings)
+            // Additional: AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest, CancellationToken)
+            // Create client
+            DataprocMetastoreClient dataprocMetastoreClient = await DataprocMetastoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AlterMetadataResourceLocationRequest request = new AlterMetadataResourceLocationRequest
+            {
+                ServiceAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ResourceName = "",
+                LocationUri = "",
+            };
+            // Make the request
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> response = await dataprocMetastoreClient.AlterMetadataResourceLocationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AlterMetadataResourceLocationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AlterMetadataResourceLocationResponse, OperationMetadata> retrievedResponse = await dataprocMetastoreClient.PollOnceAlterMetadataResourceLocationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AlterMetadataResourceLocationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
