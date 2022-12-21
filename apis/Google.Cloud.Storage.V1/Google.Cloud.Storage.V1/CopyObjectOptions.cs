@@ -128,6 +128,12 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
+
         internal void ModifyRequest(RewriteRequest request)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
@@ -166,7 +172,7 @@ namespace Google.Cloud.Storage.V1
             if (IfGenerationMatch != null)
             {
                 request.IfGenerationMatch = IfGenerationMatch;
-                RetryHandler.MarkAsRetriable(request);
+                //RetryHandler.MarkAsRetriable(request);
             }
             if (IfGenerationNotMatch != null)
             {

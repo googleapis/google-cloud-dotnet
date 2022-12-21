@@ -18,18 +18,70 @@ using System.Text;
 
 namespace Google.Cloud.Storage.V1;
 
-
+/// <summary>
+/// 
+/// </summary>
 public sealed class RetryTimings
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static RetryTimings Default { get; }
 
-    public int MaxAttempts { get; private set; }
-    public int InitialBackoff { get; private set; }
-    public int MaxBackoff { get; private set; }
-    public int BackoffMultiplier { get; private set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    public TimeSpan InitialBackoff { get; }
 
-    public RetryTimings WithMaxAttempts(int maxAttempts);
-    public RetryTimings WithInitialBackoff(int initialBackoff);
-    public RetryTimings WithMaxBackoff(int maxBackoff);
-    public RetryTimings WithBackoffMultiplier(int backoffMultiplier);
+    /// <summary>
+    /// 
+    /// </summary>
+    public TimeSpan MaxBackoff { get; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public double BackoffMultiplier { get; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="initialBackoff"></param>
+    /// <returns></returns>
+    public RetryTimings WithInitialBackoff(TimeSpan initialBackoff)
+    {
+        return null;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="maxBackoff"></param>
+    /// <returns></returns>
+    public RetryTimings WithMaxBackoff(TimeSpan maxBackoff)
+    {
+        return null;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="backoffMultiplier"></param>
+    /// <returns></returns>
+    public RetryTimings WithBackoffMultiplier(double backoffMultiplier)
+    {
+        return null;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="initialBackoff"></param>
+    /// <param name="maxBackoff"></param>
+    /// <param name="backoffMultiplier"></param>
+    public RetryTimings(TimeSpan initialBackoff, TimeSpan maxBackoff, double backoffMultiplier)
+    {
+
+    }
 }
+

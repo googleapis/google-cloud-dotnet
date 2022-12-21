@@ -17,14 +17,42 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1;
 
+/// <summary>
+/// 
+/// </summary>
 public sealed class RetryPredicate
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static RetryPredicate DefaultErrorCodes { get; } = RetryPredicate.FromErrorCodes(408, 429, 500, 502, 503, 504);
 
-    public Func<int, bool> Predicate { get; private set; }
+    private Func<int, bool> Predicate { get; set; }
 
-    public static RetryPredicate FromErrorCodes(params int[] errorCodes);
-    public static RetryPredicate ErrorCodePredicate(Func<int, bool> retryCode);
-    internal bool ShouldRetry(int statusCode);
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="errorCodes"></param>
+    /// <returns></returns>
+    public static RetryPredicate FromErrorCodes(params int[] errorCodes)
+    {
+        return null;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="predicate"></param>
+    /// <returns></returns>
+    public static RetryPredicate FromErrorCodePredicate(Func<int, bool> predicate)
+    {
+        return null;
+    }
+
+    internal bool ShouldRetry(int statusCode)
+    {
+        return false;
+    }
 }
+
 

@@ -50,7 +50,7 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// 
         /// </summary>
-        public RetryOptions retryOptions { get; set; }  
+        public RetryOptions RetryOptions { get; set; }  
 
         internal void ModifyRequest(GetRequest request)
         {
