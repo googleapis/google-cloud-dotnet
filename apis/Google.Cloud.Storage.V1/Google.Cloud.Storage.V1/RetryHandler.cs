@@ -47,7 +47,7 @@ namespace Google.Cloud.Storage.V1
                 504 // Gateway timeout
         };
         private static readonly RetryHandler s_instance = new RetryHandler();
-        private static int delayMultiplier;
+        private static double delayMultiplier;
 
         private RetryHandler() { }
 
@@ -79,7 +79,7 @@ namespace Google.Cloud.Storage.V1
             int power = Math.Min(args.CurrentFailedTry - 1, 5);
             if (delayMultiplier != 0)
             {
-                power = delayMultiplier;
+                power = (int)delayMultiplier;
             }
             // The first failure will have args.CurrentFailedTry set to 1,
             // whereas we want the first delay to be 1 second. We use Math.Min on the power
