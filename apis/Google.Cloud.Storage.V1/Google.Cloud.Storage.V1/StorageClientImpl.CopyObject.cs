@@ -76,7 +76,7 @@ namespace Google.Cloud.Storage.V1
 
             RetryOptions retryOptions = options?.RetryOptions ??
                                  (options?.IfGenerationMatch is null
-                                  ? RetryOptions.Never
+                                 ? RetryOptions.Never
                                  : RetryOptions.IdempotentRetryOptions);
             RetryHandler.MarkAsRetriable(request, retryOptions);
 

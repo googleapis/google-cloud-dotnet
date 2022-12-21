@@ -46,9 +46,9 @@ namespace Google.Cloud.Storage.V1.Tests
         public void GetBucket_RetryThenFail() => RetryThenFailHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket", new GetBucketOptions
         {
             RetryOptions = new RetryOptions(
-           retryTimings:
-new RetryTimings(initialBackoff: TimeSpan.FromMinutes(1), maxBackoff: TimeSpan.FromMinutes(4), backoffMultiplier: 2),
-           retryPredicate: RetryPredicate.FromErrorCodes(429, 502))
+            retryTimings: new RetryTimings(initialBackoff: TimeSpan.FromMinutes(1),
+               maxBackoff: TimeSpan.FromMinutes(4), backoffMultiplier: 2),
+            retryPredicate: RetryPredicate.FromErrorCodes(429, 502))
         }));
 
         [Fact]
