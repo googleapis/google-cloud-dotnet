@@ -47,6 +47,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }  
+
         internal void ModifyRequest(GetRequest request)
         {
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)

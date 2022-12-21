@@ -47,6 +47,7 @@ namespace Google.Cloud.Storage.V1
                 504 // Gateway timeout
         };
         private static readonly RetryHandler s_instance = new RetryHandler();
+        private static int delayMultiplier;
 
         private RetryHandler() { }
 
@@ -58,9 +59,15 @@ namespace Google.Cloud.Storage.V1
             request.AddUnsuccessfulResponseHandler(s_instance);
         }
 
+        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
+        {
+            request.AddUnsuccessfulResponseHandler(s_instance);
+            delayMultiplier = options.RetryTimings.BackoffMultiplier;
+        }
+
         // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
-        internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) => 
-            Task.FromResult(s_retriableErrorCodes.Contains(((int)response.StatusCode)));
+        internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) =>
+            Task.FromResult(s_retriableErrorCodes.Contains(((int) response.StatusCode)));
 
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
@@ -69,11 +76,15 @@ namespace Google.Cloud.Storage.V1
             {
                 return false;
             }
+            int power = Math.Min(args.CurrentFailedTry - 1, 5);
+            if (delayMultiplier != 0)
+            {
+                power = delayMultiplier;
+            }
             // The first failure will have args.CurrentFailedTry set to 1,
             // whereas we want the first delay to be 1 second. We use Math.Min on the power
             // rather than on the result to obtain a max retry of 32 seconds without risking
             // calling Math.Pow with a huge number.
-            int power = Math.Min(args.CurrentFailedTry - 1, 5);
             double seconds = Math.Pow(2.0, power);
             var delay = TimeSpan.FromSeconds(seconds);
             await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);

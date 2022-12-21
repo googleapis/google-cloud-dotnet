@@ -35,10 +35,21 @@ namespace Google.Cloud.Storage.V1.Tests
         public void GetBucket_NoRetry() => NoRetryHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
 
         [Fact]
-        public void GetBucket_RetryOnce() => RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+        public void GetBucket_RetryOnce() => RetryOnceHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket", new GetBucketOptions
+        {
+            RetryOptions = new RetryOptions(
+            retryTimings: RetryTimings.Default.WithMaxBackoff(TimeSpan.FromMinutes(1)),
+            retryPredicate: RetryPredicate.FromErrorCodePredicate(errorCode => errorCode >= 500))
+        }));
 
         [Fact]
-        public void GetBucket_RetryThenFail() => RetryThenFailHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket"));
+        public void GetBucket_RetryThenFail() => RetryThenFailHelper(service => service.Buckets.Get("bucket"), client => client.GetBucket("bucket", new GetBucketOptions
+        {
+            RetryOptions = new RetryOptions(
+           retryTimings:
+new RetryTimings(initialBackoff: TimeSpan.FromMinutes(1), maxBackoff: TimeSpan.FromMinutes(4), backoffMultiplier: 2),
+           retryPredicate: RetryPredicate.FromErrorCodes(429, 502))
+        }));
 
         [Fact]
         public void DeleteBucket_NoRetry() => NoRetryHelper(service => service.Buckets.Delete("bucket"), client => client.DeleteBucket("bucket"));
