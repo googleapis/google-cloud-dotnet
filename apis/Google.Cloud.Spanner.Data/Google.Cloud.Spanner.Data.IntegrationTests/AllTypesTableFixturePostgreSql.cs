@@ -48,7 +48,8 @@ public class AllTypesTableFixturePostgreSql : SpannerTableFixturePostgreSql, ICo
             ""BytesArrayValue"",
             ""Base64ArrayValue"",
             ""TimestampArrayValue"",
-            ""DateArrayValue""           
+            ""DateArrayValue"",
+            ""PgJsonbArrayValue""
             ) VALUES(
             $1, 
             $2, 
@@ -68,7 +69,8 @@ public class AllTypesTableFixturePostgreSql : SpannerTableFixturePostgreSql, ICo
             $16,      
             $17,
             $18,
-            $19
+            $19,
+            $20
             )";
 
     protected override void CreateTable() =>
@@ -92,6 +94,7 @@ public class AllTypesTableFixturePostgreSql : SpannerTableFixturePostgreSql, ICo
             ""BytesArrayValue""     BYTEA[],
             ""Base64ArrayValue""    BYTEA[],
             ""TimestampArrayValue"" TIMESTAMPTZ[],
-            ""DateArrayValue""      DATE[]
+            ""DateArrayValue""      DATE[],
+            ""PgJsonbArrayValue""   JSONB[]
             );");
 }
