@@ -428,6 +428,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 FastSocket = new FastSocket(),
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
+                WindowsNodeConfig = new WindowsNodeConfig(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -462,6 +463,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 FastSocket = new FastSocket(),
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
+                WindowsNodeConfig = new WindowsNodeConfig(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
