@@ -51,6 +51,7 @@ namespace Google.Cloud.Container.V1.Snippets
                 GcfsConfig = new GcfsConfig(),
                 ConfidentialNodes = new ConfidentialNodes(),
                 Gvnic = new VirtualNIC(),
+                Etag = "",
                 FastSocket = new FastSocket(),
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
