@@ -944,7 +944,7 @@
         "Billing"
       ],
       "shortName": "cloudbilling",
-      "serviceConfigFile": "cloudbilling.yaml",
+      "serviceConfigFile": "cloudbilling_v1.yaml",
       "restNumericEnums": true
     },
     {
