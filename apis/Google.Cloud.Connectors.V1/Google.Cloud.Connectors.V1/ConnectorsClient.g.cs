@@ -2259,10 +2259,10 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemas(ConnectionSchemaMetadataName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListRuntimeActionSchemas(new ListRuntimeActionSchemasRequest
             {
-                ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConnectionSchemaMetadataName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2285,10 +2285,10 @@ namespace Google.Cloud.Connectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="RuntimeActionSchema"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> ListRuntimeActionSchemasAsync(ConnectionSchemaMetadataName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListRuntimeActionSchemasAsync(new ListRuntimeActionSchemasRequest
             {
-                ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConnectionSchemaMetadataName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

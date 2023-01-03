@@ -2371,7 +2371,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Initialize request argument(s)
             ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
-                ParentAsConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                ParentAsConnectionSchemaMetadataName = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 Filter = "",
             };
             // Make the request
@@ -2420,7 +2420,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Initialize request argument(s)
             ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
-                ParentAsConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                ParentAsConnectionSchemaMetadataName = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 Filter = "",
             };
             // Make the request
@@ -2467,7 +2467,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Create client
             ConnectorsClient connectorsClient = ConnectorsClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]/connectionSchemaMetadata";
             // Make the request
             PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemas(parent);
 
@@ -2512,7 +2512,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Create client
             ConnectorsClient connectorsClient = await ConnectorsClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]/connectionSchemaMetadata";
             // Make the request
             PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemasAsync(parent);
 
@@ -2553,11 +2553,11 @@ namespace Google.Cloud.Connectors.V1.Snippets
         /// <summary>Snippet for ListRuntimeActionSchemas</summary>
         public void ListRuntimeActionSchemasResourceNames()
         {
-            // Snippet: ListRuntimeActionSchemas(ConnectionName, string, int?, CallSettings)
+            // Snippet: ListRuntimeActionSchemas(ConnectionSchemaMetadataName, string, int?, CallSettings)
             // Create client
             ConnectorsClient connectorsClient = ConnectorsClient.Create();
             // Initialize request argument(s)
-            ConnectionName parent = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
+            ConnectionSchemaMetadataName parent = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
             // Make the request
             PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemas(parent);
 
@@ -2598,11 +2598,11 @@ namespace Google.Cloud.Connectors.V1.Snippets
         /// <summary>Snippet for ListRuntimeActionSchemasAsync</summary>
         public async Task ListRuntimeActionSchemasResourceNamesAsync()
         {
-            // Snippet: ListRuntimeActionSchemasAsync(ConnectionName, string, int?, CallSettings)
+            // Snippet: ListRuntimeActionSchemasAsync(ConnectionSchemaMetadataName, string, int?, CallSettings)
             // Create client
             ConnectorsClient connectorsClient = await ConnectorsClient.CreateAsync();
             // Initialize request argument(s)
-            ConnectionName parent = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
+            ConnectionSchemaMetadataName parent = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
             // Make the request
             PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemasAsync(parent);
 

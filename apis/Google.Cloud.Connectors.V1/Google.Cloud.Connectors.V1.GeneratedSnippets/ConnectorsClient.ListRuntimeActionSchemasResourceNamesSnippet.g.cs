@@ -36,7 +36,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Create client
             ConnectorsClient connectorsClient = ConnectorsClient.Create();
             // Initialize request argument(s)
-            ConnectionName parent = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
+            ConnectionSchemaMetadataName parent = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]");
             // Make the request
             PagedEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemas(parent);
 

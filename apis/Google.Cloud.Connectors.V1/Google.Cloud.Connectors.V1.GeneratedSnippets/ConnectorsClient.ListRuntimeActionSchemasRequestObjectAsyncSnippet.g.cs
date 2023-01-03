@@ -40,7 +40,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Initialize request argument(s)
             ListRuntimeActionSchemasRequest request = new ListRuntimeActionSchemasRequest
             {
-                ParentAsConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                ParentAsConnectionSchemaMetadataName = ConnectionSchemaMetadataName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 Filter = "",
             };
             // Make the request

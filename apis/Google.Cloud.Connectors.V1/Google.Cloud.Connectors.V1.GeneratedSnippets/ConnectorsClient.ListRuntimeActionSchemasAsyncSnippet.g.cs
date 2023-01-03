@@ -38,7 +38,7 @@ namespace Google.Cloud.Connectors.V1.Snippets
             // Create client
             ConnectorsClient connectorsClient = await ConnectorsClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]/connectionSchemaMetadata";
             // Make the request
             PagedAsyncEnumerable<ListRuntimeActionSchemasResponse, RuntimeActionSchema> response = connectorsClient.ListRuntimeActionSchemasAsync(parent);
 

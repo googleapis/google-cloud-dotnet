@@ -261,6 +261,272 @@ namespace Google.Cloud.Connectors.V1
         public static bool operator !=(ConnectionName a, ConnectionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>ConnectionSchemaMetadata</c> resource.</summary>
+    public sealed partial class ConnectionSchemaMetadataName : gax::IResourceName, sys::IEquatable<ConnectionSchemaMetadataName>
+    {
+        /// <summary>The possible contents of <see cref="ConnectionSchemaMetadataName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+            /// </summary>
+            ProjectLocationConnection = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationConnection = new gax::PathTemplate("projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata");
+
+        /// <summary>
+        /// Creates a <see cref="ConnectionSchemaMetadataName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ConnectionSchemaMetadataName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ConnectionSchemaMetadataName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ConnectionSchemaMetadataName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ConnectionSchemaMetadataName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="ConnectionSchemaMetadataName"/> constructed from the provided ids.
+        /// </returns>
+        public static ConnectionSchemaMetadataName FromProjectLocationConnection(string projectId, string locationId, string connectionId) =>
+            new ConnectionSchemaMetadataName(ResourceNameType.ProjectLocationConnection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConnectionSchemaMetadataName"/> with
+        /// pattern <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConnectionSchemaMetadataName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string connectionId) =>
+            FormatProjectLocationConnection(projectId, locationId, connectionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConnectionSchemaMetadataName"/> with
+        /// pattern <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConnectionSchemaMetadataName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>.
+        /// </returns>
+        public static string FormatProjectLocationConnection(string projectId, string locationId, string connectionId) =>
+            s_projectLocationConnection.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ConnectionSchemaMetadataName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="connectionSchemaMetadataName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="ConnectionSchemaMetadataName"/> if successful.</returns>
+        public static ConnectionSchemaMetadataName Parse(string connectionSchemaMetadataName) =>
+            Parse(connectionSchemaMetadataName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ConnectionSchemaMetadataName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="connectionSchemaMetadataName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ConnectionSchemaMetadataName"/> if successful.</returns>
+        public static ConnectionSchemaMetadataName Parse(string connectionSchemaMetadataName, bool allowUnparsed) =>
+            TryParse(connectionSchemaMetadataName, allowUnparsed, out ConnectionSchemaMetadataName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ConnectionSchemaMetadataName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="connectionSchemaMetadataName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ConnectionSchemaMetadataName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string connectionSchemaMetadataName, out ConnectionSchemaMetadataName result) =>
+            TryParse(connectionSchemaMetadataName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ConnectionSchemaMetadataName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="connectionSchemaMetadataName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ConnectionSchemaMetadataName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string connectionSchemaMetadataName, bool allowUnparsed, out ConnectionSchemaMetadataName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(connectionSchemaMetadataName, nameof(connectionSchemaMetadataName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationConnection.TryParseName(connectionSchemaMetadataName, out resourceName))
+            {
+                result = FromProjectLocationConnection(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(connectionSchemaMetadataName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ConnectionSchemaMetadataName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string connectionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ConnectionId = connectionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ConnectionSchemaMetadataName"/> class from the component parts of
+        /// pattern <c>projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        public ConnectionSchemaMetadataName(string projectId, string locationId, string connectionId) : this(ResourceNameType.ProjectLocationConnection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Connection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ConnectionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationConnection: return s_projectLocationConnection.Expand(ProjectId, LocationId, ConnectionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ConnectionSchemaMetadataName);
+
+        /// <inheritdoc/>
+        public bool Equals(ConnectionSchemaMetadataName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ConnectionSchemaMetadataName a, ConnectionSchemaMetadataName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ConnectionSchemaMetadataName a, ConnectionSchemaMetadataName b) => !(a == b);
+    }
+
     public partial class Connection
     {
         /// <summary>
@@ -358,11 +624,11 @@ namespace Google.Cloud.Connectors.V1
     public partial class ListRuntimeActionSchemasRequest
     {
         /// <summary>
-        /// <see cref="ConnectionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ConnectionSchemaMetadataName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ConnectionName ParentAsConnectionName
+        public ConnectionSchemaMetadataName ParentAsConnectionSchemaMetadataName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ConnectionName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : ConnectionSchemaMetadataName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
