@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -82,6 +83,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             GetProjectSettingsSettings = existing.GetProjectSettingsSettings;
             UpdateProjectSettingsSettings = existing.UpdateProjectSettingsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -520,6 +522,11 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </remarks>
         public gaxgrpc::CallSettings UpdateProjectSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ArtifactRegistrySettings"/> object.</returns>
         public ArtifactRegistrySettings Clone() => new ArtifactRegistrySettings(this);
@@ -674,6 +681,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         /// <summary>The underlying gRPC ArtifactRegistry client</summary>
         public virtual ArtifactRegistry.ArtifactRegistryClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists docker images.
@@ -2893,6 +2903,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             DeleteRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryOperationsSettings, logger);
             DeletePackageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePackageOperationsSettings, logger);
             DeleteVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVersionOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDockerImages = clientHelper.BuildApiCall<ListDockerImagesRequest, ListDockerImagesResponse>("ListDockerImages", grpcClient.ListDockerImagesAsync, grpcClient.ListDockerImages, effectiveSettings.ListDockerImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDockerImages);
             Modify_ListDockerImagesApiCall(ref _callListDockerImages);
@@ -3037,6 +3048,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         /// <summary>The underlying gRPC ArtifactRegistry client</summary>
         public override ArtifactRegistry.ArtifactRegistryClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListDockerImagesRequest(ref ListDockerImagesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3864,6 +3878,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ArtifactRegistry
+    {
+        public partial class ArtifactRegistryClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
