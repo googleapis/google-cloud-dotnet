@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcav = Google.Cloud.ArtifactRegistry.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
