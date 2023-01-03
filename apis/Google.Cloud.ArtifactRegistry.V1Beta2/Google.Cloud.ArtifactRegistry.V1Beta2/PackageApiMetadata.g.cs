@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -31,6 +32,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1beta2/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiYvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfQ==")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1beta2/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("EiQvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
+                },
                 {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1beta2/{name=projects/*/locations/*/operations/*}" }
@@ -49,6 +60,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             yield return TagReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return YumArtifactReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
