@@ -1117,6 +1117,24 @@
       "transport": "rest"
     },
     {
+      "id": "Google.Cloud.Connectors.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Connectors",
+      "description": "Enables users to create and manage connections to Google Cloud services and third-party business applications using the Connectors interface.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/connectors/v1",
+      "shortName": "connectors",
+      "serviceConfigFile": "connectors_v1.yaml",
+      "restNumericEnums": false
+    },
+    {
       "id": "Google.Cloud.ContactCenterInsights.V1",
       "version": "2.2.1",
       "type": "grpc",
