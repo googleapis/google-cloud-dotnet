@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Locations that could not be reached. For example,
-    /// ['us-west1-a', 'us-central1-b'].
+    /// `['us-west1-a', 'us-central1-b']`.
     /// A ListInstancesResponse will only contain either instances or unreachables,
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
