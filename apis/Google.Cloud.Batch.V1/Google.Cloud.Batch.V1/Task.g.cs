@@ -75,14 +75,20 @@ namespace Google.Cloud.Batch.V1 {
             "Y2gudjEuVGFza1N0YXR1czp36kF0ChliYXRjaC5nb29nbGVhcGlzLmNvbS9U",
             "YXNrEldwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
             "am9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfS90YXNrcy97dGFz",
-            "a30ihQEKC0Vudmlyb25tZW50EkQKCXZhcmlhYmxlcxgBIAMoCzIxLmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudC5WYXJpYWJsZXNFbnRyeRow",
-            "Cg5WYXJpYWJsZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBQrUBChljb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxQglUYXNrUHJvdG9Q",
-            "AVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9iYXRjaC92MTtiYXRjaKICA0dDQqoCFUdvb2dsZS5DbG91ZC5CYXRjaC5W",
-            "McoCFUdvb2dsZVxDbG91ZFxCYXRjaFxWMeoCGEdvb2dsZTo6Q2xvdWQ6OkJh",
-            "dGNoOjpWMWIGcHJvdG8z"));
+            "a30ijwMKC0Vudmlyb25tZW50EkQKCXZhcmlhYmxlcxgBIAMoCzIxLmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudC5WYXJpYWJsZXNFbnRyeRJR",
+            "ChBzZWNyZXRfdmFyaWFibGVzGAIgAygLMjcuZ29vZ2xlLmNsb3VkLmJhdGNo",
+            "LnYxLkVudmlyb25tZW50LlNlY3JldFZhcmlhYmxlc0VudHJ5EkkKE2VuY3J5",
+            "cHRlZF92YXJpYWJsZXMYAyABKAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjEu",
+            "RW52aXJvbm1lbnQuS01TRW52TWFwGjIKCUtNU0Vudk1hcBIQCghrZXlfbmFt",
+            "ZRgBIAEoCRITCgtjaXBoZXJfdGV4dBgCIAEoCRowCg5WYXJpYWJsZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjYKFFNlY3JldFZh",
+            "cmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC",
+            "tQEKGWNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFCCVRhc2tQcm90b1ABWjpn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Jh",
+            "dGNoL3YxO2JhdGNoogIDR0NCqgIVR29vZ2xlLkNsb3VkLkJhdGNoLlYxygIV",
+            "R29vZ2xlXENsb3VkXEJhdGNoXFYx6gIYR29vZ2xlOjpDbG91ZDo6QmF0Y2g6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +102,8 @@ namespace Google.Cloud.Batch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskSpec), global::Google.Cloud.Batch.V1.TaskSpec.Parser, new[]{ "Runnables", "ComputeResource", "MaxRunDuration", "MaxRetryCount", "LifecyclePolicies", "Environments", "Volumes", "Environment" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.LifecyclePolicy), global::Google.Cloud.Batch.V1.LifecyclePolicy.Parser, new[]{ "Action", "ActionCondition" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.LifecyclePolicy.Types.Action) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.LifecyclePolicy.Types.ActionCondition), global::Google.Cloud.Batch.V1.LifecyclePolicy.Types.ActionCondition.Parser, new[]{ "ExitCodes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Task), global::Google.Cloud.Batch.V1.Task.Parser, new[]{ "Name", "Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Environment), global::Google.Cloud.Batch.V1.Environment.Parser, new[]{ "Variables" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Environment), global::Google.Cloud.Batch.V1.Environment.Parser, new[]{ "Variables", "SecretVariables", "EncryptedVariables" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap), global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap.Parser, new[]{ "KeyName", "CipherText" }, null, null, null, null),
+            null, null, })
           }));
     }
     #endregion
@@ -3911,6 +3918,8 @@ namespace Google.Cloud.Batch.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Environment(Environment other) : this() {
       variables_ = other.variables_.Clone();
+      secretVariables_ = other.secretVariables_.Clone();
+      encryptedVariables_ = other.encryptedVariables_ != null ? other.encryptedVariables_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3934,6 +3943,38 @@ namespace Google.Cloud.Batch.V1 {
       get { return variables_; }
     }
 
+    /// <summary>Field number for the "secret_variables" field.</summary>
+    public const int SecretVariablesFieldNumber = 2;
+    private static readonly pbc::MapField<string, string>.Codec _map_secretVariables_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+    private readonly pbc::MapField<string, string> secretVariables_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// A map of environment variable names to Secret Manager secret names.
+    /// The VM will access the named secrets to set the value of each environment
+    /// variable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> SecretVariables {
+      get { return secretVariables_; }
+    }
+
+    /// <summary>Field number for the "encrypted_variables" field.</summary>
+    public const int EncryptedVariablesFieldNumber = 3;
+    private global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap encryptedVariables_;
+    /// <summary>
+    /// An encrypted JSON dictionary where the key/value pairs correspond to
+    /// environment variable names and their values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap EncryptedVariables {
+      get { return encryptedVariables_; }
+      set {
+        encryptedVariables_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3950,6 +3991,8 @@ namespace Google.Cloud.Batch.V1 {
         return true;
       }
       if (!Variables.Equals(other.Variables)) return false;
+      if (!SecretVariables.Equals(other.SecretVariables)) return false;
+      if (!object.Equals(EncryptedVariables, other.EncryptedVariables)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3958,6 +4001,8 @@ namespace Google.Cloud.Batch.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= Variables.GetHashCode();
+      hash ^= SecretVariables.GetHashCode();
+      if (encryptedVariables_ != null) hash ^= EncryptedVariables.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3977,6 +4022,11 @@ namespace Google.Cloud.Batch.V1 {
       output.WriteRawMessage(this);
     #else
       variables_.WriteTo(output, _map_variables_codec);
+      secretVariables_.WriteTo(output, _map_secretVariables_codec);
+      if (encryptedVariables_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptedVariables);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3988,6 +4038,11 @@ namespace Google.Cloud.Batch.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       variables_.WriteTo(ref output, _map_variables_codec);
+      secretVariables_.WriteTo(ref output, _map_secretVariables_codec);
+      if (encryptedVariables_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptedVariables);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3999,6 +4054,10 @@ namespace Google.Cloud.Batch.V1 {
     public int CalculateSize() {
       int size = 0;
       size += variables_.CalculateSize(_map_variables_codec);
+      size += secretVariables_.CalculateSize(_map_secretVariables_codec);
+      if (encryptedVariables_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptedVariables);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4012,6 +4071,13 @@ namespace Google.Cloud.Batch.V1 {
         return;
       }
       variables_.Add(other.variables_);
+      secretVariables_.Add(other.secretVariables_);
+      if (other.encryptedVariables_ != null) {
+        if (encryptedVariables_ == null) {
+          EncryptedVariables = new global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap();
+        }
+        EncryptedVariables.MergeFrom(other.EncryptedVariables);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4029,6 +4095,17 @@ namespace Google.Cloud.Batch.V1 {
             break;
           case 10: {
             variables_.AddEntriesFrom(input, _map_variables_codec);
+            break;
+          }
+          case 18: {
+            secretVariables_.AddEntriesFrom(input, _map_secretVariables_codec);
+            break;
+          }
+          case 26: {
+            if (encryptedVariables_ == null) {
+              EncryptedVariables = new global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap();
+            }
+            input.ReadMessage(EncryptedVariables);
             break;
           }
         }
@@ -4050,10 +4127,261 @@ namespace Google.Cloud.Batch.V1 {
             variables_.AddEntriesFrom(ref input, _map_variables_codec);
             break;
           }
+          case 18: {
+            secretVariables_.AddEntriesFrom(ref input, _map_secretVariables_codec);
+            break;
+          }
+          case 26: {
+            if (encryptedVariables_ == null) {
+              EncryptedVariables = new global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap();
+            }
+            input.ReadMessage(EncryptedVariables);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Environment message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public sealed partial class KMSEnvMap : pb::IMessage<KMSEnvMap>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<KMSEnvMap> _parser = new pb::MessageParser<KMSEnvMap>(() => new KMSEnvMap());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<KMSEnvMap> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Batch.V1.Environment.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KMSEnvMap() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KMSEnvMap(KMSEnvMap other) : this() {
+          keyName_ = other.keyName_;
+          cipherText_ = other.cipherText_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KMSEnvMap Clone() {
+          return new KMSEnvMap(this);
+        }
+
+        /// <summary>Field number for the "key_name" field.</summary>
+        public const int KeyNameFieldNumber = 1;
+        private string keyName_ = "";
+        /// <summary>
+        /// The name of the KMS key that will be used to decrypt the cipher text.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string KeyName {
+          get { return keyName_; }
+          set {
+            keyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "cipher_text" field.</summary>
+        public const int CipherTextFieldNumber = 2;
+        private string cipherText_ = "";
+        /// <summary>
+        /// The value of the cipherText response from the `encrypt` method.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CipherText {
+          get { return cipherText_; }
+          set {
+            cipherText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as KMSEnvMap);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(KMSEnvMap other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (KeyName != other.KeyName) return false;
+          if (CipherText != other.CipherText) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (KeyName.Length != 0) hash ^= KeyName.GetHashCode();
+          if (CipherText.Length != 0) hash ^= CipherText.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (KeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KeyName);
+          }
+          if (CipherText.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CipherText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (KeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KeyName);
+          }
+          if (CipherText.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CipherText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (KeyName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyName);
+          }
+          if (CipherText.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CipherText);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(KMSEnvMap other) {
+          if (other == null) {
+            return;
+          }
+          if (other.KeyName.Length != 0) {
+            KeyName = other.KeyName;
+          }
+          if (other.CipherText.Length != 0) {
+            CipherText = other.CipherText;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                KeyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                CipherText = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                KeyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                CipherText = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
