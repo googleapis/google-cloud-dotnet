@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
 {
     public abstract class TestBase
     {
-        private static byte[] s_dllBytes = File.ReadAllBytes(typeof(TestBase).Assembly.Location);
+        private static readonly byte[] s_dllBytes = File.ReadAllBytes(typeof(TestBase).Assembly.Location);
 
         protected DiffResult RunTest([CallerMemberName] string callerMemberName = null)
         {
