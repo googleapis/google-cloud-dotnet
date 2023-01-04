@@ -1255,7 +1255,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Locations that could not be reached. For example,
-    /// ['us-west1-a', 'us-central1-b'].
+    /// `['us-west1-a', 'us-central1-b']`.
     /// A ListInstancesResponse will only contain either instances or unreachables,
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5660,13 +5660,13 @@ namespace Google.Cloud.Notebooks.V1 {
     /// <summary>
     /// Output only. Additional information about instance health.
     /// Example:
-    ///  healthInfo": {
-    ///   "docker_proxy_agent_status": "1",
-    ///   "docker_status": "1",
-    ///   "jupyterlab_api_status": "-1",
-    ///   "jupyterlab_status": "-1",
-    ///   "updated": "2020-10-18 09:40:03.573409"
-    ///  }
+    ///     healthInfo": {
+    ///       "docker_proxy_agent_status": "1",
+    ///       "docker_status": "1",
+    ///       "jupyterlab_api_status": "-1",
+    ///       "jupyterlab_status": "-1",
+    ///       "updated": "2020-10-18 09:40:03.573409"
+    ///     }
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6167,7 +6167,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private string targetSnapshot_ = "";
     /// <summary>
     /// Required. The snapshot for rollback.
-    /// Example: "projects/test-project/global/snapshots/krwlzipynril".
+    /// Example: `projects/test-project/global/snapshots/krwlzipynril`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9657,7 +9657,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private string filter_ = "";
     /// <summary>
     /// Filter applied to resulting executions. Currently only supports filtering
-    /// executions by a specified schedule_id.
+    /// executions by a specified `schedule_id`.
     /// Format: `schedule_id=&lt;Schedule_ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

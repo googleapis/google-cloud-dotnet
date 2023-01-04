@@ -536,7 +536,7 @@ namespace Google.Cloud.Notebooks.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ManagedNotebookService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ManagedNotebookService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1100,12 +1100,12 @@ namespace Google.Cloud.Notebooks.V1
         /// 
         /// 
         /// Currently, only the following fields can be updated:
-        /// - software_config.kernels
-        /// - software_config.post_startup_script
-        /// - software_config.custom_gpu_driver_path
-        /// - software_config.idle_shutdown
-        /// - software_config.idle_shutdown_timeout
-        /// - software_config.disable_terminal
+        /// - `software_config.kernels`
+        /// - `software_config.post_startup_script`
+        /// - `software_config.custom_gpu_driver_path`
+        /// - `software_config.idle_shutdown`
+        /// - `software_config.idle_shutdown_timeout`
+        /// - `software_config.disable_terminal`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1140,12 +1140,12 @@ namespace Google.Cloud.Notebooks.V1
         /// 
         /// 
         /// Currently, only the following fields can be updated:
-        /// - software_config.kernels
-        /// - software_config.post_startup_script
-        /// - software_config.custom_gpu_driver_path
-        /// - software_config.idle_shutdown
-        /// - software_config.idle_shutdown_timeout
-        /// - software_config.disable_terminal
+        /// - `software_config.kernels`
+        /// - `software_config.post_startup_script`
+        /// - `software_config.custom_gpu_driver_path`
+        /// - `software_config.idle_shutdown`
+        /// - `software_config.idle_shutdown_timeout`
+        /// - `software_config.disable_terminal`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1180,12 +1180,12 @@ namespace Google.Cloud.Notebooks.V1
         /// 
         /// 
         /// Currently, only the following fields can be updated:
-        /// - software_config.kernels
-        /// - software_config.post_startup_script
-        /// - software_config.custom_gpu_driver_path
-        /// - software_config.idle_shutdown
-        /// - software_config.idle_shutdown_timeout
-        /// - software_config.disable_terminal
+        /// - `software_config.kernels`
+        /// - `software_config.post_startup_script`
+        /// - `software_config.custom_gpu_driver_path`
+        /// - `software_config.idle_shutdown`
+        /// - `software_config.idle_shutdown_timeout`
+        /// - `software_config.disable_terminal`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
