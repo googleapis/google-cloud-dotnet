@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -72,7 +72,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         }
 
         // Visible for testing
-        static internal IEnumerable<(StructuredVersion, Level)> GetComparisons(StructuredVersion newVersion, List<StructuredVersion> taggedVersions)
+        internal static IEnumerable<(StructuredVersion, Level)> GetComparisons(StructuredVersion newVersion, List<StructuredVersion> taggedVersions)
         {
             // e.g. 1.0.0-beta00, 2.0.0-beta00. Initial not-even-beta libraries, and preparing for new major version.
             var isNonRelease = newVersion.IsNonRelease;

@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -80,7 +80,7 @@ namespace Google.Cloud.Tools.VersionCompat
         /// <param name="tfm">The target framework to find within the package. May be null, in which case we check the archive to find a reasonable TFM.</param>
         /// <param name="assemblyName">The name of the assembly to find within the package. May be null, in which case it's assumed to be the same as the package.</param>
         /// <returns>The assembly definition loaded from the given package.</returns>
-        public async static Task<AssemblyDefinition> LoadPackageAsync(string package, string version, string tfm, string assemblyName)
+        public static async Task<AssemblyDefinition> LoadPackageAsync(string package, string version, string tfm, string assemblyName)
         {
             var bytes = await LoadPackageData();
 

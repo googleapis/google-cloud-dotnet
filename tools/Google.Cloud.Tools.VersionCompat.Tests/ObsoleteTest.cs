@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Obsolete
     namespace UnchangedClassWarning.A {[Obsolete("", error: false)] public class C { } }
     namespace UnchangedClassWarning.B {[Obsolete] public class C { } }
 
-    namespace UnchangedPropertyError.A { public class C {[Obsolete("", error: true)] int P { get; } } }
-    namespace UnchangedPropertyError.B { public class C {[Obsolete("", error: true)] int P { get; } } }
+    namespace UnchangedPropertyError.A { public class C {[Obsolete("", error: true)] private int P { get; } } }
+    namespace UnchangedPropertyError.B { public class C {[Obsolete("", error: true)] private int P { get; } } }
 
     namespace ClassBecomeObsoleteWarning.A { public class C { } }
     namespace ClassBecomeObsoleteWarning.B {[Obsolete] public class C { } }

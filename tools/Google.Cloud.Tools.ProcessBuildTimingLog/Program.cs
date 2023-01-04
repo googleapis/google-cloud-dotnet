@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ namespace Google.Cloud.Tools.ProcessBuildTimingLog
     /// Processes a build timing log created by the log_build_action function in toolversions.sh.
     /// This makes it easy to see how long each part of the build takes.
     /// </summary>
-    class Program
+    internal class Program
     {
         private static readonly DurationPattern s_durationPattern = DurationPattern.CreateWithInvariantCulture("-HH:mm:ss");
         // The text to use instead of a duration for entries with no duration

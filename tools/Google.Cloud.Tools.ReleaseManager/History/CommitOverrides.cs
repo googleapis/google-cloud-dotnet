@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     public static class CommitOverrides
     {
-        private static Lazy<IReadOnlyDictionary<string, string>> s_overrides = new Lazy<IReadOnlyDictionary<string, string>>(LoadOverrides);
+        private static readonly Lazy<IReadOnlyDictionary<string, string>> s_overrides = new Lazy<IReadOnlyDictionary<string, string>>(LoadOverrides);
 
         /// <summary>
         /// A read-only map from commit hash prefix (7 characters) to the message.

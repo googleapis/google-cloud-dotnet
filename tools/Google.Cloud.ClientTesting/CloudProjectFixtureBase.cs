@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ namespace Google.Cloud.ClientTesting
     public abstract class CloudProjectFixtureBase : IDisposable
     {
         // We don't care about the value beyond whether it's absent/empty or non-empty.
-        private static bool s_allowedToSkip = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MUST_NOT_SKIP_TESTS"));
+        private static readonly bool s_allowedToSkip = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MUST_NOT_SKIP_TESTS"));
 
         /// <summary>
         /// The Google Cloud Project ID to use for tests.
