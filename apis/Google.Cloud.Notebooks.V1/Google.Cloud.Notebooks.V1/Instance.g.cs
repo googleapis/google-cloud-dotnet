@@ -664,7 +664,8 @@ namespace Google.Cloud.Notebooks.V1 {
     public const int MachineTypeFieldNumber = 8;
     private string machineType_ = "";
     /// <summary>
-    /// Required. The [Compute Engine machine type](/compute/docs/machine-types) of this
+    /// Required. The [Compute Engine machine
+    /// type](https://cloud.google.com/compute/docs/machine-types) of this
     /// instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -682,8 +683,8 @@ namespace Google.Cloud.Notebooks.V1 {
     /// <summary>
     /// The hardware accelerator used on this instance. If you use
     /// accelerators, make sure that your configuration has
-    /// [enough vCPUs and memory to support the `machine_type` you
-    /// have selected](/compute/docs/gpus/#gpus-list).
+    /// [enough vCPUs and memory to support the `machine_type` you have
+    /// selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -764,8 +765,8 @@ namespace Google.Cloud.Notebooks.V1 {
     private long bootDiskSizeGb_;
     /// <summary>
     /// Input only. The size of the boot disk in GB attached to this instance, up to a maximum
-    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). The minimum recommended value is
-    /// 100&amp;nbsp;GB. If not specified, this defaults to 100.
+    /// of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not
+    /// specified, this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -797,9 +798,8 @@ namespace Google.Cloud.Notebooks.V1 {
     private long dataDiskSizeGb_;
     /// <summary>
     /// Input only. The size of the data disk in GB attached to this instance, up to a maximum
-    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). You can choose the size of the data disk
-    /// based on how big your notebooks and data are. If not specified, this
-    /// defaults to 100.
+    /// of 64000 GB (64 TB). You can choose the size of the data disk based on how
+    /// big your notebooks and data are. If not specified, this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2286,9 +2286,9 @@ namespace Google.Cloud.Notebooks.V1 {
 
       /// <summary>
       /// Definition of a hardware accelerator. Note that not all combinations
-      /// of `type` and `core_count` are valid. Check [GPUs on
-      /// Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid
-      /// combination. TPUs are not supported.
+      /// of `type` and `core_count` are valid. Check [GPUs on Compute
+      /// Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a
+      /// valid combination. TPUs are not supported.
       /// </summary>
       public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2617,9 +2617,9 @@ namespace Google.Cloud.Notebooks.V1 {
         private string deviceName_ = "";
         /// <summary>
         /// Indicates a unique device name of your choice that is reflected into the
-        /// /dev/disk/by-id/google-* tree of a Linux operating system running within
-        /// the instance. This name can be used to reference the device for mounting,
-        /// resizing, and so on, from within the instance.
+        /// `/dev/disk/by-id/google-*` tree of a Linux operating system running
+        /// within the instance. This name can be used to reference the device for
+        /// mounting, resizing, and so on, from within the instance.
         ///
         /// If not specified, the server chooses a default device name to apply to
         /// this disk, in the form persistent-disk-x, where x is a number assigned by
@@ -2694,8 +2694,8 @@ namespace Google.Cloud.Notebooks.V1 {
         /// performance.
         /// Valid values:
         ///
-        /// * NVME
-        /// * SCSI
+        /// * `NVME`
+        /// * `SCSI`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2742,12 +2742,12 @@ namespace Google.Cloud.Notebooks.V1 {
         public const int ModeFieldNumber = 10;
         private string mode_ = "";
         /// <summary>
-        /// The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If
-        /// not specified, the default is to attach the disk in READ_WRITE mode.
-        /// Valid values:
+        /// The mode in which to attach this disk, either `READ_WRITE` or
+        /// `READ_ONLY`. If not specified, the default is to attach the disk in
+        /// `READ_WRITE` mode. Valid values:
         ///
-        /// * READ_ONLY
-        /// * READ_WRITE
+        /// * `READ_ONLY`
+        /// * `READ_WRITE`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2778,11 +2778,11 @@ namespace Google.Cloud.Notebooks.V1 {
         public const int TypeFieldNumber = 12;
         private string type_ = "";
         /// <summary>
-        /// Indicates the type of the disk, either SCRATCH or PERSISTENT.
+        /// Indicates the type of the disk, either `SCRATCH` or `PERSISTENT`.
         /// Valid values:
         ///
-        /// * PERSISTENT
-        /// * SCRATCH
+        /// * `PERSISTENT`
+        /// * `SCRATCH`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3228,12 +3228,12 @@ namespace Google.Cloud.Notebooks.V1 {
             /// features to see a list of available options.
             /// Valid values:
             ///
-            /// * FEATURE_TYPE_UNSPECIFIED
-            /// * MULTI_IP_SUBNET
-            /// * SECURE_BOOT
-            /// * UEFI_COMPATIBLE
-            /// * VIRTIO_SCSI_MULTIQUEUE
-            /// * WINDOWS
+            /// * `FEATURE_TYPE_UNSPECIFIED`
+            /// * `MULTI_IP_SUBNET`
+            /// * `SECURE_BOOT`
+            /// * `UEFI_COMPATIBLE`
+            /// * `VIRTIO_SCSI_MULTIQUEUE`
+            /// * `WINDOWS`
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3384,7 +3384,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
       /// <summary>
       /// A set of Shielded Instance options.
-      /// Check [Images using supported Shielded VM features]
+      /// Check [Images using supported Shielded VM
+      /// features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
       /// Not all combinations are valid.
       /// </summary>
       public sealed partial class ShieldedInstanceConfig : pb::IMessage<ShieldedInstanceConfig>
@@ -3833,7 +3834,7 @@ namespace Google.Cloud.Notebooks.V1 {
         public const int TargetImageFieldNumber = 8;
         private string targetImage_ = "";
         /// <summary>
-        /// Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+        /// Target VM Image. Format: `ainotebooks-vm/project/image-name/name`.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

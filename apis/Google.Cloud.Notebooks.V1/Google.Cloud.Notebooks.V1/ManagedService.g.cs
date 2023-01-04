@@ -526,7 +526,7 @@ namespace Google.Cloud.Notebooks.V1 {
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Locations that could not be reached. For example,
-    /// ['us-west1', 'us-central1'].
+    /// `['us-west1', 'us-central1']`.
     /// A ListRuntimesResponse will only contain either runtimes or unreachables,
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3094,12 +3094,12 @@ namespace Google.Cloud.Notebooks.V1 {
     ///     }
     ///
     /// Currently, only the following fields can be updated:
-    /// - software_config.kernels
-    /// - software_config.post_startup_script
-    /// - software_config.custom_gpu_driver_path
-    /// - software_config.idle_shutdown
-    /// - software_config.idle_shutdown_timeout
-    /// - software_config.disable_terminal
+    /// - `software_config.kernels`
+    /// - `software_config.post_startup_script`
+    /// - `software_config.custom_gpu_driver_path`
+    /// - `software_config.idle_shutdown`
+    /// - `software_config.idle_shutdown_timeout`
+    /// - `software_config.disable_terminal`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

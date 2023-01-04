@@ -133,8 +133,8 @@ namespace Google.Cloud.Notebooks.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Output only. Display name used for UI purposes.
-    /// Name can only contain alphanumeric characters, hyphens '-',
-    /// and underscores '_'.
+    /// Name can only contain alphanumeric characters, hyphens `-`,
+    /// and underscores `_`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,7 +178,7 @@ namespace Google.Cloud.Notebooks.V1 {
     /// <summary>
     /// Cron-tab formatted schedule by which the job will execute.
     /// Format: minute, hour, day of month, month, day of week,
-    /// e.g. 0 0 * * WED = every Wednesday
+    /// e.g. `0 0 * * WED` = every Wednesday
     /// More examples: https://crontab.guru/examples.html
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
