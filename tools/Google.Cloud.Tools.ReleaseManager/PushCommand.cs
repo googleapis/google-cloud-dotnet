@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,10 +57,10 @@ namespace Google.Cloud.Tools.ReleaseManager
                 ValidateNoChanges(repo);
                 // TODO: "--force" mode to skip this.
                 ValidateProjectReferences();
-                var origin = GetOriginRemote(repo);
+                var upstream = GetUpstreamRemote(repo);
 
-                string branch = PushBranch(repo, origin, gitHubToken);
-                CreatePullRequest(repo, gitHubClient, origin, branch);
+                string branch = PushBranch(repo, upstream, gitHubToken);
+                CreatePullRequest(repo, gitHubClient, branch);
             }
         }
 
@@ -96,47 +96,45 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private Remote GetOriginRemote(Repository repo)
+        private Remote GetUpstreamRemote(Repository repo)
         {
-            var originRemote = repo.Network.Remotes.FirstOrDefault(r => r.Name == "origin");
-            if (originRemote is null)
+            var upstreamRemote = repo.Network.Remotes.FirstOrDefault(r => r.Name == "upstream");
+            if (upstreamRemote is null)
             {
-                throw new UserErrorException("No origin remote configured");
+                throw new UserErrorException("No upstream remote configured");
             }
-            string url = originRemote.Url;
-            if (!url.StartsWith("https://github.com/"))
+            string actualUrl = upstreamRemote.Url;
+            string expectedUrl = $"https://github.com/{RepositoryOwner}/{RepositoryName}.git";
+            if (expectedUrl != actualUrl)
             {
-                throw new UserErrorException($"Origin remote is not on GitHub. Url: {url}");
+                throw new UserErrorException($"Upstream remote is not as expected. Actual URL: {actualUrl}. Expected URL: {expectedUrl}");
             }
-            // TODO: Do we mind if the origin remote is googleapis/google-cloud-dotnet?
-            // Probably not, so long as we don't use a primary branch.
-            return originRemote;
+            return upstreamRemote;
         }
 
         /// <summary>
         /// Pushes the local branch to the given remote.
         /// </summary>
         /// <returns>The name of the branch it's been pushed to.</returns>
-        private string PushBranch(Repository repo, Remote origin, string gitHubToken)
+        private string PushBranch(Repository repo, Remote upstream, string gitHubToken)
         {
             var currentBranch = repo.Head;
             var remoteBranchName = $"release-pr-{DateTime.UtcNow:yyyyMMddTHHmmss'Z'}";
-            CredentialsHandler credentials = (url, user, cred) => new UsernamePasswordCredentials { Username = gitHubToken, Password = "" };
+            CredentialsHandler credentials = (url, user, cred) => new UsernamePasswordCredentials { Username = RepositoryOwner, Password = gitHubToken };
             // TODO: Work out why I can't pass currentBranch.FriendlyName in as the src.
-            repo.Network.Push(origin, $"HEAD:refs/heads/{remoteBranchName}", new PushOptions { CredentialsProvider = credentials });
+            repo.Network.Push(upstream, $"HEAD:refs/heads/{remoteBranchName}", new PushOptions { CredentialsProvider = credentials });
 
             return remoteBranchName;
         }
 
-        private void CreatePullRequest(Repository repo, GitHubClient gitHubClient, Remote origin, string branch)
+        private void CreatePullRequest(Repository repo, GitHubClient gitHubClient, string branch)
         {
             // Oktokit is async-heavy, but we don't want to make ICommand asynchronous just for that.
             CreatePullRequestAsync().GetAwaiter().GetResult();
 
             async Task CreatePullRequestAsync()
             {
-                string user = origin.Url.Substring("https://github.com/".Length).Split('/').First();
-                string head = $"{user}:{branch}";
+                string head = $"{RepositoryOwner}:{branch}";
 
                 var commitMessage = repo.Commits.First().Message;
                 var commitMessageLines = commitMessage.Replace("\r", "").Split('\n').ToList();

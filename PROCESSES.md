@@ -153,6 +153,31 @@ the package ID to be specified. All other commands work on the basis
 of "whatever versions have been changed since the latest commit on
 GitHub are the ones we want to release".
 
+**Creating a GitHub Personal Access Token**
+
+The release process uses a GitHub Personal Access Token to push to the
+repository and create a pull request. In order to reduce the impact
+of any access tokens being leaked, we use [fine-grained personal access tokens](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/).
+These can only authorize a single organization or user. We therefore
+push the release branch to the main fork, so we can create the pull
+request with the same token.
+
+Create a new access token using the [GitHub token creation page](https://github.com/settings/personal-access-tokens/new).
+The token should have:
+- A suitable description and name
+- A short-ish expiry date (30 days is fine if you're going to use it
+  multiple times, storing it *securely*; for one-off use, set it to the
+  shortest available expiry)
+- A resource owner of `googleapis`
+- Access to only the `google-cloud-dotnet` repository
+- Repository permissions for "Contents" and "Pull Requests",
+  both set to "Read and write". (There'll be a read-only metadata
+  permission as well, which is automatically included.)
+
+Once you have created the access token, set the `GITHUB_ACCESS_TOKEN`
+environment variable to the token value in the shell you're running
+`prepare-release.sh` from.
+
 **Create the release PR**
 
 1. Make sure the `main` branch is up-to-date (as that's what
@@ -208,7 +233,6 @@ you need to.
     [ENVIRONMENT.md](ENVIRONMENT.md), please read the notes there
     around commiting to git "inside" vs "outside" the container.
 
-
 6. Run `./prepare-release.sh push` to push the current branch and
 create a pull request with the `autorelease: pending` and
 `automerge: exact` labels. If the `RELEASE_PR_ASSIGNEE` environment
@@ -216,9 +240,7 @@ variable is set, the PR is created with that assignee. Note that
 this command checks that there are no project references from APIs
 being released now to APIs that *aren't* being released. Without
 this check, it's possible for a released version to depend on
-unreleased changes. This uses the `GITHUB_ACCESS_TOKEN` environment
-variable to authenticate with the API, so make sure this is set
-beforehand. The access token should include the `repo` scope.
+unreleased changes.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
