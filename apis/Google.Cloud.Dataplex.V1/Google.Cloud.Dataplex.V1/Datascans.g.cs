@@ -3011,12 +3011,14 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Represents a user-visible job which provides the insights for the related
   /// data source.
-  /// For examples:
-  ///   - Data Quality: generates queries based on the rules and run against the
-  ///     data to get data quality check results.
-  ///   - Data Profile: analyzes the data in table(s) and generates insights about
-  ///     the structure, content and relationships (such as null percent,
-  ///     cardinality, min/max/mean, etc).
+  ///
+  /// For example:
+  ///
+  /// * Data Quality: generates queries based on the rules and runs against the
+  ///   data to get data quality check results.
+  /// * Data Profile: analyzes the data in table(s) and generates insights about
+  ///   the structure, content and relationships (such as null percent,
+  ///   cardinality, min/max/mean, etc).
   /// </summary>
   public sealed partial class DataScan : pb::IMessage<DataScan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
