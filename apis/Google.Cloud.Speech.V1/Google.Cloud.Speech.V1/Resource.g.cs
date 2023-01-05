@@ -37,20 +37,23 @@ namespace Google.Cloud.Speech.V1 {
             "BlBocmFzZRINCgV2YWx1ZRgBIAEoCRINCgVib29zdBgCIAEoAjpl6kFiCh9z",
             "cGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJv",
             "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNl",
-            "X3NldH0izAEKEFNwZWVjaEFkYXB0YXRpb24SNgoLcGhyYXNlX3NldHMYASAD",
+            "X3NldH0ivQIKEFNwZWVjaEFkYXB0YXRpb24SNgoLcGhyYXNlX3NldHMYASAD",
             "KAsyIS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlBocmFzZVNldBJDChVwaHJh",
             "c2Vfc2V0X3JlZmVyZW5jZXMYAiADKAlCJPpBIQofc3BlZWNoLmdvb2dsZWFw",
             "aXMuY29tL1BocmFzZVNldBI7Cg5jdXN0b21fY2xhc3NlcxgDIAMoCzIjLmdv",
-            "b2dsZS5jbG91ZC5zcGVlY2gudjEuQ3VzdG9tQ2xhc3NCegoaY29tLmdvb2ds",
-            "ZS5jbG91ZC5zcGVlY2gudjFCE1NwZWVjaFJlc291cmNlUHJvdG9QAVo8Z29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zcGVl",
-            "Y2gvdjE7c3BlZWNo+AEBogIDR0NTYgZwcm90bzM="));
+            "b2dsZS5jbG91ZC5zcGVlY2gudjEuQ3VzdG9tQ2xhc3MSSgoMYWJuZl9ncmFt",
+            "bWFyGAQgASgLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hBZGFw",
+            "dGF0aW9uLkFCTkZHcmFtbWFyGiMKC0FCTkZHcmFtbWFyEhQKDGFibmZfc3Ry",
+            "aW5ncxgBIAMoCUJ6Chpjb20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MUITU3Bl",
+            "ZWNoUmVzb3VyY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92MTtzcGVlY2j4AQGiAgNHQ1Ni",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.CustomClass), global::Google.Cloud.Speech.V1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.PhraseSet), global::Google.Cloud.Speech.V1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation), global::Google.Cloud.Speech.V1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation), global::Google.Cloud.Speech.V1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses", "AbnfGrammar" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar), global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar.Parser, new[]{ "AbnfStrings" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1115,6 +1118,7 @@ namespace Google.Cloud.Speech.V1 {
       phraseSets_ = other.phraseSets_.Clone();
       phraseSetReferences_ = other.phraseSetReferences_.Clone();
       customClasses_ = other.customClasses_.Clone();
+      abnfGrammar_ = other.abnfGrammar_ != null ? other.abnfGrammar_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1171,6 +1175,23 @@ namespace Google.Cloud.Speech.V1 {
       get { return customClasses_; }
     }
 
+    /// <summary>Field number for the "abnf_grammar" field.</summary>
+    public const int AbnfGrammarFieldNumber = 4;
+    private global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar abnfGrammar_;
+    /// <summary>
+    /// Augmented Backus-Naur form (ABNF) is a standardized grammar notation
+    /// comprised by a set of derivation rules.
+    /// See specifications: https://www.w3.org/TR/speech-grammar
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar AbnfGrammar {
+      get { return abnfGrammar_; }
+      set {
+        abnfGrammar_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1189,6 +1210,7 @@ namespace Google.Cloud.Speech.V1 {
       if(!phraseSets_.Equals(other.phraseSets_)) return false;
       if(!phraseSetReferences_.Equals(other.phraseSetReferences_)) return false;
       if(!customClasses_.Equals(other.customClasses_)) return false;
+      if (!object.Equals(AbnfGrammar, other.AbnfGrammar)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1199,6 +1221,7 @@ namespace Google.Cloud.Speech.V1 {
       hash ^= phraseSets_.GetHashCode();
       hash ^= phraseSetReferences_.GetHashCode();
       hash ^= customClasses_.GetHashCode();
+      if (abnfGrammar_ != null) hash ^= AbnfGrammar.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1220,6 +1243,10 @@ namespace Google.Cloud.Speech.V1 {
       phraseSets_.WriteTo(output, _repeated_phraseSets_codec);
       phraseSetReferences_.WriteTo(output, _repeated_phraseSetReferences_codec);
       customClasses_.WriteTo(output, _repeated_customClasses_codec);
+      if (abnfGrammar_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AbnfGrammar);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1233,6 +1260,10 @@ namespace Google.Cloud.Speech.V1 {
       phraseSets_.WriteTo(ref output, _repeated_phraseSets_codec);
       phraseSetReferences_.WriteTo(ref output, _repeated_phraseSetReferences_codec);
       customClasses_.WriteTo(ref output, _repeated_customClasses_codec);
+      if (abnfGrammar_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AbnfGrammar);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1246,6 +1277,9 @@ namespace Google.Cloud.Speech.V1 {
       size += phraseSets_.CalculateSize(_repeated_phraseSets_codec);
       size += phraseSetReferences_.CalculateSize(_repeated_phraseSetReferences_codec);
       size += customClasses_.CalculateSize(_repeated_customClasses_codec);
+      if (abnfGrammar_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AbnfGrammar);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1261,6 +1295,12 @@ namespace Google.Cloud.Speech.V1 {
       phraseSets_.Add(other.phraseSets_);
       phraseSetReferences_.Add(other.phraseSetReferences_);
       customClasses_.Add(other.customClasses_);
+      if (other.abnfGrammar_ != null) {
+        if (abnfGrammar_ == null) {
+          AbnfGrammar = new global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar();
+        }
+        AbnfGrammar.MergeFrom(other.AbnfGrammar);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1286,6 +1326,13 @@ namespace Google.Cloud.Speech.V1 {
           }
           case 26: {
             customClasses_.AddEntriesFrom(input, _repeated_customClasses_codec);
+            break;
+          }
+          case 34: {
+            if (abnfGrammar_ == null) {
+              AbnfGrammar = new global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar();
+            }
+            input.ReadMessage(AbnfGrammar);
             break;
           }
         }
@@ -1315,10 +1362,207 @@ namespace Google.Cloud.Speech.V1 {
             customClasses_.AddEntriesFrom(ref input, _repeated_customClasses_codec);
             break;
           }
+          case 34: {
+            if (abnfGrammar_ == null) {
+              AbnfGrammar = new global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar();
+            }
+            input.ReadMessage(AbnfGrammar);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SpeechAdaptation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public sealed partial class ABNFGrammar : pb::IMessage<ABNFGrammar>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ABNFGrammar> _parser = new pb::MessageParser<ABNFGrammar>(() => new ABNFGrammar());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ABNFGrammar> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Speech.V1.SpeechAdaptation.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ABNFGrammar() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ABNFGrammar(ABNFGrammar other) : this() {
+          abnfStrings_ = other.abnfStrings_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ABNFGrammar Clone() {
+          return new ABNFGrammar(this);
+        }
+
+        /// <summary>Field number for the "abnf_strings" field.</summary>
+        public const int AbnfStringsFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_abnfStrings_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> abnfStrings_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// All declarations and rules of an ABNF grammar broken up into multiple
+        /// strings that will end up concatenated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> AbnfStrings {
+          get { return abnfStrings_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ABNFGrammar);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ABNFGrammar other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!abnfStrings_.Equals(other.abnfStrings_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= abnfStrings_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          abnfStrings_.WriteTo(output, _repeated_abnfStrings_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          abnfStrings_.WriteTo(ref output, _repeated_abnfStrings_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += abnfStrings_.CalculateSize(_repeated_abnfStrings_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ABNFGrammar other) {
+          if (other == null) {
+            return;
+          }
+          abnfStrings_.Add(other.abnfStrings_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                abnfStrings_.AddEntriesFrom(input, _repeated_abnfStrings_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                abnfStrings_.AddEntriesFrom(ref input, _repeated_abnfStrings_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
