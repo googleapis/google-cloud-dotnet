@@ -1,7 +1,7 @@
 # Google Cloud Libraries for .NET
 .NET idiomatic client libraries for [Google Cloud Platform](https://cloud.google.com/) services.
 
-[![GitHub Actions status](https://img.shields.io/github/workflow/status/googleapis/google-cloud-dotnet/Build%20push)](https://github.com/googleapis/google-cloud-dotnet/actions?query=workflow%3A%22Build+push%22)
+[![GitHub Actions status](https://img.shields.io/github/actions/workflow/status/googleapis/google-cloud-dotnet/build-push.yaml?branch=main)](https://github.com/googleapis/google-cloud-dotnet/actions/workflows/build-push.yaml)
 
 * [Homepage](https://cloud.google.com/dotnet/)
 * [API Documentation](https://cloud.google.com/dotnet/docs/reference/)
