@@ -14,9 +14,11 @@
 
 {{client-construction}}
 
+### Performing the initial request
+
 Perform an initial call to `AnnotateVideo` or `AnnotateVideoAsync`.
-This will return a long-running operation, which you can poll to
-check for completion and the results.
+This will return a [long-running operation](https://cloud.google.com/dotnet/docs/reference/help/long-running-operations),
+which you can poll to check for completion and the results.
 
 ## Sample code
 
