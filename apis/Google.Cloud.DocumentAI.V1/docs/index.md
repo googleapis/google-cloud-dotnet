@@ -14,6 +14,8 @@
 
 {{client-construction}}
 
+### Specifying regional endpoints
+
 Note that if you wish to use processors other than in the US, you
 must specify the endpoint when you construct the client. The
 endpoint is of the form `{location}-documentai.googleapis.com`, e.g.

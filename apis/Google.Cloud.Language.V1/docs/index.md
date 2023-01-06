@@ -14,6 +14,8 @@
 
 {{client-construction}}
 
+### Creating a Document
+
 All the methods on the client require a
 [Document](obj/api/Google.Cloud.Language.V1.Document.yml) to
 analyze. The Document class provides convenient factory methods
