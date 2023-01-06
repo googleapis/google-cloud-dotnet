@@ -41,7 +41,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
     /// - docs/output/{package}/devsite/examples
     /// - docs/output/{package}/devsite/docs-metadata.json (includes xrefs and xrefservices)
     /// </summary>
-    class Program
+    internal class Program
     {
         /// <summary>
         /// The package/API ID

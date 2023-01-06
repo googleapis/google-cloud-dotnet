@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -65,7 +65,7 @@ namespace Google.Cloud.Vision.V1
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>
         /// <returns>A task representing the asynchronous operation. The result will be the newly created image.</returns>
-        public async static Task<Image> FetchFromUriAsync(Uri uri, HttpClient httpClient = null)
+        public static async Task<Image> FetchFromUriAsync(Uri uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             httpClient = httpClient ?? s_defaultHttpClient;
@@ -84,7 +84,7 @@ namespace Google.Cloud.Vision.V1
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>
         /// <returns>A task representing the asynchronous operation. The result will be the newly created image.</returns>
-        public async static Task<Image> FetchFromUriAsync(string uri, HttpClient httpClient = null)
+        public static async Task<Image> FetchFromUriAsync(string uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             httpClient = httpClient ?? s_defaultHttpClient;
