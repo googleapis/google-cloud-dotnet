@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,18 +16,18 @@ namespace Google.Cloud.PubSub.V1.Tasks
 {
     internal struct TaskAwaitable
     {
-        public TaskAwaitable(ITaskAwaiter awaiter) => _awaiter = awaiter;
+        private readonly ITaskAwaiter _awaiter;
 
-        private ITaskAwaiter _awaiter;
+        public TaskAwaitable(ITaskAwaiter awaiter) => _awaiter = awaiter;
 
         public ITaskAwaiter GetAwaiter() => _awaiter;
     }
 
     internal struct TaskAwaitable<T>
     {
-        public TaskAwaitable(ITaskAwaiter<T> awaiter) => _awaiter = awaiter;
+        private readonly ITaskAwaiter<T> _awaiter;
 
-        private ITaskAwaiter<T> _awaiter;
+        public TaskAwaitable(ITaskAwaiter<T> awaiter) => _awaiter = awaiter;
 
         public ITaskAwaiter<T> GetAwaiter() => _awaiter;
     }

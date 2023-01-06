@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
     {
         public ForwardingAwaiter(ConfiguredTaskAwaitable.ConfiguredTaskAwaiter awaiter) => _awaiter = awaiter;
 
-        private ConfiguredTaskAwaitable.ConfiguredTaskAwaiter _awaiter;
+        private readonly ConfiguredTaskAwaitable.ConfiguredTaskAwaiter _awaiter;
 
         public void OnCompleted(Action continuation) => _awaiter.OnCompleted(continuation);
         public void UnsafeOnCompleted(Action continuation) => _awaiter.UnsafeOnCompleted(continuation);
@@ -33,7 +33,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
     {
         public ForwardingAwaiter(ConfiguredTaskAwaitable<T>.ConfiguredTaskAwaiter awaiter) => _awaiter = awaiter;
 
-        private ConfiguredTaskAwaitable<T>.ConfiguredTaskAwaiter _awaiter;
+        private readonly ConfiguredTaskAwaitable<T>.ConfiguredTaskAwaiter _awaiter;
 
         public void OnCompleted(Action continuation) => _awaiter.OnCompleted(continuation);
         public void UnsafeOnCompleted(Action continuation) => _awaiter.UnsafeOnCompleted(continuation);
