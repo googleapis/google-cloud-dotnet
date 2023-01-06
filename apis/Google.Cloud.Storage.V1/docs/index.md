@@ -57,7 +57,18 @@ Or write-only access to put specific object content into a bucket:
 
 {{sample:UrlSigner.SignedURLPut}}
 
-### Signing URLs without a service account credential file
+### HMAC Signed URLs
+
+If you have access to an HMAC key, you can also sign URLs, even if you
+don't have access to a service account private key. See the
+[HMAC Keys documentation](https://cloud.google.com/storage/docs/authentication/hmackeys)
+and the [Signing documentation](https://cloud.google.com/storage/docs/authentication/signatures#overview)
+for more details. Below you can find an example on how to create
+HMAC signed URLs using this library:
+
+{{sample:UrlSigner.HmacSignedURLGet}}
+
+### Signing URLs without a service account credential file or HMAC key
 
 If you need to sign URLs but don't have a full service account
 credential file (with private keys) available, you can create a

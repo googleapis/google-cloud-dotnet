@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1.Data;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Linq;
@@ -34,6 +33,43 @@ namespace Google.Storage.V2.CleanTestData
             }
             string projectId = args[0];
             var client = StorageClient.Create();
+
+            DeleteBuckets(client, projectId);
+            DeleteHmacKeys(client, projectId);
+
+            return 0;
+        }
+
+        private static void DeleteHmacKeys(StorageClient client, string projectId)
+        {
+            var keys = client.ListHmacKeys(projectId);
+            foreach (var key in keys)
+            {
+                var toDelete = key;
+                try
+                {
+                    // We need to deactivate keys before we can delete them.
+                    if (toDelete.State == HmacKeyStates.Active)
+                    {
+                        toDelete.State = HmacKeyStates.Inactive;
+                        toDelete = client.UpdateHmacKey(toDelete);
+                    }
+
+                    // If it's already deleted skip it
+                    if (toDelete.State == HmacKeyStates.Inactive)
+                    {
+                        client.DeleteHmacKey(projectId, toDelete.AccessId);
+                    }
+                }
+                catch (GoogleApiException e)
+                {
+                    Console.WriteLine($"Failed to delete key {key.Id}: {e.Message}");
+                }
+            }
+        }
+
+        private static void DeleteBuckets(StorageClient client, string projectId)
+        {
             var buckets = client.ListBuckets(projectId).Select(b => b.Name).ToList();
             foreach (var bucket in buckets.Where(IsTestBucket))
             {
@@ -49,7 +85,6 @@ namespace Google.Storage.V2.CleanTestData
                     RemoveHolds(client, bucket);
                 }
             }
-            return 0;
         }
 
         private static void DeleteBucket(StorageClient client, string bucket)
