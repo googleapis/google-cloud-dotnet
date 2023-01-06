@@ -266,6 +266,29 @@ as an easy way of specifying custom credentials, settings, or a custom endpoint.
 and we recommend using a single instance across your entire application unless you have a particular need
 to configure multiple client objects separately.";
 
+            if (api.Transport == "grpc+rest" || api.Transport == "rest+grpc")
+            {
+                clientConstruction +=
+$@"
+
+### Using the REST (HTTP/1.1) transport
+
+This library defaults to performing RPCs using [gRPC](https://grpc.io/) using the binary [Protocol Buffer](https://protobuf.dev) wire format.
+However, it also supports HTTP/1.1 and JSON, for situations where gRPC doesn't work as desired. (This is typically due to an incompatible proxy
+or other network issue.) To create a client using HTTP/1.1, specify a `RestGrpcAdapter` reference for the `GrpcAdapter` property in the client builder.
+Sample code:
+
+```csharp
+var client = new {exampleClient}Builder
+{{
+    GrpcAdapter = RestGrpcAdapter.Default
+}}.Build();
+```
+
+For more details, see the [transport selection](https://cloud.google.com/dotnet/docs/reference/help/transports) page.
+";
+            }
+
             string nonProductStub = $@"# {api.Id}
 
 This package is not a product in its own right; this page is
