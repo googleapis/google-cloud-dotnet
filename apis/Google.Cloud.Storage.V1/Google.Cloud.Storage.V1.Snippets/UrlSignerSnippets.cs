@@ -47,8 +47,8 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
-            var httpClient = new HttpClient();
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            using var httpClient = new HttpClient();
 
             // Sample: SignedURLGet
             // Additional: Sign(string,string,TimeSpan,*,*)
@@ -64,6 +64,47 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(_fixture.HelloWorldContent, content);
         }
 
+        [Fact]
+        public async Task HmacSignedURLGet()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = _fixture.HelloStorageObjectName;
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            using var httpClient = new HttpClient();
+
+            using var storageClient = await StorageClient.CreateAsync();
+            var hmacKey = await storageClient.CreateHmacKeyAsync(_fixture.ProjectId, credential.Id);
+            var hmacKeyId = hmacKey.Metadata.AccessId;
+            var hmacKeySecret = hmacKey.Secret;
+
+            try
+            {
+
+                // Sample: HmacSignedURLGet
+                // Additional: Sign(string,string,TimeSpan,*,*)
+                // Create an HmacBlobSigner from an HMAC Key ID and Secret.
+                UrlSigner.IBlobSigner blobSigner = UrlSigner.HmacBlobSigner.Create(hmacKeyId, hmacKeySecret);
+                // Create a URL signer from the HmacBlobSigner.
+                UrlSigner urlSigner = UrlSigner.FromBlobSigner(blobSigner);
+                // Create an HMAC signed URL which can be used to get a specific object for one hour.
+                string url = urlSigner.Sign(bucketName, objectName, TimeSpan.FromHours(1));
+
+                // Get the content at the created URL.
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                string content = await response.Content.ReadAsStringAsync();
+                // End sample
+
+                Assert.Equal(_fixture.HelloWorldContent, content);
+            }
+            finally
+            {
+                // We need to deactivate key before we can delete it.
+                hmacKey.Metadata.State = HmacKeyStates.Inactive;
+                await storageClient.UpdateHmacKeyAsync(hmacKey.Metadata);
+                await storageClient.DeleteHmacKeyAsync(_fixture.ProjectId, hmacKey.Metadata.AccessId);
+            }
+        }
+
         // See-also: Sign(string,string,TimeSpan,*,*)
         // Member: Sign(UrlSigner.RequestTemplate, UrlSigner.Options)
         // See [Sign](ref) for an example using an alternative overload.
@@ -74,8 +115,8 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
-            var httpClient = new HttpClient();
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            using var httpClient = new HttpClient();
 
             // Sample: WithSigningVersion
             // Create a signed URL which can be used to get a specific object for one hour,
@@ -96,8 +137,8 @@ namespace Google.Cloud.Storage.V1.Snippets
         public async Task SignedURLPut()
         {
             var bucketName = _fixture.BucketName;
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
-            var httpClient = new HttpClient();
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            using var httpClient = new HttpClient();
 
             // Sample: SignedURLPut
             // Create a request template that will be used to create the signed URL.
@@ -191,7 +232,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var httpClient = new HttpClient();
+            using var httpClient = new HttpClient();
 
             // Sample: IamServiceBlobSignerUsage
             // First obtain the email address of the default service account for this instance from the metadata server.
@@ -243,7 +284,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = "places/world.txt";
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
 
             // Sample: PostPolicySimple
             // [START storage_generate_signed_post_policy_v4]
@@ -287,7 +328,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = "places/world.txt";
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
 
             // Sample: PostPolicyCacheControl
             // Create a signed post policy which can be used to upload a specific object with a
@@ -330,7 +371,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = "places/world.txt";
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
 
             // Sample: PostPolicyAcl
             // Create a signed post policy which can be used to upload a specific object and
@@ -376,7 +417,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = "places/world.txt";
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
 
             // Sample: PostPolicySuccessStatus
             // Create a signed post policy which can be used to upload a specific object and
