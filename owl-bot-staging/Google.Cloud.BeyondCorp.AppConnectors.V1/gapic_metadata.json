@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.beyondcorp.appconnectors.v1",
+  "libraryPackage": "Google.Cloud.BeyondCorp.AppConnectors.V1",
+  "services": {
+    "AppConnectorsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AppConnectorsServiceClient",
+          "rpcs": {
+            "CreateAppConnector": {
+              "methods": [
+                "CreateAppConnector",
+                "CreateAppConnectorAsync"
+              ]
+            },
+            "DeleteAppConnector": {
+              "methods": [
+                "DeleteAppConnector",
+                "DeleteAppConnectorAsync"
+              ]
+            },
+            "GetAppConnector": {
+              "methods": [
+                "GetAppConnector",
+                "GetAppConnectorAsync"
+              ]
+            },
+            "ListAppConnectors": {
+              "methods": [
+                "ListAppConnectors",
+                "ListAppConnectorsAsync"
+              ]
+            },
+            "ReportStatus": {
+              "methods": [
+                "ReportStatus",
+                "ReportStatusAsync"
+              ]
+            },
+            "UpdateAppConnector": {
+              "methods": [
+                "UpdateAppConnector",
+                "UpdateAppConnectorAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
