@@ -305,6 +305,39 @@
         }
       }
     },
+    "SnoozeService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SnoozeServiceClient",
+          "rpcs": {
+            "CreateSnooze": {
+              "methods": [
+                "CreateSnooze",
+                "CreateSnoozeAsync"
+              ]
+            },
+            "GetSnooze": {
+              "methods": [
+                "GetSnooze",
+                "GetSnoozeAsync"
+              ]
+            },
+            "ListSnoozes": {
+              "methods": [
+                "ListSnoozes",
+                "ListSnoozesAsync"
+              ]
+            },
+            "UpdateSnooze": {
+              "methods": [
+                "UpdateSnooze",
+                "UpdateSnoozeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "UptimeCheckService": {
       "clients": {
         "grpc": {

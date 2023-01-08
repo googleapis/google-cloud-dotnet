@@ -44,6 +44,8 @@ namespace Google.Cloud.Monitoring.V3
             yield return QueryServiceReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return ServiceServiceReflection.Descriptor;
+            yield return SnoozeReflection.Descriptor;
+            yield return SnoozeServiceReflection.Descriptor;
             yield return SpanContextReflection.Descriptor;
             yield return UptimeReflection.Descriptor;
             yield return UptimeServiceReflection.Descriptor;

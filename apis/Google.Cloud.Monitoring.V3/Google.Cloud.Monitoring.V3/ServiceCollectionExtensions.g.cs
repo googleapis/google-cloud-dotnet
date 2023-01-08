@@ -128,6 +128,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcmv::SnoozeServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSnoozeServiceClient(this IServiceCollection services, sys::Action<gcmv::SnoozeServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::SnoozeServiceClientBuilder builder = new gcmv::SnoozeServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcmv::UptimeCheckServiceClient"/> to <paramref name="services"/>.
         /// </summary>

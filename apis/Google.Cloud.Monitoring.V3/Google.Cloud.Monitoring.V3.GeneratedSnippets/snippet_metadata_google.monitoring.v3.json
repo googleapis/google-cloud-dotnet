@@ -13109,6 +13109,839 @@
       ]
     },
     {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_sync",
+      "title": "CreateSnoozeRequestObject",
+      "description": "Snippet for CreateSnooze",
+      "file": "SnoozeServiceClient.CreateSnoozeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_async",
+      "title": "CreateSnoozeRequestObjectAsync",
+      "description": "Snippet for CreateSnoozeAsync",
+      "file": "SnoozeServiceClient.CreateSnoozeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_sync_flattened",
+      "title": "CreateSnooze",
+      "description": "Snippet for CreateSnooze",
+      "file": "SnoozeServiceClient.CreateSnoozeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_async_flattened",
+      "title": "CreateSnoozeAsync",
+      "description": "Snippet for CreateSnoozeAsync",
+      "file": "SnoozeServiceClient.CreateSnoozeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_sync_flattened_resourceNames",
+      "title": "CreateSnoozeResourceNames",
+      "description": "Snippet for CreateSnooze",
+      "file": "SnoozeServiceClient.CreateSnoozeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_CreateSnooze_async_flattened_resourceNames",
+      "title": "CreateSnoozeResourceNamesAsync",
+      "description": "Snippet for CreateSnoozeAsync",
+      "file": "SnoozeServiceClient.CreateSnoozeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.CreateSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.CreateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_sync",
+      "title": "ListSnoozesRequestObject",
+      "description": "Snippet for ListSnoozes",
+      "file": "SnoozeServiceClient.ListSnoozesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozes",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_async",
+      "title": "ListSnoozesRequestObjectAsync",
+      "description": "Snippet for ListSnoozesAsync",
+      "file": "SnoozeServiceClient.ListSnoozesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozesAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_sync_flattened",
+      "title": "ListSnoozes",
+      "description": "Snippet for ListSnoozes",
+      "file": "SnoozeServiceClient.ListSnoozesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozes",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_async_flattened",
+      "title": "ListSnoozesAsync",
+      "description": "Snippet for ListSnoozesAsync",
+      "file": "SnoozeServiceClient.ListSnoozesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozesAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_sync_flattened_resourceNames",
+      "title": "ListSnoozesResourceNames",
+      "description": "Snippet for ListSnoozes",
+      "file": "SnoozeServiceClient.ListSnoozesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozes",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozes",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_ListSnoozes_async_flattened_resourceNames",
+      "title": "ListSnoozesResourceNamesAsync",
+      "description": "Snippet for ListSnoozesAsync",
+      "file": "SnoozeServiceClient.ListSnoozesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnoozesAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.ListSnoozesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Monitoring.V3.ListSnoozesResponse, Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "ListSnoozes",
+          "fullName": "google.monitoring.v3.SnoozeService.ListSnoozes",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_sync",
+      "title": "GetSnoozeRequestObject",
+      "description": "Snippet for GetSnooze",
+      "file": "SnoozeServiceClient.GetSnoozeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_async",
+      "title": "GetSnoozeRequestObjectAsync",
+      "description": "Snippet for GetSnoozeAsync",
+      "file": "SnoozeServiceClient.GetSnoozeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_sync_flattened",
+      "title": "GetSnooze",
+      "description": "Snippet for GetSnooze",
+      "file": "SnoozeServiceClient.GetSnoozeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_async_flattened",
+      "title": "GetSnoozeAsync",
+      "description": "Snippet for GetSnoozeAsync",
+      "file": "SnoozeServiceClient.GetSnoozeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_sync_flattened_resourceNames",
+      "title": "GetSnoozeResourceNames",
+      "description": "Snippet for GetSnooze",
+      "file": "SnoozeServiceClient.GetSnoozeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_GetSnooze_async_flattened_resourceNames",
+      "title": "GetSnoozeResourceNamesAsync",
+      "description": "Snippet for GetSnoozeAsync",
+      "file": "SnoozeServiceClient.GetSnoozeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.GetSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "GetSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.GetSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_UpdateSnooze_sync",
+      "title": "UpdateSnoozeRequestObject",
+      "description": "Snippet for UpdateSnooze",
+      "file": "SnoozeServiceClient.UpdateSnoozeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.UpdateSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.UpdateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_UpdateSnooze_async",
+      "title": "UpdateSnoozeRequestObjectAsync",
+      "description": "Snippet for UpdateSnoozeAsync",
+      "file": "SnoozeServiceClient.UpdateSnoozeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.UpdateSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.UpdateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_UpdateSnooze_sync_flattened",
+      "title": "UpdateSnooze",
+      "description": "Snippet for UpdateSnooze",
+      "file": "SnoozeServiceClient.UpdateSnoozeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnooze",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.UpdateSnooze",
+        "resultType": "Google.Cloud.Monitoring.V3.Snooze",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.UpdateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "monitoring_v3_generated_SnoozeService_UpdateSnooze_async_flattened",
+      "title": "UpdateSnoozeAsync",
+      "description": "Snippet for UpdateSnoozeAsync",
+      "file": "SnoozeServiceClient.UpdateSnoozeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnoozeAsync",
+        "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient.UpdateSnoozeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Monitoring.V3.Snooze>",
+        "client": {
+          "shortName": "SnoozeServiceClient",
+          "fullName": "Google.Cloud.Monitoring.V3.SnoozeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSnooze",
+          "fullName": "google.monitoring.v3.SnoozeService.UpdateSnooze",
+          "service": {
+            "shortName": "SnoozeService",
+            "fullName": "google.monitoring.v3.SnoozeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "monitoring_v3_generated_UptimeCheckService_ListUptimeCheckConfigs_sync",
       "title": "ListUptimeCheckConfigsRequestObject",
       "description": "Snippet for ListUptimeCheckConfigs",
