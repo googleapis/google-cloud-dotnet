@@ -185,10 +185,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetadataSchemaUriFieldNumber = 4;
     private string metadataSchemaUri_ = "";
     /// <summary>
-    /// Immutable. Points to a YAML file stored on Google Cloud Storage describing additional
-    /// information about the Index, that is specific to it. Unset if the Index
-    /// does not have any additional information.
-    /// The schema is defined as an OpenAPI 3.0.2 [Schema
+    /// Immutable. Points to a YAML file stored on Google Cloud Storage describing
+    /// additional information about the Index, that is specific to it. Unset if
+    /// the Index does not have any additional information. The schema is defined
+    /// as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// Note: The URI given on output will be immutable and probably different,
     /// including the URI scheme, than the one given on input. The output URI will
@@ -208,7 +208,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Value metadata_;
     /// <summary>
     /// An additional information about the Index; the schema of the metadata can
-    /// be found in [metadata_schema][google.cloud.aiplatform.v1.Index.metadata_schema_uri].
+    /// be found in
+    /// [metadata_schema][google.cloud.aiplatform.v1.Index.metadata_schema_uri].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -294,10 +295,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// This also includes any update to the contents of the Index.
     /// Note that Operations working on this Index may have their
     /// [Operations.metadata.generic_metadata.update_time]
-    /// [google.cloud.aiplatform.v1.GenericOperationMetadata.update_time] a little after the value of this
-    /// timestamp, yet that does not mean their results are not already reflected
-    /// in the Index. Result of any successfully completed Operation on the Index
-    /// is reflected in it.
+    /// [google.cloud.aiplatform.v1.GenericOperationMetadata.update_time] a little
+    /// after the value of this timestamp, yet that does not mean their results are
+    /// not already reflected in the Index. Result of any successfully completed
+    /// Operation on the Index is reflected in it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -327,8 +328,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IndexUpdateMethodFieldNumber = 16;
     private global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod indexUpdateMethod_ = global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod.Unspecified;
     /// <summary>
-    /// Immutable. The update method to use with this Index. If not set, BATCH_UPDATE will be
-    /// used by default.
+    /// Immutable. The update method to use with this Index. If not set,
+    /// BATCH_UPDATE will be used by default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -867,10 +868,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction> restricts_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction>();
     /// <summary>
-    /// Optional. List of Restrict of the datapoint, used to perform "restricted searches"
-    /// where boolean rule are used to filter the subset of the database eligible
-    /// for matching.
-    /// See: https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
+    /// Optional. List of Restrict of the datapoint, used to perform "restricted
+    /// searches" where boolean rule are used to filter the subset of the database
+    /// eligible for matching. See:
+    /// https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -882,8 +883,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int CrowdingTagFieldNumber = 5;
     private global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag crowdingTag_;
     /// <summary>
-    /// Optional. CrowdingTag of the datapoint, the number of neighbors to return in each
-    /// crowding can be configured during query.
+    /// Optional. CrowdingTag of the datapoint, the number of neighbors to return
+    /// in each crowding can be configured during query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

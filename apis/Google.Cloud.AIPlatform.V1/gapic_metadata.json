@@ -1171,6 +1171,12 @@
                 "ReadTensorboardTimeSeriesDataAsync"
               ]
             },
+            "ReadTensorboardUsage": {
+              "methods": [
+                "ReadTensorboardUsage",
+                "ReadTensorboardUsageAsync"
+              ]
+            },
             "UpdateTensorboard": {
               "methods": [
                 "UpdateTensorboard",

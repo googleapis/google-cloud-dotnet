@@ -348,7 +348,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. URIs for accessing [interactive
     /// shells](https://cloud.google.com/vertex-ai/docs/training/monitor-debug-interactive-shell)
     /// (one URI for each training node). Only available if
-    /// [job_spec.enable_web_access][google.cloud.aiplatform.v1.CustomJobSpec.enable_web_access] is `true`.
+    /// [job_spec.enable_web_access][google.cloud.aiplatform.v1.CustomJobSpec.enable_web_access]
+    /// is `true`.
     ///
     /// The keys are names of each node in the training job; for example,
     /// `workerpool0-0` for the primary node, `workerpool1-0` for the first node in
@@ -863,9 +864,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec> workerPoolSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec>();
     /// <summary>
-    /// Required. The spec of the worker pools including machine type and Docker image.
-    /// All worker pools except the first one are optional and can be skipped by
-    /// providing an empty value.
+    /// Required. The spec of the worker pools including machine type and Docker
+    /// image. All worker pools except the first one are optional and can be
+    /// skipped by providing an empty value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -963,8 +964,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// HyperparameterTuningJob. For HyperparameterTuningJob,
     /// the baseOutputDirectory of
     /// each child CustomJob backing a Trial is set to a subdirectory of name
-    /// [id][google.cloud.aiplatform.v1.Trial.id] under its parent HyperparameterTuningJob's
-    /// baseOutputDirectory.
+    /// [id][google.cloud.aiplatform.v1.Trial.id] under its parent
+    /// HyperparameterTuningJob's baseOutputDirectory.
     ///
     /// The following Vertex AI environment variables will be passed to
     /// containers or python modules when this field is set:
@@ -994,9 +995,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TensorboardFieldNumber = 7;
     private string tensorboard_ = "";
     /// <summary>
-    /// Optional. The name of a Vertex AI [Tensorboard][google.cloud.aiplatform.v1.Tensorboard] resource to which this CustomJob
-    /// will upload Tensorboard logs.
-    /// Format:
+    /// Optional. The name of a Vertex AI
+    /// [Tensorboard][google.cloud.aiplatform.v1.Tensorboard] resource to which
+    /// this CustomJob will upload Tensorboard logs. Format:
     /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1017,7 +1018,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// to training containers.
     ///
     /// If set to `true`, you can access interactive shells at the URIs given
-    /// by [CustomJob.web_access_uris][google.cloud.aiplatform.v1.CustomJob.web_access_uris] or [Trial.web_access_uris][google.cloud.aiplatform.v1.Trial.web_access_uris] (within
+    /// by
+    /// [CustomJob.web_access_uris][google.cloud.aiplatform.v1.CustomJob.web_access_uris]
+    /// or
+    /// [Trial.web_access_uris][google.cloud.aiplatform.v1.Trial.web_access_uris]
+    /// (within
     /// [HyperparameterTuningJob.trials][google.cloud.aiplatform.v1.HyperparameterTuningJob.trials]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1843,8 +1848,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ImageUriFieldNumber = 1;
     private string imageUri_ = "";
     /// <summary>
-    /// Required. The URI of a container image in the Container Registry that is to be run on
-    /// each worker replica.
+    /// Required. The URI of a container image in the Container Registry that is to
+    /// be run on each worker replica.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2129,8 +2134,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ExecutorImageUriFieldNumber = 1;
     private string executorImageUri_ = "";
     /// <summary>
-    /// Required. The URI of a container image in Artifact Registry that will run the
-    /// provided Python package. Vertex AI provides a wide range of executor
+    /// Required. The URI of a container image in Artifact Registry that will run
+    /// the provided Python package. Vertex AI provides a wide range of executor
     /// images with pre-installed packages to meet users' various use cases. See
     /// the list of [pre-built containers for
     /// training](https://cloud.google.com/vertex-ai/docs/training/pre-built-containers).
@@ -2151,9 +2156,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> packageUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The Google Cloud Storage location of the Python package files which are
-    /// the training program and its dependent packages.
-    /// The maximum number of package URIs is 100.
+    /// Required. The Google Cloud Storage location of the Python package files
+    /// which are the training program and its dependent packages. The maximum
+    /// number of package URIs is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

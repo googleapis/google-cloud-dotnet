@@ -125,7 +125,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [FeaturestoreOnlineServingService.WriteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.WriteFeatureValues].
+  /// Request message for
+  /// [FeaturestoreOnlineServingService.WriteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.WriteFeatureValues].
   /// </summary>
   public sealed partial class WriteFeatureValuesRequest : pb::IMessage<WriteFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -176,8 +177,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EntityTypeFieldNumber = 1;
     private string entityType_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType for the entities being written.
-    /// Value format: `projects/{project}/locations/{location}/featurestores/
+    /// Required. The resource name of the EntityType for the entities being
+    /// written. Value format:
+    /// `projects/{project}/locations/{location}/featurestores/
     /// {featurestore}/entityTypes/{entityType}`. For example,
     /// for a machine learning model predicting user clicks on a website, an
     /// EntityType ID could be `user`.
@@ -197,8 +199,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesPayload.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesPayload> payloads_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.WriteFeatureValuesPayload>();
     /// <summary>
-    /// Required. The entities to be written. Up to 100,000 feature values can be written
-    /// across all `payloads`.
+    /// Required. The entities to be written. Up to 100,000 feature values can be
+    /// written across all `payloads`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -422,9 +424,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.FeatureValue>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.FeatureValue.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.FeatureValue> featureValues_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.FeatureValue>();
     /// <summary>
-    /// Required. Feature values to be written, mapping from Feature ID to value. Up to
-    /// 100,000 `feature_values` entries may be written across all payloads.  The
-    /// feature generation time, aligned by days, must be no older than five
+    /// Required. Feature values to be written, mapping from Feature ID to value.
+    /// Up to 100,000 `feature_values` entries may be written across all payloads.
+    /// The feature generation time, aligned by days, must be no older than five
     /// years (1825 days) and no later than one year (366 days) in the future.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -581,7 +583,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreOnlineServingService.WriteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.WriteFeatureValues].
+  /// Response message for
+  /// [FeaturestoreOnlineServingService.WriteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.WriteFeatureValues].
   /// </summary>
   public sealed partial class WriteFeatureValuesResponse : pb::IMessage<WriteFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -736,7 +739,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreOnlineServingService.ReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues].
+  /// Request message for
+  /// [FeaturestoreOnlineServingService.ReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues].
   /// </summary>
   public sealed partial class ReadFeatureValuesRequest : pb::IMessage<ReadFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1026,7 +1030,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreOnlineServingService.ReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues].
+  /// Response message for
+  /// [FeaturestoreOnlineServingService.ReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreOnlineServingService.ReadFeatureValues].
   /// </summary>
   public sealed partial class ReadFeatureValuesResponse : pb::IMessage<ReadFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1481,7 +1486,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
       /// <summary>
       /// Response header with metadata for the requested
-      /// [ReadFeatureValuesRequest.entity_type][google.cloud.aiplatform.v1.ReadFeatureValuesRequest.entity_type] and Features.
+      /// [ReadFeatureValuesRequest.entity_type][google.cloud.aiplatform.v1.ReadFeatureValuesRequest.entity_type]
+      /// and Features.
       /// </summary>
       public sealed partial class Header : pb::IMessage<Header>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1533,7 +1539,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         private string entityType_ = "";
         /// <summary>
         /// The resource name of the EntityType from the
-        /// [ReadFeatureValuesRequest][google.cloud.aiplatform.v1.ReadFeatureValuesRequest]. Value format:
+        /// [ReadFeatureValuesRequest][google.cloud.aiplatform.v1.ReadFeatureValuesRequest].
+        /// Value format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1780,7 +1787,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// requested values for one requested Feature. If no values
         /// for the requested Feature exist, the corresponding cell will be empty.
         /// This has the same size and is in the same order as the features from the
-        /// header [ReadFeatureValuesResponse.header][google.cloud.aiplatform.v1.ReadFeatureValuesResponse.header].
+        /// header
+        /// [ReadFeatureValuesResponse.header][google.cloud.aiplatform.v1.ReadFeatureValuesResponse.header].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2322,9 +2330,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> entityIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. IDs of entities to read Feature values of. The maximum number of IDs is
-    /// 100. For example, for a machine learning model predicting user clicks on a
-    /// website, an entity ID could be `user_123`.
+    /// Required. IDs of entities to read Feature values of. The maximum number of
+    /// IDs is 100. For example, for a machine learning model predicting user
+    /// clicks on a website, an entity ID could be `user_123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2336,8 +2344,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FeatureSelectorFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1.FeatureSelector featureSelector_;
     /// <summary>
-    /// Required. Selector choosing Features of the target EntityType. Feature IDs will be
-    /// deduplicated.
+    /// Required. Selector choosing Features of the target EntityType. Feature IDs
+    /// will be deduplicated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -156,7 +156,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [IndexEndpointService.CreateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.CreateIndexEndpoint].
+  /// Request message for
+  /// [IndexEndpointService.CreateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.CreateIndexEndpoint].
   /// </summary>
   public sealed partial class CreateIndexEndpointRequest : pb::IMessage<CreateIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -606,7 +607,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.GetIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.GetIndexEndpoint]
+  /// Request message for
+  /// [IndexEndpointService.GetIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.GetIndexEndpoint]
   /// </summary>
   public sealed partial class GetIndexEndpointRequest : pb::IMessage<GetIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -803,7 +805,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
+  /// Request message for
+  /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
   /// </summary>
   public sealed partial class ListIndexEndpointsRequest : pb::IMessage<ListIndexEndpointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -857,8 +860,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the Location from which to list the IndexEndpoints.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The resource name of the Location from which to list the
+    /// IndexEndpoints. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -873,8 +876,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Optional. An expression for filtering the results of the request. For field names
-    /// both snake_case and camelCase are supported.
+    /// Optional. An expression for filtering the results of the request. For field
+    /// names both snake_case and camelCase are supported.
     ///
     ///   * `index_endpoint` supports = and !=. `index_endpoint` represents the
     ///      IndexEndpoint ID, ie. the last segment of the IndexEndpoint's
@@ -922,8 +925,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Optional. The standard list page token.
     /// Typically obtained via
-    /// [ListIndexEndpointsResponse.next_page_token][google.cloud.aiplatform.v1.ListIndexEndpointsResponse.next_page_token] of the previous
-    /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints] call.
+    /// [ListIndexEndpointsResponse.next_page_token][google.cloud.aiplatform.v1.ListIndexEndpointsResponse.next_page_token]
+    /// of the previous
+    /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1188,7 +1193,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
+  /// Response message for
+  /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
   /// </summary>
   public sealed partial class ListIndexEndpointsResponse : pb::IMessage<ListIndexEndpointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1254,7 +1260,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListIndexEndpointsRequest.page_token][google.cloud.aiplatform.v1.ListIndexEndpointsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListIndexEndpointsRequest.page_token][google.cloud.aiplatform.v1.ListIndexEndpointsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1413,7 +1421,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.UpdateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.UpdateIndexEndpoint].
+  /// Request message for
+  /// [IndexEndpointService.UpdateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.UpdateIndexEndpoint].
   /// </summary>
   public sealed partial class UpdateIndexEndpointRequest : pb::IMessage<UpdateIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1479,7 +1488,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+    /// Required. The update mask applies to the resource. See
+    /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1666,7 +1676,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.DeleteIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.DeleteIndexEndpoint].
+  /// Request message for
+  /// [IndexEndpointService.DeleteIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.DeleteIndexEndpoint].
   /// </summary>
   public sealed partial class DeleteIndexEndpointRequest : pb::IMessage<DeleteIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1863,7 +1874,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
+  /// Request message for
+  /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
   public sealed partial class DeployIndexRequest : pb::IMessage<DeployIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1914,8 +1926,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IndexEndpointFieldNumber = 1;
     private string indexEndpoint_ = "";
     /// <summary>
-    /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-    /// Format:
+    /// Required. The name of the IndexEndpoint resource into which to deploy an
+    /// Index. Format:
     /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2109,7 +2121,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
+  /// Response message for
+  /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
   public sealed partial class DeployIndexResponse : pb::IMessage<DeployIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2313,7 +2326,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
+  /// Runtime operation information for
+  /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
   public sealed partial class DeployIndexOperationMetadata : pb::IMessage<DeployIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2557,7 +2571,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
+  /// Request message for
+  /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
   public sealed partial class UndeployIndexRequest : pb::IMessage<UndeployIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2608,8 +2623,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IndexEndpointFieldNumber = 1;
     private string indexEndpoint_ = "";
     /// <summary>
-    /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-    /// Format:
+    /// Required. The name of the IndexEndpoint resource from which to undeploy an
+    /// Index. Format:
     /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2625,7 +2640,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DeployedIndexIdFieldNumber = 2;
     private string deployedIndexId_ = "";
     /// <summary>
-    /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+    /// Required. The ID of the DeployedIndex to be undeployed from the
+    /// IndexEndpoint.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2794,7 +2810,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
+  /// Response message for
+  /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
   public sealed partial class UndeployIndexResponse : pb::IMessage<UndeployIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2949,7 +2966,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
+  /// Runtime operation information for
+  /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
   public sealed partial class UndeployIndexOperationMetadata : pb::IMessage<UndeployIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3153,7 +3171,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
+  /// Request message for
+  /// [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
   /// </summary>
   public sealed partial class MutateDeployedIndexRequest : pb::IMessage<MutateDeployedIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3204,8 +3223,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IndexEndpointFieldNumber = 1;
     private string indexEndpoint_ = "";
     /// <summary>
-    /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-    /// Format:
+    /// Required. The name of the IndexEndpoint resource into which to deploy an
+    /// Index. Format:
     /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3401,7 +3420,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
+  /// Response message for
+  /// [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
   /// </summary>
   public sealed partial class MutateDeployedIndexResponse : pb::IMessage<MutateDeployedIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

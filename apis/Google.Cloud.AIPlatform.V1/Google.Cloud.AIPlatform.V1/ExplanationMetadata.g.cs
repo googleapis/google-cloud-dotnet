@@ -155,17 +155,18 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Parser), 10);
     private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata> inputs_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata>();
     /// <summary>
-    /// Required. Map from feature names to feature input metadata. Keys are the name of the
-    /// features. Values are the specification of the feature.
+    /// Required. Map from feature names to feature input metadata. Keys are the
+    /// name of the features. Values are the specification of the feature.
     ///
     /// An empty InputMetadata is valid. It describes a text feature which has the
-    /// name specified as the key in [ExplanationMetadata.inputs][google.cloud.aiplatform.v1.ExplanationMetadata.inputs]. The baseline
-    /// of the empty feature is chosen by Vertex AI.
+    /// name specified as the key in
+    /// [ExplanationMetadata.inputs][google.cloud.aiplatform.v1.ExplanationMetadata.inputs].
+    /// The baseline of the empty feature is chosen by Vertex AI.
     ///
     /// For Vertex AI-provided Tensorflow images, the key can be any friendly
     /// name of the feature. Once specified,
-    /// [featureAttributions][google.cloud.aiplatform.v1.Attribution.feature_attributions] are keyed by
-    /// this key (if not grouped with another feature).
+    /// [featureAttributions][google.cloud.aiplatform.v1.Attribution.feature_attributions]
+    /// are keyed by this key (if not grouped with another feature).
     ///
     /// For custom images, the key must match with the key in
     /// [instance][google.cloud.aiplatform.v1.ExplainRequest.instances].
@@ -203,7 +204,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string featureAttributionsSchemaUri_ = "";
     /// <summary>
     /// Points to a YAML file stored on Google Cloud Storage describing the format
-    /// of the [feature attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions].
+    /// of the [feature
+    /// attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions].
     /// The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// AutoML tabular Models always have this field populated by Vertex AI.
@@ -426,8 +428,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Metadata of the input of a feature.
       ///
-      /// Fields other than [InputMetadata.input_baselines][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.input_baselines] are applicable only
-      /// for Models that are using Vertex AI-provided images for Tensorflow.
+      /// Fields other than
+      /// [InputMetadata.input_baselines][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.input_baselines]
+      /// are applicable only for Models that are using Vertex AI-provided images for
+      /// Tensorflow.
       /// </summary>
       public sealed partial class InputMetadata : pb::IMessage<InputMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -494,7 +498,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         ///
         /// If no baseline is specified, Vertex AI chooses the baseline for this
         /// feature. If multiple baselines are specified, Vertex AI returns the
-        /// average attributions across them in [Attribution.feature_attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions].
+        /// average attributions across them in
+        /// [Attribution.feature_attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions].
         ///
         /// For Vertex AI-provided Tensorflow images (both 1.x and 2.x), the shape
         /// of each baseline must match the shape of the input tensor. If a scalar is
@@ -502,9 +507,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         ///
         /// For custom images, the element of the baselines must be in the same
         /// format as the feature's input in the
-        /// [instance][google.cloud.aiplatform.v1.ExplainRequest.instances][]. The schema of any single instance
-        /// may be specified via Endpoint's DeployedModels'
-        /// [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [instance][google.cloud.aiplatform.v1.ExplainRequest.instances][]. The
+        /// schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
         /// </summary>
@@ -620,8 +625,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         private readonly pbc::RepeatedField<string> indexFeatureMapping_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// A list of feature names for each index in the input tensor.
-        /// Required when the input [InputMetadata.encoding][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoding] is BAG_OF_FEATURES,
-        /// BAG_OF_FEATURES_SPARSE, INDICATOR.
+        /// Required when the input
+        /// [InputMetadata.encoding][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoding]
+        /// is BAG_OF_FEATURES, BAG_OF_FEATURES_SPARSE, INDICATOR.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -635,9 +641,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// Encoded tensor is a transformation of the input tensor. Must be provided
         /// if choosing
-        /// [Integrated Gradients attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution]
-        /// or [XRAI attribution][google.cloud.aiplatform.v1.ExplanationParameters.xrai_attribution] and the
-        /// input tensor is not differentiable.
+        /// [Integrated Gradients
+        /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution]
+        /// or [XRAI
+        /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.xrai_attribution]
+        /// and the input tensor is not differentiable.
         ///
         /// An encoded tensor is generated if the input tensor is encoded by a lookup
         /// table.
@@ -692,7 +700,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// name will be treated as one feature when computing attributions. Features
         /// grouped together can have different shapes in value. If provided, there
         /// will be one single attribution generated in
-        /// [Attribution.feature_attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions], keyed by the group name.
+        /// [Attribution.feature_attributions][google.cloud.aiplatform.v1.Attribution.feature_attributions],
+        /// keyed by the group name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1105,8 +1114,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             [pbr::OriginalName("IDENTITY")] Identity = 1,
             /// <summary>
             /// The tensor represents a bag of features where each index maps to
-            /// a feature. [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping] must be provided for
-            /// this encoding. For example:
+            /// a feature.
+            /// [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping]
+            /// must be provided for this encoding. For example:
             /// ```
             /// input = [27, 6.0, 150]
             /// index_feature_mapping = ["age", "height", "weight"]
@@ -1116,8 +1126,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// <summary>
             /// The tensor represents a bag of features where each index maps to a
             /// feature. Zero values in the tensor indicates feature being
-            /// non-existent. [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping] must be provided
-            /// for this encoding. For example:
+            /// non-existent.
+            /// [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping]
+            /// must be provided for this encoding. For example:
             /// ```
             /// input = [2, 0, 5, 0, 1]
             /// index_feature_mapping = ["a", "b", "c", "d", "e"]
@@ -1126,7 +1137,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             [pbr::OriginalName("BAG_OF_FEATURES_SPARSE")] BagOfFeaturesSparse = 3,
             /// <summary>
             /// The tensor is a list of binaries representing whether a feature exists
-            /// or not (1 indicates existence). [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping]
+            /// or not (1 indicates existence).
+            /// [InputMetadata.index_feature_mapping][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.index_feature_mapping]
             /// must be provided for this encoding. For example:
             /// ```
             /// input = [1, 0, 1, 0, 1]
@@ -1136,8 +1148,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             [pbr::OriginalName("INDICATOR")] Indicator = 4,
             /// <summary>
             /// The tensor is encoded into a 1-dimensional array represented by an
-            /// encoded tensor. [InputMetadata.encoded_tensor_name][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoded_tensor_name] must be provided
-            /// for this encoding. For example:
+            /// encoded tensor.
+            /// [InputMetadata.encoded_tensor_name][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoded_tensor_name]
+            /// must be provided for this encoding. For example:
             /// ```
             /// input = ["This", "is", "a", "test", "."]
             /// encoded = [0.1, 0.2, 0.3, 0.4, 0.5]
@@ -1147,9 +1160,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// <summary>
             /// Select this encoding when the input tensor is encoded into a
             /// 2-dimensional array represented by an encoded tensor.
-            /// [InputMetadata.encoded_tensor_name][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoded_tensor_name] must be provided for this
-            /// encoding. The first dimension of the encoded tensor's shape is the same
-            /// as the input tensor's shape. For example:
+            /// [InputMetadata.encoded_tensor_name][google.cloud.aiplatform.v1.ExplanationMetadata.InputMetadata.encoded_tensor_name]
+            /// must be provided for this encoding. The first dimension of the encoded
+            /// tensor's shape is the same as the input tensor's shape. For example:
             /// ```
             /// input = ["This", "is", "a", "test", "."]
             /// encoded = [[0.1, 0.2, 0.3, 0.4, 0.5],
@@ -1545,7 +1558,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             private global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Type type_ = global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Type.Unspecified;
             /// <summary>
             /// Type of the image visualization. Only applicable to
-            /// [Integrated Gradients attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution].
+            /// [Integrated Gradients
+            /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution].
             /// OUTLINES shows regions of attribution, while PIXELS shows per-pixel
             /// attribution. Defaults to OUTLINES.
             /// </summary>
@@ -1581,12 +1595,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// The color scheme used for the highlighted areas.
             ///
             /// Defaults to PINK_GREEN for
-            /// [Integrated Gradients attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution],
+            /// [Integrated Gradients
+            /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution],
             /// which shows positive attributions in green and negative in pink.
             ///
             /// Defaults to VIRIDIS for
-            /// [XRAI attribution][google.cloud.aiplatform.v1.ExplanationParameters.xrai_attribution], which
-            /// highlights the most influential regions in yellow and the least
+            /// [XRAI
+            /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.xrai_attribution],
+            /// which highlights the most influential regions in yellow and the least
             /// influential in blue.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1908,7 +1924,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             public static partial class Types {
               /// <summary>
               /// Type of the image visualization. Only applicable to
-              /// [Integrated Gradients attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution].
+              /// [Integrated Gradients
+              /// attribution][google.cloud.aiplatform.v1.ExplanationParameters.integrated_gradients_attribution].
               /// </summary>
               public enum Type {
                 /// <summary>
@@ -2094,8 +2111,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         ///
         /// The shape of the value must be an n-dimensional array of strings. The
         /// number of dimensions must match that of the outputs to be explained.
-        /// The [Attribution.output_display_name][google.cloud.aiplatform.v1.Attribution.output_display_name] is populated by locating in the
-        /// mapping with [Attribution.output_index][google.cloud.aiplatform.v1.Attribution.output_index].
+        /// The
+        /// [Attribution.output_display_name][google.cloud.aiplatform.v1.Attribution.output_display_name]
+        /// is populated by locating in the mapping with
+        /// [Attribution.output_index][google.cloud.aiplatform.v1.Attribution.output_index].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2115,8 +2134,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Use this if the prediction contains the display names for the outputs.
         ///
         /// The display names in the prediction must have the same shape of the
-        /// outputs, so that it can be located by [Attribution.output_index][google.cloud.aiplatform.v1.Attribution.output_index] for
-        /// a specific output.
+        /// outputs, so that it can be located by
+        /// [Attribution.output_index][google.cloud.aiplatform.v1.Attribution.output_index]
+        /// for a specific output.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

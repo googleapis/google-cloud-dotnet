@@ -360,7 +360,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [FeaturestoreService.CreateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeaturestore].
+  /// Request message for
+  /// [FeaturestoreService.CreateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeaturestore].
   /// </summary>
   public sealed partial class CreateFeaturestoreRequest : pb::IMessage<CreateFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -444,8 +445,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FeaturestoreIdFieldNumber = 3;
     private string featurestoreId_ = "";
     /// <summary>
-    /// Required. The ID to use for this Featurestore, which will become the final component
-    /// of the Featurestore's resource name.
+    /// Required. The ID to use for this Featurestore, which will become the final
+    /// component of the Featurestore's resource name.
     ///
     /// This value may be up to 60 characters, and valid characters are
     /// `[a-z0-9_]`. The first character cannot be a number.
@@ -652,7 +653,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.GetFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.GetFeaturestore].
+  /// Request message for
+  /// [FeaturestoreService.GetFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.GetFeaturestore].
   /// </summary>
   public sealed partial class GetFeaturestoreRequest : pb::IMessage<GetFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -847,7 +849,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
+  /// Request message for
+  /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
   /// </summary>
   public sealed partial class ListFeaturestoresRequest : pb::IMessage<ListFeaturestoresRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -971,12 +974,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores] must
-    /// match the call that provided the page token.
+    /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1286,7 +1289,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
+  /// Response message for
+  /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
   /// </summary>
   public sealed partial class ListFeaturestoresResponse : pb::IMessage<ListFeaturestoresResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1351,9 +1355,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListFeaturestoresRequest.page_token][google.cloud.aiplatform.v1.ListFeaturestoresRequest.page_token] to
-    /// retrieve the next page.
-    /// If this field is omitted, there are no subsequent pages.
+    /// A token, which can be sent as
+    /// [ListFeaturestoresRequest.page_token][google.cloud.aiplatform.v1.ListFeaturestoresRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1512,7 +1517,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.UpdateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeaturestore].
+  /// Request message for
+  /// [FeaturestoreService.UpdateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeaturestore].
   /// </summary>
   public sealed partial class UpdateFeaturestoreRequest : pb::IMessage<UpdateFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1563,9 +1569,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FeaturestoreFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1.Featurestore featurestore_;
     /// <summary>
-    /// Required. The Featurestore's `name` field is used to identify the Featurestore to be
-    /// updated.
-    /// Format:
+    /// Required. The Featurestore's `name` field is used to identify the
+    /// Featurestore to be updated. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1594,6 +1599,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `labels`
     ///   * `online_serving_config.fixed_node_count`
     ///   * `online_serving_config.scaling`
+    ///   * `online_storage_ttl_days` (available in Preview)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1780,7 +1786,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.DeleteFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeaturestore].
+  /// Request message for
+  /// [FeaturestoreService.DeleteFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeaturestore].
   /// </summary>
   public sealed partial class DeleteFeaturestoreRequest : pb::IMessage<DeleteFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2019,7 +2026,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
+  /// Request message for
+  /// [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
   /// </summary>
   public sealed partial class ImportFeatureValuesRequest : pb::IMessage<ImportFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2163,8 +2171,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EntityTypeFieldNumber = 1;
     private string entityType_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType grouping the Features for which values
-    /// are being imported. Format:
+    /// Required. The resource name of the EntityType grouping the Features for
+    /// which values are being imported. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2198,9 +2206,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesRequest.Types.FeatureSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesRequest.Types.FeatureSpec> featureSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesRequest.Types.FeatureSpec>();
     /// <summary>
-    /// Required. Specifications defining which Feature values to import from the entity. The
-    /// request fails if no feature_specs are provided, and having multiple
-    /// feature_specs for one Feature is not allowed.
+    /// Required. Specifications defining which Feature values to import from the
+    /// entity. The request fails if no feature_specs are provided, and having
+    /// multiple feature_specs for one Feature is not allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2783,8 +2791,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int IdFieldNumber = 1;
         private string id_ = "";
         /// <summary>
-        /// Required. ID of the Feature to import values of. This Feature must exist in the
-        /// target EntityType, or the request will fail.
+        /// Required. ID of the Feature to import values of. This Feature must exist
+        /// in the target EntityType, or the request will fail.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2974,7 +2982,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
+  /// Response message for
+  /// [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
   /// </summary>
   public sealed partial class ImportFeatureValuesResponse : pb::IMessage<ImportFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3294,7 +3303,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
+  /// Request message for
+  /// [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
   /// </summary>
   public sealed partial class BatchReadFeatureValuesRequest : pb::IMessage<BatchReadFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3410,8 +3420,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FeaturestoreFieldNumber = 1;
     private string featurestore_ = "";
     /// <summary>
-    /// Required. The resource name of the Featurestore from which to query Feature values.
-    /// Format:
+    /// Required. The resource name of the Featurestore from which to query Feature
+    /// values. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3464,8 +3474,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.EntityTypeSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.EntityTypeSpec> entityTypeSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.EntityTypeSpec>();
     /// <summary>
-    /// Required. Specifies EntityType grouping Features to read values of and settings.
-    /// Each EntityType referenced in
+    /// Required. Specifies EntityType grouping Features to read values of and
+    /// settings. Each EntityType referenced in
     /// [BatchReadFeatureValuesRequest.entity_type_specs] must have a column
     /// specifying entity IDs in the EntityType in
     /// [BatchReadFeatureValuesRequest.request][] .
@@ -3480,8 +3490,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int StartTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Optional. Excludes Feature values with feature generation timestamp before this
-    /// timestamp. If not set, retrieve oldest values kept in Feature Store.
+    /// Optional. Excludes Feature values with feature generation timestamp before
+    /// this timestamp. If not set, retrieve oldest values kept in Feature Store.
     /// Timestamp, if present, must not have higher than millisecond precision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3874,8 +3884,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int FieldNameFieldNumber = 1;
         private string fieldName_ = "";
         /// <summary>
-        /// Required. The name of the field in the CSV header or the name of the column in
-        /// BigQuery table. The naming restriction is the same as [Feature.name][google.cloud.aiplatform.v1.Feature.name].
+        /// Required. The name of the field in the CSV header or the name of the
+        /// column in BigQuery table. The naming restriction is the same as
+        /// [Feature.name][google.cloud.aiplatform.v1.Feature.name].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4073,9 +4084,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int EntityTypeIdFieldNumber = 1;
         private string entityTypeId_ = "";
         /// <summary>
-        /// Required. ID of the EntityType to select Features. The EntityType id is the
-        /// [entity_type_id][google.cloud.aiplatform.v1.CreateEntityTypeRequest.entity_type_id] specified
-        /// during EntityType creation.
+        /// Required. ID of the EntityType to select Features. The EntityType id is
+        /// the
+        /// [entity_type_id][google.cloud.aiplatform.v1.CreateEntityTypeRequest.entity_type_id]
+        /// specified during EntityType creation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4090,7 +4102,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int FeatureSelectorFieldNumber = 2;
         private global::Google.Cloud.AIPlatform.V1.FeatureSelector featureSelector_;
         /// <summary>
-        /// Required. Selectors choosing which Feature values to read from the EntityType.
+        /// Required. Selectors choosing which Feature values to read from the
+        /// EntityType.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4301,7 +4314,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
+  /// Request message for
+  /// [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
   /// </summary>
   public sealed partial class ExportFeatureValuesRequest : pb::IMessage<ExportFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4395,8 +4409,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EntityTypeFieldNumber = 1;
     private string entityType_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType from which to export Feature values.
-    /// Format:
+    /// Required. The resource name of the EntityType from which to export Feature
+    /// values. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5584,8 +5598,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int BigqueryDestinationFieldNumber = 1;
     /// <summary>
     /// Output in BigQuery format.
-    /// [BigQueryDestination.output_uri][google.cloud.aiplatform.v1.BigQueryDestination.output_uri] in
-    /// [FeatureValueDestination.bigquery_destination][google.cloud.aiplatform.v1.FeatureValueDestination.bigquery_destination] must refer to a table.
+    /// [BigQueryDestination.output_uri][google.cloud.aiplatform.v1.BigQueryDestination.output_uri]
+    /// in
+    /// [FeatureValueDestination.bigquery_destination][google.cloud.aiplatform.v1.FeatureValueDestination.bigquery_destination]
+    /// must refer to a table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5886,7 +5902,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
+  /// Response message for
+  /// [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
   /// </summary>
   public sealed partial class ExportFeatureValuesResponse : pb::IMessage<ExportFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6041,7 +6058,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
+  /// Response message for
+  /// [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
   /// </summary>
   public sealed partial class BatchReadFeatureValuesResponse : pb::IMessage<BatchReadFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6196,7 +6214,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.CreateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.CreateEntityType].
+  /// Request message for
+  /// [FeaturestoreService.CreateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.CreateEntityType].
   /// </summary>
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6280,8 +6299,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EntityTypeIdFieldNumber = 3;
     private string entityTypeId_ = "";
     /// <summary>
-    /// Required. The ID to use for the EntityType, which will become the final component of
-    /// the EntityType's resource name.
+    /// Required. The ID to use for the EntityType, which will become the final
+    /// component of the EntityType's resource name.
     ///
     /// This value may be up to 60 characters, and valid characters are
     /// `[a-z0-9_]`. The first character cannot be a number.
@@ -6488,7 +6507,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.GetEntityType][google.cloud.aiplatform.v1.FeaturestoreService.GetEntityType].
+  /// Request message for
+  /// [FeaturestoreService.GetEntityType][google.cloud.aiplatform.v1.FeaturestoreService.GetEntityType].
   /// </summary>
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6685,7 +6705,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
+  /// Request message for
+  /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6808,12 +6829,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes] must
-    /// match the call that provided the page token.
+    /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7124,7 +7145,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
+  /// Response message for
+  /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7189,9 +7211,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListEntityTypesRequest.page_token][google.cloud.aiplatform.v1.ListEntityTypesRequest.page_token] to
-    /// retrieve the next page.
-    /// If this field is omitted, there are no subsequent pages.
+    /// A token, which can be sent as
+    /// [ListEntityTypesRequest.page_token][google.cloud.aiplatform.v1.ListEntityTypesRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7350,7 +7373,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.UpdateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.UpdateEntityType].
+  /// Request message for
+  /// [FeaturestoreService.UpdateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.UpdateEntityType].
   /// </summary>
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7401,9 +7425,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EntityTypeFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1.EntityType entityType_;
     /// <summary>
-    /// Required. The EntityType's `name` field is used to identify the EntityType to be
-    /// updated.
-    /// Format:
+    /// Required. The EntityType's `name` field is used to identify the EntityType
+    /// to be updated. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7438,6 +7461,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
     ///   * `monitoring_config.numerical_threshold_config.value`
     ///   * `monitoring_config.categorical_threshold_config.value`
+    ///   * `offline_storage_ttl_days` (available in Preview)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7862,7 +7886,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.CreateFeature][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeature].
+  /// Request message for
+  /// [FeaturestoreService.CreateFeature][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeature].
   /// </summary>
   public sealed partial class CreateFeatureRequest : pb::IMessage<CreateFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7946,8 +7971,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FeatureIdFieldNumber = 3;
     private string featureId_ = "";
     /// <summary>
-    /// Required. The ID to use for the Feature, which will become the final component of
-    /// the Feature's resource name.
+    /// Required. The ID to use for the Feature, which will become the final
+    /// component of the Feature's resource name.
     ///
     /// This value may be up to 128 characters, and valid characters are
     /// `[a-z0-9_]`. The first character cannot be a number.
@@ -8154,7 +8179,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
+  /// Request message for
+  /// [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
   /// </summary>
   public sealed partial class BatchCreateFeaturesRequest : pb::IMessage<BatchCreateFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8205,8 +8231,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType to create the batch of Features under.
-    /// Format:
+    /// Required. The resource name of the EntityType to create the batch of
+    /// Features under. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8224,10 +8250,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest>();
     /// <summary>
-    /// Required. The request message specifying the Features to create. All Features must be
-    /// created under the same parent EntityType. The `parent` field in each child
-    /// request message can be omitted. If `parent` is set in a child request, then
-    /// the value must match the `parent` value in this request message.
+    /// Required. The request message specifying the Features to create. All
+    /// Features must be created under the same parent EntityType. The `parent`
+    /// field in each child request message can be omitted. If `parent` is set in a
+    /// child request, then the value must match the `parent` value in this request
+    /// message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8383,7 +8410,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
+  /// Response message for
+  /// [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
   /// </summary>
   public sealed partial class BatchCreateFeaturesResponse : pb::IMessage<BatchCreateFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8567,7 +8595,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.GetFeature][google.cloud.aiplatform.v1.FeaturestoreService.GetFeature].
+  /// Request message for
+  /// [FeaturestoreService.GetFeature][google.cloud.aiplatform.v1.FeaturestoreService.GetFeature].
   /// </summary>
   public sealed partial class GetFeatureRequest : pb::IMessage<GetFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8764,7 +8793,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
+  /// Request message for
+  /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
   /// </summary>
   public sealed partial class ListFeaturesRequest : pb::IMessage<ListFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8890,12 +8920,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures] must
-    /// match the call that provided the page token.
+    /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8947,10 +8977,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int LatestStatsCountFieldNumber = 7;
     private int latestStatsCount_;
     /// <summary>
-    /// If set, return the most recent [ListFeaturesRequest.latest_stats_count][google.cloud.aiplatform.v1.ListFeaturesRequest.latest_stats_count]
+    /// If set, return the most recent
+    /// [ListFeaturesRequest.latest_stats_count][google.cloud.aiplatform.v1.ListFeaturesRequest.latest_stats_count]
     /// of stats for each Feature in response. Valid value is [0, 10]. If number of
-    /// stats exists &lt; [ListFeaturesRequest.latest_stats_count][google.cloud.aiplatform.v1.ListFeaturesRequest.latest_stats_count], return all
-    /// existing stats.
+    /// stats exists &lt;
+    /// [ListFeaturesRequest.latest_stats_count][google.cloud.aiplatform.v1.ListFeaturesRequest.latest_stats_count],
+    /// return all existing stats.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9248,7 +9280,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
+  /// Response message for
+  /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
   /// </summary>
   public sealed partial class ListFeaturesResponse : pb::IMessage<ListFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9313,9 +9346,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListFeaturesRequest.page_token][google.cloud.aiplatform.v1.ListFeaturesRequest.page_token] to
-    /// retrieve the next page.
-    /// If this field is omitted, there are no subsequent pages.
+    /// A token, which can be sent as
+    /// [ListFeaturesRequest.page_token][google.cloud.aiplatform.v1.ListFeaturesRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9474,7 +9508,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
+  /// Request message for
+  /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
   /// </summary>
   public sealed partial class SearchFeaturesRequest : pb::IMessage<SearchFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9635,12 +9670,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures], except `page_size`, must
-    /// match the call that provided the page token.
+    /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures],
+    /// except `page_size`, must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9857,7 +9892,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
+  /// Response message for
+  /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
   /// </summary>
   public sealed partial class SearchFeaturesResponse : pb::IMessage<SearchFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9930,9 +9966,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [SearchFeaturesRequest.page_token][google.cloud.aiplatform.v1.SearchFeaturesRequest.page_token] to
-    /// retrieve the next page.
-    /// If this field is omitted, there are no subsequent pages.
+    /// A token, which can be sent as
+    /// [SearchFeaturesRequest.page_token][google.cloud.aiplatform.v1.SearchFeaturesRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10091,7 +10128,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.UpdateFeature][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeature].
+  /// Request message for
+  /// [FeaturestoreService.UpdateFeature][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeature].
   /// </summary>
   public sealed partial class UpdateFeatureRequest : pb::IMessage<UpdateFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10359,7 +10397,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.DeleteFeature][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeature].
+  /// Request message for
+  /// [FeaturestoreService.DeleteFeature][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeature].
   /// </summary>
   public sealed partial class DeleteFeatureRequest : pb::IMessage<DeleteFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

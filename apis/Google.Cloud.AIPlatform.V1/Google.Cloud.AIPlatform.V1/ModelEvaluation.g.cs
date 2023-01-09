@@ -155,8 +155,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string metricsSchemaUri_ = "";
     /// <summary>
     /// Points to a YAML file stored on Google Cloud Storage describing the
-    /// [metrics][google.cloud.aiplatform.v1.ModelEvaluation.metrics] of this ModelEvaluation. The schema is
-    /// defined as an OpenAPI 3.0.2 [Schema
+    /// [metrics][google.cloud.aiplatform.v1.ModelEvaluation.metrics] of this
+    /// ModelEvaluation. The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,8 +207,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// All possible [dimensions][ModelEvaluationSlice.slice.dimension] of
     /// ModelEvaluationSlices. The dimensions can be used as the filter of the
-    /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices] request, in the form of
-    /// `slice.dimension = &lt;dimension>`.
+    /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices]
+    /// request, in the form of `slice.dimension = &lt;dimension>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -285,8 +285,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec> explanationSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Types.ModelEvaluationExplanationSpec>();
     /// <summary>
-    /// Describes the values of [ExplanationSpec][google.cloud.aiplatform.v1.ExplanationSpec] that are used for explaining
-    /// the predicted values on the evaluated data.
+    /// Describes the values of
+    /// [ExplanationSpec][google.cloud.aiplatform.v1.ExplanationSpec] that are used
+    /// for explaining the predicted values on the evaluated data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

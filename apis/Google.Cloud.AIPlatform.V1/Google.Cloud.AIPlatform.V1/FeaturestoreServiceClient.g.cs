@@ -875,8 +875,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -905,8 +905,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -935,8 +935,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -960,8 +960,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -990,8 +990,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1020,8 +1020,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Featurestore to create.
         /// </param>
         /// <param name="featurestoreId">
-        /// Required. The ID to use for this Featurestore, which will become the final component
-        /// of the Featurestore's resource name.
+        /// Required. The ID to use for this Featurestore, which will become the final
+        /// component of the Featurestore's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1318,9 +1318,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single Featurestore.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The Featurestore's `name` field is used to identify the Featurestore to be
-        /// updated.
-        /// Format:
+        /// Required. The Featurestore's `name` field is used to identify the
+        /// Featurestore to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="updateMask">
@@ -1337,6 +1336,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
+        /// * `online_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1351,9 +1351,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single Featurestore.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The Featurestore's `name` field is used to identify the Featurestore to be
-        /// updated.
-        /// Format:
+        /// Required. The Featurestore's `name` field is used to identify the
+        /// Featurestore to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="updateMask">
@@ -1370,6 +1369,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
+        /// * `online_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1384,9 +1384,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single Featurestore.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The Featurestore's `name` field is used to identify the Featurestore to be
-        /// updated.
-        /// Format:
+        /// Required. The Featurestore's `name` field is used to identify the
+        /// Featurestore to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="updateMask">
@@ -1403,6 +1402,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
+        /// * `online_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1869,8 +1869,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1899,8 +1899,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1929,8 +1929,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1954,8 +1954,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -1984,8 +1984,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2014,8 +2014,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// The EntityType to create.
         /// </param>
         /// <param name="entityTypeId">
-        /// Required. The ID to use for the EntityType, which will become the final component of
-        /// the EntityType's resource name.
+        /// Required. The ID to use for the EntityType, which will become the final
+        /// component of the EntityType's resource name.
         /// 
         /// This value may be up to 60 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2297,9 +2297,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The EntityType's `name` field is used to identify the EntityType to be
-        /// updated.
-        /// Format:
+        /// Required. The EntityType's `name` field is used to identify the EntityType
+        /// to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="updateMask">
@@ -2322,6 +2321,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
+        /// * `offline_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2336,9 +2336,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The EntityType's `name` field is used to identify the EntityType to be
-        /// updated.
-        /// Format:
+        /// Required. The EntityType's `name` field is used to identify the EntityType
+        /// to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="updateMask">
@@ -2361,6 +2360,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
+        /// * `offline_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2375,9 +2375,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates the parameters of a single EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The EntityType's `name` field is used to identify the EntityType to be
-        /// updated.
-        /// Format:
+        /// Required. The EntityType's `name` field is used to identify the EntityType
+        /// to be updated. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="updateMask">
@@ -2400,6 +2399,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
+        /// * `offline_storage_ttl_days` (available in Preview)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2859,8 +2859,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2889,8 +2889,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2919,8 +2919,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2944,8 +2944,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -2974,8 +2974,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -3004,8 +3004,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Feature to create.
         /// </param>
         /// <param name="featureId">
-        /// Required. The ID to use for the Feature, which will become the final component of
-        /// the Feature's resource name.
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
         /// 
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
@@ -3075,15 +3075,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3101,15 +3102,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3127,15 +3129,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3146,15 +3149,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3172,15 +3176,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3198,15 +3203,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a batch of Features in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create the batch of Features under.
-        /// Format:
+        /// Required. The resource name of the EntityType to create the batch of
+        /// Features under. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the Features to create. All Features must be
-        /// created under the same parent EntityType. The `parent` field in each child
-        /// request message can be omitted. If `parent` is set in a child request, then
-        /// the value must match the `parent` value in this request message.
+        /// Required. The request message specifying the Features to create. All
+        /// Features must be created under the same parent EntityType. The `parent`
+        /// field in each child request message can be omitted. If `parent` is set in a
+        /// child request, then the value must match the `parent` value in this request
+        /// message.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3851,8 +3857,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3886,8 +3892,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3921,8 +3927,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3953,8 +3959,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3988,8 +3994,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4023,8 +4029,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// - Online serving cluster is under-provisioned.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType grouping the Features for which values
-        /// are being imported. Format:
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being imported. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4110,8 +4116,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4131,8 +4137,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4152,8 +4158,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4170,8 +4176,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4191,8 +4197,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4212,8 +4218,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// values of each read instance as of each instance's read timestamp.
         /// </summary>
         /// <param name="featurestore">
-        /// Required. The resource name of the Featurestore from which to query Feature values.
-        /// Format:
+        /// Required. The resource name of the Featurestore from which to query Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4279,8 +4285,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4295,8 +4301,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4311,8 +4317,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4324,8 +4330,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4340,8 +4346,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4356,8 +4362,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Exports Feature values from all the entities of a target EntityType.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType from which to export Feature values.
-        /// Format:
+        /// Required. The resource name of the EntityType from which to export Feature
+        /// values. Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

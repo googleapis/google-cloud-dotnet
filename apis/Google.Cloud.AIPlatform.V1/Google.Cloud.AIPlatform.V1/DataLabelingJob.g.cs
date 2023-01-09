@@ -193,9 +193,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> datasets_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Dataset resource names. Right now we only support labeling from a single
-    /// Dataset.
-    /// Format:
+    /// Required. Dataset resource names. Right now we only support labeling from a
+    /// single Dataset. Format:
     /// `projects/{project}/locations/{location}/datasets/{dataset}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -244,9 +243,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int InstructionUriFieldNumber = 5;
     private string instructionUri_ = "";
     /// <summary>
-    /// Required. The Google Cloud Storage location of the instruction pdf. This pdf is
-    /// shared with labelers, and provides detailed description on how to label
-    /// DataItems in Datasets.
+    /// Required. The Google Cloud Storage location of the instruction pdf. This
+    /// pdf is shared with labelers, and provides detailed description on how to
+    /// label DataItems in Datasets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,9 +260,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int InputsSchemaUriFieldNumber = 6;
     private string inputsSchemaUri_ = "";
     /// <summary>
-    /// Required. Points to a YAML file stored on Google Cloud Storage describing the
-    /// config for a specific type of DataLabelingJob.
-    /// The schema files that can be used here are found in the
+    /// Required. Points to a YAML file stored on Google Cloud Storage describing
+    /// the config for a specific type of DataLabelingJob. The schema files that
+    /// can be used here are found in the
     /// https://storage.googleapis.com/google-cloud-aiplatform bucket in the
     /// /schema/datalabelingjob/inputs/ folder.
     /// </summary>
@@ -310,8 +309,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int LabelingProgressFieldNumber = 13;
     private int labelingProgress_;
     /// <summary>
-    /// Output only. Current labeling job progress percentage scaled in interval [0, 100],
-    /// indicating the percentage of DataItems that has been finished.
+    /// Output only. Current labeling job progress percentage scaled in interval
+    /// [0, 100], indicating the percentage of DataItems that has been finished.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,8 +325,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int CurrentSpendFieldNumber = 14;
     private global::Google.Type.Money currentSpend_;
     /// <summary>
-    /// Output only. Estimated cost(in US dollars) that the DataLabelingJob has incurred to
-    /// date.
+    /// Output only. Estimated cost(in US dollars) that the DataLabelingJob has
+    /// incurred to date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -372,8 +371,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ErrorFieldNumber = 22;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    /// Output only. DataLabelingJob errors. It is only populated when job's state is
-    /// `JOB_STATE_FAILED` or `JOB_STATE_CANCELLED`.
+    /// Output only. DataLabelingJob errors. It is only populated when job's state
+    /// is `JOB_STATE_FAILED` or `JOB_STATE_CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -401,7 +400,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// and are immutable. Following system labels exist for each DataLabelingJob:
     ///
     /// * "aiplatform.googleapis.com/schema": output only, its value is the
-    ///   [inputs_schema][google.cloud.aiplatform.v1.DataLabelingJob.inputs_schema_uri]'s title.
+    ///   [inputs_schema][google.cloud.aiplatform.v1.DataLabelingJob.inputs_schema_uri]'s
+    ///   title.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

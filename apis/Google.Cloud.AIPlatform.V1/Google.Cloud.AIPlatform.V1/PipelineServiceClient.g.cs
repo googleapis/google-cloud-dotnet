@@ -423,8 +423,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -443,8 +443,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -463,8 +463,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -479,8 +479,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -499,8 +499,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -519,8 +519,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// attempted to be run.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to create the TrainingPipeline in.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to create the TrainingPipeline
+        /// in. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="trainingPipeline">
         /// Required. The TrainingPipeline to create.
@@ -669,8 +669,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TrainingPipelines in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to list the TrainingPipelines from.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to list the TrainingPipelines
+        /// from. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -694,8 +694,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TrainingPipelines in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to list the TrainingPipelines from.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to list the TrainingPipelines
+        /// from. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -719,8 +719,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TrainingPipelines in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to list the TrainingPipelines from.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to list the TrainingPipelines
+        /// from. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -744,8 +744,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TrainingPipelines in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location to list the TrainingPipelines from.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location to list the TrainingPipelines
+        /// from. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -913,13 +913,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -931,13 +935,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -949,13 +957,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -967,13 +979,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -992,13 +1008,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -1017,13 +1037,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -1039,13 +1063,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -1064,13 +1092,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -1089,13 +1121,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the TrainingPipeline to cancel.
@@ -1675,12 +1711,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1693,12 +1732,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1711,12 +1753,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1729,12 +1774,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -1754,12 +1802,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -1779,12 +1830,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -1801,12 +1855,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -1826,12 +1883,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -1851,12 +1911,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="name">
@@ -2104,13 +2167,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2125,13 +2192,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a TrainingPipeline.
         /// Starts asynchronous cancellation on the TrainingPipeline. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.GetTrainingPipeline]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the TrainingPipeline is not deleted; instead it becomes a pipeline with
-        /// a [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state] is set to
-        /// `CANCELLED`.
+        /// a
+        /// [TrainingPipeline.error][google.cloud.aiplatform.v1.TrainingPipeline.error]
+        /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`, and
+        /// [TrainingPipeline.state][google.cloud.aiplatform.v1.TrainingPipeline.state]
+        /// is set to `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2245,12 +2316,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2266,12 +2340,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
-        /// guaranteed. Clients can use [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob] or
-        /// other methods to check whether the cancellation succeeded or whether the
+        /// guaranteed. Clients can use
+        /// [PipelineService.GetPipelineJob][google.cloud.aiplatform.v1.PipelineService.GetPipelineJob]
+        /// or other methods to check whether the cancellation succeeded or whether the
         /// pipeline completed despite cancellation. On successful cancellation,
         /// the PipelineJob is not deleted; instead it becomes a pipeline with
-        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`, and [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
+        /// a [PipelineJob.error][google.cloud.aiplatform.v1.PipelineJob.error] value
+        /// with a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding
+        /// to `Code.CANCELLED`, and
+        /// [PipelineJob.state][google.cloud.aiplatform.v1.PipelineJob.state] is set to
         /// `CANCELLED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

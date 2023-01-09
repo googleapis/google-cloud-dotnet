@@ -475,8 +475,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TemplateUriFieldNumber = 19;
     private string templateUri_ = "";
     /// <summary>
-    /// A template uri from where the [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec], if empty, will
-    /// be downloaded.
+    /// A template uri from where the
+    /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec],
+    /// if empty, will be downloaded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -492,7 +493,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.PipelineTemplateMetadata templateMetadata_;
     /// <summary>
     /// Output only. Pipeline template metadata. Will fill up fields if
-    /// [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri] is from supported template registry.
+    /// [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri]
+    /// is from supported template registry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1160,12 +1162,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.Value.Parser), 10);
         private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value> parameters_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value>();
         /// <summary>
-        /// Deprecated. Use [RuntimeConfig.parameter_values][google.cloud.aiplatform.v1.PipelineJob.RuntimeConfig.parameter_values] instead. The runtime
-        /// parameters of the PipelineJob. The parameters will be passed into
-        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] to replace the placeholders at runtime.
-        /// This field is used by pipelines built using
-        /// `PipelineJob.pipeline_spec.schema_version` 2.0.0 or lower, such as
-        /// pipelines built using Kubeflow Pipelines SDK 1.8 or lower.
+        /// Deprecated. Use
+        /// [RuntimeConfig.parameter_values][google.cloud.aiplatform.v1.PipelineJob.RuntimeConfig.parameter_values]
+        /// instead. The runtime parameters of the PipelineJob. The parameters will
+        /// be passed into
+        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec]
+        /// to replace the placeholders at runtime. This field is used by pipelines
+        /// built using `PipelineJob.pipeline_spec.schema_version` 2.0.0 or lower,
+        /// such as pipelines built using Kubeflow Pipelines SDK 1.8 or lower.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1178,8 +1182,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int GcsOutputDirectoryFieldNumber = 2;
         private string gcsOutputDirectory_ = "";
         /// <summary>
-        /// Required. A path in a Cloud Storage bucket, which will be treated as the root
-        /// output directory of the pipeline. It is used by the system to
+        /// Required. A path in a Cloud Storage bucket, which will be treated as the
+        /// root output directory of the pipeline. It is used by the system to
         /// generate the paths of output artifacts. The artifact paths are generated
         /// with a sub-path pattern `{job_id}/{task_id}/{output_key}` under the
         /// specified output directory. The service account specified in this
@@ -1202,10 +1206,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> parameterValues_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
         /// <summary>
         /// The runtime parameters of the PipelineJob. The parameters will be
-        /// passed into [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] to replace the placeholders
-        /// at runtime. This field is used by pipelines built using
-        /// `PipelineJob.pipeline_spec.schema_version` 2.1.0, such as pipelines built
-        /// using Kubeflow Pipelines SDK 1.9 or higher and the v2 DSL.
+        /// passed into
+        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec]
+        /// to replace the placeholders at runtime. This field is used by pipelines
+        /// built using `PipelineJob.pipeline_spec.schema_version` 2.1.0, such as
+        /// pipelines built using Kubeflow Pipelines SDK 1.9 or higher and the v2
+        /// DSL.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1690,9 +1696,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Pipeline template metadata if [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri] is from supported
-  /// template registry. Currently, the only supported registry is Artifact
-  /// Registry.
+  /// Pipeline template metadata if
+  /// [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri]
+  /// is from supported template registry. Currently, the only supported registry
+  /// is Artifact Registry.
   /// </summary>
   public sealed partial class PipelineTemplateMetadata : pb::IMessage<PipelineTemplateMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1744,8 +1751,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The version_name in artifact registry.
     ///
-    /// Will always be presented in output if the [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri] is
-    /// from supported template registry.
+    /// Will always be presented in output if the
+    /// [PipelineJob.template_uri][google.cloud.aiplatform.v1.PipelineJob.template_uri]
+    /// is from supported template registry.
     ///
     /// Format is "sha256:abcdef123456...".
     /// </summary>
@@ -2251,8 +2259,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentTaskIdFieldNumber = 12;
     private long parentTaskId_;
     /// <summary>
-    /// Output only. The id of the parent task if the task is within a component scope.
-    /// Empty if the task is at the root level.
+    /// Output only. The id of the parent task if the task is within a component
+    /// scope. Empty if the task is at the root level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2391,8 +2399,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus> pipelineTaskStatus_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus>();
     /// <summary>
-    /// Output only. A list of task status. This field keeps a record of task status evolving
-    /// over time.
+    /// Output only. A list of task status. This field keeps a record of task
+    /// status evolving over time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2919,7 +2927,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// Specifies that the task was not triggered because the task's trigger
         /// policy is not satisfied. The trigger policy is specified in the
-        /// `condition` field of [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec].
+        /// `condition` field of
+        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec].
         /// </summary>
         [pbr::OriginalName("NOT_TRIGGERED")] NotTriggered = 9,
       }
@@ -3007,12 +3016,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int ErrorFieldNumber = 3;
         private global::Google.Rpc.Status error_;
         /// <summary>
-        /// Output only. The error that occurred during the state. May be set when the state is
-        /// any of the non-final state (PENDING/RUNNING/CANCELLING) or FAILED state.
-        /// If the state is FAILED, the error here is final and not going to be
-        /// retried.
-        /// If the state is a non-final state, the error indicates a system-error
-        /// being retried.
+        /// Output only. The error that occurred during the state. May be set when
+        /// the state is any of the non-final state (PENDING/RUNNING/CANCELLING) or
+        /// FAILED state. If the state is FAILED, the error here is final and not
+        /// going to be retried. If the state is a non-final state, the error
+        /// indicates a system-error being retried.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3764,7 +3772,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int MainJobFieldNumber = 1;
         private string mainJob_ = "";
         /// <summary>
-        /// Output only. The name of the [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the main container execution.
+        /// Output only. The name of the
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the main container
+        /// execution.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3779,10 +3789,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int PreCachingCheckJobFieldNumber = 2;
         private string preCachingCheckJob_ = "";
         /// <summary>
-        /// Output only. The name of the [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the pre-caching-check container
-        /// execution. This job will be available if the
-        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] specifies the `pre_caching_check` hook in
-        /// the lifecycle events.
+        /// Output only. The name of the
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the
+        /// pre-caching-check container execution. This job will be available if the
+        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec]
+        /// specifies the `pre_caching_check` hook in the lifecycle events.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3799,7 +3810,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> failedMainJobs_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Output only. The names of the previously failed [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the main container
+        /// Output only. The names of the previously failed
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the main container
         /// executions. The list includes the all attempts in chronological order.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3814,11 +3826,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> failedPreCachingCheckJobs_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Output only. The names of the previously failed [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the
+        /// Output only. The names of the previously failed
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the
         /// pre-caching-check container executions. This job will be available if the
-        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] specifies the `pre_caching_check` hook in
-        /// the lifecycle events.
-        /// The list includes the all attempts in chronological order.
+        /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec]
+        /// specifies the `pre_caching_check` hook in the lifecycle events. The list
+        /// includes the all attempts in chronological order.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4063,7 +4076,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int JobFieldNumber = 1;
         private string job_ = "";
         /// <summary>
-        /// Output only. The name of the [CustomJob][google.cloud.aiplatform.v1.CustomJob].
+        /// Output only. The name of the
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -214,9 +214,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int LastMigrateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastMigrateTime_;
     /// <summary>
-    /// Output only. Timestamp when the last migration attempt on this MigratableResource
-    /// started. Will not be set if there's no migration attempt on this
-    /// MigratableResource.
+    /// Output only. Timestamp when the last migration attempt on this
+    /// MigratableResource started. Will not be set if there's no migration attempt
+    /// on this MigratableResource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -132,7 +132,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
+  /// Request message for
+  /// [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
   /// </summary>
   public sealed partial class SearchMigratableResourcesRequest : pb::IMessage<SearchMigratableResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -185,10 +186,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The location that the migratable resources should be searched from.
-    /// It's the Vertex AI location that the resources can be migrated to, not
-    /// the resources' original location.
-    /// Format:
+    /// Required. The location that the migratable resources should be searched
+    /// from. It's the Vertex AI location that the resources can be migrated to,
+    /// not the resources' original location. Format:
     /// `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -463,7 +463,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
+  /// Response message for
+  /// [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
   /// </summary>
   public sealed partial class SearchMigratableResourcesResponse : pb::IMessage<SearchMigratableResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -690,7 +691,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
+  /// Request message for
+  /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
   public sealed partial class BatchMigrateResourcesRequest : pb::IMessage<BatchMigrateResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1382,9 +1384,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int EndpointFieldNumber = 1;
         private string endpoint_ = "";
         /// <summary>
-        /// Required. The ml.googleapis.com endpoint that this model version should be migrated
-        /// from.
-        /// Example values:
+        /// Required. The ml.googleapis.com endpoint that this model version should
+        /// be migrated from. Example values:
         ///
         /// * ml.googleapis.com
         ///
@@ -2182,9 +2183,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Types.MigrateDataLabelingAnnotatedDatasetConfig.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Types.MigrateDataLabelingAnnotatedDatasetConfig> migrateDataLabelingAnnotatedDatasetConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Types.MigrateDataLabelingAnnotatedDatasetConfig>();
         /// <summary>
-        /// Optional. Configs for migrating AnnotatedDataset in datalabeling.googleapis.com to
-        /// Vertex AI's SavedQuery. The specified AnnotatedDatasets have to belong
-        /// to the datalabeling Dataset.
+        /// Optional. Configs for migrating AnnotatedDataset in
+        /// datalabeling.googleapis.com to Vertex AI's SavedQuery. The specified
+        /// AnnotatedDatasets have to belong to the datalabeling Dataset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2575,7 +2576,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
+  /// Response message for
+  /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
   public sealed partial class BatchMigrateResourcesResponse : pb::IMessage<BatchMigrateResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3077,7 +3079,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
+  /// Runtime operation information for
+  /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
   public sealed partial class BatchMigrateResourcesOperationMetadata : pb::IMessage<BatchMigrateResourcesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

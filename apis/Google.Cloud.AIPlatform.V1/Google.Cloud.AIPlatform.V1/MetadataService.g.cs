@@ -402,7 +402,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [MetadataService.CreateMetadataStore][google.cloud.aiplatform.v1.MetadataService.CreateMetadataStore].
+  /// Request message for
+  /// [MetadataService.CreateMetadataStore][google.cloud.aiplatform.v1.MetadataService.CreateMetadataStore].
   /// </summary>
   public sealed partial class CreateMetadataStoreRequest : pb::IMessage<CreateMetadataStoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -695,7 +696,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of operations that perform [MetadataService.CreateMetadataStore][google.cloud.aiplatform.v1.MetadataService.CreateMetadataStore].
+  /// Details of operations that perform
+  /// [MetadataService.CreateMetadataStore][google.cloud.aiplatform.v1.MetadataService.CreateMetadataStore].
   /// </summary>
   public sealed partial class CreateMetadataStoreOperationMetadata : pb::IMessage<CreateMetadataStoreOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -899,7 +901,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.GetMetadataStore][google.cloud.aiplatform.v1.MetadataService.GetMetadataStore].
+  /// Request message for
+  /// [MetadataService.GetMetadataStore][google.cloud.aiplatform.v1.MetadataService.GetMetadataStore].
   /// </summary>
   public sealed partial class GetMetadataStoreRequest : pb::IMessage<GetMetadataStoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1096,7 +1099,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores].
+  /// Request message for
+  /// [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores].
   /// </summary>
   public sealed partial class ListMetadataStoresRequest : pb::IMessage<ListMetadataStoresRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1183,8 +1187,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores] call. Provide this to retrieve the
-    /// subsequent page.
+    /// [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other provided parameters must match the call that
     /// provided the page token. (Otherwise the request will fail with
@@ -1381,7 +1385,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores].
+  /// Response message for
+  /// [MetadataService.ListMetadataStores][google.cloud.aiplatform.v1.MetadataService.ListMetadataStores].
   /// </summary>
   public sealed partial class ListMetadataStoresResponse : pb::IMessage<ListMetadataStoresResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1447,8 +1452,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token, which can be sent as
-    /// [ListMetadataStoresRequest.page_token][google.cloud.aiplatform.v1.ListMetadataStoresRequest.page_token] to retrieve the next
-    /// page. If this field is not populated, there are no subsequent pages.
+    /// [ListMetadataStoresRequest.page_token][google.cloud.aiplatform.v1.ListMetadataStoresRequest.page_token]
+    /// to retrieve the next page. If this field is not populated, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1607,7 +1613,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.DeleteMetadataStore][google.cloud.aiplatform.v1.MetadataService.DeleteMetadataStore].
+  /// Request message for
+  /// [MetadataService.DeleteMetadataStore][google.cloud.aiplatform.v1.MetadataService.DeleteMetadataStore].
   /// </summary>
   public sealed partial class DeleteMetadataStoreRequest : pb::IMessage<DeleteMetadataStoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1845,7 +1852,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of operations that perform [MetadataService.DeleteMetadataStore][google.cloud.aiplatform.v1.MetadataService.DeleteMetadataStore].
+  /// Details of operations that perform
+  /// [MetadataService.DeleteMetadataStore][google.cloud.aiplatform.v1.MetadataService.DeleteMetadataStore].
   /// </summary>
   public sealed partial class DeleteMetadataStoreOperationMetadata : pb::IMessage<DeleteMetadataStoreOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2049,7 +2057,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.CreateArtifact][google.cloud.aiplatform.v1.MetadataService.CreateArtifact].
+  /// Request message for
+  /// [MetadataService.CreateArtifact][google.cloud.aiplatform.v1.MetadataService.CreateArtifact].
   /// </summary>
   public sealed partial class CreateArtifactRequest : pb::IMessage<CreateArtifactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2342,7 +2351,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.GetArtifact][google.cloud.aiplatform.v1.MetadataService.GetArtifact].
+  /// Request message for
+  /// [MetadataService.GetArtifact][google.cloud.aiplatform.v1.MetadataService.GetArtifact].
   /// </summary>
   public sealed partial class GetArtifactRequest : pb::IMessage<GetArtifactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2539,7 +2549,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts].
+  /// Request message for
+  /// [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts].
   /// </summary>
   public sealed partial class ListArtifactsRequest : pb::IMessage<ListArtifactsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2626,7 +2637,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token, received from a previous [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts]
+    /// A page token, received from a previous
+    /// [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other provided parameters must match the call that
@@ -2934,7 +2946,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts].
+  /// Response message for
+  /// [MetadataService.ListArtifacts][google.cloud.aiplatform.v1.MetadataService.ListArtifacts].
   /// </summary>
   public sealed partial class ListArtifactsResponse : pb::IMessage<ListArtifactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2999,7 +3012,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListArtifactsRequest.page_token][google.cloud.aiplatform.v1.ListArtifactsRequest.page_token]
+    /// A token, which can be sent as
+    /// [ListArtifactsRequest.page_token][google.cloud.aiplatform.v1.ListArtifactsRequest.page_token]
     /// to retrieve the next page.
     /// If this field is not populated, there are no subsequent pages.
     /// </summary>
@@ -3160,7 +3174,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.UpdateArtifact][google.cloud.aiplatform.v1.MetadataService.UpdateArtifact].
+  /// Request message for
+  /// [MetadataService.UpdateArtifact][google.cloud.aiplatform.v1.MetadataService.UpdateArtifact].
   /// </summary>
   public sealed partial class UpdateArtifactRequest : pb::IMessage<UpdateArtifactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3213,9 +3228,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.Artifact artifact_;
     /// <summary>
     /// Required. The Artifact containing updates.
-    /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name] field is used to identify the Artifact to
-    /// be updated.
-    /// Format:
+    /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name]
+    /// field is used to identify the Artifact to be updated. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3247,7 +3261,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [Artifact][google.cloud.aiplatform.v1.Artifact] is not found, a new [Artifact][google.cloud.aiplatform.v1.Artifact] is
+    /// If set to true, and the [Artifact][google.cloud.aiplatform.v1.Artifact] is
+    /// not found, a new [Artifact][google.cloud.aiplatform.v1.Artifact] is
     /// created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3459,7 +3474,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.DeleteArtifact][google.cloud.aiplatform.v1.MetadataService.DeleteArtifact].
+  /// Request message for
+  /// [MetadataService.DeleteArtifact][google.cloud.aiplatform.v1.MetadataService.DeleteArtifact].
   /// </summary>
   public sealed partial class DeleteArtifactRequest : pb::IMessage<DeleteArtifactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3698,7 +3714,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
+  /// Request message for
+  /// [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
   /// </summary>
   public sealed partial class PurgeArtifactsRequest : pb::IMessage<PurgeArtifactsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3978,7 +3995,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
+  /// Response message for
+  /// [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
   /// </summary>
   public sealed partial class PurgeArtifactsResponse : pb::IMessage<PurgeArtifactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4205,7 +4223,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of operations that perform [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
+  /// Details of operations that perform
+  /// [MetadataService.PurgeArtifacts][google.cloud.aiplatform.v1.MetadataService.PurgeArtifacts].
   /// </summary>
   public sealed partial class PurgeArtifactsMetadata : pb::IMessage<PurgeArtifactsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4409,7 +4428,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.CreateContext][google.cloud.aiplatform.v1.MetadataService.CreateContext].
+  /// Request message for
+  /// [MetadataService.CreateContext][google.cloud.aiplatform.v1.MetadataService.CreateContext].
   /// </summary>
   public sealed partial class CreateContextRequest : pb::IMessage<CreateContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4461,9 +4481,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the MetadataStore where the Context should be
-    /// created.
-    /// Format:
+    /// Required. The resource name of the MetadataStore where the Context should
+    /// be created. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4702,7 +4721,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.GetContext][google.cloud.aiplatform.v1.MetadataService.GetContext].
+  /// Request message for
+  /// [MetadataService.GetContext][google.cloud.aiplatform.v1.MetadataService.GetContext].
   /// </summary>
   public sealed partial class GetContextRequest : pb::IMessage<GetContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4899,7 +4919,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts]
+  /// Request message for
+  /// [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts]
   /// </summary>
   public sealed partial class ListContextsRequest : pb::IMessage<ListContextsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4986,7 +5007,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token, received from a previous [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts]
+    /// A page token, received from a previous
+    /// [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other provided parameters must match the call that
@@ -5298,7 +5320,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts].
+  /// Response message for
+  /// [MetadataService.ListContexts][google.cloud.aiplatform.v1.MetadataService.ListContexts].
   /// </summary>
   public sealed partial class ListContextsResponse : pb::IMessage<ListContextsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5363,7 +5386,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListContextsRequest.page_token][google.cloud.aiplatform.v1.ListContextsRequest.page_token]
+    /// A token, which can be sent as
+    /// [ListContextsRequest.page_token][google.cloud.aiplatform.v1.ListContextsRequest.page_token]
     /// to retrieve the next page.
     /// If this field is not populated, there are no subsequent pages.
     /// </summary>
@@ -5524,7 +5548,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.UpdateContext][google.cloud.aiplatform.v1.MetadataService.UpdateContext].
+  /// Request message for
+  /// [MetadataService.UpdateContext][google.cloud.aiplatform.v1.MetadataService.UpdateContext].
   /// </summary>
   public sealed partial class UpdateContextRequest : pb::IMessage<UpdateContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5577,9 +5602,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.Context context_;
     /// <summary>
     /// Required. The Context containing updates.
-    /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field is used to identify the Context to be
-    /// updated.
-    /// Format:
+    /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field
+    /// is used to identify the Context to be updated. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5611,8 +5635,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [Context][google.cloud.aiplatform.v1.Context] is not found, a new [Context][google.cloud.aiplatform.v1.Context] is
-    /// created.
+    /// If set to true, and the [Context][google.cloud.aiplatform.v1.Context] is
+    /// not found, a new [Context][google.cloud.aiplatform.v1.Context] is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5823,7 +5847,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.DeleteContext][google.cloud.aiplatform.v1.MetadataService.DeleteContext].
+  /// Request message for
+  /// [MetadataService.DeleteContext][google.cloud.aiplatform.v1.MetadataService.DeleteContext].
   /// </summary>
   public sealed partial class DeleteContextRequest : pb::IMessage<DeleteContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6103,7 +6128,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
+  /// Request message for
+  /// [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
   /// </summary>
   public sealed partial class PurgeContextsRequest : pb::IMessage<PurgeContextsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6383,7 +6409,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
+  /// Response message for
+  /// [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
   /// </summary>
   public sealed partial class PurgeContextsResponse : pb::IMessage<PurgeContextsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6610,7 +6637,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of operations that perform [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
+  /// Details of operations that perform
+  /// [MetadataService.PurgeContexts][google.cloud.aiplatform.v1.MetadataService.PurgeContexts].
   /// </summary>
   public sealed partial class PurgeContextsMetadata : pb::IMessage<PurgeContextsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6814,7 +6842,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.AddContextArtifactsAndExecutions][google.cloud.aiplatform.v1.MetadataService.AddContextArtifactsAndExecutions].
+  /// Request message for
+  /// [MetadataService.AddContextArtifactsAndExecutions][google.cloud.aiplatform.v1.MetadataService.AddContextArtifactsAndExecutions].
   /// </summary>
   public sealed partial class AddContextArtifactsAndExecutionsRequest : pb::IMessage<AddContextArtifactsAndExecutionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6866,9 +6895,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ContextFieldNumber = 1;
     private string context_ = "";
     /// <summary>
-    /// Required. The resource name of the Context that the Artifacts and Executions
-    /// belong to.
-    /// Format:
+    /// Required. The resource name of the Context that the Artifacts and
+    /// Executions belong to. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7077,7 +7105,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.AddContextArtifactsAndExecutions][google.cloud.aiplatform.v1.MetadataService.AddContextArtifactsAndExecutions].
+  /// Response message for
+  /// [MetadataService.AddContextArtifactsAndExecutions][google.cloud.aiplatform.v1.MetadataService.AddContextArtifactsAndExecutions].
   /// </summary>
   public sealed partial class AddContextArtifactsAndExecutionsResponse : pb::IMessage<AddContextArtifactsAndExecutionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7232,7 +7261,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.AddContextChildren][google.cloud.aiplatform.v1.MetadataService.AddContextChildren].
+  /// Request message for
+  /// [MetadataService.AddContextChildren][google.cloud.aiplatform.v1.MetadataService.AddContextChildren].
   /// </summary>
   public sealed partial class AddContextChildrenRequest : pb::IMessage<AddContextChildrenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7459,7 +7489,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.AddContextChildren][google.cloud.aiplatform.v1.MetadataService.AddContextChildren].
+  /// Response message for
+  /// [MetadataService.AddContextChildren][google.cloud.aiplatform.v1.MetadataService.AddContextChildren].
   /// </summary>
   public sealed partial class AddContextChildrenResponse : pb::IMessage<AddContextChildrenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7842,7 +7873,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.RemoveContextChildren][google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren].
+  /// Response message for
+  /// [MetadataService.RemoveContextChildren][google.cloud.aiplatform.v1.MetadataService.RemoveContextChildren].
   /// </summary>
   public sealed partial class RemoveContextChildrenResponse : pb::IMessage<RemoveContextChildrenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7997,7 +8029,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.QueryContextLineageSubgraph][google.cloud.aiplatform.v1.MetadataService.QueryContextLineageSubgraph].
+  /// Request message for
+  /// [MetadataService.QueryContextLineageSubgraph][google.cloud.aiplatform.v1.MetadataService.QueryContextLineageSubgraph].
   /// </summary>
   public sealed partial class QueryContextLineageSubgraphRequest : pb::IMessage<QueryContextLineageSubgraphRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8199,7 +8232,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.CreateExecution][google.cloud.aiplatform.v1.MetadataService.CreateExecution].
+  /// Request message for
+  /// [MetadataService.CreateExecution][google.cloud.aiplatform.v1.MetadataService.CreateExecution].
   /// </summary>
   public sealed partial class CreateExecutionRequest : pb::IMessage<CreateExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8493,7 +8527,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.GetExecution][google.cloud.aiplatform.v1.MetadataService.GetExecution].
+  /// Request message for
+  /// [MetadataService.GetExecution][google.cloud.aiplatform.v1.MetadataService.GetExecution].
   /// </summary>
   public sealed partial class GetExecutionRequest : pb::IMessage<GetExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8690,7 +8725,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions].
+  /// Request message for
+  /// [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions].
   /// </summary>
   public sealed partial class ListExecutionsRequest : pb::IMessage<ListExecutionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8777,7 +8813,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token, received from a previous [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions]
+    /// A page token, received from a previous
+    /// [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other provided parameters must match the call that
@@ -9085,7 +9122,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions].
+  /// Response message for
+  /// [MetadataService.ListExecutions][google.cloud.aiplatform.v1.MetadataService.ListExecutions].
   /// </summary>
   public sealed partial class ListExecutionsResponse : pb::IMessage<ListExecutionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9150,7 +9188,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as [ListExecutionsRequest.page_token][google.cloud.aiplatform.v1.ListExecutionsRequest.page_token]
+    /// A token, which can be sent as
+    /// [ListExecutionsRequest.page_token][google.cloud.aiplatform.v1.ListExecutionsRequest.page_token]
     /// to retrieve the next page.
     /// If this field is not populated, there are no subsequent pages.
     /// </summary>
@@ -9311,7 +9350,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.UpdateExecution][google.cloud.aiplatform.v1.MetadataService.UpdateExecution].
+  /// Request message for
+  /// [MetadataService.UpdateExecution][google.cloud.aiplatform.v1.MetadataService.UpdateExecution].
   /// </summary>
   public sealed partial class UpdateExecutionRequest : pb::IMessage<UpdateExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9364,9 +9404,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.Execution execution_;
     /// <summary>
     /// Required. The Execution containing updates.
-    /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name] field is used to identify the Execution
-    /// to be updated.
-    /// Format:
+    /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name]
+    /// field is used to identify the Execution to be updated. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9398,8 +9437,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true, and the [Execution][google.cloud.aiplatform.v1.Execution] is not found, a new [Execution][google.cloud.aiplatform.v1.Execution]
-    /// is created.
+    /// If set to true, and the [Execution][google.cloud.aiplatform.v1.Execution]
+    /// is not found, a new [Execution][google.cloud.aiplatform.v1.Execution] is
+    /// created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9610,7 +9650,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.DeleteExecution][google.cloud.aiplatform.v1.MetadataService.DeleteExecution].
+  /// Request message for
+  /// [MetadataService.DeleteExecution][google.cloud.aiplatform.v1.MetadataService.DeleteExecution].
   /// </summary>
   public sealed partial class DeleteExecutionRequest : pb::IMessage<DeleteExecutionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9849,7 +9890,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
+  /// Request message for
+  /// [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
   /// </summary>
   public sealed partial class PurgeExecutionsRequest : pb::IMessage<PurgeExecutionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10129,7 +10171,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
+  /// Response message for
+  /// [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
   /// </summary>
   public sealed partial class PurgeExecutionsResponse : pb::IMessage<PurgeExecutionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10357,7 +10400,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of operations that perform [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
+  /// Details of operations that perform
+  /// [MetadataService.PurgeExecutions][google.cloud.aiplatform.v1.MetadataService.PurgeExecutions].
   /// </summary>
   public sealed partial class PurgeExecutionsMetadata : pb::IMessage<PurgeExecutionsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10561,7 +10605,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.AddExecutionEvents][google.cloud.aiplatform.v1.MetadataService.AddExecutionEvents].
+  /// Request message for
+  /// [MetadataService.AddExecutionEvents][google.cloud.aiplatform.v1.MetadataService.AddExecutionEvents].
   /// </summary>
   public sealed partial class AddExecutionEventsRequest : pb::IMessage<AddExecutionEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10788,7 +10833,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.AddExecutionEvents][google.cloud.aiplatform.v1.MetadataService.AddExecutionEvents].
+  /// Response message for
+  /// [MetadataService.AddExecutionEvents][google.cloud.aiplatform.v1.MetadataService.AddExecutionEvents].
   /// </summary>
   public sealed partial class AddExecutionEventsResponse : pb::IMessage<AddExecutionEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10943,7 +10989,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.QueryExecutionInputsAndOutputs][google.cloud.aiplatform.v1.MetadataService.QueryExecutionInputsAndOutputs].
+  /// Request message for
+  /// [MetadataService.QueryExecutionInputsAndOutputs][google.cloud.aiplatform.v1.MetadataService.QueryExecutionInputsAndOutputs].
   /// </summary>
   public sealed partial class QueryExecutionInputsAndOutputsRequest : pb::IMessage<QueryExecutionInputsAndOutputsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10993,9 +11040,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ExecutionFieldNumber = 1;
     private string execution_ = "";
     /// <summary>
-    /// Required. The resource name of the Execution whose input and output Artifacts should
-    /// be retrieved as a LineageSubgraph.
-    /// Format:
+    /// Required. The resource name of the Execution whose input and output
+    /// Artifacts should be retrieved as a LineageSubgraph. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11141,7 +11187,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.CreateMetadataSchema][google.cloud.aiplatform.v1.MetadataService.CreateMetadataSchema].
+  /// Request message for
+  /// [MetadataService.CreateMetadataSchema][google.cloud.aiplatform.v1.MetadataService.CreateMetadataSchema].
   /// </summary>
   public sealed partial class CreateMetadataSchemaRequest : pb::IMessage<CreateMetadataSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11193,9 +11240,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the MetadataStore where the MetadataSchema should
-    /// be created.
-    /// Format:
+    /// Required. The resource name of the MetadataStore where the MetadataSchema
+    /// should be created. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11435,7 +11481,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.GetMetadataSchema][google.cloud.aiplatform.v1.MetadataService.GetMetadataSchema].
+  /// Request message for
+  /// [MetadataService.GetMetadataSchema][google.cloud.aiplatform.v1.MetadataService.GetMetadataSchema].
   /// </summary>
   public sealed partial class GetMetadataSchemaRequest : pb::IMessage<GetMetadataSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11632,7 +11679,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas].
+  /// Request message for
+  /// [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas].
   /// </summary>
   public sealed partial class ListMetadataSchemasRequest : pb::IMessage<ListMetadataSchemasRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11720,8 +11768,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas] call. Provide this to retrieve the
-    /// next page.
+    /// [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas]
+    /// call. Provide this to retrieve the next page.
     ///
     /// When paginating, all other provided parameters must match the call that
     /// provided the page token. (Otherwise the request will fail with
@@ -11957,7 +12005,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas].
+  /// Response message for
+  /// [MetadataService.ListMetadataSchemas][google.cloud.aiplatform.v1.MetadataService.ListMetadataSchemas].
   /// </summary>
   public sealed partial class ListMetadataSchemasResponse : pb::IMessage<ListMetadataSchemasResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12023,8 +12072,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token, which can be sent as
-    /// [ListMetadataSchemasRequest.page_token][google.cloud.aiplatform.v1.ListMetadataSchemasRequest.page_token] to retrieve the next
-    /// page. If this field is not populated, there are no subsequent pages.
+    /// [ListMetadataSchemasRequest.page_token][google.cloud.aiplatform.v1.ListMetadataSchemasRequest.page_token]
+    /// to retrieve the next page. If this field is not populated, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12183,7 +12233,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [MetadataService.QueryArtifactLineageSubgraph][google.cloud.aiplatform.v1.MetadataService.QueryArtifactLineageSubgraph].
+  /// Request message for
+  /// [MetadataService.QueryArtifactLineageSubgraph][google.cloud.aiplatform.v1.MetadataService.QueryArtifactLineageSubgraph].
   /// </summary>
   public sealed partial class QueryArtifactLineageSubgraphRequest : pb::IMessage<QueryArtifactLineageSubgraphRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12235,9 +12286,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ArtifactFieldNumber = 1;
     private string artifact_ = "";
     /// <summary>
-    /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-    /// LineageSubgraph.
-    /// Format:
+    /// Required. The resource name of the Artifact whose Lineage needs to be
+    /// retrieved as a LineageSubgraph. Format:
     /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
     ///
     /// The request may error with FAILED_PRECONDITION if the number of Artifacts,

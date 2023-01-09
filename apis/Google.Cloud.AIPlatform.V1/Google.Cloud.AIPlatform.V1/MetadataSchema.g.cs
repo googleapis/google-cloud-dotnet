@@ -143,9 +143,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SchemaFieldNumber = 3;
     private string schema_ = "";
     /// <summary>
-    /// Required. The raw YAML string representation of the MetadataSchema. The combination
-    /// of [MetadataSchema.version] and the schema name given by `title` in
-    /// [MetadataSchema.schema] must be unique within a MetadataStore.
+    /// Required. The raw YAML string representation of the MetadataSchema. The
+    /// combination of [MetadataSchema.version] and the schema name given by
+    /// `title` in [MetadataSchema.schema] must be unique within a MetadataStore.
     ///
     /// The schema is defined as an OpenAPI 3.0.2
     /// [MetadataSchema

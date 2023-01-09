@@ -183,8 +183,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int BlobStoragePathPrefixFieldNumber = 10;
     private string blobStoragePathPrefix_ = "";
     /// <summary>
-    /// Output only. Consumer project Cloud Storage path prefix used to store blob data, which
-    /// can either be a bucket or directory. Does not end with a '/'.
+    /// Output only. Consumer project Cloud Storage path prefix used to store blob
+    /// data, which can either be a bucket or directory. Does not end with a '/'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

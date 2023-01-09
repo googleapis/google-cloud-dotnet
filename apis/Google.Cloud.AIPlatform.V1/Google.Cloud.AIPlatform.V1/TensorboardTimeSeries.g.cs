@@ -230,8 +230,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PluginNameFieldNumber = 8;
     private string pluginName_ = "";
     /// <summary>
-    /// Immutable. Name of the plugin this time series pertain to. Such as Scalar, Tensor,
-    /// Blob
+    /// Immutable. Name of the plugin this time series pertain to. Such as Scalar,
+    /// Tensor, Blob
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,7 +261,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetadataFieldNumber = 10;
     private global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.Metadata metadata_;
     /// <summary>
-    /// Output only. Scalar, Tensor, or Blob metadata for this TensorboardTimeSeries.
+    /// Output only. Scalar, Tensor, or Blob metadata for this
+    /// TensorboardTimeSeries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -729,7 +730,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int MaxStepFieldNumber = 1;
         private long maxStep_;
         /// <summary>
-        /// Output only. Max step index of all data points within a TensorboardTimeSeries.
+        /// Output only. Max step index of all data points within a
+        /// TensorboardTimeSeries.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -760,8 +762,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int MaxBlobSequenceLengthFieldNumber = 3;
         private long maxBlobSequenceLength_;
         /// <summary>
-        /// Output only. The largest blob sequence length (number of blobs) of all data points in
-        /// this time series, if its ValueType is BLOB_SEQUENCE.
+        /// Output only. The largest blob sequence length (number of blobs) of all
+        /// data points in this time series, if its ValueType is BLOB_SEQUENCE.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

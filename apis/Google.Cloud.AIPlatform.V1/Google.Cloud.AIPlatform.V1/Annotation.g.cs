@@ -132,8 +132,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PayloadSchemaUriFieldNumber = 2;
     private string payloadSchemaUri_ = "";
     /// <summary>
-    /// Required. Google Cloud Storage URI points to a YAML file describing [payload][google.cloud.aiplatform.v1.Annotation.payload]. The
-    /// schema is defined as an [OpenAPI 3.0.2 Schema
+    /// Required. Google Cloud Storage URI points to a YAML file describing
+    /// [payload][google.cloud.aiplatform.v1.Annotation.payload]. The schema is
+    /// defined as an [OpenAPI 3.0.2 Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// The schema files that can be used here are found in
     /// gs://google-cloud-aiplatform/schema/dataset/annotation/, note that the
@@ -199,8 +200,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Used to perform consistent read-modify-write updates. If not set, a blind
-    /// "overwrite" update happens.
+    /// Optional. Used to perform consistent read-modify-write updates. If not set,
+    /// a blind "overwrite" update happens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -232,7 +233,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. The labels with user-defined metadata to organize your Annotations.
+    /// Optional. The labels with user-defined metadata to organize your
+    /// Annotations.
     ///
     /// Label keys and values can be no longer than 64 characters
     /// (Unicode codepoints), can only contain lowercase letters, numeric
@@ -249,7 +251,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   If not set, the Annotation is not visible in the UI.
     ///
     /// * "aiplatform.googleapis.com/payload_schema":
-    ///   output only, its value is the [payload_schema's][google.cloud.aiplatform.v1.Annotation.payload_schema_uri]
+    ///   output only, its value is the
+    ///   [payload_schema's][google.cloud.aiplatform.v1.Annotation.payload_schema_uri]
     ///   title.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

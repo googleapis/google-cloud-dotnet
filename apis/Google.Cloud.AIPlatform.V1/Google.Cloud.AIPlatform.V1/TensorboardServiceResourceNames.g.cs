@@ -45,6 +45,18 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class ReadTensorboardUsageRequest
+    {
+        /// <summary>
+        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
+        /// </summary>
+        public TensorboardName TensorboardAsTensorboardName
+        {
+            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
+            set => Tensorboard = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListTensorboardsRequest
     {
         /// <summary>

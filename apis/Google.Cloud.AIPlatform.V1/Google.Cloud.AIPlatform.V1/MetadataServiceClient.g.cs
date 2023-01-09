@@ -1885,9 +1885,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="artifact">
         /// Required. The Artifact containing updates.
-        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name] field is used to identify the Artifact to
-        /// be updated.
-        /// Format:
+        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name]
+        /// field is used to identify the Artifact to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
@@ -1908,9 +1907,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="artifact">
         /// Required. The Artifact containing updates.
-        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name] field is used to identify the Artifact to
-        /// be updated.
-        /// Format:
+        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name]
+        /// field is used to identify the Artifact to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
@@ -1931,9 +1929,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="artifact">
         /// Required. The Artifact containing updates.
-        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name] field is used to identify the Artifact to
-        /// be updated.
-        /// Format:
+        /// The Artifact's [Artifact.name][google.cloud.aiplatform.v1.Artifact.name]
+        /// field is used to identify the Artifact to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// </param>
         /// <param name="updateMask">
@@ -2262,9 +2259,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2293,9 +2289,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2324,9 +2319,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2350,9 +2344,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2381,9 +2374,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2412,9 +2404,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a Context associated with a MetadataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the Context should be
-        /// created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the Context should
+        /// be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="context">
@@ -2705,9 +2696,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="context">
         /// Required. The Context containing updates.
-        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field is used to identify the Context to be
-        /// updated.
-        /// Format:
+        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field
+        /// is used to identify the Context to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
@@ -2728,9 +2718,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="context">
         /// Required. The Context containing updates.
-        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field is used to identify the Context to be
-        /// updated.
-        /// Format:
+        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field
+        /// is used to identify the Context to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
@@ -2751,9 +2740,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="context">
         /// Required. The Context containing updates.
-        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field is used to identify the Context to be
-        /// updated.
-        /// Format:
+        /// The Context's [Context.name][google.cloud.aiplatform.v1.Context.name] field
+        /// is used to identify the Context to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="updateMask">
@@ -3090,9 +3078,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -3130,9 +3117,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -3170,9 +3156,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -3199,9 +3184,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -3239,9 +3223,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -3279,9 +3262,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// simply skipped.
         /// </summary>
         /// <param name="context">
-        /// Required. The resource name of the Context that the Artifacts and Executions
-        /// belong to.
-        /// Format:
+        /// Required. The resource name of the Context that the Artifacts and
+        /// Executions belong to. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
         /// </param>
         /// <param name="artifacts">
@@ -4306,9 +4288,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="execution">
         /// Required. The Execution containing updates.
-        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name] field is used to identify the Execution
-        /// to be updated.
-        /// Format:
+        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name]
+        /// field is used to identify the Execution to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
@@ -4329,9 +4310,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="execution">
         /// Required. The Execution containing updates.
-        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name] field is used to identify the Execution
-        /// to be updated.
-        /// Format:
+        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name]
+        /// field is used to identify the Execution to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
@@ -4352,9 +4332,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="execution">
         /// Required. The Execution containing updates.
-        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name] field is used to identify the Execution
-        /// to be updated.
-        /// Format:
+        /// The Execution's [Execution.name][google.cloud.aiplatform.v1.Execution.name]
+        /// field is used to identify the Execution to be updated. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="updateMask">
@@ -4875,9 +4854,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4894,9 +4872,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4913,9 +4890,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4929,9 +4905,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4948,9 +4923,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4967,9 +4941,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Events.
         /// </summary>
         /// <param name="execution">
-        /// Required. The resource name of the Execution whose input and output Artifacts should
-        /// be retrieved as a LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Execution whose input and output
+        /// Artifacts should be retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5008,9 +4981,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5040,9 +5012,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5072,9 +5043,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5099,9 +5069,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5131,9 +5100,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5163,9 +5131,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a MetadataSchema.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the MetadataStore where the MetadataSchema should
-        /// be created.
-        /// Format:
+        /// Required. The resource name of the MetadataStore where the MetadataSchema
+        /// should be created. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
         /// </param>
         /// <param name="metadataSchema">
@@ -5460,9 +5427,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,
@@ -5482,9 +5448,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,
@@ -5504,9 +5469,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,
@@ -5523,9 +5487,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,
@@ -5545,9 +5508,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,
@@ -5567,9 +5529,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Executions connected by Event edges and returned as a LineageSubgraph.
         /// </summary>
         /// <param name="artifact">
-        /// Required. The resource name of the Artifact whose Lineage needs to be retrieved as a
-        /// LineageSubgraph.
-        /// Format:
+        /// Required. The resource name of the Artifact whose Lineage needs to be
+        /// retrieved as a LineageSubgraph. Format:
         /// `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
         /// 
         /// The request may error with FAILED_PRECONDITION if the number of Artifacts,

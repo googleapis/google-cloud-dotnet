@@ -52,146 +52,147 @@ namespace Google.Cloud.AIPlatform.V1 {
             "X3Rva2VuGAQgASgJEi0KCXJlYWRfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5GaWVsZE1hc2sSEAoIb3JkZXJfYnkYBiABKAkiYAoSTGlzdE1vZGVs",
             "c1Jlc3BvbnNlEjEKBm1vZGVscxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLk1vZGVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSK3AQoY",
+            "YXRmb3JtLnYxLk1vZGVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLJAQoY",
             "TGlzdE1vZGVsVmVyc2lvbnNSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpB",
             "IQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBIRCglwYWdlX3Np",
             "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkS",
             "LQoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
-            "ayJnChlMaXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNlEjEKBm1vZGVscxgBIAMo",
-            "CzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCSKBAQoSVXBkYXRlTW9kZWxSZXF1ZXN0EjUKBW1v",
-            "ZGVsGAEgASgLMiEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxC",
-            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBAiJLChJEZWxldGVNb2RlbFJlcXVlc3QSNQoEbmFtZRgB",
-            "IAEoCUIn4EEC+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVs",
-            "IlIKGURlbGV0ZU1vZGVsVmVyc2lvblJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn",
-            "4EEC+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsInEKGk1l",
-            "cmdlVmVyc2lvbkFsaWFzZXNSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpB",
-            "IQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBIcCg92ZXJzaW9u",
-            "X2FsaWFzZXMYAiADKAlCA+BBAiLuAgoSRXhwb3J0TW9kZWxSZXF1ZXN0EjUK",
+            "axIQCghvcmRlcl9ieRgGIAEoCSJnChlMaXN0TW9kZWxWZXJzaW9uc1Jlc3Bv",
+            "bnNlEjEKBm1vZGVscxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLk1vZGVsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKBAQoSVXBkYXRl",
+            "TW9kZWxSZXF1ZXN0EjUKBW1vZGVsGAEgASgLMiEuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuTW9kZWxCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJLChJEZWxldGVNb2Rl",
+            "bFJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9haXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL01vZGVsIlIKGURlbGV0ZU1vZGVsVmVyc2lvblJlcXVl",
+            "c3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL01vZGVsInEKGk1lcmdlVmVyc2lvbkFsaWFzZXNSZXF1ZXN0EjUK",
             "BG5hbWUYASABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9Nb2RlbBJXCg1vdXRwdXRfY29uZmlnGAIgASgLMjsuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuRXhwb3J0TW9kZWxSZXF1ZXN0Lk91dHB1dENvbmZp",
-            "Z0ID4EECGscBCgxPdXRwdXRDb25maWcSGAoQZXhwb3J0X2Zvcm1hdF9pZBgB",
-            "IAEoCRJIChRhcnRpZmFjdF9kZXN0aW5hdGlvbhgDIAEoCzIqLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uElMKEWltYWdlX2Rl",
-            "c3RpbmF0aW9uGAQgASgLMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "Q29udGFpbmVyUmVnaXN0cnlEZXN0aW5hdGlvbiKcAgocRXhwb3J0TW9kZWxP",
-            "cGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21ldGFkYXRhGAEgASgLMjQu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2VuZXJpY09wZXJhdGlvbk1l",
-            "dGFkYXRhEl0KC291dHB1dF9pbmZvGAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuRXhwb3J0TW9kZWxPcGVyYXRpb25NZXRhZGF0YS5PdXRw",
-            "dXRJbmZvQgPgQQMaTQoKT3V0cHV0SW5mbxIgChNhcnRpZmFjdF9vdXRwdXRf",
-            "dXJpGAIgASgJQgPgQQMSHQoQaW1hZ2Vfb3V0cHV0X3VyaRgDIAEoCUID4EED",
-            "IhUKE0V4cG9ydE1vZGVsUmVzcG9uc2UiowEKHEltcG9ydE1vZGVsRXZhbHVh",
-            "dGlvblJlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH2FpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSSgoQbW9kZWxfZXZhbHVhdGlvbhgC",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVh",
-            "dGlvbkID4EECIsQBCidCYXRjaEltcG9ydE1vZGVsRXZhbHVhdGlvblNsaWNl",
-            "c1JlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHgQQL6QSsKKWFpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uElYKF21vZGVsX2V2YWx1",
-            "YXRpb25fc2xpY2VzGAIgAygLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTW9kZWxFdmFsdWF0aW9uU2xpY2VCA+BBAiJZCihCYXRjaEltcG9ydE1v",
-            "ZGVsRXZhbHVhdGlvblNsaWNlc1Jlc3BvbnNlEi0KIGltcG9ydGVkX21vZGVs",
-            "X2V2YWx1YXRpb25fc2xpY2VzGAEgAygJQgPgQQMiXAoZR2V0TW9kZWxFdmFs",
-            "dWF0aW9uUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6QSsKKWFpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uIrwBChtMaXN0TW9k",
-            "ZWxFdmFsdWF0aW9uc1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEK",
-            "H2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSDgoGZmlsdGVyGAIg",
-            "ASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJEi0K",
-            "CXJlYWRfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
-            "fwocTGlzdE1vZGVsRXZhbHVhdGlvbnNSZXNwb25zZRJGChFtb2RlbF9ldmFs",
-            "dWF0aW9ucxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
-            "ZGVsRXZhbHVhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiZgoeR2V0",
-            "TW9kZWxFdmFsdWF0aW9uU2xpY2VSZXF1ZXN0EkQKBG5hbWUYASABKAlCNuBB",
-            "AvpBMAouYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbEV2YWx1YXRp",
-            "b25TbGljZSLLAQogTGlzdE1vZGVsRXZhbHVhdGlvblNsaWNlc1JlcXVlc3QS",
-            "QQoGcGFyZW50GAEgASgJQjHgQQL6QSsKKWFpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vTW9kZWxFdmFsdWF0aW9uEg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
-            "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRItCglyZWFkX21hc2sY",
-            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIo8BCiFMaXN0TW9k",
-            "ZWxFdmFsdWF0aW9uU2xpY2VzUmVzcG9uc2USUQoXbW9kZWxfZXZhbHVhdGlv",
-            "bl9zbGljZXMYASADKAsyMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5N",
-            "b2RlbEV2YWx1YXRpb25TbGljZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky",
-            "8hkKDE1vZGVsU2VydmljZRLgAQoLVXBsb2FkTW9kZWwSLi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5VcGxvYWRNb2RlbFJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoEBgtPkkwI2IjEvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tb2RlbHM6dXBsb2FkOgEq2kEMcGFy",
-            "ZW50LG1vZGVsykEzChNVcGxvYWRNb2RlbFJlc3BvbnNlEhxVcGxvYWRNb2Rl",
-            "bE9wZXJhdGlvbk1ldGFkYXRhEpUBCghHZXRNb2RlbBIrLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkdldE1vZGVsUmVxdWVzdBohLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsIjmC0+STAiwSKi92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfdpBBG5hbWUSqAEKCkxpc3RN",
-            "b2RlbHMSLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0TW9kZWxz",
-            "UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3RNb2Rl",
-            "bHNSZXNwb25zZSI7gtPkkwIsEiovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9tb2RlbHPaQQZwYXJlbnQSyAEKEUxpc3RNb2RlbFZlcnNp",
-            "b25zEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdE1vZGVsVmVy",
-            "c2lvbnNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlz",
-            "dE1vZGVsVmVyc2lvbnNSZXNwb25zZSJGgtPkkwI5EjcvdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06bGlzdFZlcnNpb25z2kEE",
-            "bmFtZRK1AQoLVXBkYXRlTW9kZWwSLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5VcGRhdGVNb2RlbFJlcXVlc3QaIS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5Nb2RlbCJTgtPkkwI5MjAvdjEve21vZGVsLm5hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06BW1vZGVs2kERbW9kZWwsdXBk",
-            "YXRlX21hc2sSygEKC0RlbGV0ZU1vZGVsEi4uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuRGVsZXRlTW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiJsgtPkkwIsKiovdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9tb2RlbHMvKn3aQQRuYW1lykEwChVnb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkSF0RlbGV0ZU9wZXJhdGlvbk1ldGFkYXRhEuYBChJEZWxldGVN",
-            "b2RlbFZlcnNpb24SNS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZWxl",
-            "dGVNb2RlbFZlcnNpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJ6gtPkkwI6KjgvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9tb2RlbHMvKn06ZGVsZXRlVmVyc2lvbtpBBG5hbWXKQTAKFWdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3BlcmF0aW9uTWV0YWRhdGES0gEK",
-            "E01lcmdlVmVyc2lvbkFsaWFzZXMSNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5NZXJnZVZlcnNpb25BbGlhc2VzUmVxdWVzdBohLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsImCC0+STAkMiPi92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfTptZXJnZVZlcnNpb25BbGlh",
-            "c2VzOgEq2kEUbmFtZSx2ZXJzaW9uX2FsaWFzZXMS5gEKC0V4cG9ydE1vZGVs",
-            "Ei4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwb3J0TW9kZWxSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKHAYLT5JMCNiIx",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyp9OmV4",
-            "cG9ydDoBKtpBEm5hbWUsb3V0cHV0X2NvbmZpZ8pBMwoTRXhwb3J0TW9kZWxS",
-            "ZXNwb25zZRIcRXhwb3J0TW9kZWxPcGVyYXRpb25NZXRhZGF0YRLkAQoVSW1w",
-            "b3J0TW9kZWxFdmFsdWF0aW9uEjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuSW1wb3J0TW9kZWxFdmFsdWF0aW9uUmVxdWVzdBorLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvbiJkgtPkkwJEIj8vdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfS9ldmFs",
-            "dWF0aW9uczppbXBvcnQ6ASraQRdwYXJlbnQsbW9kZWxfZXZhbHVhdGlvbhKo",
-            "AgogQmF0Y2hJbXBvcnRNb2RlbEV2YWx1YXRpb25TbGljZXMSQy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaEltcG9ydE1vZGVsRXZhbHVhdGlv",
-            "blNsaWNlc1JlcXVlc3QaRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5C",
-            "YXRjaEltcG9ydE1vZGVsRXZhbHVhdGlvblNsaWNlc1Jlc3BvbnNlInmC0+ST",
-            "AlIiTS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxz",
-            "LyovZXZhbHVhdGlvbnMvKn0vc2xpY2VzOmJhdGNoSW1wb3J0OgEq2kEecGFy",
-            "ZW50LG1vZGVsX2V2YWx1YXRpb25fc2xpY2VzEsEBChJHZXRNb2RlbEV2YWx1",
-            "YXRpb24SNS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZXRNb2RlbEV2",
-            "YWx1YXRpb25SZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "TW9kZWxFdmFsdWF0aW9uIkeC0+STAjoSOC92MS97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL21vZGVscy8qL2V2YWx1YXRpb25zLyp92kEEbmFtZRLU",
-            "AQoUTGlzdE1vZGVsRXZhbHVhdGlvbnMSNy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5MaXN0TW9kZWxFdmFsdWF0aW9uc1JlcXVlc3QaOC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0TW9kZWxFdmFsdWF0aW9uc1Jlc3Bv",
-            "bnNlIkmC0+STAjoSOC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovbW9kZWxzLyp9L2V2YWx1YXRpb25z2kEGcGFyZW50EtkBChdHZXRNb2Rl",
-            "bEV2YWx1YXRpb25TbGljZRI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkdldE1vZGVsRXZhbHVhdGlvblNsaWNlUmVxdWVzdBowLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvblNsaWNlIlCC0+STAkMS",
-            "QS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qL2V2",
-            "YWx1YXRpb25zLyovc2xpY2VzLyp92kEEbmFtZRLsAQoZTGlzdE1vZGVsRXZh",
-            "bHVhdGlvblNsaWNlcxI8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxp",
-            "c3RNb2RlbEV2YWx1YXRpb25TbGljZXNSZXF1ZXN0Gj0uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuTGlzdE1vZGVsRXZhbHVhdGlvblNsaWNlc1Jlc3Bv",
-            "bnNlIlKC0+STAkMSQS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovbW9kZWxzLyovZXZhbHVhdGlvbnMvKn0vc2xpY2Vz2kEGcGFyZW50Gk3K",
-            "QRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULVAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFNb2RlbFNlcnZpY2VQcm90b1ABWkRn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fp",
-            "cGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bS9Nb2RlbBIcCg92ZXJzaW9uX2FsaWFzZXMYAiADKAlCA+BBAiLuAgoSRXhw",
+            "b3J0TW9kZWxSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofYWlwbGF0",
+            "Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBJXCg1vdXRwdXRfY29uZmlnGAIg",
+            "ASgLMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwb3J0TW9kZWxS",
+            "ZXF1ZXN0Lk91dHB1dENvbmZpZ0ID4EECGscBCgxPdXRwdXRDb25maWcSGAoQ",
+            "ZXhwb3J0X2Zvcm1hdF9pZBgBIAEoCRJIChRhcnRpZmFjdF9kZXN0aW5hdGlv",
+            "bhgDIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3Rp",
+            "bmF0aW9uElMKEWltYWdlX2Rlc3RpbmF0aW9uGAQgASgLMjguZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVyUmVnaXN0cnlEZXN0aW5hdGlv",
+            "biKcAgocRXhwb3J0TW9kZWxPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmlj",
+            "X21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "R2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhEl0KC291dHB1dF9pbmZvGAIgASgL",
+            "MkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwb3J0TW9kZWxPcGVy",
+            "YXRpb25NZXRhZGF0YS5PdXRwdXRJbmZvQgPgQQMaTQoKT3V0cHV0SW5mbxIg",
+            "ChNhcnRpZmFjdF9vdXRwdXRfdXJpGAIgASgJQgPgQQMSHQoQaW1hZ2Vfb3V0",
+            "cHV0X3VyaRgDIAEoCUID4EEDIhUKE0V4cG9ydE1vZGVsUmVzcG9uc2UiowEK",
+            "HEltcG9ydE1vZGVsRXZhbHVhdGlvblJlcXVlc3QSNwoGcGFyZW50GAEgASgJ",
+            "QifgQQL6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSSgoQ",
+            "bW9kZWxfZXZhbHVhdGlvbhgCIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLk1vZGVsRXZhbHVhdGlvbkID4EECIsQBCidCYXRjaEltcG9ydE1v",
+            "ZGVsRXZhbHVhdGlvblNsaWNlc1JlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHg",
+            "QQL6QSsKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0",
+            "aW9uElYKF21vZGVsX2V2YWx1YXRpb25fc2xpY2VzGAIgAygLMjAuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uU2xpY2VCA+BB",
+            "AiJZCihCYXRjaEltcG9ydE1vZGVsRXZhbHVhdGlvblNsaWNlc1Jlc3BvbnNl",
+            "Ei0KIGltcG9ydGVkX21vZGVsX2V2YWx1YXRpb25fc2xpY2VzGAEgAygJQgPg",
+            "QQMiXAoZR2V0TW9kZWxFdmFsdWF0aW9uUmVxdWVzdBI/CgRuYW1lGAEgASgJ",
+            "QjHgQQL6QSsKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxFdmFs",
+            "dWF0aW9uIrwBChtMaXN0TW9kZWxFdmFsdWF0aW9uc1JlcXVlc3QSNwoGcGFy",
+            "ZW50GAEgASgJQifgQQL6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "TW9kZWwSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAQgASgJEi0KCXJlYWRfbWFzaxgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5GaWVsZE1hc2sifwocTGlzdE1vZGVsRXZhbHVhdGlvbnNSZXNw",
+            "b25zZRJGChFtb2RlbF9ldmFsdWF0aW9ucxgBIAMoCzIrLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvbhIXCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAkiZgoeR2V0TW9kZWxFdmFsdWF0aW9uU2xpY2VSZXF1ZXN0",
+            "EkQKBG5hbWUYASABKAlCNuBBAvpBMAouYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
+            "LmNvbS9Nb2RlbEV2YWx1YXRpb25TbGljZSLLAQogTGlzdE1vZGVsRXZhbHVh",
+            "dGlvblNsaWNlc1JlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHgQQL6QSsKKWFp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uEg4KBmZp",
+            "bHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgE",
+            "IAEoCRItCglyZWFkX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrIo8BCiFMaXN0TW9kZWxFdmFsdWF0aW9uU2xpY2VzUmVzcG9uc2US",
+            "UQoXbW9kZWxfZXZhbHVhdGlvbl9zbGljZXMYASADKAsyMC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5Nb2RlbEV2YWx1YXRpb25TbGljZRIXCg9uZXh0",
+            "X3BhZ2VfdG9rZW4YAiABKAky8hkKDE1vZGVsU2VydmljZRLgAQoLVXBsb2Fk",
+            "TW9kZWwSLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5VcGxvYWRNb2Rl",
+            "bFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoEBgtPk",
+            "kwI2IjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tb2Rl",
+            "bHM6dXBsb2FkOgEq2kEMcGFyZW50LG1vZGVsykEzChNVcGxvYWRNb2RlbFJl",
+            "c3BvbnNlEhxVcGxvYWRNb2RlbE9wZXJhdGlvbk1ldGFkYXRhEpUBCghHZXRN",
+            "b2RlbBIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdldE1vZGVsUmVx",
+            "dWVzdBohLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsIjmC0+ST",
+            "AiwSKi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8q",
+            "fdpBBG5hbWUSqAEKCkxpc3RNb2RlbHMSLS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5MaXN0TW9kZWxzUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkxpc3RNb2RlbHNSZXNwb25zZSI7gtPkkwIsEiovdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tb2RlbHPaQQZwYXJlbnQS",
+            "yAEKEUxpc3RNb2RlbFZlcnNpb25zEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuTGlzdE1vZGVsVmVyc2lvbnNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTGlzdE1vZGVsVmVyc2lvbnNSZXNwb25zZSJGgtPk",
+            "kwI5EjcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMv",
+            "Kn06bGlzdFZlcnNpb25z2kEEbmFtZRK1AQoLVXBkYXRlTW9kZWwSLi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5VcGRhdGVNb2RlbFJlcXVlc3QaIS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbCJTgtPkkwI5MjAvdjEv",
+            "e21vZGVsLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06",
+            "BW1vZGVs2kERbW9kZWwsdXBkYXRlX21hc2sSygEKC0RlbGV0ZU1vZGVsEi4u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlTW9kZWxSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJsgtPkkwIsKiovdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn3aQQRuYW1l",
+            "ykEwChVnb29nbGUucHJvdG9idWYuRW1wdHkSF0RlbGV0ZU9wZXJhdGlvbk1l",
+            "dGFkYXRhEuYBChJEZWxldGVNb2RlbFZlcnNpb24SNS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5EZWxldGVNb2RlbFZlcnNpb25SZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ6gtPkkwI6KjgvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06ZGVsZXRlVmVyc2lv",
+            "btpBBG5hbWXKQTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3Bl",
+            "cmF0aW9uTWV0YWRhdGES0gEKE01lcmdlVmVyc2lvbkFsaWFzZXMSNi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NZXJnZVZlcnNpb25BbGlhc2VzUmVx",
+            "dWVzdBohLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsImCC0+ST",
+            "AkMiPi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8q",
+            "fTptZXJnZVZlcnNpb25BbGlhc2VzOgEq2kEUbmFtZSx2ZXJzaW9uX2FsaWFz",
+            "ZXMS5gEKC0V4cG9ydE1vZGVsEi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuRXhwb3J0TW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiKHAYLT5JMCNiIxL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovbW9kZWxzLyp9OmV4cG9ydDoBKtpBEm5hbWUsb3V0cHV0X2NvbmZp",
+            "Z8pBMwoTRXhwb3J0TW9kZWxSZXNwb25zZRIcRXhwb3J0TW9kZWxPcGVyYXRp",
+            "b25NZXRhZGF0YRLkAQoVSW1wb3J0TW9kZWxFdmFsdWF0aW9uEjguZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuSW1wb3J0TW9kZWxFdmFsdWF0aW9uUmVx",
+            "dWVzdBorLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVh",
+            "dGlvbiJkgtPkkwJEIj8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL21vZGVscy8qfS9ldmFsdWF0aW9uczppbXBvcnQ6ASraQRdwYXJlbnQs",
+            "bW9kZWxfZXZhbHVhdGlvbhKoAgogQmF0Y2hJbXBvcnRNb2RlbEV2YWx1YXRp",
+            "b25TbGljZXMSQy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaElt",
+            "cG9ydE1vZGVsRXZhbHVhdGlvblNsaWNlc1JlcXVlc3QaRC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5CYXRjaEltcG9ydE1vZGVsRXZhbHVhdGlvblNs",
+            "aWNlc1Jlc3BvbnNlInmC0+STAlIiTS92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovbW9kZWxzLyovZXZhbHVhdGlvbnMvKn0vc2xpY2VzOmJh",
+            "dGNoSW1wb3J0OgEq2kEecGFyZW50LG1vZGVsX2V2YWx1YXRpb25fc2xpY2Vz",
+            "EsEBChJHZXRNb2RlbEV2YWx1YXRpb24SNS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5HZXRNb2RlbEV2YWx1YXRpb25SZXF1ZXN0GisuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uIkeC0+STAjoSOC92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qL2V2YWx1",
+            "YXRpb25zLyp92kEEbmFtZRLUAQoUTGlzdE1vZGVsRXZhbHVhdGlvbnMSNy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0TW9kZWxFdmFsdWF0aW9u",
+            "c1JlcXVlc3QaOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0TW9k",
+            "ZWxFdmFsdWF0aW9uc1Jlc3BvbnNlIkmC0+STAjoSOC92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyp9L2V2YWx1YXRpb25z2kEG",
+            "cGFyZW50EtkBChdHZXRNb2RlbEV2YWx1YXRpb25TbGljZRI6Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkdldE1vZGVsRXZhbHVhdGlvblNsaWNlUmVx",
+            "dWVzdBowLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVh",
+            "dGlvblNsaWNlIlCC0+STAkMSQS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL21vZGVscy8qL2V2YWx1YXRpb25zLyovc2xpY2VzLyp92kEEbmFt",
+            "ZRLsAQoZTGlzdE1vZGVsRXZhbHVhdGlvblNsaWNlcxI8Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLkxpc3RNb2RlbEV2YWx1YXRpb25TbGljZXNSZXF1",
+            "ZXN0Gj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdE1vZGVsRXZh",
+            "bHVhdGlvblNsaWNlc1Jlc3BvbnNlIlKC0+STAkMSQS92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyovZXZhbHVhdGlvbnMvKn0v",
+            "c2xpY2Vz2kEGcGFyZW50Gk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
+            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFNb2Rl",
+            "bFNlcnZpY2VQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSliceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -201,7 +202,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetModelRequest), global::Google.Cloud.AIPlatform.V1.GetModelRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListModelsRequest), global::Google.Cloud.AIPlatform.V1.ListModelsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListModelsResponse), global::Google.Cloud.AIPlatform.V1.ListModelsResponse.Parser, new[]{ "Models", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest), global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest.Parser, new[]{ "Name", "PageSize", "PageToken", "Filter", "ReadMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest), global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest.Parser, new[]{ "Name", "PageSize", "PageToken", "Filter", "ReadMask", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse), global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse.Parser, new[]{ "Models", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UpdateModelRequest), global::Google.Cloud.AIPlatform.V1.UpdateModelRequest.Parser, new[]{ "Model", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeleteModelRequest), global::Google.Cloud.AIPlatform.V1.DeleteModelRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -226,7 +227,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel].
+  /// Request message for
+  /// [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel].
   /// </summary>
   public sealed partial class UploadModelRequest : pb::IMessage<UploadModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -296,8 +298,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentModelFieldNumber = 4;
     private string parentModel_ = "";
     /// <summary>
-    /// Optional. The resource name of the model into which to upload the version. Only
-    /// specify this field when uploading a new version.
+    /// Optional. The resource name of the model into which to upload the version.
+    /// Only specify this field when uploading a new version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -602,7 +604,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel] operation.
+  /// Details of
+  /// [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel]
+  /// operation.
   /// </summary>
   public sealed partial class UploadModelOperationMetadata : pb::IMessage<UploadModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -806,7 +810,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message of [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel] operation.
+  /// Response message of
+  /// [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel]
+  /// operation.
   /// </summary>
   public sealed partial class UploadModelResponse : pb::IMessage<UploadModelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1042,7 +1048,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.GetModel][google.cloud.aiplatform.v1.ModelService.GetModel].
+  /// Request message for
+  /// [ModelService.GetModel][google.cloud.aiplatform.v1.ModelService.GetModel].
   /// </summary>
   public sealed partial class GetModelRequest : pb::IMessage<GetModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1248,7 +1255,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels].
+  /// Request message for
+  /// [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels].
   /// </summary>
   public sealed partial class ListModelsRequest : pb::IMessage<ListModelsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1323,7 +1331,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// both snake_case and camelCase are supported.
     ///
     ///   * `model` supports = and !=. `model` represents the Model ID,
-    ///     i.e. the last segment of the Model's [resource name][google.cloud.aiplatform.v1.Model.name].
+    ///     i.e. the last segment of the Model's [resource
+    ///     name][google.cloud.aiplatform.v1.Model.name].
     ///   * `display_name` supports = and !=
     ///   * `labels` supports general map functions that is:
     ///     * `labels.key=value` - key:value equality
@@ -1366,8 +1375,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListModelsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelsResponse.next_page_token] of the previous
-    /// [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels] call.
+    /// [ListModelsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelsResponse.next_page_token]
+    /// of the previous
+    /// [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1679,7 +1690,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels]
+  /// Response message for
+  /// [ModelService.ListModels][google.cloud.aiplatform.v1.ModelService.ListModels]
   /// </summary>
   public sealed partial class ListModelsResponse : pb::IMessage<ListModelsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1745,7 +1757,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListModelsRequest.page_token][google.cloud.aiplatform.v1.ListModelsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListModelsRequest.page_token][google.cloud.aiplatform.v1.ListModelsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1904,7 +1918,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ListModelVersions][google.cloud.aiplatform.v1.ModelService.ListModelVersions].
+  /// Request message for
+  /// [ModelService.ListModelVersions][google.cloud.aiplatform.v1.ModelService.ListModelVersions].
   /// </summary>
   public sealed partial class ListModelVersionsRequest : pb::IMessage<ListModelVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1945,6 +1960,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
       readMask_ = other.readMask_ != null ? other.readMask_.Clone() : null;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1990,8 +2006,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListModelVersionsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelVersionsResponse.next_page_token] of the previous
-    /// [ModelService.ListModelversions][] call.
+    /// [ListModelVersionsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelVersionsResponse.next_page_token]
+    /// of the previous [ModelService.ListModelversions][] call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2042,6 +2058,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 6;
+    private string orderBy_ = "";
+    /// <summary>
+    /// A comma-separated list of fields to order by, sorted in ascending order.
+    /// Use "desc" after a field name for descending.
+    /// Supported fields:
+    ///
+    ///   * `create_time`
+    ///   * `update_time`
+    ///
+    /// Example: `update_time asc, create_time desc`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2062,6 +2100,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
       if (!object.Equals(ReadMask, other.ReadMask)) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2074,6 +2113,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (readMask_ != null) hash ^= ReadMask.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2112,6 +2152,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReadMask);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2142,6 +2186,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReadMask);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2166,6 +2214,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (readMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadMask);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2196,6 +2247,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           ReadMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         ReadMask.MergeFrom(other.ReadMask);
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2233,6 +2287,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               ReadMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(ReadMask);
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
             break;
           }
         }
@@ -2273,6 +2331,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(ReadMask);
             break;
           }
+          case 50: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2281,7 +2343,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [ModelService.ListModelVersions][google.cloud.aiplatform.v1.ModelService.ListModelVersions]
+  /// Response message for
+  /// [ModelService.ListModelVersions][google.cloud.aiplatform.v1.ModelService.ListModelVersions]
   /// </summary>
   public sealed partial class ListModelVersionsResponse : pb::IMessage<ListModelVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2349,7 +2412,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListModelVersionsRequest.page_token][google.cloud.aiplatform.v1.ListModelVersionsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListModelVersionsRequest.page_token][google.cloud.aiplatform.v1.ListModelVersionsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2508,7 +2573,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.UpdateModel][google.cloud.aiplatform.v1.ModelService.UpdateModel].
+  /// Request message for
+  /// [ModelService.UpdateModel][google.cloud.aiplatform.v1.ModelService.UpdateModel].
   /// </summary>
   public sealed partial class UpdateModelRequest : pb::IMessage<UpdateModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2592,7 +2658,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Required. The update mask applies to the resource.
-    /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+    /// For the `FieldMask` definition, see
+    /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2779,7 +2846,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel].
+  /// Request message for
+  /// [ModelService.DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel].
   /// </summary>
   public sealed partial class DeleteModelRequest : pb::IMessage<DeleteModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2975,7 +3043,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.DeleteModelVersion][google.cloud.aiplatform.v1.ModelService.DeleteModelVersion].
+  /// Request message for
+  /// [ModelService.DeleteModelVersion][google.cloud.aiplatform.v1.ModelService.DeleteModelVersion].
   /// </summary>
   public sealed partial class DeleteModelVersionRequest : pb::IMessage<DeleteModelVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3025,8 +3094,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the model version to be deleted, with a version ID explicitly
-    /// included.
+    /// Required. The name of the model version to be deleted, with a version ID
+    /// explicitly included.
     ///
     /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
     /// </summary>
@@ -3173,7 +3242,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.MergeVersionAliases][google.cloud.aiplatform.v1.ModelService.MergeVersionAliases].
+  /// Request message for
+  /// [ModelService.MergeVersionAliases][google.cloud.aiplatform.v1.ModelService.MergeVersionAliases].
   /// </summary>
   public sealed partial class MergeVersionAliasesRequest : pb::IMessage<MergeVersionAliasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3411,7 +3481,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel].
+  /// Request message for
+  /// [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel].
   /// </summary>
   public sealed partial class ExportModelRequest : pb::IMessage<ExportModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3713,8 +3784,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         private string exportFormatId_ = "";
         /// <summary>
         /// The ID of the format in which the Model must be exported. Each Model
-        /// lists the [export formats it supports][google.cloud.aiplatform.v1.Model.supported_export_formats].
-        /// If no value is provided here, then the first from the list of the Model's
+        /// lists the [export formats it
+        /// supports][google.cloud.aiplatform.v1.Model.supported_export_formats]. If
+        /// no value is provided here, then the first from the list of the Model's
         /// supported formats is used by default.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3971,7 +4043,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Details of [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel] operation.
+  /// Details of
+  /// [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel]
+  /// operation.
   /// </summary>
   public sealed partial class ExportModelOperationMetadata : pb::IMessage<ExportModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4037,7 +4111,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OutputInfoFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1.ExportModelOperationMetadata.Types.OutputInfo outputInfo_;
     /// <summary>
-    /// Output only. Information further describing the output of this Model export.
+    /// Output only. Information further describing the output of this Model
+    /// export.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4279,9 +4354,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int ArtifactOutputUriFieldNumber = 2;
         private string artifactOutputUri_ = "";
         /// <summary>
-        /// Output only. If the Model artifact is being exported to Google Cloud Storage this is
-        /// the full path of the directory created, into which the Model files are
-        /// being written to.
+        /// Output only. If the Model artifact is being exported to Google Cloud
+        /// Storage this is the full path of the directory created, into which the
+        /// Model files are being written to.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4296,8 +4371,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int ImageOutputUriFieldNumber = 3;
         private string imageOutputUri_ = "";
         /// <summary>
-        /// Output only. If the Model image is being exported to Google Container Registry or
-        /// Artifact Registry this is the full path of the image created.
+        /// Output only. If the Model image is being exported to Google Container
+        /// Registry or Artifact Registry this is the full path of the image created.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4471,7 +4546,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message of [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel] operation.
+  /// Response message of
+  /// [ModelService.ExportModel][google.cloud.aiplatform.v1.ModelService.ExportModel]
+  /// operation.
   /// </summary>
   public sealed partial class ExportModelResponse : pb::IMessage<ExportModelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4626,7 +4703,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ImportModelEvaluation][google.cloud.aiplatform.v1.ModelService.ImportModelEvaluation]
+  /// Request message for
+  /// [ModelService.ImportModelEvaluation][google.cloud.aiplatform.v1.ModelService.ImportModelEvaluation]
   /// </summary>
   public sealed partial class ImportModelEvaluationRequest : pb::IMessage<ImportModelEvaluationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4871,7 +4949,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.BatchImportModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices]
+  /// Request message for
+  /// [ModelService.BatchImportModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices]
   /// </summary>
   public sealed partial class BatchImportModelEvaluationSlicesRequest : pb::IMessage<BatchImportModelEvaluationSlicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5097,7 +5176,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [ModelService.BatchImportModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices]
+  /// Response message for
+  /// [ModelService.BatchImportModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.BatchImportModelEvaluationSlices]
   /// </summary>
   public sealed partial class BatchImportModelEvaluationSlicesResponse : pb::IMessage<BatchImportModelEvaluationSlicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5149,7 +5229,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> importedModelEvaluationSlices_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. List of imported [ModelEvaluationSlice.name][google.cloud.aiplatform.v1.ModelEvaluationSlice.name].
+    /// Output only. List of imported
+    /// [ModelEvaluationSlice.name][google.cloud.aiplatform.v1.ModelEvaluationSlice.name].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5281,7 +5362,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.GetModelEvaluation][google.cloud.aiplatform.v1.ModelService.GetModelEvaluation].
+  /// Request message for
+  /// [ModelService.GetModelEvaluation][google.cloud.aiplatform.v1.ModelService.GetModelEvaluation].
   /// </summary>
   public sealed partial class GetModelEvaluationRequest : pb::IMessage<GetModelEvaluationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5478,7 +5560,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations].
+  /// Request message for
+  /// [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations].
   /// </summary>
   public sealed partial class ListModelEvaluationsRequest : pb::IMessage<ListModelEvaluationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5580,8 +5663,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListModelEvaluationsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelEvaluationsResponse.next_page_token] of the previous
-    /// [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations] call.
+    /// [ListModelEvaluationsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelEvaluationsResponse.next_page_token]
+    /// of the previous
+    /// [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5846,7 +5931,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations].
+  /// Response message for
+  /// [ModelService.ListModelEvaluations][google.cloud.aiplatform.v1.ModelService.ListModelEvaluations].
   /// </summary>
   public sealed partial class ListModelEvaluationsResponse : pb::IMessage<ListModelEvaluationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5912,7 +5998,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListModelEvaluationsRequest.page_token][google.cloud.aiplatform.v1.ListModelEvaluationsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListModelEvaluationsRequest.page_token][google.cloud.aiplatform.v1.ListModelEvaluationsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6071,7 +6159,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.GetModelEvaluationSlice][google.cloud.aiplatform.v1.ModelService.GetModelEvaluationSlice].
+  /// Request message for
+  /// [ModelService.GetModelEvaluationSlice][google.cloud.aiplatform.v1.ModelService.GetModelEvaluationSlice].
   /// </summary>
   public sealed partial class GetModelEvaluationSliceRequest : pb::IMessage<GetModelEvaluationSliceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6268,7 +6357,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices].
+  /// Request message for
+  /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices].
   /// </summary>
   public sealed partial class ListModelEvaluationSlicesRequest : pb::IMessage<ListModelEvaluationSlicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6322,8 +6412,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the ModelEvaluation to list the ModelEvaluationSlices
-    /// from. Format:
+    /// Required. The resource name of the ModelEvaluation to list the
+    /// ModelEvaluationSlices from. Format:
     /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6373,8 +6463,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListModelEvaluationSlicesResponse.next_page_token][google.cloud.aiplatform.v1.ListModelEvaluationSlicesResponse.next_page_token] of the previous
-    /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices] call.
+    /// [ListModelEvaluationSlicesResponse.next_page_token][google.cloud.aiplatform.v1.ListModelEvaluationSlicesResponse.next_page_token]
+    /// of the previous
+    /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6639,7 +6731,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices].
+  /// Response message for
+  /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices].
   /// </summary>
   public sealed partial class ListModelEvaluationSlicesResponse : pb::IMessage<ListModelEvaluationSlicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6705,8 +6798,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListModelEvaluationSlicesRequest.page_token][google.cloud.aiplatform.v1.ListModelEvaluationSlicesRequest.page_token] to obtain that
-    /// page.
+    /// Pass to
+    /// [ListModelEvaluationSlicesRequest.page_token][google.cloud.aiplatform.v1.ListModelEvaluationSlicesRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

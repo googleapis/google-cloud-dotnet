@@ -289,10 +289,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// Vertex AI's given location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location that the migratable resources should be searched from.
-        /// It's the Vertex AI location that the resources can be migrated to, not
-        /// the resources' original location.
-        /// Format:
+        /// Required. The location that the migratable resources should be searched
+        /// from. It's the Vertex AI location that the resources can be migrated to,
+        /// not the resources' original location. Format:
         /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
@@ -319,10 +318,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// Vertex AI's given location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location that the migratable resources should be searched from.
-        /// It's the Vertex AI location that the resources can be migrated to, not
-        /// the resources' original location.
-        /// Format:
+        /// Required. The location that the migratable resources should be searched
+        /// from. It's the Vertex AI location that the resources can be migrated to,
+        /// not the resources' original location. Format:
         /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
@@ -349,10 +347,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// Vertex AI's given location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location that the migratable resources should be searched from.
-        /// It's the Vertex AI location that the resources can be migrated to, not
-        /// the resources' original location.
-        /// Format:
+        /// Required. The location that the migratable resources should be searched
+        /// from. It's the Vertex AI location that the resources can be migrated to,
+        /// not the resources' original location. Format:
         /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
@@ -379,10 +376,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// Vertex AI's given location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location that the migratable resources should be searched from.
-        /// It's the Vertex AI location that the resources can be migrated to, not
-        /// the resources' original location.
-        /// Format:
+        /// Required. The location that the migratable resources should be searched
+        /// from. It's the Vertex AI location that the resources can be migrated to,
+        /// not the resources' original location. Format:
         /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">

@@ -44,6 +44,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListModelVersionsResponse, Model> response = modelServiceClient.ListModelVersionsAsync(request);

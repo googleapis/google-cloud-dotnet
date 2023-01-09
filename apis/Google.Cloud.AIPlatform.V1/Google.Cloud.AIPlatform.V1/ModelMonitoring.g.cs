@@ -1745,8 +1745,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Output from [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob] for Model Monitoring baseline dataset,
-          /// which can be used to generate baseline attribution scores.
+          /// Output from
+          /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob] for
+          /// Model Monitoring baseline dataset, which can be used to generate baseline
+          /// attribution scores.
           /// </summary>
           public sealed partial class ExplanationBaseline : pb::IMessage<ExplanationBaseline>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

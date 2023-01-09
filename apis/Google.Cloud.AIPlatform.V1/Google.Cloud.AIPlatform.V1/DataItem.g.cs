@@ -180,9 +180,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PayloadFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Value payload_;
     /// <summary>
-    /// Required. The data that the DataItem represents (for example, an image or a text
-    /// snippet). The schema of the payload is stored in the parent Dataset's
-    /// [metadata schema's][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri] dataItemSchemaUri field.
+    /// Required. The data that the DataItem represents (for example, an image or a
+    /// text snippet). The schema of the payload is stored in the parent Dataset's
+    /// [metadata schema's][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri]
+    /// dataItemSchemaUri field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -197,8 +198,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EtagFieldNumber = 7;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Used to perform consistent read-modify-write updates. If not set, a blind
-    /// "overwrite" update happens.
+    /// Optional. Used to perform consistent read-modify-write updates. If not set,
+    /// a blind "overwrite" update happens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

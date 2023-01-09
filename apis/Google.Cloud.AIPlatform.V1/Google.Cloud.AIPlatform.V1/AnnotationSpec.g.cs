@@ -168,8 +168,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EtagFieldNumber = 5;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Used to perform consistent read-modify-write updates. If not set, a blind
-    /// "overwrite" update happens.
+    /// Optional. Used to perform consistent read-modify-write updates. If not set,
+    /// a blind "overwrite" update happens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

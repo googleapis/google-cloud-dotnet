@@ -131,9 +131,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// See the [list of machine types supported for custom
     /// training](https://cloud.google.com/vertex-ai/docs/training/configure-compute#machine-types).
     ///
-    /// For [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] this field is optional, and the default
-    /// value is `n1-standard-2`. For [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob] or as part of
-    /// [WorkerPoolSpec][google.cloud.aiplatform.v1.WorkerPoolSpec] this field is required.
+    /// For [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] this field is
+    /// optional, and the default value is `n1-standard-2`. For
+    /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob] or as
+    /// part of [WorkerPoolSpec][google.cloud.aiplatform.v1.WorkerPoolSpec] this
+    /// field is required.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -148,7 +150,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int AcceleratorTypeFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1.AcceleratorType acceleratorType_ = global::Google.Cloud.AIPlatform.V1.AcceleratorType.Unspecified;
     /// <summary>
-    /// Immutable. The type of accelerator(s) that may be attached to the machine as per
+    /// Immutable. The type of accelerator(s) that may be attached to the machine
+    /// as per
     /// [accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -411,7 +414,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MachineSpecFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1.MachineSpec machineSpec_;
     /// <summary>
-    /// Required. Immutable. The specification of a single machine used by the prediction.
+    /// Required. Immutable. The specification of a single machine used by the
+    /// prediction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -426,8 +430,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MinReplicaCountFieldNumber = 2;
     private int minReplicaCount_;
     /// <summary>
-    /// Required. Immutable. The minimum number of machine replicas this DeployedModel will be always
-    /// deployed on. This value must be greater than or equal to 1.
+    /// Required. Immutable. The minimum number of machine replicas this
+    /// DeployedModel will be always deployed on. This value must be greater than
+    /// or equal to 1.
     ///
     /// If traffic against the DeployedModel increases, it may dynamically be
     /// deployed onto more replicas, and as traffic decreases, some of these extra
@@ -446,14 +451,15 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MaxReplicaCountFieldNumber = 3;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be deployed on when
-    /// the traffic against it increases. If the requested value is too large,
-    /// the deployment will error, but if deployment succeeds then the ability
-    /// to scale the model to that many replicas is guaranteed (barring service
-    /// outages). If traffic against the DeployedModel increases beyond what its
-    /// replicas at maximum may handle, a portion of the traffic will be dropped.
-    /// If this value is not provided, will use [min_replica_count][google.cloud.aiplatform.v1.DedicatedResources.min_replica_count] as the
-    /// default value.
+    /// Immutable. The maximum number of replicas this DeployedModel may be
+    /// deployed on when the traffic against it increases. If the requested value
+    /// is too large, the deployment will error, but if deployment succeeds then
+    /// the ability to scale the model to that many replicas is guaranteed (barring
+    /// service outages). If traffic against the DeployedModel increases beyond
+    /// what its replicas at maximum may handle, a portion of the traffic will be
+    /// dropped. If this value is not provided, will use
+    /// [min_replica_count][google.cloud.aiplatform.v1.DedicatedResources.min_replica_count]
+    /// as the default value.
     ///
     /// The value of this field impacts the charge against Vertex CPU and GPU
     /// quotas. Specifically, you will be charged for (max_replica_count *
@@ -480,21 +486,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// target value (default to 60 if not set). At most one entry is allowed per
     /// metric.
     ///
-    /// If [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count] is
-    /// above 0, the autoscaling will be based on both CPU utilization and
+    /// If
+    /// [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count]
+    /// is above 0, the autoscaling will be based on both CPU utilization and
     /// accelerator's duty cycle metrics and scale up when either metrics exceeds
     /// its target value while scale down if both metrics are under their target
     /// value. The default target value is 60 for both metrics.
     ///
-    /// If [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count] is
-    /// 0, the autoscaling will be based on CPU utilization metric only with
+    /// If
+    /// [machine_spec.accelerator_count][google.cloud.aiplatform.v1.MachineSpec.accelerator_count]
+    /// is 0, the autoscaling will be based on CPU utilization metric only with
     /// default target value 60 if not explicitly set.
     ///
     /// For example, in the case of Online Prediction, if you want to override
     /// target CPU utilization to 80, you should set
     /// [autoscaling_metric_specs.metric_name][google.cloud.aiplatform.v1.AutoscalingMetricSpec.metric_name]
     /// to `aiplatform.googleapis.com/prediction/online/cpu/utilization` and
-    /// [autoscaling_metric_specs.target][google.cloud.aiplatform.v1.AutoscalingMetricSpec.target] to `80`.
+    /// [autoscaling_metric_specs.target][google.cloud.aiplatform.v1.AutoscalingMetricSpec.target]
+    /// to `80`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -760,11 +769,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MinReplicaCountFieldNumber = 1;
     private int minReplicaCount_;
     /// <summary>
-    /// Immutable. The minimum number of replicas this DeployedModel will be always deployed
-    /// on. If traffic against it increases, it may dynamically be deployed onto
-    /// more replicas up to [max_replica_count][google.cloud.aiplatform.v1.AutomaticResources.max_replica_count], and as traffic decreases, some
-    /// of these extra replicas may be freed.
-    /// If the requested value is too large, the deployment will error.
+    /// Immutable. The minimum number of replicas this DeployedModel will be always
+    /// deployed on. If traffic against it increases, it may dynamically be
+    /// deployed onto more replicas up to
+    /// [max_replica_count][google.cloud.aiplatform.v1.AutomaticResources.max_replica_count],
+    /// and as traffic decreases, some of these extra replicas may be freed. If the
+    /// requested value is too large, the deployment will error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -779,15 +789,15 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MaxReplicaCountFieldNumber = 2;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be deployed on when
-    /// the traffic against it increases. If the requested value is too large,
-    /// the deployment will error, but if deployment succeeds then the ability
-    /// to scale the model to that many replicas is guaranteed (barring service
-    /// outages). If traffic against the DeployedModel increases beyond what its
-    /// replicas at maximum may handle, a portion of the traffic will be dropped.
-    /// If this value is not provided, a no upper bound for scaling under heavy
-    /// traffic will be assume, though Vertex AI may be unable to scale beyond
-    /// certain replica number.
+    /// Immutable. The maximum number of replicas this DeployedModel may be
+    /// deployed on when the traffic against it increases. If the requested value
+    /// is too large, the deployment will error, but if deployment succeeds then
+    /// the ability to scale the model to that many replicas is guaranteed (barring
+    /// service outages). If traffic against the DeployedModel increases beyond
+    /// what its replicas at maximum may handle, a portion of the traffic will be
+    /// dropped. If this value is not provided, a no upper bound for scaling under
+    /// heavy traffic will be assume, though Vertex AI may be unable to scale
+    /// beyond certain replica number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1024,8 +1034,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int StartingReplicaCountFieldNumber = 2;
     private int startingReplicaCount_;
     /// <summary>
-    /// Immutable. The number of machine replicas used at the start of the batch operation.
-    /// If not set, Vertex AI decides starting number, not greater than
+    /// Immutable. The number of machine replicas used at the start of the batch
+    /// operation. If not set, Vertex AI decides starting number, not greater than
     /// [max_replica_count][google.cloud.aiplatform.v1.BatchDedicatedResources.max_replica_count]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1041,8 +1051,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MaxReplicaCountFieldNumber = 3;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of machine replicas the batch operation may be scaled
-    /// to. The default value is 10.
+    /// Immutable. The maximum number of machine replicas the batch operation may
+    /// be scaled to. The default value is 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1294,9 +1304,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ReplicaHoursFieldNumber = 1;
     private double replicaHours_;
     /// <summary>
-    /// Output only. The number of replica hours used. Note that many replicas may run in
-    /// parallel, and additionally any given work may be queued for some time.
-    /// Therefore this value is not strictly related to wall time.
+    /// Output only. The number of replica hours used. Note that many replicas may
+    /// run in parallel, and additionally any given work may be queued for some
+    /// time. Therefore this value is not strictly related to wall time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1762,8 +1772,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MountPointFieldNumber = 3;
     private string mountPoint_ = "";
     /// <summary>
-    /// Required. Destination mount path. The NFS will be mounted for the user under
-    /// /mnt/nfs/&lt;mount_point>
+    /// Required. Destination mount path. The NFS will be mounted for the user
+    /// under /mnt/nfs/&lt;mount_point>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

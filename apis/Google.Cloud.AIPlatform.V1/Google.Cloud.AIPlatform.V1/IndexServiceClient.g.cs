@@ -816,7 +816,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -835,7 +836,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -854,7 +856,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -864,7 +867,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -875,7 +879,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -886,7 +891,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -923,7 +929,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -941,7 +948,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -959,7 +967,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -974,7 +983,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -992,7 +1002,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -1010,7 +1021,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Index resource to be deleted.
@@ -1286,7 +1298,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1300,7 +1313,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes an Index.
         /// An Index can only be deleted when all its
-        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had been undeployed.
+        /// [DeployedIndexes][google.cloud.aiplatform.v1.Index.deployed_indexes] had
+        /// been undeployed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

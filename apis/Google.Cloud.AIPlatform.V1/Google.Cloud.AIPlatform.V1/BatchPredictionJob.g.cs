@@ -108,8 +108,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// A job that uses a [Model][google.cloud.aiplatform.v1.BatchPredictionJob.model] to produce predictions
-  /// on multiple [input instances][google.cloud.aiplatform.v1.BatchPredictionJob.input_config]. If
+  /// A job that uses a
+  /// [Model][google.cloud.aiplatform.v1.BatchPredictionJob.model] to produce
+  /// predictions on multiple [input
+  /// instances][google.cloud.aiplatform.v1.BatchPredictionJob.input_config]. If
   /// predictions for significant portion of the instances fail, the job may finish
   /// without attempting predictions for all remaining instances.
   /// </summary>
@@ -237,7 +239,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelVersionIdFieldNumber = 30;
     private string modelVersionId_ = "";
     /// <summary>
-    /// Output only. The version ID of the Model that produces the predictions via this job.
+    /// Output only. The version ID of the Model that produces the predictions via
+    /// this job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -269,9 +272,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int InputConfigFieldNumber = 4;
     private global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig inputConfig_;
     /// <summary>
-    /// Required. Input configuration of the instances on which predictions are performed.
-    /// The schema of any single instance may be specified via
-    /// the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
+    /// Required. Input configuration of the instances on which predictions are
+    /// performed. The schema of any single instance may be specified via the
+    /// [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
     /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
     /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
     /// </summary>
@@ -289,7 +292,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Value modelParameters_;
     /// <summary>
     /// The parameters that govern the predictions. The schema of the parameters
-    /// may be specified via the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
+    /// may be specified via the
+    /// [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
     /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
     /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
     /// </summary>
@@ -329,7 +333,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources dedicatedResources_;
     /// <summary>
     /// The config of resources used by the Model during the batch prediction. If
-    /// the Model [supports][google.cloud.aiplatform.v1.Model.supported_deployment_resources_types]
+    /// the Model
+    /// [supports][google.cloud.aiplatform.v1.Model.supported_deployment_resources_types]
     /// DEDICATED_RESOURCES this config may be provided (and the job will use these
     /// resources), if the Model doesn't support AUTOMATIC_RESOURCES, this config
     /// must be provided.
@@ -368,9 +373,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ManualBatchTuningParametersFieldNumber = 8;
     private global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParameters manualBatchTuningParameters_;
     /// <summary>
-    /// Immutable. Parameters configuring the batch behavior. Currently only applicable when
-    /// [dedicated_resources][google.cloud.aiplatform.v1.BatchPredictionJob.dedicated_resources] are used (in other cases Vertex AI does
-    /// the tuning itself).
+    /// Immutable. Parameters configuring the batch behavior. Currently only
+    /// applicable when
+    /// [dedicated_resources][google.cloud.aiplatform.v1.BatchPredictionJob.dedicated_resources]
+    /// are used (in other cases Vertex AI does the tuning itself).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -389,17 +395,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     /// When set to `true`, the batch prediction output changes based on the
     /// `predictions_format` field of the
-    /// [BatchPredictionJob.output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config] object:
+    /// [BatchPredictionJob.output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config]
+    /// object:
     ///
     ///  * `bigquery`: output includes a column named `explanation`. The value
-    ///    is a struct that conforms to the [Explanation][google.cloud.aiplatform.v1.Explanation] object.
+    ///    is a struct that conforms to the
+    ///    [Explanation][google.cloud.aiplatform.v1.Explanation] object.
     ///  * `jsonl`: The JSON objects on each line include an additional entry
     ///    keyed `explanation`. The value of the entry is a JSON object that
-    ///    conforms to the [Explanation][google.cloud.aiplatform.v1.Explanation] object.
+    ///    conforms to the [Explanation][google.cloud.aiplatform.v1.Explanation]
+    ///    object.
     ///  * `csv`: Generating explanations for CSV format is not supported.
     ///
-    /// If this field is set to true, either the [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec] or
-    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec] must be populated.
+    /// If this field is set to true, either the
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]
+    /// or
+    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec]
+    /// must be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -415,12 +427,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.ExplanationSpec explanationSpec_;
     /// <summary>
     /// Explanation configuration for this BatchPredictionJob. Can be
-    /// specified only if [generate_explanation][google.cloud.aiplatform.v1.BatchPredictionJob.generate_explanation] is set to `true`.
+    /// specified only if
+    /// [generate_explanation][google.cloud.aiplatform.v1.BatchPredictionJob.generate_explanation]
+    /// is set to `true`.
     ///
-    /// This value overrides the value of [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]. All fields of
-    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec] are optional in the request. If a field of the
-    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec] object is not populated, the corresponding field of
-    /// the [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec] object is inherited.
+    /// This value overrides the value of
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec].
+    /// All fields of
+    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec]
+    /// are optional in the request. If a field of the
+    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec]
+    /// object is not populated, the corresponding field of the
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]
+    /// object is inherited.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -498,8 +517,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ResourcesConsumedFieldNumber = 13;
     private global::Google.Cloud.AIPlatform.V1.ResourcesConsumed resourcesConsumed_;
     /// <summary>
-    /// Output only. Information about resources that had been consumed by this job.
-    /// Provided in real time at best effort basis, as well as a final value
+    /// Output only. Information about resources that had been consumed by this
+    /// job. Provided in real time at best effort basis, as well as a final value
     /// once the job completes.
     ///
     /// Note: This field currently may be not populated for batch predictions that
@@ -548,8 +567,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int StartTimeFieldNumber = 16;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Output only. Time when the BatchPredictionJob for the first time entered the
-    /// `JOB_STATE_RUNNING` state.
+    /// Output only. Time when the BatchPredictionJob for the first time entered
+    /// the `JOB_STATE_RUNNING` state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -564,8 +583,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EndTimeFieldNumber = 17;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. Time when the BatchPredictionJob entered any of the following states:
-    /// `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+    /// Output only. Time when the BatchPredictionJob entered any of the following
+    /// states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1465,9 +1484,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Configures the input to [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].
-      /// See [Model.supported_input_storage_formats][google.cloud.aiplatform.v1.Model.supported_input_storage_formats] for Model's supported input
-      /// formats, and how instances should be expressed via any of them.
+      /// Configures the input to
+      /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob]. See
+      /// [Model.supported_input_storage_formats][google.cloud.aiplatform.v1.Model.supported_input_storage_formats]
+      /// for Model's supported input formats, and how instances should be expressed
+      /// via any of them.
       /// </summary>
       public sealed partial class InputConfig : pb::IMessage<InputConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1807,9 +1828,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
-      /// Configures the output of [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].
-      /// See [Model.supported_output_storage_formats][google.cloud.aiplatform.v1.Model.supported_output_storage_formats] for supported output
-      /// formats, and how predictions are expressed via any of them.
+      /// Configures the output of
+      /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob]. See
+      /// [Model.supported_output_storage_formats][google.cloud.aiplatform.v1.Model.supported_output_storage_formats]
+      /// for supported output formats, and how predictions are expressed via any of
+      /// them.
       /// </summary>
       public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1874,11 +1897,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Inside of it files `predictions_0001.&lt;extension>`,
         /// `predictions_0002.&lt;extension>`, ..., `predictions_N.&lt;extension>`
         /// are created where `&lt;extension>` depends on chosen
-        /// [predictions_format][google.cloud.aiplatform.v1.BatchPredictionJob.OutputConfig.predictions_format], and N may equal 0001 and depends on the total
-        /// number of successfully predicted instances.
-        /// If the Model has both [instance][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// and [prediction][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri] schemata
-        /// defined then each such file contains predictions as per the
+        /// [predictions_format][google.cloud.aiplatform.v1.BatchPredictionJob.OutputConfig.predictions_format],
+        /// and N may equal 0001 and depends on the total number of successfully
+        /// predicted instances. If the Model has both
+        /// [instance][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// and
+        /// [prediction][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri]
+        /// schemata defined then each such file contains predictions as per the
         /// [predictions_format][google.cloud.aiplatform.v1.BatchPredictionJob.OutputConfig.predictions_format].
         /// If prediction for any instance failed (partially or completely), then
         /// an additional `errors_0001.&lt;extension>`, `errors_0002.&lt;extension>`,...,
@@ -1909,13 +1934,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// become underscores), and timestamp is in
         /// YYYY_MM_DDThh_mm_ss_sssZ "based on ISO-8601" format. In the dataset
         /// two tables will be created, `predictions`, and `errors`.
-        /// If the Model has both [instance][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// and [prediction][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri] schemata
-        /// defined then the tables have columns as follows: The `predictions`
-        /// table contains instances for which the prediction succeeded, it
-        /// has columns as per a concatenation of the Model's instance and
-        /// prediction schemata. The `errors` table contains rows for which the
-        /// prediction has failed, it has instance columns, as per the
+        /// If the Model has both
+        /// [instance][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// and
+        /// [prediction][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri]
+        /// schemata defined then the tables have columns as follows: The
+        /// `predictions` table contains instances for which the prediction
+        /// succeeded, it has columns as per a concatenation of the Model's
+        /// instance and prediction schemata. The `errors` table contains rows for
+        /// which the prediction has failed, it has instance columns, as per the
         /// instance schema, followed by a single "errors" column, which as values
         /// has [google.rpc.Status][google.rpc.Status]
         /// represented as a STRUCT, and containing only `code` and `message`.
@@ -1934,8 +1961,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int PredictionsFormatFieldNumber = 1;
         private string predictionsFormat_ = "";
         /// <summary>
-        /// Required. The format in which Vertex AI gives the predictions, must be one of the
-        /// [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
+        /// Required. The format in which Vertex AI gives the predictions, must be
+        /// one of the [Model's][google.cloud.aiplatform.v1.BatchPredictionJob.model]
         /// [supported_output_storage_formats][google.cloud.aiplatform.v1.Model.supported_output_storage_formats].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2182,7 +2209,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
       /// <summary>
       /// Further describes this job's output.
-      /// Supplements [output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config].
+      /// Supplements
+      /// [output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config].
       /// </summary>
       public sealed partial class OutputInfo : pb::IMessage<OutputInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2240,8 +2268,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>Field number for the "gcs_output_directory" field.</summary>
         public const int GcsOutputDirectoryFieldNumber = 1;
         /// <summary>
-        /// Output only. The full path of the Cloud Storage directory created, into which
-        /// the prediction output is written.
+        /// Output only. The full path of the Cloud Storage directory created, into
+        /// which the prediction output is written.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

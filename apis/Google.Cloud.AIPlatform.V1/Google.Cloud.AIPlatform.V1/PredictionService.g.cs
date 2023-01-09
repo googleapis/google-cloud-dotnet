@@ -88,7 +88,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict].
+  /// Request message for
+  /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -180,7 +181,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Value parameters_;
     /// <summary>
     /// The parameters that govern the prediction. The schema of the parameters may
-    /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+    /// be specified via Endpoint's DeployedModels' [Model's
+    /// ][google.cloud.aiplatform.v1.DeployedModel.model]
     /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
     /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
     /// </summary>
@@ -374,7 +376,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict].
+  /// Response message for
+  /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict].
   /// </summary>
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -461,8 +464,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelFieldNumber = 3;
     private string model_ = "";
     /// <summary>
-    /// Output only. The resource name of the Model which is deployed as the DeployedModel that
-    /// this prediction hits.
+    /// Output only. The resource name of the Model which is deployed as the
+    /// DeployedModel that this prediction hits.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -477,8 +480,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelVersionIdFieldNumber = 5;
     private string modelVersionId_ = "";
     /// <summary>
-    /// Output only. The version ID of the Model which is deployed as the DeployedModel that
-    /// this prediction hits.
+    /// Output only. The version ID of the Model which is deployed as the
+    /// DeployedModel that this prediction hits.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -493,8 +496,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelDisplayNameFieldNumber = 4;
     private string modelDisplayName_ = "";
     /// <summary>
-    /// Output only. The [display name][google.cloud.aiplatform.v1.Model.display_name] of the Model which is deployed as
-    /// the DeployedModel that this prediction hits.
+    /// Output only. The [display
+    /// name][google.cloud.aiplatform.v1.Model.display_name] of the Model which is
+    /// deployed as the DeployedModel that this prediction hits.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -725,7 +729,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [PredictionService.RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict].
+  /// Request message for
+  /// [PredictionService.RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict].
   /// </summary>
   public sealed partial class RawPredictRequest : pb::IMessage<RawPredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -795,16 +800,18 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The prediction input. Supports HTTP headers and arbitrary data payload.
     ///
-    /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-    /// supports per request. When this limit it is exceeded for an AutoML model,
-    /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-    /// When this limit is exceeded for a custom-trained model, the behavior varies
-    /// depending on the model.
+    /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+    /// upper limit on the number of instances it supports per request. When this
+    /// limit it is exceeded for an AutoML model, the
+    /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+    /// method returns an error. When this limit is exceeded for a custom-trained
+    /// model, the behavior varies depending on the model.
     ///
     /// You can specify the schema for each instance in the
     /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-    /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-    /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+    /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+    /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+    /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
     /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -983,7 +990,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
+  /// Request message for
+  /// [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
   /// </summary>
   public sealed partial class ExplainRequest : pb::IMessage<ExplainRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1077,7 +1085,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Value parameters_;
     /// <summary>
     /// The parameters that govern the prediction. The schema of the parameters may
-    /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+    /// be specified via Endpoint's DeployedModels' [Model's
+    /// ][google.cloud.aiplatform.v1.DeployedModel.model]
     /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
     /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
     /// </summary>
@@ -1095,9 +1104,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.ExplanationSpecOverride explanationSpecOverride_;
     /// <summary>
     /// If specified, overrides the
-    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] of the DeployedModel.
-    /// Can be used for explaining prediction results with different
-    /// configurations, such as:
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+    /// of the DeployedModel. Can be used for explaining prediction results with
+    /// different configurations, such as:
     ///  - Explaining top-5 predictions results as opposed to top-1;
     ///  - Increasing path count or step count of the attribution methods to reduce
     ///    approximate errors;
@@ -1117,7 +1126,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string deployedModelId_ = "";
     /// <summary>
     /// If specified, this ExplainRequest will be served by the chosen
-    /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+    /// DeployedModel, overriding
+    /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1366,7 +1376,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
+  /// Response message for
+  /// [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
   /// </summary>
   public sealed partial class ExplainResponse : pb::IMessage<ExplainResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1420,10 +1431,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.Explanation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Explanation> explanations_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Explanation>();
     /// <summary>
-    /// The explanations of the Model's [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions].
+    /// The explanations of the Model's
+    /// [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions].
     ///
-    /// It has the same number of elements as [instances][google.cloud.aiplatform.v1.ExplainRequest.instances]
-    /// to be explained.
+    /// It has the same number of elements as
+    /// [instances][google.cloud.aiplatform.v1.ExplainRequest.instances] to be
+    /// explained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1453,7 +1466,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value> predictions_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
     /// The predictions that are the output of the predictions call.
-    /// Same as [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions].
+    /// Same as
+    /// [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
