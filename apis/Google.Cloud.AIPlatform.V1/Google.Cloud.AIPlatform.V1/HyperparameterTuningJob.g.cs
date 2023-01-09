@@ -235,8 +235,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TrialJobSpecFieldNumber = 8;
     private global::Google.Cloud.AIPlatform.V1.CustomJobSpec trialJobSpec_;
     /// <summary>
-    /// Required. The spec of a trial job. The same spec applies to the CustomJobs created
-    /// in all the trials.
+    /// Required. The spec of a trial job. The same spec applies to the CustomJobs
+    /// created in all the trials.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -295,8 +295,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int StartTimeFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Output only. Time when the HyperparameterTuningJob for the first time entered the
-    /// `JOB_STATE_RUNNING` state.
+    /// Output only. Time when the HyperparameterTuningJob for the first time
+    /// entered the `JOB_STATE_RUNNING` state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -311,8 +311,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EndTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. Time when the HyperparameterTuningJob entered any of the following states:
-    /// `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+    /// Output only. Time when the HyperparameterTuningJob entered any of the
+    /// following states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`,
+    /// `JOB_STATE_CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -327,7 +328,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateTimeFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Time when the HyperparameterTuningJob was most recently updated.
+    /// Output only. Time when the HyperparameterTuningJob was most recently
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

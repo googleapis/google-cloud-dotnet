@@ -133,8 +133,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ContainerSpecFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1.ModelContainerSpec containerSpec_;
     /// <summary>
-    /// Input only. The specification of the container that is to be used when deploying
-    /// this Model.
+    /// Input only. The specification of the container that is to be used when
+    /// deploying this Model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

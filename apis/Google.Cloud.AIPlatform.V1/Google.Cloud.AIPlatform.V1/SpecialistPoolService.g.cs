@@ -110,7 +110,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [SpecialistPoolService.CreateSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.CreateSpecialistPool].
+  /// Request message for
+  /// [SpecialistPoolService.CreateSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.CreateSpecialistPool].
   /// </summary>
   public sealed partial class CreateSpecialistPoolRequest : pb::IMessage<CreateSpecialistPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -560,7 +561,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [SpecialistPoolService.GetSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.GetSpecialistPool].
+  /// Request message for
+  /// [SpecialistPoolService.GetSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.GetSpecialistPool].
   /// </summary>
   public sealed partial class GetSpecialistPoolRequest : pb::IMessage<GetSpecialistPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -757,7 +759,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools].
+  /// Request message for
+  /// [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools].
   /// </summary>
   public sealed partial class ListSpecialistPoolsRequest : pb::IMessage<ListSpecialistPoolsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -842,9 +845,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// The standard list page token.
-    /// Typically obtained by [ListSpecialistPoolsResponse.next_page_token][google.cloud.aiplatform.v1.ListSpecialistPoolsResponse.next_page_token] of
-    /// the previous [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools] call. Return
-    /// first page if empty.
+    /// Typically obtained by
+    /// [ListSpecialistPoolsResponse.next_page_token][google.cloud.aiplatform.v1.ListSpecialistPoolsResponse.next_page_token]
+    /// of the previous
+    /// [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools]
+    /// call. Return first page if empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1085,7 +1090,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools].
+  /// Response message for
+  /// [SpecialistPoolService.ListSpecialistPools][google.cloud.aiplatform.v1.SpecialistPoolService.ListSpecialistPools].
   /// </summary>
   public sealed partial class ListSpecialistPoolsResponse : pb::IMessage<ListSpecialistPoolsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1309,7 +1315,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [SpecialistPoolService.DeleteSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.DeleteSpecialistPool].
+  /// Request message for
+  /// [SpecialistPoolService.DeleteSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.DeleteSpecialistPool].
   /// </summary>
   public sealed partial class DeleteSpecialistPoolRequest : pb::IMessage<DeleteSpecialistPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1547,7 +1554,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [SpecialistPoolService.UpdateSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.UpdateSpecialistPool].
+  /// Request message for
+  /// [SpecialistPoolService.UpdateSpecialistPool][google.cloud.aiplatform.v1.SpecialistPoolService.UpdateSpecialistPool].
   /// </summary>
   public sealed partial class UpdateSpecialistPoolRequest : pb::IMessage<UpdateSpecialistPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1852,8 +1860,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SpecialistPoolFieldNumber = 1;
     private string specialistPool_ = "";
     /// <summary>
-    /// Output only. The name of the SpecialistPool to which the specialists are being added.
-    /// Format:
+    /// Output only. The name of the SpecialistPool to which the specialists are
+    /// being added. Format:
     /// `projects/{project_id}/locations/{location_id}/specialistPools/{specialist_pool}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -107,8 +107,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// The TrainingPipeline orchestrates tasks associated with training a Model. It
   /// always executes the training task, and optionally may also
   /// export data from Vertex AI's Dataset which becomes the training input,
-  /// [upload][google.cloud.aiplatform.v1.ModelService.UploadModel] the Model to Vertex AI, and evaluate the
-  /// Model.
+  /// [upload][google.cloud.aiplatform.v1.ModelService.UploadModel] the Model to
+  /// Vertex AI, and evaluate the Model.
   /// </summary>
   public sealed partial class TrainingPipeline : pb::IMessage<TrainingPipeline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -205,11 +205,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.InputDataConfig inputDataConfig_;
     /// <summary>
     /// Specifies Vertex AI owned input data that may be used for training the
-    /// Model. The TrainingPipeline's [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition] should make
-    /// clear whether this config is used and if there are any special requirements
-    /// on how it should be filled. If nothing about this config is mentioned in
-    /// the [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition], then it should be assumed that the
-    /// TrainingPipeline does not depend on this configuration.
+    /// Model. The TrainingPipeline's
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]
+    /// should make clear whether this config is used and if there are any special
+    /// requirements on how it should be filled. If nothing about this config is
+    /// mentioned in the
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition],
+    /// then it should be assumed that the TrainingPipeline does not depend on this
+    /// configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -224,10 +227,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TrainingTaskDefinitionFieldNumber = 4;
     private string trainingTaskDefinition_ = "";
     /// <summary>
-    /// Required. A Google Cloud Storage path to the YAML file that defines the training task
-    /// which is responsible for producing the model artifact, and may also include
-    /// additional auxiliary work.
-    /// The definition files that can be used here are found in
+    /// Required. A Google Cloud Storage path to the YAML file that defines the
+    /// training task which is responsible for producing the model artifact, and
+    /// may also include additional auxiliary work. The definition files that can
+    /// be used here are found in
     /// gs://google-cloud-aiplatform/schema/trainingjob/definition/.
     /// Note: The URI given on output will be immutable and probably different,
     /// including the URI scheme, than the one given on input. The output URI will
@@ -247,7 +250,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.Value trainingTaskInputs_;
     /// <summary>
     /// Required. The training task's parameter(s), as specified in the
-    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]'s `inputs`.
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]'s
+    /// `inputs`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -262,11 +266,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TrainingTaskMetadataFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Value trainingTaskMetadata_;
     /// <summary>
-    /// Output only. The metadata information as specified in the [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]'s
+    /// Output only. The metadata information as specified in the
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]'s
     /// `metadata`. This metadata is an auxiliary runtime and final information
     /// about the training task. While the pipeline is running this information is
     /// populated only at a best effort basis. Only present if the
-    /// pipeline's [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition] contains `metadata` object.
+    /// pipeline's
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]
+    /// contains `metadata` object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -281,20 +288,22 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelToUploadFieldNumber = 7;
     private global::Google.Cloud.AIPlatform.V1.Model modelToUpload_;
     /// <summary>
-    /// Describes the Model that may be uploaded (via [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel])
+    /// Describes the Model that may be uploaded (via
+    /// [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel])
     /// by this TrainingPipeline. The TrainingPipeline's
-    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition] should make clear whether this Model
-    /// description should be populated, and if there are any special requirements
-    /// regarding how it should be filled. If nothing is mentioned in the
-    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition], then it should be assumed that this field
-    /// should not be filled and the training task either uploads the Model without
-    /// a need of this information, or that training task does not support
-    /// uploading a Model as part of the pipeline.
-    /// When the Pipeline's state becomes `PIPELINE_STATE_SUCCEEDED` and
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition]
+    /// should make clear whether this Model description should be populated, and
+    /// if there are any special requirements regarding how it should be filled. If
+    /// nothing is mentioned in the
+    /// [training_task_definition][google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition],
+    /// then it should be assumed that this field should not be filled and the
+    /// training task either uploads the Model without a need of this information,
+    /// or that training task does not support uploading a Model as part of the
+    /// pipeline. When the Pipeline's state becomes `PIPELINE_STATE_SUCCEEDED` and
     /// the trained Model had been uploaded into Vertex AI, then the
-    /// model_to_upload's resource [name][google.cloud.aiplatform.v1.Model.name] is populated. The Model
-    /// is always uploaded into the Project and Location in which this pipeline
-    /// is.
+    /// model_to_upload's resource [name][google.cloud.aiplatform.v1.Model.name] is
+    /// populated. The Model is always uploaded into the Project and Location in
+    /// which this pipeline is.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -328,8 +337,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentModelFieldNumber = 21;
     private string parentModel_ = "";
     /// <summary>
-    /// Optional. When specify this field, the `model_to_upload` will not be uploaded as a
-    /// new model, instead, it will become a new version of this `parent_model`.
+    /// Optional. When specify this field, the `model_to_upload` will not be
+    /// uploaded as a new model, instead, it will become a new version of this
+    /// `parent_model`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -359,8 +369,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ErrorFieldNumber = 10;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    /// Output only. Only populated when the pipeline's state is `PIPELINE_STATE_FAILED` or
-    /// `PIPELINE_STATE_CANCELLED`.
+    /// Output only. Only populated when the pipeline's state is
+    /// `PIPELINE_STATE_FAILED` or `PIPELINE_STATE_CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -406,8 +416,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EndTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. Time when the TrainingPipeline entered any of the following states:
-    /// `PIPELINE_STATE_SUCCEEDED`, `PIPELINE_STATE_FAILED`,
+    /// Output only. Time when the TrainingPipeline entered any of the following
+    /// states: `PIPELINE_STATE_SUCCEEDED`, `PIPELINE_STATE_FAILED`,
     /// `PIPELINE_STATE_CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -462,7 +472,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// TrainingPipeline will be secured by this key.
     ///
     /// Note: Model trained by this TrainingPipeline is also secured by this key if
-    /// [model_to_upload][google.cloud.aiplatform.v1.TrainingPipeline.encryption_spec] is not set separately.
+    /// [model_to_upload][google.cloud.aiplatform.v1.TrainingPipeline.encryption_spec]
+    /// is not set separately.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1301,9 +1312,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DatasetIdFieldNumber = 1;
     private string datasetId_ = "";
     /// <summary>
-    /// Required. The ID of the Dataset in the same Project and Location which data will be
-    /// used to train the Model. The Dataset must use schema compatible with
-    /// Model being trained, and what is compatible should be described in the
+    /// Required. The ID of the Dataset in the same Project and Location which data
+    /// will be used to train the Model. The Dataset must use schema compatible
+    /// with Model being trained, and what is compatible should be described in the
     /// used TrainingPipeline's [training_task_definition]
     /// [google.cloud.aiplatform.v1.TrainingPipeline.training_task_definition].
     /// For tabular Datasets, all their data is exported to training, to pick
@@ -1329,9 +1340,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// are used in respectively training, validation or test role, depending on
     /// the role of the DataItem they are on (for the auto-assigned that role is
     /// decided by Vertex AI). A filter with same syntax as the one used in
-    /// [ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations] may be used, but note
-    /// here it filters across all Annotations of the Dataset, and not just within
-    /// a single DataItem.
+    /// [ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations]
+    /// may be used, but note here it filters across all Annotations of the
+    /// Dataset, and not just within a single DataItem.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1355,15 +1366,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The schema files that can be used here are found in
     /// gs://google-cloud-aiplatform/schema/dataset/annotation/ , note that the
     /// chosen schema must be consistent with
-    /// [metadata][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri] of the Dataset specified by
+    /// [metadata][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri] of the
+    /// Dataset specified by
     /// [dataset_id][google.cloud.aiplatform.v1.InputDataConfig.dataset_id].
     ///
     /// Only Annotations that both match this schema and belong to DataItems not
     /// ignored by the split method are used in respectively training, validation
     /// or test role, depending on the role of the DataItem they are on.
     ///
-    /// When used in conjunction with [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter], the Annotations used
-    /// for training are filtered by both [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter] and
+    /// When used in conjunction with
+    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter],
+    /// the Annotations used for training are filtered by both
+    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter]
+    /// and
     /// [annotation_schema_uri][google.cloud.aiplatform.v1.InputDataConfig.annotation_schema_uri].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1382,15 +1397,22 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Only applicable to Datasets that have SavedQueries.
     ///
     /// The ID of a SavedQuery (annotation set) under the Dataset specified by
-    /// [dataset_id][google.cloud.aiplatform.v1.InputDataConfig.dataset_id] used for filtering Annotations for training.
+    /// [dataset_id][google.cloud.aiplatform.v1.InputDataConfig.dataset_id] used
+    /// for filtering Annotations for training.
     ///
     /// Only Annotations that are associated with this SavedQuery are used in
     /// respectively training. When used in conjunction with
-    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter], the Annotations used for training are filtered by
-    /// both [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id] and [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter].
+    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter],
+    /// the Annotations used for training are filtered by both
+    /// [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id]
+    /// and
+    /// [annotations_filter][google.cloud.aiplatform.v1.InputDataConfig.annotations_filter].
     ///
-    /// Only one of [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id] and [annotation_schema_uri][google.cloud.aiplatform.v1.InputDataConfig.annotation_schema_uri] should be
-    /// specified as both of them represent the same thing: problem type.
+    /// Only one of
+    /// [saved_query_id][google.cloud.aiplatform.v1.InputDataConfig.saved_query_id]
+    /// and
+    /// [annotation_schema_uri][google.cloud.aiplatform.v1.InputDataConfig.annotation_schema_uri]
+    /// should be specified as both of them represent the same thing: problem type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2300,10 +2322,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. A filter on DataItems of the Dataset. DataItems that match
     /// this filter are used to train the Model. A filter with same syntax
-    /// as the one used in [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems] may be used. If a
-    /// single DataItem is matched by more than one of the FilterSplit filters,
-    /// then it is assigned to the first set that applies to it in the
-    /// training, validation, test order.
+    /// as the one used in
+    /// [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems]
+    /// may be used. If a single DataItem is matched by more than one of the
+    /// FilterSplit filters, then it is assigned to the first set that applies to
+    /// it in the training, validation, test order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2320,10 +2343,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. A filter on DataItems of the Dataset. DataItems that match
     /// this filter are used to validate the Model. A filter with same syntax
-    /// as the one used in [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems] may be used. If a
-    /// single DataItem is matched by more than one of the FilterSplit filters,
-    /// then it is assigned to the first set that applies to it in the
-    /// training, validation, test order.
+    /// as the one used in
+    /// [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems]
+    /// may be used. If a single DataItem is matched by more than one of the
+    /// FilterSplit filters, then it is assigned to the first set that applies to
+    /// it in the training, validation, test order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2340,10 +2364,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. A filter on DataItems of the Dataset. DataItems that match
     /// this filter are used to test the Model. A filter with same syntax
-    /// as the one used in [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems] may be used. If a
-    /// single DataItem is matched by more than one of the FilterSplit filters,
-    /// then it is assigned to the first set that applies to it in the
-    /// training, validation, test order.
+    /// as the one used in
+    /// [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems]
+    /// may be used. If a single DataItem is matched by more than one of the
+    /// FilterSplit filters, then it is assigned to the first set that applies to
+    /// it in the training, validation, test order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

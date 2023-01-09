@@ -118,8 +118,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TensorboardTimeSeriesIdFieldNumber = 1;
     private string tensorboardTimeSeriesId_ = "";
     /// <summary>
-    /// Required. The ID of the TensorboardTimeSeries, which will become the final component
-    /// of the TensorboardTimeSeries' resource name
+    /// Required. The ID of the TensorboardTimeSeries, which will become the final
+    /// component of the TensorboardTimeSeries' resource name
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,8 +134,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ValueTypeFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.ValueType valueType_ = global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.ValueType.Unspecified;
     /// <summary>
-    /// Required. Immutable. The value type of this time series. All the values in this time series data
-    /// must match this value type.
+    /// Required. Immutable. The value type of this time series. All the values in
+    /// this time series data must match this value type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1033,7 +1033,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int VersionNumberFieldNumber = 2;
     private int versionNumber_;
     /// <summary>
-    /// Optional. Version number of TensorProto used to serialize [value][google.cloud.aiplatform.v1.TensorboardTensor.value].
+    /// Optional. Version number of TensorProto used to serialize
+    /// [value][google.cloud.aiplatform.v1.TensorboardTensor.value].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1438,8 +1439,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Output only. A URI safe key uniquely identifying a blob. Can be used to locate the blob
-    /// stored in the Cloud Storage bucket of the consumer project.
+    /// Output only. A URI safe key uniquely identifying a blob. Can be used to
+    /// locate the blob stored in the Cloud Storage bucket of the consumer project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -217,8 +217,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(98);
     private readonly pbc::RepeatedField<string> parentContexts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. A list of resource names of Contexts that are parents of this Context.
-    /// A Context may have at most 10 parent_contexts.
+    /// Output only. A list of resource names of Contexts that are parents of this
+    /// Context. A Context may have at most 10 parent_contexts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

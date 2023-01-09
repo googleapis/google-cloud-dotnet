@@ -234,7 +234,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SourceFieldNumber = 8;
     private string source_ = "";
     /// <summary>
-    /// Immutable. Source of the TensorboardExperiment. Example: a custom training job.
+    /// Immutable. Source of the TensorboardExperiment. Example: a custom training
+    /// job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

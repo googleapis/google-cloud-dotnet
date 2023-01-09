@@ -145,7 +145,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [IndexService.CreateIndex][google.cloud.aiplatform.v1.IndexService.CreateIndex].
+  /// Request message for
+  /// [IndexService.CreateIndex][google.cloud.aiplatform.v1.IndexService.CreateIndex].
   /// </summary>
   public sealed partial class CreateIndexRequest : pb::IMessage<CreateIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -390,7 +391,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [IndexService.CreateIndex][google.cloud.aiplatform.v1.IndexService.CreateIndex].
+  /// Runtime operation information for
+  /// [IndexService.CreateIndex][google.cloud.aiplatform.v1.IndexService.CreateIndex].
   /// </summary>
   public sealed partial class CreateIndexOperationMetadata : pb::IMessage<CreateIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -643,7 +645,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.GetIndex][google.cloud.aiplatform.v1.IndexService.GetIndex]
+  /// Request message for
+  /// [IndexService.GetIndex][google.cloud.aiplatform.v1.IndexService.GetIndex]
   /// </summary>
   public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -840,7 +843,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes].
+  /// Request message for
+  /// [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes].
   /// </summary>
   public sealed partial class ListIndexesRequest : pb::IMessage<ListIndexesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -942,8 +946,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListIndexesResponse.next_page_token][google.cloud.aiplatform.v1.ListIndexesResponse.next_page_token] of the previous
-    /// [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes] call.
+    /// [ListIndexesResponse.next_page_token][google.cloud.aiplatform.v1.ListIndexesResponse.next_page_token]
+    /// of the previous
+    /// [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1208,7 +1214,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes].
+  /// Response message for
+  /// [IndexService.ListIndexes][google.cloud.aiplatform.v1.IndexService.ListIndexes].
   /// </summary>
   public sealed partial class ListIndexesResponse : pb::IMessage<ListIndexesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1274,7 +1281,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListIndexesRequest.page_token][google.cloud.aiplatform.v1.ListIndexesRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListIndexesRequest.page_token][google.cloud.aiplatform.v1.ListIndexesRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1433,7 +1442,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.UpdateIndex][google.cloud.aiplatform.v1.IndexService.UpdateIndex].
+  /// Request message for
+  /// [IndexService.UpdateIndex][google.cloud.aiplatform.v1.IndexService.UpdateIndex].
   /// </summary>
   public sealed partial class UpdateIndexRequest : pb::IMessage<UpdateIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1500,7 +1510,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// The update mask applies to the resource.
-    /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+    /// For the `FieldMask` definition, see
+    /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1687,7 +1698,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [IndexService.UpdateIndex][google.cloud.aiplatform.v1.IndexService.UpdateIndex].
+  /// Runtime operation information for
+  /// [IndexService.UpdateIndex][google.cloud.aiplatform.v1.IndexService.UpdateIndex].
   /// </summary>
   public sealed partial class UpdateIndexOperationMetadata : pb::IMessage<UpdateIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1940,7 +1952,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.DeleteIndex][google.cloud.aiplatform.v1.IndexService.DeleteIndex].
+  /// Request message for
+  /// [IndexService.DeleteIndex][google.cloud.aiplatform.v1.IndexService.DeleteIndex].
   /// </summary>
   public sealed partial class DeleteIndexRequest : pb::IMessage<DeleteIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2137,7 +2150,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.UpsertDatapoints][google.cloud.aiplatform.v1.IndexService.UpsertDatapoints]
+  /// Request message for
+  /// [IndexService.UpsertDatapoints][google.cloud.aiplatform.v1.IndexService.UpsertDatapoints]
   /// </summary>
   public sealed partial class UpsertDatapointsRequest : pb::IMessage<UpsertDatapointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2363,7 +2377,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexService.UpsertDatapoints][google.cloud.aiplatform.v1.IndexService.UpsertDatapoints]
+  /// Response message for
+  /// [IndexService.UpsertDatapoints][google.cloud.aiplatform.v1.IndexService.UpsertDatapoints]
   /// </summary>
   public sealed partial class UpsertDatapointsResponse : pb::IMessage<UpsertDatapointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2518,7 +2533,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [IndexService.RemoveDatapoints][google.cloud.aiplatform.v1.IndexService.RemoveDatapoints]
+  /// Request message for
+  /// [IndexService.RemoveDatapoints][google.cloud.aiplatform.v1.IndexService.RemoveDatapoints]
   /// </summary>
   public sealed partial class RemoveDatapointsRequest : pb::IMessage<RemoveDatapointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2744,7 +2760,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [IndexService.RemoveDatapoints][google.cloud.aiplatform.v1.IndexService.RemoveDatapoints]
+  /// Response message for
+  /// [IndexService.RemoveDatapoints][google.cloud.aiplatform.v1.IndexService.RemoveDatapoints]
   /// </summary>
   public sealed partial class RemoveDatapointsResponse : pb::IMessage<RemoveDatapointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2954,7 +2971,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The validation stats of the content (per file) to be inserted or
     /// updated on the Matching Engine Index resource. Populated if
-    /// contentsDeltaUri is provided as part of [Index.metadata][google.cloud.aiplatform.v1.Index.metadata]. Please note
+    /// contentsDeltaUri is provided as part of
+    /// [Index.metadata][google.cloud.aiplatform.v1.Index.metadata]. Please note
     /// that, currently for those files that are broken or has unsupported file
     /// format, we will not have the stats for those files.
     /// </summary>

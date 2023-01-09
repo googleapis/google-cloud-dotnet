@@ -513,15 +513,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -543,15 +544,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -573,15 +575,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -596,15 +599,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -626,15 +630,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -656,15 +661,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// retention.
         /// </summary>
         /// <param name="entityType">
-        /// Required. The resource name of the EntityType for the entities being written.
-        /// Value format: `projects/{project}/locations/{location}/featurestores/
+        /// Required. The resource name of the EntityType for the entities being
+        /// written. Value format:
+        /// `projects/{project}/locations/{location}/featurestores/
         /// {featurestore}/entityTypes/{entityType}`. For example,
         /// for a machine learning model predicting user clicks on a website, an
         /// EntityType ID could be `user`.
         /// </param>
         /// <param name="payloads">
-        /// Required. The entities to be written. Up to 100,000 feature values can be written
-        /// across all `payloads`.
+        /// Required. The entities to be written. Up to 100,000 feature values can be
+        /// written across all `payloads`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

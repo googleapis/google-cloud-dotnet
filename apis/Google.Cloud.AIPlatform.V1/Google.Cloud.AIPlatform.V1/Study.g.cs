@@ -60,7 +60,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "VE9QUElORxADEg0KCVNVQ0NFRURFRBAEEg4KCklORkVBU0lCTEUQBTps6kFp",
             "Ch9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyaWFsEkZwcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3R1ZGllcy97c3R1ZHl9",
-            "L3RyaWFscy97dHJpYWx9IsAaCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
+            "L3RyaWFscy97dHJpYWx9IoYbCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
             "c3RvcHBpbmdfc3BlYxgEIAEoCzJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
             "LnYxLlN0dWR5U3BlYy5EZWNheUN1cnZlQXV0b21hdGVkU3RvcHBpbmdTcGVj",
             "SAASawoebWVkaWFuX2F1dG9tYXRlZF9zdG9wcGluZ19zcGVjGAUgASgLMkEu",
@@ -125,27 +125,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ChRwYXJhbWV0ZXJfdmFsdWVfc3BlYxo/Ch9EZWNheUN1cnZlQXV0b21hdGVk",
             "U3RvcHBpbmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEgASgIGjsK",
             "G01lZGlhbkF1dG9tYXRlZFN0b3BwaW5nU3BlYxIcChR1c2VfZWxhcHNlZF9k",
-            "dXJhdGlvbhgBIAEoCBqwAQobQ29udmV4QXV0b21hdGVkU3RvcHBpbmdTcGVj",
+            "dXJhdGlvbhgBIAEoCBr2AQobQ29udmV4QXV0b21hdGVkU3RvcHBpbmdTcGVj",
             "EhYKDm1heF9zdGVwX2NvdW50GAEgASgDEhYKDm1pbl9zdGVwX2NvdW50GAIg",
             "ASgDEh0KFW1pbl9tZWFzdXJlbWVudF9jb3VudBgDIAEoAxIkChxsZWFybmlu",
             "Z19yYXRlX3BhcmFtZXRlcl9uYW1lGAQgASgJEhwKFHVzZV9lbGFwc2VkX2R1",
-            "cmF0aW9uGAUgASgIIkoKCUFsZ29yaXRobRIZChVBTEdPUklUSE1fVU5TUEVD",
-            "SUZJRUQQABIPCgtHUklEX1NFQVJDSBACEhEKDVJBTkRPTV9TRUFSQ0gQAyJI",
-            "ChBPYnNlcnZhdGlvbk5vaXNlEiEKHU9CU0VSVkFUSU9OX05PSVNFX1VOU1BF",
-            "Q0lGSUVEEAASBwoDTE9XEAESCAoESElHSBACInIKGE1lYXN1cmVtZW50U2Vs",
-            "ZWN0aW9uVHlwZRIqCiZNRUFTVVJFTUVOVF9TRUxFQ1RJT05fVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEhQKEExBU1RfTUVBU1VSRU1FTlQQARIUChBCRVNUX01FQVNV",
-            "UkVNRU5UEAJCGQoXYXV0b21hdGVkX3N0b3BwaW5nX3NwZWMi3AEKC01lYXN1",
-            "cmVtZW50EjgKEGVsYXBzZWRfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25CA+BBAxIXCgpzdGVwX2NvdW50GAIgASgDQgPgQQMS",
-            "RAoHbWV0cmljcxgDIAMoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "Lk1lYXN1cmVtZW50Lk1ldHJpY0ID4EEDGjQKBk1ldHJpYxIWCgltZXRyaWNf",
-            "aWQYASABKAlCA+BBAxISCgV2YWx1ZRgCIAEoAUID4EEDQs4BCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClN0dWR5UHJvdG9QAVpEZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
-            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
-            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "cmF0aW9uGAUgASgIEiYKGXVwZGF0ZV9hbGxfc3RvcHBlZF90cmlhbHMYBiAB",
+            "KAhIAIgBAUIcChpfdXBkYXRlX2FsbF9zdG9wcGVkX3RyaWFscyJKCglBbGdv",
+            "cml0aG0SGQoVQUxHT1JJVEhNX1VOU1BFQ0lGSUVEEAASDwoLR1JJRF9TRUFS",
+            "Q0gQAhIRCg1SQU5ET01fU0VBUkNIEAMiSAoQT2JzZXJ2YXRpb25Ob2lzZRIh",
+            "Ch1PQlNFUlZBVElPTl9OT0lTRV9VTlNQRUNJRklFRBAAEgcKA0xPVxABEggK",
+            "BEhJR0gQAiJyChhNZWFzdXJlbWVudFNlbGVjdGlvblR5cGUSKgomTUVBU1VS",
+            "RU1FTlRfU0VMRUNUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIUChBMQVNUX01F",
+            "QVNVUkVNRU5UEAESFAoQQkVTVF9NRUFTVVJFTUVOVBACQhkKF2F1dG9tYXRl",
+            "ZF9zdG9wcGluZ19zcGVjItwBCgtNZWFzdXJlbWVudBI4ChBlbGFwc2VkX2R1",
+            "cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMS",
+            "FwoKc3RlcF9jb3VudBgCIAEoA0ID4EEDEkQKB21ldHJpY3MYAyADKAsyLi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NZWFzdXJlbWVudC5NZXRyaWNC",
+            "A+BBAxo0CgZNZXRyaWMSFgoJbWV0cmljX2lkGAEgASgJQgPgQQMSEgoFdmFs",
+            "dWUYAiABKAFCA+BBA0LOAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxQgpTdHVkeVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -162,7 +164,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition.Parser, new[]{ "Values" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec.Parser, new[]{ "MaxStepCount", "MinStepCount", "MinMeasurementCount", "LearningRateParameterName", "UseElapsedDuration" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec.Parser, new[]{ "MaxStepCount", "MinStepCount", "MinMeasurementCount", "LearningRateParameterName", "UseElapsedDuration", "UpdateAllStoppedTrials" }, new[]{ "UpdateAllStoppedTrials" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement), global::Google.Cloud.AIPlatform.V1.Measurement.Parser, new[]{ "ElapsedDuration", "StepCount", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric), global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser, new[]{ "MetricId", "Value" }, null, null, null, null)})
           }));
     }
@@ -785,7 +787,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EndTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. Time when the Trial's status changed to `SUCCEEDED` or `INFEASIBLE`.
+    /// Output only. Time when the Trial's status changed to `SUCCEEDED` or
+    /// `INFEASIBLE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -800,9 +803,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ClientIdFieldNumber = 9;
     private string clientId_ = "";
     /// <summary>
-    /// Output only. The identifier of the client that originally requested this Trial.
-    /// Each client is identified by a unique client_id. When a client
-    /// asks for a suggestion, Vertex AI Vizier will assign it a Trial. The client
+    /// Output only. The identifier of the client that originally requested this
+    /// Trial. Each client is identified by a unique client_id. When a client asks
+    /// for a suggestion, Vertex AI Vizier will assign it a Trial. The client
     /// should evaluate the Trial, complete it, and report back to Vertex AI
     /// Vizier. If suggestion is asked again by same client_id before the Trial is
     /// completed, the same Trial will be returned. Multiple clients with
@@ -859,9 +862,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. URIs for accessing [interactive
     /// shells](https://cloud.google.com/vertex-ai/docs/training/monitor-debug-interactive-shell)
     /// (one URI for each training node). Only available if this trial is part of
-    /// a [HyperparameterTuningJob][google.cloud.aiplatform.v1.HyperparameterTuningJob] and the job's
-    /// [trial_job_spec.enable_web_access][google.cloud.aiplatform.v1.CustomJobSpec.enable_web_access] field
-    /// is `true`.
+    /// a
+    /// [HyperparameterTuningJob][google.cloud.aiplatform.v1.HyperparameterTuningJob]
+    /// and the job's
+    /// [trial_job_spec.enable_web_access][google.cloud.aiplatform.v1.CustomJobSpec.enable_web_access]
+    /// field is `true`.
     ///
     /// The keys are names of each node used for the trial; for example,
     /// `workerpool0-0` for the primary node, `workerpool1-0` for the first node in
@@ -1359,7 +1364,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         private string parameterId_ = "";
         /// <summary>
         /// Output only. The ID of the parameter. The parameter should be defined in
-        /// [StudySpec's Parameters][google.cloud.aiplatform.v1.StudySpec.parameters].
+        /// [StudySpec's
+        /// Parameters][google.cloud.aiplatform.v1.StudySpec.parameters].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2220,8 +2226,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int MetricIdFieldNumber = 1;
         private string metricId_ = "";
         /// <summary>
-        /// Required. The ID of the metric. Must not contain whitespaces and must be unique
-        /// amongst all MetricSpecs.
+        /// Required. The ID of the metric. Must not contain whitespaces and must be
+        /// unique amongst all MetricSpecs.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2558,8 +2564,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int ParameterIdFieldNumber = 1;
         private string parameterId_ = "";
         /// <summary>
-        /// Required. The ID of the parameter. Must not contain whitespaces and must be unique
-        /// amongst all ParameterSpecs.
+        /// Required. The ID of the parameter. Must not contain whitespaces and must
+        /// be unique amongst all ParameterSpecs.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4895,8 +4901,8 @@ namespace Google.Cloud.AIPlatform.V1 {
                     = pb::FieldCodec.ForString(10);
                 private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
                 /// <summary>
-                /// Required. Matches values of the parent parameter of 'CATEGORICAL' type.
-                /// All values must exist in `categorical_value_spec` of parent
+                /// Required. Matches values of the parent parameter of 'CATEGORICAL'
+                /// type. All values must exist in `categorical_value_spec` of parent
                 /// parameter.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5093,9 +5099,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int UseElapsedDurationFieldNumber = 1;
         private bool useElapsedDuration_;
         /// <summary>
-        /// True if [Measurement.elapsed_duration][google.cloud.aiplatform.v1.Measurement.elapsed_duration] is used as the x-axis of each
-        /// Trials Decay Curve. Otherwise, [Measurement.step_count][google.cloud.aiplatform.v1.Measurement.step_count] will be used
-        /// as the x-axis.
+        /// True if
+        /// [Measurement.elapsed_duration][google.cloud.aiplatform.v1.Measurement.elapsed_duration]
+        /// is used as the x-axis of each Trials Decay Curve. Otherwise,
+        /// [Measurement.step_count][google.cloud.aiplatform.v1.Measurement.step_count]
+        /// will be used as the x-axis.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5295,9 +5303,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         private bool useElapsedDuration_;
         /// <summary>
         /// True if median automated stopping rule applies on
-        /// [Measurement.elapsed_duration][google.cloud.aiplatform.v1.Measurement.elapsed_duration]. It means that elapsed_duration
-        /// field of latest measurement of current Trial is used to compute median
-        /// objective value for each completed Trials.
+        /// [Measurement.elapsed_duration][google.cloud.aiplatform.v1.Measurement.elapsed_duration].
+        /// It means that elapsed_duration field of latest measurement of current
+        /// Trial is used to compute median objective value for each completed
+        /// Trials.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5460,6 +5469,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         private static readonly pb::MessageParser<ConvexAutomatedStoppingSpec> _parser = new pb::MessageParser<ConvexAutomatedStoppingSpec>(() => new ConvexAutomatedStoppingSpec());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ConvexAutomatedStoppingSpec> Parser { get { return _parser; } }
@@ -5487,11 +5497,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ConvexAutomatedStoppingSpec(ConvexAutomatedStoppingSpec other) : this() {
+          _hasBits0 = other._hasBits0;
           maxStepCount_ = other.maxStepCount_;
           minStepCount_ = other.minStepCount_;
           minMeasurementCount_ = other.minMeasurementCount_;
           learningRateParameterName_ = other.learningRateParameterName_;
           useElapsedDuration_ = other.useElapsedDuration_;
+          updateAllStoppedTrials_ = other.updateAllStoppedTrials_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5597,6 +5609,40 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "update_all_stopped_trials" field.</summary>
+        public const int UpdateAllStoppedTrialsFieldNumber = 6;
+        private bool updateAllStoppedTrials_;
+        /// <summary>
+        /// ConvexAutomatedStoppingSpec by default only updates the trials that needs
+        /// to be early stopped using a newly trained auto-regressive model. When
+        /// this flag is set to True, all stopped trials from the beginning are
+        /// potentially updated in terms of their `final_measurement`. Also, note
+        /// that the training logic of autoregressive models is different in this
+        /// case. Enabling this option has shown better results and this may be the
+        /// default option in the future.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool UpdateAllStoppedTrials {
+          get { if ((_hasBits0 & 1) != 0) { return updateAllStoppedTrials_; } else { return false; } }
+          set {
+            _hasBits0 |= 1;
+            updateAllStoppedTrials_ = value;
+          }
+        }
+        /// <summary>Gets whether the "update_all_stopped_trials" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasUpdateAllStoppedTrials {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "update_all_stopped_trials" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearUpdateAllStoppedTrials() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5617,6 +5663,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (MinMeasurementCount != other.MinMeasurementCount) return false;
           if (LearningRateParameterName != other.LearningRateParameterName) return false;
           if (UseElapsedDuration != other.UseElapsedDuration) return false;
+          if (UpdateAllStoppedTrials != other.UpdateAllStoppedTrials) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5629,6 +5676,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (MinMeasurementCount != 0L) hash ^= MinMeasurementCount.GetHashCode();
           if (LearningRateParameterName.Length != 0) hash ^= LearningRateParameterName.GetHashCode();
           if (UseElapsedDuration != false) hash ^= UseElapsedDuration.GetHashCode();
+          if (HasUpdateAllStoppedTrials) hash ^= UpdateAllStoppedTrials.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5667,6 +5715,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(40);
             output.WriteBool(UseElapsedDuration);
           }
+          if (HasUpdateAllStoppedTrials) {
+            output.WriteRawTag(48);
+            output.WriteBool(UpdateAllStoppedTrials);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5697,6 +5749,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(40);
             output.WriteBool(UseElapsedDuration);
           }
+          if (HasUpdateAllStoppedTrials) {
+            output.WriteRawTag(48);
+            output.WriteBool(UpdateAllStoppedTrials);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5720,6 +5776,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(LearningRateParameterName);
           }
           if (UseElapsedDuration != false) {
+            size += 1 + 1;
+          }
+          if (HasUpdateAllStoppedTrials) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -5748,6 +5807,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.UseElapsedDuration != false) {
             UseElapsedDuration = other.UseElapsedDuration;
+          }
+          if (other.HasUpdateAllStoppedTrials) {
+            UpdateAllStoppedTrials = other.UpdateAllStoppedTrials;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5784,6 +5846,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 UseElapsedDuration = input.ReadBool();
                 break;
               }
+              case 48: {
+                UpdateAllStoppedTrials = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -5817,6 +5883,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 40: {
                 UseElapsedDuration = input.ReadBool();
+                break;
+              }
+              case 48: {
+                UpdateAllStoppedTrials = input.ReadBool();
                 break;
               }
             }
@@ -5886,7 +5956,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ElapsedDurationFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration elapsedDuration_;
     /// <summary>
-    /// Output only. Time that the Trial has been running at the point of this Measurement.
+    /// Output only. Time that the Trial has been running at the point of this
+    /// Measurement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5901,8 +5972,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int StepCountFieldNumber = 2;
     private long stepCount_;
     /// <summary>
-    /// Output only. The number of steps the machine learning model has been trained for.
-    /// Must be non-negative.
+    /// Output only. The number of steps the machine learning model has been
+    /// trained for. Must be non-negative.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5919,8 +5990,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric> metrics_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric>();
     /// <summary>
-    /// Output only. A list of metrics got by evaluating the objective functions using suggested
-    /// Parameter values.
+    /// Output only. A list of metrics got by evaluating the objective functions
+    /// using suggested Parameter values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

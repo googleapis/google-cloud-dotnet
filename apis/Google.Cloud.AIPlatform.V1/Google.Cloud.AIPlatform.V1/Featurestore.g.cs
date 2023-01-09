@@ -171,8 +171,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EtagFieldNumber = 5;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Used to perform consistent read-modify-write updates. If not set, a blind
-    /// "overwrite" update happens.
+    /// Optional. Used to perform consistent read-modify-write updates. If not set,
+    /// a blind "overwrite" update happens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -189,7 +189,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. The labels with user-defined metadata to organize your Featurestore.
+    /// Optional. The labels with user-defined metadata to organize your
+    /// Featurestore.
     ///
     /// Label keys and values can be no longer than 64 characters
     /// (Unicode codepoints), can only contain lowercase letters, numeric
@@ -211,10 +212,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OnlineServingConfigFieldNumber = 7;
     private global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig onlineServingConfig_;
     /// <summary>
-    /// Optional. Config for online storage resources. The field should not co-exist with the
-    /// field of `OnlineStoreReplicationConfig`. If both of it and
-    /// OnlineStoreReplicationConfig are unset, the feature store will not have an
-    /// online store and cannot be used for online serving.
+    /// Optional. Config for online storage resources. The field should not
+    /// co-exist with the field of `OnlineStoreReplicationConfig`. If both of it
+    /// and OnlineStoreReplicationConfig are unset, the feature store will not have
+    /// an online store and cannot be used for online serving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -244,8 +245,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EncryptionSpecFieldNumber = 10;
     private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
     /// <summary>
-    /// Optional. Customer-managed encryption key spec for data storage. If set, both of the
-    /// online and offline data storage will be secured by this key.
+    /// Optional. Customer-managed encryption key spec for data storage. If set,
+    /// both of the online and offline data storage will be secured by this key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -922,8 +923,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             public const int MinNodeCountFieldNumber = 1;
             private int minNodeCount_;
             /// <summary>
-            /// Required. The minimum number of nodes to scale down to. Must be greater than or
-            /// equal to 1.
+            /// Required. The minimum number of nodes to scale down to. Must be greater
+            /// than or equal to 1.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -95,8 +95,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int KmsKeyNameFieldNumber = 1;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// Required. The Cloud KMS resource identifier of the customer managed encryption key
-    /// used to protect a resource. Has the form:
+    /// Required. The Cloud KMS resource identifier of the customer managed
+    /// encryption key used to protect a resource. Has the form:
     /// `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`.
     /// The key needs to be in the same region as where the compute resource is
     /// created.

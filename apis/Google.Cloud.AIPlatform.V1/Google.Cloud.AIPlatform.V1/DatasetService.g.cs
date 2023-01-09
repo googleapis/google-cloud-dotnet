@@ -209,7 +209,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [DatasetService.CreateDataset][google.cloud.aiplatform.v1.DatasetService.CreateDataset].
+  /// Request message for
+  /// [DatasetService.CreateDataset][google.cloud.aiplatform.v1.DatasetService.CreateDataset].
   /// </summary>
   public sealed partial class CreateDatasetRequest : pb::IMessage<CreateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -454,7 +455,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [DatasetService.CreateDataset][google.cloud.aiplatform.v1.DatasetService.CreateDataset].
+  /// Runtime operation information for
+  /// [DatasetService.CreateDataset][google.cloud.aiplatform.v1.DatasetService.CreateDataset].
   /// </summary>
   public sealed partial class CreateDatasetOperationMetadata : pb::IMessage<CreateDatasetOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -658,7 +660,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.GetDataset][google.cloud.aiplatform.v1.DatasetService.GetDataset].
+  /// Request message for
+  /// [DatasetService.GetDataset][google.cloud.aiplatform.v1.DatasetService.GetDataset].
   /// </summary>
   public sealed partial class GetDatasetRequest : pb::IMessage<GetDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -902,7 +905,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.UpdateDataset][google.cloud.aiplatform.v1.DatasetService.UpdateDataset].
+  /// Request message for
+  /// [DatasetService.UpdateDataset][google.cloud.aiplatform.v1.DatasetService.UpdateDataset].
   /// </summary>
   public sealed partial class UpdateDatasetRequest : pb::IMessage<UpdateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -969,8 +973,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Required. The update mask applies to the resource.
-    /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
-    /// Updatable fields:
+    /// For the `FieldMask` definition, see
+    /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
     ///
     ///   * `display_name`
     ///   * `description`
@@ -1161,7 +1165,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ListDatasets][google.cloud.aiplatform.v1.DatasetService.ListDatasets].
+  /// Request message for
+  /// [DatasetService.ListDatasets][google.cloud.aiplatform.v1.DatasetService.ListDatasets].
   /// </summary>
   public sealed partial class ListDatasetsRequest : pb::IMessage<ListDatasetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1585,7 +1590,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ListDatasets][google.cloud.aiplatform.v1.DatasetService.ListDatasets].
+  /// Response message for
+  /// [DatasetService.ListDatasets][google.cloud.aiplatform.v1.DatasetService.ListDatasets].
   /// </summary>
   public sealed partial class ListDatasetsResponse : pb::IMessage<ListDatasetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1809,7 +1815,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.DeleteDataset][google.cloud.aiplatform.v1.DatasetService.DeleteDataset].
+  /// Request message for
+  /// [DatasetService.DeleteDataset][google.cloud.aiplatform.v1.DatasetService.DeleteDataset].
   /// </summary>
   public sealed partial class DeleteDatasetRequest : pb::IMessage<DeleteDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2006,7 +2013,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
+  /// Request message for
+  /// [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
   /// </summary>
   public sealed partial class ImportDataRequest : pb::IMessage<ImportDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2076,8 +2084,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ImportDataConfig> importConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ImportDataConfig>();
     /// <summary>
-    /// Required. The desired input locations. The contents of all input locations will be
-    /// imported in one batch.
+    /// Required. The desired input locations. The contents of all input locations
+    /// will be imported in one batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2233,7 +2241,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
+  /// Response message for
+  /// [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
   /// </summary>
   public sealed partial class ImportDataResponse : pb::IMessage<ImportDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2388,7 +2397,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
+  /// Runtime operation information for
+  /// [DatasetService.ImportData][google.cloud.aiplatform.v1.DatasetService.ImportData].
   /// </summary>
   public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2592,7 +2602,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
+  /// Request message for
+  /// [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
   /// </summary>
   public sealed partial class ExportDataRequest : pb::IMessage<ExportDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2838,7 +2849,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
+  /// Response message for
+  /// [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
   /// </summary>
   public sealed partial class ExportDataResponse : pb::IMessage<ExportDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3022,7 +3034,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
+  /// Runtime operation information for
+  /// [DatasetService.ExportData][google.cloud.aiplatform.v1.DatasetService.ExportData].
   /// </summary>
   public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3267,7 +3280,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems].
+  /// Request message for
+  /// [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems].
   /// </summary>
   public sealed partial class ListDataItemsRequest : pb::IMessage<ListDataItemsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3674,7 +3688,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems].
+  /// Response message for
+  /// [DatasetService.ListDataItems][google.cloud.aiplatform.v1.DatasetService.ListDataItems].
   /// </summary>
   public sealed partial class ListDataItemsResponse : pb::IMessage<ListDataItemsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3898,7 +3913,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
+  /// Request message for
+  /// [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
   /// </summary>
   public sealed partial class SearchDataItemsRequest : pb::IMessage<SearchDataItemsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4115,7 +4131,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FieldMaskFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Mask specifying which fields of [DataItemView][google.cloud.aiplatform.v1.DataItemView] to read.
+    /// Mask specifying which fields of
+    /// [DataItemView][google.cloud.aiplatform.v1.DataItemView] to read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4182,8 +4199,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// A token identifying a page of results for the server to return
     /// Typically obtained via
-    /// [SearchDataItemsResponse.next_page_token][google.cloud.aiplatform.v1.SearchDataItemsResponse.next_page_token] of the previous
-    /// [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems] call.
+    /// [SearchDataItemsResponse.next_page_token][google.cloud.aiplatform.v1.SearchDataItemsResponse.next_page_token]
+    /// of the previous
+    /// [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4708,8 +4727,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int SavedQueryFieldNumber = 1;
         private string savedQuery_ = "";
         /// <summary>
-        /// Required. Saved query of the Annotation. Only Annotations belong to this saved
-        /// query will be considered for ordering.
+        /// Required. Saved query of the Annotation. Only Annotations belong to this
+        /// saved query will be considered for ordering.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4900,7 +4919,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
+  /// Response message for
+  /// [DatasetService.SearchDataItems][google.cloud.aiplatform.v1.DatasetService.SearchDataItems].
   /// </summary>
   public sealed partial class SearchDataItemsResponse : pb::IMessage<SearchDataItemsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4966,7 +4986,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [SearchDataItemsRequest.page_token][google.cloud.aiplatform.v1.SearchDataItemsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [SearchDataItemsRequest.page_token][google.cloud.aiplatform.v1.SearchDataItemsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5405,7 +5427,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ListSavedQueries][google.cloud.aiplatform.v1.DatasetService.ListSavedQueries].
+  /// Request message for
+  /// [DatasetService.ListSavedQueries][google.cloud.aiplatform.v1.DatasetService.ListSavedQueries].
   /// </summary>
   public sealed partial class ListSavedQueriesRequest : pb::IMessage<ListSavedQueriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5812,7 +5835,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ListSavedQueries][google.cloud.aiplatform.v1.DatasetService.ListSavedQueries].
+  /// Response message for
+  /// [DatasetService.ListSavedQueries][google.cloud.aiplatform.v1.DatasetService.ListSavedQueries].
   /// </summary>
   public sealed partial class ListSavedQueriesResponse : pb::IMessage<ListSavedQueriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6036,7 +6060,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.GetAnnotationSpec][google.cloud.aiplatform.v1.DatasetService.GetAnnotationSpec].
+  /// Request message for
+  /// [DatasetService.GetAnnotationSpec][google.cloud.aiplatform.v1.DatasetService.GetAnnotationSpec].
   /// </summary>
   public sealed partial class GetAnnotationSpecRequest : pb::IMessage<GetAnnotationSpecRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6282,7 +6307,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [DatasetService.ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
+  /// Request message for
+  /// [DatasetService.ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
   /// </summary>
   public sealed partial class ListAnnotationsRequest : pb::IMessage<ListAnnotationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6689,7 +6715,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [DatasetService.ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
+  /// Response message for
+  /// [DatasetService.ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
   /// </summary>
   public sealed partial class ListAnnotationsResponse : pb::IMessage<ListAnnotationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

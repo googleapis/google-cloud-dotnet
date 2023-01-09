@@ -721,8 +721,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists IndexEndpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the IndexEndpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// IndexEndpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -746,8 +746,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists IndexEndpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the IndexEndpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// IndexEndpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -771,8 +771,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists IndexEndpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the IndexEndpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// IndexEndpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -796,8 +796,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists IndexEndpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the IndexEndpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// IndexEndpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -851,7 +851,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The IndexEndpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -869,7 +870,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The IndexEndpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -887,7 +889,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The IndexEndpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1103,8 +1106,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1125,8 +1128,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1147,8 +1150,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1165,8 +1168,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1187,8 +1190,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1209,8 +1212,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Only non-empty Indexes can be deployed.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1282,12 +1285,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1303,12 +1307,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1324,12 +1329,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1341,12 +1347,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1362,12 +1369,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1383,12 +1391,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// and freeing all resources it's using.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource from which to undeploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource from which to undeploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndexId">
-        /// Required. The ID of the DeployedIndex to be undeployed from the IndexEndpoint.
+        /// Required. The ID of the DeployedIndex to be undeployed from the
+        /// IndexEndpoint.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1453,8 +1462,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1475,8 +1484,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1497,8 +1506,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1515,8 +1524,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1537,8 +1546,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">
@@ -1559,8 +1568,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Update an existing DeployedIndex under an IndexEndpoint.
         /// </summary>
         /// <param name="indexEndpoint">
-        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
-        /// Format:
+        /// Required. The name of the IndexEndpoint resource into which to deploy an
+        /// Index. Format:
         /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
         /// </param>
         /// <param name="deployedIndex">

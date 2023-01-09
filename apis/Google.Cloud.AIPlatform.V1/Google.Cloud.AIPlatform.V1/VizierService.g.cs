@@ -191,7 +191,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [VizierService.GetStudy][google.cloud.aiplatform.v1.VizierService.GetStudy].
+  /// Request message for
+  /// [VizierService.GetStudy][google.cloud.aiplatform.v1.VizierService.GetStudy].
   /// </summary>
   public sealed partial class GetStudyRequest : pb::IMessage<GetStudyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -387,7 +388,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.CreateStudy][google.cloud.aiplatform.v1.VizierService.CreateStudy].
+  /// Request message for
+  /// [VizierService.CreateStudy][google.cloud.aiplatform.v1.VizierService.CreateStudy].
   /// </summary>
   public sealed partial class CreateStudyRequest : pb::IMessage<CreateStudyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -632,7 +634,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.ListStudies][google.cloud.aiplatform.v1.VizierService.ListStudies].
+  /// Request message for
+  /// [VizierService.ListStudies][google.cloud.aiplatform.v1.VizierService.ListStudies].
   /// </summary>
   public sealed partial class ListStudiesRequest : pb::IMessage<ListStudiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -910,7 +913,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [VizierService.ListStudies][google.cloud.aiplatform.v1.VizierService.ListStudies].
+  /// Response message for
+  /// [VizierService.ListStudies][google.cloud.aiplatform.v1.VizierService.ListStudies].
   /// </summary>
   public sealed partial class ListStudiesResponse : pb::IMessage<ListStudiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1136,7 +1140,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.DeleteStudy][google.cloud.aiplatform.v1.VizierService.DeleteStudy].
+  /// Request message for
+  /// [VizierService.DeleteStudy][google.cloud.aiplatform.v1.VizierService.DeleteStudy].
   /// </summary>
   public sealed partial class DeleteStudyRequest : pb::IMessage<DeleteStudyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1332,7 +1337,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.LookupStudy][google.cloud.aiplatform.v1.VizierService.LookupStudy].
+  /// Request message for
+  /// [VizierService.LookupStudy][google.cloud.aiplatform.v1.VizierService.LookupStudy].
   /// </summary>
   public sealed partial class LookupStudyRequest : pb::IMessage<LookupStudyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1568,7 +1574,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.SuggestTrials][google.cloud.aiplatform.v1.VizierService.SuggestTrials].
+  /// Request message for
+  /// [VizierService.SuggestTrials][google.cloud.aiplatform.v1.VizierService.SuggestTrials].
   /// </summary>
   public sealed partial class SuggestTrialsRequest : pb::IMessage<SuggestTrialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1848,7 +1855,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [VizierService.SuggestTrials][google.cloud.aiplatform.v1.VizierService.SuggestTrials].
+  /// Response message for
+  /// [VizierService.SuggestTrials][google.cloud.aiplatform.v1.VizierService.SuggestTrials].
   /// </summary>
   public sealed partial class SuggestTrialsResponse : pb::IMessage<SuggestTrialsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2418,7 +2426,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.CreateTrial][google.cloud.aiplatform.v1.VizierService.CreateTrial].
+  /// Request message for
+  /// [VizierService.CreateTrial][google.cloud.aiplatform.v1.VizierService.CreateTrial].
   /// </summary>
   public sealed partial class CreateTrialRequest : pb::IMessage<CreateTrialRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2663,7 +2672,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.GetTrial][google.cloud.aiplatform.v1.VizierService.GetTrial].
+  /// Request message for
+  /// [VizierService.GetTrial][google.cloud.aiplatform.v1.VizierService.GetTrial].
   /// </summary>
   public sealed partial class GetTrialRequest : pb::IMessage<GetTrialRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2860,7 +2870,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.ListTrials][google.cloud.aiplatform.v1.VizierService.ListTrials].
+  /// Request message for
+  /// [VizierService.ListTrials][google.cloud.aiplatform.v1.VizierService.ListTrials].
   /// </summary>
   public sealed partial class ListTrialsRequest : pb::IMessage<ListTrialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3138,7 +3149,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [VizierService.ListTrials][google.cloud.aiplatform.v1.VizierService.ListTrials].
+  /// Response message for
+  /// [VizierService.ListTrials][google.cloud.aiplatform.v1.VizierService.ListTrials].
   /// </summary>
   public sealed partial class ListTrialsResponse : pb::IMessage<ListTrialsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3364,7 +3376,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.AddTrialMeasurement][google.cloud.aiplatform.v1.VizierService.AddTrialMeasurement].
+  /// Request message for
+  /// [VizierService.AddTrialMeasurement][google.cloud.aiplatform.v1.VizierService.AddTrialMeasurement].
   /// </summary>
   public sealed partial class AddTrialMeasurementRequest : pb::IMessage<AddTrialMeasurementRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3610,7 +3623,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.CompleteTrial][google.cloud.aiplatform.v1.VizierService.CompleteTrial].
+  /// Request message for
+  /// [VizierService.CompleteTrial][google.cloud.aiplatform.v1.VizierService.CompleteTrial].
   /// </summary>
   public sealed partial class CompleteTrialRequest : pb::IMessage<CompleteTrialRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3940,7 +3954,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.DeleteTrial][google.cloud.aiplatform.v1.VizierService.DeleteTrial].
+  /// Request message for
+  /// [VizierService.DeleteTrial][google.cloud.aiplatform.v1.VizierService.DeleteTrial].
   /// </summary>
   public sealed partial class DeleteTrialRequest : pb::IMessage<DeleteTrialRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4137,7 +4152,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.CheckTrialEarlyStoppingState][google.cloud.aiplatform.v1.VizierService.CheckTrialEarlyStoppingState].
+  /// Request message for
+  /// [VizierService.CheckTrialEarlyStoppingState][google.cloud.aiplatform.v1.VizierService.CheckTrialEarlyStoppingState].
   /// </summary>
   public sealed partial class CheckTrialEarlyStoppingStateRequest : pb::IMessage<CheckTrialEarlyStoppingStateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4334,7 +4350,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [VizierService.CheckTrialEarlyStoppingState][google.cloud.aiplatform.v1.VizierService.CheckTrialEarlyStoppingState].
+  /// Response message for
+  /// [VizierService.CheckTrialEarlyStoppingState][google.cloud.aiplatform.v1.VizierService.CheckTrialEarlyStoppingState].
   /// </summary>
   public sealed partial class CheckTrialEarlyStoppingStateResponse : pb::IMessage<CheckTrialEarlyStoppingStateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4815,7 +4832,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.StopTrial][google.cloud.aiplatform.v1.VizierService.StopTrial].
+  /// Request message for
+  /// [VizierService.StopTrial][google.cloud.aiplatform.v1.VizierService.StopTrial].
   /// </summary>
   public sealed partial class StopTrialRequest : pb::IMessage<StopTrialRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5012,7 +5030,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [VizierService.ListOptimalTrials][google.cloud.aiplatform.v1.VizierService.ListOptimalTrials].
+  /// Request message for
+  /// [VizierService.ListOptimalTrials][google.cloud.aiplatform.v1.VizierService.ListOptimalTrials].
   /// </summary>
   public sealed partial class ListOptimalTrialsRequest : pb::IMessage<ListOptimalTrialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5207,7 +5226,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [VizierService.ListOptimalTrials][google.cloud.aiplatform.v1.VizierService.ListOptimalTrials].
+  /// Response message for
+  /// [VizierService.ListOptimalTrials][google.cloud.aiplatform.v1.VizierService.ListOptimalTrials].
   /// </summary>
   public sealed partial class ListOptimalTrialsResponse : pb::IMessage<ListOptimalTrialsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

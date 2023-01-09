@@ -28,43 +28,46 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxowZ29v",
             "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnByb3Rv",
-            "GiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxocZ29vZ2xl",
-            "L3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byLQBAoHRGF0YXNldBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YECABKAkS",
-            "IAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgDIAEoCUID4EECEi0KCG1ldGFkYXRh",
-            "GAggASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQISNAoLY3JlYXRl",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSDAoEZXRhZxgGIAEoCRI/CgZsYWJlbHMYByADKAsyLy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EYXRhc2V0LkxhYmVsc0VudHJ5EkMK",
-            "D2VuY3J5cHRpb25fc3BlYxgLIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkVuY3J5cHRpb25TcGVjEh4KEW1ldGFkYXRhX2FydGlmYWN0GBEg",
-            "ASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ATpi6kFfCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Rh",
-            "dGFzZXQSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9kYXRhc2V0cy97ZGF0YXNldH0ipAMKEEltcG9ydERhdGFDb25maWcSOwoK",
-            "Z2NzX3NvdXJjZRgBIAEoCzIlLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "Lkdjc1NvdXJjZUgAEloKEGRhdGFfaXRlbV9sYWJlbHMYAiADKAsyQC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBvcnREYXRhQ29uZmlnLkRhdGFJ",
-            "dGVtTGFiZWxzRW50cnkSXQoRYW5ub3RhdGlvbl9sYWJlbHMYAyADKAsyQi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBvcnREYXRhQ29uZmlnLkFu",
-            "bm90YXRpb25MYWJlbHNFbnRyeRIeChFpbXBvcnRfc2NoZW1hX3VyaRgEIAEo",
-            "CUID4EECGjUKE0RhdGFJdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ARo3ChVBbm5vdGF0aW9uTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIICgZzb3VyY2UihAEKEEV4",
-            "cG9ydERhdGFDb25maWcSRQoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25IABIaChJh",
-            "bm5vdGF0aW9uc19maWx0ZXIYAiABKAlCDQoLZGVzdGluYXRpb25C0AEKHmNv",
-            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIMRGF0YXNldFByb3RvUAFa",
-            "RGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "YWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
-            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "GiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxosZ29vZ2xl",
+            "L2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2F2ZWRfcXVlcnkucHJvdG8aHGdvb2ds",
+            "ZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
+            "c3RhbXAucHJvdG8ijwUKB0RhdGFzZXQSEQoEbmFtZRgBIAEoCUID4EEDEhkK",
+            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGBAgASgJ",
+            "EiAKE21ldGFkYXRhX3NjaGVtYV91cmkYAyABKAlCA+BBAhItCghtZXRhZGF0",
+            "YRgIIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EECEjQKC2NyZWF0",
+            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEgwKBGV0YWcYBiABKAkSPwoGbGFiZWxzGAcgAygLMi8uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGF0YXNldC5MYWJlbHNFbnRyeRI9",
+            "Cg1zYXZlZF9xdWVyaWVzGAkgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU2F2ZWRRdWVyeRJDCg9lbmNyeXB0aW9uX3NwZWMYCyABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxIeChFt",
+            "ZXRhZGF0YV9hcnRpZmFjdBgRIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6YupBXwohYWlwbGF0Zm9y",
+            "bS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0Ejpwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YXNldHMve2RhdGFzZXR9IqQDChBJ",
+            "bXBvcnREYXRhQ29uZmlnEjsKCmdjc19zb3VyY2UYASABKAsyJS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NTb3VyY2VIABJaChBkYXRhX2l0ZW1f",
+            "bGFiZWxzGAIgAygLMkAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW1w",
+            "b3J0RGF0YUNvbmZpZy5EYXRhSXRlbUxhYmVsc0VudHJ5El0KEWFubm90YXRp",
+            "b25fbGFiZWxzGAMgAygLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "SW1wb3J0RGF0YUNvbmZpZy5Bbm5vdGF0aW9uTGFiZWxzRW50cnkSHgoRaW1w",
+            "b3J0X3NjaGVtYV91cmkYBCABKAlCA+BBAho1ChNEYXRhSXRlbUxhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNwoVQW5ub3Rh",
+            "dGlvbkxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAFCCAoGc291cmNlIoQBChBFeHBvcnREYXRhQ29uZmlnEkUKD2djc19kZXN0",
+            "aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdj",
+            "c0Rlc3RpbmF0aW9uSAASGgoSYW5ub3RhdGlvbnNfZmlsdGVyGAIgASgJQg0K",
+            "C2Rlc3RpbmF0aW9uQtABCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFCDERhdGFzZXRQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoC",
+            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
+            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.SavedQueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "EncryptionSpec", "MetadataArtifact" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "SavedQueries", "EncryptionSpec", "MetadataArtifact" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportDataConfig), global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser, new[]{ "GcsSource", "DataItemLabels", "AnnotationLabels", "ImportSchemaUri" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportDataConfig), global::Google.Cloud.AIPlatform.V1.ExportDataConfig.Parser, new[]{ "GcsDestination", "AnnotationsFilter" }, new[]{ "Destination" }, null, null, null)
           }));
@@ -119,6 +122,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
       labels_ = other.labels_.Clone();
+      savedQueries_ = other.savedQueries_.Clone();
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       metadataArtifact_ = other.metadataArtifact_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -181,11 +185,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetadataSchemaUriFieldNumber = 3;
     private string metadataSchemaUri_ = "";
     /// <summary>
-    /// Required. Points to a YAML file stored on Google Cloud Storage describing additional
-    /// information about the Dataset.
-    /// The schema is defined as an OpenAPI 3.0.2 Schema Object.
-    /// The schema files that can be used here are found in
-    /// gs://google-cloud-aiplatform/schema/dataset/metadata/.
+    /// Required. Points to a YAML file stored on Google Cloud Storage describing
+    /// additional information about the Dataset. The schema is defined as an
+    /// OpenAPI 3.0.2 Schema Object. The schema files that can be used here are
+    /// found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -276,12 +279,34 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// and are immutable. Following system labels exist for each Dataset:
     ///
     /// * "aiplatform.googleapis.com/dataset_metadata_schema": output only, its
-    ///   value is the [metadata_schema's][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri] title.
+    ///   value is the
+    ///   [metadata_schema's][google.cloud.aiplatform.v1.Dataset.metadata_schema_uri]
+    ///   title.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
+    }
+
+    /// <summary>Field number for the "saved_queries" field.</summary>
+    public const int SavedQueriesFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.SavedQuery> _repeated_savedQueries_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AIPlatform.V1.SavedQuery.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery> savedQueries_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery>();
+    /// <summary>
+    /// All SavedQueries belong to the Dataset will be returned in List/Get
+    /// Dataset response. The [annotation_specs][SavedQuery.annotation_specs] field
+    /// will not be populated except for UI cases which will only use
+    /// [annotation_spec_count][google.cloud.aiplatform.v1.SavedQuery.annotation_spec_count].
+    /// In CreateDataset request, a SavedQuery is created together if
+    /// this field is set, up to one SavedQuery can be set in CreateDatasetRequest.
+    /// The SavedQuery should not contain any AnnotationSpec.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery> SavedQueries {
+      get { return savedQueries_; }
     }
 
     /// <summary>Field number for the "encryption_spec" field.</summary>
@@ -304,8 +329,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetadataArtifactFieldNumber = 17;
     private string metadataArtifact_ = "";
     /// <summary>
-    /// Output only. The resource name of the Artifact that was created in MetadataStore when
-    /// creating the Dataset. The Artifact resource name pattern is
+    /// Output only. The resource name of the Artifact that was created in
+    /// MetadataStore when creating the Dataset. The Artifact resource name pattern
+    /// is
     /// `projects/{project}/locations/{location}/metadataStores/{metadata_store}/artifacts/{artifact}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -341,6 +367,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if(!savedQueries_.Equals(other.savedQueries_)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (MetadataArtifact != other.MetadataArtifact) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -359,6 +386,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
+      hash ^= savedQueries_.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (MetadataArtifact.Length != 0) hash ^= MetadataArtifact.GetHashCode();
       if (_unknownFields != null) {
@@ -408,6 +436,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
+      savedQueries_.WriteTo(output, _repeated_savedQueries_codec);
       if (encryptionSpec_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
@@ -459,6 +488,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
+      savedQueries_.WriteTo(ref output, _repeated_savedQueries_codec);
       if (encryptionSpec_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
@@ -506,6 +536,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      size += savedQueries_.CalculateSize(_repeated_savedQueries_codec);
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
       }
@@ -558,6 +589,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         Etag = other.Etag;
       }
       labels_.Add(other.labels_);
+      savedQueries_.Add(other.savedQueries_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
@@ -621,6 +653,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
             }
             input.ReadMessage(Metadata);
+            break;
+          }
+          case 74: {
+            savedQueries_.AddEntriesFrom(input, _repeated_savedQueries_codec);
             break;
           }
           case 90: {
@@ -692,6 +728,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
             }
             input.ReadMessage(Metadata);
+            break;
+          }
+          case 74: {
+            savedQueries_.AddEntriesFrom(ref input, _repeated_savedQueries_codec);
             break;
           }
           case 90: {
@@ -803,7 +843,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// considered identical if their content bytes are identical (e.g. image bytes
     /// or pdf bytes).
     /// These labels will be overridden by Annotation labels specified inside index
-    /// file referenced by [import_schema_uri][google.cloud.aiplatform.v1.ImportDataConfig.import_schema_uri], e.g. jsonl file.
+    /// file referenced by
+    /// [import_schema_uri][google.cloud.aiplatform.v1.ImportDataConfig.import_schema_uri],
+    /// e.g. jsonl file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -819,11 +861,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Labels that will be applied to newly imported Annotations. If two
     /// Annotations are identical, one of them will be deduped. Two Annotations are
-    /// considered identical if their [payload][google.cloud.aiplatform.v1.Annotation.payload],
-    /// [payload_schema_uri][google.cloud.aiplatform.v1.Annotation.payload_schema_uri] and all of their
-    /// [labels][google.cloud.aiplatform.v1.Annotation.labels] are the same.
-    /// These labels will be overridden by Annotation labels specified inside index
-    /// file referenced by [import_schema_uri][google.cloud.aiplatform.v1.ImportDataConfig.import_schema_uri], e.g. jsonl file.
+    /// considered identical if their
+    /// [payload][google.cloud.aiplatform.v1.Annotation.payload],
+    /// [payload_schema_uri][google.cloud.aiplatform.v1.Annotation.payload_schema_uri]
+    /// and all of their [labels][google.cloud.aiplatform.v1.Annotation.labels] are
+    /// the same. These labels will be overridden by Annotation labels specified
+    /// inside index file referenced by
+    /// [import_schema_uri][google.cloud.aiplatform.v1.ImportDataConfig.import_schema_uri],
+    /// e.g. jsonl file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -835,9 +880,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ImportSchemaUriFieldNumber = 4;
     private string importSchemaUri_ = "";
     /// <summary>
-    /// Required. Points to a YAML file stored on Google Cloud Storage describing the import
-    /// format. Validation will be done against the schema. The schema is defined
-    /// as an [OpenAPI 3.0.2 Schema
+    /// Required. Points to a YAML file stored on Google Cloud Storage describing
+    /// the import format. Validation will be done against the schema. The schema
+    /// is defined as an [OpenAPI 3.0.2 Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

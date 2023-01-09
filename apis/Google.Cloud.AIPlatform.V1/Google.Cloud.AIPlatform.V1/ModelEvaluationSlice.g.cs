@@ -140,9 +140,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetricsSchemaUriFieldNumber = 3;
     private string metricsSchemaUri_ = "";
     /// <summary>
-    /// Output only. Points to a YAML file stored on Google Cloud Storage describing the
-    /// [metrics][google.cloud.aiplatform.v1.ModelEvaluationSlice.metrics] of this ModelEvaluationSlice. The
-    /// schema is defined as an OpenAPI 3.0.2 [Schema
+    /// Output only. Points to a YAML file stored on Google Cloud Storage
+    /// describing the
+    /// [metrics][google.cloud.aiplatform.v1.ModelEvaluationSlice.metrics] of this
+    /// ModelEvaluationSlice. The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -158,8 +159,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MetricsFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Value metrics_;
     /// <summary>
-    /// Output only. Sliced evaluation metrics of the Model. The schema of the metrics is stored
-    /// in [metrics_schema_uri][google.cloud.aiplatform.v1.ModelEvaluationSlice.metrics_schema_uri]
+    /// Output only. Sliced evaluation metrics of the Model. The schema of the
+    /// metrics is stored in
+    /// [metrics_schema_uri][google.cloud.aiplatform.v1.ModelEvaluationSlice.metrics_schema_uri]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -499,8 +501,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Output only. The dimension of the slice.
         /// Well-known dimensions are:
         ///   * `annotationSpec`: This slice is on the test data that has either
-        ///     ground truth or prediction with [AnnotationSpec.display_name][google.cloud.aiplatform.v1.AnnotationSpec.display_name]
-        ///     equals to [value][google.cloud.aiplatform.v1.ModelEvaluationSlice.Slice.value].
+        ///     ground truth or prediction with
+        ///     [AnnotationSpec.display_name][google.cloud.aiplatform.v1.AnnotationSpec.display_name]
+        ///     equals to
+        ///     [value][google.cloud.aiplatform.v1.ModelEvaluationSlice.Slice.value].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

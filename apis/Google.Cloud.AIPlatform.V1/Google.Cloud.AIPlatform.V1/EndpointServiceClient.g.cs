@@ -849,8 +849,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists Endpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the Endpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// Endpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -874,8 +874,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists Endpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the Endpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// Endpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -899,8 +899,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists Endpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the Endpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// Endpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -924,8 +924,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists Endpoints in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Location from which to list the Endpoints.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The resource name of the Location from which to list the
+        /// Endpoints. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -979,7 +979,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Endpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -997,7 +998,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Endpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1015,7 +1017,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The Endpoint which replaces the resource on the server.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1228,8 +1231,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1237,13 +1241,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1268,8 +1274,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1277,13 +1284,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1308,8 +1317,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1317,13 +1327,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1340,8 +1352,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1349,13 +1362,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1380,8 +1395,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1389,13 +1405,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1420,8 +1438,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModel">
         /// Required. The DeployedModel to be created within the Endpoint. Note that
-        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-        /// receiving traffic, either as part of this call, or via
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+        /// must be updated for the DeployedModel to start receiving traffic, either as
+        /// part of this call, or via
         /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
         /// </param>
         /// <param name="trafficSplit">
@@ -1429,13 +1448,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// traffic that should be forwarded to that DeployedModel.
         /// 
         /// If this field is non-empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-        /// To refer to the ID of the just being deployed Model, a "0" should be used,
-        /// and the actual ID of the new DeployedModel will be filled in its place by
-        /// this method. The traffic percentage values must add up to 100.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. To refer to the ID of the just being deployed Model, a
+        /// "0" should be used, and the actual ID of the new DeployedModel will be
+        /// filled in its place by this method. The traffic percentage values must add
+        /// up to 100.
         /// 
         /// If this field is empty, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+        /// updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1512,12 +1533,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1546,12 +1567,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1580,12 +1601,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1606,12 +1627,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1640,12 +1661,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1674,12 +1695,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="trafficSplit">
         /// If this field is provided, then the Endpoint's
-        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-        /// last DeployedModel is being undeployed from the Endpoint, the
-        /// [Endpoint.traffic_split] will always end up empty when this call returns.
-        /// A DeployedModel will be successfully undeployed only if it doesn't have
-        /// any traffic assigned to it when this method executes, or if this field
-        /// unassigns any traffic to it.
+        /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+        /// overwritten with it. If last DeployedModel is being undeployed from the
+        /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+        /// call returns. A DeployedModel will be successfully undeployed only if it
+        /// doesn't have any traffic assigned to it when this method executes, or if
+        /// this field unassigns any traffic to it.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

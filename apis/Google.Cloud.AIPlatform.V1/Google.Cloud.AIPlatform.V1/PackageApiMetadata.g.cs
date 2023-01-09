@@ -44,18 +44,18 @@ namespace Google.Cloud.AIPlatform.V1
                 },
                 {
                     "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:getIamPolicy", "additionalBindings": [ { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:getIamPolicy" } ] }
-                    proto::ByteString.FromBase64("IkIvdWkve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTpnZXRJYW1Qb2xpY3laUiJQL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTpnZXRJYW1Qb2xpY3k=")
+                    // { "post": "/v1/{resource=projects/*/locations/*/featurestores/*}:getIamPolicy", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:getIamPolicy" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:getIamPolicy" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("IkIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTpnZXRJYW1Qb2xpY3laUiJQL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTpnZXRJYW1Qb2xpY3laRCJCL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn06Z2V0SWFtUG9saWN5WlIiUC91aS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKn06Z2V0SWFtUG9saWN5")
                 },
                 {
                     "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:setIamPolicy", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkIvdWkve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaVSJQL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTpzZXRJYW1Qb2xpY3k6ASo=")
+                    // { "post": "/v1/{resource=projects/*/locations/*/featurestores/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:setIamPolicy", "body": "*" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:setIamPolicy", "body": "*" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaVSJQL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaRyJCL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn06c2V0SWFtUG9saWN5OgEqWlUiUC91aS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKn06c2V0SWFtUG9saWN5OgEq")
                 },
                 {
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:testIamPermissions", "additionalBindings": [ { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:testIamPermissions" } ] }
-                    proto::ByteString.FromBase64("IkgvdWkve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnNaWCJWL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM=")
+                    // { "post": "/v1/{resource=projects/*/locations/*/featurestores/*}:testIamPermissions", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:testIamPermissions" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*}:testIamPermissions" }, { "post": "/ui/{resource=projects/*/locations/*/featurestores/*/entityTypes/*}:testIamPermissions" } ] }
+                    proto::ByteString.FromBase64("IkgvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnNaWCJWL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnNaSiJIL3VpL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn06dGVzdElhbVBlcm1pc3Npb25zWlgiVi91aS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKn06dGVzdElhbVBlcm1pc3Npb25z")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",

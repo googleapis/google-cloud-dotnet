@@ -707,7 +707,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int OutputUriPrefixFieldNumber = 1;
     private string outputUriPrefix_ = "";
     /// <summary>
-    /// Required. Google Cloud Storage URI to output directory. If the uri doesn't end with
+    /// Required. Google Cloud Storage URI to output directory. If the uri doesn't
+    /// end with
     /// '/', a '/' will be automatically appended. The directory is created if it
     /// doesn't exist.
     /// </summary>

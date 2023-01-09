@@ -746,8 +746,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
-        /// Updatable fields:
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
         /// 
         /// * `display_name`
         /// * `description`
@@ -770,8 +770,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
-        /// Updatable fields:
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
         /// 
         /// * `display_name`
         /// * `description`
@@ -794,8 +794,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
-        /// Updatable fields:
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. Updatable fields:
         /// 
         /// * `display_name`
         /// * `description`
@@ -1129,8 +1129,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1153,8 +1153,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1177,8 +1177,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1194,8 +1194,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1218,8 +1218,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1242,8 +1242,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// `projects/{project}/locations/{location}/datasets/{dataset}`
         /// </param>
         /// <param name="importConfigs">
-        /// Required. The desired input locations. The contents of all input locations will be
-        /// imported in one batch.
+        /// Required. The desired input locations. The contents of all input locations
+        /// will be imported in one batch.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -208,8 +208,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DeployedModel> deployedModels_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DeployedModel>();
     /// <summary>
     /// Output only. The models deployed in this Endpoint.
-    /// To add or remove DeployedModels use [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel] and
-    /// [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel] respectively.
+    /// To add or remove DeployedModels use
+    /// [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel]
+    /// and
+    /// [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel]
+    /// respectively.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -332,7 +335,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Private services access must already be configured for the network. If left
     /// unspecified, the Endpoint is not peered with any network.
     ///
-    /// Only one of the fields, [network][google.cloud.aiplatform.v1.Endpoint.network] or
+    /// Only one of the fields,
+    /// [network][google.cloud.aiplatform.v1.Endpoint.network] or
     /// [enable_private_service_connect][google.cloud.aiplatform.v1.Endpoint.enable_private_service_connect],
     /// can be set.
     ///
@@ -356,7 +360,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Deprecated: If true, expose the Endpoint via private service connect.
     ///
-    /// Only one of the fields, [network][google.cloud.aiplatform.v1.Endpoint.network] or
+    /// Only one of the fields,
+    /// [network][google.cloud.aiplatform.v1.Endpoint.network] or
     /// [enable_private_service_connect][google.cloud.aiplatform.v1.Endpoint.enable_private_service_connect],
     /// can be set.
     /// </summary>
@@ -374,9 +379,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelDeploymentMonitoringJobFieldNumber = 14;
     private string modelDeploymentMonitoringJob_ = "";
     /// <summary>
-    /// Output only. Resource name of the Model Monitoring job associated with this Endpoint
-    /// if monitoring is enabled by [CreateModelDeploymentMonitoringJob][].
-    /// Format:
+    /// Output only. Resource name of the Model Monitoring job associated with this
+    /// Endpoint if monitoring is enabled by
+    /// [CreateModelDeploymentMonitoringJob][]. Format:
     /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -955,8 +960,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI
-    /// will generate a value for this ID.
+    /// Immutable. The ID of the DeployedModel. If not provided upon deployment,
+    /// Vertex AI will generate a value for this ID.
     ///
     /// This value should be 1-10 characters, and valid characters are /[0-9]/.
     /// </summary>
@@ -973,8 +978,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelFieldNumber = 2;
     private string model_ = "";
     /// <summary>
-    /// Required. The resource name of the Model that this is the deployment of. Note that
-    /// the Model may be in a different location than the DeployedModel's Endpoint.
+    /// Required. The resource name of the Model that this is the deployment of.
+    /// Note that the Model may be in a different location than the DeployedModel's
+    /// Endpoint.
     ///
     /// The resource name may contain version id or version alias to specify the
     /// version, if no version is specified, the default version will be deployed.
@@ -1040,13 +1046,21 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Explanation configuration for this DeployedModel.
     ///
-    /// When deploying a Model using [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel], this value
-    /// overrides the value of [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]. All fields of
-    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] are optional in the request. If a field of
-    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] is not populated, the value of the same field of
-    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec] is inherited. If the corresponding
-    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec] is not populated, all fields of the
-    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] will be used for the explanation configuration.
+    /// When deploying a Model using
+    /// [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel],
+    /// this value overrides the value of
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec].
+    /// All fields of
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+    /// are optional in the request. If a field of
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+    /// is not populated, the value of the same field of
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]
+    /// is inherited. If the corresponding
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]
+    /// is not populated, all fields of the
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+    /// will be used for the explanation configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1123,9 +1137,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int PrivateEndpointsFieldNumber = 14;
     private global::Google.Cloud.AIPlatform.V1.PrivateEndpoints privateEndpoints_;
     /// <summary>
-    /// Output only. Provide paths for users to send predict/explain/health requests directly to
-    /// the deployed model services running on Cloud via private services access.
-    /// This field is populated if [network][google.cloud.aiplatform.v1.Endpoint.network] is configured.
+    /// Output only. Provide paths for users to send predict/explain/health
+    /// requests directly to the deployed model services running on Cloud via
+    /// private services access. This field is populated if
+    /// [network][google.cloud.aiplatform.v1.Endpoint.network] is configured.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1715,8 +1730,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ServiceAttachmentFieldNumber = 4;
     private string serviceAttachment_ = "";
     /// <summary>
-    /// Output only. The name of the service attachment resource. Populated if private service
-    /// connect is enabled.
+    /// Output only. The name of the service attachment resource. Populated if
+    /// private service connect is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

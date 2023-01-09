@@ -1101,7 +1101,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1137,7 +1138,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1173,7 +1175,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="updateMask">
         /// Required. The update mask applies to the resource.
-        /// For the `FieldMask` definition, see [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// For the `FieldMask` definition, see
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1183,9 +1186,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1196,9 +1202,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1209,9 +1218,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1248,9 +1260,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1267,9 +1282,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1286,9 +1304,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1302,9 +1323,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1321,9 +1345,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1340,9 +1367,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Model resource to be deleted.
@@ -1358,7 +1388,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1371,7 +1402,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1384,7 +1416,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1424,11 +1457,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1445,11 +1479,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1466,11 +1501,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1484,11 +1520,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1505,11 +1542,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1526,11 +1564,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the model version to be deleted, with a version ID explicitly
-        /// included.
+        /// Required. The name of the model version to be deleted, with a version ID
+        /// explicitly included.
         /// 
         /// Example: `projects/{project}/locations/{location}/models/{model}@1234`
         /// </param>
@@ -1765,7 +1804,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1776,7 +1816,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1787,7 +1828,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1824,7 +1866,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -1846,7 +1889,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -1868,7 +1912,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -1886,7 +1931,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -1908,7 +1954,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -1930,7 +1977,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
@@ -2603,8 +2651,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the ModelEvaluation to list the ModelEvaluationSlices
-        /// from. Format:
+        /// Required. The resource name of the ModelEvaluation to list the
+        /// ModelEvaluationSlices from. Format:
         /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
         /// </param>
         /// <param name="pageToken">
@@ -2629,8 +2677,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the ModelEvaluation to list the ModelEvaluationSlices
-        /// from. Format:
+        /// Required. The resource name of the ModelEvaluation to list the
+        /// ModelEvaluationSlices from. Format:
         /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
         /// </param>
         /// <param name="pageToken">
@@ -2655,8 +2703,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the ModelEvaluation to list the ModelEvaluationSlices
-        /// from. Format:
+        /// Required. The resource name of the ModelEvaluation to list the
+        /// ModelEvaluationSlices from. Format:
         /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
         /// </param>
         /// <param name="pageToken">
@@ -2681,8 +2729,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the ModelEvaluation to list the ModelEvaluationSlices
-        /// from. Format:
+        /// Required. The resource name of the ModelEvaluation to list the
+        /// ModelEvaluationSlices from. Format:
         /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}`
         /// </param>
         /// <param name="pageToken">
@@ -3007,9 +3055,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3023,9 +3074,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model.
         /// 
-        /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
-        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
-        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
+        /// A model cannot be deleted if any
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the
+        /// model in its
+        /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models]
+        /// field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3044,7 +3098,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3060,7 +3115,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// Model version can only be deleted if there are no [DeployedModels][]
         /// created from it. Deleting the only version in the Model is not allowed. Use
-        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for deleting the Model instead.
+        /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
+        /// deleting the Model instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3101,7 +3157,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3115,7 +3172,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Exports a trained, exportable Model to a location specified by the
         /// user. A Model is considered to be exportable if it has at least one
-        /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
+        /// [supported export
+        /// format][google.cloud.aiplatform.v1.Model.supported_export_formats].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -138,7 +138,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [EndpointService.CreateEndpoint][google.cloud.aiplatform.v1.EndpointService.CreateEndpoint].
+  /// Request message for
+  /// [EndpointService.CreateEndpoint][google.cloud.aiplatform.v1.EndpointService.CreateEndpoint].
   /// </summary>
   public sealed partial class CreateEndpointRequest : pb::IMessage<CreateEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -430,7 +431,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [EndpointService.CreateEndpoint][google.cloud.aiplatform.v1.EndpointService.CreateEndpoint].
+  /// Runtime operation information for
+  /// [EndpointService.CreateEndpoint][google.cloud.aiplatform.v1.EndpointService.CreateEndpoint].
   /// </summary>
   public sealed partial class CreateEndpointOperationMetadata : pb::IMessage<CreateEndpointOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -634,7 +636,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.GetEndpoint][google.cloud.aiplatform.v1.EndpointService.GetEndpoint]
+  /// Request message for
+  /// [EndpointService.GetEndpoint][google.cloud.aiplatform.v1.EndpointService.GetEndpoint]
   /// </summary>
   public sealed partial class GetEndpointRequest : pb::IMessage<GetEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -831,7 +834,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints].
+  /// Request message for
+  /// [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints].
   /// </summary>
   public sealed partial class ListEndpointsRequest : pb::IMessage<ListEndpointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -886,8 +890,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the Location from which to list the Endpoints.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The resource name of the Location from which to list the
+    /// Endpoints. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -902,11 +906,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Optional. An expression for filtering the results of the request. For field names
-    /// both snake_case and camelCase are supported.
+    /// Optional. An expression for filtering the results of the request. For field
+    /// names both snake_case and camelCase are supported.
     ///
     ///   * `endpoint` supports = and !=. `endpoint` represents the Endpoint ID,
-    ///     i.e. the last segment of the Endpoint's [resource name][google.cloud.aiplatform.v1.Endpoint.name].
+    ///     i.e. the last segment of the Endpoint's [resource
+    ///     name][google.cloud.aiplatform.v1.Endpoint.name].
     ///   * `display_name` supports = and, !=
     ///   * `labels` supports general map functions that is:
     ///     * `labels.key=value` - key:value equality
@@ -948,8 +953,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Optional. The standard list page token.
     /// Typically obtained via
-    /// [ListEndpointsResponse.next_page_token][google.cloud.aiplatform.v1.ListEndpointsResponse.next_page_token] of the previous
-    /// [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints] call.
+    /// [ListEndpointsResponse.next_page_token][google.cloud.aiplatform.v1.ListEndpointsResponse.next_page_token]
+    /// of the previous
+    /// [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1260,7 +1267,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints].
+  /// Response message for
+  /// [EndpointService.ListEndpoints][google.cloud.aiplatform.v1.EndpointService.ListEndpoints].
   /// </summary>
   public sealed partial class ListEndpointsResponse : pb::IMessage<ListEndpointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1326,7 +1334,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results.
-    /// Pass to [ListEndpointsRequest.page_token][google.cloud.aiplatform.v1.ListEndpointsRequest.page_token] to obtain that page.
+    /// Pass to
+    /// [ListEndpointsRequest.page_token][google.cloud.aiplatform.v1.ListEndpointsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1485,7 +1495,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
+  /// Request message for
+  /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
   /// </summary>
   public sealed partial class UpdateEndpointRequest : pb::IMessage<UpdateEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1551,7 +1562,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The update mask applies to the resource. See [google.protobuf.FieldMask][google.protobuf.FieldMask].
+    /// Required. The update mask applies to the resource. See
+    /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1738,7 +1750,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.DeleteEndpoint][google.cloud.aiplatform.v1.EndpointService.DeleteEndpoint].
+  /// Request message for
+  /// [EndpointService.DeleteEndpoint][google.cloud.aiplatform.v1.EndpointService.DeleteEndpoint].
   /// </summary>
   public sealed partial class DeleteEndpointRequest : pb::IMessage<DeleteEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1935,7 +1948,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
+  /// Request message for
+  /// [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
   /// </summary>
   public sealed partial class DeployModelRequest : pb::IMessage<DeployModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2005,8 +2019,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.DeployedModel deployedModel_;
     /// <summary>
     /// Required. The DeployedModel to be created within the Endpoint. Note that
-    /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] must be updated for the DeployedModel to start
-    /// receiving traffic, either as part of this call, or via
+    /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split]
+    /// must be updated for the DeployedModel to start receiving traffic, either as
+    /// part of this call, or via
     /// [EndpointService.UpdateEndpoint][google.cloud.aiplatform.v1.EndpointService.UpdateEndpoint].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2028,13 +2043,15 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// traffic that should be forwarded to that DeployedModel.
     ///
     /// If this field is non-empty, then the Endpoint's
-    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it.
-    /// To refer to the ID of the just being deployed Model, a "0" should be used,
-    /// and the actual ID of the new DeployedModel will be filled in its place by
-    /// this method. The traffic percentage values must add up to 100.
+    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+    /// overwritten with it. To refer to the ID of the just being deployed Model, a
+    /// "0" should be used, and the actual ID of the new DeployedModel will be
+    /// filled in its place by this method. The traffic percentage values must add
+    /// up to 100.
     ///
     /// If this field is empty, then the Endpoint's
-    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not updated.
+    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] is not
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2223,7 +2240,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
+  /// Response message for
+  /// [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
   /// </summary>
   public sealed partial class DeployModelResponse : pb::IMessage<DeployModelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2427,7 +2445,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
+  /// Runtime operation information for
+  /// [EndpointService.DeployModel][google.cloud.aiplatform.v1.EndpointService.DeployModel].
   /// </summary>
   public sealed partial class DeployModelOperationMetadata : pb::IMessage<DeployModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2631,7 +2650,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
+  /// Request message for
+  /// [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
   /// </summary>
   public sealed partial class UndeployModelRequest : pb::IMessage<UndeployModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2718,12 +2738,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::MapField<string, int> trafficSplit_ = new pbc::MapField<string, int>();
     /// <summary>
     /// If this field is provided, then the Endpoint's
-    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be overwritten with it. If
-    /// last DeployedModel is being undeployed from the Endpoint, the
-    /// [Endpoint.traffic_split] will always end up empty when this call returns.
-    /// A DeployedModel will be successfully undeployed only if it doesn't have
-    /// any traffic assigned to it when this method executes, or if this field
-    /// unassigns any traffic to it.
+    /// [traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split] will be
+    /// overwritten with it. If last DeployedModel is being undeployed from the
+    /// Endpoint, the [Endpoint.traffic_split] will always end up empty when this
+    /// call returns. A DeployedModel will be successfully undeployed only if it
+    /// doesn't have any traffic assigned to it when this method executes, or if
+    /// this field unassigns any traffic to it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2903,7 +2923,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Response message for [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
+  /// Response message for
+  /// [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
   /// </summary>
   public sealed partial class UndeployModelResponse : pb::IMessage<UndeployModelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3058,7 +3079,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Runtime operation information for [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
+  /// Runtime operation information for
+  /// [EndpointService.UndeployModel][google.cloud.aiplatform.v1.EndpointService.UndeployModel].
   /// </summary>
   public sealed partial class UndeployModelOperationMetadata : pb::IMessage<UndeployModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

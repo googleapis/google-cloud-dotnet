@@ -299,7 +299,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -337,7 +338,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -375,7 +377,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -405,7 +408,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -443,7 +447,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -481,7 +486,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
@@ -495,11 +501,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -512,11 +520,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -529,11 +539,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -546,11 +558,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -560,16 +574,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -586,11 +602,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -600,16 +618,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -626,11 +646,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -640,16 +662,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -662,11 +686,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -676,16 +702,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -702,11 +730,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -716,16 +746,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -742,11 +774,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -756,16 +790,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="httpBody">
         /// The prediction input. Supports HTTP headers and arbitrary data payload.
         /// 
-        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
-        /// supports per request. When this limit it is exceeded for an AutoML model,
-        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
-        /// When this limit is exceeded for a custom-trained model, the behavior varies
-        /// depending on the model.
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an
+        /// upper limit on the number of instances it supports per request. When this
+        /// limit it is exceeded for an AutoML model, the
+        /// [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict]
+        /// method returns an error. When this limit is exceeded for a custom-trained
+        /// model, the behavior varies depending on the model.
         /// 
         /// You can specify the schema for each instance in the
         /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
-        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
-        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This
+        /// schema applies when you deploy the `Model` as a `DeployedModel` to an
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
         /// method.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -776,10 +812,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -794,10 +832,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -812,10 +852,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -830,10 +872,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -857,13 +901,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -882,10 +928,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -909,13 +957,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -934,10 +984,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -961,13 +1013,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -977,10 +1031,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -1004,13 +1060,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1029,10 +1087,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -1056,13 +1116,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1081,10 +1143,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -1108,13 +1172,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="parameters">
         /// The parameters that govern the prediction. The schema of the parameters may
-        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// be specified via Endpoint's DeployedModels' [Model's
+        /// ][google.cloud.aiplatform.v1.DeployedModel.model]
         /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
         /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
         /// </param>
         /// <param name="deployedModelId">
         /// If specified, this ExplainRequest will be served by the chosen
-        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// DeployedModel, overriding
+        /// [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1213,11 +1279,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1233,11 +1301,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// The response includes the following HTTP headers:
         /// 
-        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the
+        /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
         /// prediction.
         /// 
-        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
-        /// that served this prediction.
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's
+        /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] that served this
+        /// prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1251,10 +1321,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have
@@ -1272,10 +1344,12 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Perform an online explanation.
         /// 
-        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
-        /// the corresponding DeployModel must have
+        /// If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is specified, the corresponding DeployModel must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// populated. If
+        /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
         /// populated. Only deployed AutoML tabular Models have

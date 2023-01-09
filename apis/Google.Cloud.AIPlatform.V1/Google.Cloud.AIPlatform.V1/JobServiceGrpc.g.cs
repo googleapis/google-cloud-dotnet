@@ -433,12 +433,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a CustomJob.
       /// Starts asynchronous cancellation on the CustomJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the CustomJob is not deleted; instead it becomes a job with
-      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-      /// corresponding to `Code.CANCELLED`, and [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
+      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with
+      /// a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
       /// `CANCELLED`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -562,13 +565,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a HyperparameterTuningJob.
       /// Starts asynchronous cancellation on the HyperparameterTuningJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the HyperparameterTuningJob is not deleted; instead it becomes a job with
-      /// a [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code]
-      /// of 1, corresponding to `Code.CANCELLED`, and
-      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state] is set to `CANCELLED`.
+      /// a
+      /// [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error]
+      /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and
+      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state]
+      /// is set to `CANCELLED`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -634,12 +641,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       ///
       /// Starts asynchronous cancellation on the BatchPredictionJob. The server
       /// makes the best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On a successful cancellation,
       /// the BatchPredictionJob is not deleted;instead its
-      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state] is set to `CANCELLED`. Any files already
-      /// outputted by the job are not deleted.
+      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state]
+      /// is set to `CANCELLED`. Any files already outputted by the job are not
+      /// deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -726,7 +735,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
       /// makes a best effort to cancel the job. Will mark
-      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state]
+      /// to 'PAUSED'.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -980,12 +990,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a CustomJob.
       /// Starts asynchronous cancellation on the CustomJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the CustomJob is not deleted; instead it becomes a job with
-      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-      /// corresponding to `Code.CANCELLED`, and [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
+      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with
+      /// a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
       /// `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1002,12 +1015,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a CustomJob.
       /// Starts asynchronous cancellation on the CustomJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the CustomJob is not deleted; instead it becomes a job with
-      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-      /// corresponding to `Code.CANCELLED`, and [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
+      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with
+      /// a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
       /// `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1022,12 +1038,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a CustomJob.
       /// Starts asynchronous cancellation on the CustomJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the CustomJob is not deleted; instead it becomes a job with
-      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-      /// corresponding to `Code.CANCELLED`, and [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
+      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with
+      /// a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
       /// `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1044,12 +1063,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a CustomJob.
       /// Starts asynchronous cancellation on the CustomJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetCustomJob][google.cloud.aiplatform.v1.JobService.GetCustomJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the CustomJob is not deleted; instead it becomes a job with
-      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-      /// corresponding to `Code.CANCELLED`, and [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
+      /// a [CustomJob.error][google.cloud.aiplatform.v1.CustomJob.error] value with
+      /// a [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [CustomJob.state][google.cloud.aiplatform.v1.CustomJob.state] is set to
       /// `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1496,13 +1518,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a HyperparameterTuningJob.
       /// Starts asynchronous cancellation on the HyperparameterTuningJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the HyperparameterTuningJob is not deleted; instead it becomes a job with
-      /// a [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code]
-      /// of 1, corresponding to `Code.CANCELLED`, and
-      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state] is set to `CANCELLED`.
+      /// a
+      /// [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error]
+      /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and
+      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state]
+      /// is set to `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1518,13 +1544,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a HyperparameterTuningJob.
       /// Starts asynchronous cancellation on the HyperparameterTuningJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the HyperparameterTuningJob is not deleted; instead it becomes a job with
-      /// a [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code]
-      /// of 1, corresponding to `Code.CANCELLED`, and
-      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state] is set to `CANCELLED`.
+      /// a
+      /// [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error]
+      /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and
+      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state]
+      /// is set to `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1538,13 +1568,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a HyperparameterTuningJob.
       /// Starts asynchronous cancellation on the HyperparameterTuningJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the HyperparameterTuningJob is not deleted; instead it becomes a job with
-      /// a [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code]
-      /// of 1, corresponding to `Code.CANCELLED`, and
-      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state] is set to `CANCELLED`.
+      /// a
+      /// [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error]
+      /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and
+      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state]
+      /// is set to `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1560,13 +1594,17 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Cancels a HyperparameterTuningJob.
       /// Starts asynchronous cancellation on the HyperparameterTuningJob. The server
       /// makes a best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetHyperparameterTuningJob][google.cloud.aiplatform.v1.JobService.GetHyperparameterTuningJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On successful cancellation,
       /// the HyperparameterTuningJob is not deleted; instead it becomes a job with
-      /// a [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error] value with a [google.rpc.Status.code][google.rpc.Status.code]
-      /// of 1, corresponding to `Code.CANCELLED`, and
-      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state] is set to `CANCELLED`.
+      /// a
+      /// [HyperparameterTuningJob.error][google.cloud.aiplatform.v1.HyperparameterTuningJob.error]
+      /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+      /// corresponding to `Code.CANCELLED`, and
+      /// [HyperparameterTuningJob.state][google.cloud.aiplatform.v1.HyperparameterTuningJob.state]
+      /// is set to `CANCELLED`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1781,12 +1819,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       ///
       /// Starts asynchronous cancellation on the BatchPredictionJob. The server
       /// makes the best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On a successful cancellation,
       /// the BatchPredictionJob is not deleted;instead its
-      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state] is set to `CANCELLED`. Any files already
-      /// outputted by the job are not deleted.
+      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state]
+      /// is set to `CANCELLED`. Any files already outputted by the job are not
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1803,12 +1843,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       ///
       /// Starts asynchronous cancellation on the BatchPredictionJob. The server
       /// makes the best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On a successful cancellation,
       /// the BatchPredictionJob is not deleted;instead its
-      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state] is set to `CANCELLED`. Any files already
-      /// outputted by the job are not deleted.
+      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state]
+      /// is set to `CANCELLED`. Any files already outputted by the job are not
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1823,12 +1865,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       ///
       /// Starts asynchronous cancellation on the BatchPredictionJob. The server
       /// makes the best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On a successful cancellation,
       /// the BatchPredictionJob is not deleted;instead its
-      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state] is set to `CANCELLED`. Any files already
-      /// outputted by the job are not deleted.
+      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state]
+      /// is set to `CANCELLED`. Any files already outputted by the job are not
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1845,12 +1889,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       ///
       /// Starts asynchronous cancellation on the BatchPredictionJob. The server
       /// makes the best effort to cancel the job, but success is not
-      /// guaranteed. Clients can use [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob] or
-      /// other methods to check whether the cancellation succeeded or whether the
+      /// guaranteed. Clients can use
+      /// [JobService.GetBatchPredictionJob][google.cloud.aiplatform.v1.JobService.GetBatchPredictionJob]
+      /// or other methods to check whether the cancellation succeeded or whether the
       /// job completed despite cancellation. On a successful cancellation,
       /// the BatchPredictionJob is not deleted;instead its
-      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state] is set to `CANCELLED`. Any files already
-      /// outputted by the job are not deleted.
+      /// [BatchPredictionJob.state][google.cloud.aiplatform.v1.BatchPredictionJob.state]
+      /// is set to `CANCELLED`. Any files already outputted by the job are not
+      /// deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2155,7 +2201,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
       /// makes a best effort to cancel the job. Will mark
-      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state]
+      /// to 'PAUSED'.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2170,7 +2217,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
       /// makes a best effort to cancel the job. Will mark
-      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state]
+      /// to 'PAUSED'.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2183,7 +2231,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
       /// makes a best effort to cancel the job. Will mark
-      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state]
+      /// to 'PAUSED'.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2198,7 +2247,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
       /// makes a best effort to cancel the job. Will mark
-      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state]
+      /// to 'PAUSED'.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -53,6 +53,7 @@ namespace Google.Cloud.AIPlatform.V1
             CreateTensorboardSettings = existing.CreateTensorboardSettings;
             CreateTensorboardOperationsSettings = existing.CreateTensorboardOperationsSettings.Clone();
             GetTensorboardSettings = existing.GetTensorboardSettings;
+            ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
             UpdateTensorboardSettings = existing.UpdateTensorboardSettings;
             UpdateTensorboardOperationsSettings = existing.UpdateTensorboardOperationsSettings.Clone();
             ListTensorboardsSettings = existing.ListTensorboardsSettings;
@@ -133,6 +134,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTensorboardSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TensorboardServiceClient.ReadTensorboardUsage</c> and
+        /// <c>TensorboardServiceClient.ReadTensorboardUsageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1001,6 +1015,123 @@ namespace Google.Cloud.AIPlatform.V1
             GetTensorboardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates a Tensorboard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1066,8 +1197,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Tensorboard resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,8 +1222,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Tensorboard resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,8 +1247,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Tensorboard resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1422,16 +1553,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1450,16 +1581,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1478,16 +1609,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1501,16 +1632,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1529,16 +1660,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1557,16 +1688,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to create the TensorboardExperiment
-        /// in. Format:
+        /// Required. The resource name of the Tensorboard to create the
+        /// TensorboardExperiment in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="tensorboardExperiment">
         /// The TensorboardExperiment to create.
         /// </param>
         /// <param name="tensorboardExperimentId">
-        /// Required. The ID to use for the Tensorboard experiment, which will become the final
-        /// component of the Tensorboard experiment's resource name.
+        /// Required. The ID to use for the Tensorboard experiment, which becomes the
+        /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1732,8 +1863,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardExperiment resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1757,8 +1888,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardExperiment resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1782,8 +1913,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardExperiment resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1813,8 +1944,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardExperiments in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
-        /// Format:
+        /// Required. The resource name of the Tensorboard to list
+        /// TensorboardExperiments. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
@@ -1839,8 +1970,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardExperiments in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
-        /// Format:
+        /// Required. The resource name of the Tensorboard to list
+        /// TensorboardExperiments. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
@@ -1865,8 +1996,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardExperiments in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
-        /// Format:
+        /// Required. The resource name of the Tensorboard to list
+        /// TensorboardExperiments. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
@@ -1891,8 +2022,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardExperiments in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the Tensorboard to list TensorboardExperiments.
-        /// Format:
+        /// Required. The resource name of the Tensorboard to list
+        /// TensorboardExperiments. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
         /// </param>
         /// <param name="pageToken">
@@ -2088,15 +2219,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2116,15 +2247,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2144,15 +2275,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2167,15 +2298,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2195,15 +2326,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2223,15 +2354,15 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a TensorboardRun.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to create the TensorboardRun
-        /// in. Format:
+        /// Required. The resource name of the TensorboardExperiment to create the
+        /// TensorboardRun in. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="tensorboardRun">
         /// Required. The TensorboardRun to create.
         /// </param>
         /// <param name="tensorboardRunId">
-        /// Required. The ID to use for the Tensorboard run, which will become the final
+        /// Required. The ID to use for the Tensorboard run, which becomes the final
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
@@ -2559,16 +2690,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates a TensorboardRun.
         /// </summary>
         /// <param name="tensorboardRun">
-        /// Required. The TensorboardRun's `name` field is used to identify the TensorboardRun to
-        /// be updated. Format:
+        /// Required. The TensorboardRun's `name` field is used to identify the
+        /// TensorboardRun to be updated. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="updateMask">
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardRun resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2584,16 +2715,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates a TensorboardRun.
         /// </summary>
         /// <param name="tensorboardRun">
-        /// Required. The TensorboardRun's `name` field is used to identify the TensorboardRun to
-        /// be updated. Format:
+        /// Required. The TensorboardRun's `name` field is used to identify the
+        /// TensorboardRun to be updated. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="updateMask">
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardRun resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2609,16 +2740,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// Updates a TensorboardRun.
         /// </summary>
         /// <param name="tensorboardRun">
-        /// Required. The TensorboardRun's `name` field is used to identify the TensorboardRun to
-        /// be updated. Format:
+        /// Required. The TensorboardRun's `name` field is used to identify the
+        /// TensorboardRun to be updated. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="updateMask">
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardRun resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2648,8 +2779,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardRuns in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
-        /// Format:
+        /// Required. The resource name of the TensorboardExperiment to list
+        /// TensorboardRuns. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
@@ -2674,8 +2805,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardRuns in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
-        /// Format:
+        /// Required. The resource name of the TensorboardExperiment to list
+        /// TensorboardRuns. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
@@ -2700,8 +2831,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardRuns in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
-        /// Format:
+        /// Required. The resource name of the TensorboardExperiment to list
+        /// TensorboardRuns. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
@@ -2726,8 +2857,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardRuns in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardExperiment to list TensorboardRuns.
-        /// Format:
+        /// Required. The resource name of the TensorboardExperiment to list
+        /// TensorboardRuns. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}`
         /// </param>
         /// <param name="pageToken">
@@ -2932,8 +3063,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2960,8 +3091,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2988,8 +3119,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3009,8 +3140,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3037,8 +3168,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3065,8 +3196,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// TensorboardExperiment.
         /// </param>
         /// <param name="requests">
-        /// Required. The request message specifying the TensorboardTimeSeries to create.
-        /// A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+        /// Required. The request message specifying the TensorboardTimeSeries to
+        /// create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3375,8 +3506,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardTimeSeries resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3401,8 +3532,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardTimeSeries resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3427,8 +3558,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// TensorboardTimeSeries resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten if new
+        /// the full request. A field is overwritten if it's in the mask. If the
+        /// user does not provide a mask then all fields are overwritten if new
         /// values are specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3458,8 +3589,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardTimeSeries in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
-        /// Format:
+        /// Required. The resource name of the TensorboardRun to list
+        /// TensorboardTimeSeries. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
@@ -3484,8 +3615,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardTimeSeries in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
-        /// Format:
+        /// Required. The resource name of the TensorboardRun to list
+        /// TensorboardTimeSeries. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
@@ -3510,8 +3641,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardTimeSeries in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
-        /// Format:
+        /// Required. The resource name of the TensorboardRun to list
+        /// TensorboardTimeSeries. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
@@ -3536,8 +3667,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// Lists TensorboardTimeSeries in a Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the TensorboardRun to list TensorboardTimeSeries.
-        /// Format:
+        /// Required. The resource name of the TensorboardRun to list
+        /// TensorboardTimeSeries. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
         /// </param>
         /// <param name="pageToken">
@@ -3705,8 +3836,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3718,8 +3849,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3731,8 +3862,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3744,16 +3875,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3766,16 +3898,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3788,16 +3921,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3807,16 +3941,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3829,16 +3964,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3851,16 +3987,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="tensorboard">
-        /// Required. The resource name of the Tensorboard containing TensorboardTimeSeries to
-        /// read data from. Format:
+        /// Required. The resource name of the Tensorboard containing
+        /// TensorboardTimeSeries to read data from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`.
-        /// The TensorboardTimeSeries referenced by [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series] must be sub
-        /// resources of this Tensorboard.
+        /// The TensorboardTimeSeries referenced by
+        /// [time_series][google.cloud.aiplatform.v1.BatchReadTensorboardTimeSeriesDataRequest.time_series]
+        /// must be sub resources of this Tensorboard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3869,8 +4006,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3882,8 +4019,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3895,8 +4032,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3908,8 +4045,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3928,8 +4065,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3948,8 +4085,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3965,8 +4102,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -3985,8 +4122,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -4005,8 +4142,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -4080,8 +4217,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4091,8 +4227,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4102,8 +4237,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4113,8 +4247,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4138,8 +4271,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4163,8 +4295,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4181,8 +4312,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4206,8 +4336,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4231,8 +4360,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardExperiment">
         /// Required. The resource name of the TensorboardExperiment to write data to.
@@ -4249,8 +4377,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4260,8 +4387,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4271,8 +4397,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4282,8 +4407,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4311,8 +4435,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4340,8 +4463,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4362,8 +4484,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4391,8 +4512,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4420,8 +4540,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="tensorboardRun">
         /// Required. The resource name of the TensorboardRun to write data to.
@@ -4465,8 +4584,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// responses.
         /// </summary>
         /// <param name="tensorboardTimeSeries">
-        /// Required. The resource name of the TensorboardTimeSeries to export data from.
-        /// Format:
+        /// Required. The resource name of the TensorboardTimeSeries to export data
+        /// from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="pageToken">
@@ -4492,8 +4611,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// responses.
         /// </summary>
         /// <param name="tensorboardTimeSeries">
-        /// Required. The resource name of the TensorboardTimeSeries to export data from.
-        /// Format:
+        /// Required. The resource name of the TensorboardTimeSeries to export data
+        /// from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="pageToken">
@@ -4519,8 +4638,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// responses.
         /// </summary>
         /// <param name="tensorboardTimeSeries">
-        /// Required. The resource name of the TensorboardTimeSeries to export data from.
-        /// Format:
+        /// Required. The resource name of the TensorboardTimeSeries to export data
+        /// from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="pageToken">
@@ -4546,8 +4665,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// responses.
         /// </summary>
         /// <param name="tensorboardTimeSeries">
-        /// Required. The resource name of the TensorboardTimeSeries to export data from.
-        /// Format:
+        /// Required. The resource name of the TensorboardTimeSeries to export data
+        /// from. Format:
         /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
         /// </param>
         /// <param name="pageToken">
@@ -4578,6 +4697,8 @@ namespace Google.Cloud.AIPlatform.V1
         private readonly gaxgrpc::ApiCall<CreateTensorboardRequest, lro::Operation> _callCreateTensorboard;
 
         private readonly gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> _callGetTensorboard;
+
+        private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
 
         private readonly gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> _callUpdateTensorboard;
 
@@ -4656,6 +4777,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callGetTensorboard = clientHelper.BuildApiCall<GetTensorboardRequest, Tensorboard>("GetTensorboard", grpcClient.GetTensorboardAsync, grpcClient.GetTensorboard, effectiveSettings.GetTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboard);
             Modify_GetTensorboardApiCall(ref _callGetTensorboard);
+            _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            Modify_ApiCall(ref _callReadTensorboardUsage);
+            Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
             _callUpdateTensorboard = clientHelper.BuildApiCall<UpdateTensorboardRequest, lro::Operation>("UpdateTensorboard", grpcClient.UpdateTensorboardAsync, grpcClient.UpdateTensorboard, effectiveSettings.UpdateTensorboardSettings).WithGoogleRequestParam("tensorboard.name", request => request.Tensorboard?.Name);
             Modify_ApiCall(ref _callUpdateTensorboard);
             Modify_UpdateTensorboardApiCall(ref _callUpdateTensorboard);
@@ -4745,6 +4869,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_GetTensorboardApiCall(ref gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> call);
 
+        partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
+
         partial void Modify_UpdateTensorboardApiCall(ref gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> call);
 
         partial void Modify_ListTensorboardsApiCall(ref gaxgrpc::ApiCall<ListTensorboardsRequest, ListTensorboardsResponse> call);
@@ -4811,6 +4937,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_CreateTensorboardRequest(ref CreateTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTensorboardRequest(ref GetTensorboardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateTensorboardRequest(ref UpdateTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4913,6 +5041,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_GetTensorboardRequest(ref request, ref callSettings);
             return _callGetTensorboard.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>UpdateTensorboard</c>.</summary>
@@ -5413,8 +5565,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5429,8 +5581,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Reads multiple TensorboardTimeSeries' data. The data point number limit is
         /// 1000 for scalars, 100 for tensors and blob references. If the number of
-        /// data points stored is less than the limit, all data will be returned.
-        /// Otherwise, that limit number of data points will be randomly selected from
+        /// data points stored is less than the limit, all data is returned.
+        /// Otherwise, the number limit of data points is randomly selected from
         /// this time series and returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5444,8 +5596,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -5460,8 +5612,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Reads a TensorboardTimeSeries' data. By default, if the number of data
-        /// points stored is less than 1000, all data will be returned. Otherwise, 1000
-        /// data points will be randomly selected from this time series and returned.
+        /// points stored is less than 1000, all data is returned. Otherwise, 1000
+        /// data points is randomly selected from this time series and returned.
         /// This value can be changed by changing max_data_points, which can't be
         /// greater than 10k.
         /// </summary>
@@ -5500,8 +5652,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5514,8 +5665,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points of multiple TensorboardTimeSeries in multiple
-        /// TensorboardRun's. If any data fail to be ingested, an error will be
-        /// returned.
+        /// TensorboardRun's. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5528,8 +5678,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5542,8 +5691,7 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Write time series data points into multiple TensorboardTimeSeries under
-        /// a TensorboardRun. If any data fail to be ingested, an error will be
-        /// returned.
+        /// a TensorboardRun. If any data fail to be ingested, an error is returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

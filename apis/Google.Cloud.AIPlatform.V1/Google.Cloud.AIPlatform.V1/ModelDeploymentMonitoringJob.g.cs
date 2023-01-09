@@ -344,8 +344,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig> modelDeploymentMonitoringObjectiveConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig>();
     /// <summary>
-    /// Required. The config for monitoring objectives. This is a per DeployedModel config.
-    /// Each DeployedModel needs to be configured separately.
+    /// Required. The config for monitoring objectives. This is a per DeployedModel
+    /// config. Each DeployedModel needs to be configured separately.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -420,10 +420,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SamplePredictInstanceFieldNumber = 19;
     private global::Google.Protobuf.WellKnownTypes.Value samplePredictInstance_;
     /// <summary>
-    /// Sample Predict instance, same format as [PredictRequest.instances][google.cloud.aiplatform.v1.PredictRequest.instances],
+    /// Sample Predict instance, same format as
+    /// [PredictRequest.instances][google.cloud.aiplatform.v1.PredictRequest.instances],
     /// this can be set as a replacement of
-    /// [ModelDeploymentMonitoringJob.predict_instance_schema_uri][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.predict_instance_schema_uri]. If not set,
-    /// we will generate predict schema from collected predict requests.
+    /// [ModelDeploymentMonitoringJob.predict_instance_schema_uri][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.predict_instance_schema_uri].
+    /// If not set, we will generate predict schema from collected predict
+    /// requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -465,9 +467,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable> bigqueryTables_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable>();
     /// <summary>
-    /// Output only. The created bigquery tables for the job under customer project. Customer
-    /// could do their own query &amp; analysis. There could be 4 log tables in
-    /// maximum:
+    /// Output only. The created bigquery tables for the job under customer
+    /// project. Customer could do their own query &amp; analysis. There could be 4 log
+    /// tables in maximum:
     /// 1. Training data logging predict request/response
     /// 2. Serving data logging predict request/response
     /// </summary>
@@ -534,7 +536,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Timestamp when this ModelDeploymentMonitoringJob was updated most recently.
+    /// Output only. Timestamp when this ModelDeploymentMonitoringJob was updated
+    /// most recently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -549,8 +552,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NextScheduleTimeFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Timestamp nextScheduleTime_;
     /// <summary>
-    /// Output only. Timestamp when this monitoring pipeline will be scheduled to run for the
-    /// next round.
+    /// Output only. Timestamp when this monitoring pipeline will be scheduled to
+    /// run for the next round.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2269,8 +2272,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MonitorIntervalFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration monitorInterval_;
     /// <summary>
-    /// Required. The model monitoring job scheduling interval. It will be rounded up to next
-    /// full hour. This defines how often the monitoring jobs are triggered.
+    /// Required. The model monitoring job scheduling interval. It will be rounded
+    /// up to next full hour. This defines how often the monitoring jobs are
+    /// triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2288,10 +2292,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The time window of the prediction data being included in each prediction
     /// dataset. This window specifies how long the data should be collected from
     /// historical model results for each run. If not set,
-    /// [ModelDeploymentMonitoringScheduleConfig.monitor_interval][google.cloud.aiplatform.v1.ModelDeploymentMonitoringScheduleConfig.monitor_interval] will be used.
-    /// e.g. If currently the cutoff time is 2022-01-08 14:30:00 and the
-    /// monitor_window is set to be 3600, then data from 2022-01-08 13:30:00
-    /// to 2022-01-08 14:30:00 will be retrieved and aggregated to calculate the
+    /// [ModelDeploymentMonitoringScheduleConfig.monitor_interval][google.cloud.aiplatform.v1.ModelDeploymentMonitoringScheduleConfig.monitor_interval]
+    /// will be used. e.g. If currently the cutoff time is 2022-01-08 14:30:00 and
+    /// the monitor_window is set to be 3600, then data from 2022-01-08 13:30:00 to
+    /// 2022-01-08 14:30:00 will be retrieved and aggregated to calculate the
     /// monitoring statistics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

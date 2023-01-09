@@ -266,8 +266,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SupportAutomlTrainingFieldNumber = 9;
     private bool supportAutomlTraining_;
     /// <summary>
-    /// Output only. If the Annotations belonging to the SavedQuery can be used for AutoML
-    /// training.
+    /// Output only. If the Annotations belonging to the SavedQuery can be used for
+    /// AutoML training.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
