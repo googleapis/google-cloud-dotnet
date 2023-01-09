@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -119,6 +121,10 @@ namespace Google.Cloud.VMMigration.V1
             UpdateTargetProjectOperationsSettings = existing.UpdateTargetProjectOperationsSettings.Clone();
             DeleteTargetProjectSettings = existing.DeleteTargetProjectSettings;
             DeleteTargetProjectOperationsSettings = existing.DeleteTargetProjectOperationsSettings.Clone();
+            ListReplicationCyclesSettings = existing.ListReplicationCyclesSettings;
+            GetReplicationCycleSettings = existing.GetReplicationCycleSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -1141,6 +1147,40 @@ namespace Google.Cloud.VMMigration.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.ListReplicationCycles</c> and <c>VmMigrationClient.ListReplicationCyclesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListReplicationCyclesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.GetReplicationCycle</c> and <c>VmMigrationClient.GetReplicationCycleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetReplicationCycleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VmMigrationSettings"/> object.</returns>
         public VmMigrationSettings Clone() => new VmMigrationSettings(this);
@@ -1280,6 +1320,12 @@ namespace Google.Cloud.VMMigration.V1
 
         /// <summary>The underlying gRPC VmMigration client</summary>
         public virtual VmMigration.VmMigrationClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Sources in a given project and location.
@@ -6996,6 +7042,225 @@ namespace Google.Cloud.VMMigration.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTargetProjectAsync(TargetProjectName name, st::CancellationToken cancellationToken) =>
             DeleteTargetProjectAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCycles(ListReplicationCyclesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCyclesAsync(ListReplicationCyclesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of ReplicationCycles.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCycles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListReplicationCycles(new ListReplicationCyclesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of ReplicationCycles.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCyclesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListReplicationCyclesAsync(new ListReplicationCyclesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of ReplicationCycles.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCycles(MigratingVmName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListReplicationCycles(new ListReplicationCyclesRequest
+            {
+                ParentAsMigratingVmName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of ReplicationCycles.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCyclesAsync(MigratingVmName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListReplicationCyclesAsync(new ListReplicationCyclesRequest
+            {
+                ParentAsMigratingVmName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReplicationCycle GetReplicationCycle(GetReplicationCycleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(GetReplicationCycleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(GetReplicationCycleRequest request, st::CancellationToken cancellationToken) =>
+            GetReplicationCycleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReplicationCycle GetReplicationCycle(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReplicationCycle(new GetReplicationCycleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReplicationCycleAsync(new GetReplicationCycleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetReplicationCycleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReplicationCycle GetReplicationCycle(ReplicationCycleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReplicationCycle(new GetReplicationCycleRequest
+            {
+                ReplicationCycleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(ReplicationCycleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReplicationCycleAsync(new GetReplicationCycleRequest
+            {
+                ReplicationCycleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the ReplicationCycle.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(ReplicationCycleName name, st::CancellationToken cancellationToken) =>
+            GetReplicationCycleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VmMigration client wrapper implementation, for convenient use.</summary>
@@ -7092,6 +7357,10 @@ namespace Google.Cloud.VMMigration.V1
 
         private readonly gaxgrpc::ApiCall<DeleteTargetProjectRequest, lro::Operation> _callDeleteTargetProject;
 
+        private readonly gaxgrpc::ApiCall<ListReplicationCyclesRequest, ListReplicationCyclesResponse> _callListReplicationCycles;
+
+        private readonly gaxgrpc::ApiCall<GetReplicationCycleRequest, ReplicationCycle> _callGetReplicationCycle;
+
         /// <summary>
         /// Constructs a client wrapper for the VmMigration service, with the specified gRPC client and settings.
         /// </summary>
@@ -7130,6 +7399,8 @@ namespace Google.Cloud.VMMigration.V1
             CreateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetProjectOperationsSettings, logger);
             UpdateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetProjectOperationsSettings, logger);
             DeleteTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetProjectOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>("ListSources", grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
@@ -7262,6 +7533,12 @@ namespace Google.Cloud.VMMigration.V1
             _callDeleteTargetProject = clientHelper.BuildApiCall<DeleteTargetProjectRequest, lro::Operation>("DeleteTargetProject", grpcClient.DeleteTargetProjectAsync, grpcClient.DeleteTargetProject, effectiveSettings.DeleteTargetProjectSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTargetProject);
             Modify_DeleteTargetProjectApiCall(ref _callDeleteTargetProject);
+            _callListReplicationCycles = clientHelper.BuildApiCall<ListReplicationCyclesRequest, ListReplicationCyclesResponse>("ListReplicationCycles", grpcClient.ListReplicationCyclesAsync, grpcClient.ListReplicationCycles, effectiveSettings.ListReplicationCyclesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListReplicationCycles);
+            Modify_ListReplicationCyclesApiCall(ref _callListReplicationCycles);
+            _callGetReplicationCycle = clientHelper.BuildApiCall<GetReplicationCycleRequest, ReplicationCycle>("GetReplicationCycle", grpcClient.GetReplicationCycleAsync, grpcClient.GetReplicationCycle, effectiveSettings.GetReplicationCycleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetReplicationCycle);
+            Modify_GetReplicationCycleApiCall(ref _callGetReplicationCycle);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -7355,10 +7632,20 @@ namespace Google.Cloud.VMMigration.V1
 
         partial void Modify_DeleteTargetProjectApiCall(ref gaxgrpc::ApiCall<DeleteTargetProjectRequest, lro::Operation> call);
 
+        partial void Modify_ListReplicationCyclesApiCall(ref gaxgrpc::ApiCall<ListReplicationCyclesRequest, ListReplicationCyclesResponse> call);
+
+        partial void Modify_GetReplicationCycleApiCall(ref gaxgrpc::ApiCall<GetReplicationCycleRequest, ReplicationCycle> call);
+
         partial void OnConstruction(VmMigration.VmMigrationClient grpcClient, VmMigrationSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC VmMigration client</summary>
         public override VmMigration.VmMigrationClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListSourcesRequest(ref ListSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7447,6 +7734,10 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_UpdateTargetProjectRequest(ref UpdateTargetProjectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTargetProjectRequest(ref DeleteTargetProjectRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListReplicationCyclesRequest(ref ListReplicationCyclesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetReplicationCycleRequest(ref GetReplicationCycleRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Sources in a given project and location.
@@ -8642,6 +8933,54 @@ namespace Google.Cloud.VMMigration.V1
             Modify_DeleteTargetProjectRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteTargetProject.Async(request, callSettings).ConfigureAwait(false), DeleteTargetProjectOperationsClient);
         }
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public override gax::PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCycles(ListReplicationCyclesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReplicationCyclesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListReplicationCyclesRequest, ListReplicationCyclesResponse, ReplicationCycle>(_callListReplicationCycles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ReplicationCycles in a given MigratingVM.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReplicationCycle"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> ListReplicationCyclesAsync(ListReplicationCyclesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReplicationCyclesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReplicationCyclesRequest, ListReplicationCyclesResponse, ReplicationCycle>(_callListReplicationCycles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReplicationCycle GetReplicationCycle(GetReplicationCycleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReplicationCycleRequest(ref request, ref callSettings);
+            return _callGetReplicationCycle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ReplicationCycle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReplicationCycle> GetReplicationCycleAsync(GetReplicationCycleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReplicationCycleRequest(ref request, ref callSettings);
+            return _callGetReplicationCycle.Async(request, callSettings);
+        }
     }
 
     public partial class ListSourcesRequest : gaxgrpc::IPageRequest
@@ -8673,6 +9012,10 @@ namespace Google.Cloud.VMMigration.V1
     }
 
     public partial class ListTargetProjectsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListReplicationCyclesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -8740,6 +9083,14 @@ namespace Google.Cloud.VMMigration.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListReplicationCyclesResponse : gaxgrpc::IPageResponse<ReplicationCycle>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ReplicationCycle> GetEnumerator() => ReplicationCycles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public static partial class VmMigration
     {
         public partial class VmMigrationClient
@@ -8751,6 +9102,32 @@ namespace Google.Cloud.VMMigration.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class VmMigration
+    {
+        public partial class VmMigrationClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
