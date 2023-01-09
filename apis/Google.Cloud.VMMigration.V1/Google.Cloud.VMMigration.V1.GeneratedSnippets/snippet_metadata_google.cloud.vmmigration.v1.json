@@ -9247,6 +9247,460 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_sync",
+      "title": "ListReplicationCyclesRequestObject",
+      "description": "Snippet for ListReplicationCycles",
+      "file": "VmMigrationClient.ListReplicationCyclesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCycles",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_async",
+      "title": "ListReplicationCyclesRequestObjectAsync",
+      "description": "Snippet for ListReplicationCyclesAsync",
+      "file": "VmMigrationClient.ListReplicationCyclesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCyclesAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_sync_flattened",
+      "title": "ListReplicationCycles",
+      "description": "Snippet for ListReplicationCycles",
+      "file": "VmMigrationClient.ListReplicationCyclesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCycles",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_async_flattened",
+      "title": "ListReplicationCyclesAsync",
+      "description": "Snippet for ListReplicationCyclesAsync",
+      "file": "VmMigrationClient.ListReplicationCyclesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCyclesAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_sync_flattened_resourceNames",
+      "title": "ListReplicationCyclesResourceNames",
+      "description": "Snippet for ListReplicationCycles",
+      "file": "VmMigrationClient.ListReplicationCyclesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCycles",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListReplicationCycles_async_flattened_resourceNames",
+      "title": "ListReplicationCyclesResourceNamesAsync",
+      "description": "Snippet for ListReplicationCyclesAsync",
+      "file": "VmMigrationClient.ListReplicationCyclesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReplicationCyclesAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListReplicationCycles",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListReplicationCycles",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_sync",
+      "title": "GetReplicationCycleRequestObject",
+      "description": "Snippet for GetReplicationCycle",
+      "file": "VmMigrationClient.GetReplicationCycleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycle",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_async",
+      "title": "GetReplicationCycleRequestObjectAsync",
+      "description": "Snippet for GetReplicationCycleAsync",
+      "file": "VmMigrationClient.GetReplicationCycleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycleAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_sync_flattened",
+      "title": "GetReplicationCycle",
+      "description": "Snippet for GetReplicationCycle",
+      "file": "VmMigrationClient.GetReplicationCycleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycle",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_async_flattened",
+      "title": "GetReplicationCycleAsync",
+      "description": "Snippet for GetReplicationCycleAsync",
+      "file": "VmMigrationClient.GetReplicationCycleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycleAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_sync_flattened_resourceNames",
+      "title": "GetReplicationCycleResourceNames",
+      "description": "Snippet for GetReplicationCycle",
+      "file": "VmMigrationClient.GetReplicationCycleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycle",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetReplicationCycle_async_flattened_resourceNames",
+      "title": "GetReplicationCycleResourceNamesAsync",
+      "description": "Snippet for GetReplicationCycleAsync",
+      "file": "VmMigrationClient.GetReplicationCycleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReplicationCycleAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetReplicationCycle",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetReplicationCycle",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -187,6 +187,14 @@ namespace Google.Cloud.VMMigration.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.UpdateTargetProjectRequest> __Marshaller_google_cloud_vmmigration_v1_UpdateTargetProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.UpdateTargetProjectRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest> __Marshaller_google_cloud_vmmigration_v1_DeleteTargetProjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest> __Marshaller_google_cloud_vmmigration_v1_ListReplicationCyclesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse> __Marshaller_google_cloud_vmmigration_v1_ListReplicationCyclesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest> __Marshaller_google_cloud_vmmigration_v1_GetReplicationCycleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ReplicationCycle> __Marshaller_google_cloud_vmmigration_v1_ReplicationCycle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ReplicationCycle.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListSourcesRequest, global::Google.Cloud.VMMigration.V1.ListSourcesResponse> __Method_ListSources = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListSourcesRequest, global::Google.Cloud.VMMigration.V1.ListSourcesResponse>(
@@ -539,6 +547,22 @@ namespace Google.Cloud.VMMigration.V1 {
         "DeleteTargetProject",
         __Marshaller_google_cloud_vmmigration_v1_DeleteTargetProjectRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse> __Method_ListReplicationCycles = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListReplicationCycles",
+        __Marshaller_google_cloud_vmmigration_v1_ListReplicationCyclesRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ListReplicationCyclesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest, global::Google.Cloud.VMMigration.V1.ReplicationCycle> __Method_GetReplicationCycle = new grpc::Method<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest, global::Google.Cloud.VMMigration.V1.ReplicationCycle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReplicationCycle",
+        __Marshaller_google_cloud_vmmigration_v1_GetReplicationCycleRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ReplicationCycle);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1103,6 +1127,30 @@ namespace Google.Cloud.VMMigration.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTargetProject(global::Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ReplicationCycles in a given MigratingVM.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse> ListReplicationCycles(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single ReplicationCycle.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ReplicationCycle> GetReplicationCycle(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3364,6 +3412,102 @@ namespace Google.Cloud.VMMigration.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTargetProject, null, options, request);
       }
+      /// <summary>
+      /// Lists ReplicationCycles in a given MigratingVM.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse ListReplicationCycles(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReplicationCycles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ReplicationCycles in a given MigratingVM.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse ListReplicationCycles(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListReplicationCycles, null, options, request);
+      }
+      /// <summary>
+      /// Lists ReplicationCycles in a given MigratingVM.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse> ListReplicationCyclesAsync(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReplicationCyclesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ReplicationCycles in a given MigratingVM.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse> ListReplicationCyclesAsync(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListReplicationCycles, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ReplicationCycle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ReplicationCycle GetReplicationCycle(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReplicationCycle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ReplicationCycle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ReplicationCycle GetReplicationCycle(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetReplicationCycle, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ReplicationCycle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ReplicationCycle> GetReplicationCycleAsync(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReplicationCycleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ReplicationCycle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ReplicationCycle> GetReplicationCycleAsync(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetReplicationCycle, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VmMigrationClient NewInstance(ClientBaseConfiguration configuration)
@@ -3421,7 +3565,9 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_GetTargetProject, serviceImpl.GetTargetProject)
           .AddMethod(__Method_CreateTargetProject, serviceImpl.CreateTargetProject)
           .AddMethod(__Method_UpdateTargetProject, serviceImpl.UpdateTargetProject)
-          .AddMethod(__Method_DeleteTargetProject, serviceImpl.DeleteTargetProject).Build();
+          .AddMethod(__Method_DeleteTargetProject, serviceImpl.DeleteTargetProject)
+          .AddMethod(__Method_ListReplicationCycles, serviceImpl.ListReplicationCycles)
+          .AddMethod(__Method_GetReplicationCycle, serviceImpl.GetReplicationCycle).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3475,6 +3621,8 @@ namespace Google.Cloud.VMMigration.V1 {
       serviceBinder.AddMethod(__Method_CreateTargetProject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateTargetProjectRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTargetProject));
       serviceBinder.AddMethod(__Method_UpdateTargetProject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.UpdateTargetProjectRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTargetProject));
       serviceBinder.AddMethod(__Method_DeleteTargetProject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTargetProject));
+      serviceBinder.AddMethod(__Method_ListReplicationCycles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse>(serviceImpl.ListReplicationCycles));
+      serviceBinder.AddMethod(__Method_GetReplicationCycle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest, global::Google.Cloud.VMMigration.V1.ReplicationCycle>(serviceImpl.GetReplicationCycle));
     }
 
   }

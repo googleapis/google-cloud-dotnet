@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -31,6 +33,16 @@ namespace Google.Cloud.VMMigration.V1
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -55,6 +67,10 @@ namespace Google.Cloud.VMMigration.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return VmmigrationReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

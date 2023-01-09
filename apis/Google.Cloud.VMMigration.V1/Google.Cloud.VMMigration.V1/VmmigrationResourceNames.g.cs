@@ -22,6 +22,294 @@ using sys = System;
 
 namespace Google.Cloud.VMMigration.V1
 {
+    /// <summary>Resource name for the <c>ReplicationCycle</c> resource.</summary>
+    public sealed partial class ReplicationCycleName : gax::IResourceName, sys::IEquatable<ReplicationCycleName>
+    {
+        /// <summary>The possible contents of <see cref="ReplicationCycleName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+            /// .
+            /// </summary>
+            ProjectLocationSourceMigratingVmReplicationCycle = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationSourceMigratingVmReplicationCycle = new gax::PathTemplate("projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}");
+
+        /// <summary>Creates a <see cref="ReplicationCycleName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ReplicationCycleName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ReplicationCycleName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ReplicationCycleName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ReplicationCycleName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="migratingVmId">The <c>MigratingVm</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="replicationCycleId">The <c>ReplicationCycle</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ReplicationCycleName"/> constructed from the provided ids.</returns>
+        public static ReplicationCycleName FromProjectLocationSourceMigratingVmReplicationCycle(string projectId, string locationId, string sourceId, string migratingVmId, string replicationCycleId) =>
+            new ReplicationCycleName(ResourceNameType.ProjectLocationSourceMigratingVmReplicationCycle, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), migratingVmId: gax::GaxPreconditions.CheckNotNullOrEmpty(migratingVmId, nameof(migratingVmId)), replicationCycleId: gax::GaxPreconditions.CheckNotNullOrEmpty(replicationCycleId, nameof(replicationCycleId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ReplicationCycleName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="migratingVmId">The <c>MigratingVm</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="replicationCycleId">The <c>ReplicationCycle</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ReplicationCycleName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string sourceId, string migratingVmId, string replicationCycleId) =>
+            FormatProjectLocationSourceMigratingVmReplicationCycle(projectId, locationId, sourceId, migratingVmId, replicationCycleId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ReplicationCycleName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="migratingVmId">The <c>MigratingVm</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="replicationCycleId">The <c>ReplicationCycle</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ReplicationCycleName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationSourceMigratingVmReplicationCycle(string projectId, string locationId, string sourceId, string migratingVmId, string replicationCycleId) =>
+            s_projectLocationSourceMigratingVmReplicationCycle.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(migratingVmId, nameof(migratingVmId)), gax::GaxPreconditions.CheckNotNullOrEmpty(replicationCycleId, nameof(replicationCycleId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ReplicationCycleName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="replicationCycleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ReplicationCycleName"/> if successful.</returns>
+        public static ReplicationCycleName Parse(string replicationCycleName) => Parse(replicationCycleName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ReplicationCycleName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="replicationCycleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ReplicationCycleName"/> if successful.</returns>
+        public static ReplicationCycleName Parse(string replicationCycleName, bool allowUnparsed) =>
+            TryParse(replicationCycleName, allowUnparsed, out ReplicationCycleName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ReplicationCycleName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="replicationCycleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ReplicationCycleName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string replicationCycleName, out ReplicationCycleName result) =>
+            TryParse(replicationCycleName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ReplicationCycleName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="replicationCycleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ReplicationCycleName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string replicationCycleName, bool allowUnparsed, out ReplicationCycleName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(replicationCycleName, nameof(replicationCycleName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationSourceMigratingVmReplicationCycle.TryParseName(replicationCycleName, out resourceName))
+            {
+                result = FromProjectLocationSourceMigratingVmReplicationCycle(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(replicationCycleName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ReplicationCycleName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string migratingVmId = null, string projectId = null, string replicationCycleId = null, string sourceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            MigratingVmId = migratingVmId;
+            ProjectId = projectId;
+            ReplicationCycleId = replicationCycleId;
+            SourceId = sourceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ReplicationCycleName"/> class from the component parts of pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/sources/{source}/migratingVms/{migrating_vm}/replicationCycles/{replication_cycle}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sourceId">The <c>Source</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="migratingVmId">The <c>MigratingVm</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="replicationCycleId">The <c>ReplicationCycle</c> ID. Must not be <c>null</c> or empty.</param>
+        public ReplicationCycleName(string projectId, string locationId, string sourceId, string migratingVmId, string replicationCycleId) : this(ResourceNameType.ProjectLocationSourceMigratingVmReplicationCycle, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sourceId: gax::GaxPreconditions.CheckNotNullOrEmpty(sourceId, nameof(sourceId)), migratingVmId: gax::GaxPreconditions.CheckNotNullOrEmpty(migratingVmId, nameof(migratingVmId)), replicationCycleId: gax::GaxPreconditions.CheckNotNullOrEmpty(replicationCycleId, nameof(replicationCycleId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>MigratingVm</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string MigratingVmId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>ReplicationCycle</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ReplicationCycleId { get; }
+
+        /// <summary>
+        /// The <c>Source</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SourceId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationSourceMigratingVmReplicationCycle: return s_projectLocationSourceMigratingVmReplicationCycle.Expand(ProjectId, LocationId, SourceId, MigratingVmId, ReplicationCycleId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ReplicationCycleName);
+
+        /// <inheritdoc/>
+        public bool Equals(ReplicationCycleName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ReplicationCycleName a, ReplicationCycleName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ReplicationCycleName a, ReplicationCycleName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>MigratingVm</c> resource.</summary>
     public sealed partial class MigratingVmName : gax::IResourceName, sys::IEquatable<MigratingVmName>
     {
@@ -2086,6 +2374,18 @@ namespace Google.Cloud.VMMigration.V1
         public static bool operator !=(GroupName a, GroupName b) => !(a == b);
     }
 
+    public partial class ReplicationCycle
+    {
+        /// <summary>
+        /// <see cref="gcvv::ReplicationCycleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ReplicationCycleName ReplicationCycleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReplicationCycleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class MigratingVm
     {
         /// <summary>
@@ -2680,6 +2980,30 @@ namespace Google.Cloud.VMMigration.V1
         public gcvv::CutoverJobName CutoverJobName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvv::CutoverJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListReplicationCyclesRequest
+    {
+        /// <summary>
+        /// <see cref="MigratingVmName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public MigratingVmName ParentAsMigratingVmName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : MigratingVmName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetReplicationCycleRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ReplicationCycleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ReplicationCycleName ReplicationCycleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ReplicationCycleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

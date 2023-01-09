@@ -7562,5 +7562,372 @@ namespace Google.Cloud.VMMigration.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListReplicationCycles</summary>
+        public void ListReplicationCyclesRequestObject()
+        {
+            // Snippet: ListReplicationCycles(ListReplicationCyclesRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ListReplicationCyclesRequest request = new ListReplicationCyclesRequest
+            {
+                ParentAsMigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCycles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReplicationCycle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReplicationCyclesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReplicationCyclesAsync</summary>
+        public async Task ListReplicationCyclesRequestObjectAsync()
+        {
+            // Snippet: ListReplicationCyclesAsync(ListReplicationCyclesRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ListReplicationCyclesRequest request = new ListReplicationCyclesRequest
+            {
+                ParentAsMigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCyclesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReplicationCycle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReplicationCyclesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReplicationCycles</summary>
+        public void ListReplicationCycles()
+        {
+            // Snippet: ListReplicationCycles(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/migratingVms/[MIGRATING_VM]";
+            // Make the request
+            PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCycles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReplicationCycle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReplicationCyclesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReplicationCyclesAsync</summary>
+        public async Task ListReplicationCyclesAsync()
+        {
+            // Snippet: ListReplicationCyclesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/migratingVms/[MIGRATING_VM]";
+            // Make the request
+            PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCyclesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReplicationCycle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReplicationCyclesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReplicationCycles</summary>
+        public void ListReplicationCyclesResourceNames()
+        {
+            // Snippet: ListReplicationCycles(MigratingVmName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            MigratingVmName parent = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]");
+            // Make the request
+            PagedEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCycles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReplicationCycle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReplicationCyclesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReplicationCyclesAsync</summary>
+        public async Task ListReplicationCyclesResourceNamesAsync()
+        {
+            // Snippet: ListReplicationCyclesAsync(MigratingVmName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            MigratingVmName parent = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]");
+            // Make the request
+            PagedAsyncEnumerable<ListReplicationCyclesResponse, ReplicationCycle> response = vmMigrationClient.ListReplicationCyclesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReplicationCycle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReplicationCyclesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReplicationCycle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReplicationCycle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReplicationCycle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycle</summary>
+        public void GetReplicationCycleRequestObject()
+        {
+            // Snippet: GetReplicationCycle(GetReplicationCycleRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            GetReplicationCycleRequest request = new GetReplicationCycleRequest
+            {
+                ReplicationCycleName = ReplicationCycleName.FromProjectLocationSourceMigratingVmReplicationCycle("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]", "[REPLICATION_CYCLE]"),
+            };
+            // Make the request
+            ReplicationCycle response = vmMigrationClient.GetReplicationCycle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycleAsync</summary>
+        public async Task GetReplicationCycleRequestObjectAsync()
+        {
+            // Snippet: GetReplicationCycleAsync(GetReplicationCycleRequest, CallSettings)
+            // Additional: GetReplicationCycleAsync(GetReplicationCycleRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReplicationCycleRequest request = new GetReplicationCycleRequest
+            {
+                ReplicationCycleName = ReplicationCycleName.FromProjectLocationSourceMigratingVmReplicationCycle("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]", "[REPLICATION_CYCLE]"),
+            };
+            // Make the request
+            ReplicationCycle response = await vmMigrationClient.GetReplicationCycleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycle</summary>
+        public void GetReplicationCycle()
+        {
+            // Snippet: GetReplicationCycle(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/migratingVms/[MIGRATING_VM]/replicationCycles/[REPLICATION_CYCLE]";
+            // Make the request
+            ReplicationCycle response = vmMigrationClient.GetReplicationCycle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycleAsync</summary>
+        public async Task GetReplicationCycleAsync()
+        {
+            // Snippet: GetReplicationCycleAsync(string, CallSettings)
+            // Additional: GetReplicationCycleAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/migratingVms/[MIGRATING_VM]/replicationCycles/[REPLICATION_CYCLE]";
+            // Make the request
+            ReplicationCycle response = await vmMigrationClient.GetReplicationCycleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycle</summary>
+        public void GetReplicationCycleResourceNames()
+        {
+            // Snippet: GetReplicationCycle(ReplicationCycleName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ReplicationCycleName name = ReplicationCycleName.FromProjectLocationSourceMigratingVmReplicationCycle("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]", "[REPLICATION_CYCLE]");
+            // Make the request
+            ReplicationCycle response = vmMigrationClient.GetReplicationCycle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReplicationCycleAsync</summary>
+        public async Task GetReplicationCycleResourceNamesAsync()
+        {
+            // Snippet: GetReplicationCycleAsync(ReplicationCycleName, CallSettings)
+            // Additional: GetReplicationCycleAsync(ReplicationCycleName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ReplicationCycleName name = ReplicationCycleName.FromProjectLocationSourceMigratingVmReplicationCycle("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]", "[REPLICATION_CYCLE]");
+            // Make the request
+            ReplicationCycle response = await vmMigrationClient.GetReplicationCycleAsync(name);
+            // End snippet
+        }
     }
 }

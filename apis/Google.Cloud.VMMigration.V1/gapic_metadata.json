@@ -154,6 +154,12 @@
                 "GetMigratingVmAsync"
               ]
             },
+            "GetReplicationCycle": {
+              "methods": [
+                "GetReplicationCycle",
+                "GetReplicationCycleAsync"
+              ]
+            },
             "GetSource": {
               "methods": [
                 "GetSource",
@@ -200,6 +206,12 @@
               "methods": [
                 "ListMigratingVms",
                 "ListMigratingVmsAsync"
+              ]
+            },
+            "ListReplicationCycles": {
+              "methods": [
+                "ListReplicationCycles",
+                "ListReplicationCyclesAsync"
               ]
             },
             "ListSources": {

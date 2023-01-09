@@ -32,703 +32,841 @@ namespace Google.Cloud.VMMigration.V1 {
             "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9w",
             "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
             "ZXN0YW1wLnByb3RvGh5nb29nbGUvcnBjL2Vycm9yX2RldGFpbHMucHJvdG8a",
-            "F2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIlwKEFJlcGxpY2F0aW9uQ3ljbGUS",
-            "LgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASGAoQcHJvZ3Jlc3NfcGVyY2VudBgFIAEoBSJFCg9SZXBsaWNhdGlvblN5",
-            "bmMSMgoObGFzdF9zeW5jX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wIrgKCgtNaWdyYXRpbmdWbRJiCh5jb21wdXRlX2VuZ2luZV90",
-            "YXJnZXRfZGVmYXVsdHMYGiABKAsyOC5nb29nbGUuY2xvdWQudm1taWdyYXRp",
-            "b24udjEuQ29tcHV0ZUVuZ2luZVRhcmdldERlZmF1bHRzSAASEQoEbmFtZRgB",
-            "IAEoCUID4EEDEhQKDHNvdXJjZV92bV9pZBgCIAEoCRIUCgxkaXNwbGF5X25h",
-            "bWUYEiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSOwoGcG9saWN5GAggASgL",
-            "MisuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlNjaGVkdWxlUG9saWN5",
-            "EjQKC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEkQKCWxhc3Rfc3luYxgLIAEoCzIsLmdvb2ds",
-            "ZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5SZXBsaWNhdGlvblN5bmNCA+BBAxJC",
-            "CgVzdGF0ZRgXIAEoDjIuLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5N",
-            "aWdyYXRpbmdWbS5TdGF0ZUID4EEDEjMKCnN0YXRlX3RpbWUYFiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSTQoRY3VycmVudF9zeW5j",
-            "X2luZm8YDSABKAsyLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUmVw",
-            "bGljYXRpb25DeWNsZUID4EEDEjcKBWdyb3VwGA8gASgJQijgQQP6QSISIHZt",
-            "bWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0dyb3VwEkQKBmxhYmVscxgQIAMo",
-            "CzI0Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5NaWdyYXRpbmdWbS5M",
-            "YWJlbHNFbnRyeRJFChFyZWNlbnRfY2xvbmVfam9icxgRIAMoCzIlLmdvb2ds",
-            "ZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5DbG9uZUpvYkID4EEDEiYKBWVycm9y",
-            "GBMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJJChNyZWNlbnRfY3V0",
-            "b3Zlcl9qb2JzGBQgAygLMicuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
-            "LkN1dG92ZXJKb2JCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIrcBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgsKB1BFTkRJTkcQARIJCgVSRUFEWRACEg4KCkZJUlNUX1NZTkMQ",
-            "AxIKCgZBQ1RJVkUQBBIQCgxDVVRUSU5HX09WRVIQBxILCgdDVVRPVkVSEAgS",
-            "DgoKRklOQUxfU1lOQxAJEgoKBlBBVVNFRBAKEg4KCkZJTkFMSVpJTkcQCxIN",
-            "CglGSU5BTElaRUQQDBIJCgVFUlJPUhANOoEB6kF+CiZ2bW1pZ3JhdGlvbi5n",
-            "b29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbRJUcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3NvdXJjZXMve3NvdXJjZX0vbWlncmF0",
-            "aW5nVm1zL3ttaWdyYXRpbmdfdm19QhQKEnRhcmdldF92bV9kZWZhdWx0cyK9",
-            "BQoIQ2xvbmVKb2ISZQodY29tcHV0ZV9lbmdpbmVfdGFyZ2V0X2RldGFpbHMY",
-            "FCABKAsyNy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ29tcHV0ZUVu",
-            "Z2luZVRhcmdldERldGFpbHNCA+BBA0gAEjQKC2NyZWF0ZV90aW1lGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
-            "GBYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBG5h",
-            "bWUYAyABKAlCA+BBAxI/CgVzdGF0ZRgMIAEoDjIrLmdvb2dsZS5jbG91ZC52",
-            "bW1pZ3JhdGlvbi52MS5DbG9uZUpvYi5TdGF0ZUID4EEDEjMKCnN0YXRlX3Rp",
-            "bWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSJgoF",
-            "ZXJyb3IYESABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDIoIBCgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJ",
-            "VkUQAhIKCgZGQUlMRUQQAxINCglTVUNDRUVERUQQBBINCglDQU5DRUxMRUQQ",
-            "BRIOCgpDQU5DRUxMSU5HEAYSDwoLQURBUFRJTkdfT1MQBzqVAepBkQEKI3Zt",
-            "bWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0Nsb25lSm9iEmpwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc291cmNlcy97c291cmNl",
-            "fS9taWdyYXRpbmdWbXMve21pZ3JhdGluZ192bX0vY2xvbmVKb2JzL3tjbG9u",
-            "ZV9qb2J9QhMKEXRhcmdldF92bV9kZXRhaWxzIoIGCgpDdXRvdmVySm9iEmUK",
-            "HWNvbXB1dGVfZW5naW5lX3RhcmdldF9kZXRhaWxzGA4gASgLMjcuZ29vZ2xl",
-            "LmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVFbmdpbmVUYXJnZXREZXRh",
-            "aWxzQgPgQQNIABI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgQIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRuYW1lGAMgASgJQgPgQQMS",
-            "QQoFc3RhdGUYBSABKA4yLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEu",
-            "Q3V0b3ZlckpvYi5TdGF0ZUID4EEDEjMKCnN0YXRlX3RpbWUYBiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHQoQcHJvZ3Jlc3NfcGVy",
-            "Y2VudBgNIAEoBUID4EEDEiYKBWVycm9yGAkgASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCA+BBAxIaCg1zdGF0ZV9tZXNzYWdlGAogASgJQgPgQQMiggEKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoKBkZB",
-            "SUxFRBACEg0KCVNVQ0NFRURFRBADEg0KCUNBTkNFTExFRBAEEg4KCkNBTkNF",
-            "TExJTkcQBRIKCgZBQ1RJVkUQBhIPCgtBREFQVElOR19PUxAHOpsB6kGXAQol",
-            "dm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ3V0b3ZlckpvYhJucHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NvdXJjZXMve3Nv",
-            "dXJjZX0vbWlncmF0aW5nVm1zL3ttaWdyYXRpbmdfdm19L2N1dG92ZXJKb2Jz",
-            "L3tjdXRvdmVyX2pvYn1CEwoRdGFyZ2V0X3ZtX2RldGFpbHMiwgEKFUNyZWF0",
-            "ZUNsb25lSm9iUmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJRIjdm1t",
-            "aWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ2xvbmVKb2ISGQoMY2xvbmVfam9i",
-            "X2lkGAIgASgJQgPgQQISPQoJY2xvbmVfam9iGAMgASgLMiUuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkNsb25lSm9iQgPgQQISEgoKcmVxdWVzdF9p",
-            "ZBgEIAEoCSJSChVDYW5jZWxDbG9uZUpvYlJlcXVlc3QSOQoEbmFtZRgBIAEo",
-            "CUIr4EEC+kElCiN2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9DbG9uZUpv",
-            "YiIYChZDYW5jZWxDbG9uZUpvYlJlc3BvbnNlIrABChRMaXN0Q2xvbmVKb2Jz",
-            "UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJRIjdm1taWdyYXRpb24u",
-            "Z29vZ2xlYXBpcy5jb20vQ2xvbmVKb2ISFgoJcGFnZV9zaXplGAIgASgFQgPg",
-            "QQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EECEhMKBmZpbHRlchgEIAEoCUID",
-            "4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEijwEKFUxpc3RDbG9uZUpvYnNS",
-            "ZXNwb25zZRI+CgpjbG9uZV9qb2JzGAEgAygLMiUuZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLkNsb25lSm9iQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJQgPgQQMSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBAyJPChJHZXRD",
-            "bG9uZUpvYlJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiN2bW1pZ3Jh",
-            "dGlvbi5nb29nbGVhcGlzLmNvbS9DbG9uZUpvYiLEAwoGU291cmNlEkIKBnZt",
-            "d2FyZRgKIAEoCzIwLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5WbXdh",
-            "cmVTb3VyY2VEZXRhaWxzSAASEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0",
-            "ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEj8KBmxhYmVscxgEIAMoCzIvLmdvb2dsZS5jbG91ZC52bW1p",
-            "Z3JhdGlvbi52MS5Tb3VyY2UuTGFiZWxzRW50cnkSEwoLZGVzY3JpcHRpb24Y",
-            "BiABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ATpg6kFdCiF2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Tb3Vy",
-            "Y2USOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9z",
-            "b3VyY2VzL3tzb3VyY2V9QhAKDnNvdXJjZV9kZXRhaWxzImYKE1Ztd2FyZVNv",
-            "dXJjZURldGFpbHMSEAoIdXNlcm5hbWUYASABKAkSFQoIcGFzc3dvcmQYAiAB",
-            "KAlCA+BBBBISCgp2Y2VudGVyX2lwGAMgASgJEhIKCnRodW1icHJpbnQYBCAB",
-            "KAki+gYKE0RhdGFjZW50ZXJDb25uZWN0b3ISNAoLY3JlYXRlX3RpbWUYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "EQoEbmFtZRgDIAEoCUID4EEDEhwKD3JlZ2lzdHJhdGlvbl9pZBgMIAEoCUID",
-            "4EEFEhcKD3NlcnZpY2VfYWNjb3VudBgFIAEoCRIPCgd2ZXJzaW9uGAYgASgJ",
-            "EhMKBmJ1Y2tldBgKIAEoCUID4EEDEkoKBXN0YXRlGAcgASgOMjYuZ29vZ2xl",
-            "LmNsb3VkLnZtbWlncmF0aW9uLnYxLkRhdGFjZW50ZXJDb25uZWN0b3IuU3Rh",
-            "dGVCA+BBAxIzCgpzdGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEiYKBWVycm9yGAsgASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCA+BBAxItCiBhcHBsaWFuY2VfaW5mcmFzdHJ1Y3R1cmVfdmVyc2lv",
-            "bhgNIAEoCUID4EEDEicKGmFwcGxpYW5jZV9zb2Z0d2FyZV92ZXJzaW9uGA4g",
-            "ASgJQgPgQQMSTgoSYXZhaWxhYmxlX3ZlcnNpb25zGA8gASgLMi0uZ29vZ2xl",
-            "LmNsb3VkLnZtbWlncmF0aW9uLnYxLkF2YWlsYWJsZVVwZGF0ZXNCA+BBAxJH",
-            "Cg51cGdyYWRlX3N0YXR1cxgQIAEoCzIqLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
-            "dGlvbi52MS5VcGdyYWRlU3RhdHVzQgPgQQMiUAoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoHT0ZGTElORRACEgoKBkZB",
-            "SUxFRBADEgoKBkFDVElWRRAEOpoB6kGWAQoudm1taWdyYXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vRGF0YWNlbnRlckNvbm5lY3RvchJkcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NvdXJjZXMve3NvdXJjZX0vZGF0",
-            "YWNlbnRlckNvbm5lY3RvcnMve2RhdGFjZW50ZXJfY29ubmVjdG9yfSKWAgoN",
-            "VXBncmFkZVN0YXR1cxIPCgd2ZXJzaW9uGAEgASgJEj8KBXN0YXRlGAIgASgO",
-            "MjAuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlVwZ3JhZGVTdGF0dXMu",
-            "U3RhdGUSIQoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxIuCgpz",
-            "dGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIY",
-            "ChBwcmV2aW91c192ZXJzaW9uGAUgASgJIkYKBVN0YXRlEhUKEVNUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASCwoHUlVOTklORxABEgoKBkZBSUxFRBACEg0KCVNVQ0NF",
-            "RURFRBADIqsBChBBdmFpbGFibGVVcGRhdGVzEk8KGG5ld19kZXBsb3lhYmxl",
-            "X2FwcGxpYW5jZRgBIAEoCzItLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
-            "MS5BcHBsaWFuY2VWZXJzaW9uEkYKD2luX3BsYWNlX3VwZGF0ZRgCIAEoCzIt",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5BcHBsaWFuY2VWZXJzaW9u",
-            "Il0KEEFwcGxpYW5jZVZlcnNpb24SDwoHdmVyc2lvbhgBIAEoCRILCgN1cmkY",
-            "AiABKAkSEAoIY3JpdGljYWwYAyABKAgSGQoRcmVsZWFzZV9ub3Rlc191cmkY",
-            "BCABKAkirAEKEkxpc3RTb3VyY2VzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
-            "KeBBAvpBIxIhdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vU291cmNlEhYK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
-            "AhITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEB",
-            "IogBChNMaXN0U291cmNlc1Jlc3BvbnNlEjkKB3NvdXJjZXMYASADKAsyIy5n",
-            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuU291cmNlQgPgQQMSHAoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMSGAoLdW5yZWFjaGFibGUYAyADKAlC",
-            "A+BBAyJLChBHZXRTb3VyY2VSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpB",
-            "Iwohdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vU291cmNlIrYBChNDcmVh",
-            "dGVTb3VyY2VSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjEiF2bW1p",
-            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Tb3VyY2USFgoJc291cmNlX2lkGAIg",
-            "ASgJQgPgQQISOAoGc291cmNlGAMgASgLMiMuZ29vZ2xlLmNsb3VkLnZtbWln",
-            "cmF0aW9uLnYxLlNvdXJjZUID4EECEhIKCnJlcXVlc3RfaWQYBCABKAkilAEK",
-            "E1VwZGF0ZVNvdXJjZVJlcXVlc3QSLwoLdXBkYXRlX21hc2sYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrEjgKBnNvdXJjZRgCIAEoCzIjLmdv",
-            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Tb3VyY2VCA+BBAhISCgpyZXF1",
-            "ZXN0X2lkGAMgASgJImcKE0RlbGV0ZVNvdXJjZVJlcXVlc3QSNwoEbmFtZRgB",
-            "IAEoCUIp4EEC+kEjCiF2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Tb3Vy",
-            "Y2USFwoKcmVxdWVzdF9pZBgCIAEoCUID4EEBImkKFUZldGNoSW52ZW50b3J5",
-            "UmVxdWVzdBI5CgZzb3VyY2UYASABKAlCKeBBAvpBIwohdm1taWdyYXRpb24u",
-            "Z29vZ2xlYXBpcy5jb20vU291cmNlEhUKDWZvcmNlX3JlZnJlc2gYAiABKAgi",
-            "mAQKD1Ztd2FyZVZtRGV0YWlscxINCgV2bV9pZBgBIAEoCRIVCg1kYXRhY2Vu",
-            "dGVyX2lkGAIgASgJEh4KFmRhdGFjZW50ZXJfZGVzY3JpcHRpb24YAyABKAkS",
-            "DAoEdXVpZBgEIAEoCRIUCgxkaXNwbGF5X25hbWUYBSABKAkSTAoLcG93ZXJf",
-            "c3RhdGUYBiABKA4yNy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVm13",
-            "YXJlVm1EZXRhaWxzLlBvd2VyU3RhdGUSEQoJY3B1X2NvdW50GAcgASgFEhEK",
-            "CW1lbW9yeV9tYhgIIAEoBRISCgpkaXNrX2NvdW50GAkgASgFEhwKFGNvbW1p",
-            "dHRlZF9zdG9yYWdlX21iGAwgASgDEhkKEWd1ZXN0X2Rlc2NyaXB0aW9uGAsg",
-            "ASgJElEKC2Jvb3Rfb3B0aW9uGA0gASgOMjcuZ29vZ2xlLmNsb3VkLnZtbWln",
-            "cmF0aW9uLnYxLlZtd2FyZVZtRGV0YWlscy5Cb290T3B0aW9uQgPgQQMiSQoK",
-            "UG93ZXJTdGF0ZRIbChdQT1dFUl9TVEFURV9VTlNQRUNJRklFRBAAEgYKAk9O",
-            "EAESBwoDT0ZGEAISDQoJU1VTUEVOREVEEAMiPAoKQm9vdE9wdGlvbhIbChdC",
-            "T09UX09QVElPTl9VTlNQRUNJRklFRBAAEgcKA0VGSRABEggKBEJJT1MQAiJR",
-            "ChBWbXdhcmVWbXNEZXRhaWxzEj0KB2RldGFpbHMYASADKAsyLC5nb29nbGUu",
-            "Y2xvdWQudm1taWdyYXRpb24udjEuVm13YXJlVm1EZXRhaWxzIqABChZGZXRj",
-            "aEludmVudG9yeVJlc3BvbnNlEkMKCnZtd2FyZV92bXMYASABKAsyLS5nb29n",
-            "bGUuY2xvdWQudm1taWdyYXRpb24udjEuVm13YXJlVm1zRGV0YWlsc0gAEjQK",
-            "C3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDQgsKCVNvdXJjZVZtcyKcBgoRVXRpbGl6YXRpb25SZXBvcnQSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJICgVzdGF0",
-            "ZRgDIAEoDjI0Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5VdGlsaXph",
-            "dGlvblJlcG9ydC5TdGF0ZUID4EEDEjMKCnN0YXRlX3RpbWUYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSJgoFZXJyb3IYBSABKAsy",
-            "Ei5nb29nbGUucnBjLlN0YXR1c0ID4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkwKCnRpbWVfZnJh",
-            "bWUYByABKA4yOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVXRpbGl6",
-            "YXRpb25SZXBvcnQuVGltZUZyYW1lEjcKDmZyYW1lX2VuZF90aW1lGAggASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhUKCHZtX2NvdW50",
-            "GAkgASgFQgPgQQMSOwoDdm1zGAogAygLMi4uZ29vZ2xlLmNsb3VkLnZtbWln",
-            "cmF0aW9uLnYxLlZtVXRpbGl6YXRpb25JbmZvIkcKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARINCglTVUNDRUVERUQQAhIK",
-            "CgZGQUlMRUQQAyJGCglUaW1lRnJhbWUSGgoWVElNRV9GUkFNRV9VTlNQRUNJ",
-            "RklFRBAAEggKBFdFRUsQARIJCgVNT05USBACEggKBFlFQVIQAzqUAepBkAEK",
-            "LHZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL1V0aWxpemF0aW9uUmVwb3J0",
-            "EmBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc291",
-            "cmNlcy97c291cmNlfS91dGlsaXphdGlvblJlcG9ydHMve3V0aWxpemF0aW9u",
-            "X3JlcG9ydH0iwgEKEVZtVXRpbGl6YXRpb25JbmZvEkkKEXZtd2FyZV92bV9k",
-            "ZXRhaWxzGAEgASgLMiwuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlZt",
-            "d2FyZVZtRGV0YWlsc0gAEg0KBXZtX2lkGAMgASgJEkYKC3V0aWxpemF0aW9u",
-            "GAIgASgLMjEuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlZtVXRpbGl6",
-            "YXRpb25NZXRyaWNzQgsKCVZtRGV0YWlscyKYAgoUVm1VdGlsaXphdGlvbk1l",
-            "dHJpY3MSFwoPY3B1X21heF9wZXJjZW50GAkgASgFEhsKE2NwdV9hdmVyYWdl",
-            "X3BlcmNlbnQYCiABKAUSGgoSbWVtb3J5X21heF9wZXJjZW50GAsgASgFEh4K",
-            "Fm1lbW9yeV9hdmVyYWdlX3BlcmNlbnQYDCABKAUSHQoVZGlza19pb19yYXRl",
-            "X21heF9rYnBzGA0gASgDEiEKGWRpc2tfaW9fcmF0ZV9hdmVyYWdlX2ticHMY",
-            "DiABKAMSIwobbmV0d29ya190aHJvdWdocHV0X21heF9rYnBzGA8gASgDEicK",
-            "H25ldHdvcmtfdGhyb3VnaHB1dF9hdmVyYWdlX2ticHMYECABKAMiiQIKHUxp",
-            "c3RVdGlsaXphdGlvblJlcG9ydHNSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI0",
-            "4EEC+kEuEix2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9VdGlsaXphdGlv",
-            "blJlcG9ydBJFCgR2aWV3GAIgASgOMjIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
-            "aW9uLnYxLlV0aWxpemF0aW9uUmVwb3J0Vmlld0ID4EEBEhYKCXBhZ2Vfc2l6",
-            "ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BBAhITCgZmaWx0",
-            "ZXIYBSABKAlCA+BBARIVCghvcmRlcl9ieRgGIAEoCUID4EEBIqoBCh5MaXN0",
-            "VXRpbGl6YXRpb25SZXBvcnRzUmVzcG9uc2USUAoTdXRpbGl6YXRpb25fcmVw",
-            "b3J0cxgBIAMoCzIuLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5VdGls",
-            "aXphdGlvblJlcG9ydEID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID",
-            "4EEDEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQMiqAEKG0dldFV0aWxpemF0",
-            "aW9uUmVwb3J0UmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLHZtbWln",
-            "cmF0aW9uLmdvb2dsZWFwaXMuY29tL1V0aWxpemF0aW9uUmVwb3J0EkUKBHZp",
-            "ZXcYAiABKA4yMi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVXRpbGl6",
-            "YXRpb25SZXBvcnRWaWV3QgPgQQEi7wEKHkNyZWF0ZVV0aWxpemF0aW9uUmVw",
-            "b3J0UmVxdWVzdBJECgZwYXJlbnQYASABKAlCNOBBAvpBLhIsdm1taWdyYXRp",
-            "b24uZ29vZ2xlYXBpcy5jb20vVXRpbGl6YXRpb25SZXBvcnQSTwoSdXRpbGl6",
-            "YXRpb25fcmVwb3J0GAIgASgLMi4uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLlV0aWxpemF0aW9uUmVwb3J0QgPgQQISIgoVdXRpbGl6YXRpb25fcmVw",
-            "b3J0X2lkGAMgASgJQgPgQQISEgoKcmVxdWVzdF9pZBgEIAEoCSJ9Ch5EZWxl",
-            "dGVVdGlsaXphdGlvblJlcG9ydFJlcXVlc3QSQgoEbmFtZRgBIAEoCUI04EEC",
-            "+kEuCix2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9VdGlsaXphdGlvblJl",
-            "cG9ydBIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEisAEKIExpc3REYXRhY2Vu",
-            "dGVyQ29ubmVjdG9yc1Jlc3BvbnNlElQKFWRhdGFjZW50ZXJfY29ubmVjdG9y",
-            "cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5EYXRhY2Vu",
-            "dGVyQ29ubmVjdG9yQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPg",
-            "QQMSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBAyJlCh1HZXREYXRhY2VudGVy",
-            "Q29ubmVjdG9yUmVxdWVzdBJECgRuYW1lGAEgASgJQjbgQQL6QTAKLnZtbWln",
-            "cmF0aW9uLmdvb2dsZWFwaXMuY29tL0RhdGFjZW50ZXJDb25uZWN0b3Ii+QEK",
-            "IENyZWF0ZURhdGFjZW50ZXJDb25uZWN0b3JSZXF1ZXN0EkYKBnBhcmVudBgB",
-            "IAEoCUI24EEC+kEwEi52bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9EYXRh",
-            "Y2VudGVyQ29ubmVjdG9yEiQKF2RhdGFjZW50ZXJfY29ubmVjdG9yX2lkGAIg",
-            "ASgJQgPgQQISUwoUZGF0YWNlbnRlcl9jb25uZWN0b3IYAyABKAsyMC5nb29n",
-            "bGUuY2xvdWQudm1taWdyYXRpb24udjEuRGF0YWNlbnRlckNvbm5lY3RvckID",
-            "4EECEhIKCnJlcXVlc3RfaWQYBCABKAkifAogRGVsZXRlRGF0YWNlbnRlckNv",
-            "bm5lY3RvclJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi52bW1pZ3Jh",
-            "dGlvbi5nb29nbGVhcGlzLmNvbS9EYXRhY2VudGVyQ29ubmVjdG9yEhIKCnJl",
-            "cXVlc3RfaWQYAiABKAkigwEKF1VwZ3JhZGVBcHBsaWFuY2VSZXF1ZXN0ElQK",
-            "FGRhdGFjZW50ZXJfY29ubmVjdG9yGAEgASgJQjbgQQL6QTAKLnZtbWlncmF0",
-            "aW9uLmdvb2dsZWFwaXMuY29tL0RhdGFjZW50ZXJDb25uZWN0b3ISEgoKcmVx",
-            "dWVzdF9pZBgCIAEoCSIaChhVcGdyYWRlQXBwbGlhbmNlUmVzcG9uc2UixgEK",
-            "H0xpc3REYXRhY2VudGVyQ29ubmVjdG9yc1JlcXVlc3QSRgoGcGFyZW50GAEg",
-            "ASgJQjbgQQL6QTASLnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0RhdGFj",
-            "ZW50ZXJDb25uZWN0b3ISFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFn",
-            "ZV90b2tlbhgDIAEoCUID4EECEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9y",
-            "ZGVyX2J5GAUgASgJQgPgQQEi/wcKG0NvbXB1dGVFbmdpbmVUYXJnZXREZWZh",
-            "dWx0cxIPCgd2bV9uYW1lGAEgASgJEkUKDnRhcmdldF9wcm9qZWN0GAIgASgJ",
-            "Qi36QSoKKHZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL1RhcmdldFByb2pl",
-            "Y3QSDAoEem9uZRgDIAEoCRIbChNtYWNoaW5lX3R5cGVfc2VyaWVzGAQgASgJ",
-            "EhQKDG1hY2hpbmVfdHlwZRgFIAEoCRIUCgxuZXR3b3JrX3RhZ3MYBiADKAkS",
-            "SQoSbmV0d29ya19pbnRlcmZhY2VzGAcgAygLMi0uZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLk5ldHdvcmtJbnRlcmZhY2USFwoPc2VydmljZV9hY2Nv",
-            "dW50GAggASgJEkUKCWRpc2tfdHlwZRgJIAEoDjIyLmdvb2dsZS5jbG91ZC52",
-            "bW1pZ3JhdGlvbi52MS5Db21wdXRlRW5naW5lRGlza1R5cGUSVAoGbGFiZWxz",
-            "GAogAygLMkQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVF",
-            "bmdpbmVUYXJnZXREZWZhdWx0cy5MYWJlbHNFbnRyeRJLCgxsaWNlbnNlX3R5",
-            "cGUYCyABKA4yNS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ29tcHV0",
-            "ZUVuZ2luZUxpY2Vuc2VUeXBlEkkKD2FwcGxpZWRfbGljZW5zZRgMIAEoCzIr",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5BcHBsaWVkTGljZW5zZUID",
-            "4EEDEkoKEmNvbXB1dGVfc2NoZWR1bGluZxgNIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlU2NoZWR1bGluZxITCgtzZWN1cmVf",
-            "Ym9vdBgOIAEoCBJOCgtib290X29wdGlvbhgPIAEoDjI0Lmdvb2dsZS5jbG91",
-            "ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlRW5naW5lQm9vdE9wdGlvbkID4EED",
-            "ElgKCG1ldGFkYXRhGBAgAygLMkYuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLkNvbXB1dGVFbmdpbmVUYXJnZXREZWZhdWx0cy5NZXRhZGF0YUVudHJ5",
-            "EhsKE2FkZGl0aW9uYWxfbGljZW5zZXMYESADKAkSEAoIaG9zdG5hbWUYEiAB",
-            "KAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ARovCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEivAcKGkNvbXB1dGVFbmdpbmVUYXJnZXREZXRhaWxzEg8KB3Zt",
-            "X25hbWUYASABKAkSDwoHcHJvamVjdBgCIAEoCRIMCgR6b25lGAMgASgJEhsK",
-            "E21hY2hpbmVfdHlwZV9zZXJpZXMYBCABKAkSFAoMbWFjaGluZV90eXBlGAUg",
-            "ASgJEhQKDG5ldHdvcmtfdGFncxgGIAMoCRJJChJuZXR3b3JrX2ludGVyZmFj",
-            "ZXMYByADKAsyLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTmV0d29y",
-            "a0ludGVyZmFjZRIXCg9zZXJ2aWNlX2FjY291bnQYCCABKAkSRQoJZGlza190",
-            "eXBlGAkgASgOMjIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1",
-            "dGVFbmdpbmVEaXNrVHlwZRJTCgZsYWJlbHMYCiADKAsyQy5nb29nbGUuY2xv",
-            "dWQudm1taWdyYXRpb24udjEuQ29tcHV0ZUVuZ2luZVRhcmdldERldGFpbHMu",
-            "TGFiZWxzRW50cnkSSwoMbGljZW5zZV90eXBlGAsgASgOMjUuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVFbmdpbmVMaWNlbnNlVHlwZRJE",
-            "Cg9hcHBsaWVkX2xpY2Vuc2UYDCABKAsyKy5nb29nbGUuY2xvdWQudm1taWdy",
-            "YXRpb24udjEuQXBwbGllZExpY2Vuc2USSgoSY29tcHV0ZV9zY2hlZHVsaW5n",
-            "GA0gASgLMi4uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVT",
-            "Y2hlZHVsaW5nEhMKC3NlY3VyZV9ib290GA4gASgIEkkKC2Jvb3Rfb3B0aW9u",
-            "GA8gASgOMjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVF",
-            "bmdpbmVCb290T3B0aW9uElcKCG1ldGFkYXRhGBAgAygLMkUuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVFbmdpbmVUYXJnZXREZXRhaWxz",
-            "Lk1ldGFkYXRhRW50cnkSGwoTYWRkaXRpb25hbF9saWNlbnNlcxgRIAMoCRIQ",
-            "Cghob3N0bmFtZRgSIAEoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBGi8KDU1ldGFkYXRhRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChBOZXR3b3JrSW50ZXJmYWNlEg8K",
-            "B25ldHdvcmsYASABKAkSEgoKc3VibmV0d29yaxgCIAEoCRITCgtpbnRlcm5h",
-            "bF9pcBgDIAEoCRITCgtleHRlcm5hbF9pcBgEIAEoCSKgAQoOQXBwbGllZExp",
-            "Y2Vuc2USPgoEdHlwZRgBIAEoDjIwLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
-            "bi52MS5BcHBsaWVkTGljZW5zZS5UeXBlEhIKCm9zX2xpY2Vuc2UYAiABKAki",
-            "OgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoETk9ORRABEggKBFBB",
-            "WUcQAhIICgRCWU9MEAMivwEKFlNjaGVkdWxpbmdOb2RlQWZmaW5pdHkSCwoD",
-            "a2V5GAEgASgJEk4KCG9wZXJhdG9yGAIgASgOMjwuZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLlNjaGVkdWxpbmdOb2RlQWZmaW5pdHkuT3BlcmF0b3IS",
-            "DgoGdmFsdWVzGAMgAygJIjgKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BF",
-            "Q0lGSUVEEAASBgoCSU4QARIKCgZOT1RfSU4QAiLdAwoRQ29tcHV0ZVNjaGVk",
-            "dWxpbmcSXQoTb25faG9zdF9tYWludGVuYW5jZRgBIAEoDjJALmdvb2dsZS5j",
-            "bG91ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlU2NoZWR1bGluZy5Pbkhvc3RN",
-            "YWludGVuYW5jZRJQCgxyZXN0YXJ0X3R5cGUYBSABKA4yOi5nb29nbGUuY2xv",
-            "dWQudm1taWdyYXRpb24udjEuQ29tcHV0ZVNjaGVkdWxpbmcuUmVzdGFydFR5",
-            "cGUSTAoPbm9kZV9hZmZpbml0aWVzGAMgAygLMjMuZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLlNjaGVkdWxpbmdOb2RlQWZmaW5pdHkSFQoNbWluX25v",
-            "ZGVfY3B1cxgEIAEoBSJUChFPbkhvc3RNYWludGVuYW5jZRIjCh9PTl9IT1NU",
-            "X01BSU5URU5BTkNFX1VOU1BFQ0lGSUVEEAASDQoJVEVSTUlOQVRFEAESCwoH",
-            "TUlHUkFURRACIlwKC1Jlc3RhcnRUeXBlEhwKGFJFU1RBUlRfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEhUKEUFVVE9NQVRJQ19SRVNUQVJUEAESGAoUTk9fQVVUT01B",
-            "VElDX1JFU1RBUlQQAiJeCg5TY2hlZHVsZVBvbGljeRIwCg1pZGxlX2R1cmF0",
-            "aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhoKEnNraXBf",
-            "b3NfYWRhcHRhdGlvbhgCIAEoCCLRAQoYQ3JlYXRlTWlncmF0aW5nVm1SZXF1",
-            "ZXN0Ej4KBnBhcmVudBgBIAEoCUIu4EEC+kEoEiZ2bW1pZ3JhdGlvbi5nb29n",
-            "bGVhcGlzLmNvbS9NaWdyYXRpbmdWbRIcCg9taWdyYXRpbmdfdm1faWQYAiAB",
-            "KAlCA+BBAhJDCgxtaWdyYXRpbmdfdm0YAyABKAsyKC5nb29nbGUuY2xvdWQu",
-            "dm1taWdyYXRpb24udjEuTWlncmF0aW5nVm1CA+BBAhISCgpyZXF1ZXN0X2lk",
-            "GAQgASgJIvcBChdMaXN0TWlncmF0aW5nVm1zUmVxdWVzdBI+CgZwYXJlbnQY",
-            "ASABKAlCLuBBAvpBKBImdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vTWln",
-            "cmF0aW5nVm0SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EECEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5",
-            "GAUgASgJQgPgQQESPwoEdmlldxgGIAEoDjIsLmdvb2dsZS5jbG91ZC52bW1p",
-            "Z3JhdGlvbi52MS5NaWdyYXRpbmdWbVZpZXdCA+BBASKYAQoYTGlzdE1pZ3Jh",
-            "dGluZ1Ztc1Jlc3BvbnNlEkQKDW1pZ3JhdGluZ192bXMYASADKAsyKC5nb29n",
-            "bGUuY2xvdWQudm1taWdyYXRpb24udjEuTWlncmF0aW5nVm1CA+BBAxIcCg9u",
+            "F2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIo0FChBSZXBsaWNhdGlvbkN5Y2xl",
+            "EgwKBG5hbWUYDSABKAkSFAoMY3ljbGVfbnVtYmVyGAogASgFEi4KCnN0YXJ0",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
+            "ZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3ChR0",
+            "b3RhbF9wYXVzZV9kdXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
+            "dXJhdGlvbhIcChBwcm9ncmVzc19wZXJjZW50GAUgASgFQgIYARI1CgVzdGVw",
+            "cxgJIAMoCzImLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5DeWNsZVN0",
+            "ZXASQgoFc3RhdGUYCyABKA4yMy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
+            "djEuUmVwbGljYXRpb25DeWNsZS5TdGF0ZRIhCgVlcnJvchgMIAEoCzISLmdv",
+            "b2dsZS5ycGMuU3RhdHVzIlIKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASCwoHUlVOTklORxABEgoKBlBBVVNFRBACEgoKBkZBSUxFRBADEg0KCVNV",
+            "Q0NFRURFRBAEOq0B6kGpAQordm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20v",
+            "UmVwbGljYXRpb25DeWNsZRJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3NvdXJjZXMve3NvdXJjZX0vbWlncmF0aW5nVm1zL3tt",
+            "aWdyYXRpbmdfdm19L3JlcGxpY2F0aW9uQ3ljbGVzL3tyZXBsaWNhdGlvbl9j",
+            "eWNsZX0i4AIKCUN5Y2xlU3RlcBJcChhpbml0aWFsaXppbmdfcmVwbGljYXRp",
+            "b24YAyABKAsyOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuSW5pdGlh",
+            "bGl6aW5nUmVwbGljYXRpb25TdGVwSAASQwoLcmVwbGljYXRpbmcYBCABKAsy",
+            "LC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUmVwbGljYXRpbmdTdGVw",
+            "SAASSgoPcG9zdF9wcm9jZXNzaW5nGAUgASgLMi8uZ29vZ2xlLmNsb3VkLnZt",
+            "bWlncmF0aW9uLnYxLlBvc3RQcm9jZXNzaW5nU3RlcEgAEi4KCnN0YXJ0X3Rp",
+            "bWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90",
+            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIGCgRzdGVw",
+            "Ih0KG0luaXRpYWxpemluZ1JlcGxpY2F0aW9uU3RlcCKpAQoPUmVwbGljYXRp",
+            "bmdTdGVwEhMKC3RvdGFsX2J5dGVzGAEgASgDEhgKEHJlcGxpY2F0ZWRfYnl0",
+            "ZXMYAiABKAMSMQopbGFzdF90d29fbWludXRlc19hdmVyYWdlX2J5dGVzX3Bl",
+            "cl9zZWNvbmQYAyABKAMSNAosbGFzdF90aGlydHlfbWludXRlc19hdmVyYWdl",
+            "X2J5dGVzX3Blcl9zZWNvbmQYBCABKAMiFAoSUG9zdFByb2Nlc3NpbmdTdGVw",
+            "IkUKD1JlcGxpY2F0aW9uU3luYxIyCg5sYXN0X3N5bmNfdGltZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAipAsKC01pZ3JhdGluZ1ZtEmIK",
+            "HmNvbXB1dGVfZW5naW5lX3RhcmdldF9kZWZhdWx0cxgaIAEoCzI4Lmdvb2ds",
+            "ZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlRW5naW5lVGFyZ2V0RGVm",
+            "YXVsdHNIABJVChVhd3Nfc291cmNlX3ZtX2RldGFpbHMYHSABKAsyLy5nb29n",
+            "bGUuY2xvdWQudm1taWdyYXRpb24udjEuQXdzU291cmNlVm1EZXRhaWxzQgPg",
+            "QQNIARIRCgRuYW1lGAEgASgJQgPgQQMSFAoMc291cmNlX3ZtX2lkGAIgASgJ",
+            "EhQKDGRpc3BsYXlfbmFtZRgSIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRI7",
+            "CgZwb2xpY3kYCCABKAsyKy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEu",
+            "U2NoZWR1bGVQb2xpY3kSNAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRAoJbGFzdF9zeW5j",
+            "GAsgASgLMiwuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlJlcGxpY2F0",
+            "aW9uU3luY0ID4EEDEkIKBXN0YXRlGBcgASgOMi4uZ29vZ2xlLmNsb3VkLnZt",
+            "bWlncmF0aW9uLnYxLk1pZ3JhdGluZ1ZtLlN0YXRlQgPgQQMSMwoKc3RhdGVf",
+            "dGltZRgWIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJN",
+            "ChFjdXJyZW50X3N5bmNfaW5mbxgNIAEoCzItLmdvb2dsZS5jbG91ZC52bW1p",
+            "Z3JhdGlvbi52MS5SZXBsaWNhdGlvbkN5Y2xlQgPgQQMSNwoFZ3JvdXAYDyAB",
+            "KAlCKOBBA/pBIhIgdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vR3JvdXAS",
+            "RAoGbGFiZWxzGBAgAygLMjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "Lk1pZ3JhdGluZ1ZtLkxhYmVsc0VudHJ5EkUKEXJlY2VudF9jbG9uZV9qb2Jz",
+            "GBEgAygLMiUuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNsb25lSm9i",
+            "QgPgQQMSJgoFZXJyb3IYEyABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EED",
+            "EkkKE3JlY2VudF9jdXRvdmVyX2pvYnMYFCADKAsyJy5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuQ3V0b3ZlckpvYkID4EEDGi0KC0xhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEitwEKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgkKBVJFQURZEAIS",
+            "DgoKRklSU1RfU1lOQxADEgoKBkFDVElWRRAEEhAKDENVVFRJTkdfT1ZFUhAH",
+            "EgsKB0NVVE9WRVIQCBIOCgpGSU5BTF9TWU5DEAkSCgoGUEFVU0VEEAoSDgoK",
+            "RklOQUxJWklORxALEg0KCUZJTkFMSVpFRBAMEgkKBUVSUk9SEA06gQHqQX4K",
+            "JnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL01pZ3JhdGluZ1ZtElRwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc291cmNlcy97",
+            "c291cmNlfS9taWdyYXRpbmdWbXMve21pZ3JhdGluZ192bX1CFAoSdGFyZ2V0",
+            "X3ZtX2RlZmF1bHRzQhMKEXNvdXJjZV92bV9kZXRhaWxzIvkFCghDbG9uZUpv",
+            "YhJlCh1jb21wdXRlX2VuZ2luZV90YXJnZXRfZGV0YWlscxgUIAEoCzI3Lmdv",
+            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlRW5naW5lVGFyZ2V0",
+            "RGV0YWlsc0ID4EEDSAASNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYFiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEbmFtZRgDIAEoCUID",
+            "4EEDEj8KBXN0YXRlGAwgASgOMisuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
+            "LnYxLkNsb25lSm9iLlN0YXRlQgPgQQMSMwoKc3RhdGVfdGltZRgOIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxImCgVlcnJvchgRIAEo",
+            "CzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSOgoFc3RlcHMYFyADKAsyJi5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ2xvbmVTdGVwQgPgQQMiggEK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoK",
+            "BkFDVElWRRACEgoKBkZBSUxFRBADEg0KCVNVQ0NFRURFRBAEEg0KCUNBTkNF",
+            "TExFRBAFEg4KCkNBTkNFTExJTkcQBhIPCgtBREFQVElOR19PUxAHOpUB6kGR",
+            "AQojdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ2xvbmVKb2ISanByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zb3VyY2VzL3tz",
+            "b3VyY2V9L21pZ3JhdGluZ1Ztcy97bWlncmF0aW5nX3ZtfS9jbG9uZUpvYnMv",
+            "e2Nsb25lX2pvYn1CEwoRdGFyZ2V0X3ZtX2RldGFpbHMi5QIKCUNsb25lU3Rl",
+            "cBJCCgthZGFwdGluZ19vcxgDIAEoCzIrLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
+            "dGlvbi52MS5BZGFwdGluZ09TU3RlcEgAEk8KEnByZXBhcmluZ192bV9kaXNr",
+            "cxgEIAEoCzIxLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5QcmVwYXJp",
+            "bmdWTURpc2tzU3RlcEgAEl0KGWluc3RhbnRpYXRpbmdfbWlncmF0ZWRfdm0Y",
+            "BSABKAsyOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuSW5zdGFudGlh",
+            "dGluZ01pZ3JhdGVkVk1TdGVwSAASLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgYKBHN0ZXAiEAoOQWRhcHRpbmdP",
+            "U1N0ZXAiFgoUUHJlcGFyaW5nVk1EaXNrc1N0ZXAiHQobSW5zdGFudGlhdGlu",
+            "Z01pZ3JhdGVkVk1TdGVwIsAGCgpDdXRvdmVySm9iEmUKHWNvbXB1dGVfZW5n",
+            "aW5lX3RhcmdldF9kZXRhaWxzGA4gASgLMjcuZ29vZ2xlLmNsb3VkLnZtbWln",
+            "cmF0aW9uLnYxLkNvbXB1dGVFbmdpbmVUYXJnZXREZXRhaWxzQgPgQQNIABI0",
+            "CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxIxCghlbmRfdGltZRgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIRCgRuYW1lGAMgASgJQgPgQQMSQQoFc3RhdGUYBSAB",
+            "KA4yLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ3V0b3ZlckpvYi5T",
+            "dGF0ZUID4EEDEjMKCnN0YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSHQoQcHJvZ3Jlc3NfcGVyY2VudBgNIAEoBUID",
+            "4EEDEiYKBWVycm9yGAkgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxIa",
+            "Cg1zdGF0ZV9tZXNzYWdlGAogASgJQgPgQQMSPAoFc3RlcHMYESADKAsyKC5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ3V0b3ZlclN0ZXBCA+BBAyKC",
+            "AQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAES",
+            "CgoGRkFJTEVEEAISDQoJU1VDQ0VFREVEEAMSDQoJQ0FOQ0VMTEVEEAQSDgoK",
+            "Q0FOQ0VMTElORxAFEgoKBkFDVElWRRAGEg8KC0FEQVBUSU5HX09TEAc6mwHq",
+            "QZcBCiV2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9DdXRvdmVySm9iEm5w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc291cmNl",
+            "cy97c291cmNlfS9taWdyYXRpbmdWbXMve21pZ3JhdGluZ192bX0vY3V0b3Zl",
+            "ckpvYnMve2N1dG92ZXJfam9ifUITChF0YXJnZXRfdm1fZGV0YWlscyKXBAoL",
+            "Q3V0b3ZlclN0ZXASUwoacHJldmlvdXNfcmVwbGljYXRpb25fY3ljbGUYAyAB",
+            "KAsyLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUmVwbGljYXRpb25D",
+            "eWNsZUgAElgKF3NodXR0aW5nX2Rvd25fc291cmNlX3ZtGAQgASgLMjUuZ29v",
+            "Z2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlNodXR0aW5nRG93blNvdXJjZVZN",
+            "U3RlcEgAEkMKCmZpbmFsX3N5bmMYBSABKAsyLS5nb29nbGUuY2xvdWQudm1t",
+            "aWdyYXRpb24udjEuUmVwbGljYXRpb25DeWNsZUgAEk8KEnByZXBhcmluZ192",
+            "bV9kaXNrcxgGIAEoCzIxLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Q",
+            "cmVwYXJpbmdWTURpc2tzU3RlcEgAEl0KGWluc3RhbnRpYXRpbmdfbWlncmF0",
+            "ZWRfdm0YByABKAsyOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuSW5z",
+            "dGFudGlhdGluZ01pZ3JhdGVkVk1TdGVwSAASLgoKc3RhcnRfdGltZRgBIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgYKBHN0ZXAiGgoYU2h1",
+            "dHRpbmdEb3duU291cmNlVk1TdGVwIsIBChVDcmVhdGVDbG9uZUpvYlJlcXVl",
+            "c3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI3ZtbWlncmF0aW9uLmdvb2ds",
+            "ZWFwaXMuY29tL0Nsb25lSm9iEhkKDGNsb25lX2pvYl9pZBgCIAEoCUID4EEC",
+            "Ej0KCWNsb25lX2pvYhgDIAEoCzIlLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
+            "bi52MS5DbG9uZUpvYkID4EECEhIKCnJlcXVlc3RfaWQYBCABKAkiUgoVQ2Fu",
+            "Y2VsQ2xvbmVKb2JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojdm1t",
+            "aWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ2xvbmVKb2IiGAoWQ2FuY2VsQ2xv",
+            "bmVKb2JSZXNwb25zZSKwAQoUTGlzdENsb25lSm9ic1JlcXVlc3QSOwoGcGFy",
+            "ZW50GAEgASgJQivgQQL6QSUSI3ZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29t",
+            "L0Nsb25lSm9iEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YAyABKAlCA+BBAhITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9i",
+            "eRgFIAEoCUID4EEBIo8BChVMaXN0Q2xvbmVKb2JzUmVzcG9uc2USPgoKY2xv",
+            "bmVfam9icxgBIAMoCzIlLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5D",
+            "bG9uZUpvYkID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID4EEDEhgK",
+            "C3VucmVhY2hhYmxlGAMgAygJQgPgQQMiTwoSR2V0Q2xvbmVKb2JSZXF1ZXN0",
+            "EjkKBG5hbWUYASABKAlCK+BBAvpBJQojdm1taWdyYXRpb24uZ29vZ2xlYXBp",
+            "cy5jb20vQ2xvbmVKb2IiggQKBlNvdXJjZRJCCgZ2bXdhcmUYCiABKAsyMC5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVm13YXJlU291cmNlRGV0YWls",
+            "c0gAEjwKA2F3cxgMIAEoCzItLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
+            "MS5Bd3NTb3VyY2VEZXRhaWxzSAASEQoEbmFtZRgBIAEoCUID4EEDEjQKC2Ny",
+            "ZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEj8KBmxhYmVscxgEIAMoCzIvLmdvb2dsZS5jbG91ZC52",
+            "bW1pZ3JhdGlvbi52MS5Tb3VyY2UuTGFiZWxzRW50cnkSEwoLZGVzY3JpcHRp",
+            "b24YBiABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ATpg6kFdCiF2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9T",
+            "b3VyY2USOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9zb3VyY2VzL3tzb3VyY2V9QhAKDnNvdXJjZV9kZXRhaWxzImYKE1Ztd2Fy",
+            "ZVNvdXJjZURldGFpbHMSEAoIdXNlcm5hbWUYASABKAkSFQoIcGFzc3dvcmQY",
+            "AiABKAlCA+BBBBISCgp2Y2VudGVyX2lwGAMgASgJEhIKCnRodW1icHJpbnQY",
+            "BCABKAkijwYKEEF3c1NvdXJjZURldGFpbHMSXgoQYWNjZXNzX2tleV9jcmVk",
+            "cxgLIAEoCzJCLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Bd3NTb3Vy",
+            "Y2VEZXRhaWxzLkFjY2Vzc0tleUNyZWRlbnRpYWxzSAASFwoKYXdzX3JlZ2lv",
+            "bhgDIAEoCUID4EEFEkcKBXN0YXRlGAQgASgOMjMuZ29vZ2xlLmNsb3VkLnZt",
+            "bWlncmF0aW9uLnYxLkF3c1NvdXJjZURldGFpbHMuU3RhdGVCA+BBAxImCgVl",
+            "cnJvchgFIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSTQoSaW52ZW50",
+            "b3J5X3RhZ19saXN0GAogAygLMjEuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
+            "LnYxLkF3c1NvdXJjZURldGFpbHMuVGFnEiYKHmludmVudG9yeV9zZWN1cml0",
+            "eV9ncm91cF9uYW1lcxgHIAMoCRJ0Ch1taWdyYXRpb25fcmVzb3VyY2VzX3Vz",
+            "ZXJfdGFncxgIIAMoCzJNLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5B",
+            "d3NTb3VyY2VEZXRhaWxzLk1pZ3JhdGlvblJlc291cmNlc1VzZXJUYWdzRW50",
+            "cnkSFgoJcHVibGljX2lwGAkgASgJQgPgQQMaTQoUQWNjZXNzS2V5Q3JlZGVu",
+            "dGlhbHMSFQoNYWNjZXNzX2tleV9pZBgBIAEoCRIeChFzZWNyZXRfYWNjZXNz",
+            "X2tleRgCIAEoCUID4EEEGiEKA1RhZxILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAkaQQofTWlncmF0aW9uUmVzb3VyY2VzVXNlclRhZ3NFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIkMKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoKBkZBSUxFRBACEgoKBkFD",
+            "VElWRRADQhIKEGNyZWRlbnRpYWxzX3R5cGUi+gYKE0RhdGFjZW50ZXJDb25u",
+            "ZWN0b3ISNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEbmFtZRgDIAEoCUID4EEDEhwK",
+            "D3JlZ2lzdHJhdGlvbl9pZBgMIAEoCUID4EEFEhcKD3NlcnZpY2VfYWNjb3Vu",
+            "dBgFIAEoCRIPCgd2ZXJzaW9uGAYgASgJEhMKBmJ1Y2tldBgKIAEoCUID4EED",
+            "EkoKBXN0YXRlGAcgASgOMjYuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "LkRhdGFjZW50ZXJDb25uZWN0b3IuU3RhdGVCA+BBAxIzCgpzdGF0ZV90aW1l",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiYKBWVy",
+            "cm9yGAsgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxItCiBhcHBsaWFu",
+            "Y2VfaW5mcmFzdHJ1Y3R1cmVfdmVyc2lvbhgNIAEoCUID4EEDEicKGmFwcGxp",
+            "YW5jZV9zb2Z0d2FyZV92ZXJzaW9uGA4gASgJQgPgQQMSTgoSYXZhaWxhYmxl",
+            "X3ZlcnNpb25zGA8gASgLMi0uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "LkF2YWlsYWJsZVVwZGF0ZXNCA+BBAxJHCg51cGdyYWRlX3N0YXR1cxgQIAEo",
+            "CzIqLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5VcGdyYWRlU3RhdHVz",
+            "QgPgQQMiUAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5E",
+            "SU5HEAESCwoHT0ZGTElORRACEgoKBkZBSUxFRBADEgoKBkFDVElWRRAEOpoB",
+            "6kGWAQoudm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vRGF0YWNlbnRlckNv",
+            "bm5lY3RvchJkcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3NvdXJjZXMve3NvdXJjZX0vZGF0YWNlbnRlckNvbm5lY3RvcnMve2Rh",
+            "dGFjZW50ZXJfY29ubmVjdG9yfSKWAgoNVXBncmFkZVN0YXR1cxIPCgd2ZXJz",
+            "aW9uGAEgASgJEj8KBXN0YXRlGAIgASgOMjAuZ29vZ2xlLmNsb3VkLnZtbWln",
+            "cmF0aW9uLnYxLlVwZ3JhZGVTdGF0dXMuU3RhdGUSIQoFZXJyb3IYAyABKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1cxIuCgpzdGFydF90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIYChBwcmV2aW91c192ZXJzaW9uGAUg",
+            "ASgJIkYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklO",
+            "RxABEgoKBkZBSUxFRBACEg0KCVNVQ0NFRURFRBADIqsBChBBdmFpbGFibGVV",
+            "cGRhdGVzEk8KGG5ld19kZXBsb3lhYmxlX2FwcGxpYW5jZRgBIAEoCzItLmdv",
+            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5BcHBsaWFuY2VWZXJzaW9uEkYK",
+            "D2luX3BsYWNlX3VwZGF0ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
+            "dGlvbi52MS5BcHBsaWFuY2VWZXJzaW9uIl0KEEFwcGxpYW5jZVZlcnNpb24S",
+            "DwoHdmVyc2lvbhgBIAEoCRILCgN1cmkYAiABKAkSEAoIY3JpdGljYWwYAyAB",
+            "KAgSGQoRcmVsZWFzZV9ub3Rlc191cmkYBCABKAkirAEKEkxpc3RTb3VyY2Vz",
+            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhdm1taWdyYXRpb24u",
+            "Z29vZ2xlYXBpcy5jb20vU291cmNlEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEB",
+            "EhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBAhITCgZmaWx0ZXIYBCABKAlCA+BB",
+            "ARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIogBChNMaXN0U291cmNlc1Jlc3Bv",
+            "bnNlEjkKB3NvdXJjZXMYASADKAsyIy5nb29nbGUuY2xvdWQudm1taWdyYXRp",
+            "b24udjEuU291cmNlQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPg",
+            "QQMSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBAyJLChBHZXRTb3VyY2VSZXF1",
+            "ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohdm1taWdyYXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vU291cmNlIrYBChNDcmVhdGVTb3VyY2VSZXF1ZXN0EjkKBnBh",
+            "cmVudBgBIAEoCUIp4EEC+kEjEiF2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNv",
+            "bS9Tb3VyY2USFgoJc291cmNlX2lkGAIgASgJQgPgQQISOAoGc291cmNlGAMg",
+            "ASgLMiMuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlNvdXJjZUID4EEC",
+            "EhIKCnJlcXVlc3RfaWQYBCABKAkilAEKE1VwZGF0ZVNvdXJjZVJlcXVlc3QS",
+            "LwoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrEjgKBnNvdXJjZRgCIAEoCzIjLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
+            "bi52MS5Tb3VyY2VCA+BBAhISCgpyZXF1ZXN0X2lkGAMgASgJImcKE0RlbGV0",
+            "ZVNvdXJjZVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiF2bW1pZ3Jh",
+            "dGlvbi5nb29nbGVhcGlzLmNvbS9Tb3VyY2USFwoKcmVxdWVzdF9pZBgCIAEo",
+            "CUID4EEBImkKFUZldGNoSW52ZW50b3J5UmVxdWVzdBI5CgZzb3VyY2UYASAB",
+            "KAlCKeBBAvpBIwohdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vU291cmNl",
+            "EhUKDWZvcmNlX3JlZnJlc2gYAiABKAgimAQKD1Ztd2FyZVZtRGV0YWlscxIN",
+            "CgV2bV9pZBgBIAEoCRIVCg1kYXRhY2VudGVyX2lkGAIgASgJEh4KFmRhdGFj",
+            "ZW50ZXJfZGVzY3JpcHRpb24YAyABKAkSDAoEdXVpZBgEIAEoCRIUCgxkaXNw",
+            "bGF5X25hbWUYBSABKAkSTAoLcG93ZXJfc3RhdGUYBiABKA4yNy5nb29nbGUu",
+            "Y2xvdWQudm1taWdyYXRpb24udjEuVm13YXJlVm1EZXRhaWxzLlBvd2VyU3Rh",
+            "dGUSEQoJY3B1X2NvdW50GAcgASgFEhEKCW1lbW9yeV9tYhgIIAEoBRISCgpk",
+            "aXNrX2NvdW50GAkgASgFEhwKFGNvbW1pdHRlZF9zdG9yYWdlX21iGAwgASgD",
+            "EhkKEWd1ZXN0X2Rlc2NyaXB0aW9uGAsgASgJElEKC2Jvb3Rfb3B0aW9uGA0g",
+            "ASgOMjcuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlZtd2FyZVZtRGV0",
+            "YWlscy5Cb290T3B0aW9uQgPgQQMiSQoKUG93ZXJTdGF0ZRIbChdQT1dFUl9T",
+            "VEFURV9VTlNQRUNJRklFRBAAEgYKAk9OEAESBwoDT0ZGEAISDQoJU1VTUEVO",
+            "REVEEAMiPAoKQm9vdE9wdGlvbhIbChdCT09UX09QVElPTl9VTlNQRUNJRklF",
+            "RBAAEgcKA0VGSRABEggKBEJJT1MQAiLbCAoMQXdzVm1EZXRhaWxzEg0KBXZt",
+            "X2lkGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIRCglzb3VyY2VfaWQY",
+            "AyABKAkSGgoSc291cmNlX2Rlc2NyaXB0aW9uGAQgASgJEk4KC3Bvd2VyX3N0",
+            "YXRlGAUgASgOMjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkF3c1Zt",
+            "RGV0YWlscy5Qb3dlclN0YXRlQgPgQQMSEQoJY3B1X2NvdW50GAYgASgFEhEK",
+            "CW1lbW9yeV9tYhgHIAEoBRISCgpkaXNrX2NvdW50GAggASgFEhwKFGNvbW1p",
+            "dHRlZF9zdG9yYWdlX21iGAkgASgDEhYKDm9zX2Rlc2NyaXB0aW9uGAogASgJ",
+            "EkkKC2Jvb3Rfb3B0aW9uGAsgASgOMjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLkF3c1ZtRGV0YWlscy5Cb290T3B0aW9uEhUKDWluc3RhbmNlX3R5",
+            "cGUYDCABKAkSDgoGdnBjX2lkGA0gASgJEkYKD3NlY3VyaXR5X2dyb3VwcxgO",
+            "IAMoCzItLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Bd3NTZWN1cml0",
+            "eUdyb3VwEkEKBHRhZ3MYDyADKAsyMy5nb29nbGUuY2xvdWQudm1taWdyYXRp",
+            "b24udjEuQXdzVm1EZXRhaWxzLlRhZ3NFbnRyeRIMCgR6b25lGBAgASgJElsK",
+            "E3ZpcnR1YWxpemF0aW9uX3R5cGUYESABKA4yPi5nb29nbGUuY2xvdWQudm1t",
+            "aWdyYXRpb24udjEuQXdzVm1EZXRhaWxzLlZtVmlydHVhbGl6YXRpb25UeXBl",
+            "Ek4KDGFyY2hpdGVjdHVyZRgSIAEoDjI4Lmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
+            "dGlvbi52MS5Bd3NWbURldGFpbHMuVm1BcmNoaXRlY3R1cmUaKwoJVGFnc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVgoKUG93ZXJT",
+            "dGF0ZRIbChdQT1dFUl9TVEFURV9VTlNQRUNJRklFRBAAEgYKAk9OEAESBwoD",
+            "T0ZGEAISDQoJU1VTUEVOREVEEAMSCwoHUEVORElORxAEIjwKCkJvb3RPcHRp",
+            "b24SGwoXQk9PVF9PUFRJT05fVU5TUEVDSUZJRUQQABIHCgNFRkkQARIICgRC",
+            "SU9TEAIiWAoUVm1WaXJ0dWFsaXphdGlvblR5cGUSJgoiVk1fVklSVFVBTEla",
+            "QVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA0hWTRABEg8KC1BBUkFWSVJU",
+            "VUFMEAIiYgoOVm1BcmNoaXRlY3R1cmUSHwobVk1fQVJDSElURUNUVVJFX1VO",
+            "U1BFQ0lGSUVEEAASCAoESTM4NhABEgoKBlg4Nl82NBACEgkKBUFSTTY0EAMS",
+            "DgoKWDg2XzY0X01BQxAEIiwKEEF3c1NlY3VyaXR5R3JvdXASCgoCaWQYASAB",
+            "KAkSDAoEbmFtZRgCIAEoCSJRChBWbXdhcmVWbXNEZXRhaWxzEj0KB2RldGFp",
+            "bHMYASADKAsyLC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVm13YXJl",
+            "Vm1EZXRhaWxzIksKDUF3c1Ztc0RldGFpbHMSOgoHZGV0YWlscxgBIAMoCzIp",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Bd3NWbURldGFpbHMi3wEK",
+            "FkZldGNoSW52ZW50b3J5UmVzcG9uc2USQwoKdm13YXJlX3ZtcxgBIAEoCzIt",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5WbXdhcmVWbXNEZXRhaWxz",
+            "SAASPQoHYXdzX3ZtcxgDIAEoCzIqLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
+            "bi52MS5Bd3NWbXNEZXRhaWxzSAASNAoLdXBkYXRlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNCCwoJU291cmNlVm1zIpwG",
+            "ChFVdGlsaXphdGlvblJlcG9ydBIRCgRuYW1lGAEgASgJQgPgQQMSFAoMZGlz",
+            "cGxheV9uYW1lGAIgASgJEkgKBXN0YXRlGAMgASgOMjQuZ29vZ2xlLmNsb3Vk",
+            "LnZtbWlncmF0aW9uLnYxLlV0aWxpemF0aW9uUmVwb3J0LlN0YXRlQgPgQQMS",
+            "MwoKc3RhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxImCgVlcnJvchgFIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPg",
+            "QQMSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSTAoKdGltZV9mcmFtZRgHIAEoDjI4Lmdvb2dsZS5jbG91",
+            "ZC52bW1pZ3JhdGlvbi52MS5VdGlsaXphdGlvblJlcG9ydC5UaW1lRnJhbWUS",
+            "NwoOZnJhbWVfZW5kX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSFQoIdm1fY291bnQYCSABKAVCA+BBAxI7CgN2bXMYCiAD",
+            "KAsyLi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVm1VdGlsaXphdGlv",
+            "bkluZm8iRwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVB",
+            "VElORxABEg0KCVNVQ0NFRURFRBACEgoKBkZBSUxFRBADIkYKCVRpbWVGcmFt",
+            "ZRIaChZUSU1FX0ZSQU1FX1VOU1BFQ0lGSUVEEAASCAoEV0VFSxABEgkKBU1P",
+            "TlRIEAISCAoEWUVBUhADOpQB6kGQAQosdm1taWdyYXRpb24uZ29vZ2xlYXBp",
+            "cy5jb20vVXRpbGl6YXRpb25SZXBvcnQSYHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L3V0aWxpemF0",
+            "aW9uUmVwb3J0cy97dXRpbGl6YXRpb25fcmVwb3J0fSLCAQoRVm1VdGlsaXph",
+            "dGlvbkluZm8SSQoRdm13YXJlX3ZtX2RldGFpbHMYASABKAsyLC5nb29nbGUu",
+            "Y2xvdWQudm1taWdyYXRpb24udjEuVm13YXJlVm1EZXRhaWxzSAASDQoFdm1f",
+            "aWQYAyABKAkSRgoLdXRpbGl6YXRpb24YAiABKAsyMS5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuVm1VdGlsaXphdGlvbk1ldHJpY3NCCwoJVm1EZXRh",
+            "aWxzIpgCChRWbVV0aWxpemF0aW9uTWV0cmljcxIXCg9jcHVfbWF4X3BlcmNl",
+            "bnQYCSABKAUSGwoTY3B1X2F2ZXJhZ2VfcGVyY2VudBgKIAEoBRIaChJtZW1v",
+            "cnlfbWF4X3BlcmNlbnQYCyABKAUSHgoWbWVtb3J5X2F2ZXJhZ2VfcGVyY2Vu",
+            "dBgMIAEoBRIdChVkaXNrX2lvX3JhdGVfbWF4X2ticHMYDSABKAMSIQoZZGlz",
+            "a19pb19yYXRlX2F2ZXJhZ2Vfa2JwcxgOIAEoAxIjChtuZXR3b3JrX3Rocm91",
+            "Z2hwdXRfbWF4X2ticHMYDyABKAMSJwofbmV0d29ya190aHJvdWdocHV0X2F2",
+            "ZXJhZ2Vfa2JwcxgQIAEoAyKJAgodTGlzdFV0aWxpemF0aW9uUmVwb3J0c1Jl",
+            "cXVlc3QSRAoGcGFyZW50GAEgASgJQjTgQQL6QS4SLHZtbWlncmF0aW9uLmdv",
+            "b2dsZWFwaXMuY29tL1V0aWxpemF0aW9uUmVwb3J0EkUKBHZpZXcYAiABKA4y",
+            "Mi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVXRpbGl6YXRpb25SZXBv",
+            "cnRWaWV3QgPgQQESFgoJcGFnZV9zaXplGAMgASgFQgPgQQESFwoKcGFnZV90",
+            "b2tlbhgEIAEoCUID4EECEhMKBmZpbHRlchgFIAEoCUID4EEBEhUKCG9yZGVy",
+            "X2J5GAYgASgJQgPgQQEiqgEKHkxpc3RVdGlsaXphdGlvblJlcG9ydHNSZXNw",
+            "b25zZRJQChN1dGlsaXphdGlvbl9yZXBvcnRzGAEgAygLMi4uZ29vZ2xlLmNs",
+            "b3VkLnZtbWlncmF0aW9uLnYxLlV0aWxpemF0aW9uUmVwb3J0QgPgQQMSHAoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMSGAoLdW5yZWFjaGFibGUYAyAD",
+            "KAlCA+BBAyKoAQobR2V0VXRpbGl6YXRpb25SZXBvcnRSZXF1ZXN0EkIKBG5h",
+            "bWUYASABKAlCNOBBAvpBLgosdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20v",
+            "VXRpbGl6YXRpb25SZXBvcnQSRQoEdmlldxgCIAEoDjIyLmdvb2dsZS5jbG91",
+            "ZC52bW1pZ3JhdGlvbi52MS5VdGlsaXphdGlvblJlcG9ydFZpZXdCA+BBASLv",
+            "AQoeQ3JlYXRlVXRpbGl6YXRpb25SZXBvcnRSZXF1ZXN0EkQKBnBhcmVudBgB",
+            "IAEoCUI04EEC+kEuEix2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9VdGls",
+            "aXphdGlvblJlcG9ydBJPChJ1dGlsaXphdGlvbl9yZXBvcnQYAiABKAsyLi5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVXRpbGl6YXRpb25SZXBvcnRC",
+            "A+BBAhIiChV1dGlsaXphdGlvbl9yZXBvcnRfaWQYAyABKAlCA+BBAhISCgpy",
+            "ZXF1ZXN0X2lkGAQgASgJIn0KHkRlbGV0ZVV0aWxpemF0aW9uUmVwb3J0UmVx",
+            "dWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLHZtbWlncmF0aW9uLmdvb2ds",
+            "ZWFwaXMuY29tL1V0aWxpemF0aW9uUmVwb3J0EhcKCnJlcXVlc3RfaWQYAiAB",
+            "KAlCA+BBASKwAQogTGlzdERhdGFjZW50ZXJDb25uZWN0b3JzUmVzcG9uc2US",
+            "VAoVZGF0YWNlbnRlcl9jb25uZWN0b3JzGAEgAygLMjAuZ29vZ2xlLmNsb3Vk",
+            "LnZtbWlncmF0aW9uLnYxLkRhdGFjZW50ZXJDb25uZWN0b3JCA+BBAxIcCg9u",
             "ZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BBAxIYCgt1bnJlYWNoYWJsZRgDIAMo",
-            "CUID4EEDIpYBChVHZXRNaWdyYXRpbmdWbVJlcXVlc3QSPAoEbmFtZRgBIAEo",
-            "CUIu4EEC+kEoCiZ2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRp",
-            "bmdWbRI/CgR2aWV3GAIgASgOMiwuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLk1pZ3JhdGluZ1ZtVmlld0ID4EEBIqQBChhVcGRhdGVNaWdyYXRpbmdW",
-            "bVJlcXVlc3QSLwoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuRmllbGRNYXNrEkMKDG1pZ3JhdGluZ192bRgCIAEoCzIoLmdvb2dsZS5j",
-            "bG91ZC52bW1pZ3JhdGlvbi52MS5NaWdyYXRpbmdWbUID4EECEhIKCnJlcXVl",
-            "c3RfaWQYAyABKAkiWAoYRGVsZXRlTWlncmF0aW5nVm1SZXF1ZXN0EjwKBG5h",
-            "bWUYASABKAlCLuBBAvpBKAomdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20v",
-            "TWlncmF0aW5nVm0iXQoVU3RhcnRNaWdyYXRpb25SZXF1ZXN0EkQKDG1pZ3Jh",
-            "dGluZ192bRgBIAEoCUIu4EEC+kEoCiZ2bW1pZ3JhdGlvbi5nb29nbGVhcGlz",
-            "LmNvbS9NaWdyYXRpbmdWbSIYChZTdGFydE1pZ3JhdGlvblJlc3BvbnNlIl0K",
-            "FVBhdXNlTWlncmF0aW9uUmVxdWVzdBJECgxtaWdyYXRpbmdfdm0YASABKAlC",
+            "CUID4EEDImUKHUdldERhdGFjZW50ZXJDb25uZWN0b3JSZXF1ZXN0EkQKBG5h",
+            "bWUYASABKAlCNuBBAvpBMAoudm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20v",
+            "RGF0YWNlbnRlckNvbm5lY3RvciL5AQogQ3JlYXRlRGF0YWNlbnRlckNvbm5l",
+            "Y3RvclJlcXVlc3QSRgoGcGFyZW50GAEgASgJQjbgQQL6QTASLnZtbWlncmF0",
+            "aW9uLmdvb2dsZWFwaXMuY29tL0RhdGFjZW50ZXJDb25uZWN0b3ISJAoXZGF0",
+            "YWNlbnRlcl9jb25uZWN0b3JfaWQYAiABKAlCA+BBAhJTChRkYXRhY2VudGVy",
+            "X2Nvbm5lY3RvchgDIAEoCzIwLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
+            "MS5EYXRhY2VudGVyQ29ubmVjdG9yQgPgQQISEgoKcmVxdWVzdF9pZBgEIAEo",
+            "CSJ8CiBEZWxldGVEYXRhY2VudGVyQ29ubmVjdG9yUmVxdWVzdBJECgRuYW1l",
+            "GAEgASgJQjbgQQL6QTAKLnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFjZW50ZXJDb25uZWN0b3ISEgoKcmVxdWVzdF9pZBgCIAEoCSKDAQoXVXBn",
+            "cmFkZUFwcGxpYW5jZVJlcXVlc3QSVAoUZGF0YWNlbnRlcl9jb25uZWN0b3IY",
+            "ASABKAlCNuBBAvpBMAoudm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vRGF0",
+            "YWNlbnRlckNvbm5lY3RvchISCgpyZXF1ZXN0X2lkGAIgASgJIhoKGFVwZ3Jh",
+            "ZGVBcHBsaWFuY2VSZXNwb25zZSLGAQofTGlzdERhdGFjZW50ZXJDb25uZWN0",
+            "b3JzUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpBMBIudm1taWdyYXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vRGF0YWNlbnRlckNvbm5lY3RvchIWCglwYWdl",
+            "X3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQISEwoG",
+            "ZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASL/Bwob",
+            "Q29tcHV0ZUVuZ2luZVRhcmdldERlZmF1bHRzEg8KB3ZtX25hbWUYASABKAkS",
+            "RQoOdGFyZ2V0X3Byb2plY3QYAiABKAlCLfpBKgoodm1taWdyYXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vVGFyZ2V0UHJvamVjdBIMCgR6b25lGAMgASgJEhsKE21h",
+            "Y2hpbmVfdHlwZV9zZXJpZXMYBCABKAkSFAoMbWFjaGluZV90eXBlGAUgASgJ",
+            "EhQKDG5ldHdvcmtfdGFncxgGIAMoCRJJChJuZXR3b3JrX2ludGVyZmFjZXMY",
+            "ByADKAsyLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTmV0d29ya0lu",
+            "dGVyZmFjZRIXCg9zZXJ2aWNlX2FjY291bnQYCCABKAkSRQoJZGlza190eXBl",
+            "GAkgASgOMjIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1dGVF",
+            "bmdpbmVEaXNrVHlwZRJUCgZsYWJlbHMYCiADKAsyRC5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuQ29tcHV0ZUVuZ2luZVRhcmdldERlZmF1bHRzLkxh",
+            "YmVsc0VudHJ5EksKDGxpY2Vuc2VfdHlwZRgLIAEoDjI1Lmdvb2dsZS5jbG91",
+            "ZC52bW1pZ3JhdGlvbi52MS5Db21wdXRlRW5naW5lTGljZW5zZVR5cGUSSQoP",
+            "YXBwbGllZF9saWNlbnNlGAwgASgLMisuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLkFwcGxpZWRMaWNlbnNlQgPgQQMSSgoSY29tcHV0ZV9zY2hlZHVs",
+            "aW5nGA0gASgLMi4uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1",
+            "dGVTY2hlZHVsaW5nEhMKC3NlY3VyZV9ib290GA4gASgIEk4KC2Jvb3Rfb3B0",
+            "aW9uGA8gASgOMjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNvbXB1",
+            "dGVFbmdpbmVCb290T3B0aW9uQgPgQQMSWAoIbWV0YWRhdGEYECADKAsyRi5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ29tcHV0ZUVuZ2luZVRhcmdl",
+            "dERlZmF1bHRzLk1ldGFkYXRhRW50cnkSGwoTYWRkaXRpb25hbF9saWNlbnNl",
+            "cxgRIAMoCRIQCghob3N0bmFtZRgSIAEoCRotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGi8KDU1ldGFkYXRhRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK8BwoaQ29tcHV0ZUVu",
+            "Z2luZVRhcmdldERldGFpbHMSDwoHdm1fbmFtZRgBIAEoCRIPCgdwcm9qZWN0",
+            "GAIgASgJEgwKBHpvbmUYAyABKAkSGwoTbWFjaGluZV90eXBlX3NlcmllcxgE",
+            "IAEoCRIUCgxtYWNoaW5lX3R5cGUYBSABKAkSFAoMbmV0d29ya190YWdzGAYg",
+            "AygJEkkKEm5ldHdvcmtfaW50ZXJmYWNlcxgHIAMoCzItLmdvb2dsZS5jbG91",
+            "ZC52bW1pZ3JhdGlvbi52MS5OZXR3b3JrSW50ZXJmYWNlEhcKD3NlcnZpY2Vf",
+            "YWNjb3VudBgIIAEoCRJFCglkaXNrX3R5cGUYCSABKA4yMi5nb29nbGUuY2xv",
+            "dWQudm1taWdyYXRpb24udjEuQ29tcHV0ZUVuZ2luZURpc2tUeXBlElMKBmxh",
+            "YmVscxgKIAMoCzJDLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Db21w",
+            "dXRlRW5naW5lVGFyZ2V0RGV0YWlscy5MYWJlbHNFbnRyeRJLCgxsaWNlbnNl",
+            "X3R5cGUYCyABKA4yNS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ29t",
+            "cHV0ZUVuZ2luZUxpY2Vuc2VUeXBlEkQKD2FwcGxpZWRfbGljZW5zZRgMIAEo",
+            "CzIrLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5BcHBsaWVkTGljZW5z",
+            "ZRJKChJjb21wdXRlX3NjaGVkdWxpbmcYDSABKAsyLi5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuQ29tcHV0ZVNjaGVkdWxpbmcSEwoLc2VjdXJlX2Jv",
+            "b3QYDiABKAgSSQoLYm9vdF9vcHRpb24YDyABKA4yNC5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuQ29tcHV0ZUVuZ2luZUJvb3RPcHRpb24SVwoIbWV0",
+            "YWRhdGEYECADKAsyRS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQ29t",
+            "cHV0ZUVuZ2luZVRhcmdldERldGFpbHMuTWV0YWRhdGFFbnRyeRIbChNhZGRp",
+            "dGlvbmFsX2xpY2Vuc2VzGBEgAygJEhAKCGhvc3RuYW1lGBIgASgJGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaLwoN",
+            "TWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "ImEKEE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJu",
+            "ZXR3b3JrGAIgASgJEhMKC2ludGVybmFsX2lwGAMgASgJEhMKC2V4dGVybmFs",
+            "X2lwGAQgASgJIqABCg5BcHBsaWVkTGljZW5zZRI+CgR0eXBlGAEgASgOMjAu",
+            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkFwcGxpZWRMaWNlbnNlLlR5",
+            "cGUSEgoKb3NfbGljZW5zZRgCIAEoCSI6CgRUeXBlEhQKEFRZUEVfVU5TUEVD",
+            "SUZJRUQQABIICgROT05FEAESCAoEUEFZRxACEggKBEJZT0wQAyK/AQoWU2No",
+            "ZWR1bGluZ05vZGVBZmZpbml0eRILCgNrZXkYASABKAkSTgoIb3BlcmF0b3IY",
+            "AiABKA4yPC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuU2NoZWR1bGlu",
+            "Z05vZGVBZmZpbml0eS5PcGVyYXRvchIOCgZ2YWx1ZXMYAyADKAkiOAoIT3Bl",
+            "cmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABIGCgJJThABEgoKBk5P",
+            "VF9JThACIt0DChFDb21wdXRlU2NoZWR1bGluZxJdChNvbl9ob3N0X21haW50",
+            "ZW5hbmNlGAEgASgOMkAuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNv",
+            "bXB1dGVTY2hlZHVsaW5nLk9uSG9zdE1haW50ZW5hbmNlElAKDHJlc3RhcnRf",
+            "dHlwZRgFIAEoDjI6Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Db21w",
+            "dXRlU2NoZWR1bGluZy5SZXN0YXJ0VHlwZRJMCg9ub2RlX2FmZmluaXRpZXMY",
+            "AyADKAsyMy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuU2NoZWR1bGlu",
+            "Z05vZGVBZmZpbml0eRIVCg1taW5fbm9kZV9jcHVzGAQgASgFIlQKEU9uSG9z",
+            "dE1haW50ZW5hbmNlEiMKH09OX0hPU1RfTUFJTlRFTkFOQ0VfVU5TUEVDSUZJ",
+            "RUQQABINCglURVJNSU5BVEUQARILCgdNSUdSQVRFEAIiXAoLUmVzdGFydFR5",
+            "cGUSHAoYUkVTVEFSVF9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRQVVUT01BVElD",
+            "X1JFU1RBUlQQARIYChROT19BVVRPTUFUSUNfUkVTVEFSVBACIl4KDlNjaGVk",
+            "dWxlUG9saWN5EjAKDWlkbGVfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SGgoSc2tpcF9vc19hZGFwdGF0aW9uGAIgASgIItEB",
+            "ChhDcmVhdGVNaWdyYXRpbmdWbVJlcXVlc3QSPgoGcGFyZW50GAEgASgJQi7g",
+            "QQL6QSgSJnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL01pZ3JhdGluZ1Zt",
+            "EhwKD21pZ3JhdGluZ192bV9pZBgCIAEoCUID4EECEkMKDG1pZ3JhdGluZ192",
+            "bRgDIAEoCzIoLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5NaWdyYXRp",
+            "bmdWbUID4EECEhIKCnJlcXVlc3RfaWQYBCABKAki9wEKF0xpc3RNaWdyYXRp",
+            "bmdWbXNSZXF1ZXN0Ej4KBnBhcmVudBgBIAEoCUIu4EEC+kEoEiZ2bW1pZ3Jh",
+            "dGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbRIWCglwYWdlX3NpemUY",
+            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQISEwoGZmlsdGVy",
+            "GAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBARI/CgR2aWV3GAYg",
+            "ASgOMiwuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLk1pZ3JhdGluZ1Zt",
+            "Vmlld0ID4EEBIpgBChhMaXN0TWlncmF0aW5nVm1zUmVzcG9uc2USRAoNbWln",
+            "cmF0aW5nX3ZtcxgBIAMoCzIoLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
+            "MS5NaWdyYXRpbmdWbUID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID",
+            "4EEDEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQMilgEKFUdldE1pZ3JhdGlu",
+            "Z1ZtUmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJnZtbWlncmF0aW9u",
+            "Lmdvb2dsZWFwaXMuY29tL01pZ3JhdGluZ1ZtEj8KBHZpZXcYAiABKA4yLC5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTWlncmF0aW5nVm1WaWV3QgPg",
+            "QQEipAEKGFVwZGF0ZU1pZ3JhdGluZ1ZtUmVxdWVzdBIvCgt1cGRhdGVfbWFz",
+            "axgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSQwoMbWlncmF0",
+            "aW5nX3ZtGAIgASgLMiguZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLk1p",
+            "Z3JhdGluZ1ZtQgPgQQISEgoKcmVxdWVzdF9pZBgDIAEoCSJYChhEZWxldGVN",
+            "aWdyYXRpbmdWbVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC+kEoCiZ2bW1p",
+            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbSJdChVTdGFydE1p",
+            "Z3JhdGlvblJlcXVlc3QSRAoMbWlncmF0aW5nX3ZtGAEgASgJQi7gQQL6QSgK",
+            "JnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL01pZ3JhdGluZ1ZtIhgKFlN0",
+            "YXJ0TWlncmF0aW9uUmVzcG9uc2UiXQoVUGF1c2VNaWdyYXRpb25SZXF1ZXN0",
+            "EkQKDG1pZ3JhdGluZ192bRgBIAEoCUIu4EEC+kEoCiZ2bW1pZ3JhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbSIYChZQYXVzZU1pZ3JhdGlvblJl",
+            "c3BvbnNlIl4KFlJlc3VtZU1pZ3JhdGlvblJlcXVlc3QSRAoMbWlncmF0aW5n",
+            "X3ZtGAEgASgJQi7gQQL6QSgKJnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29t",
+            "L01pZ3JhdGluZ1ZtIhkKF1Jlc3VtZU1pZ3JhdGlvblJlc3BvbnNlImAKGEZp",
+            "bmFsaXplTWlncmF0aW9uUmVxdWVzdBJECgxtaWdyYXRpbmdfdm0YASABKAlC",
             "LuBBAvpBKAomdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vTWlncmF0aW5n",
-            "Vm0iGAoWUGF1c2VNaWdyYXRpb25SZXNwb25zZSJeChZSZXN1bWVNaWdyYXRp",
-            "b25SZXF1ZXN0EkQKDG1pZ3JhdGluZ192bRgBIAEoCUIu4EEC+kEoCiZ2bW1p",
-            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbSIZChdSZXN1bWVN",
-            "aWdyYXRpb25SZXNwb25zZSJgChhGaW5hbGl6ZU1pZ3JhdGlvblJlcXVlc3QS",
-            "RAoMbWlncmF0aW5nX3ZtGAEgASgJQi7gQQL6QSgKJnZtbWlncmF0aW9uLmdv",
-            "b2dsZWFwaXMuY29tL01pZ3JhdGluZ1ZtIhsKGUZpbmFsaXplTWlncmF0aW9u",
-            "UmVzcG9uc2UirAIKDVRhcmdldFByb2plY3QSEQoEbmFtZRgBIAEoCUID4EED",
-            "Eg8KB3Byb2plY3QYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSNAoLY3Jl",
-            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQM6dupBcwoodm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20v",
-            "VGFyZ2V0UHJvamVjdBJHcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3RhcmdldFByb2plY3RzL3t0YXJnZXRfcHJvamVjdH0iWQoX",
-            "R2V0VGFyZ2V0UHJvamVjdFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEq",
-            "Cih2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9UYXJnZXRQcm9qZWN0IroB",
-            "ChlMaXN0VGFyZ2V0UHJvamVjdHNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw",
-            "4EEC+kEqEih2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9UYXJnZXRQcm9q",
-            "ZWN0EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyAB",
-            "KAlCA+BBAhITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEo",
-            "CUID4EEBIp4BChpMaXN0VGFyZ2V0UHJvamVjdHNSZXNwb25zZRJICg90YXJn",
-            "ZXRfcHJvamVjdHMYASADKAsyKi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
-            "djEuVGFyZ2V0UHJvamVjdEID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CUID4EEDEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQMi2wEKGkNyZWF0ZVRh",
-            "cmdldFByb2plY3RSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw4EEC+kEqEih2",
-            "bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9UYXJnZXRQcm9qZWN0Eh4KEXRh",
-            "cmdldF9wcm9qZWN0X2lkGAIgASgJQgPgQQISRwoOdGFyZ2V0X3Byb2plY3QY",
-            "AyABKAsyKi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVGFyZ2V0UHJv",
-            "amVjdEID4EECEhIKCnJlcXVlc3RfaWQYBCABKAkiqgEKGlVwZGF0ZVRhcmdl",
-            "dFByb2plY3RSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkZpZWxkTWFzaxJHCg50YXJnZXRfcHJvamVjdBgCIAEoCzIq",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5UYXJnZXRQcm9qZWN0QgPg",
-            "QQISEgoKcmVxdWVzdF9pZBgDIAEoCSJ1ChpEZWxldGVUYXJnZXRQcm9qZWN0",
-            "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKHZtbWlncmF0aW9uLmdv",
-            "b2dsZWFwaXMuY29tL1RhcmdldFByb2plY3QSFwoKcmVxdWVzdF9pZBgCIAEo",
-            "CUID4EEBIpACCgVHcm91cBIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRl",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSEwoLZGVzY3JpcHRpb24YBCABKAkSFAoMZGlzcGxheV9uYW1l",
-            "GAUgASgJOl3qQVoKIHZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0dyb3Vw",
-            "EjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZ3Jv",
-            "dXBzL3tncm91cH0iqgEKEUxpc3RHcm91cHNSZXF1ZXN0EjgKBnBhcmVudBgB",
-            "IAEoCUIo4EEC+kEiEiB2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Hcm91",
-            "cBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
-            "QgPgQQISEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlC",
-            "A+BBASKFAQoSTGlzdEdyb3Vwc1Jlc3BvbnNlEjcKBmdyb3VwcxgBIAMoCzIi",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Hcm91cEID4EEDEhwKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCUID4EEDEhgKC3VucmVhY2hhYmxlGAMgAygJ",
-            "QgPgQQMiSQoPR2V0R3JvdXBSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpB",
-            "Igogdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vR3JvdXAisQEKEkNyZWF0",
-            "ZUdyb3VwUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIhIgdm1taWdy",
-            "YXRpb24uZ29vZ2xlYXBpcy5jb20vR3JvdXASFQoIZ3JvdXBfaWQYAiABKAlC",
-            "A+BBAhI2CgVncm91cBgDIAEoCzIiLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
-            "bi52MS5Hcm91cEID4EECEhIKCnJlcXVlc3RfaWQYBCABKAkikQEKElVwZGF0",
-            "ZUdyb3VwUmVxdWVzdBIvCgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2sSNgoFZ3JvdXAYAiABKAsyIi5nb29nbGUuY2xv",
-            "dWQudm1taWdyYXRpb24udjEuR3JvdXBCA+BBAhISCgpyZXF1ZXN0X2lkGAMg",
-            "ASgJImUKEkRlbGV0ZUdyb3VwUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6",
-            "QSIKIHZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0dyb3VwEhcKCnJlcXVl",
-            "c3RfaWQYAiABKAlCA+BBASKWAQoYQWRkR3JvdXBNaWdyYXRpb25SZXF1ZXN0",
-            "EjcKBWdyb3VwGAEgASgJQijgQQL6QSIKIHZtbWlncmF0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL0dyb3VwEkEKDG1pZ3JhdGluZ192bRgCIAEoCUIr+kEoCiZ2bW1p",
-            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpbmdWbSIbChlBZGRHcm91",
-            "cE1pZ3JhdGlvblJlc3BvbnNlIpkBChtSZW1vdmVHcm91cE1pZ3JhdGlvblJl",
-            "cXVlc3QSNwoFZ3JvdXAYASABKAlCKOBBAvpBIgogdm1taWdyYXRpb24uZ29v",
-            "Z2xlYXBpcy5jb20vR3JvdXASQQoMbWlncmF0aW5nX3ZtGAIgASgJQiv6QSgK",
-            "JnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL01pZ3JhdGluZ1ZtIh4KHFJl",
-            "bW92ZUdyb3VwTWlncmF0aW9uUmVzcG9uc2UizAEKF0NyZWF0ZUN1dG92ZXJK",
-            "b2JSZXF1ZXN0Ej0KBnBhcmVudBgBIAEoCUIt4EEC+kEnEiV2bW1pZ3JhdGlv",
-            "bi5nb29nbGVhcGlzLmNvbS9DdXRvdmVySm9iEhsKDmN1dG92ZXJfam9iX2lk",
-            "GAIgASgJQgPgQQISQQoLY3V0b3Zlcl9qb2IYAyABKAsyJy5nb29nbGUuY2xv",
-            "dWQudm1taWdyYXRpb24udjEuQ3V0b3ZlckpvYkID4EECEhIKCnJlcXVlc3Rf",
-            "aWQYBCABKAkiVgoXQ2FuY2VsQ3V0b3ZlckpvYlJlcXVlc3QSOwoEbmFtZRgB",
-            "IAEoCUIt4EEC+kEnCiV2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9DdXRv",
-            "dmVySm9iIhoKGENhbmNlbEN1dG92ZXJKb2JSZXNwb25zZSK0AQoWTGlzdEN1",
-            "dG92ZXJKb2JzUmVxdWVzdBI9CgZwYXJlbnQYASABKAlCLeBBAvpBJxIldm1t",
-            "aWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ3V0b3ZlckpvYhIWCglwYWdlX3Np",
-            "emUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQISEwoGZmls",
-            "dGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKVAQoXTGlz",
-            "dEN1dG92ZXJKb2JzUmVzcG9uc2USQgoMY3V0b3Zlcl9qb2JzGAEgAygLMicu",
-            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkN1dG92ZXJKb2JCA+BBAxIc",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BBAxIYCgt1bnJlYWNoYWJsZRgD",
-            "IAMoCUID4EEDIlMKFEdldEN1dG92ZXJKb2JSZXF1ZXN0EjsKBG5hbWUYASAB",
-            "KAlCLeBBAvpBJwoldm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vQ3V0b3Zl",
-            "ckpvYiKAAgoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3Rp",
-            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoG",
-            "dGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhsKDnN0YXR1",
-            "c19tZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVxdWVzdGVkX2NhbmNlbGxhdGlv",
-            "bhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9uGAcgASgJQgPgQQMivwQKDk1p",
-            "Z3JhdGlvbkVycm9yEkgKBGNvZGUYASABKA4yNS5nb29nbGUuY2xvdWQudm1t",
-            "aWdyYXRpb24udjEuTWlncmF0aW9uRXJyb3IuRXJyb3JDb2RlQgPgQQMSOAoN",
-            "ZXJyb3JfbWVzc2FnZRgCIAEoCzIcLmdvb2dsZS5ycGMuTG9jYWxpemVkTWVz",
-            "c2FnZUID4EEDEjYKC2FjdGlvbl9pdGVtGAMgASgLMhwuZ29vZ2xlLnJwYy5M",
-            "b2NhbGl6ZWRNZXNzYWdlQgPgQQMSLgoKaGVscF9saW5rcxgEIAMoCzIVLmdv",
-            "b2dsZS5ycGMuSGVscC5MaW5rQgPgQQMSMwoKZXJyb3JfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyKLAgoJRXJyb3JDb2Rl",
-            "EhoKFkVSUk9SX0NPREVfVU5TUEVDSUZJRUQQABIRCg1VTktOT1dOX0VSUk9S",
-            "EAESGwoXU09VUkNFX1ZBTElEQVRJT05fRVJST1IQAhIcChhTT1VSQ0VfUkVQ",
-            "TElDQVRJT05fRVJST1IQAxIcChhUQVJHRVRfUkVQTElDQVRJT05fRVJST1IQ",
-            "BBIXChNPU19BREFQVEFUSU9OX0VSUk9SEAUSDwoLQ0xPTkVfRVJST1IQBhIR",
-            "Cg1DVVRPVkVSX0VSUk9SEAcSHAoYVVRJTElaQVRJT05fUkVQT1JUX0VSUk9S",
-            "EAgSGwoXQVBQTElBTkNFX1VQR1JBREVfRVJST1IQCSpVChVVdGlsaXphdGlv",
-            "blJlcG9ydFZpZXcSJwojVVRJTElaQVRJT05fUkVQT1JUX1ZJRVdfVU5TUEVD",
-            "SUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAiptCg9NaWdyYXRpbmdWbVZp",
-            "ZXcSIQodTUlHUkFUSU5HX1ZNX1ZJRVdfVU5TUEVDSUZJRUQQABIbChdNSUdS",
-            "QVRJTkdfVk1fVklFV19CQVNJQxABEhoKFk1JR1JBVElOR19WTV9WSUVXX0ZV",
-            "TEwQAiqxAQoVQ29tcHV0ZUVuZ2luZURpc2tUeXBlEigKJENPTVBVVEVfRU5H",
-            "SU5FX0RJU0tfVFlQRV9VTlNQRUNJRklFRBAAEiUKIUNPTVBVVEVfRU5HSU5F",
-            "X0RJU0tfVFlQRV9TVEFOREFSRBABEiAKHENPTVBVVEVfRU5HSU5FX0RJU0tf",
-            "VFlQRV9TU0QQAhIlCiFDT01QVVRFX0VOR0lORV9ESVNLX1RZUEVfQkFMQU5D",
-            "RUQQAyqPAQoYQ29tcHV0ZUVuZ2luZUxpY2Vuc2VUeXBlEicKI0NPTVBVVEVf",
-            "RU5HSU5FX0xJQ0VOU0VfVFlQRV9ERUZBVUxUEAASJAogQ09NUFVURV9FTkdJ",
-            "TkVfTElDRU5TRV9UWVBFX1BBWUcQARIkCiBDT01QVVRFX0VOR0lORV9MSUNF",
-            "TlNFX1RZUEVfQllPTBACKo4BChdDb21wdXRlRW5naW5lQm9vdE9wdGlvbhIq",
-            "CiZDT01QVVRFX0VOR0lORV9CT09UX09QVElPTl9VTlNQRUNJRklFRBAAEiIK",
-            "HkNPTVBVVEVfRU5HSU5FX0JPT1RfT1BUSU9OX0VGSRABEiMKH0NPTVBVVEVf",
-            "RU5HSU5FX0JPT1RfT1BUSU9OX0JJT1MQAjK4TwoLVm1NaWdyYXRpb24SrgEK",
-            "C0xpc3RTb3VyY2VzEi8uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkxp",
-            "c3RTb3VyY2VzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
-            "MS5MaXN0U291cmNlc1Jlc3BvbnNlIjyC0+STAi0SKy92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L3NvdXJjZXPaQQZwYXJlbnQSmwEKCUdl",
-            "dFNvdXJjZRItLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5HZXRTb3Vy",
-            "Y2VSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlNvdXJj",
-            "ZSI6gtPkkwItEisvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
-            "b3VyY2VzLyp92kEEbmFtZRLUAQoMQ3JlYXRlU291cmNlEjAuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkNyZWF0ZVNvdXJjZVJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInOC0+STAjUiKy92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3NvdXJjZXM6BnNvdXJjZdpBF3Bh",
-            "cmVudCxzb3VyY2Usc291cmNlX2lkykEbCgZTb3VyY2USEU9wZXJhdGlvbk1l",
-            "dGFkYXRhEtYBCgxVcGRhdGVTb3VyY2USMC5nb29nbGUuY2xvdWQudm1taWdy",
-            "YXRpb24udjEuVXBkYXRlU291cmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24idYLT5JMCPDIyL3YxL3tzb3VyY2UubmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKn06BnNvdXJjZdpBEnNvdXJj",
-            "ZSx1cGRhdGVfbWFza8pBGwoGU291cmNlEhFPcGVyYXRpb25NZXRhZGF0YRLI",
-            "AQoMRGVsZXRlU291cmNlEjAuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
-            "LkRlbGV0ZVNvdXJjZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uImeC0+STAi0qKy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3NvdXJjZXMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1w",
-            "dHkSEU9wZXJhdGlvbk1ldGFkYXRhEsgBCg5GZXRjaEludmVudG9yeRIyLmdv",
-            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5GZXRjaEludmVudG9yeVJlcXVl",
-            "c3QaMy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuRmV0Y2hJbnZlbnRv",
-            "cnlSZXNwb25zZSJNgtPkkwI+EjwvdjEve3NvdXJjZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3NvdXJjZXMvKn06ZmV0Y2hJbnZlbnRvcnnaQQZzb3VyY2US",
-            "5AEKFkxpc3RVdGlsaXphdGlvblJlcG9ydHMSOi5nb29nbGUuY2xvdWQudm1t",
-            "aWdyYXRpb24udjEuTGlzdFV0aWxpemF0aW9uUmVwb3J0c1JlcXVlc3QaOy5n",
-            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlzdFV0aWxpemF0aW9uUmVw",
-            "b3J0c1Jlc3BvbnNlIlGC0+STAkISQC92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovc291cmNlcy8qfS91dGlsaXphdGlvblJlcG9ydHPaQQZw",
-            "YXJlbnQS0QEKFEdldFV0aWxpemF0aW9uUmVwb3J0EjguZ29vZ2xlLmNsb3Vk",
-            "LnZtbWlncmF0aW9uLnYxLkdldFV0aWxpemF0aW9uUmVwb3J0UmVxdWVzdBou",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5VdGlsaXphdGlvblJlcG9y",
-            "dCJPgtPkkwJCEkAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
-            "b3VyY2VzLyovdXRpbGl6YXRpb25SZXBvcnRzLyp92kEEbmFtZRKvAgoXQ3Jl",
-            "YXRlVXRpbGl6YXRpb25SZXBvcnQSOy5nb29nbGUuY2xvdWQudm1taWdyYXRp",
-            "b24udjEuQ3JlYXRlVXRpbGl6YXRpb25SZXBvcnRSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiK3AYLT5JMCViJAL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyp9L3V0aWxpemF0aW9u",
-            "UmVwb3J0czoSdXRpbGl6YXRpb25fcmVwb3J02kEvcGFyZW50LHV0aWxpemF0",
-            "aW9uX3JlcG9ydCx1dGlsaXphdGlvbl9yZXBvcnRfaWTKQSYKEVV0aWxpemF0",
-            "aW9uUmVwb3J0EhFPcGVyYXRpb25NZXRhZGF0YRLzAQoXRGVsZXRlVXRpbGl6",
-            "YXRpb25SZXBvcnQSOy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuRGVs",
-            "ZXRlVXRpbGl6YXRpb25SZXBvcnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiJ8gtPkkwJCKkAvdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9zb3VyY2VzLyovdXRpbGl6YXRpb25SZXBvcnRzLyp92kEE",
-            "bmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRh",
-            "ZGF0YRLsAQoYTGlzdERhdGFjZW50ZXJDb25uZWN0b3JzEjwuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkxpc3REYXRhY2VudGVyQ29ubmVjdG9yc1Jl",
-            "cXVlc3QaPS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlzdERhdGFj",
-            "ZW50ZXJDb25uZWN0b3JzUmVzcG9uc2UiU4LT5JMCRBJCL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyp9L2RhdGFjZW50ZXJD",
-            "b25uZWN0b3Jz2kEGcGFyZW50EtkBChZHZXREYXRhY2VudGVyQ29ubmVjdG9y",
-            "EjouZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkdldERhdGFjZW50ZXJD",
-            "b25uZWN0b3JSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
-            "LkRhdGFjZW50ZXJDb25uZWN0b3IiUYLT5JMCRBJCL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL2RhdGFjZW50ZXJDb25uZWN0",
-            "b3JzLyp92kEEbmFtZRK9AgoZQ3JlYXRlRGF0YWNlbnRlckNvbm5lY3RvchI9",
-            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5DcmVhdGVEYXRhY2VudGVy",
-            "Q29ubmVjdG9yUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24iwQGC0+STAloiQi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovc291cmNlcy8qfS9kYXRhY2VudGVyQ29ubmVjdG9yczoUZGF0YWNlbnRl",
-            "cl9jb25uZWN0b3LaQTNwYXJlbnQsZGF0YWNlbnRlcl9jb25uZWN0b3IsZGF0",
-            "YWNlbnRlcl9jb25uZWN0b3JfaWTKQSgKE0RhdGFjZW50ZXJDb25uZWN0b3IS",
-            "EU9wZXJhdGlvbk1ldGFkYXRhEvkBChlEZWxldGVEYXRhY2VudGVyQ29ubmVj",
-            "dG9yEj0uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkRlbGV0ZURhdGFj",
-            "ZW50ZXJDb25uZWN0b3JSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJ+gtPkkwJEKkIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9zb3VyY2VzLyovZGF0YWNlbnRlckNvbm5lY3RvcnMvKn3aQQRuYW1l",
-            "ykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRh",
-            "EogCChBVcGdyYWRlQXBwbGlhbmNlEjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
-            "aW9uLnYxLlVwZ3JhZGVBcHBsaWFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKeAYLT5JMCaCJjL3YxL3tkYXRhY2VudGVyX2Nv",
-            "bm5lY3Rvcj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKi9kYXRh",
-            "Y2VudGVyQ29ubmVjdG9ycy8qfTp1cGdyYWRlQXBwbGlhbmNlOgEqykEtChhV",
-            "cGdyYWRlQXBwbGlhbmNlUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRhEoUC",
-            "ChFDcmVhdGVNaWdyYXRpbmdWbRI1Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
-            "bi52MS5DcmVhdGVNaWdyYXRpbmdWbVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIpkBgtPkkwJKIjovdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKn0vbWlncmF0aW5nVm1zOgxtaWdy",
-            "YXRpbmdfdm3aQSNwYXJlbnQsbWlncmF0aW5nX3ZtLG1pZ3JhdGluZ192bV9p",
-            "ZMpBIAoLTWlncmF0aW5nVm0SEU9wZXJhdGlvbk1ldGFkYXRhEswBChBMaXN0",
-            "TWlncmF0aW5nVm1zEjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkxp",
-            "c3RNaWdyYXRpbmdWbXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
-            "aW9uLnYxLkxpc3RNaWdyYXRpbmdWbXNSZXNwb25zZSJLgtPkkwI8EjovdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKn0vbWln",
-            "cmF0aW5nVm1z2kEGcGFyZW50ErkBCg5HZXRNaWdyYXRpbmdWbRIyLmdvb2ds",
-            "ZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5HZXRNaWdyYXRpbmdWbVJlcXVlc3Qa",
-            "KC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTWlncmF0aW5nVm0iSYLT",
-            "5JMCPBI6L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNl",
-            "cy8qL21pZ3JhdGluZ1Ztcy8qfdpBBG5hbWUShwIKEVVwZGF0ZU1pZ3JhdGlu",
-            "Z1ZtEjUuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlVwZGF0ZU1pZ3Jh",
-            "dGluZ1ZtUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "mwGC0+STAlcyRy92MS97bWlncmF0aW5nX3ZtLm5hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9zb3VyY2VzLyovbWlncmF0aW5nVm1zLyp9OgxtaWdyYXRp",
-            "bmdfdm3aQRhtaWdyYXRpbmdfdm0sdXBkYXRlX21hc2vKQSAKC01pZ3JhdGlu",
-            "Z1ZtEhFPcGVyYXRpb25NZXRhZGF0YRLhAQoRRGVsZXRlTWlncmF0aW5nVm0S",
-            "NS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuRGVsZXRlTWlncmF0aW5n",
-            "Vm1SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ2gtPk",
-            "kwI8KjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2Vz",
-            "LyovbWlncmF0aW5nVm1zLyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRL/AQoOU3RhcnRNaWdyYXRpb24S",
-            "Mi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuU3RhcnRNaWdyYXRpb25S",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKZAYLT5JMC",
-            "ViJRL3YxL3ttaWdyYXRpbmdfdm09cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
-            "b3VyY2VzLyovbWlncmF0aW5nVm1zLyp9OnN0YXJ0TWlncmF0aW9uOgEq2kEM",
-            "bWlncmF0aW5nX3ZtykErChZTdGFydE1pZ3JhdGlvblJlc3BvbnNlEhFPcGVy",
-            "YXRpb25NZXRhZGF0YRL0AQoPUmVzdW1lTWlncmF0aW9uEjMuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLlJlc3VtZU1pZ3JhdGlvblJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBgtPkkwJXIlIvdjEve21p",
-            "Z3JhdGluZ192bT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKi9t",
-            "aWdyYXRpbmdWbXMvKn06cmVzdW1lTWlncmF0aW9uOgEqykEsChdSZXN1bWVN",
-            "aWdyYXRpb25SZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGES8AEKDlBhdXNl",
-            "TWlncmF0aW9uEjIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlBhdXNl",
-            "TWlncmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24iigGC0+STAlYiUS92MS97bWlncmF0aW5nX3ZtPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovc291cmNlcy8qL21pZ3JhdGluZ1Ztcy8qfTpwYXVzZU1pZ3Jh",
-            "dGlvbjoBKspBKwoWUGF1c2VNaWdyYXRpb25SZXNwb25zZRIRT3BlcmF0aW9u",
-            "TWV0YWRhdGESiwIKEUZpbmFsaXplTWlncmF0aW9uEjUuZ29vZ2xlLmNsb3Vk",
-            "LnZtbWlncmF0aW9uLnYxLkZpbmFsaXplTWlncmF0aW9uUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwGC0+STAlkiVC92MS97bWln",
+            "Vm0iGwoZRmluYWxpemVNaWdyYXRpb25SZXNwb25zZSKsAgoNVGFyZ2V0UHJv",
+            "amVjdBIRCgRuYW1lGAEgASgJQgPgQQMSDwoHcHJvamVjdBgCIAEoCRITCgtk",
+            "ZXNjcmlwdGlvbhgDIAEoCRI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzp26kFzCih2bW1p",
+            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9UYXJnZXRQcm9qZWN0Ekdwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGFyZ2V0UHJvamVj",
+            "dHMve3RhcmdldF9wcm9qZWN0fSJZChdHZXRUYXJnZXRQcm9qZWN0UmVxdWVz",
+            "dBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKHZtbWlncmF0aW9uLmdvb2dsZWFw",
+            "aXMuY29tL1RhcmdldFByb2plY3QiugEKGUxpc3RUYXJnZXRQcm9qZWN0c1Jl",
+            "cXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoSKHZtbWlncmF0aW9uLmdv",
+            "b2dsZWFwaXMuY29tL1RhcmdldFByb2plY3QSFgoJcGFnZV9zaXplGAIgASgF",
+            "QgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EECEhMKBmZpbHRlchgEIAEo",
+            "CUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEingEKGkxpc3RUYXJnZXRQ",
+            "cm9qZWN0c1Jlc3BvbnNlEkgKD3RhcmdldF9wcm9qZWN0cxgBIAMoCzIqLmdv",
+            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5UYXJnZXRQcm9qZWN0QgPgQQMS",
+            "HAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMSGAoLdW5yZWFjaGFibGUY",
+            "AyADKAlCA+BBAyLbAQoaQ3JlYXRlVGFyZ2V0UHJvamVjdFJlcXVlc3QSQAoG",
+            "cGFyZW50GAEgASgJQjDgQQL6QSoSKHZtbWlncmF0aW9uLmdvb2dsZWFwaXMu",
+            "Y29tL1RhcmdldFByb2plY3QSHgoRdGFyZ2V0X3Byb2plY3RfaWQYAiABKAlC",
+            "A+BBAhJHCg50YXJnZXRfcHJvamVjdBgDIAEoCzIqLmdvb2dsZS5jbG91ZC52",
+            "bW1pZ3JhdGlvbi52MS5UYXJnZXRQcm9qZWN0QgPgQQISEgoKcmVxdWVzdF9p",
+            "ZBgEIAEoCSKqAQoaVXBkYXRlVGFyZ2V0UHJvamVjdFJlcXVlc3QSLwoLdXBk",
+            "YXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEkcK",
+            "DnRhcmdldF9wcm9qZWN0GAIgASgLMiouZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLlRhcmdldFByb2plY3RCA+BBAhISCgpyZXF1ZXN0X2lkGAMgASgJ",
+            "InUKGkRlbGV0ZVRhcmdldFByb2plY3RSZXF1ZXN0Ej4KBG5hbWUYASABKAlC",
+            "MOBBAvpBKgoodm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vVGFyZ2V0UHJv",
+            "amVjdBIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEikAIKBUdyb3VwEhEKBG5h",
+            "bWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtkZXNjcmlwdGlv",
+            "bhgEIAEoCRIUCgxkaXNwbGF5X25hbWUYBSABKAk6XepBWgogdm1taWdyYXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vR3JvdXASNnByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9ncm91cHMve2dyb3VwfSKqAQoRTGlzdEdy",
+            "b3Vwc1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSISIHZtbWlncmF0",
+            "aW9uLmdvb2dsZWFwaXMuY29tL0dyb3VwEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
+            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBAhITCgZmaWx0ZXIYBCABKAlC",
+            "A+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIoUBChJMaXN0R3JvdXBzUmVz",
+            "cG9uc2USNwoGZ3JvdXBzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLkdyb3VwQgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPg",
+            "QQMSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBAyJJCg9HZXRHcm91cFJlcXVl",
+            "c3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiB2bW1pZ3JhdGlvbi5nb29nbGVh",
+            "cGlzLmNvbS9Hcm91cCKxAQoSQ3JlYXRlR3JvdXBSZXF1ZXN0EjgKBnBhcmVu",
+            "dBgBIAEoCUIo4EEC+kEiEiB2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9H",
+            "cm91cBIVCghncm91cF9pZBgCIAEoCUID4EECEjYKBWdyb3VwGAMgASgLMiIu",
+            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkdyb3VwQgPgQQISEgoKcmVx",
+            "dWVzdF9pZBgEIAEoCSKRAQoSVXBkYXRlR3JvdXBSZXF1ZXN0Ei8KC3VwZGF0",
+            "ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxI2CgVn",
+            "cm91cBgCIAEoCzIiLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5Hcm91",
+            "cEID4EECEhIKCnJlcXVlc3RfaWQYAyABKAkiZQoSRGVsZXRlR3JvdXBSZXF1",
+            "ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogdm1taWdyYXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vR3JvdXASFwoKcmVxdWVzdF9pZBgCIAEoCUID4EEBIpYBChhB",
+            "ZGRHcm91cE1pZ3JhdGlvblJlcXVlc3QSNwoFZ3JvdXAYASABKAlCKOBBAvpB",
+            "Igogdm1taWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vR3JvdXASQQoMbWlncmF0",
+            "aW5nX3ZtGAIgASgJQiv6QSgKJnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29t",
+            "L01pZ3JhdGluZ1ZtIhsKGUFkZEdyb3VwTWlncmF0aW9uUmVzcG9uc2UimQEK",
+            "G1JlbW92ZUdyb3VwTWlncmF0aW9uUmVxdWVzdBI3CgVncm91cBgBIAEoCUIo",
+            "4EEC+kEiCiB2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9Hcm91cBJBCgxt",
+            "aWdyYXRpbmdfdm0YAiABKAlCK/pBKAomdm1taWdyYXRpb24uZ29vZ2xlYXBp",
+            "cy5jb20vTWlncmF0aW5nVm0iHgocUmVtb3ZlR3JvdXBNaWdyYXRpb25SZXNw",
+            "b25zZSLMAQoXQ3JlYXRlQ3V0b3ZlckpvYlJlcXVlc3QSPQoGcGFyZW50GAEg",
+            "ASgJQi3gQQL6QScSJXZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29tL0N1dG92",
+            "ZXJKb2ISGwoOY3V0b3Zlcl9qb2JfaWQYAiABKAlCA+BBAhJBCgtjdXRvdmVy",
+            "X2pvYhgDIAEoCzInLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5DdXRv",
+            "dmVySm9iQgPgQQISEgoKcmVxdWVzdF9pZBgEIAEoCSJWChdDYW5jZWxDdXRv",
+            "dmVySm9iUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScKJXZtbWlncmF0",
+            "aW9uLmdvb2dsZWFwaXMuY29tL0N1dG92ZXJKb2IiGgoYQ2FuY2VsQ3V0b3Zl",
+            "ckpvYlJlc3BvbnNlIrQBChZMaXN0Q3V0b3ZlckpvYnNSZXF1ZXN0Ej0KBnBh",
+            "cmVudBgBIAEoCUIt4EEC+kEnEiV2bW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNv",
+            "bS9DdXRvdmVySm9iEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2Vf",
+            "dG9rZW4YAyABKAlCA+BBAhITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRl",
+            "cl9ieRgFIAEoCUID4EEBIpUBChdMaXN0Q3V0b3ZlckpvYnNSZXNwb25zZRJC",
+            "CgxjdXRvdmVyX2pvYnMYASADKAsyJy5nb29nbGUuY2xvdWQudm1taWdyYXRp",
+            "b24udjEuQ3V0b3ZlckpvYkID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CUID4EEDEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQMiUwoUR2V0Q3V0b3Zl",
+            "ckpvYlJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiV2bW1pZ3JhdGlv",
+            "bi5nb29nbGVhcGlzLmNvbS9DdXRvdmVySm9iIoACChFPcGVyYXRpb25NZXRh",
+            "ZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BBAxIRCgR2",
+            "ZXJiGAQgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlCA+BBAxIj",
+            "ChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoLYXBpX3Zl",
+            "cnNpb24YByABKAlCA+BBAyK/BAoOTWlncmF0aW9uRXJyb3ISSAoEY29kZRgB",
+            "IAEoDjI1Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5NaWdyYXRpb25F",
+            "cnJvci5FcnJvckNvZGVCA+BBAxI4Cg1lcnJvcl9tZXNzYWdlGAIgASgLMhwu",
+            "Z29vZ2xlLnJwYy5Mb2NhbGl6ZWRNZXNzYWdlQgPgQQMSNgoLYWN0aW9uX2l0",
+            "ZW0YAyABKAsyHC5nb29nbGUucnBjLkxvY2FsaXplZE1lc3NhZ2VCA+BBAxIu",
+            "CgpoZWxwX2xpbmtzGAQgAygLMhUuZ29vZ2xlLnJwYy5IZWxwLkxpbmtCA+BB",
+            "AxIzCgplcnJvcl90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDIosCCglFcnJvckNvZGUSGgoWRVJST1JfQ09ERV9VTlNQRUNJ",
+            "RklFRBAAEhEKDVVOS05PV05fRVJST1IQARIbChdTT1VSQ0VfVkFMSURBVElP",
+            "Tl9FUlJPUhACEhwKGFNPVVJDRV9SRVBMSUNBVElPTl9FUlJPUhADEhwKGFRB",
+            "UkdFVF9SRVBMSUNBVElPTl9FUlJPUhAEEhcKE09TX0FEQVBUQVRJT05fRVJS",
+            "T1IQBRIPCgtDTE9ORV9FUlJPUhAGEhEKDUNVVE9WRVJfRVJST1IQBxIcChhV",
+            "VElMSVpBVElPTl9SRVBPUlRfRVJST1IQCBIbChdBUFBMSUFOQ0VfVVBHUkFE",
+            "RV9FUlJPUhAJIroBChJBd3NTb3VyY2VWbURldGFpbHMSSgoIZmlybXdhcmUY",
+            "ASABKA4yOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuQXdzU291cmNl",
+            "Vm1EZXRhaWxzLkZpcm13YXJlEh8KF2NvbW1pdHRlZF9zdG9yYWdlX2J5dGVz",
+            "GAIgASgDIjcKCEZpcm13YXJlEhgKFEZJUk1XQVJFX1VOU1BFQ0lGSUVEEAAS",
+            "BwoDRUZJEAESCAoEQklPUxACIsABChxMaXN0UmVwbGljYXRpb25DeWNsZXNS",
+            "ZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtEit2bW1pZ3JhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbkN5Y2xlEhYKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBAhITCgZmaWx0ZXIY",
+            "BCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIqcBCh1MaXN0UmVw",
+            "bGljYXRpb25DeWNsZXNSZXNwb25zZRJOChJyZXBsaWNhdGlvbl9jeWNsZXMY",
+            "ASADKAsyLS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUmVwbGljYXRp",
+            "b25DeWNsZUID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID4EEDEhgK",
+            "C3VucmVhY2hhYmxlGAMgAygJQgPgQQMiXwoaR2V0UmVwbGljYXRpb25DeWNs",
+            "ZVJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCit2bW1pZ3JhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbkN5Y2xlKlUKFVV0aWxpemF0aW9u",
+            "UmVwb3J0VmlldxInCiNVVElMSVpBVElPTl9SRVBPUlRfVklFV19VTlNQRUNJ",
+            "RklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBACKm0KD01pZ3JhdGluZ1ZtVmll",
+            "dxIhCh1NSUdSQVRJTkdfVk1fVklFV19VTlNQRUNJRklFRBAAEhsKF01JR1JB",
+            "VElOR19WTV9WSUVXX0JBU0lDEAESGgoWTUlHUkFUSU5HX1ZNX1ZJRVdfRlVM",
+            "TBACKrEBChVDb21wdXRlRW5naW5lRGlza1R5cGUSKAokQ09NUFVURV9FTkdJ",
+            "TkVfRElTS19UWVBFX1VOU1BFQ0lGSUVEEAASJQohQ09NUFVURV9FTkdJTkVf",
+            "RElTS19UWVBFX1NUQU5EQVJEEAESIAocQ09NUFVURV9FTkdJTkVfRElTS19U",
+            "WVBFX1NTRBACEiUKIUNPTVBVVEVfRU5HSU5FX0RJU0tfVFlQRV9CQUxBTkNF",
+            "RBADKo8BChhDb21wdXRlRW5naW5lTGljZW5zZVR5cGUSJwojQ09NUFVURV9F",
+            "TkdJTkVfTElDRU5TRV9UWVBFX0RFRkFVTFQQABIkCiBDT01QVVRFX0VOR0lO",
+            "RV9MSUNFTlNFX1RZUEVfUEFZRxABEiQKIENPTVBVVEVfRU5HSU5FX0xJQ0VO",
+            "U0VfVFlQRV9CWU9MEAIqjgEKF0NvbXB1dGVFbmdpbmVCb290T3B0aW9uEioK",
+            "JkNPTVBVVEVfRU5HSU5FX0JPT1RfT1BUSU9OX1VOU1BFQ0lGSUVEEAASIgoe",
+            "Q09NUFVURV9FTkdJTkVfQk9PVF9PUFRJT05fRUZJEAESIwofQ09NUFVURV9F",
+            "TkdJTkVfQk9PVF9PUFRJT05fQklPUxACMolTCgtWbU1pZ3JhdGlvbhKuAQoL",
+            "TGlzdFNvdXJjZXMSLy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlz",
+            "dFNvdXJjZXNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "Lkxpc3RTb3VyY2VzUmVzcG9uc2UiPILT5JMCLRIrL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vc291cmNlc9pBBnBhcmVudBKbAQoJR2V0",
+            "U291cmNlEi0uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkdldFNvdXJj",
+            "ZVJlcXVlc3QaIy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuU291cmNl",
+            "IjqC0+STAi0SKy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nv",
+            "dXJjZXMvKn3aQQRuYW1lEtQBCgxDcmVhdGVTb3VyY2USMC5nb29nbGUuY2xv",
+            "dWQudm1taWdyYXRpb24udjEuQ3JlYXRlU291cmNlUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ic4LT5JMCNSIrL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc291cmNlczoGc291cmNl2kEXcGFy",
+            "ZW50LHNvdXJjZSxzb3VyY2VfaWTKQRsKBlNvdXJjZRIRT3BlcmF0aW9uTWV0",
+            "YWRhdGES1gEKDFVwZGF0ZVNvdXJjZRIwLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
+            "dGlvbi52MS5VcGRhdGVTb3VyY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJ1gtPkkwI8MjIvdjEve3NvdXJjZS5uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qfToGc291cmNl2kESc291cmNl",
+            "LHVwZGF0ZV9tYXNrykEbCgZTb3VyY2USEU9wZXJhdGlvbk1ldGFkYXRhEsgB",
+            "CgxEZWxldGVTb3VyY2USMC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEu",
+            "RGVsZXRlU291cmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iZ4LT5JMCLSorL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyovc291cmNlcy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRIRT3BlcmF0aW9uTWV0YWRhdGESyAEKDkZldGNoSW52ZW50b3J5EjIuZ29v",
+            "Z2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkZldGNoSW52ZW50b3J5UmVxdWVz",
+            "dBozLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5GZXRjaEludmVudG9y",
+            "eVJlc3BvbnNlIk2C0+STAj4SPC92MS97c291cmNlPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovc291cmNlcy8qfTpmZXRjaEludmVudG9yedpBBnNvdXJjZRLk",
+            "AQoWTGlzdFV0aWxpemF0aW9uUmVwb3J0cxI6Lmdvb2dsZS5jbG91ZC52bW1p",
+            "Z3JhdGlvbi52MS5MaXN0VXRpbGl6YXRpb25SZXBvcnRzUmVxdWVzdBo7Lmdv",
+            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5MaXN0VXRpbGl6YXRpb25SZXBv",
+            "cnRzUmVzcG9uc2UiUYLT5JMCQhJAL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9zb3VyY2VzLyp9L3V0aWxpemF0aW9uUmVwb3J0c9pBBnBh",
+            "cmVudBLRAQoUR2V0VXRpbGl6YXRpb25SZXBvcnQSOC5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuR2V0VXRpbGl6YXRpb25SZXBvcnRSZXF1ZXN0Gi4u",
+            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlV0aWxpemF0aW9uUmVwb3J0",
+            "Ik+C0+STAkISQC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nv",
+            "dXJjZXMvKi91dGlsaXphdGlvblJlcG9ydHMvKn3aQQRuYW1lEq8CChdDcmVh",
+            "dGVVdGlsaXphdGlvblJlcG9ydBI7Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
+            "bi52MS5DcmVhdGVVdGlsaXphdGlvblJlcG9ydFJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrcBgtPkkwJWIkAvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKn0vdXRpbGl6YXRpb25S",
+            "ZXBvcnRzOhJ1dGlsaXphdGlvbl9yZXBvcnTaQS9wYXJlbnQsdXRpbGl6YXRp",
+            "b25fcmVwb3J0LHV0aWxpemF0aW9uX3JlcG9ydF9pZMpBJgoRVXRpbGl6YXRp",
+            "b25SZXBvcnQSEU9wZXJhdGlvbk1ldGFkYXRhEvMBChdEZWxldGVVdGlsaXph",
+            "dGlvblJlcG9ydBI7Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5EZWxl",
+            "dGVVdGlsaXphdGlvblJlcG9ydFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uInyC0+STAkIqQC92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3NvdXJjZXMvKi91dGlsaXphdGlvblJlcG9ydHMvKn3aQQRu",
+            "YW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFk",
+            "YXRhEuwBChhMaXN0RGF0YWNlbnRlckNvbm5lY3RvcnMSPC5nb29nbGUuY2xv",
+            "dWQudm1taWdyYXRpb24udjEuTGlzdERhdGFjZW50ZXJDb25uZWN0b3JzUmVx",
+            "dWVzdBo9Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5MaXN0RGF0YWNl",
+            "bnRlckNvbm5lY3RvcnNSZXNwb25zZSJTgtPkkwJEEkIvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMvKn0vZGF0YWNlbnRlckNv",
+            "bm5lY3RvcnPaQQZwYXJlbnQS2QEKFkdldERhdGFjZW50ZXJDb25uZWN0b3IS",
+            "Oi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuR2V0RGF0YWNlbnRlckNv",
+            "bm5lY3RvclJlcXVlc3QaMC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEu",
+            "RGF0YWNlbnRlckNvbm5lY3RvciJRgtPkkwJEEkIvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyovZGF0YWNlbnRlckNvbm5lY3Rv",
+            "cnMvKn3aQQRuYW1lEr0CChlDcmVhdGVEYXRhY2VudGVyQ29ubmVjdG9yEj0u",
+            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNyZWF0ZURhdGFjZW50ZXJD",
+            "b25uZWN0b3JSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biLBAYLT5JMCWiJCL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9zb3VyY2VzLyp9L2RhdGFjZW50ZXJDb25uZWN0b3JzOhRkYXRhY2VudGVy",
+            "X2Nvbm5lY3RvctpBM3BhcmVudCxkYXRhY2VudGVyX2Nvbm5lY3RvcixkYXRh",
+            "Y2VudGVyX2Nvbm5lY3Rvcl9pZMpBKAoTRGF0YWNlbnRlckNvbm5lY3RvchIR",
+            "T3BlcmF0aW9uTWV0YWRhdGES+QEKGURlbGV0ZURhdGFjZW50ZXJDb25uZWN0",
+            "b3ISPS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuRGVsZXRlRGF0YWNl",
+            "bnRlckNvbm5lY3RvclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIn6C0+STAkQqQi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3NvdXJjZXMvKi9kYXRhY2VudGVyQ29ubmVjdG9ycy8qfdpBBG5hbWXK",
+            "QSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "iAIKEFVwZ3JhZGVBcHBsaWFuY2USNC5nb29nbGUuY2xvdWQudm1taWdyYXRp",
+            "b24udjEuVXBncmFkZUFwcGxpYW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIp4BgtPkkwJoImMvdjEve2RhdGFjZW50ZXJfY29u",
+            "bmVjdG9yPXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL2RhdGFj",
+            "ZW50ZXJDb25uZWN0b3JzLyp9OnVwZ3JhZGVBcHBsaWFuY2U6ASrKQS0KGFVw",
+            "Z3JhZGVBcHBsaWFuY2VSZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGEShQIK",
+            "EUNyZWF0ZU1pZ3JhdGluZ1ZtEjUuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
+            "LnYxLkNyZWF0ZU1pZ3JhdGluZ1ZtUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24imQGC0+STAkoiOi92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovc291cmNlcy8qfS9taWdyYXRpbmdWbXM6DG1pZ3Jh",
+            "dGluZ192bdpBI3BhcmVudCxtaWdyYXRpbmdfdm0sbWlncmF0aW5nX3ZtX2lk",
+            "ykEgCgtNaWdyYXRpbmdWbRIRT3BlcmF0aW9uTWV0YWRhdGESzAEKEExpc3RN",
+            "aWdyYXRpbmdWbXMSNC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlz",
+            "dE1pZ3JhdGluZ1Ztc1JlcXVlc3QaNS5nb29nbGUuY2xvdWQudm1taWdyYXRp",
+            "b24udjEuTGlzdE1pZ3JhdGluZ1Ztc1Jlc3BvbnNlIkuC0+STAjwSOi92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qfS9taWdy",
+            "YXRpbmdWbXPaQQZwYXJlbnQSuQEKDkdldE1pZ3JhdGluZ1ZtEjIuZ29vZ2xl",
+            "LmNsb3VkLnZtbWlncmF0aW9uLnYxLkdldE1pZ3JhdGluZ1ZtUmVxdWVzdBoo",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5NaWdyYXRpbmdWbSJJgtPk",
+            "kwI8EjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2Vz",
+            "LyovbWlncmF0aW5nVm1zLyp92kEEbmFtZRKHAgoRVXBkYXRlTWlncmF0aW5n",
+            "Vm0SNS5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuVXBkYXRlTWlncmF0",
+            "aW5nVm1SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKb",
+            "AYLT5JMCVzJHL3YxL3ttaWdyYXRpbmdfdm0ubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3NvdXJjZXMvKi9taWdyYXRpbmdWbXMvKn06DG1pZ3JhdGlu",
+            "Z192bdpBGG1pZ3JhdGluZ192bSx1cGRhdGVfbWFza8pBIAoLTWlncmF0aW5n",
+            "Vm0SEU9wZXJhdGlvbk1ldGFkYXRhEuEBChFEZWxldGVNaWdyYXRpbmdWbRI1",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5EZWxldGVNaWdyYXRpbmdW",
+            "bVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInaC0+ST",
+            "AjwqOi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NvdXJjZXMv",
+            "Ki9taWdyYXRpbmdWbXMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYu",
+            "RW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRhEv8BCg5TdGFydE1pZ3JhdGlvbhIy",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5TdGFydE1pZ3JhdGlvblJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpkBgtPkkwJW",
+            "IlEvdjEve21pZ3JhdGluZ192bT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nv",
+            "dXJjZXMvKi9taWdyYXRpbmdWbXMvKn06c3RhcnRNaWdyYXRpb246ASraQQxt",
+            "aWdyYXRpbmdfdm3KQSsKFlN0YXJ0TWlncmF0aW9uUmVzcG9uc2USEU9wZXJh",
+            "dGlvbk1ldGFkYXRhEvQBCg9SZXN1bWVNaWdyYXRpb24SMy5nb29nbGUuY2xv",
+            "dWQudm1taWdyYXRpb24udjEuUmVzdW1lTWlncmF0aW9uUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ijAGC0+STAlciUi92MS97bWln",
             "cmF0aW5nX3ZtPXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL21p",
-            "Z3JhdGluZ1Ztcy8qfTpmaW5hbGl6ZU1pZ3JhdGlvbjoBKtpBDG1pZ3JhdGlu",
-            "Z192bcpBLgoZRmluYWxpemVNaWdyYXRpb25SZXNwb25zZRIRT3BlcmF0aW9u",
-            "TWV0YWRhdGES/wEKDkNyZWF0ZUNsb25lSm9iEjIuZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLkNyZWF0ZUNsb25lSm9iUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24imQGC0+STAlMiRi92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL21pZ3JhdGluZ1Ztcy8q",
-            "fS9jbG9uZUpvYnM6CWNsb25lX2pvYtpBHXBhcmVudCxjbG9uZV9qb2IsY2xv",
-            "bmVfam9iX2lkykEdCghDbG9uZUpvYhIRT3BlcmF0aW9uTWV0YWRhdGES8wEK",
-            "DkNhbmNlbENsb25lSm9iEjIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
-            "LkNhbmNlbENsb25lSm9iUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24ijQGC0+STAlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3NvdXJjZXMvKi9taWdyYXRpbmdWbXMvKi9jbG9uZUpvYnMvKn06",
-            "Y2FuY2VsOgEq2kEEbmFtZcpBKwoWQ2FuY2VsQ2xvbmVKb2JSZXNwb25zZRIR",
-            "T3BlcmF0aW9uTWV0YWRhdGESzwEKDUxpc3RDbG9uZUpvYnMSMS5nb29nbGUu",
-            "Y2xvdWQudm1taWdyYXRpb24udjEuTGlzdENsb25lSm9ic1JlcXVlc3QaMi5n",
-            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlzdENsb25lSm9ic1Jlc3Bv",
-            "bnNlIleC0+STAkgSRi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovc291cmNlcy8qL21pZ3JhdGluZ1Ztcy8qfS9jbG9uZUpvYnPaQQZwYXJl",
-            "bnQSvAEKC0dldENsb25lSm9iEi8uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLkdldENsb25lSm9iUmVxdWVzdBolLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
-            "dGlvbi52MS5DbG9uZUpvYiJVgtPkkwJIEkYvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9zb3VyY2VzLyovbWlncmF0aW5nVm1zLyovY2xvbmVK",
-            "b2JzLyp92kEEbmFtZRKNAgoQQ3JlYXRlQ3V0b3ZlckpvYhI0Lmdvb2dsZS5j",
-            "bG91ZC52bW1pZ3JhdGlvbi52MS5DcmVhdGVDdXRvdmVySm9iUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iowGC0+STAlciSC92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL21pZ3Jh",
-            "dGluZ1Ztcy8qfS9jdXRvdmVySm9iczoLY3V0b3Zlcl9qb2LaQSFwYXJlbnQs",
-            "Y3V0b3Zlcl9qb2IsY3V0b3Zlcl9qb2JfaWTKQR8KCkN1dG92ZXJKb2ISEU9w",
-            "ZXJhdGlvbk1ldGFkYXRhEvsBChBDYW5jZWxDdXRvdmVySm9iEjQuZ29vZ2xl",
-            "LmNsb3VkLnZtbWlncmF0aW9uLnYxLkNhbmNlbEN1dG92ZXJKb2JSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKRAYLT5JMCVCJPL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8qL21pZ3Jh",
-            "dGluZ1Ztcy8qL2N1dG92ZXJKb2JzLyp9OmNhbmNlbDoBKtpBBG5hbWXKQS0K",
-            "GENhbmNlbEN1dG92ZXJKb2JSZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGES",
-            "1wEKD0xpc3RDdXRvdmVySm9icxIzLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlv",
-            "bi52MS5MaXN0Q3V0b3ZlckpvYnNSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLnZt",
-            "bWlncmF0aW9uLnYxLkxpc3RDdXRvdmVySm9ic1Jlc3BvbnNlIlmC0+STAkoS",
-            "SC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovc291cmNlcy8q",
-            "L21pZ3JhdGluZ1Ztcy8qfS9jdXRvdmVySm9ic9pBBnBhcmVudBLEAQoNR2V0",
-            "Q3V0b3ZlckpvYhIxLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5HZXRD",
-            "dXRvdmVySm9iUmVxdWVzdBonLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
-            "MS5DdXRvdmVySm9iIleC0+STAkoSSC92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3NvdXJjZXMvKi9taWdyYXRpbmdWbXMvKi9jdXRvdmVySm9i",
-            "cy8qfdpBBG5hbWUSqgEKCkxpc3RHcm91cHMSLi5nb29nbGUuY2xvdWQudm1t",
-            "aWdyYXRpb24udjEuTGlzdEdyb3Vwc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQu",
-            "dm1taWdyYXRpb24udjEuTGlzdEdyb3Vwc1Jlc3BvbnNlIjuC0+STAiwSKi92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2dyb3Vwc9pBBnBh",
-            "cmVudBKXAQoIR2V0R3JvdXASLC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
-            "djEuR2V0R3JvdXBSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLkdyb3VwIjmC0+STAiwSKi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2dyb3Vwcy8qfdpBBG5hbWUSzQEKC0NyZWF0ZUdyb3VwEi8uZ29v",
-            "Z2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkNyZWF0ZUdyb3VwUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iboLT5JMCMyIqL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZ3JvdXBzOgVncm91cNpB",
-            "FXBhcmVudCxncm91cCxncm91cF9pZMpBGgoFR3JvdXASEU9wZXJhdGlvbk1l",
-            "dGFkYXRhEs8BCgtVcGRhdGVHcm91cBIvLmdvb2dsZS5jbG91ZC52bW1pZ3Jh",
-            "dGlvbi52MS5VcGRhdGVHcm91cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uInCC0+STAjkyMC92MS97Z3JvdXAubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2dyb3Vwcy8qfToFZ3JvdXDaQRFncm91cCx1cGRh",
-            "dGVfbWFza8pBGgoFR3JvdXASEU9wZXJhdGlvbk1ldGFkYXRhEsUBCgtEZWxl",
-            "dGVHcm91cBIvLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5EZWxldGVH",
-            "cm91cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImaC",
-            "0+STAiwqKi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dyb3Vw",
-            "cy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0",
-            "aW9uTWV0YWRhdGES7QEKEUFkZEdyb3VwTWlncmF0aW9uEjUuZ29vZ2xlLmNs",
-            "b3VkLnZtbWlncmF0aW9uLnYxLkFkZEdyb3VwTWlncmF0aW9uUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igQGC0+STAkIiPS92MS97",
-            "Z3JvdXA9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9ncm91cHMvKn06YWRkR3Jv",
-            "dXBNaWdyYXRpb246ASraQQVncm91cMpBLgoZQWRkR3JvdXBNaWdyYXRpb25S",
-            "ZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGES+QEKFFJlbW92ZUdyb3VwTWln",
-            "cmF0aW9uEjguZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLlJlbW92ZUdy",
-            "b3VwTWlncmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ihwGC0+STAkUiQC92MS97Z3JvdXA9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9ncm91cHMvKn06cmVtb3ZlR3JvdXBNaWdyYXRpb246ASraQQVncm91",
-            "cMpBMQocUmVtb3ZlR3JvdXBNaWdyYXRpb25SZXNwb25zZRIRT3BlcmF0aW9u",
-            "TWV0YWRhdGESygEKEkxpc3RUYXJnZXRQcm9qZWN0cxI2Lmdvb2dsZS5jbG91",
-            "ZC52bW1pZ3JhdGlvbi52MS5MaXN0VGFyZ2V0UHJvamVjdHNSZXF1ZXN0Gjcu",
-            "Z29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkxpc3RUYXJnZXRQcm9qZWN0",
-            "c1Jlc3BvbnNlIkOC0+STAjQSMi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L3RhcmdldFByb2plY3Rz2kEGcGFyZW50ErcBChBHZXRUYXJn",
-            "ZXRQcm9qZWN0EjQuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkdldFRh",
-            "cmdldFByb2plY3RSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLlRhcmdldFByb2plY3QiQYLT5JMCNBIyL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovdGFyZ2V0UHJvamVjdHMvKn3aQQRuYW1lEokCChND",
-            "cmVhdGVUYXJnZXRQcm9qZWN0EjcuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
-            "LnYxLkNyZWF0ZVRhcmdldFByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKZAYLT5JMCRCIyL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vdGFyZ2V0UHJvamVjdHM6DnRhcmdldF9wcm9q",
-            "ZWN02kEncGFyZW50LHRhcmdldF9wcm9qZWN0LHRhcmdldF9wcm9qZWN0X2lk",
-            "ykEiCg1UYXJnZXRQcm9qZWN0EhFPcGVyYXRpb25NZXRhZGF0YRKLAgoTVXBk",
-            "YXRlVGFyZ2V0UHJvamVjdBI3Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
-            "MS5VcGRhdGVUYXJnZXRQcm9qZWN0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24imwGC0+STAlMyQS92MS97dGFyZ2V0X3Byb2plY3Qu",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RhcmdldFByb2plY3RzLyp9",
-            "Og50YXJnZXRfcHJvamVjdNpBGnRhcmdldF9wcm9qZWN0LHVwZGF0ZV9tYXNr",
-            "ykEiCg1UYXJnZXRQcm9qZWN0EhFPcGVyYXRpb25NZXRhZGF0YRLdAQoTRGVs",
-            "ZXRlVGFyZ2V0UHJvamVjdBI3Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
-            "MS5EZWxldGVUYXJnZXRQcm9qZWN0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iboLT5JMCNCoyL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovdGFyZ2V0UHJvamVjdHMvKn3aQQRuYW1lykEqChVnb29n",
-            "bGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1ldGFkYXRhGk7KQRp2bW1p",
-            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C2gEKH2NvbS5nb29nbGUuY2xv",
-            "dWQudm1taWdyYXRpb24udjFCEFZtTWlncmF0aW9uUHJvdG9QAVpGZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92bW1pZ3Jh",
-            "dGlvbi92MTt2bW1pZ3JhdGlvbqoCG0dvb2dsZS5DbG91ZC5WTU1pZ3JhdGlv",
-            "bi5WMcoCG0dvb2dsZVxDbG91ZFxWTU1pZ3JhdGlvblxWMeoCHkdvb2dsZTo6",
-            "Q2xvdWQ6OlZNTWlncmF0aW9uOjpWMWIGcHJvdG8z"));
+            "Z3JhdGluZ1Ztcy8qfTpyZXN1bWVNaWdyYXRpb246ASrKQSwKF1Jlc3VtZU1p",
+            "Z3JhdGlvblJlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YRLwAQoOUGF1c2VN",
+            "aWdyYXRpb24SMi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUGF1c2VN",
+            "aWdyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biKKAYLT5JMCViJRL3YxL3ttaWdyYXRpbmdfdm09cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9zb3VyY2VzLyovbWlncmF0aW5nVm1zLyp9OnBhdXNlTWlncmF0",
+            "aW9uOgEqykErChZQYXVzZU1pZ3JhdGlvblJlc3BvbnNlEhFPcGVyYXRpb25N",
+            "ZXRhZGF0YRKLAgoRRmluYWxpemVNaWdyYXRpb24SNS5nb29nbGUuY2xvdWQu",
+            "dm1taWdyYXRpb24udjEuRmluYWxpemVNaWdyYXRpb25SZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKfAYLT5JMCWSJUL3YxL3ttaWdy",
+            "YXRpbmdfdm09cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyovbWln",
+            "cmF0aW5nVm1zLyp9OmZpbmFsaXplTWlncmF0aW9uOgEq2kEMbWlncmF0aW5n",
+            "X3ZtykEuChlGaW5hbGl6ZU1pZ3JhdGlvblJlc3BvbnNlEhFPcGVyYXRpb25N",
+            "ZXRhZGF0YRL/AQoOQ3JlYXRlQ2xvbmVKb2ISMi5nb29nbGUuY2xvdWQudm1t",
+            "aWdyYXRpb24udjEuQ3JlYXRlQ2xvbmVKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKZAYLT5JMCUyJGL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyovbWlncmF0aW5nVm1zLyp9",
+            "L2Nsb25lSm9iczoJY2xvbmVfam9i2kEdcGFyZW50LGNsb25lX2pvYixjbG9u",
+            "ZV9qb2JfaWTKQR0KCENsb25lSm9iEhFPcGVyYXRpb25NZXRhZGF0YRLzAQoO",
+            "Q2FuY2VsQ2xvbmVKb2ISMi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEu",
+            "Q2FuY2VsQ2xvbmVKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiKNAYLT5JMCUiJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovc291cmNlcy8qL21pZ3JhdGluZ1Ztcy8qL2Nsb25lSm9icy8qfTpj",
+            "YW5jZWw6ASraQQRuYW1lykErChZDYW5jZWxDbG9uZUpvYlJlc3BvbnNlEhFP",
+            "cGVyYXRpb25NZXRhZGF0YRLPAQoNTGlzdENsb25lSm9icxIxLmdvb2dsZS5j",
+            "bG91ZC52bW1pZ3JhdGlvbi52MS5MaXN0Q2xvbmVKb2JzUmVxdWVzdBoyLmdv",
+            "b2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5MaXN0Q2xvbmVKb2JzUmVzcG9u",
+            "c2UiV4LT5JMCSBJGL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9zb3VyY2VzLyovbWlncmF0aW5nVm1zLyp9L2Nsb25lSm9ic9pBBnBhcmVu",
+            "dBK8AQoLR2V0Q2xvbmVKb2ISLy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
+            "djEuR2V0Q2xvbmVKb2JSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLkNsb25lSm9iIlWC0+STAkgSRi92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3NvdXJjZXMvKi9taWdyYXRpbmdWbXMvKi9jbG9uZUpv",
+            "YnMvKn3aQQRuYW1lEo0CChBDcmVhdGVDdXRvdmVySm9iEjQuZ29vZ2xlLmNs",
+            "b3VkLnZtbWlncmF0aW9uLnYxLkNyZWF0ZUN1dG92ZXJKb2JSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKjAYLT5JMCVyJIL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyovbWlncmF0",
+            "aW5nVm1zLyp9L2N1dG92ZXJKb2JzOgtjdXRvdmVyX2pvYtpBIXBhcmVudCxj",
+            "dXRvdmVyX2pvYixjdXRvdmVyX2pvYl9pZMpBHwoKQ3V0b3ZlckpvYhIRT3Bl",
+            "cmF0aW9uTWV0YWRhdGES+wEKEENhbmNlbEN1dG92ZXJKb2ISNC5nb29nbGUu",
+            "Y2xvdWQudm1taWdyYXRpb24udjEuQ2FuY2VsQ3V0b3ZlckpvYlJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpEBgtPkkwJUIk8vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyovbWlncmF0",
+            "aW5nVm1zLyovY3V0b3ZlckpvYnMvKn06Y2FuY2VsOgEq2kEEbmFtZcpBLQoY",
+            "Q2FuY2VsQ3V0b3ZlckpvYlJlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YRLX",
+            "AQoPTGlzdEN1dG92ZXJKb2JzEjMuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9u",
+            "LnYxLkxpc3RDdXRvdmVySm9ic1JlcXVlc3QaNC5nb29nbGUuY2xvdWQudm1t",
+            "aWdyYXRpb24udjEuTGlzdEN1dG92ZXJKb2JzUmVzcG9uc2UiWYLT5JMCShJI",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zb3VyY2VzLyov",
+            "bWlncmF0aW5nVm1zLyp9L2N1dG92ZXJKb2Jz2kEGcGFyZW50EsQBCg1HZXRD",
+            "dXRvdmVySm9iEjEuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkdldEN1",
+            "dG92ZXJKb2JSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "LkN1dG92ZXJKb2IiV4LT5JMCShJIL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovc291cmNlcy8qL21pZ3JhdGluZ1Ztcy8qL2N1dG92ZXJKb2Jz",
+            "Lyp92kEEbmFtZRKqAQoKTGlzdEdyb3VwcxIuLmdvb2dsZS5jbG91ZC52bW1p",
+            "Z3JhdGlvbi52MS5MaXN0R3JvdXBzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC52",
+            "bW1pZ3JhdGlvbi52MS5MaXN0R3JvdXBzUmVzcG9uc2UiO4LT5JMCLBIqL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZ3JvdXBz2kEGcGFy",
+            "ZW50EpcBCghHZXRHcm91cBIsLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
+            "MS5HZXRHcm91cFJlcXVlc3QaIi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
+            "djEuR3JvdXAiOYLT5JMCLBIqL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovZ3JvdXBzLyp92kEEbmFtZRLNAQoLQ3JlYXRlR3JvdXASLy5nb29n",
+            "bGUuY2xvdWQudm1taWdyYXRpb24udjEuQ3JlYXRlR3JvdXBSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJugtPkkwIzIiovdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9ncm91cHM6BWdyb3Vw2kEV",
+            "cGFyZW50LGdyb3VwLGdyb3VwX2lkykEaCgVHcm91cBIRT3BlcmF0aW9uTWV0",
+            "YWRhdGESzwEKC1VwZGF0ZUdyb3VwEi8uZ29vZ2xlLmNsb3VkLnZtbWlncmF0",
+            "aW9uLnYxLlVwZGF0ZUdyb3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24icILT5JMCOTIwL3YxL3tncm91cC5uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZ3JvdXBzLyp9OgVncm91cNpBEWdyb3VwLHVwZGF0",
+            "ZV9tYXNrykEaCgVHcm91cBIRT3BlcmF0aW9uTWV0YWRhdGESxQEKC0RlbGV0",
+            "ZUdyb3VwEi8uZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYxLkRlbGV0ZUdy",
+            "b3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZoLT",
+            "5JMCLCoqL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZ3JvdXBz",
+            "Lyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRp",
+            "b25NZXRhZGF0YRLtAQoRQWRkR3JvdXBNaWdyYXRpb24SNS5nb29nbGUuY2xv",
+            "dWQudm1taWdyYXRpb24udjEuQWRkR3JvdXBNaWdyYXRpb25SZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKBAYLT5JMCQiI9L3YxL3tn",
+            "cm91cD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dyb3Vwcy8qfTphZGRHcm91",
+            "cE1pZ3JhdGlvbjoBKtpBBWdyb3VwykEuChlBZGRHcm91cE1pZ3JhdGlvblJl",
+            "c3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YRL5AQoUUmVtb3ZlR3JvdXBNaWdy",
+            "YXRpb24SOC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuUmVtb3ZlR3Jv",
+            "dXBNaWdyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiKHAYLT5JMCRSJAL3YxL3tncm91cD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2dyb3Vwcy8qfTpyZW1vdmVHcm91cE1pZ3JhdGlvbjoBKtpBBWdyb3Vw",
+            "ykExChxSZW1vdmVHcm91cE1pZ3JhdGlvblJlc3BvbnNlEhFPcGVyYXRpb25N",
+            "ZXRhZGF0YRLKAQoSTGlzdFRhcmdldFByb2plY3RzEjYuZ29vZ2xlLmNsb3Vk",
+            "LnZtbWlncmF0aW9uLnYxLkxpc3RUYXJnZXRQcm9qZWN0c1JlcXVlc3QaNy5n",
+            "b29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuTGlzdFRhcmdldFByb2plY3Rz",
+            "UmVzcG9uc2UiQ4LT5JMCNBIyL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vdGFyZ2V0UHJvamVjdHPaQQZwYXJlbnQStwEKEEdldFRhcmdl",
+            "dFByb2plY3QSNC5nb29nbGUuY2xvdWQudm1taWdyYXRpb24udjEuR2V0VGFy",
+            "Z2V0UHJvamVjdFJlcXVlc3QaKi5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
+            "djEuVGFyZ2V0UHJvamVjdCJBgtPkkwI0EjIvdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi90YXJnZXRQcm9qZWN0cy8qfdpBBG5hbWUSiQIKE0Ny",
+            "ZWF0ZVRhcmdldFByb2plY3QSNy5nb29nbGUuY2xvdWQudm1taWdyYXRpb24u",
+            "djEuQ3JlYXRlVGFyZ2V0UHJvamVjdFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIpkBgtPkkwJEIjIvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qfS90YXJnZXRQcm9qZWN0czoOdGFyZ2V0X3Byb2pl",
+            "Y3TaQSdwYXJlbnQsdGFyZ2V0X3Byb2plY3QsdGFyZ2V0X3Byb2plY3RfaWTK",
+            "QSIKDVRhcmdldFByb2plY3QSEU9wZXJhdGlvbk1ldGFkYXRhEosCChNVcGRh",
+            "dGVUYXJnZXRQcm9qZWN0EjcuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "LlVwZGF0ZVRhcmdldFByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiKbAYLT5JMCUzJBL3YxL3t0YXJnZXRfcHJvamVjdC5u",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGFyZ2V0UHJvamVjdHMvKn06",
+            "DnRhcmdldF9wcm9qZWN02kEadGFyZ2V0X3Byb2plY3QsdXBkYXRlX21hc2vK",
+            "QSIKDVRhcmdldFByb2plY3QSEU9wZXJhdGlvbk1ldGFkYXRhEt0BChNEZWxl",
+            "dGVUYXJnZXRQcm9qZWN0EjcuZ29vZ2xlLmNsb3VkLnZtbWlncmF0aW9uLnYx",
+            "LkRlbGV0ZVRhcmdldFByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiJugtPkkwI0KjIvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi90YXJnZXRQcm9qZWN0cy8qfdpBBG5hbWXKQSoKFWdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES7wEKFUxpc3RS",
+            "ZXBsaWNhdGlvbkN5Y2xlcxI5Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52",
+            "MS5MaXN0UmVwbGljYXRpb25DeWNsZXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3Vk",
+            "LnZtbWlncmF0aW9uLnYxLkxpc3RSZXBsaWNhdGlvbkN5Y2xlc1Jlc3BvbnNl",
+            "Il+C0+STAlASTi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "c291cmNlcy8qL21pZ3JhdGluZ1Ztcy8qfS9yZXBsaWNhdGlvbkN5Y2xlc9pB",
+            "BnBhcmVudBLcAQoTR2V0UmVwbGljYXRpb25DeWNsZRI3Lmdvb2dsZS5jbG91",
+            "ZC52bW1pZ3JhdGlvbi52MS5HZXRSZXBsaWNhdGlvbkN5Y2xlUmVxdWVzdBot",
+            "Lmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MS5SZXBsaWNhdGlvbkN5Y2xl",
+            "Il2C0+STAlASTi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nv",
+            "dXJjZXMvKi9taWdyYXRpbmdWbXMvKi9yZXBsaWNhdGlvbkN5Y2xlcy8qfdpB",
+            "BG5hbWUaTspBGnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULaAQof",
+            "Y29tLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MUIQVm1NaWdyYXRpb25Q",
+            "cm90b1ABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL3ZtbWlncmF0aW9uL3YxO3ZtbWlncmF0aW9uqgIbR29vZ2xlLkNs",
+            "b3VkLlZNTWlncmF0aW9uLlYxygIbR29vZ2xlXENsb3VkXFZNTWlncmF0aW9u",
+            "XFYx6gIeR29vZ2xlOjpDbG91ZDo6Vk1NaWdyYXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VMMigration.V1.UtilizationReportView), typeof(global::Google.Cloud.VMMigration.V1.MigratingVmView), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineDiskType), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineLicenseType), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineBootOption), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ReplicationCycle), global::Google.Cloud.VMMigration.V1.ReplicationCycle.Parser, new[]{ "StartTime", "ProgressPercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ReplicationCycle), global::Google.Cloud.VMMigration.V1.ReplicationCycle.Parser, new[]{ "Name", "CycleNumber", "StartTime", "EndTime", "TotalPauseDuration", "ProgressPercent", "Steps", "State", "Error" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CycleStep), global::Google.Cloud.VMMigration.V1.CycleStep.Parser, new[]{ "InitializingReplication", "Replicating", "PostProcessing", "StartTime", "EndTime" }, new[]{ "Step" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.InitializingReplicationStep), global::Google.Cloud.VMMigration.V1.InitializingReplicationStep.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ReplicatingStep), global::Google.Cloud.VMMigration.V1.ReplicatingStep.Parser, new[]{ "TotalBytes", "ReplicatedBytes", "LastTwoMinutesAverageBytesPerSecond", "LastThirtyMinutesAverageBytesPerSecond" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.PostProcessingStep), global::Google.Cloud.VMMigration.V1.PostProcessingStep.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ReplicationSync), global::Google.Cloud.VMMigration.V1.ReplicationSync.Parser, new[]{ "LastSyncTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.MigratingVm), global::Google.Cloud.VMMigration.V1.MigratingVm.Parser, new[]{ "ComputeEngineTargetDefaults", "Name", "SourceVmId", "DisplayName", "Description", "Policy", "CreateTime", "UpdateTime", "LastSync", "State", "StateTime", "CurrentSyncInfo", "Group", "Labels", "RecentCloneJobs", "Error", "RecentCutoverJobs" }, new[]{ "TargetVmDefaults" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.MigratingVm.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CloneJob), global::Google.Cloud.VMMigration.V1.CloneJob.Parser, new[]{ "ComputeEngineTargetDetails", "CreateTime", "EndTime", "Name", "State", "StateTime", "Error" }, new[]{ "TargetVmDetails" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.CloneJob.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CutoverJob), global::Google.Cloud.VMMigration.V1.CutoverJob.Parser, new[]{ "ComputeEngineTargetDetails", "CreateTime", "EndTime", "Name", "State", "StateTime", "ProgressPercent", "Error", "StateMessage" }, new[]{ "TargetVmDetails" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.CutoverJob.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.MigratingVm), global::Google.Cloud.VMMigration.V1.MigratingVm.Parser, new[]{ "ComputeEngineTargetDefaults", "AwsSourceVmDetails", "Name", "SourceVmId", "DisplayName", "Description", "Policy", "CreateTime", "UpdateTime", "LastSync", "State", "StateTime", "CurrentSyncInfo", "Group", "Labels", "RecentCloneJobs", "Error", "RecentCutoverJobs" }, new[]{ "TargetVmDefaults", "SourceVmDetails" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.MigratingVm.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CloneJob), global::Google.Cloud.VMMigration.V1.CloneJob.Parser, new[]{ "ComputeEngineTargetDetails", "CreateTime", "EndTime", "Name", "State", "StateTime", "Error", "Steps" }, new[]{ "TargetVmDetails" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.CloneJob.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CloneStep), global::Google.Cloud.VMMigration.V1.CloneStep.Parser, new[]{ "AdaptingOs", "PreparingVmDisks", "InstantiatingMigratedVm", "StartTime", "EndTime" }, new[]{ "Step" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AdaptingOSStep), global::Google.Cloud.VMMigration.V1.AdaptingOSStep.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep), global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep), global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CutoverJob), global::Google.Cloud.VMMigration.V1.CutoverJob.Parser, new[]{ "ComputeEngineTargetDetails", "CreateTime", "EndTime", "Name", "State", "StateTime", "ProgressPercent", "Error", "StateMessage", "Steps" }, new[]{ "TargetVmDetails" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.CutoverJob.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CutoverStep), global::Google.Cloud.VMMigration.V1.CutoverStep.Parser, new[]{ "PreviousReplicationCycle", "ShuttingDownSourceVm", "FinalSync", "PreparingVmDisks", "InstantiatingMigratedVm", "StartTime", "EndTime" }, new[]{ "Step" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep), global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CreateCloneJobRequest), global::Google.Cloud.VMMigration.V1.CreateCloneJobRequest.Parser, new[]{ "Parent", "CloneJobId", "CloneJob", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CancelCloneJobRequest), global::Google.Cloud.VMMigration.V1.CancelCloneJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.CancelCloneJobResponse), global::Google.Cloud.VMMigration.V1.CancelCloneJobResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ListCloneJobsRequest), global::Google.Cloud.VMMigration.V1.ListCloneJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ListCloneJobsResponse), global::Google.Cloud.VMMigration.V1.ListCloneJobsResponse.Parser, new[]{ "CloneJobs", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.GetCloneJobRequest), global::Google.Cloud.VMMigration.V1.GetCloneJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.Source), global::Google.Cloud.VMMigration.V1.Source.Parser, new[]{ "Vmware", "Name", "CreateTime", "UpdateTime", "Labels", "Description" }, new[]{ "SourceDetails" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.Source), global::Google.Cloud.VMMigration.V1.Source.Parser, new[]{ "Vmware", "Aws", "Name", "CreateTime", "UpdateTime", "Labels", "Description" }, new[]{ "SourceDetails" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.VmwareSourceDetails), global::Google.Cloud.VMMigration.V1.VmwareSourceDetails.Parser, new[]{ "Username", "Password", "VcenterIp", "Thumbprint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsSourceDetails), global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Parser, new[]{ "AccessKeyCreds", "AwsRegion", "State", "Error", "InventoryTagList", "InventorySecurityGroupNames", "MigrationResourcesUserTags", "PublicIp" }, new[]{ "CredentialsType" }, new[]{ typeof(global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials), global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials.Parser, new[]{ "AccessKeyId", "SecretAccessKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag), global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag.Parser, new[]{ "Key", "Value" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.DatacenterConnector), global::Google.Cloud.VMMigration.V1.DatacenterConnector.Parser, new[]{ "CreateTime", "UpdateTime", "Name", "RegistrationId", "ServiceAccount", "Version", "Bucket", "State", "StateTime", "Error", "ApplianceInfrastructureVersion", "ApplianceSoftwareVersion", "AvailableVersions", "UpgradeStatus" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.DatacenterConnector.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.UpgradeStatus), global::Google.Cloud.VMMigration.V1.UpgradeStatus.Parser, new[]{ "Version", "State", "Error", "StartTime", "PreviousVersion" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.UpgradeStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AvailableUpdates), global::Google.Cloud.VMMigration.V1.AvailableUpdates.Parser, new[]{ "NewDeployableAppliance", "InPlaceUpdate" }, null, null, null, null),
@@ -741,8 +879,11 @@ namespace Google.Cloud.VMMigration.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.DeleteSourceRequest), global::Google.Cloud.VMMigration.V1.DeleteSourceRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.FetchInventoryRequest), global::Google.Cloud.VMMigration.V1.FetchInventoryRequest.Parser, new[]{ "Source", "ForceRefresh" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.VmwareVmDetails), global::Google.Cloud.VMMigration.V1.VmwareVmDetails.Parser, new[]{ "VmId", "DatacenterId", "DatacenterDescription", "Uuid", "DisplayName", "PowerState", "CpuCount", "MemoryMb", "DiskCount", "CommittedStorageMb", "GuestDescription", "BootOption" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.VmwareVmDetails.Types.PowerState), typeof(global::Google.Cloud.VMMigration.V1.VmwareVmDetails.Types.BootOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsVmDetails), global::Google.Cloud.VMMigration.V1.AwsVmDetails.Parser, new[]{ "VmId", "DisplayName", "SourceId", "SourceDescription", "PowerState", "CpuCount", "MemoryMb", "DiskCount", "CommittedStorageMb", "OsDescription", "BootOption", "InstanceType", "VpcId", "SecurityGroups", "Tags", "Zone", "VirtualizationType", "Architecture" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState), typeof(global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption), typeof(global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType), typeof(global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsSecurityGroup), global::Google.Cloud.VMMigration.V1.AwsSecurityGroup.Parser, new[]{ "Id", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.VmwareVmsDetails), global::Google.Cloud.VMMigration.V1.VmwareVmsDetails.Parser, new[]{ "Details" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.FetchInventoryResponse), global::Google.Cloud.VMMigration.V1.FetchInventoryResponse.Parser, new[]{ "VmwareVms", "UpdateTime" }, new[]{ "SourceVms" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsVmsDetails), global::Google.Cloud.VMMigration.V1.AwsVmsDetails.Parser, new[]{ "Details" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.FetchInventoryResponse), global::Google.Cloud.VMMigration.V1.FetchInventoryResponse.Parser, new[]{ "VmwareVms", "AwsVms", "UpdateTime" }, new[]{ "SourceVms" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.UtilizationReport), global::Google.Cloud.VMMigration.V1.UtilizationReport.Parser, new[]{ "Name", "DisplayName", "State", "StateTime", "Error", "CreateTime", "TimeFrame", "FrameEndTime", "VmCount", "Vms" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.UtilizationReport.Types.State), typeof(global::Google.Cloud.VMMigration.V1.UtilizationReport.Types.TimeFrame) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.VmUtilizationInfo), global::Google.Cloud.VMMigration.V1.VmUtilizationInfo.Parser, new[]{ "VmwareVmDetails", "VmId", "Utilization" }, new[]{ "VmDetails" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.VmUtilizationMetrics), global::Google.Cloud.VMMigration.V1.VmUtilizationMetrics.Parser, new[]{ "CpuMaxPercent", "CpuAveragePercent", "MemoryMaxPercent", "MemoryAveragePercent", "DiskIoRateMaxKbps", "DiskIoRateAverageKbps", "NetworkThroughputMaxKbps", "NetworkThroughputAverageKbps" }, null, null, null, null),
@@ -804,7 +945,11 @@ namespace Google.Cloud.VMMigration.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ListCutoverJobsResponse), global::Google.Cloud.VMMigration.V1.ListCutoverJobsResponse.Parser, new[]{ "CutoverJobs", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.GetCutoverJobRequest), global::Google.Cloud.VMMigration.V1.GetCutoverJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.OperationMetadata), global::Google.Cloud.VMMigration.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.MigrationError), global::Google.Cloud.VMMigration.V1.MigrationError.Parser, new[]{ "Code", "ErrorMessage", "ActionItem", "HelpLinks", "ErrorTime" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.MigrationError.Types.ErrorCode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.MigrationError), global::Google.Cloud.VMMigration.V1.MigrationError.Parser, new[]{ "Code", "ErrorMessage", "ActionItem", "HelpLinks", "ErrorTime" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.MigrationError.Types.ErrorCode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails), global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Parser, new[]{ "Firmware", "CommittedStorageBytes" }, null, new[]{ typeof(global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest), global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse), global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse.Parser, new[]{ "ReplicationCycles", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest), global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -952,8 +1097,15 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReplicationCycle(ReplicationCycle other) : this() {
+      name_ = other.name_;
+      cycleNumber_ = other.cycleNumber_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      totalPauseDuration_ = other.totalPauseDuration_ != null ? other.totalPauseDuration_.Clone() : null;
       progressPercent_ = other.progressPercent_;
+      steps_ = other.steps_.Clone();
+      state_ = other.state_;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -961,6 +1113,36 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReplicationCycle Clone() {
       return new ReplicationCycle(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 13;
+    private string name_ = "";
+    /// <summary>
+    /// The identifier of the ReplicationCycle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cycle_number" field.</summary>
+    public const int CycleNumberFieldNumber = 10;
+    private int cycleNumber_;
+    /// <summary>
+    /// The cycle's ordinal number.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CycleNumber {
+      get { return cycleNumber_; }
+      set {
+        cycleNumber_ = value;
+      }
     }
 
     /// <summary>Field number for the "start_time" field.</summary>
@@ -978,18 +1160,95 @@ namespace Google.Cloud.VMMigration.V1 {
       }
     }
 
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the replication cycle has ended.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_pause_duration" field.</summary>
+    public const int TotalPauseDurationFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Duration totalPauseDuration_;
+    /// <summary>
+    /// The accumulated duration the replication cycle was paused.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration TotalPauseDuration {
+      get { return totalPauseDuration_; }
+      set {
+        totalPauseDuration_ = value;
+      }
+    }
+
     /// <summary>Field number for the "progress_percent" field.</summary>
     public const int ProgressPercentFieldNumber = 5;
     private int progressPercent_;
     /// <summary>
     /// The current progress in percentage of this cycle.
+    /// Was replaced by 'steps' field, which breaks down the cycle progression more
+    /// accurately.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ProgressPercent {
       get { return progressPercent_; }
       set {
         progressPercent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "steps" field.</summary>
+    public const int StepsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.CycleStep> _repeated_steps_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.VMMigration.V1.CycleStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CycleStep> steps_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CycleStep>();
+    /// <summary>
+    /// The cycle's steps list representing its progress.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CycleStep> Steps {
+      get { return steps_; }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 11;
+    private global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State state_ = global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified;
+    /// <summary>
+    /// State of the ReplicationCycle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 12;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Provides details on the state of the cycle in case of an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
       }
     }
 
@@ -1008,8 +1267,15 @@ namespace Google.Cloud.VMMigration.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
+      if (CycleNumber != other.CycleNumber) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(TotalPauseDuration, other.TotalPauseDuration)) return false;
       if (ProgressPercent != other.ProgressPercent) return false;
+      if(!steps_.Equals(other.steps_)) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(Error, other.Error)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1017,8 +1283,15 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (CycleNumber != 0) hash ^= CycleNumber.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (totalPauseDuration_ != null) hash ^= TotalPauseDuration.GetHashCode();
       if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
+      hash ^= steps_.GetHashCode();
+      if (State != global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1045,6 +1318,31 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(ProgressPercent);
       }
+      if (endTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EndTime);
+      }
+      if (totalPauseDuration_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TotalPauseDuration);
+      }
+      steps_.WriteTo(output, _repeated_steps_codec);
+      if (CycleNumber != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(CycleNumber);
+      }
+      if (State != global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Error);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1063,6 +1361,31 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(ProgressPercent);
       }
+      if (endTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EndTime);
+      }
+      if (totalPauseDuration_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TotalPauseDuration);
+      }
+      steps_.WriteTo(ref output, _repeated_steps_codec);
+      if (CycleNumber != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(CycleNumber);
+      }
+      if (State != global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Error);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1073,11 +1396,30 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (CycleNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CycleNumber);
+      }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (totalPauseDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalPauseDuration);
+      }
       if (ProgressPercent != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProgressPercent);
+      }
+      size += steps_.CalculateSize(_repeated_steps_codec);
+      if (State != global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1091,14 +1433,42 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other == null) {
         return;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.CycleNumber != 0) {
+        CycleNumber = other.CycleNumber;
+      }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.totalPauseDuration_ != null) {
+        if (totalPauseDuration_ == null) {
+          TotalPauseDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TotalPauseDuration.MergeFrom(other.TotalPauseDuration);
+      }
       if (other.ProgressPercent != 0) {
         ProgressPercent = other.ProgressPercent;
+      }
+      steps_.Add(other.steps_);
+      if (other.State != global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1124,6 +1494,43 @@ namespace Google.Cloud.VMMigration.V1 {
           }
           case 40: {
             ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 58: {
+            if (totalPauseDuration_ == null) {
+              TotalPauseDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalPauseDuration);
+            break;
+          }
+          case 74: {
+            steps_.AddEntriesFrom(input, _repeated_steps_codec);
+            break;
+          }
+          case 80: {
+            CycleNumber = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            State = (global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 106: {
+            Name = input.ReadString();
             break;
           }
         }
@@ -1152,6 +1559,1153 @@ namespace Google.Cloud.VMMigration.V1 {
             ProgressPercent = input.ReadInt32();
             break;
           }
+          case 50: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 58: {
+            if (totalPauseDuration_ == null) {
+              TotalPauseDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TotalPauseDuration);
+            break;
+          }
+          case 74: {
+            steps_.AddEntriesFrom(ref input, _repeated_steps_codec);
+            break;
+          }
+          case 80: {
+            CycleNumber = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            State = (global::Google.Cloud.VMMigration.V1.ReplicationCycle.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 106: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReplicationCycle message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible states of a replication cycle.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The state is unknown. This is used for API compatibility only and is not
+        /// used by the system.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The replication cycle is running.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The replication cycle is paused.
+        /// </summary>
+        [pbr::OriginalName("PAUSED")] Paused = 2,
+        /// <summary>
+        /// The replication cycle finished with errors.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// The replication cycle finished successfully.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// CycleStep holds information about a step progress.
+  /// </summary>
+  public sealed partial class CycleStep : pb::IMessage<CycleStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CycleStep> _parser = new pb::MessageParser<CycleStep>(() => new CycleStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CycleStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CycleStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CycleStep(CycleStep other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      switch (other.StepCase) {
+        case StepOneofCase.InitializingReplication:
+          InitializingReplication = other.InitializingReplication.Clone();
+          break;
+        case StepOneofCase.Replicating:
+          Replicating = other.Replicating.Clone();
+          break;
+        case StepOneofCase.PostProcessing:
+          PostProcessing = other.PostProcessing.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CycleStep Clone() {
+      return new CycleStep(this);
+    }
+
+    /// <summary>Field number for the "initializing_replication" field.</summary>
+    public const int InitializingReplicationFieldNumber = 3;
+    /// <summary>
+    /// Initializing replication step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.InitializingReplicationStep InitializingReplication {
+      get { return stepCase_ == StepOneofCase.InitializingReplication ? (global::Google.Cloud.VMMigration.V1.InitializingReplicationStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.InitializingReplication;
+      }
+    }
+
+    /// <summary>Field number for the "replicating" field.</summary>
+    public const int ReplicatingFieldNumber = 4;
+    /// <summary>
+    /// Replicating step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.ReplicatingStep Replicating {
+      get { return stepCase_ == StepOneofCase.Replicating ? (global::Google.Cloud.VMMigration.V1.ReplicatingStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.Replicating;
+      }
+    }
+
+    /// <summary>Field number for the "post_processing" field.</summary>
+    public const int PostProcessingFieldNumber = 5;
+    /// <summary>
+    /// Post processing step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.PostProcessingStep PostProcessing {
+      get { return stepCase_ == StepOneofCase.PostProcessing ? (global::Google.Cloud.VMMigration.V1.PostProcessingStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.PostProcessing;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time the cycle step has started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the cycle step has ended.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    private object step_;
+    /// <summary>Enum of possible cases for the "step" oneof.</summary>
+    public enum StepOneofCase {
+      None = 0,
+      InitializingReplication = 3,
+      Replicating = 4,
+      PostProcessing = 5,
+    }
+    private StepOneofCase stepCase_ = StepOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StepOneofCase StepCase {
+      get { return stepCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStep() {
+      stepCase_ = StepOneofCase.None;
+      step_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CycleStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CycleStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InitializingReplication, other.InitializingReplication)) return false;
+      if (!object.Equals(Replicating, other.Replicating)) return false;
+      if (!object.Equals(PostProcessing, other.PostProcessing)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (StepCase != other.StepCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (stepCase_ == StepOneofCase.InitializingReplication) hash ^= InitializingReplication.GetHashCode();
+      if (stepCase_ == StepOneofCase.Replicating) hash ^= Replicating.GetHashCode();
+      if (stepCase_ == StepOneofCase.PostProcessing) hash ^= PostProcessing.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= (int) stepCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.InitializingReplication) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InitializingReplication);
+      }
+      if (stepCase_ == StepOneofCase.Replicating) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Replicating);
+      }
+      if (stepCase_ == StepOneofCase.PostProcessing) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PostProcessing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.InitializingReplication) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InitializingReplication);
+      }
+      if (stepCase_ == StepOneofCase.Replicating) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Replicating);
+      }
+      if (stepCase_ == StepOneofCase.PostProcessing) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PostProcessing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (stepCase_ == StepOneofCase.InitializingReplication) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InitializingReplication);
+      }
+      if (stepCase_ == StepOneofCase.Replicating) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Replicating);
+      }
+      if (stepCase_ == StepOneofCase.PostProcessing) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostProcessing);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CycleStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      switch (other.StepCase) {
+        case StepOneofCase.InitializingReplication:
+          if (InitializingReplication == null) {
+            InitializingReplication = new global::Google.Cloud.VMMigration.V1.InitializingReplicationStep();
+          }
+          InitializingReplication.MergeFrom(other.InitializingReplication);
+          break;
+        case StepOneofCase.Replicating:
+          if (Replicating == null) {
+            Replicating = new global::Google.Cloud.VMMigration.V1.ReplicatingStep();
+          }
+          Replicating.MergeFrom(other.Replicating);
+          break;
+        case StepOneofCase.PostProcessing:
+          if (PostProcessing == null) {
+            PostProcessing = new global::Google.Cloud.VMMigration.V1.PostProcessingStep();
+          }
+          PostProcessing.MergeFrom(other.PostProcessing);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.InitializingReplicationStep subBuilder = new global::Google.Cloud.VMMigration.V1.InitializingReplicationStep();
+            if (stepCase_ == StepOneofCase.InitializingReplication) {
+              subBuilder.MergeFrom(InitializingReplication);
+            }
+            input.ReadMessage(subBuilder);
+            InitializingReplication = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.ReplicatingStep subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicatingStep();
+            if (stepCase_ == StepOneofCase.Replicating) {
+              subBuilder.MergeFrom(Replicating);
+            }
+            input.ReadMessage(subBuilder);
+            Replicating = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.PostProcessingStep subBuilder = new global::Google.Cloud.VMMigration.V1.PostProcessingStep();
+            if (stepCase_ == StepOneofCase.PostProcessing) {
+              subBuilder.MergeFrom(PostProcessing);
+            }
+            input.ReadMessage(subBuilder);
+            PostProcessing = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.InitializingReplicationStep subBuilder = new global::Google.Cloud.VMMigration.V1.InitializingReplicationStep();
+            if (stepCase_ == StepOneofCase.InitializingReplication) {
+              subBuilder.MergeFrom(InitializingReplication);
+            }
+            input.ReadMessage(subBuilder);
+            InitializingReplication = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.ReplicatingStep subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicatingStep();
+            if (stepCase_ == StepOneofCase.Replicating) {
+              subBuilder.MergeFrom(Replicating);
+            }
+            input.ReadMessage(subBuilder);
+            Replicating = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.PostProcessingStep subBuilder = new global::Google.Cloud.VMMigration.V1.PostProcessingStep();
+            if (stepCase_ == StepOneofCase.PostProcessing) {
+              subBuilder.MergeFrom(PostProcessing);
+            }
+            input.ReadMessage(subBuilder);
+            PostProcessing = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// InitializingReplicationStep contains specific step details.
+  /// </summary>
+  public sealed partial class InitializingReplicationStep : pb::IMessage<InitializingReplicationStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InitializingReplicationStep> _parser = new pb::MessageParser<InitializingReplicationStep>(() => new InitializingReplicationStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InitializingReplicationStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InitializingReplicationStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InitializingReplicationStep(InitializingReplicationStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InitializingReplicationStep Clone() {
+      return new InitializingReplicationStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InitializingReplicationStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InitializingReplicationStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InitializingReplicationStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ReplicatingStep contains specific step details.
+  /// </summary>
+  public sealed partial class ReplicatingStep : pb::IMessage<ReplicatingStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReplicatingStep> _parser = new pb::MessageParser<ReplicatingStep>(() => new ReplicatingStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReplicatingStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicatingStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicatingStep(ReplicatingStep other) : this() {
+      totalBytes_ = other.totalBytes_;
+      replicatedBytes_ = other.replicatedBytes_;
+      lastTwoMinutesAverageBytesPerSecond_ = other.lastTwoMinutesAverageBytesPerSecond_;
+      lastThirtyMinutesAverageBytesPerSecond_ = other.lastThirtyMinutesAverageBytesPerSecond_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicatingStep Clone() {
+      return new ReplicatingStep(this);
+    }
+
+    /// <summary>Field number for the "total_bytes" field.</summary>
+    public const int TotalBytesFieldNumber = 1;
+    private long totalBytes_;
+    /// <summary>
+    /// Total bytes to be handled in the step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalBytes {
+      get { return totalBytes_; }
+      set {
+        totalBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "replicated_bytes" field.</summary>
+    public const int ReplicatedBytesFieldNumber = 2;
+    private long replicatedBytes_;
+    /// <summary>
+    /// Replicated bytes in the step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ReplicatedBytes {
+      get { return replicatedBytes_; }
+      set {
+        replicatedBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_two_minutes_average_bytes_per_second" field.</summary>
+    public const int LastTwoMinutesAverageBytesPerSecondFieldNumber = 3;
+    private long lastTwoMinutesAverageBytesPerSecond_;
+    /// <summary>
+    /// The source disks replication rate for the last 2 minutes in bytes per
+    /// second.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LastTwoMinutesAverageBytesPerSecond {
+      get { return lastTwoMinutesAverageBytesPerSecond_; }
+      set {
+        lastTwoMinutesAverageBytesPerSecond_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_thirty_minutes_average_bytes_per_second" field.</summary>
+    public const int LastThirtyMinutesAverageBytesPerSecondFieldNumber = 4;
+    private long lastThirtyMinutesAverageBytesPerSecond_;
+    /// <summary>
+    /// The source disks replication rate for the last 30 minutes in bytes per
+    /// second.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LastThirtyMinutesAverageBytesPerSecond {
+      get { return lastThirtyMinutesAverageBytesPerSecond_; }
+      set {
+        lastThirtyMinutesAverageBytesPerSecond_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReplicatingStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReplicatingStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TotalBytes != other.TotalBytes) return false;
+      if (ReplicatedBytes != other.ReplicatedBytes) return false;
+      if (LastTwoMinutesAverageBytesPerSecond != other.LastTwoMinutesAverageBytesPerSecond) return false;
+      if (LastThirtyMinutesAverageBytesPerSecond != other.LastThirtyMinutesAverageBytesPerSecond) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TotalBytes != 0L) hash ^= TotalBytes.GetHashCode();
+      if (ReplicatedBytes != 0L) hash ^= ReplicatedBytes.GetHashCode();
+      if (LastTwoMinutesAverageBytesPerSecond != 0L) hash ^= LastTwoMinutesAverageBytesPerSecond.GetHashCode();
+      if (LastThirtyMinutesAverageBytesPerSecond != 0L) hash ^= LastThirtyMinutesAverageBytesPerSecond.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TotalBytes != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalBytes);
+      }
+      if (ReplicatedBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(ReplicatedBytes);
+      }
+      if (LastTwoMinutesAverageBytesPerSecond != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(LastTwoMinutesAverageBytesPerSecond);
+      }
+      if (LastThirtyMinutesAverageBytesPerSecond != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(LastThirtyMinutesAverageBytesPerSecond);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TotalBytes != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalBytes);
+      }
+      if (ReplicatedBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(ReplicatedBytes);
+      }
+      if (LastTwoMinutesAverageBytesPerSecond != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(LastTwoMinutesAverageBytesPerSecond);
+      }
+      if (LastThirtyMinutesAverageBytesPerSecond != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(LastThirtyMinutesAverageBytesPerSecond);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TotalBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBytes);
+      }
+      if (ReplicatedBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReplicatedBytes);
+      }
+      if (LastTwoMinutesAverageBytesPerSecond != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastTwoMinutesAverageBytesPerSecond);
+      }
+      if (LastThirtyMinutesAverageBytesPerSecond != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastThirtyMinutesAverageBytesPerSecond);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReplicatingStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TotalBytes != 0L) {
+        TotalBytes = other.TotalBytes;
+      }
+      if (other.ReplicatedBytes != 0L) {
+        ReplicatedBytes = other.ReplicatedBytes;
+      }
+      if (other.LastTwoMinutesAverageBytesPerSecond != 0L) {
+        LastTwoMinutesAverageBytesPerSecond = other.LastTwoMinutesAverageBytesPerSecond;
+      }
+      if (other.LastThirtyMinutesAverageBytesPerSecond != 0L) {
+        LastThirtyMinutesAverageBytesPerSecond = other.LastThirtyMinutesAverageBytesPerSecond;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TotalBytes = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            ReplicatedBytes = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            LastTwoMinutesAverageBytesPerSecond = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            LastThirtyMinutesAverageBytesPerSecond = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TotalBytes = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            ReplicatedBytes = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            LastTwoMinutesAverageBytesPerSecond = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            LastThirtyMinutesAverageBytesPerSecond = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// PostProcessingStep contains specific step details.
+  /// </summary>
+  public sealed partial class PostProcessingStep : pb::IMessage<PostProcessingStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PostProcessingStep> _parser = new pb::MessageParser<PostProcessingStep>(() => new PostProcessingStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PostProcessingStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostProcessingStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostProcessingStep(PostProcessingStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostProcessingStep Clone() {
+      return new PostProcessingStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PostProcessingStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PostProcessingStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PostProcessingStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }
@@ -1176,7 +2730,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1382,7 +2936,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1424,6 +2978,12 @@ namespace Google.Cloud.VMMigration.V1 {
           break;
       }
 
+      switch (other.SourceVmDetailsCase) {
+        case SourceVmDetailsOneofCase.AwsSourceVmDetails:
+          AwsSourceVmDetails = other.AwsSourceVmDetails.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1445,6 +3005,21 @@ namespace Google.Cloud.VMMigration.V1 {
       set {
         targetVmDefaults_ = value;
         targetVmDefaultsCase_ = value == null ? TargetVmDefaultsOneofCase.None : TargetVmDefaultsOneofCase.ComputeEngineTargetDefaults;
+      }
+    }
+
+    /// <summary>Field number for the "aws_source_vm_details" field.</summary>
+    public const int AwsSourceVmDetailsFieldNumber = 29;
+    /// <summary>
+    /// Output only. Details of the VM from an AWS source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails AwsSourceVmDetails {
+      get { return sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails ? (global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails) sourceVmDetails_ : null; }
+      set {
+        sourceVmDetails_ = value;
+        sourceVmDetailsCase_ = value == null ? SourceVmDetailsOneofCase.None : SourceVmDetailsOneofCase.AwsSourceVmDetails;
       }
     }
 
@@ -1721,6 +3296,26 @@ namespace Google.Cloud.VMMigration.V1 {
       targetVmDefaults_ = null;
     }
 
+    private object sourceVmDetails_;
+    /// <summary>Enum of possible cases for the "source_vm_details" oneof.</summary>
+    public enum SourceVmDetailsOneofCase {
+      None = 0,
+      AwsSourceVmDetails = 29,
+    }
+    private SourceVmDetailsOneofCase sourceVmDetailsCase_ = SourceVmDetailsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceVmDetailsOneofCase SourceVmDetailsCase {
+      get { return sourceVmDetailsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceVmDetails() {
+      sourceVmDetailsCase_ = SourceVmDetailsOneofCase.None;
+      sourceVmDetails_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1737,6 +3332,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return true;
       }
       if (!object.Equals(ComputeEngineTargetDefaults, other.ComputeEngineTargetDefaults)) return false;
+      if (!object.Equals(AwsSourceVmDetails, other.AwsSourceVmDetails)) return false;
       if (Name != other.Name) return false;
       if (SourceVmId != other.SourceVmId) return false;
       if (DisplayName != other.DisplayName) return false;
@@ -1754,6 +3350,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (!object.Equals(Error, other.Error)) return false;
       if(!recentCutoverJobs_.Equals(other.recentCutoverJobs_)) return false;
       if (TargetVmDefaultsCase != other.TargetVmDefaultsCase) return false;
+      if (SourceVmDetailsCase != other.SourceVmDetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1762,6 +3359,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (targetVmDefaultsCase_ == TargetVmDefaultsOneofCase.ComputeEngineTargetDefaults) hash ^= ComputeEngineTargetDefaults.GetHashCode();
+      if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) hash ^= AwsSourceVmDetails.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (SourceVmId.Length != 0) hash ^= SourceVmId.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -1779,6 +3377,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= recentCutoverJobs_.GetHashCode();
       hash ^= (int) targetVmDefaultsCase_;
+      hash ^= (int) sourceVmDetailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1856,6 +3455,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(ComputeEngineTargetDefaults);
       }
+      if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(AwsSourceVmDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1925,6 +3528,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(ComputeEngineTargetDefaults);
       }
+      if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(AwsSourceVmDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1937,6 +3544,9 @@ namespace Google.Cloud.VMMigration.V1 {
       int size = 0;
       if (targetVmDefaultsCase_ == TargetVmDefaultsOneofCase.ComputeEngineTargetDefaults) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ComputeEngineTargetDefaults);
+      }
+      if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AwsSourceVmDetails);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -2064,6 +3674,15 @@ namespace Google.Cloud.VMMigration.V1 {
           break;
       }
 
+      switch (other.SourceVmDetailsCase) {
+        case SourceVmDetailsOneofCase.AwsSourceVmDetails:
+          if (AwsSourceVmDetails == null) {
+            AwsSourceVmDetails = new global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails();
+          }
+          AwsSourceVmDetails.MergeFrom(other.AwsSourceVmDetails);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2171,6 +3790,15 @@ namespace Google.Cloud.VMMigration.V1 {
             }
             input.ReadMessage(subBuilder);
             ComputeEngineTargetDefaults = subBuilder;
+            break;
+          }
+          case 234: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails();
+            if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) {
+              subBuilder.MergeFrom(AwsSourceVmDetails);
+            }
+            input.ReadMessage(subBuilder);
+            AwsSourceVmDetails = subBuilder;
             break;
           }
         }
@@ -2282,6 +3910,15 @@ namespace Google.Cloud.VMMigration.V1 {
             ComputeEngineTargetDefaults = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails();
+            if (sourceVmDetailsCase_ == SourceVmDetailsOneofCase.AwsSourceVmDetails) {
+              subBuilder.MergeFrom(AwsSourceVmDetails);
+            }
+            input.ReadMessage(subBuilder);
+            AwsSourceVmDetails = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -2383,7 +4020,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2409,6 +4046,7 @@ namespace Google.Cloud.VMMigration.V1 {
       state_ = other.state_;
       stateTime_ = other.stateTime_ != null ? other.stateTime_.Clone() : null;
       error_ = other.error_ != null ? other.error_.Clone() : null;
+      steps_ = other.steps_.Clone();
       switch (other.TargetVmDetailsCase) {
         case TargetVmDetailsOneofCase.ComputeEngineTargetDetails:
           ComputeEngineTargetDetails = other.ComputeEngineTargetDetails.Clone();
@@ -2531,6 +4169,20 @@ namespace Google.Cloud.VMMigration.V1 {
       }
     }
 
+    /// <summary>Field number for the "steps" field.</summary>
+    public const int StepsFieldNumber = 23;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.CloneStep> _repeated_steps_codec
+        = pb::FieldCodec.ForMessage(186, global::Google.Cloud.VMMigration.V1.CloneStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CloneStep> steps_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CloneStep>();
+    /// <summary>
+    /// Output only. The clone steps list representing its progress.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CloneStep> Steps {
+      get { return steps_; }
+    }
+
     private object targetVmDetails_;
     /// <summary>Enum of possible cases for the "target_vm_details" oneof.</summary>
     public enum TargetVmDetailsOneofCase {
@@ -2573,6 +4225,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (State != other.State) return false;
       if (!object.Equals(StateTime, other.StateTime)) return false;
       if (!object.Equals(Error, other.Error)) return false;
+      if(!steps_.Equals(other.steps_)) return false;
       if (TargetVmDetailsCase != other.TargetVmDetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2588,6 +4241,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (State != global::Google.Cloud.VMMigration.V1.CloneJob.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (stateTime_ != null) hash ^= StateTime.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
+      hash ^= steps_.GetHashCode();
       hash ^= (int) targetVmDetailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2635,6 +4289,7 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(EndTime);
       }
+      steps_.WriteTo(output, _repeated_steps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2673,6 +4328,7 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(EndTime);
       }
+      steps_.WriteTo(ref output, _repeated_steps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2704,6 +4360,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (error_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Error);
       }
+      size += steps_.CalculateSize(_repeated_steps_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2746,6 +4403,7 @@ namespace Google.Cloud.VMMigration.V1 {
         }
         Error.MergeFrom(other.Error);
       }
+      steps_.Add(other.steps_);
       switch (other.TargetVmDetailsCase) {
         case TargetVmDetailsOneofCase.ComputeEngineTargetDetails:
           if (ComputeEngineTargetDetails == null) {
@@ -2815,6 +4473,10 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 186: {
+            steps_.AddEntriesFrom(input, _repeated_steps_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2875,6 +4537,10 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 186: {
+            steps_.AddEntriesFrom(ref input, _repeated_steps_codec);
+            break;
+          }
         }
       }
     }
@@ -2930,6 +4596,919 @@ namespace Google.Cloud.VMMigration.V1 {
   }
 
   /// <summary>
+  /// CloneStep holds information about the clone step progress.
+  /// </summary>
+  public sealed partial class CloneStep : pb::IMessage<CloneStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CloneStep> _parser = new pb::MessageParser<CloneStep>(() => new CloneStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CloneStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneStep(CloneStep other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      switch (other.StepCase) {
+        case StepOneofCase.AdaptingOs:
+          AdaptingOs = other.AdaptingOs.Clone();
+          break;
+        case StepOneofCase.PreparingVmDisks:
+          PreparingVmDisks = other.PreparingVmDisks.Clone();
+          break;
+        case StepOneofCase.InstantiatingMigratedVm:
+          InstantiatingMigratedVm = other.InstantiatingMigratedVm.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneStep Clone() {
+      return new CloneStep(this);
+    }
+
+    /// <summary>Field number for the "adapting_os" field.</summary>
+    public const int AdaptingOsFieldNumber = 3;
+    /// <summary>
+    /// Adapting OS step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AdaptingOSStep AdaptingOs {
+      get { return stepCase_ == StepOneofCase.AdaptingOs ? (global::Google.Cloud.VMMigration.V1.AdaptingOSStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.AdaptingOs;
+      }
+    }
+
+    /// <summary>Field number for the "preparing_vm_disks" field.</summary>
+    public const int PreparingVmDisksFieldNumber = 4;
+    /// <summary>
+    /// Preparing VM disks step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep PreparingVmDisks {
+      get { return stepCase_ == StepOneofCase.PreparingVmDisks ? (global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.PreparingVmDisks;
+      }
+    }
+
+    /// <summary>Field number for the "instantiating_migrated_vm" field.</summary>
+    public const int InstantiatingMigratedVmFieldNumber = 5;
+    /// <summary>
+    /// Instantiating migrated VM step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep InstantiatingMigratedVm {
+      get { return stepCase_ == StepOneofCase.InstantiatingMigratedVm ? (global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.InstantiatingMigratedVm;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time the step has started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the step has ended.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    private object step_;
+    /// <summary>Enum of possible cases for the "step" oneof.</summary>
+    public enum StepOneofCase {
+      None = 0,
+      AdaptingOs = 3,
+      PreparingVmDisks = 4,
+      InstantiatingMigratedVm = 5,
+    }
+    private StepOneofCase stepCase_ = StepOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StepOneofCase StepCase {
+      get { return stepCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStep() {
+      stepCase_ = StepOneofCase.None;
+      step_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CloneStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CloneStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AdaptingOs, other.AdaptingOs)) return false;
+      if (!object.Equals(PreparingVmDisks, other.PreparingVmDisks)) return false;
+      if (!object.Equals(InstantiatingMigratedVm, other.InstantiatingMigratedVm)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (StepCase != other.StepCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (stepCase_ == StepOneofCase.AdaptingOs) hash ^= AdaptingOs.GetHashCode();
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) hash ^= PreparingVmDisks.GetHashCode();
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) hash ^= InstantiatingMigratedVm.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= (int) stepCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.AdaptingOs) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AdaptingOs);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstantiatingMigratedVm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.AdaptingOs) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AdaptingOs);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstantiatingMigratedVm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (stepCase_ == StepOneofCase.AdaptingOs) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdaptingOs);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstantiatingMigratedVm);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CloneStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      switch (other.StepCase) {
+        case StepOneofCase.AdaptingOs:
+          if (AdaptingOs == null) {
+            AdaptingOs = new global::Google.Cloud.VMMigration.V1.AdaptingOSStep();
+          }
+          AdaptingOs.MergeFrom(other.AdaptingOs);
+          break;
+        case StepOneofCase.PreparingVmDisks:
+          if (PreparingVmDisks == null) {
+            PreparingVmDisks = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+          }
+          PreparingVmDisks.MergeFrom(other.PreparingVmDisks);
+          break;
+        case StepOneofCase.InstantiatingMigratedVm:
+          if (InstantiatingMigratedVm == null) {
+            InstantiatingMigratedVm = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+          }
+          InstantiatingMigratedVm.MergeFrom(other.InstantiatingMigratedVm);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.AdaptingOSStep subBuilder = new global::Google.Cloud.VMMigration.V1.AdaptingOSStep();
+            if (stepCase_ == StepOneofCase.AdaptingOs) {
+              subBuilder.MergeFrom(AdaptingOs);
+            }
+            input.ReadMessage(subBuilder);
+            AdaptingOs = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep subBuilder = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+            if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+              subBuilder.MergeFrom(PreparingVmDisks);
+            }
+            input.ReadMessage(subBuilder);
+            PreparingVmDisks = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+            if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+              subBuilder.MergeFrom(InstantiatingMigratedVm);
+            }
+            input.ReadMessage(subBuilder);
+            InstantiatingMigratedVm = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.AdaptingOSStep subBuilder = new global::Google.Cloud.VMMigration.V1.AdaptingOSStep();
+            if (stepCase_ == StepOneofCase.AdaptingOs) {
+              subBuilder.MergeFrom(AdaptingOs);
+            }
+            input.ReadMessage(subBuilder);
+            AdaptingOs = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep subBuilder = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+            if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+              subBuilder.MergeFrom(PreparingVmDisks);
+            }
+            input.ReadMessage(subBuilder);
+            PreparingVmDisks = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+            if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+              subBuilder.MergeFrom(InstantiatingMigratedVm);
+            }
+            input.ReadMessage(subBuilder);
+            InstantiatingMigratedVm = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// AdaptingOSStep contains specific step details.
+  /// </summary>
+  public sealed partial class AdaptingOSStep : pb::IMessage<AdaptingOSStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AdaptingOSStep> _parser = new pb::MessageParser<AdaptingOSStep>(() => new AdaptingOSStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AdaptingOSStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdaptingOSStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdaptingOSStep(AdaptingOSStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdaptingOSStep Clone() {
+      return new AdaptingOSStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AdaptingOSStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AdaptingOSStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AdaptingOSStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// PreparingVMDisksStep contains specific step details.
+  /// </summary>
+  public sealed partial class PreparingVMDisksStep : pb::IMessage<PreparingVMDisksStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PreparingVMDisksStep> _parser = new pb::MessageParser<PreparingVMDisksStep>(() => new PreparingVMDisksStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PreparingVMDisksStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PreparingVMDisksStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PreparingVMDisksStep(PreparingVMDisksStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PreparingVMDisksStep Clone() {
+      return new PreparingVMDisksStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PreparingVMDisksStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PreparingVMDisksStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PreparingVMDisksStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// InstantiatingMigratedVMStep contains specific step details.
+  /// </summary>
+  public sealed partial class InstantiatingMigratedVMStep : pb::IMessage<InstantiatingMigratedVMStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InstantiatingMigratedVMStep> _parser = new pb::MessageParser<InstantiatingMigratedVMStep>(() => new InstantiatingMigratedVMStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InstantiatingMigratedVMStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstantiatingMigratedVMStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstantiatingMigratedVMStep(InstantiatingMigratedVMStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstantiatingMigratedVMStep Clone() {
+      return new InstantiatingMigratedVMStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InstantiatingMigratedVMStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InstantiatingMigratedVMStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InstantiatingMigratedVMStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// CutoverJob message describes a cutover of a migrating VM. The CutoverJob is
   /// the operation of shutting down the VM, creating a snapshot and
   /// clonning the VM using the replicated snapshot.
@@ -2948,7 +5527,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2976,6 +5555,7 @@ namespace Google.Cloud.VMMigration.V1 {
       progressPercent_ = other.progressPercent_;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       stateMessage_ = other.stateMessage_;
+      steps_ = other.steps_.Clone();
       switch (other.TargetVmDetailsCase) {
         case TargetVmDetailsOneofCase.ComputeEngineTargetDetails:
           ComputeEngineTargetDetails = other.ComputeEngineTargetDetails.Clone();
@@ -3129,6 +5709,20 @@ namespace Google.Cloud.VMMigration.V1 {
       }
     }
 
+    /// <summary>Field number for the "steps" field.</summary>
+    public const int StepsFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.CutoverStep> _repeated_steps_codec
+        = pb::FieldCodec.ForMessage(138, global::Google.Cloud.VMMigration.V1.CutoverStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CutoverStep> steps_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CutoverStep>();
+    /// <summary>
+    /// Output only. The cutover steps list representing its progress.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.CutoverStep> Steps {
+      get { return steps_; }
+    }
+
     private object targetVmDetails_;
     /// <summary>Enum of possible cases for the "target_vm_details" oneof.</summary>
     public enum TargetVmDetailsOneofCase {
@@ -3173,6 +5767,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (ProgressPercent != other.ProgressPercent) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (StateMessage != other.StateMessage) return false;
+      if(!steps_.Equals(other.steps_)) return false;
       if (TargetVmDetailsCase != other.TargetVmDetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3190,6 +5785,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (StateMessage.Length != 0) hash ^= StateMessage.GetHashCode();
+      hash ^= steps_.GetHashCode();
       hash ^= (int) targetVmDetailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3245,6 +5841,7 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(EndTime);
       }
+      steps_.WriteTo(output, _repeated_steps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3291,6 +5888,7 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(EndTime);
       }
+      steps_.WriteTo(ref output, _repeated_steps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3328,6 +5926,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (StateMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StateMessage);
       }
+      size += steps_.CalculateSize(_repeated_steps_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3376,6 +5975,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.StateMessage.Length != 0) {
         StateMessage = other.StateMessage;
       }
+      steps_.Add(other.steps_);
       switch (other.TargetVmDetailsCase) {
         case TargetVmDetailsOneofCase.ComputeEngineTargetDetails:
           if (ComputeEngineTargetDetails == null) {
@@ -3453,6 +6053,10 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 138: {
+            steps_.AddEntriesFrom(input, _repeated_steps_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3521,6 +6125,10 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 138: {
+            steps_.AddEntriesFrom(ref input, _repeated_steps_codec);
+            break;
+          }
         }
       }
     }
@@ -3576,6 +6184,721 @@ namespace Google.Cloud.VMMigration.V1 {
   }
 
   /// <summary>
+  /// CutoverStep holds information about the cutover step progress.
+  /// </summary>
+  public sealed partial class CutoverStep : pb::IMessage<CutoverStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CutoverStep> _parser = new pb::MessageParser<CutoverStep>(() => new CutoverStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CutoverStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CutoverStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CutoverStep(CutoverStep other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      switch (other.StepCase) {
+        case StepOneofCase.PreviousReplicationCycle:
+          PreviousReplicationCycle = other.PreviousReplicationCycle.Clone();
+          break;
+        case StepOneofCase.ShuttingDownSourceVm:
+          ShuttingDownSourceVm = other.ShuttingDownSourceVm.Clone();
+          break;
+        case StepOneofCase.FinalSync:
+          FinalSync = other.FinalSync.Clone();
+          break;
+        case StepOneofCase.PreparingVmDisks:
+          PreparingVmDisks = other.PreparingVmDisks.Clone();
+          break;
+        case StepOneofCase.InstantiatingMigratedVm:
+          InstantiatingMigratedVm = other.InstantiatingMigratedVm.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CutoverStep Clone() {
+      return new CutoverStep(this);
+    }
+
+    /// <summary>Field number for the "previous_replication_cycle" field.</summary>
+    public const int PreviousReplicationCycleFieldNumber = 3;
+    /// <summary>
+    /// A replication cycle prior cutover step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.ReplicationCycle PreviousReplicationCycle {
+      get { return stepCase_ == StepOneofCase.PreviousReplicationCycle ? (global::Google.Cloud.VMMigration.V1.ReplicationCycle) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.PreviousReplicationCycle;
+      }
+    }
+
+    /// <summary>Field number for the "shutting_down_source_vm" field.</summary>
+    public const int ShuttingDownSourceVmFieldNumber = 4;
+    /// <summary>
+    /// Shutting down VM step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep ShuttingDownSourceVm {
+      get { return stepCase_ == StepOneofCase.ShuttingDownSourceVm ? (global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.ShuttingDownSourceVm;
+      }
+    }
+
+    /// <summary>Field number for the "final_sync" field.</summary>
+    public const int FinalSyncFieldNumber = 5;
+    /// <summary>
+    /// Final sync step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.ReplicationCycle FinalSync {
+      get { return stepCase_ == StepOneofCase.FinalSync ? (global::Google.Cloud.VMMigration.V1.ReplicationCycle) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.FinalSync;
+      }
+    }
+
+    /// <summary>Field number for the "preparing_vm_disks" field.</summary>
+    public const int PreparingVmDisksFieldNumber = 6;
+    /// <summary>
+    /// Preparing VM disks step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep PreparingVmDisks {
+      get { return stepCase_ == StepOneofCase.PreparingVmDisks ? (global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.PreparingVmDisks;
+      }
+    }
+
+    /// <summary>Field number for the "instantiating_migrated_vm" field.</summary>
+    public const int InstantiatingMigratedVmFieldNumber = 7;
+    /// <summary>
+    /// Instantiating migrated VM step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep InstantiatingMigratedVm {
+      get { return stepCase_ == StepOneofCase.InstantiatingMigratedVm ? (global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep) step_ : null; }
+      set {
+        step_ = value;
+        stepCase_ = value == null ? StepOneofCase.None : StepOneofCase.InstantiatingMigratedVm;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time the step has started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the step has ended.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    private object step_;
+    /// <summary>Enum of possible cases for the "step" oneof.</summary>
+    public enum StepOneofCase {
+      None = 0,
+      PreviousReplicationCycle = 3,
+      ShuttingDownSourceVm = 4,
+      FinalSync = 5,
+      PreparingVmDisks = 6,
+      InstantiatingMigratedVm = 7,
+    }
+    private StepOneofCase stepCase_ = StepOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StepOneofCase StepCase {
+      get { return stepCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStep() {
+      stepCase_ = StepOneofCase.None;
+      step_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CutoverStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CutoverStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PreviousReplicationCycle, other.PreviousReplicationCycle)) return false;
+      if (!object.Equals(ShuttingDownSourceVm, other.ShuttingDownSourceVm)) return false;
+      if (!object.Equals(FinalSync, other.FinalSync)) return false;
+      if (!object.Equals(PreparingVmDisks, other.PreparingVmDisks)) return false;
+      if (!object.Equals(InstantiatingMigratedVm, other.InstantiatingMigratedVm)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (StepCase != other.StepCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (stepCase_ == StepOneofCase.PreviousReplicationCycle) hash ^= PreviousReplicationCycle.GetHashCode();
+      if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) hash ^= ShuttingDownSourceVm.GetHashCode();
+      if (stepCase_ == StepOneofCase.FinalSync) hash ^= FinalSync.GetHashCode();
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) hash ^= PreparingVmDisks.GetHashCode();
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) hash ^= InstantiatingMigratedVm.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= (int) stepCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.PreviousReplicationCycle) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PreviousReplicationCycle);
+      }
+      if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ShuttingDownSourceVm);
+      }
+      if (stepCase_ == StepOneofCase.FinalSync) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FinalSync);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        output.WriteRawTag(58);
+        output.WriteMessage(InstantiatingMigratedVm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (stepCase_ == StepOneofCase.PreviousReplicationCycle) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PreviousReplicationCycle);
+      }
+      if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ShuttingDownSourceVm);
+      }
+      if (stepCase_ == StepOneofCase.FinalSync) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FinalSync);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        output.WriteRawTag(58);
+        output.WriteMessage(InstantiatingMigratedVm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (stepCase_ == StepOneofCase.PreviousReplicationCycle) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreviousReplicationCycle);
+      }
+      if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ShuttingDownSourceVm);
+      }
+      if (stepCase_ == StepOneofCase.FinalSync) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinalSync);
+      }
+      if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreparingVmDisks);
+      }
+      if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstantiatingMigratedVm);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CutoverStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      switch (other.StepCase) {
+        case StepOneofCase.PreviousReplicationCycle:
+          if (PreviousReplicationCycle == null) {
+            PreviousReplicationCycle = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+          }
+          PreviousReplicationCycle.MergeFrom(other.PreviousReplicationCycle);
+          break;
+        case StepOneofCase.ShuttingDownSourceVm:
+          if (ShuttingDownSourceVm == null) {
+            ShuttingDownSourceVm = new global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep();
+          }
+          ShuttingDownSourceVm.MergeFrom(other.ShuttingDownSourceVm);
+          break;
+        case StepOneofCase.FinalSync:
+          if (FinalSync == null) {
+            FinalSync = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+          }
+          FinalSync.MergeFrom(other.FinalSync);
+          break;
+        case StepOneofCase.PreparingVmDisks:
+          if (PreparingVmDisks == null) {
+            PreparingVmDisks = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+          }
+          PreparingVmDisks.MergeFrom(other.PreparingVmDisks);
+          break;
+        case StepOneofCase.InstantiatingMigratedVm:
+          if (InstantiatingMigratedVm == null) {
+            InstantiatingMigratedVm = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+          }
+          InstantiatingMigratedVm.MergeFrom(other.InstantiatingMigratedVm);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.ReplicationCycle subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+            if (stepCase_ == StepOneofCase.PreviousReplicationCycle) {
+              subBuilder.MergeFrom(PreviousReplicationCycle);
+            }
+            input.ReadMessage(subBuilder);
+            PreviousReplicationCycle = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep();
+            if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) {
+              subBuilder.MergeFrom(ShuttingDownSourceVm);
+            }
+            input.ReadMessage(subBuilder);
+            ShuttingDownSourceVm = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.ReplicationCycle subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+            if (stepCase_ == StepOneofCase.FinalSync) {
+              subBuilder.MergeFrom(FinalSync);
+            }
+            input.ReadMessage(subBuilder);
+            FinalSync = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep subBuilder = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+            if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+              subBuilder.MergeFrom(PreparingVmDisks);
+            }
+            input.ReadMessage(subBuilder);
+            PreparingVmDisks = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+            if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+              subBuilder.MergeFrom(InstantiatingMigratedVm);
+            }
+            input.ReadMessage(subBuilder);
+            InstantiatingMigratedVm = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.ReplicationCycle subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+            if (stepCase_ == StepOneofCase.PreviousReplicationCycle) {
+              subBuilder.MergeFrom(PreviousReplicationCycle);
+            }
+            input.ReadMessage(subBuilder);
+            PreviousReplicationCycle = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.ShuttingDownSourceVMStep();
+            if (stepCase_ == StepOneofCase.ShuttingDownSourceVm) {
+              subBuilder.MergeFrom(ShuttingDownSourceVm);
+            }
+            input.ReadMessage(subBuilder);
+            ShuttingDownSourceVm = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.VMMigration.V1.ReplicationCycle subBuilder = new global::Google.Cloud.VMMigration.V1.ReplicationCycle();
+            if (stepCase_ == StepOneofCase.FinalSync) {
+              subBuilder.MergeFrom(FinalSync);
+            }
+            input.ReadMessage(subBuilder);
+            FinalSync = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep subBuilder = new global::Google.Cloud.VMMigration.V1.PreparingVMDisksStep();
+            if (stepCase_ == StepOneofCase.PreparingVmDisks) {
+              subBuilder.MergeFrom(PreparingVmDisks);
+            }
+            input.ReadMessage(subBuilder);
+            PreparingVmDisks = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep subBuilder = new global::Google.Cloud.VMMigration.V1.InstantiatingMigratedVMStep();
+            if (stepCase_ == StepOneofCase.InstantiatingMigratedVm) {
+              subBuilder.MergeFrom(InstantiatingMigratedVm);
+            }
+            input.ReadMessage(subBuilder);
+            InstantiatingMigratedVm = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ShuttingDownSourceVMStep contains specific step details.
+  /// </summary>
+  public sealed partial class ShuttingDownSourceVMStep : pb::IMessage<ShuttingDownSourceVMStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ShuttingDownSourceVMStep> _parser = new pb::MessageParser<ShuttingDownSourceVMStep>(() => new ShuttingDownSourceVMStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ShuttingDownSourceVMStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShuttingDownSourceVMStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShuttingDownSourceVMStep(ShuttingDownSourceVMStep other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShuttingDownSourceVMStep Clone() {
+      return new ShuttingDownSourceVMStep(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ShuttingDownSourceVMStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ShuttingDownSourceVMStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ShuttingDownSourceVMStep other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for 'CreateCloneJob' request.
   /// </summary>
   public sealed partial class CreateCloneJobRequest : pb::IMessage<CreateCloneJobRequest>
@@ -3592,7 +6915,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3928,7 +7251,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4123,7 +7446,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4278,7 +7601,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4640,7 +7963,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4894,7 +8217,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5090,7 +8413,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5119,6 +8442,9 @@ namespace Google.Cloud.VMMigration.V1 {
         case SourceDetailsOneofCase.Vmware:
           Vmware = other.Vmware.Clone();
           break;
+        case SourceDetailsOneofCase.Aws:
+          Aws = other.Aws.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5142,6 +8468,21 @@ namespace Google.Cloud.VMMigration.V1 {
       set {
         sourceDetails_ = value;
         sourceDetailsCase_ = value == null ? SourceDetailsOneofCase.None : SourceDetailsOneofCase.Vmware;
+      }
+    }
+
+    /// <summary>Field number for the "aws" field.</summary>
+    public const int AwsFieldNumber = 12;
+    /// <summary>
+    /// AWS type source details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsSourceDetails Aws {
+      get { return sourceDetailsCase_ == SourceDetailsOneofCase.Aws ? (global::Google.Cloud.VMMigration.V1.AwsSourceDetails) sourceDetails_ : null; }
+      set {
+        sourceDetails_ = value;
+        sourceDetailsCase_ = value == null ? SourceDetailsOneofCase.None : SourceDetailsOneofCase.Aws;
       }
     }
 
@@ -5224,6 +8565,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public enum SourceDetailsOneofCase {
       None = 0,
       Vmware = 10,
+      Aws = 12,
     }
     private SourceDetailsOneofCase sourceDetailsCase_ = SourceDetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5255,6 +8597,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return true;
       }
       if (!object.Equals(Vmware, other.Vmware)) return false;
+      if (!object.Equals(Aws, other.Aws)) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -5269,6 +8612,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (sourceDetailsCase_ == SourceDetailsOneofCase.Vmware) hash ^= Vmware.GetHashCode();
+      if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) hash ^= Aws.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -5314,6 +8658,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Vmware);
       }
+      if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Aws);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5345,6 +8693,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Vmware);
       }
+      if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Aws);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5357,6 +8709,9 @@ namespace Google.Cloud.VMMigration.V1 {
       int size = 0;
       if (sourceDetailsCase_ == SourceDetailsOneofCase.Vmware) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vmware);
+      }
+      if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Aws);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -5408,6 +8763,12 @@ namespace Google.Cloud.VMMigration.V1 {
             Vmware = new global::Google.Cloud.VMMigration.V1.VmwareSourceDetails();
           }
           Vmware.MergeFrom(other.Vmware);
+          break;
+        case SourceDetailsOneofCase.Aws:
+          if (Aws == null) {
+            Aws = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails();
+          }
+          Aws.MergeFrom(other.Aws);
           break;
       }
 
@@ -5461,6 +8822,15 @@ namespace Google.Cloud.VMMigration.V1 {
             Vmware = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails();
+            if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) {
+              subBuilder.MergeFrom(Aws);
+            }
+            input.ReadMessage(subBuilder);
+            Aws = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5511,6 +8881,15 @@ namespace Google.Cloud.VMMigration.V1 {
             Vmware = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails();
+            if (sourceDetailsCase_ == SourceDetailsOneofCase.Aws) {
+              subBuilder.MergeFrom(Aws);
+            }
+            input.ReadMessage(subBuilder);
+            Aws = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -5536,7 +8915,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5836,9 +9215,1014 @@ namespace Google.Cloud.VMMigration.V1 {
   }
 
   /// <summary>
-  /// DatacenterConnector message describes a connector between the Source and GCP,
-  /// which is installed on a vmware datacenter (an OVA vm installed by the user)
-  /// to connect the Datacenter to GCP and support vm migration data transfer.
+  /// AwsSourceDetails message describes a specific source details for the
+  /// AWS source type.
+  /// </summary>
+  public sealed partial class AwsSourceDetails : pb::IMessage<AwsSourceDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsSourceDetails> _parser = new pb::MessageParser<AwsSourceDetails>(() => new AwsSourceDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsSourceDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceDetails(AwsSourceDetails other) : this() {
+      awsRegion_ = other.awsRegion_;
+      state_ = other.state_;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
+      inventoryTagList_ = other.inventoryTagList_.Clone();
+      inventorySecurityGroupNames_ = other.inventorySecurityGroupNames_.Clone();
+      migrationResourcesUserTags_ = other.migrationResourcesUserTags_.Clone();
+      publicIp_ = other.publicIp_;
+      switch (other.CredentialsTypeCase) {
+        case CredentialsTypeOneofCase.AccessKeyCreds:
+          AccessKeyCreds = other.AccessKeyCreds.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceDetails Clone() {
+      return new AwsSourceDetails(this);
+    }
+
+    /// <summary>Field number for the "access_key_creds" field.</summary>
+    public const int AccessKeyCredsFieldNumber = 11;
+    /// <summary>
+    /// AWS Credentials using access key id and secret.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials AccessKeyCreds {
+      get { return credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds ? (global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials) credentialsType_ : null; }
+      set {
+        credentialsType_ = value;
+        credentialsTypeCase_ = value == null ? CredentialsTypeOneofCase.None : CredentialsTypeOneofCase.AccessKeyCreds;
+      }
+    }
+
+    /// <summary>Field number for the "aws_region" field.</summary>
+    public const int AwsRegionFieldNumber = 3;
+    private string awsRegion_ = "";
+    /// <summary>
+    /// Immutable. The AWS region that the source VMs will be migrated from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AwsRegion {
+      get { return awsRegion_; }
+      set {
+        awsRegion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 4;
+    private global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State state_ = global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the source as determined by the health check.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 5;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. Provides details on the state of the Source in case of an
+    /// error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inventory_tag_list" field.</summary>
+    public const int InventoryTagListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag> _repeated_inventoryTagList_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag> inventoryTagList_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag>();
+    /// <summary>
+    /// AWS resource tags to limit the scope of the source inventory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.Tag> InventoryTagList {
+      get { return inventoryTagList_; }
+    }
+
+    /// <summary>Field number for the "inventory_security_group_names" field.</summary>
+    public const int InventorySecurityGroupNamesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_inventorySecurityGroupNames_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> inventorySecurityGroupNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// AWS security group names to limit the scope of the source
+    /// inventory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> InventorySecurityGroupNames {
+      get { return inventorySecurityGroupNames_; }
+    }
+
+    /// <summary>Field number for the "migration_resources_user_tags" field.</summary>
+    public const int MigrationResourcesUserTagsFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_migrationResourcesUserTags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> migrationResourcesUserTags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// User specified tags to add to every M2VM generated resource in AWS.
+    /// These tags will be set in addition to the default tags that are set as part
+    /// of the migration process. The tags must not begin with the reserved prefix
+    /// `m2vm`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> MigrationResourcesUserTags {
+      get { return migrationResourcesUserTags_; }
+    }
+
+    /// <summary>Field number for the "public_ip" field.</summary>
+    public const int PublicIpFieldNumber = 9;
+    private string publicIp_ = "";
+    /// <summary>
+    /// Output only. The source's public IP. All communication initiated by this
+    /// source will originate from this IP.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublicIp {
+      get { return publicIp_; }
+      set {
+        publicIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object credentialsType_;
+    /// <summary>Enum of possible cases for the "credentials_type" oneof.</summary>
+    public enum CredentialsTypeOneofCase {
+      None = 0,
+      AccessKeyCreds = 11,
+    }
+    private CredentialsTypeOneofCase credentialsTypeCase_ = CredentialsTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CredentialsTypeOneofCase CredentialsTypeCase {
+      get { return credentialsTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCredentialsType() {
+      credentialsTypeCase_ = CredentialsTypeOneofCase.None;
+      credentialsType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsSourceDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsSourceDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AccessKeyCreds, other.AccessKeyCreds)) return false;
+      if (AwsRegion != other.AwsRegion) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      if(!inventoryTagList_.Equals(other.inventoryTagList_)) return false;
+      if(!inventorySecurityGroupNames_.Equals(other.inventorySecurityGroupNames_)) return false;
+      if (!MigrationResourcesUserTags.Equals(other.MigrationResourcesUserTags)) return false;
+      if (PublicIp != other.PublicIp) return false;
+      if (CredentialsTypeCase != other.CredentialsTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) hash ^= AccessKeyCreds.GetHashCode();
+      if (AwsRegion.Length != 0) hash ^= AwsRegion.GetHashCode();
+      if (State != global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
+      hash ^= inventoryTagList_.GetHashCode();
+      hash ^= inventorySecurityGroupNames_.GetHashCode();
+      hash ^= MigrationResourcesUserTags.GetHashCode();
+      if (PublicIp.Length != 0) hash ^= PublicIp.GetHashCode();
+      hash ^= (int) credentialsTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AwsRegion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AwsRegion);
+      }
+      if (State != global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Error);
+      }
+      inventorySecurityGroupNames_.WriteTo(output, _repeated_inventorySecurityGroupNames_codec);
+      migrationResourcesUserTags_.WriteTo(output, _map_migrationResourcesUserTags_codec);
+      if (PublicIp.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PublicIp);
+      }
+      inventoryTagList_.WriteTo(output, _repeated_inventoryTagList_codec);
+      if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AccessKeyCreds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AwsRegion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AwsRegion);
+      }
+      if (State != global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Error);
+      }
+      inventorySecurityGroupNames_.WriteTo(ref output, _repeated_inventorySecurityGroupNames_codec);
+      migrationResourcesUserTags_.WriteTo(ref output, _map_migrationResourcesUserTags_codec);
+      if (PublicIp.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PublicIp);
+      }
+      inventoryTagList_.WriteTo(ref output, _repeated_inventoryTagList_codec);
+      if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AccessKeyCreds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessKeyCreds);
+      }
+      if (AwsRegion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AwsRegion);
+      }
+      if (State != global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      size += inventoryTagList_.CalculateSize(_repeated_inventoryTagList_codec);
+      size += inventorySecurityGroupNames_.CalculateSize(_repeated_inventorySecurityGroupNames_codec);
+      size += migrationResourcesUserTags_.CalculateSize(_map_migrationResourcesUserTags_codec);
+      if (PublicIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublicIp);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsSourceDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AwsRegion.Length != 0) {
+        AwsRegion = other.AwsRegion;
+      }
+      if (other.State != global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
+      }
+      inventoryTagList_.Add(other.inventoryTagList_);
+      inventorySecurityGroupNames_.Add(other.inventorySecurityGroupNames_);
+      migrationResourcesUserTags_.Add(other.migrationResourcesUserTags_);
+      if (other.PublicIp.Length != 0) {
+        PublicIp = other.PublicIp;
+      }
+      switch (other.CredentialsTypeCase) {
+        case CredentialsTypeOneofCase.AccessKeyCreds:
+          if (AccessKeyCreds == null) {
+            AccessKeyCreds = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials();
+          }
+          AccessKeyCreds.MergeFrom(other.AccessKeyCreds);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            AwsRegion = input.ReadString();
+            break;
+          }
+          case 32: {
+            State = (global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 58: {
+            inventorySecurityGroupNames_.AddEntriesFrom(input, _repeated_inventorySecurityGroupNames_codec);
+            break;
+          }
+          case 66: {
+            migrationResourcesUserTags_.AddEntriesFrom(input, _map_migrationResourcesUserTags_codec);
+            break;
+          }
+          case 74: {
+            PublicIp = input.ReadString();
+            break;
+          }
+          case 82: {
+            inventoryTagList_.AddEntriesFrom(input, _repeated_inventoryTagList_codec);
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials();
+            if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) {
+              subBuilder.MergeFrom(AccessKeyCreds);
+            }
+            input.ReadMessage(subBuilder);
+            AccessKeyCreds = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            AwsRegion = input.ReadString();
+            break;
+          }
+          case 32: {
+            State = (global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.State) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 58: {
+            inventorySecurityGroupNames_.AddEntriesFrom(ref input, _repeated_inventorySecurityGroupNames_codec);
+            break;
+          }
+          case 66: {
+            migrationResourcesUserTags_.AddEntriesFrom(ref input, _map_migrationResourcesUserTags_codec);
+            break;
+          }
+          case 74: {
+            PublicIp = input.ReadString();
+            break;
+          }
+          case 82: {
+            inventoryTagList_.AddEntriesFrom(ref input, _repeated_inventoryTagList_codec);
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials subBuilder = new global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Types.AccessKeyCredentials();
+            if (credentialsTypeCase_ == CredentialsTypeOneofCase.AccessKeyCreds) {
+              subBuilder.MergeFrom(AccessKeyCreds);
+            }
+            input.ReadMessage(subBuilder);
+            AccessKeyCreds = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AwsSourceDetails message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The possible values of the state.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The state is unknown. This is used for API compatibility only and is not
+        /// used by the system.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The state was not sampled by the health checks yet.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 1,
+        /// <summary>
+        /// The source is available but might not be usable yet due to invalid
+        /// credentials or another reason.
+        /// The error message will contain further details.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 2,
+        /// <summary>
+        /// The source exists and its credentials were verified.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 3,
+      }
+
+      /// <summary>
+      /// Message describing AWS Credentials using access key id and secret.
+      /// </summary>
+      public sealed partial class AccessKeyCredentials : pb::IMessage<AccessKeyCredentials>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessKeyCredentials> _parser = new pb::MessageParser<AccessKeyCredentials>(() => new AccessKeyCredentials());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessKeyCredentials> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessKeyCredentials() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessKeyCredentials(AccessKeyCredentials other) : this() {
+          accessKeyId_ = other.accessKeyId_;
+          secretAccessKey_ = other.secretAccessKey_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessKeyCredentials Clone() {
+          return new AccessKeyCredentials(this);
+        }
+
+        /// <summary>Field number for the "access_key_id" field.</summary>
+        public const int AccessKeyIdFieldNumber = 1;
+        private string accessKeyId_ = "";
+        /// <summary>
+        /// AWS access key ID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AccessKeyId {
+          get { return accessKeyId_; }
+          set {
+            accessKeyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "secret_access_key" field.</summary>
+        public const int SecretAccessKeyFieldNumber = 2;
+        private string secretAccessKey_ = "";
+        /// <summary>
+        /// Input only. AWS secret access key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SecretAccessKey {
+          get { return secretAccessKey_; }
+          set {
+            secretAccessKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessKeyCredentials);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessKeyCredentials other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AccessKeyId != other.AccessKeyId) return false;
+          if (SecretAccessKey != other.SecretAccessKey) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AccessKeyId.Length != 0) hash ^= AccessKeyId.GetHashCode();
+          if (SecretAccessKey.Length != 0) hash ^= SecretAccessKey.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AccessKeyId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AccessKeyId);
+          }
+          if (SecretAccessKey.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SecretAccessKey);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AccessKeyId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AccessKeyId);
+          }
+          if (SecretAccessKey.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SecretAccessKey);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AccessKeyId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessKeyId);
+          }
+          if (SecretAccessKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SecretAccessKey);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessKeyCredentials other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AccessKeyId.Length != 0) {
+            AccessKeyId = other.AccessKeyId;
+          }
+          if (other.SecretAccessKey.Length != 0) {
+            SecretAccessKey = other.SecretAccessKey;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                AccessKeyId = input.ReadString();
+                break;
+              }
+              case 18: {
+                SecretAccessKey = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                AccessKeyId = input.ReadString();
+                break;
+              }
+              case 18: {
+                SecretAccessKey = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Tag is an AWS tag representation.
+      /// </summary>
+      public sealed partial class Tag : pb::IMessage<Tag>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Tag> _parser = new pb::MessageParser<Tag>(() => new Tag());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Tag> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VMMigration.V1.AwsSourceDetails.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Tag() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Tag(Tag other) : this() {
+          key_ = other.key_;
+          value_ = other.value_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Tag Clone() {
+          return new Tag(this);
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 1;
+        private string key_ = "";
+        /// <summary>
+        /// Key of tag.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Key {
+          get { return key_; }
+          set {
+            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 2;
+        private string value_ = "";
+        /// <summary>
+        /// Value of tag.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Value {
+          get { return value_; }
+          set {
+            value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Tag);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Tag other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Key != other.Key) return false;
+          if (Value != other.Value) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (Value.Length != 0) hash ^= Value.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Key);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Key);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Key.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          }
+          if (Value.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Tag other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Key.Length != 0) {
+            Key = other.Key;
+          }
+          if (other.Value.Length != 0) {
+            Value = other.Value;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Key = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Key = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// DatacenterConnector message describes a connector between the Source and
+  /// Google Cloud, which is installed on a vmware datacenter (an OVA vm installed
+  /// by the user) to connect the Datacenter to Google Cloud and support vm
+  /// migration data transfer.
   /// </summary>
   public sealed partial class DatacenterConnector : pb::IMessage<DatacenterConnector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5854,7 +10238,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5997,7 +10381,7 @@ namespace Google.Cloud.VMMigration.V1 {
     private string bucket_ = "";
     /// <summary>
     /// Output only. The communication channel between the datacenter connector and
-    /// GCP.
+    /// Google Cloud.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6672,7 +11056,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7075,7 +11459,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7332,7 +11716,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7647,7 +12031,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8009,7 +12393,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8263,7 +12647,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8458,7 +12842,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8794,7 +13178,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9103,7 +13487,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9351,7 +13735,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9587,7 +13971,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10257,6 +14641,1191 @@ namespace Google.Cloud.VMMigration.V1 {
   }
 
   /// <summary>
+  /// AwsVmDetails describes a VM in AWS.
+  /// </summary>
+  public sealed partial class AwsVmDetails : pb::IMessage<AwsVmDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsVmDetails> _parser = new pb::MessageParser<AwsVmDetails>(() => new AwsVmDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsVmDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmDetails(AwsVmDetails other) : this() {
+      vmId_ = other.vmId_;
+      displayName_ = other.displayName_;
+      sourceId_ = other.sourceId_;
+      sourceDescription_ = other.sourceDescription_;
+      powerState_ = other.powerState_;
+      cpuCount_ = other.cpuCount_;
+      memoryMb_ = other.memoryMb_;
+      diskCount_ = other.diskCount_;
+      committedStorageMb_ = other.committedStorageMb_;
+      osDescription_ = other.osDescription_;
+      bootOption_ = other.bootOption_;
+      instanceType_ = other.instanceType_;
+      vpcId_ = other.vpcId_;
+      securityGroups_ = other.securityGroups_.Clone();
+      tags_ = other.tags_.Clone();
+      zone_ = other.zone_;
+      virtualizationType_ = other.virtualizationType_;
+      architecture_ = other.architecture_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmDetails Clone() {
+      return new AwsVmDetails(this);
+    }
+
+    /// <summary>Field number for the "vm_id" field.</summary>
+    public const int VmIdFieldNumber = 1;
+    private string vmId_ = "";
+    /// <summary>
+    /// The VM ID in AWS.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmId {
+      get { return vmId_; }
+      set {
+        vmId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the VM. Note that this value is not necessarily unique.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_id" field.</summary>
+    public const int SourceIdFieldNumber = 3;
+    private string sourceId_ = "";
+    /// <summary>
+    /// The id of the AWS's source this VM is connected to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceId {
+      get { return sourceId_; }
+      set {
+        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_description" field.</summary>
+    public const int SourceDescriptionFieldNumber = 4;
+    private string sourceDescription_ = "";
+    /// <summary>
+    /// The descriptive name of the AWS's source this VM is connected to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceDescription {
+      get { return sourceDescription_; }
+      set {
+        sourceDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "power_state" field.</summary>
+    public const int PowerStateFieldNumber = 5;
+    private global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState powerState_ = global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified;
+    /// <summary>
+    /// Output only. The power state of the VM at the moment list was taken.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState PowerState {
+      get { return powerState_; }
+      set {
+        powerState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cpu_count" field.</summary>
+    public const int CpuCountFieldNumber = 6;
+    private int cpuCount_;
+    /// <summary>
+    /// The number of cpus the VM has.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CpuCount {
+      get { return cpuCount_; }
+      set {
+        cpuCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "memory_mb" field.</summary>
+    public const int MemoryMbFieldNumber = 7;
+    private int memoryMb_;
+    /// <summary>
+    /// The memory size of the VM in MB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MemoryMb {
+      get { return memoryMb_; }
+      set {
+        memoryMb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disk_count" field.</summary>
+    public const int DiskCountFieldNumber = 8;
+    private int diskCount_;
+    /// <summary>
+    /// The number of disks the VM has.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DiskCount {
+      get { return diskCount_; }
+      set {
+        diskCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "committed_storage_mb" field.</summary>
+    public const int CommittedStorageMbFieldNumber = 9;
+    private long committedStorageMb_;
+    /// <summary>
+    /// The total size of the storage allocated to the VM in MB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CommittedStorageMb {
+      get { return committedStorageMb_; }
+      set {
+        committedStorageMb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "os_description" field.</summary>
+    public const int OsDescriptionFieldNumber = 10;
+    private string osDescription_ = "";
+    /// <summary>
+    /// The VM's OS.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OsDescription {
+      get { return osDescription_; }
+      set {
+        osDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "boot_option" field.</summary>
+    public const int BootOptionFieldNumber = 11;
+    private global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption bootOption_ = global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified;
+    /// <summary>
+    /// The VM Boot Option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption BootOption {
+      get { return bootOption_; }
+      set {
+        bootOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instance_type" field.</summary>
+    public const int InstanceTypeFieldNumber = 12;
+    private string instanceType_ = "";
+    /// <summary>
+    /// The instance type of the VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceType {
+      get { return instanceType_; }
+      set {
+        instanceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vpc_id" field.</summary>
+    public const int VpcIdFieldNumber = 13;
+    private string vpcId_ = "";
+    /// <summary>
+    /// The VPC ID the VM belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcId {
+      get { return vpcId_; }
+      set {
+        vpcId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "security_groups" field.</summary>
+    public const int SecurityGroupsFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.AwsSecurityGroup> _repeated_securityGroups_codec
+        = pb::FieldCodec.ForMessage(114, global::Google.Cloud.VMMigration.V1.AwsSecurityGroup.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSecurityGroup> securityGroups_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSecurityGroup>();
+    /// <summary>
+    /// The security groups the VM belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsSecurityGroup> SecurityGroups {
+      get { return securityGroups_; }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 15;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 122);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The tags of the VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
+    }
+
+    /// <summary>Field number for the "zone" field.</summary>
+    public const int ZoneFieldNumber = 16;
+    private string zone_ = "";
+    /// <summary>
+    /// The AWS zone of the VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Zone {
+      get { return zone_; }
+      set {
+        zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "virtualization_type" field.</summary>
+    public const int VirtualizationTypeFieldNumber = 17;
+    private global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType virtualizationType_ = global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified;
+    /// <summary>
+    /// The virtualization type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType VirtualizationType {
+      get { return virtualizationType_; }
+      set {
+        virtualizationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "architecture" field.</summary>
+    public const int ArchitectureFieldNumber = 18;
+    private global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture architecture_ = global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified;
+    /// <summary>
+    /// The CPU architecture.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture Architecture {
+      get { return architecture_; }
+      set {
+        architecture_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsVmDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsVmDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VmId != other.VmId) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (SourceId != other.SourceId) return false;
+      if (SourceDescription != other.SourceDescription) return false;
+      if (PowerState != other.PowerState) return false;
+      if (CpuCount != other.CpuCount) return false;
+      if (MemoryMb != other.MemoryMb) return false;
+      if (DiskCount != other.DiskCount) return false;
+      if (CommittedStorageMb != other.CommittedStorageMb) return false;
+      if (OsDescription != other.OsDescription) return false;
+      if (BootOption != other.BootOption) return false;
+      if (InstanceType != other.InstanceType) return false;
+      if (VpcId != other.VpcId) return false;
+      if(!securityGroups_.Equals(other.securityGroups_)) return false;
+      if (!Tags.Equals(other.Tags)) return false;
+      if (Zone != other.Zone) return false;
+      if (VirtualizationType != other.VirtualizationType) return false;
+      if (Architecture != other.Architecture) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VmId.Length != 0) hash ^= VmId.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
+      if (SourceDescription.Length != 0) hash ^= SourceDescription.GetHashCode();
+      if (PowerState != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified) hash ^= PowerState.GetHashCode();
+      if (CpuCount != 0) hash ^= CpuCount.GetHashCode();
+      if (MemoryMb != 0) hash ^= MemoryMb.GetHashCode();
+      if (DiskCount != 0) hash ^= DiskCount.GetHashCode();
+      if (CommittedStorageMb != 0L) hash ^= CommittedStorageMb.GetHashCode();
+      if (OsDescription.Length != 0) hash ^= OsDescription.GetHashCode();
+      if (BootOption != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified) hash ^= BootOption.GetHashCode();
+      if (InstanceType.Length != 0) hash ^= InstanceType.GetHashCode();
+      if (VpcId.Length != 0) hash ^= VpcId.GetHashCode();
+      hash ^= securityGroups_.GetHashCode();
+      hash ^= Tags.GetHashCode();
+      if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (VirtualizationType != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified) hash ^= VirtualizationType.GetHashCode();
+      if (Architecture != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified) hash ^= Architecture.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VmId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VmId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceId);
+      }
+      if (SourceDescription.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SourceDescription);
+      }
+      if (PowerState != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) PowerState);
+      }
+      if (CpuCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CpuCount);
+      }
+      if (MemoryMb != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(MemoryMb);
+      }
+      if (DiskCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DiskCount);
+      }
+      if (CommittedStorageMb != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CommittedStorageMb);
+      }
+      if (OsDescription.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(OsDescription);
+      }
+      if (BootOption != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) BootOption);
+      }
+      if (InstanceType.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(InstanceType);
+      }
+      if (VpcId.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(VpcId);
+      }
+      securityGroups_.WriteTo(output, _repeated_securityGroups_codec);
+      tags_.WriteTo(output, _map_tags_codec);
+      if (Zone.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Zone);
+      }
+      if (VirtualizationType != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) VirtualizationType);
+      }
+      if (Architecture != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) Architecture);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VmId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VmId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceId);
+      }
+      if (SourceDescription.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SourceDescription);
+      }
+      if (PowerState != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) PowerState);
+      }
+      if (CpuCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CpuCount);
+      }
+      if (MemoryMb != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(MemoryMb);
+      }
+      if (DiskCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DiskCount);
+      }
+      if (CommittedStorageMb != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CommittedStorageMb);
+      }
+      if (OsDescription.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(OsDescription);
+      }
+      if (BootOption != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) BootOption);
+      }
+      if (InstanceType.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(InstanceType);
+      }
+      if (VpcId.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(VpcId);
+      }
+      securityGroups_.WriteTo(ref output, _repeated_securityGroups_codec);
+      tags_.WriteTo(ref output, _map_tags_codec);
+      if (Zone.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Zone);
+      }
+      if (VirtualizationType != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) VirtualizationType);
+      }
+      if (Architecture != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) Architecture);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VmId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VmId);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (SourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
+      }
+      if (SourceDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceDescription);
+      }
+      if (PowerState != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PowerState);
+      }
+      if (CpuCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuCount);
+      }
+      if (MemoryMb != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MemoryMb);
+      }
+      if (DiskCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DiskCount);
+      }
+      if (CommittedStorageMb != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CommittedStorageMb);
+      }
+      if (OsDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OsDescription);
+      }
+      if (BootOption != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BootOption);
+      }
+      if (InstanceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceType);
+      }
+      if (VpcId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcId);
+      }
+      size += securityGroups_.CalculateSize(_repeated_securityGroups_codec);
+      size += tags_.CalculateSize(_map_tags_codec);
+      if (Zone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (VirtualizationType != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VirtualizationType);
+      }
+      if (Architecture != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Architecture);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsVmDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VmId.Length != 0) {
+        VmId = other.VmId;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.SourceId.Length != 0) {
+        SourceId = other.SourceId;
+      }
+      if (other.SourceDescription.Length != 0) {
+        SourceDescription = other.SourceDescription;
+      }
+      if (other.PowerState != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState.Unspecified) {
+        PowerState = other.PowerState;
+      }
+      if (other.CpuCount != 0) {
+        CpuCount = other.CpuCount;
+      }
+      if (other.MemoryMb != 0) {
+        MemoryMb = other.MemoryMb;
+      }
+      if (other.DiskCount != 0) {
+        DiskCount = other.DiskCount;
+      }
+      if (other.CommittedStorageMb != 0L) {
+        CommittedStorageMb = other.CommittedStorageMb;
+      }
+      if (other.OsDescription.Length != 0) {
+        OsDescription = other.OsDescription;
+      }
+      if (other.BootOption != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption.Unspecified) {
+        BootOption = other.BootOption;
+      }
+      if (other.InstanceType.Length != 0) {
+        InstanceType = other.InstanceType;
+      }
+      if (other.VpcId.Length != 0) {
+        VpcId = other.VpcId;
+      }
+      securityGroups_.Add(other.securityGroups_);
+      tags_.Add(other.tags_);
+      if (other.Zone.Length != 0) {
+        Zone = other.Zone;
+      }
+      if (other.VirtualizationType != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType.Unspecified) {
+        VirtualizationType = other.VirtualizationType;
+      }
+      if (other.Architecture != global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture.Unspecified) {
+        Architecture = other.Architecture;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VmId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 34: {
+            SourceDescription = input.ReadString();
+            break;
+          }
+          case 40: {
+            PowerState = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            CpuCount = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            MemoryMb = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DiskCount = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CommittedStorageMb = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            OsDescription = input.ReadString();
+            break;
+          }
+          case 88: {
+            BootOption = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            InstanceType = input.ReadString();
+            break;
+          }
+          case 106: {
+            VpcId = input.ReadString();
+            break;
+          }
+          case 114: {
+            securityGroups_.AddEntriesFrom(input, _repeated_securityGroups_codec);
+            break;
+          }
+          case 122: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
+            break;
+          }
+          case 130: {
+            Zone = input.ReadString();
+            break;
+          }
+          case 136: {
+            VirtualizationType = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            Architecture = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VmId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 34: {
+            SourceDescription = input.ReadString();
+            break;
+          }
+          case 40: {
+            PowerState = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.PowerState) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            CpuCount = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            MemoryMb = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DiskCount = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CommittedStorageMb = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            OsDescription = input.ReadString();
+            break;
+          }
+          case 88: {
+            BootOption = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.BootOption) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            InstanceType = input.ReadString();
+            break;
+          }
+          case 106: {
+            VpcId = input.ReadString();
+            break;
+          }
+          case 114: {
+            securityGroups_.AddEntriesFrom(ref input, _repeated_securityGroups_codec);
+            break;
+          }
+          case 122: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
+            break;
+          }
+          case 130: {
+            Zone = input.ReadString();
+            break;
+          }
+          case 136: {
+            VirtualizationType = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmVirtualizationType) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            Architecture = (global::Google.Cloud.VMMigration.V1.AwsVmDetails.Types.VmArchitecture) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AwsVmDetails message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible values for the power state of the VM.
+      /// </summary>
+      public enum PowerState {
+        /// <summary>
+        /// Power state is not specified.
+        /// </summary>
+        [pbr::OriginalName("POWER_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The VM is turned on.
+        /// </summary>
+        [pbr::OriginalName("ON")] On = 1,
+        /// <summary>
+        /// The VM is turned off.
+        /// </summary>
+        [pbr::OriginalName("OFF")] Off = 2,
+        /// <summary>
+        /// The VM is suspended. This is similar to hibernation or sleep
+        /// mode.
+        /// </summary>
+        [pbr::OriginalName("SUSPENDED")] Suspended = 3,
+        /// <summary>
+        /// The VM is starting.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 4,
+      }
+
+      /// <summary>
+      /// The possible values for the vm boot option.
+      /// </summary>
+      public enum BootOption {
+        /// <summary>
+        /// The boot option is unknown.
+        /// </summary>
+        [pbr::OriginalName("BOOT_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The boot option is UEFI.
+        /// </summary>
+        [pbr::OriginalName("EFI")] Efi = 1,
+        /// <summary>
+        /// The boot option is LEGACY-BIOS.
+        /// </summary>
+        [pbr::OriginalName("BIOS")] Bios = 2,
+      }
+
+      /// <summary>
+      /// Possible values for the virtualization types of the VM.
+      /// </summary>
+      public enum VmVirtualizationType {
+        /// <summary>
+        /// The virtualization type is unknown.
+        /// </summary>
+        [pbr::OriginalName("VM_VIRTUALIZATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The virtualziation type is HVM.
+        /// </summary>
+        [pbr::OriginalName("HVM")] Hvm = 1,
+        /// <summary>
+        /// The virtualziation type is PARAVIRTUAL.
+        /// </summary>
+        [pbr::OriginalName("PARAVIRTUAL")] Paravirtual = 2,
+      }
+
+      /// <summary>
+      /// Possible values for the architectures of the VM.
+      /// </summary>
+      public enum VmArchitecture {
+        /// <summary>
+        /// The architecture is unknown.
+        /// </summary>
+        [pbr::OriginalName("VM_ARCHITECTURE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The architecture is I386.
+        /// </summary>
+        [pbr::OriginalName("I386")] I386 = 1,
+        /// <summary>
+        /// The architecture is X86_64.
+        /// </summary>
+        [pbr::OriginalName("X86_64")] X8664 = 2,
+        /// <summary>
+        /// The architecture is ARM64.
+        /// </summary>
+        [pbr::OriginalName("ARM64")] Arm64 = 3,
+        /// <summary>
+        /// The architecture is X86_64_MAC.
+        /// </summary>
+        [pbr::OriginalName("X86_64_MAC")] X8664Mac = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// AwsSecurityGroup describes a security group of an AWS VM.
+  /// </summary>
+  public sealed partial class AwsSecurityGroup : pb::IMessage<AwsSecurityGroup>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsSecurityGroup> _parser = new pb::MessageParser<AwsSecurityGroup>(() => new AwsSecurityGroup());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsSecurityGroup> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSecurityGroup() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSecurityGroup(AwsSecurityGroup other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSecurityGroup Clone() {
+      return new AwsSecurityGroup(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// The AWS security group id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// The AWS security group name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsSecurityGroup);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsSecurityGroup other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsSecurityGroup other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// VmwareVmsDetails describes VMs in vCenter.
   /// </summary>
   public sealed partial class VmwareVmsDetails : pb::IMessage<VmwareVmsDetails>
@@ -10273,7 +15842,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10441,6 +16010,190 @@ namespace Google.Cloud.VMMigration.V1 {
   }
 
   /// <summary>
+  /// AWSVmsDetails describes VMs in AWS.
+  /// </summary>
+  public sealed partial class AwsVmsDetails : pb::IMessage<AwsVmsDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsVmsDetails> _parser = new pb::MessageParser<AwsVmsDetails>(() => new AwsVmsDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsVmsDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[39]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmsDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmsDetails(AwsVmsDetails other) : this() {
+      details_ = other.details_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsVmsDetails Clone() {
+      return new AwsVmsDetails(this);
+    }
+
+    /// <summary>Field number for the "details" field.</summary>
+    public const int DetailsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.AwsVmDetails> _repeated_details_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VMMigration.V1.AwsVmDetails.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsVmDetails> details_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsVmDetails>();
+    /// <summary>
+    /// The details of the AWS VMs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.AwsVmDetails> Details {
+      get { return details_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsVmsDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsVmsDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!details_.Equals(other.details_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= details_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      details_.WriteTo(output, _repeated_details_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      details_.WriteTo(ref output, _repeated_details_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += details_.CalculateSize(_repeated_details_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsVmsDetails other) {
+      if (other == null) {
+        return;
+      }
+      details_.Add(other.details_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            details_.AddEntriesFrom(input, _repeated_details_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            details_.AddEntriesFrom(ref input, _repeated_details_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Response message for
   /// [fetchInventory][google.cloud.vmmigration.v1.VmMigration.FetchInventory].
   /// </summary>
@@ -10458,7 +16211,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10482,6 +16235,9 @@ namespace Google.Cloud.VMMigration.V1 {
       switch (other.SourceVmsCase) {
         case SourceVmsOneofCase.VmwareVms:
           VmwareVms = other.VmwareVms.Clone();
+          break;
+        case SourceVmsOneofCase.AwsVms:
+          AwsVms = other.AwsVms.Clone();
           break;
       }
 
@@ -10509,6 +16265,21 @@ namespace Google.Cloud.VMMigration.V1 {
       }
     }
 
+    /// <summary>Field number for the "aws_vms" field.</summary>
+    public const int AwsVmsFieldNumber = 3;
+    /// <summary>
+    /// The description of the VMs in a Source of type AWS.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsVmsDetails AwsVms {
+      get { return sourceVmsCase_ == SourceVmsOneofCase.AwsVms ? (global::Google.Cloud.VMMigration.V1.AwsVmsDetails) sourceVms_ : null; }
+      set {
+        sourceVms_ = value;
+        sourceVmsCase_ = value == null ? SourceVmsOneofCase.None : SourceVmsOneofCase.AwsVms;
+      }
+    }
+
     /// <summary>Field number for the "update_time" field.</summary>
     public const int UpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
@@ -10530,6 +16301,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public enum SourceVmsOneofCase {
       None = 0,
       VmwareVms = 1,
+      AwsVms = 3,
     }
     private SourceVmsOneofCase sourceVmsCase_ = SourceVmsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10561,6 +16333,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return true;
       }
       if (!object.Equals(VmwareVms, other.VmwareVms)) return false;
+      if (!object.Equals(AwsVms, other.AwsVms)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (SourceVmsCase != other.SourceVmsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -10571,6 +16344,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (sourceVmsCase_ == SourceVmsOneofCase.VmwareVms) hash ^= VmwareVms.GetHashCode();
+      if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) hash ^= AwsVms.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) sourceVmsCase_;
       if (_unknownFields != null) {
@@ -10599,6 +16373,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateTime);
       }
+      if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AwsVms);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10617,6 +16395,10 @@ namespace Google.Cloud.VMMigration.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateTime);
       }
+      if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AwsVms);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10629,6 +16411,9 @@ namespace Google.Cloud.VMMigration.V1 {
       int size = 0;
       if (sourceVmsCase_ == SourceVmsOneofCase.VmwareVms) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VmwareVms);
+      }
+      if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AwsVms);
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
@@ -10657,6 +16442,12 @@ namespace Google.Cloud.VMMigration.V1 {
             VmwareVms = new global::Google.Cloud.VMMigration.V1.VmwareVmsDetails();
           }
           VmwareVms.MergeFrom(other.VmwareVms);
+          break;
+        case SourceVmsOneofCase.AwsVms:
+          if (AwsVms == null) {
+            AwsVms = new global::Google.Cloud.VMMigration.V1.AwsVmsDetails();
+          }
+          AwsVms.MergeFrom(other.AwsVms);
           break;
       }
 
@@ -10691,6 +16482,15 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.AwsVmsDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsVmsDetails();
+            if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) {
+              subBuilder.MergeFrom(AwsVms);
+            }
+            input.ReadMessage(subBuilder);
+            AwsVms = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -10722,6 +16522,15 @@ namespace Google.Cloud.VMMigration.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 26: {
+            global::Google.Cloud.VMMigration.V1.AwsVmsDetails subBuilder = new global::Google.Cloud.VMMigration.V1.AwsVmsDetails();
+            if (sourceVmsCase_ == SourceVmsOneofCase.AwsVms) {
+              subBuilder.MergeFrom(AwsVms);
+            }
+            input.ReadMessage(subBuilder);
+            AwsVms = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -10747,7 +16556,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11387,7 +17196,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11714,7 +17523,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12191,7 +18000,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12594,7 +18403,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12848,7 +18657,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13084,7 +18893,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13425,7 +19234,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13672,7 +19481,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13926,7 +19735,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14121,7 +19930,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14460,7 +20269,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14707,7 +20516,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14954,7 +20763,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15109,7 +20918,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15473,7 +21282,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16314,7 +22123,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16380,7 +22189,7 @@ namespace Google.Cloud.VMMigration.V1 {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// The GCP target project ID or project name.
+    /// The Google Cloud target project ID or project name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17153,7 +22962,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17470,7 +23279,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17708,7 +23517,7 @@ namespace Google.Cloud.VMMigration.V1 {
         /// </summary>
         [pbr::OriginalName("PAYG")] Payg = 2,
         /// <summary>
-        /// The license type is is Bring Your Own License type.
+        /// The license type is Bring Your Own License type.
         /// </summary>
         [pbr::OriginalName("BYOL")] Byol = 3,
       }
@@ -17737,7 +23546,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18030,7 +23839,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18387,7 +24196,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18633,7 +24442,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18969,7 +24778,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19371,7 +25180,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[51]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19625,7 +25434,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[52]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19860,7 +25669,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[53]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20169,7 +25978,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[54]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20364,7 +26173,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[55]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20559,7 +26368,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[70]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20714,7 +26523,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[71]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20909,7 +26718,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[72]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21064,7 +26873,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[73]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21259,7 +27068,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[74]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21414,7 +27223,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[75]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21609,7 +27418,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[76]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21765,7 +27574,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[77]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22139,7 +27948,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[78]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22334,7 +28143,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[79]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22696,7 +28505,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[80]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22950,7 +28759,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[81]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23286,7 +29095,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[82]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23595,7 +29404,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[69]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[83]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23843,7 +29652,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[70]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[84]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24216,7 +30025,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[71]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[85]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24578,7 +30387,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[72]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[86]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24832,7 +30641,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[73]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[87]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25027,7 +30836,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[74]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[88]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25363,7 +31172,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[75]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[89]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25672,7 +31481,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[76]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[90]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25919,7 +31728,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[77]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[91]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26154,7 +31963,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[78]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[92]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26309,7 +32118,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[79]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[93]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26544,7 +32353,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[80]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[94]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26699,7 +32508,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[81]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[95]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27035,7 +32844,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[82]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[96]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27230,7 +33039,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[83]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[97]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27385,7 +33194,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[84]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[98]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27747,7 +33556,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[85]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[99]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28001,7 +33810,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[86]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[100]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28196,7 +34005,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[87]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[101]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28655,7 +34464,7 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[88]; }
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[102]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29063,6 +34872,1078 @@ namespace Google.Cloud.VMMigration.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Represent the source AWS VM details.
+  /// </summary>
+  public sealed partial class AwsSourceVmDetails : pb::IMessage<AwsSourceVmDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsSourceVmDetails> _parser = new pb::MessageParser<AwsSourceVmDetails>(() => new AwsSourceVmDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsSourceVmDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[103]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceVmDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceVmDetails(AwsSourceVmDetails other) : this() {
+      firmware_ = other.firmware_;
+      committedStorageBytes_ = other.committedStorageBytes_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsSourceVmDetails Clone() {
+      return new AwsSourceVmDetails(this);
+    }
+
+    /// <summary>Field number for the "firmware" field.</summary>
+    public const int FirmwareFieldNumber = 1;
+    private global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware firmware_ = global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified;
+    /// <summary>
+    /// The firmware type of the source VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware Firmware {
+      get { return firmware_; }
+      set {
+        firmware_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "committed_storage_bytes" field.</summary>
+    public const int CommittedStorageBytesFieldNumber = 2;
+    private long committedStorageBytes_;
+    /// <summary>
+    /// The total size of the disks being migrated in bytes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CommittedStorageBytes {
+      get { return committedStorageBytes_; }
+      set {
+        committedStorageBytes_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsSourceVmDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsSourceVmDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Firmware != other.Firmware) return false;
+      if (CommittedStorageBytes != other.CommittedStorageBytes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Firmware != global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified) hash ^= Firmware.GetHashCode();
+      if (CommittedStorageBytes != 0L) hash ^= CommittedStorageBytes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Firmware != global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Firmware);
+      }
+      if (CommittedStorageBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(CommittedStorageBytes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Firmware != global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Firmware);
+      }
+      if (CommittedStorageBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(CommittedStorageBytes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Firmware != global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Firmware);
+      }
+      if (CommittedStorageBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CommittedStorageBytes);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsSourceVmDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Firmware != global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware.Unspecified) {
+        Firmware = other.Firmware;
+      }
+      if (other.CommittedStorageBytes != 0L) {
+        CommittedStorageBytes = other.CommittedStorageBytes;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Firmware = (global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            CommittedStorageBytes = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Firmware = (global::Google.Cloud.VMMigration.V1.AwsSourceVmDetails.Types.Firmware) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            CommittedStorageBytes = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AwsSourceVmDetails message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible values for AWS VM firmware.
+      /// </summary>
+      public enum Firmware {
+        /// <summary>
+        /// The firmware is unknown.
+        /// </summary>
+        [pbr::OriginalName("FIRMWARE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The firmware is EFI.
+        /// </summary>
+        [pbr::OriginalName("EFI")] Efi = 1,
+        /// <summary>
+        /// The firmware is BIOS.
+        /// </summary>
+        [pbr::OriginalName("BIOS")] Bios = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Request message for 'LisReplicationCyclesRequest' request.
+  /// </summary>
+  public sealed partial class ListReplicationCyclesRequest : pb::IMessage<ListReplicationCyclesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListReplicationCyclesRequest> _parser = new pb::MessageParser<ListReplicationCyclesRequest>(() => new ListReplicationCyclesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListReplicationCyclesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[104]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesRequest(ListReplicationCyclesRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesRequest Clone() {
+      return new ListReplicationCyclesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of ReplicationCycles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of replication cycles to return. The service
+    /// may return fewer than this value. If unspecified, at most 100 migrating VMs
+    /// will be returned. The maximum value is 100; values above 100 will be
+    /// coerced to 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Required. A page token, received from a previous `ListReplicationCycles`
+    /// call. Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to `ListReplicationCycles`
+    /// must match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. The filter request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. the order by fields for the result.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListReplicationCyclesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListReplicationCyclesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListReplicationCyclesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for 'ListReplicationCycles' request.
+  /// </summary>
+  public sealed partial class ListReplicationCyclesResponse : pb::IMessage<ListReplicationCyclesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListReplicationCyclesResponse> _parser = new pb::MessageParser<ListReplicationCyclesResponse>(() => new ListReplicationCyclesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListReplicationCyclesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[105]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesResponse(ListReplicationCyclesResponse other) : this() {
+      replicationCycles_ = other.replicationCycles_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReplicationCyclesResponse Clone() {
+      return new ListReplicationCyclesResponse(this);
+    }
+
+    /// <summary>Field number for the "replication_cycles" field.</summary>
+    public const int ReplicationCyclesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VMMigration.V1.ReplicationCycle> _repeated_replicationCycles_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VMMigration.V1.ReplicationCycle.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.ReplicationCycle> replicationCycles_ = new pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.ReplicationCycle>();
+    /// <summary>
+    /// Output only. The list of replication cycles response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VMMigration.V1.ReplicationCycle> ReplicationCycles {
+      get { return replicationCycles_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Output only. A token, which can be sent as `page_token` to retrieve the
+    /// next page. If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListReplicationCyclesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListReplicationCyclesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!replicationCycles_.Equals(other.replicationCycles_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= replicationCycles_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      replicationCycles_.WriteTo(output, _repeated_replicationCycles_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      replicationCycles_.WriteTo(ref output, _repeated_replicationCycles_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += replicationCycles_.CalculateSize(_repeated_replicationCycles_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListReplicationCyclesResponse other) {
+      if (other == null) {
+        return;
+      }
+      replicationCycles_.Add(other.replicationCycles_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            replicationCycles_.AddEntriesFrom(input, _repeated_replicationCycles_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            replicationCycles_.AddEntriesFrom(ref input, _repeated_replicationCycles_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for 'GetReplicationCycle' request.
+  /// </summary>
+  public sealed partial class GetReplicationCycleRequest : pb::IMessage<GetReplicationCycleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetReplicationCycleRequest> _parser = new pb::MessageParser<GetReplicationCycleRequest>(() => new GetReplicationCycleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetReplicationCycleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VMMigration.V1.VmmigrationReflection.Descriptor.MessageTypes[106]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReplicationCycleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReplicationCycleRequest(GetReplicationCycleRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReplicationCycleRequest Clone() {
+      return new GetReplicationCycleRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the ReplicationCycle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetReplicationCycleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetReplicationCycleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetReplicationCycleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
