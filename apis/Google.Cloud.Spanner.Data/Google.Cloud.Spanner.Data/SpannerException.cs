@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -92,6 +92,11 @@ namespace Google.Cloud.Spanner.Data
         /// be present, even if this exception is retryable.
         /// </summary>
         public TimeSpan? RecommendedRetryDelay { get; }
+
+        /// <summary>
+        /// Gets the underlying <see cref="Grpc.Core.RpcException"/>.
+        /// </summary>
+        public RpcException RpcException => InnerException as RpcException;
 
         // For retrying aborted commits, we need to diferentiate whether the operation
         // was aborted due to a session expiry. If the session expired we cannot
