@@ -94,7 +94,8 @@ namespace Google.Cloud.Spanner.Data
         public TimeSpan? RecommendedRetryDelay { get; }
 
         /// <summary>
-        /// Gets the underlying <see cref="Grpc.Core.RpcException"/>.
+        /// Returns the underlying <see cref="Grpc.Core.RpcException"/>. The returned value
+        /// may be null if the <see cref="SpannerException"/> was not caused by an RpcException.
         /// </summary>
         public RpcException RpcException => InnerException as RpcException;
 

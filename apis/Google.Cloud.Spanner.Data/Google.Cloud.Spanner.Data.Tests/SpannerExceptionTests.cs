@@ -21,24 +21,22 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerExceptionTests
 {
-    private static readonly Status s_status = new Status(StatusCode.InvalidArgument, "Bad request");
-
     [Fact]
     public void SpannerExceptionContainsRpcExceptionAsInnerException()
     {
+        var status = new Status(StatusCode.InvalidArgument, "Bad request");
+
         var rpcExceptionMessage = "Test RpcException Message";
-        var rpcexception = new RpcException(s_status, rpcExceptionMessage);
+        var rpcException = new RpcException(status, rpcExceptionMessage);
 
-        var spannerExceptionWithInnerExcpetion_1 = new SpannerException(rpcexception);
-        var spannerExceptionWithInnerExcpetion_2 = new SpannerException(ErrorCode.InvalidArgument, rpcexception);
+        var spannerExceptionWithInnerExcpetion1 = new SpannerException(rpcException);
+        var spannerExceptionWithInnerExcpetion2 = new SpannerException(ErrorCode.InvalidArgument, rpcException);
 
-        var spannerExceptionWithoutInnerExcpetion = new SpannerException(ErrorCode.InvalidArgument, "Invalid Argument Message");
+        var spannerExceptionWithoutInnerException = new SpannerException(ErrorCode.InvalidArgument, "Invalid Argument Message");
 
-        Assert.NotNull(spannerExceptionWithInnerExcpetion_1.RpcException);
-        Assert.Equal(rpcExceptionMessage, spannerExceptionWithInnerExcpetion_1.RpcException.Message);
-        Assert.NotNull(spannerExceptionWithInnerExcpetion_2.RpcException);
-        Assert.Equal(rpcExceptionMessage, spannerExceptionWithInnerExcpetion_2.RpcException.Message);
+        Assert.Same(rpcException, spannerExceptionWithInnerExcpetion1.RpcException);
+        Assert.Same(rpcException, spannerExceptionWithInnerExcpetion2.RpcException);
 
-        Assert.Null(spannerExceptionWithoutInnerExcpetion.RpcException);
+        Assert.Null(spannerExceptionWithoutInnerException.RpcException);
     }
 }
