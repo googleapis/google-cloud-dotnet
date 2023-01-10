@@ -38,66 +38,71 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS9jbG91ZC9haXBsYXRmb3JtL3YxL3VubWFuYWdlZF9jb250YWluZXJfbW9k",
             "ZWwucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
-            "LnByb3RvItIRChJCYXRjaFByZWRpY3Rpb25Kb2ISEQoEbmFtZRgBIAEoCUID",
+            "LnByb3RvIpgTChJCYXRjaFByZWRpY3Rpb25Kb2ISEQoEbmFtZRgBIAEoCUID",
             "4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjMKBW1vZGVsGAMgASgJ",
             "QiT6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHQoQbW9k",
             "ZWxfdmVyc2lvbl9pZBgeIAEoCUID4EEDElYKGXVubWFuYWdlZF9jb250YWlu",
             "ZXJfbW9kZWwYHCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5V",
             "bm1hbmFnZWRDb250YWluZXJNb2RlbBJVCgxpbnB1dF9jb25maWcYBCABKAsy",
             "Oi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaFByZWRpY3Rpb25K",
-            "b2IuSW5wdXRDb25maWdCA+BBAhIwChBtb2RlbF9wYXJhbWV0ZXJzGAUgASgL",
-            "MhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlElcKDW91dHB1dF9jb25maWcYBiAB",
-            "KAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaFByZWRpY3Rp",
-            "b25Kb2IuT3V0cHV0Q29uZmlnQgPgQQISUAoTZGVkaWNhdGVkX3Jlc291cmNl",
-            "cxgHIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJhdGNoRGVk",
-            "aWNhdGVkUmVzb3VyY2VzEhcKD3NlcnZpY2VfYWNjb3VudBgdIAEoCRJkCh5t",
-            "YW51YWxfYmF0Y2hfdHVuaW5nX3BhcmFtZXRlcnMYCCABKAsyNy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5NYW51YWxCYXRjaFR1bmluZ1BhcmFtZXRl",
-            "cnNCA+BBBRIcChRnZW5lcmF0ZV9leHBsYW5hdGlvbhgXIAEoCBJFChBleHBs",
-            "YW5hdGlvbl9zcGVjGBkgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuRXhwbGFuYXRpb25TcGVjElMKC291dHB1dF9pbmZvGAkgASgLMjkuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmF0Y2hQcmVkaWN0aW9uSm9iLk91",
-            "dHB1dEluZm9CA+BBAxI4CgVzdGF0ZRgKIAEoDjIkLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkpvYlN0YXRlQgPgQQMSJgoFZXJyb3IYCyABKAsyEi5n",
-            "b29nbGUucnBjLlN0YXR1c0ID4EEDEjEKEHBhcnRpYWxfZmFpbHVyZXMYDCAD",
-            "KAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEk4KEnJlc291cmNlc19jb25z",
-            "dW1lZBgNIAEoCzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlc291",
-            "cmNlc0NvbnN1bWVkQgPgQQMSSgoQY29tcGxldGlvbl9zdGF0cxgOIAEoCzIr",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNvbXBsZXRpb25TdGF0c0ID",
-            "4EEDEjQKC2NyZWF0ZV90aW1lGA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYECABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYESABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYEiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSSgoGbGFiZWxz",
-            "GBMgAygLMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmF0Y2hQcmVk",
-            "aWN0aW9uSm9iLkxhYmVsc0VudHJ5EkMKD2VuY3J5cHRpb25fc3BlYxgYIAEo",
-            "CzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25TcGVj",
-            "GroBCgtJbnB1dENvbmZpZxI7CgpnY3Nfc291cmNlGAIgASgLMiUuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzU291cmNlSAASRQoPYmlncXVlcnlf",
-            "c291cmNlGAMgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmln",
-            "UXVlcnlTb3VyY2VIABIdChBpbnN0YW5jZXNfZm9ybWF0GAEgASgJQgPgQQJC",
-            "CAoGc291cmNlGtYBCgxPdXRwdXRDb25maWcSRQoPZ2NzX2Rlc3RpbmF0aW9u",
-            "GAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGlu",
-            "YXRpb25IABJPChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgDIAEoCzIvLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IABIf",
-            "ChJwcmVkaWN0aW9uc19mb3JtYXQYASABKAlCA+BBAkINCgtkZXN0aW5hdGlv",
-            "bhqQAQoKT3V0cHV0SW5mbxIjChRnY3Nfb3V0cHV0X2RpcmVjdG9yeRgBIAEo",
-            "CUID4EEDSAASJgoXYmlncXVlcnlfb3V0cHV0X2RhdGFzZXQYAiABKAlCA+BB",
-            "A0gAEiIKFWJpZ3F1ZXJ5X291dHB1dF90YWJsZRgEIAEoCUID4EEDQhEKD291",
-            "dHB1dF9sb2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBOoYB6kGCAQosYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
-            "LmNvbS9CYXRjaFByZWRpY3Rpb25Kb2ISUnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9iYXRjaFByZWRpY3Rpb25Kb2JzL3tiYXRj",
-            "aF9wcmVkaWN0aW9uX2pvYn1C2wEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MUIXQmF0Y2hQcmVkaWN0aW9uSm9iUHJvdG9QAVpEZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3Jt",
-            "L3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b2IuSW5wdXRDb25maWdCA+BBAhJWCg9pbnN0YW5jZV9jb25maWcYGyABKAsy",
+            "PS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaFByZWRpY3Rpb25K",
+            "b2IuSW5zdGFuY2VDb25maWcSMAoQbW9kZWxfcGFyYW1ldGVycxgFIAEoCzIW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRJXCg1vdXRwdXRfY29uZmlnGAYgASgL",
+            "MjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmF0Y2hQcmVkaWN0aW9u",
+            "Sm9iLk91dHB1dENvbmZpZ0ID4EECElAKE2RlZGljYXRlZF9yZXNvdXJjZXMY",
+            "ByABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaERlZGlj",
+            "YXRlZFJlc291cmNlcxIXCg9zZXJ2aWNlX2FjY291bnQYHSABKAkSZAoebWFu",
+            "dWFsX2JhdGNoX3R1bmluZ19wYXJhbWV0ZXJzGAggASgLMjcuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuTWFudWFsQmF0Y2hUdW5pbmdQYXJhbWV0ZXJz",
+            "QgPgQQUSHAoUZ2VuZXJhdGVfZXhwbGFuYXRpb24YFyABKAgSRQoQZXhwbGFu",
+            "YXRpb25fc3BlYxgZIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkV4cGxhbmF0aW9uU3BlYxJTCgtvdXRwdXRfaW5mbxgJIAEoCzI5Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJhdGNoUHJlZGljdGlvbkpvYi5PdXRw",
+            "dXRJbmZvQgPgQQMSOAoFc3RhdGUYCiABKA4yJC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5Kb2JTdGF0ZUID4EEDEiYKBWVycm9yGAsgASgLMhIuZ29v",
+            "Z2xlLnJwYy5TdGF0dXNCA+BBAxIxChBwYXJ0aWFsX2ZhaWx1cmVzGAwgAygL",
+            "MhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJOChJyZXNvdXJjZXNfY29uc3Vt",
+            "ZWQYDSABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZXNvdXJj",
+            "ZXNDb25zdW1lZEID4EEDEkoKEGNvbXBsZXRpb25fc3RhdHMYDiABKAsyKy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Db21wbGV0aW9uU3RhdHNCA+BB",
+            "AxI0CgtjcmVhdGVfdGltZRgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIzCgpzdGFydF90aW1lGBAgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGBEgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGBIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkoKBmxhYmVscxgT",
+            "IAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJhdGNoUHJlZGlj",
+            "dGlvbkpvYi5MYWJlbHNFbnRyeRJDCg9lbmNyeXB0aW9uX3NwZWMYGCABKAsy",
+            "Ki5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxq6",
+            "AQoLSW5wdXRDb25maWcSOwoKZ2NzX3NvdXJjZRgCIAEoCzIlLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkdjc1NvdXJjZUgAEkUKD2JpZ3F1ZXJ5X3Nv",
+            "dXJjZRgDIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1",
+            "ZXJ5U291cmNlSAASHQoQaW5zdGFuY2VzX2Zvcm1hdBgBIAEoCUID4EECQggK",
+            "BnNvdXJjZRpsCg5JbnN0YW5jZUNvbmZpZxIVCg1pbnN0YW5jZV90eXBlGAEg",
+            "ASgJEhEKCWtleV9maWVsZBgCIAEoCRIXCg9pbmNsdWRlZF9maWVsZHMYAyAD",
+            "KAkSFwoPZXhjbHVkZWRfZmllbGRzGAQgAygJGtYBCgxPdXRwdXRDb25maWcS",
+            "RQoPZ2NzX2Rlc3RpbmF0aW9uGAIgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuR2NzRGVzdGluYXRpb25IABJPChRiaWdxdWVyeV9kZXN0aW5h",
+            "dGlvbhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1",
+            "ZXJ5RGVzdGluYXRpb25IABIfChJwcmVkaWN0aW9uc19mb3JtYXQYASABKAlC",
+            "A+BBAkINCgtkZXN0aW5hdGlvbhqQAQoKT3V0cHV0SW5mbxIjChRnY3Nfb3V0",
+            "cHV0X2RpcmVjdG9yeRgBIAEoCUID4EEDSAASJgoXYmlncXVlcnlfb3V0cHV0",
+            "X2RhdGFzZXQYAiABKAlCA+BBA0gAEiIKFWJpZ3F1ZXJ5X291dHB1dF90YWJs",
+            "ZRgEIAEoCUID4EEDQhEKD291dHB1dF9sb2NhdGlvbhotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOoYB6kGCAQosYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9CYXRjaFByZWRpY3Rpb25Kb2ISUnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYXRjaFBy",
+            "ZWRpY3Rpb25Kb2JzL3tiYXRjaF9wcmVkaWN0aW9uX2pvYn1C2wEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIXQmF0Y2hQcmVkaWN0aW9uSm9i",
+            "UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.CompletionStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParametersReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.UnmanagedContainerModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Parser, new[]{ "Name", "DisplayName", "Model", "ModelVersionId", "UnmanagedContainerModel", "InputConfig", "ModelParameters", "OutputConfig", "DedicatedResources", "ServiceAccount", "ManualBatchTuningParameters", "GenerateExplanation", "ExplanationSpec", "OutputInfo", "State", "Error", "PartialFailures", "ResourcesConsumed", "CompletionStats", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig.Parser, new[]{ "GcsSource", "BigquerySource", "InstancesFormat" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Parser, new[]{ "Name", "DisplayName", "Model", "ModelVersionId", "UnmanagedContainerModel", "InputConfig", "InstanceConfig", "ModelParameters", "OutputConfig", "DedicatedResources", "ServiceAccount", "ManualBatchTuningParameters", "GenerateExplanation", "ExplanationSpec", "OutputInfo", "State", "Error", "PartialFailures", "ResourcesConsumed", "CompletionStats", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig.Parser, new[]{ "GcsSource", "BigquerySource", "InstancesFormat" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig.Parser, new[]{ "InstanceType", "KeyField", "IncludedFields", "ExcludedFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputConfig), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination", "PredictionsFormat" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo), global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.OutputInfo.Parser, new[]{ "GcsOutputDirectory", "BigqueryOutputDataset", "BigqueryOutputTable" }, new[]{ "OutputLocation" }, null, null, null),
             null, })
@@ -155,6 +160,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       modelVersionId_ = other.modelVersionId_;
       unmanagedContainerModel_ = other.unmanagedContainerModel_ != null ? other.unmanagedContainerModel_.Clone() : null;
       inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
+      instanceConfig_ = other.instanceConfig_ != null ? other.instanceConfig_.Clone() : null;
       modelParameters_ = other.modelParameters_ != null ? other.modelParameters_.Clone() : null;
       outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
       dedicatedResources_ = other.dedicatedResources_ != null ? other.dedicatedResources_.Clone() : null;
@@ -284,6 +290,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return inputConfig_; }
       set {
         inputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instance_config" field.</summary>
+    public const int InstanceConfigFieldNumber = 27;
+    private global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig instanceConfig_;
+    /// <summary>
+    /// Configuration for how to convert batch prediction input instances to the
+    /// prediction instances that are sent to the Model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig InstanceConfig {
+      get { return instanceConfig_; }
+      set {
+        instanceConfig_ = value;
       }
     }
 
@@ -668,6 +690,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ModelVersionId != other.ModelVersionId) return false;
       if (!object.Equals(UnmanagedContainerModel, other.UnmanagedContainerModel)) return false;
       if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      if (!object.Equals(InstanceConfig, other.InstanceConfig)) return false;
       if (!object.Equals(ModelParameters, other.ModelParameters)) return false;
       if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
       if (!object.Equals(DedicatedResources, other.DedicatedResources)) return false;
@@ -700,6 +723,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ModelVersionId.Length != 0) hash ^= ModelVersionId.GetHashCode();
       if (unmanagedContainerModel_ != null) hash ^= UnmanagedContainerModel.GetHashCode();
       if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      if (instanceConfig_ != null) hash ^= InstanceConfig.GetHashCode();
       if (modelParameters_ != null) hash ^= ModelParameters.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
       if (dedicatedResources_ != null) hash ^= DedicatedResources.GetHashCode();
@@ -819,6 +843,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(ExplanationSpec);
       }
+      if (instanceConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(InstanceConfig);
+      }
       if (unmanagedContainerModel_ != null) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(UnmanagedContainerModel);
@@ -923,6 +951,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(ExplanationSpec);
       }
+      if (instanceConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(InstanceConfig);
+      }
       if (unmanagedContainerModel_ != null) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(UnmanagedContainerModel);
@@ -962,6 +994,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (inputConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      if (instanceConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(InstanceConfig);
       }
       if (modelParameters_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelParameters);
@@ -1051,6 +1086,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           InputConfig = new global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
+      }
+      if (other.instanceConfig_ != null) {
+        if (instanceConfig_ == null) {
+          InstanceConfig = new global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig();
+        }
+        InstanceConfig.MergeFrom(other.InstanceConfig);
       }
       if (other.modelParameters_ != null) {
         if (modelParameters_ == null) {
@@ -1295,6 +1336,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(ExplanationSpec);
             break;
           }
+          case 218: {
+            if (instanceConfig_ == null) {
+              InstanceConfig = new global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig();
+            }
+            input.ReadMessage(InstanceConfig);
+            break;
+          }
           case 226: {
             if (unmanagedContainerModel_ == null) {
               UnmanagedContainerModel = new global::Google.Cloud.AIPlatform.V1.UnmanagedContainerModel();
@@ -1456,6 +1504,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               ExplanationSpec = new global::Google.Cloud.AIPlatform.V1.ExplanationSpec();
             }
             input.ReadMessage(ExplanationSpec);
+            break;
+          }
+          case 218: {
+            if (instanceConfig_ == null) {
+              InstanceConfig = new global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Types.InstanceConfig();
+            }
+            input.ReadMessage(InstanceConfig);
             break;
           }
           case 226: {
@@ -1828,6 +1883,382 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// Configuration defining how to transform batch prediction input instances to
+      /// the instances that the Model accepts.
+      /// </summary>
+      public sealed partial class InstanceConfig : pb::IMessage<InstanceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<InstanceConfig> _parser = new pb::MessageParser<InstanceConfig>(() => new InstanceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<InstanceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceConfig(InstanceConfig other) : this() {
+          instanceType_ = other.instanceType_;
+          keyField_ = other.keyField_;
+          includedFields_ = other.includedFields_.Clone();
+          excludedFields_ = other.excludedFields_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceConfig Clone() {
+          return new InstanceConfig(this);
+        }
+
+        /// <summary>Field number for the "instance_type" field.</summary>
+        public const int InstanceTypeFieldNumber = 1;
+        private string instanceType_ = "";
+        /// <summary>
+        /// The format of the instance that the Model accepts. Vertex AI will
+        /// convert compatible
+        /// [batch prediction input instance
+        /// formats][google.cloud.aiplatform.v1.BatchPredictionJob.InputConfig.instances_format]
+        /// to the specified format.
+        ///
+        /// Supported values are:
+        ///
+        /// * `object`: Each input is converted to JSON object format.
+        ///     * For `bigquery`, each row is converted to an object.
+        ///     * For `jsonl`, each line of the JSONL input must be an object.
+        ///     * Does not apply to `csv`, `file-list`, `tf-record`, or
+        ///       `tf-record-gzip`.
+        ///
+        /// * `array`: Each input is converted to JSON array format.
+        ///     * For `bigquery`, each row is converted to an array. The order
+        ///       of columns is determined by the BigQuery column order, unless
+        ///       [included_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.included_fields]
+        ///       is populated.
+        ///       [included_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.included_fields]
+        ///       must be populated for specifying field orders.
+        ///     * For `jsonl`, if each line of the JSONL input is an object,
+        ///       [included_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.included_fields]
+        ///       must be populated for specifying field orders.
+        ///     * Does not apply to `csv`, `file-list`, `tf-record`, or
+        ///       `tf-record-gzip`.
+        ///
+        /// If not specified, Vertex AI converts the batch prediction input as
+        /// follows:
+        ///
+        ///  * For `bigquery` and `csv`, the behavior is the same as `array`. The
+        ///    order of columns is the same as defined in the file or table, unless
+        ///    [included_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.included_fields]
+        ///    is populated.
+        ///  * For `jsonl`, the prediction instance format is determined by
+        ///    each line of the input.
+        ///  * For `tf-record`/`tf-record-gzip`, each record will be converted to
+        ///    an object in the format of `{"b64": &lt;value>}`, where `&lt;value>` is
+        ///    the Base64-encoded string of the content of the record.
+        ///  * For `file-list`, each file in the list will be converted to an
+        ///    object in the format of `{"b64": &lt;value>}`, where `&lt;value>` is
+        ///    the Base64-encoded string of the content of the file.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string InstanceType {
+          get { return instanceType_; }
+          set {
+            instanceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "key_field" field.</summary>
+        public const int KeyFieldFieldNumber = 2;
+        private string keyField_ = "";
+        /// <summary>
+        /// The name of the field that is considered as a key.
+        ///
+        /// The values identified by the key field is not included in the transformed
+        /// instances that is sent to the Model. This is similar to
+        /// specifying this name of the field in
+        /// [excluded_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.excluded_fields].
+        /// In addition, the batch prediction output will not include the instances.
+        /// Instead the output will only include the value of the key field, in a
+        /// field named `key` in the output:
+        ///
+        ///  * For `jsonl` output format, the output will have a `key` field
+        ///    instead of the `instance` field.
+        ///  * For `csv`/`bigquery` output format, the output will have have a `key`
+        ///    column instead of the instance feature columns.
+        ///
+        /// The input must be JSONL with objects at each line, CSV, BigQuery
+        /// or TfRecord.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string KeyField {
+          get { return keyField_; }
+          set {
+            keyField_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "included_fields" field.</summary>
+        public const int IncludedFieldsFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_includedFields_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> includedFields_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Fields that will be included in the prediction instance that is
+        /// sent to the Model.
+        ///
+        /// If
+        /// [instance_type][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.instance_type]
+        /// is `array`, the order of field names in included_fields also determines
+        /// the order of the values in the array.
+        ///
+        /// When included_fields is populated,
+        /// [excluded_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.excluded_fields]
+        /// must be empty.
+        ///
+        /// The input must be JSONL with objects at each line, CSV, BigQuery
+        /// or TfRecord.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> IncludedFields {
+          get { return includedFields_; }
+        }
+
+        /// <summary>Field number for the "excluded_fields" field.</summary>
+        public const int ExcludedFieldsFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_excludedFields_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> excludedFields_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Fields that will be excluded in the prediction instance that is
+        /// sent to the Model.
+        ///
+        /// Excluded will be attached to the batch prediction output if
+        /// [key_field][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.key_field]
+        /// is not specified.
+        ///
+        /// When excluded_fields is populated,
+        /// [included_fields][google.cloud.aiplatform.v1.BatchPredictionJob.InstanceConfig.included_fields]
+        /// must be empty.
+        ///
+        /// The input must be JSONL with objects at each line, CSV, BigQuery
+        /// or TfRecord.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExcludedFields {
+          get { return excludedFields_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as InstanceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(InstanceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (InstanceType != other.InstanceType) return false;
+          if (KeyField != other.KeyField) return false;
+          if(!includedFields_.Equals(other.includedFields_)) return false;
+          if(!excludedFields_.Equals(other.excludedFields_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (InstanceType.Length != 0) hash ^= InstanceType.GetHashCode();
+          if (KeyField.Length != 0) hash ^= KeyField.GetHashCode();
+          hash ^= includedFields_.GetHashCode();
+          hash ^= excludedFields_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (InstanceType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(InstanceType);
+          }
+          if (KeyField.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(KeyField);
+          }
+          includedFields_.WriteTo(output, _repeated_includedFields_codec);
+          excludedFields_.WriteTo(output, _repeated_excludedFields_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (InstanceType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(InstanceType);
+          }
+          if (KeyField.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(KeyField);
+          }
+          includedFields_.WriteTo(ref output, _repeated_includedFields_codec);
+          excludedFields_.WriteTo(ref output, _repeated_excludedFields_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (InstanceType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceType);
+          }
+          if (KeyField.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyField);
+          }
+          size += includedFields_.CalculateSize(_repeated_includedFields_codec);
+          size += excludedFields_.CalculateSize(_repeated_excludedFields_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(InstanceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.InstanceType.Length != 0) {
+            InstanceType = other.InstanceType;
+          }
+          if (other.KeyField.Length != 0) {
+            KeyField = other.KeyField;
+          }
+          includedFields_.Add(other.includedFields_);
+          excludedFields_.Add(other.excludedFields_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                InstanceType = input.ReadString();
+                break;
+              }
+              case 18: {
+                KeyField = input.ReadString();
+                break;
+              }
+              case 26: {
+                includedFields_.AddEntriesFrom(input, _repeated_includedFields_codec);
+                break;
+              }
+              case 34: {
+                excludedFields_.AddEntriesFrom(input, _repeated_excludedFields_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                InstanceType = input.ReadString();
+                break;
+              }
+              case 18: {
+                KeyField = input.ReadString();
+                break;
+              }
+              case 26: {
+                includedFields_.AddEntriesFrom(ref input, _repeated_includedFields_codec);
+                break;
+              }
+              case 34: {
+                excludedFields_.AddEntriesFrom(ref input, _repeated_excludedFields_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Configures the output of
       /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob]. See
       /// [Model.supported_output_storage_formats][google.cloud.aiplatform.v1.Model.supported_output_storage_formats]
@@ -1848,7 +2279,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2226,7 +2657,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
