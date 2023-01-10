@@ -492,6 +492,563 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSchemaRevisions</summary>
+        public void ListSchemaRevisionsRequestObject()
+        {
+            // Snippet: ListSchemaRevisions(ListSchemaRevisionsRequest, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                View = SchemaView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Schema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaRevisionsAsync</summary>
+        public async Task ListSchemaRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListSchemaRevisionsAsync(ListSchemaRevisionsRequest, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSchemaRevisionsRequest request = new ListSchemaRevisionsRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                View = SchemaView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Schema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaRevisions</summary>
+        public void ListSchemaRevisions()
+        {
+            // Snippet: ListSchemaRevisions(string, string, int?, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            // Make the request
+            PagedEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisions(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Schema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaRevisionsAsync</summary>
+        public async Task ListSchemaRevisionsAsync()
+        {
+            // Snippet: ListSchemaRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisionsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Schema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaRevisions</summary>
+        public void ListSchemaRevisionsResourceNames()
+        {
+            // Snippet: ListSchemaRevisions(SchemaName, string, int?, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            // Make the request
+            PagedEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisions(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Schema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaRevisionsAsync</summary>
+        public async Task ListSchemaRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListSchemaRevisionsAsync(SchemaName, string, int?, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> response = schemaServiceClient.ListSchemaRevisionsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Schema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Schema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Schema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Schema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchema</summary>
+        public void CommitSchemaRequestObject()
+        {
+            // Snippet: CommitSchema(CommitSchemaRequest, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            CommitSchemaRequest request = new CommitSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                Schema = new Schema(),
+            };
+            // Make the request
+            Schema response = schemaServiceClient.CommitSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchemaAsync</summary>
+        public async Task CommitSchemaRequestObjectAsync()
+        {
+            // Snippet: CommitSchemaAsync(CommitSchemaRequest, CallSettings)
+            // Additional: CommitSchemaAsync(CommitSchemaRequest, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CommitSchemaRequest request = new CommitSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                Schema = new Schema(),
+            };
+            // Make the request
+            Schema response = await schemaServiceClient.CommitSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchema</summary>
+        public void CommitSchema()
+        {
+            // Snippet: CommitSchema(string, Schema, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            Schema schema = new Schema();
+            // Make the request
+            Schema response = schemaServiceClient.CommitSchema(name, schema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchemaAsync</summary>
+        public async Task CommitSchemaAsync()
+        {
+            // Snippet: CommitSchemaAsync(string, Schema, CallSettings)
+            // Additional: CommitSchemaAsync(string, Schema, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            Schema schema = new Schema();
+            // Make the request
+            Schema response = await schemaServiceClient.CommitSchemaAsync(name, schema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchema</summary>
+        public void CommitSchemaResourceNames()
+        {
+            // Snippet: CommitSchema(SchemaName, Schema, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            Schema schema = new Schema();
+            // Make the request
+            Schema response = schemaServiceClient.CommitSchema(name, schema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitSchemaAsync</summary>
+        public async Task CommitSchemaResourceNamesAsync()
+        {
+            // Snippet: CommitSchemaAsync(SchemaName, Schema, CallSettings)
+            // Additional: CommitSchemaAsync(SchemaName, Schema, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            Schema schema = new Schema();
+            // Make the request
+            Schema response = await schemaServiceClient.CommitSchemaAsync(name, schema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchema</summary>
+        public void RollbackSchemaRequestObject()
+        {
+            // Snippet: RollbackSchema(RollbackSchemaRequest, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            RollbackSchemaRequest request = new RollbackSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                RevisionId = "",
+            };
+            // Make the request
+            Schema response = schemaServiceClient.RollbackSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchemaAsync</summary>
+        public async Task RollbackSchemaRequestObjectAsync()
+        {
+            // Snippet: RollbackSchemaAsync(RollbackSchemaRequest, CallSettings)
+            // Additional: RollbackSchemaAsync(RollbackSchemaRequest, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RollbackSchemaRequest request = new RollbackSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                RevisionId = "",
+            };
+            // Make the request
+            Schema response = await schemaServiceClient.RollbackSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchema</summary>
+        public void RollbackSchema()
+        {
+            // Snippet: RollbackSchema(string, string, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            string revisionId = "";
+            // Make the request
+            Schema response = schemaServiceClient.RollbackSchema(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchemaAsync</summary>
+        public async Task RollbackSchemaAsync()
+        {
+            // Snippet: RollbackSchemaAsync(string, string, CallSettings)
+            // Additional: RollbackSchemaAsync(string, string, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            string revisionId = "";
+            // Make the request
+            Schema response = await schemaServiceClient.RollbackSchemaAsync(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchema</summary>
+        public void RollbackSchemaResourceNames()
+        {
+            // Snippet: RollbackSchema(SchemaName, string, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            string revisionId = "";
+            // Make the request
+            Schema response = schemaServiceClient.RollbackSchema(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackSchemaAsync</summary>
+        public async Task RollbackSchemaResourceNamesAsync()
+        {
+            // Snippet: RollbackSchemaAsync(SchemaName, string, CallSettings)
+            // Additional: RollbackSchemaAsync(SchemaName, string, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            string revisionId = "";
+            // Make the request
+            Schema response = await schemaServiceClient.RollbackSchemaAsync(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevision</summary>
+        public void DeleteSchemaRevisionRequestObject()
+        {
+            // Snippet: DeleteSchemaRevision(DeleteSchemaRevisionRequest, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSchemaRevisionRequest request = new DeleteSchemaRevisionRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                RevisionId = "",
+            };
+            // Make the request
+            Schema response = schemaServiceClient.DeleteSchemaRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevisionAsync</summary>
+        public async Task DeleteSchemaRevisionRequestObjectAsync()
+        {
+            // Snippet: DeleteSchemaRevisionAsync(DeleteSchemaRevisionRequest, CallSettings)
+            // Additional: DeleteSchemaRevisionAsync(DeleteSchemaRevisionRequest, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSchemaRevisionRequest request = new DeleteSchemaRevisionRequest
+            {
+                SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                RevisionId = "",
+            };
+            // Make the request
+            Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevision</summary>
+        public void DeleteSchemaRevision()
+        {
+            // Snippet: DeleteSchemaRevision(string, string, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            string revisionId = "";
+            // Make the request
+            Schema response = schemaServiceClient.DeleteSchemaRevision(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevisionAsync</summary>
+        public async Task DeleteSchemaRevisionAsync()
+        {
+            // Snippet: DeleteSchemaRevisionAsync(string, string, CallSettings)
+            // Additional: DeleteSchemaRevisionAsync(string, string, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/schemas/[SCHEMA]";
+            string revisionId = "";
+            // Make the request
+            Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevision</summary>
+        public void DeleteSchemaRevisionResourceNames()
+        {
+            // Snippet: DeleteSchemaRevision(SchemaName, string, CallSettings)
+            // Create client
+            SchemaServiceClient schemaServiceClient = SchemaServiceClient.Create();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            string revisionId = "";
+            // Make the request
+            Schema response = schemaServiceClient.DeleteSchemaRevision(name, revisionId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaRevisionAsync</summary>
+        public async Task DeleteSchemaRevisionResourceNamesAsync()
+        {
+            // Snippet: DeleteSchemaRevisionAsync(SchemaName, string, CallSettings)
+            // Additional: DeleteSchemaRevisionAsync(SchemaName, string, CancellationToken)
+            // Create client
+            SchemaServiceClient schemaServiceClient = await SchemaServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
+            string revisionId = "";
+            // Make the request
+            Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(name, revisionId);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteSchema</summary>
         public void DeleteSchemaRequestObject()
         {

@@ -73,6 +73,12 @@
         "grpc": {
           "libraryClient": "SchemaServiceClient",
           "rpcs": {
+            "CommitSchema": {
+              "methods": [
+                "CommitSchema",
+                "CommitSchemaAsync"
+              ]
+            },
             "CreateSchema": {
               "methods": [
                 "CreateSchema",
@@ -85,16 +91,34 @@
                 "DeleteSchemaAsync"
               ]
             },
+            "DeleteSchemaRevision": {
+              "methods": [
+                "DeleteSchemaRevision",
+                "DeleteSchemaRevisionAsync"
+              ]
+            },
             "GetSchema": {
               "methods": [
                 "GetSchema",
                 "GetSchemaAsync"
               ]
             },
+            "ListSchemaRevisions": {
+              "methods": [
+                "ListSchemaRevisions",
+                "ListSchemaRevisionsAsync"
+              ]
+            },
             "ListSchemas": {
               "methods": [
                 "ListSchemas",
                 "ListSchemasAsync"
+              ]
+            },
+            "RollbackSchema": {
+              "methods": [
+                "RollbackSchema",
+                "RollbackSchemaAsync"
               ]
             },
             "ValidateMessage": {

@@ -285,6 +285,54 @@ namespace Google.Cloud.PubSub.V1
         }
     }
 
+    public partial class ListSchemaRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::SchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::SchemaName SchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::SchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CommitSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::SchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::SchemaName SchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::SchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RollbackSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::SchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::SchemaName SchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::SchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSchemaRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::SchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::SchemaName SchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::SchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteSchemaRequest
     {
         /// <summary>
