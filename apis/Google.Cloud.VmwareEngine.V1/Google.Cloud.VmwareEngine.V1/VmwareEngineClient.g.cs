@@ -1041,7 +1041,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// clusters. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1069,7 +1069,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// clusters. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1097,7 +1097,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// clusters. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// clusters. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1180,7 +1180,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1198,7 +1198,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1444,7 +1444,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1481,7 +1481,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1523,7 +1523,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1565,7 +1565,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// private cloud in. Resource names are schemeless URIs that follow the
         /// conventions in https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="privateCloud">
         /// Required. The initial description of the new private cloud.
@@ -1864,7 +1864,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1896,7 +1896,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1928,7 +1928,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1957,7 +1957,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1989,7 +1989,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2021,7 +2021,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2102,7 +2102,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2123,7 +2123,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2144,7 +2144,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2162,7 +2162,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2183,7 +2183,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2204,7 +2204,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2237,7 +2237,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2265,7 +2265,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2293,7 +2293,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2321,7 +2321,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2376,7 +2376,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2394,7 +2394,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2412,7 +2412,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2427,7 +2427,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2445,7 +2445,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2463,7 +2463,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2543,7 +2543,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2582,7 +2582,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2621,7 +2621,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2655,7 +2655,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2694,7 +2694,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2733,7 +2733,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// in. Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cluster">
         /// Required. The initial description of the new cluster.
@@ -2986,7 +2986,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3007,7 +3007,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3028,7 +3028,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3046,7 +3046,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3067,7 +3067,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3088,7 +3088,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3122,7 +3122,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3151,7 +3151,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3180,7 +3180,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3209,7 +3209,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3255,7 +3255,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3283,7 +3283,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3311,7 +3311,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3339,7 +3339,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a`
+        /// `projects/my-project/locations/us-central1-a`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3394,7 +3394,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3412,7 +3412,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3430,7 +3430,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3445,7 +3445,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3463,7 +3463,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3481,7 +3481,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+        /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3524,7 +3524,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3543,7 +3543,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3562,7 +3562,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3578,7 +3578,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3597,7 +3597,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3616,7 +3616,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3659,7 +3659,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3678,7 +3678,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3697,7 +3697,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3713,7 +3713,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3732,7 +3732,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3751,7 +3751,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3821,7 +3821,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3840,7 +3840,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3859,7 +3859,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3875,7 +3875,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3894,7 +3894,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3913,7 +3913,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3983,7 +3983,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4002,7 +4002,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4021,7 +4021,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4037,7 +4037,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4056,7 +4056,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4075,7 +4075,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4517,7 +4517,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4535,7 +4535,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4553,7 +4553,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4568,7 +4568,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4586,7 +4586,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4604,7 +4604,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// Resource names are schemeless URIs that follow the conventions in
         /// https://cloud.google.com/apis/design/resource_names.
         /// For example:
-        /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+        /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5589,7 +5589,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
@@ -5630,7 +5630,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
@@ -5671,7 +5671,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
@@ -5707,7 +5707,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
@@ -5748,7 +5748,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
@@ -5789,7 +5789,7 @@ namespace Google.Cloud.VmwareEngine.V1
         /// 
         /// * For networks of type LEGACY, adheres to the format:
         /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-        /// to create the VMware Engine network. For example, "us-west1-default".
+        /// to create the VMware Engine network. For example, "us-central1-default".
         /// * Only contains 1-63 alphanumeric characters and hyphens
         /// * Begins with an alphabetical character
         /// * Ends with a non-hyphen character
