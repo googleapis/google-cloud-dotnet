@@ -3438,7 +3438,8 @@
       ],
       "shortName": "secretmanager",
       "serviceConfigFile": "secretmanager_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.SecretManager.V1Beta1",
