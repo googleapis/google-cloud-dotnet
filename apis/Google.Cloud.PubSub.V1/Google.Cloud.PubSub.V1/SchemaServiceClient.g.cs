@@ -51,6 +51,10 @@ namespace Google.Cloud.PubSub.V1
             CreateSchemaSettings = existing.CreateSchemaSettings;
             GetSchemaSettings = existing.GetSchemaSettings;
             ListSchemasSettings = existing.ListSchemasSettings;
+            ListSchemaRevisionsSettings = existing.ListSchemaRevisionsSettings;
+            CommitSchemaSettings = existing.CommitSchemaSettings;
+            RollbackSchemaSettings = existing.RollbackSchemaSettings;
+            DeleteSchemaRevisionSettings = existing.DeleteSchemaRevisionSettings;
             DeleteSchemaSettings = existing.DeleteSchemaSettings;
             ValidateSchemaSettings = existing.ValidateSchemaSettings;
             ValidateMessageSettings = existing.ValidateMessageSettings;
@@ -95,6 +99,54 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SchemaServiceClient.ListSchemaRevisions</c> and <c>SchemaServiceClient.ListSchemaRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSchemaRevisionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SchemaServiceClient.CommitSchema</c> and <c>SchemaServiceClient.CommitSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CommitSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SchemaServiceClient.RollbackSchema</c> and <c>SchemaServiceClient.RollbackSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RollbackSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SchemaServiceClient.DeleteSchemaRevision</c> and <c>SchemaServiceClient.DeleteSchemaRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSchemaRevisionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -716,6 +768,561 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(ListSchemaRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(ListSchemaRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSchemaRevisions(new ListSchemaRevisionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSchemaRevisions(new ListSchemaRevisionsRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSchemaRevisionsAsync(new ListSchemaRevisionsRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema CommitSchema(CommitSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(CommitSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(CommitSchemaRequest request, st::CancellationToken cancellationToken) =>
+            CommitSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema CommitSchema(string name, Schema schema, gaxgrpc::CallSettings callSettings = null) =>
+            CommitSchema(new CommitSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Schema = gax::GaxPreconditions.CheckNotNull(schema, nameof(schema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(string name, Schema schema, gaxgrpc::CallSettings callSettings = null) =>
+            CommitSchemaAsync(new CommitSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Schema = gax::GaxPreconditions.CheckNotNull(schema, nameof(schema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(string name, Schema schema, st::CancellationToken cancellationToken) =>
+            CommitSchemaAsync(name, schema, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema CommitSchema(SchemaName name, Schema schema, gaxgrpc::CallSettings callSettings = null) =>
+            CommitSchema(new CommitSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Schema = gax::GaxPreconditions.CheckNotNull(schema, nameof(schema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(SchemaName name, Schema schema, gaxgrpc::CallSettings callSettings = null) =>
+            CommitSchemaAsync(new CommitSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Schema = gax::GaxPreconditions.CheckNotNull(schema, nameof(schema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema we are revising.
+        /// Format is `projects/{project}/schemas/{schema}`.
+        /// </param>
+        /// <param name="schema">
+        /// Required. The schema revision to commit.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> CommitSchemaAsync(SchemaName name, Schema schema, st::CancellationToken cancellationToken) =>
+            CommitSchemaAsync(name, schema, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema RollbackSchema(RollbackSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(RollbackSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(RollbackSchemaRequest request, st::CancellationToken cancellationToken) =>
+            RollbackSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema RollbackSchema(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackSchema(new RollbackSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackSchemaAsync(new RollbackSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(string name, string revisionId, st::CancellationToken cancellationToken) =>
+            RollbackSchemaAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema RollbackSchema(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackSchema(new RollbackSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackSchemaAsync(new RollbackSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The schema being rolled back with revision id.
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> RollbackSchemaAsync(SchemaName name, string revisionId, st::CancellationToken cancellationToken) =>
+            RollbackSchemaAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema DeleteSchemaRevision(DeleteSchemaRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(DeleteSchemaRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(DeleteSchemaRevisionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSchemaRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema DeleteSchemaRevision(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaRevision(new DeleteSchemaRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaRevisionAsync(new DeleteSchemaRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(string name, string revisionId, st::CancellationToken cancellationToken) =>
+            DeleteSchemaRevisionAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Schema DeleteSchemaRevision(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaRevision(new DeleteSchemaRevisionRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaRevisionAsync(new DeleteSchemaRevisionRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schema revision to be deleted, with a revision ID
+        /// explicitly included.
+        /// 
+        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// </param>
+        /// <param name="revisionId">
+        /// Required. The revision ID to roll back to.
+        /// It must be a revision of the same schema.
+        /// 
+        /// Example: c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(SchemaName name, string revisionId, st::CancellationToken cancellationToken) =>
+            DeleteSchemaRevisionAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a schema.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -999,6 +1606,14 @@ namespace Google.Cloud.PubSub.V1
 
         private readonly gaxgrpc::ApiCall<ListSchemasRequest, ListSchemasResponse> _callListSchemas;
 
+        private readonly gaxgrpc::ApiCall<ListSchemaRevisionsRequest, ListSchemaRevisionsResponse> _callListSchemaRevisions;
+
+        private readonly gaxgrpc::ApiCall<CommitSchemaRequest, Schema> _callCommitSchema;
+
+        private readonly gaxgrpc::ApiCall<RollbackSchemaRequest, Schema> _callRollbackSchema;
+
+        private readonly gaxgrpc::ApiCall<DeleteSchemaRevisionRequest, Schema> _callDeleteSchemaRevision;
+
         private readonly gaxgrpc::ApiCall<DeleteSchemaRequest, wkt::Empty> _callDeleteSchema;
 
         private readonly gaxgrpc::ApiCall<ValidateSchemaRequest, ValidateSchemaResponse> _callValidateSchema;
@@ -1026,6 +1641,18 @@ namespace Google.Cloud.PubSub.V1
             _callListSchemas = clientHelper.BuildApiCall<ListSchemasRequest, ListSchemasResponse>("ListSchemas", grpcClient.ListSchemasAsync, grpcClient.ListSchemas, effectiveSettings.ListSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSchemas);
             Modify_ListSchemasApiCall(ref _callListSchemas);
+            _callListSchemaRevisions = clientHelper.BuildApiCall<ListSchemaRevisionsRequest, ListSchemaRevisionsResponse>("ListSchemaRevisions", grpcClient.ListSchemaRevisionsAsync, grpcClient.ListSchemaRevisions, effectiveSettings.ListSchemaRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListSchemaRevisions);
+            Modify_ListSchemaRevisionsApiCall(ref _callListSchemaRevisions);
+            _callCommitSchema = clientHelper.BuildApiCall<CommitSchemaRequest, Schema>("CommitSchema", grpcClient.CommitSchemaAsync, grpcClient.CommitSchema, effectiveSettings.CommitSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCommitSchema);
+            Modify_CommitSchemaApiCall(ref _callCommitSchema);
+            _callRollbackSchema = clientHelper.BuildApiCall<RollbackSchemaRequest, Schema>("RollbackSchema", grpcClient.RollbackSchemaAsync, grpcClient.RollbackSchema, effectiveSettings.RollbackSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRollbackSchema);
+            Modify_RollbackSchemaApiCall(ref _callRollbackSchema);
+            _callDeleteSchemaRevision = clientHelper.BuildApiCall<DeleteSchemaRevisionRequest, Schema>("DeleteSchemaRevision", grpcClient.DeleteSchemaRevisionAsync, grpcClient.DeleteSchemaRevision, effectiveSettings.DeleteSchemaRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSchemaRevision);
+            Modify_DeleteSchemaRevisionApiCall(ref _callDeleteSchemaRevision);
             _callDeleteSchema = clientHelper.BuildApiCall<DeleteSchemaRequest, wkt::Empty>("DeleteSchema", grpcClient.DeleteSchemaAsync, grpcClient.DeleteSchema, effectiveSettings.DeleteSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSchema);
             Modify_DeleteSchemaApiCall(ref _callDeleteSchema);
@@ -1046,6 +1673,14 @@ namespace Google.Cloud.PubSub.V1
 
         partial void Modify_ListSchemasApiCall(ref gaxgrpc::ApiCall<ListSchemasRequest, ListSchemasResponse> call);
 
+        partial void Modify_ListSchemaRevisionsApiCall(ref gaxgrpc::ApiCall<ListSchemaRevisionsRequest, ListSchemaRevisionsResponse> call);
+
+        partial void Modify_CommitSchemaApiCall(ref gaxgrpc::ApiCall<CommitSchemaRequest, Schema> call);
+
+        partial void Modify_RollbackSchemaApiCall(ref gaxgrpc::ApiCall<RollbackSchemaRequest, Schema> call);
+
+        partial void Modify_DeleteSchemaRevisionApiCall(ref gaxgrpc::ApiCall<DeleteSchemaRevisionRequest, Schema> call);
+
         partial void Modify_DeleteSchemaApiCall(ref gaxgrpc::ApiCall<DeleteSchemaRequest, wkt::Empty> call);
 
         partial void Modify_ValidateSchemaApiCall(ref gaxgrpc::ApiCall<ValidateSchemaRequest, ValidateSchemaResponse> call);
@@ -1065,6 +1700,14 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_GetSchemaRequest(ref GetSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSchemasRequest(ref ListSchemasRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSchemaRevisionsRequest(ref ListSchemaRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CommitSchemaRequest(ref CommitSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RollbackSchemaRequest(ref RollbackSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSchemaRevisionRequest(ref DeleteSchemaRevisionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSchemaRequest(ref DeleteSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1145,6 +1788,102 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Schema"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisions(ListSchemaRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSchemaRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSchemaRevisionsRequest, ListSchemaRevisionsResponse, Schema>(_callListSchemaRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema revisions for the named schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Schema"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSchemaRevisionsResponse, Schema> ListSchemaRevisionsAsync(ListSchemaRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSchemaRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSchemaRevisionsRequest, ListSchemaRevisionsResponse, Schema>(_callListSchemaRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Schema CommitSchema(CommitSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CommitSchemaRequest(ref request, ref callSettings);
+            return _callCommitSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Commits a new schema revision to an existing schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Schema> CommitSchemaAsync(CommitSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CommitSchemaRequest(ref request, ref callSettings);
+            return _callCommitSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Schema RollbackSchema(RollbackSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackSchemaRequest(ref request, ref callSettings);
+            return _callRollbackSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new schema revision that is a copy of the provided revision_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Schema> RollbackSchemaAsync(RollbackSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackSchemaRequest(ref request, ref callSettings);
+            return _callRollbackSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Schema DeleteSchemaRevision(DeleteSchemaRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSchemaRevisionRequest(ref request, ref callSettings);
+            return _callDeleteSchemaRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a specific schema revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Schema> DeleteSchemaRevisionAsync(DeleteSchemaRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSchemaRevisionRequest(ref request, ref callSettings);
+            return _callDeleteSchemaRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Deletes a schema.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1221,7 +1960,19 @@ namespace Google.Cloud.PubSub.V1
     {
     }
 
+    public partial class ListSchemaRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSchemasResponse : gaxgrpc::IPageResponse<Schema>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Schema> GetEnumerator() => Schemas.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSchemaRevisionsResponse : gaxgrpc::IPageResponse<Schema>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Schema> GetEnumerator() => Schemas.GetEnumerator();

@@ -2432,6 +2432,914 @@
       ]
     },
     {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_sync",
+      "title": "ListSchemaRevisionsRequestObject",
+      "description": "Snippet for ListSchemaRevisions",
+      "file": "SchemaServiceClient.ListSchemaRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisions",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_async",
+      "title": "ListSchemaRevisionsRequestObjectAsync",
+      "description": "Snippet for ListSchemaRevisionsAsync",
+      "file": "SchemaServiceClient.ListSchemaRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_sync_flattened",
+      "title": "ListSchemaRevisions",
+      "description": "Snippet for ListSchemaRevisions",
+      "file": "SchemaServiceClient.ListSchemaRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisions",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_async_flattened",
+      "title": "ListSchemaRevisionsAsync",
+      "description": "Snippet for ListSchemaRevisionsAsync",
+      "file": "SchemaServiceClient.ListSchemaRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_sync_flattened_resourceNames",
+      "title": "ListSchemaRevisionsResourceNames",
+      "description": "Snippet for ListSchemaRevisions",
+      "file": "SchemaServiceClient.ListSchemaRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisions",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_ListSchemaRevisions_async_flattened_resourceNames",
+      "title": "ListSchemaRevisionsResourceNamesAsync",
+      "description": "Snippet for ListSchemaRevisionsAsync",
+      "file": "SchemaServiceClient.ListSchemaRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaRevisionsAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemaRevisions",
+          "fullName": "google.pubsub.v1.SchemaService.ListSchemaRevisions",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_sync",
+      "title": "CommitSchemaRequestObject",
+      "description": "Snippet for CommitSchema",
+      "file": "SchemaServiceClient.CommitSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_async",
+      "title": "CommitSchemaRequestObjectAsync",
+      "description": "Snippet for CommitSchemaAsync",
+      "file": "SchemaServiceClient.CommitSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_sync_flattened",
+      "title": "CommitSchema",
+      "description": "Snippet for CommitSchema",
+      "file": "SchemaServiceClient.CommitSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_async_flattened",
+      "title": "CommitSchemaAsync",
+      "description": "Snippet for CommitSchemaAsync",
+      "file": "SchemaServiceClient.CommitSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_sync_flattened_resourceNames",
+      "title": "CommitSchemaResourceNames",
+      "description": "Snippet for CommitSchema",
+      "file": "SchemaServiceClient.CommitSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_CommitSchema_async_flattened_resourceNames",
+      "title": "CommitSchemaResourceNamesAsync",
+      "description": "Snippet for CommitSchemaAsync",
+      "file": "SchemaServiceClient.CommitSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CommitSchema",
+          "fullName": "google.pubsub.v1.SchemaService.CommitSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_sync",
+      "title": "RollbackSchemaRequestObject",
+      "description": "Snippet for RollbackSchema",
+      "file": "SchemaServiceClient.RollbackSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_async",
+      "title": "RollbackSchemaRequestObjectAsync",
+      "description": "Snippet for RollbackSchemaAsync",
+      "file": "SchemaServiceClient.RollbackSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_sync_flattened",
+      "title": "RollbackSchema",
+      "description": "Snippet for RollbackSchema",
+      "file": "SchemaServiceClient.RollbackSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_async_flattened",
+      "title": "RollbackSchemaAsync",
+      "description": "Snippet for RollbackSchemaAsync",
+      "file": "SchemaServiceClient.RollbackSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_sync_flattened_resourceNames",
+      "title": "RollbackSchemaResourceNames",
+      "description": "Snippet for RollbackSchema",
+      "file": "SchemaServiceClient.RollbackSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchema",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_RollbackSchema_async_flattened_resourceNames",
+      "title": "RollbackSchemaResourceNamesAsync",
+      "description": "Snippet for RollbackSchemaAsync",
+      "file": "SchemaServiceClient.RollbackSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackSchemaAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackSchema",
+          "fullName": "google.pubsub.v1.SchemaService.RollbackSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_sync",
+      "title": "DeleteSchemaRevisionRequestObject",
+      "description": "Snippet for DeleteSchemaRevision",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevision",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_async",
+      "title": "DeleteSchemaRevisionRequestObjectAsync",
+      "description": "Snippet for DeleteSchemaRevisionAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevisionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_sync_flattened",
+      "title": "DeleteSchemaRevision",
+      "description": "Snippet for DeleteSchemaRevision",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevision",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_async_flattened",
+      "title": "DeleteSchemaRevisionAsync",
+      "description": "Snippet for DeleteSchemaRevisionAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevisionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_sync_flattened_resourceNames",
+      "title": "DeleteSchemaRevisionResourceNames",
+      "description": "Snippet for DeleteSchemaRevision",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevision",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "resultType": "Google.Cloud.PubSub.V1.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchemaRevision_async_flattened_resourceNames",
+      "title": "DeleteSchemaRevisionResourceNamesAsync",
+      "description": "Snippet for DeleteSchemaRevisionAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaRevisionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaRevision",
+          "fullName": "google.pubsub.v1.SchemaService.DeleteSchemaRevision",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.pubsub.v1.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "pubsub_v1_generated_SchemaService_DeleteSchema_sync",
       "title": "DeleteSchemaRequestObject",
       "description": "Snippet for DeleteSchema",
