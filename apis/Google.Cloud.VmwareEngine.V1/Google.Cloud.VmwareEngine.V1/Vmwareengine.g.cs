@@ -1156,7 +1156,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1971,8 +1971,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
             = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig.Parser), 58);
         private readonly pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig> nodeTypeConfigs_ = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig>();
         /// <summary>
-        /// Required. The map of cluster node types in this cluster, where the key is canonical
-        /// identifier of the node type (corresponds to the `NodeType`).
+        /// Required. The map of cluster node types in this cluster, where the key is
+        /// canonical identifier of the node type (corresponds to the `NodeType`).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2133,7 +2133,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListPrivateClouds][google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateClouds]
+  /// Request message for
+  /// [VmwareEngine.ListPrivateClouds][google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateClouds]
   /// </summary>
   public sealed partial class ListPrivateCloudsRequest : pb::IMessage<ListPrivateCloudsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2191,7 +2192,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// clusters. Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a`
+    /// `projects/my-project/locations/us-central1-a`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2528,7 +2529,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListPrivateClouds][google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateClouds]
+  /// Response message for
+  /// [VmwareEngine.ListPrivateClouds][google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateClouds]
   /// </summary>
   public sealed partial class ListPrivateCloudsResponse : pb::IMessage<ListPrivateCloudsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2783,7 +2785,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.GetPrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateCloud]
+  /// Request message for
+  /// [VmwareEngine.GetPrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateCloud]
   /// </summary>
   public sealed partial class GetPrivateCloudRequest : pb::IMessage<GetPrivateCloudRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2837,7 +2840,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2982,7 +2985,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.CreatePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateCloud]
+  /// Request message for
+  /// [VmwareEngine.CreatePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateCloud]
   /// </summary>
   public sealed partial class CreatePrivateCloudRequest : pb::IMessage<CreatePrivateCloudRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3040,7 +3044,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// private cloud in. Resource names are schemeless URIs that follow the
     /// conventions in https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a`
+    /// `projects/my-project/locations/us-central1-a`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3095,8 +3099,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3111,8 +3115,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int ValidateOnlyFieldNumber = 5;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. True if you want the request to be validated and not executed; false
-    /// otherwise.
+    /// Optional. True if you want the request to be validated and not executed;
+    /// false otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3362,7 +3366,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.UpdatePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateCloud]
+  /// Request message for
+  /// [VmwareEngine.UpdatePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateCloud]
   /// </summary>
   public sealed partial class UpdatePrivateCloudRequest : pb::IMessage<UpdatePrivateCloudRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3448,8 +3453,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3660,7 +3665,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.DeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateCloud]
+  /// Request message for
+  /// [VmwareEngine.DeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateCloud]
   /// </summary>
   public sealed partial class DeletePrivateCloudRequest : pb::IMessage<DeletePrivateCloudRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3719,7 +3725,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3734,8 +3740,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3750,10 +3756,11 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int ForceFieldNumber = 3;
     private bool force_;
     /// <summary>
-    /// Optional. If set to true, cascade delete is enabled and all children of this private
-    /// cloud resource are also deleted. When this flag is set to false, the
-    /// private cloud will not be deleted if there are any children other than the
-    /// management cluster. The management cluster is always deleted.
+    /// Optional. If set to true, cascade delete is enabled and all children of
+    /// this private cloud resource are also deleted. When this flag is set to
+    /// false, the private cloud will not be deleted if there are any children
+    /// other than the management cluster. The management cluster is always
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3772,10 +3779,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// is `3`. Specifying a non-zero value for this field changes the value of
     /// `PrivateCloud.state` to `DELETED` and sets `expire_time` to the planned
     /// deletion time. Deletion can be cancelled before `expire_time` elapses using
-    /// [VmwareEngine.UndeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UndeletePrivateCloud]. Specifying a value of `0` for
-    /// this field instead begins the deletion process and ceases billing
-    /// immediately. During the final deletion process, the value of
-    /// `PrivateCloud.state` becomes `PURGING`.
+    /// [VmwareEngine.UndeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UndeletePrivateCloud].
+    /// Specifying a value of `0` for this field instead begins the deletion
+    /// process and ceases billing immediately. During the final deletion process,
+    /// the value of `PrivateCloud.state` becomes `PURGING`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4005,7 +4012,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.UndeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UndeletePrivateCloud]
+  /// Request message for
+  /// [VmwareEngine.UndeletePrivateCloud][google.cloud.vmwareengine.v1.VmwareEngine.UndeletePrivateCloud]
   /// </summary>
   public sealed partial class UndeletePrivateCloudRequest : pb::IMessage<UndeletePrivateCloudRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4060,7 +4068,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4075,8 +4083,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4305,7 +4313,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4399,8 +4407,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
         = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig.Parser), 130);
     private readonly pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig> nodeTypeConfigs_ = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig>();
     /// <summary>
-    /// Required. The map of cluster node types in this cluster, where the key is canonical
-    /// identifier of the node type (corresponds to the `NodeType`).
+    /// Required. The map of cluster node types in this cluster, where the key is
+    /// canonical identifier of the node type (corresponds to the `NodeType`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4734,7 +4742,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListClusters][google.cloud.vmwareengine.v1.VmwareEngine.ListClusters]
+  /// Request message for
+  /// [VmwareEngine.ListClusters][google.cloud.vmwareengine.v1.VmwareEngine.ListClusters]
   /// </summary>
   public sealed partial class ListClustersRequest : pb::IMessage<ListClustersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4792,7 +4801,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5117,7 +5126,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListClusters][google.cloud.vmwareengine.v1.VmwareEngine.ListClusters]
+  /// Response message for
+  /// [VmwareEngine.ListClusters][google.cloud.vmwareengine.v1.VmwareEngine.ListClusters]
   /// </summary>
   public sealed partial class ListClustersResponse : pb::IMessage<ListClustersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5372,7 +5382,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.GetCluster][google.cloud.vmwareengine.v1.VmwareEngine.GetCluster]
+  /// Request message for
+  /// [VmwareEngine.GetCluster][google.cloud.vmwareengine.v1.VmwareEngine.GetCluster]
   /// </summary>
   public sealed partial class GetClusterRequest : pb::IMessage<GetClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5426,7 +5437,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5571,7 +5582,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.CreateCluster][google.cloud.vmwareengine.v1.VmwareEngine.CreateCluster]
+  /// Request message for
+  /// [VmwareEngine.CreateCluster][google.cloud.vmwareengine.v1.VmwareEngine.CreateCluster]
   /// </summary>
   public sealed partial class CreateClusterRequest : pb::IMessage<CreateClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5629,7 +5641,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// in. Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5684,8 +5696,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5700,8 +5712,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int ValidateOnlyFieldNumber = 5;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. True if you want the request to be validated and not executed; false
-    /// otherwise.
+    /// Optional. True if you want the request to be validated and not executed;
+    /// false otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5951,7 +5963,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.UpdateCluster][google.cloud.vmwareengine.v1.VmwareEngine.UpdateCluster]
+  /// Request message for
+  /// [VmwareEngine.UpdateCluster][google.cloud.vmwareengine.v1.VmwareEngine.UpdateCluster]
   /// </summary>
   public sealed partial class UpdateClusterRequest : pb::IMessage<UpdateClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6054,8 +6067,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. True if you want the request to be validated and not executed; false
-    /// otherwise.
+    /// Optional. True if you want the request to be validated and not executed;
+    /// false otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6290,7 +6303,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.DeleteCluster][google.cloud.vmwareengine.v1.VmwareEngine.DeleteCluster]
+  /// Request message for
+  /// [VmwareEngine.DeleteCluster][google.cloud.vmwareengine.v1.VmwareEngine.DeleteCluster]
   /// </summary>
   public sealed partial class DeleteClusterRequest : pb::IMessage<DeleteClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6345,7 +6359,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/clusters/my-cluster`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6360,8 +6374,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// Optional. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6589,7 +6603,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/subnets/my-subnet`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6635,7 +6649,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int TypeFieldNumber = 11;
     private string type_ = "";
     /// <summary>
-    /// Output only. The type of the subnet. For example "management" or "userDefined".
+    /// Output only. The type of the subnet. For example "management" or
+    /// "userDefined".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6925,7 +6940,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListSubnets][google.cloud.vmwareengine.v1.VmwareEngine.ListSubnets]
+  /// Request message for
+  /// [VmwareEngine.ListSubnets][google.cloud.vmwareengine.v1.VmwareEngine.ListSubnets]
   /// </summary>
   public sealed partial class ListSubnetsRequest : pb::IMessage<ListSubnetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6982,7 +6998,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7212,7 +7228,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListSubnets][google.cloud.vmwareengine.v1.VmwareEngine.ListSubnets]
+  /// Response message for
+  /// [VmwareEngine.ListSubnets][google.cloud.vmwareengine.v1.VmwareEngine.ListSubnets]
   /// </summary>
   public sealed partial class ListSubnetsResponse : pb::IMessage<ListSubnetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7571,8 +7588,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Output only. True if the user has requested cancellation
     /// of the operation; false otherwise.
     /// Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-    /// corresponding to `Code.CANCELLED`.
+    /// have [Operation.error][] value with a
+    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+    /// `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7955,7 +7973,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+    /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8366,7 +8384,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListNodeTypes][google.cloud.vmwareengine.v1.VmwareEngine.ListNodeTypes]
+  /// Request message for
+  /// [VmwareEngine.ListNodeTypes][google.cloud.vmwareengine.v1.VmwareEngine.ListNodeTypes]
   /// </summary>
   public sealed partial class ListNodeTypesRequest : pb::IMessage<ListNodeTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8423,7 +8442,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a`
+    /// `projects/my-project/locations/us-central1-a`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8716,7 +8735,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListNodeTypes][google.cloud.vmwareengine.v1.VmwareEngine.ListNodeTypes]
+  /// Response message for
+  /// [VmwareEngine.ListNodeTypes][google.cloud.vmwareengine.v1.VmwareEngine.ListNodeTypes]
   /// </summary>
   public sealed partial class ListNodeTypesResponse : pb::IMessage<ListNodeTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8971,7 +8991,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.GetNodeType][google.cloud.vmwareengine.v1.VmwareEngine.GetNodeType]
+  /// Request message for
+  /// [VmwareEngine.GetNodeType][google.cloud.vmwareengine.v1.VmwareEngine.GetNodeType]
   /// </summary>
   public sealed partial class GetNodeTypeRequest : pb::IMessage<GetNodeTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9025,7 +9046,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-proj/locations/us-west1-a/nodeTypes/standard-72`
+    /// `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9405,7 +9426,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ShowNsxCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ShowNsxCredentials]
+  /// Request message for
+  /// [VmwareEngine.ShowNsxCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ShowNsxCredentials]
   /// </summary>
   public sealed partial class ShowNsxCredentialsRequest : pb::IMessage<ShowNsxCredentialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9460,7 +9482,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9605,7 +9627,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ShowVcenterCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ShowVcenterCredentials]
+  /// Request message for
+  /// [VmwareEngine.ShowVcenterCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ShowVcenterCredentials]
   /// </summary>
   public sealed partial class ShowVcenterCredentialsRequest : pb::IMessage<ShowVcenterCredentialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9660,7 +9683,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9805,7 +9828,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ResetNsxCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ResetNsxCredentials]
+  /// Request message for
+  /// [VmwareEngine.ResetNsxCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ResetNsxCredentials]
   /// </summary>
   public sealed partial class ResetNsxCredentialsRequest : pb::IMessage<ResetNsxCredentialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9861,7 +9885,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10058,7 +10082,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ResetVcenterCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ResetVcenterCredentials]
+  /// Request message for
+  /// [VmwareEngine.ResetVcenterCredentials][google.cloud.vmwareengine.v1.VmwareEngine.ResetVcenterCredentials]
   /// </summary>
   public sealed partial class ResetVcenterCredentialsRequest : pb::IMessage<ResetVcenterCredentialsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10114,7 +10139,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10311,7 +10336,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys]
+  /// Response message for
+  /// [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys]
   /// </summary>
   public sealed partial class ListHcxActivationKeysResponse : pb::IMessage<ListHcxActivationKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10569,8 +10595,11 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// HCX activation key. A default key is created during
   /// private cloud provisioning, but this behavior is subject to change
   /// and you should always verify active keys.
-  /// Use [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys] to retrieve existing keys
-  /// and [VmwareEngine.CreateHcxActivationKey][google.cloud.vmwareengine.v1.VmwareEngine.CreateHcxActivationKey] to create new ones.
+  /// Use
+  /// [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys]
+  /// to retrieve existing keys and
+  /// [VmwareEngine.CreateHcxActivationKey][google.cloud.vmwareengine.v1.VmwareEngine.CreateHcxActivationKey]
+  /// to create new ones.
   /// </summary>
   public sealed partial class HcxActivationKey : pb::IMessage<HcxActivationKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10628,7 +10657,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+    /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10968,7 +10997,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys]
+  /// Request message for
+  /// [VmwareEngine.ListHcxActivationKeys][google.cloud.vmwareengine.v1.VmwareEngine.ListHcxActivationKeys]
   /// </summary>
   public sealed partial class ListHcxActivationKeysRequest : pb::IMessage<ListHcxActivationKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11310,7 +11340,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     /// Resource names are schemeless URIs that follow the conventions in
     /// https://cloud.google.com/apis/design/resource_names.
     /// For example:
-    /// `projects/my-project/locations/us-west1/privateClouds/my-cloud/hcxActivationKeys/my-key`
+    /// `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys/my-key`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11455,7 +11485,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.CreateHcxActivationKey][google.cloud.vmwareengine.v1.VmwareEngine.CreateHcxActivationKey]
+  /// Request message for
+  /// [VmwareEngine.CreateHcxActivationKey][google.cloud.vmwareengine.v1.VmwareEngine.CreateHcxActivationKey]
   /// </summary>
   public sealed partial class CreateHcxActivationKeyRequest : pb::IMessage<CreateHcxActivationKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13718,7 +13749,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListNetworkPolicies][google.cloud.vmwareengine.v1.VmwareEngine.ListNetworkPolicies]
+  /// Request message for
+  /// [VmwareEngine.ListNetworkPolicies][google.cloud.vmwareengine.v1.VmwareEngine.ListNetworkPolicies]
   /// </summary>
   public sealed partial class ListNetworkPoliciesRequest : pb::IMessage<ListNetworkPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14112,7 +14144,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListNetworkPolicies][google.cloud.vmwareengine.v1.VmwareEngine.ListNetworkPolicies]
+  /// Response message for
+  /// [VmwareEngine.ListNetworkPolicies][google.cloud.vmwareengine.v1.VmwareEngine.ListNetworkPolicies]
   /// </summary>
   public sealed partial class ListNetworkPoliciesResponse : pb::IMessage<ListNetworkPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14367,7 +14400,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.GetNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.GetNetworkPolicy]
+  /// Request message for
+  /// [VmwareEngine.GetNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.GetNetworkPolicy]
   /// </summary>
   public sealed partial class GetNetworkPolicyRequest : pb::IMessage<GetNetworkPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14566,7 +14600,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.UpdateNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.UpdateNetworkPolicy]
+  /// Request message for
+  /// [VmwareEngine.UpdateNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.UpdateNetworkPolicy]
   /// </summary>
   public sealed partial class UpdateNetworkPolicyRequest : pb::IMessage<UpdateNetworkPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14876,7 +14911,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.CreateNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.CreateNetworkPolicy]
+  /// Request message for
+  /// [VmwareEngine.CreateNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.CreateNetworkPolicy]
   /// </summary>
   public sealed partial class CreateNetworkPolicyRequest : pb::IMessage<CreateNetworkPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -15229,7 +15265,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.DeleteNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.DeleteNetworkPolicy]
+  /// Request message for
+  /// [VmwareEngine.DeleteNetworkPolicy][google.cloud.vmwareengine.v1.VmwareEngine.DeleteNetworkPolicy]
   /// </summary>
   public sealed partial class DeleteNetworkPolicyRequest : pb::IMessage<DeleteNetworkPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16337,7 +16374,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.CreateVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.CreateVmwareEngineNetwork]
+  /// Request message for
+  /// [VmwareEngine.CreateVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.CreateVmwareEngineNetwork]
   /// </summary>
   public sealed partial class CreateVmwareEngineNetworkRequest : pb::IMessage<CreateVmwareEngineNetworkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16418,7 +16456,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     ///
     /// * For networks of type LEGACY, adheres to the format:
     /// `{region-id}-default`. Replace `{region-id}` with the region where you want
-    /// to create the VMware Engine network. For example, "us-west1-default".
+    /// to create the VMware Engine network. For example, "us-central1-default".
     /// * Only contains 1-63 alphanumeric characters and hyphens
     /// * Begins with an alphabetical character
     /// * Ends with a non-hyphen character
@@ -16693,7 +16731,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.UpdateVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.UpdateVmwareEngineNetwork]
+  /// Request message for
+  /// [VmwareEngine.UpdateVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.UpdateVmwareEngineNetwork]
   /// </summary>
   public sealed partial class UpdateVmwareEngineNetworkRequest : pb::IMessage<UpdateVmwareEngineNetworkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17004,7 +17043,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.DeleteVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.DeleteVmwareEngineNetwork]
+  /// Request message for
+  /// [VmwareEngine.DeleteVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.DeleteVmwareEngineNetwork]
   /// </summary>
   public sealed partial class DeleteVmwareEngineNetworkRequest : pb::IMessage<DeleteVmwareEngineNetworkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17103,10 +17143,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Checksum used to ensure that the user-provided value is up to date before
-    /// the server processes the request. The server compares provided checksum
-    /// with the current checksum of the resource. If the user-provided value is
-    /// out of date, this request returns an `ABORTED` error.
+    /// Optional. Checksum used to ensure that the user-provided value is up to
+    /// date before the server processes the request. The server compares provided
+    /// checksum with the current checksum of the resource. If the user-provided
+    /// value is out of date, this request returns an `ABORTED` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17299,7 +17339,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.GetVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.GetVmwareEngineNetwork]
+  /// Request message for
+  /// [VmwareEngine.GetVmwareEngineNetwork][google.cloud.vmwareengine.v1.VmwareEngine.GetVmwareEngineNetwork]
   /// </summary>
   public sealed partial class GetVmwareEngineNetworkRequest : pb::IMessage<GetVmwareEngineNetworkRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17498,7 +17539,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Request message for [VmwareEngine.ListVmwareEngineNetworks][google.cloud.vmwareengine.v1.VmwareEngine.ListVmwareEngineNetworks]
+  /// Request message for
+  /// [VmwareEngine.ListVmwareEngineNetworks][google.cloud.vmwareengine.v1.VmwareEngine.ListVmwareEngineNetworks]
   /// </summary>
   public sealed partial class ListVmwareEngineNetworksRequest : pb::IMessage<ListVmwareEngineNetworksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17891,7 +17933,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Response message for [VmwareEngine.ListVmwareEngineNetworks][google.cloud.vmwareengine.v1.VmwareEngine.ListVmwareEngineNetworks]
+  /// Response message for
+  /// [VmwareEngine.ListVmwareEngineNetworks][google.cloud.vmwareengine.v1.VmwareEngine.ListVmwareEngineNetworks]
   /// </summary>
   public sealed partial class ListVmwareEngineNetworksResponse : pb::IMessage<ListVmwareEngineNetworksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
