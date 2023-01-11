@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.2.0, released 2023-01-11
+
+This is primarily a promotion of the previous beta, which includes
+REST transport support. No API surface changes; just dependency updates.
+
 ## Version 2.2.0-beta01, released 2022-12-08
 
 ### New features

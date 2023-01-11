@@ -84,7 +84,7 @@
     },
     {
       "id": "Google.Cloud.AccessApproval.V1",
-      "version": "2.2.0-beta01",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Access Approval",
       "productUrl": "https://cloud.google.com/access-approval/docs/",
@@ -94,8 +94,8 @@
         "approval"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0-beta01",
-        "Grpc.Core": "2.46.3"
+        "Google.Api.Gax.Grpc": "4.3.0",
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/cloud/accessapproval/v1",
