@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.2.0, released 2023-01-11
+
+### Bug fixes
+
+- Remove unsupported HTTP bindings for IAMPolicy RPCs ([commit 9ca7a4b](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7a4b02bbfe33f395b3cdd7e5c09d723beb79e))
+
+### New features
+
+- Support secret and encrypted environment variables in v1 ([commit f527507](https://github.com/googleapis/google-cloud-dotnet/commit/f52750711320054e6d623eeb3423baa1694389b8))
+
+### Documentation improvements
+
+- Updated documentation for message NetworkInterface ([commit 7c2ce96](https://github.com/googleapis/google-cloud-dotnet/commit/7c2ce96828902581fc7c408628781bffb314230c))
+
 ## Version 1.2.0-beta01, released 2022-12-08
 
 ### New features
