@@ -3401,7 +3401,7 @@
       "protoPath": "google/cloud/scheduler/v1",
       "productName": "Google Cloud Scheduler",
       "productUrl": "https://cloud.google.com/scheduler/",
-      "version": "3.1.0-beta01",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
       "tags": [
@@ -3409,8 +3409,8 @@
         "cron"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0-beta01",
-        "Grpc.Core": "2.46.3"
+        "Google.Api.Gax.Grpc": "4.3.0",
+        "Grpc.Core": "2.46.5"
       },
       "shortName": "cloudscheduler",
       "serviceConfigFile": "cloudscheduler_v1.yaml",
