@@ -95,13 +95,16 @@ namespace Google.Cloud.Tools.ReleaseManager
                 api.Dependencies[mixin] = catalog[mixin].Version;
             }
 
+            // Add any other information from BUILD.bazel
+            new UpdateFromBazelCommand().Update(api);
+
             // Now work out what the new API metadata looks like in JSON.
             var serializer = new JsonSerializer
             {
                 NullValueHandling = NullValueHandling.Ignore,
                 Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
                 ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
-            };            
+            };
             api.Json = JToken.FromObject(api, serializer);
 
             var followingApi = catalog.Apis.FirstOrDefault(api => string.Compare(api.Id, id, StringComparison.Ordinal) > 0);
