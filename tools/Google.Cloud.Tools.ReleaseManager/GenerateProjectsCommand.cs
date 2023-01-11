@@ -87,8 +87,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
         private const string GrpcCorePackageConditionFramework = "net462";
-        private const string DefaultGaxVersion = "4.2.0";
-        private const string GrpcCoreVersion = "2.46.3";
+        private const string DefaultGaxVersion = "4.3.0";
+        private const string GrpcCoreVersion = "2.46.5";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -98,7 +98,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcCorePackage, GrpcCoreVersion },
             { "Grpc.Core.Testing", GrpcCoreVersion },
-            { "Google.Api.CommonProtos", "2.6.0" },
+            { "Google.Api.CommonProtos", "2.7.0" },
             { "Google.Protobuf", "3.18.0" }
         };
 
@@ -107,11 +107,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "17.3.1" },
+            { "Microsoft.NET.Test.Sdk", "17.4.1" },
             { "xunit", "2.4.2" },
             { "xunit.runner.visualstudio", "2.4.5" },
             { "Xunit.SkippableFact", "1.4.13" },
-            { "Moq", "4.18.2" },
+            { "Moq", "4.18.4" },
             { "System.Linq.Async", "6.0.1" },
         };
 
