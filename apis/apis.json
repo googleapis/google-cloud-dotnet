@@ -678,7 +678,8 @@
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/datapolicies/v1",
       "shortName": "bigquerydatapolicy",
-      "serviceConfigFile": "bigquerydatapolicy_v1.yaml"
+      "serviceConfigFile": "bigquerydatapolicy_v1.yaml",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.BigQuery.DataPolicies.V1Beta1",
@@ -1628,7 +1629,8 @@
       "generator": "micro",
       "protoPath": "google/cloud/dialogflow/v2beta1",
       "shortName": "dialogflow",
-      "serviceConfigFile": "dialogflow_v2beta1.yaml"
+      "serviceConfigFile": "dialogflow_v2beta1.yaml",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
@@ -2187,7 +2189,8 @@
       "generator": "micro",
       "protoPath": "google/cloud/gkehub/v1",
       "shortName": "gkehub",
-      "serviceConfigFile": "gkehub_v1.yaml"
+      "serviceConfigFile": "gkehub_v1.yaml",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.GkeMultiCloud.V1",
