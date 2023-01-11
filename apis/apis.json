@@ -4044,13 +4044,13 @@
       "protoPath": "google/cloud/texttospeech/v1",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
-      "version": "3.2.0-beta01",
+      "version": "3.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1, synthesizes natural-sounding speech by applying powerful neural network models.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0-beta01",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "tags": [
         "Speech",
