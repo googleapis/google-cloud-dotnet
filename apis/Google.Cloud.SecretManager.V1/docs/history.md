@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.1.0, released 2023-01-11
+
+### New features
+
+- Update public API to include annotation support ([commit 0ff9d08](https://github.com/googleapis/google-cloud-dotnet/commit/0ff9d08c8f593ffb75bf20b0d95245f21a29710f))
+- Enable REST transport in selected APIs. Set GrpcAdapter=RestGrpcAdapter.Default in the client builder to use this transport
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
