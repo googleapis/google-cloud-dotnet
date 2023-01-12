@@ -3525,8 +3525,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the parent to group the assets by. Its format is
-    /// "organizations/[organization_id], folders/[folder_id], or
-    /// projects/[project_id]".
+    /// "organizations/[organization_id]", "folders/[folder_id]", or
+    /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6525,8 +6525,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. Resource name of the parent of sources to list. Its format should
-    /// be "organizations/[organization_id], folders/[folder_id], or
-    /// projects/[project_id]".
+    /// be "organizations/[organization_id]", "folders/[folder_id]", or
+    /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7034,9 +7034,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the parent that the listed assets belong to. Its
-    /// format is "organizations/[organization_id], folders/[folder_id], or
-    /// projects/[project_id]".
+    /// Required. The name of the parent resource that contains the assets. The
+    /// value that you can specify on parent depends on the method in which you
+    /// specify parent. You can specify one of the following values:
+    /// "organizations/[organization_id]", "folders/[folder_id]", or
+    /// "projects/[project_id]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
