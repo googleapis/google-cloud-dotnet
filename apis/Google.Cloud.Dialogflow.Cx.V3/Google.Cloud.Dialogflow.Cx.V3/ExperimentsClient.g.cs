@@ -337,7 +337,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -346,7 +347,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -355,12 +357,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -381,12 +385,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -407,12 +413,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -433,12 +441,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,7 +469,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -468,7 +479,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -477,7 +489,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -486,11 +499,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -502,11 +517,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -518,11 +535,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -531,11 +550,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -547,11 +568,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -563,11 +586,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -576,7 +601,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,7 +611,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -594,7 +621,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -603,11 +631,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -623,11 +653,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -643,11 +675,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -659,11 +693,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateExperimentAsync(parent, experiment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -679,11 +715,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -699,11 +737,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="experiment">
@@ -715,7 +755,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateExperimentAsync(parent, experiment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -724,7 +765,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -733,7 +775,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -742,7 +785,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="experiment">
         /// Required. The experiment to update.
@@ -760,7 +804,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="experiment">
         /// Required. The experiment to update.
@@ -778,7 +823,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="experiment">
         /// Required. The experiment to update.
@@ -792,7 +838,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateExperimentAsync(experiment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -801,7 +848,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -810,7 +858,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -819,11 +868,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -835,11 +886,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -851,11 +904,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -864,11 +919,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -880,11 +937,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -896,11 +955,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/experiments/&lt;Experiment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -909,8 +970,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -919,8 +981,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -929,8 +992,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -939,8 +1003,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StartExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -956,8 +1021,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -973,8 +1039,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -987,8 +1054,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StartExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -1004,8 +1072,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -1021,8 +1090,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to start.
@@ -1035,8 +1105,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StartExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1045,8 +1115,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1055,8 +1125,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1065,8 +1135,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StopExperimentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1082,8 +1152,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1099,8 +1169,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1113,8 +1183,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StopExperimentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1130,8 +1200,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1147,8 +1217,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the experiment to stop.
@@ -1256,7 +1326,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_StopExperimentRequest(ref StopExperimentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1268,7 +1339,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all experiments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1280,7 +1352,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1292,7 +1365,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Retrieves the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1304,7 +1378,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1316,7 +1391,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+        /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1328,7 +1404,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1340,7 +1417,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Updates the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1352,7 +1430,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1364,7 +1443,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// Deletes the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1376,8 +1456,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1389,8 +1470,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from PENDING to RUNNING.
+        /// Starts the specified
+        /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+        /// changes the state of experiment from PENDING to RUNNING.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1402,8 +1484,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1415,8 +1497,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-        /// experiment from RUNNING to DONE.
+        /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+        /// This rpc only changes the state of experiment from RUNNING to DONE.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

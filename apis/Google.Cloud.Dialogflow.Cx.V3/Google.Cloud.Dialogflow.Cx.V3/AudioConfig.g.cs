@@ -65,14 +65,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "X0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19F",
             "TkNPRElOR19NUDMQAhIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0",
             "X0tCUFMQBBIiCh5PVVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIf",
-            "ChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBUKcAgohY29tLmdvb2ds",
+            "ChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBUKOAgohY29tLmdvb2ds",
             "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhBBdWRpb0NvbmZpZ1Byb3RvUAFa",
-            "P2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "ZGlhbG9nZmxvdy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRp",
-            "YWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpD",
-            "WDo6VjPqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9k",
-            "ZWx9YgZwcm90bzM="));
+            "MWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBi",
+            "O2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz",
+            "6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYz6kFVChthdXRv",
+            "bWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +147,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Variant of the specified [Speech model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] to use.
+  /// Variant of the specified [Speech
+  /// model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] to use.
   ///
   /// See the [Cloud Speech
   /// documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -182,8 +182,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Use an enhanced model variant:
     ///
     /// * If an enhanced variant does not exist for the given
-    ///   [model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] and request language, Dialogflow falls
-    ///   back to the standard variant.
+    ///   [model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] and request
+    ///   language, Dialogflow falls back to the standard variant.
     ///
     ///   The [Cloud Speech
     ///   documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -692,10 +692,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int EnableWordInfoFieldNumber = 13;
     private bool enableWordInfo_;
     /// <summary>
-    /// Optional. If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.cx.v3.SpeechWordInfo] in
-    /// [StreamingRecognitionResult][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult] with information about the recognized speech
-    /// words, e.g. start and end time offsets. If false or unspecified, Speech
-    /// doesn't return any word-level information.
+    /// Optional. If `true`, Dialogflow returns
+    /// [SpeechWordInfo][google.cloud.dialogflow.cx.v3.SpeechWordInfo] in
+    /// [StreamingRecognitionResult][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult]
+    /// with information about the recognized speech words, e.g. start and end time
+    /// offsets. If false or unspecified, Speech doesn't return any word-level
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -754,7 +756,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ModelVariantFieldNumber = 10;
     private global::Google.Cloud.Dialogflow.Cx.V3.SpeechModelVariant modelVariant_ = global::Google.Cloud.Dialogflow.Cx.V3.SpeechModelVariant.Unspecified;
     /// <summary>
-    /// Optional. Which variant of the [Speech model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] to use.
+    /// Optional. Which variant of the [Speech
+    /// model][google.cloud.dialogflow.cx.v3.InputAudioConfig.model] to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1128,10 +1131,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Optional. The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
-    /// [name][google.cloud.dialogflow.cx.v3.VoiceSelectionParams.name]. Note that this is only a preference, not requirement. If a
-    /// voice of the appropriate gender is not available, the synthesizer
-    /// substitutes a voice with a different gender rather than failing the
-    /// request.
+    /// [name][google.cloud.dialogflow.cx.v3.VoiceSelectionParams.name]. Note that
+    /// this is only a preference, not requirement. If a voice of the appropriate
+    /// gender is not available, the synthesizer substitutes a voice with a
+    /// different gender rather than failing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

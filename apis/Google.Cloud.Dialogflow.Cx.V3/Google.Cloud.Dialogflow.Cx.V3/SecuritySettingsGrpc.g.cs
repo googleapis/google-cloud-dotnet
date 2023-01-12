@@ -143,8 +143,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-      /// The returned settings may be stale by up to 1 minute.
+      /// Retrieves the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+      /// returned settings may be stale by up to 1 minute.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -156,7 +157,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Updates the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -180,7 +182,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Deletes the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -269,8 +272,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-      /// The returned settings may be stale by up to 1 minute.
+      /// Retrieves the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+      /// returned settings may be stale by up to 1 minute.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -283,8 +287,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-      /// The returned settings may be stale by up to 1 minute.
+      /// Retrieves the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+      /// returned settings may be stale by up to 1 minute.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -295,8 +300,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-      /// The returned settings may be stale by up to 1 minute.
+      /// Retrieves the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+      /// returned settings may be stale by up to 1 minute.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,8 +315,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-      /// The returned settings may be stale by up to 1 minute.
+      /// Retrieves the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+      /// returned settings may be stale by up to 1 minute.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -321,7 +328,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Updates the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -334,7 +342,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Updates the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -345,7 +354,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Updates the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -358,7 +368,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Updates the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -417,7 +428,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Deletes the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -430,7 +442,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Deletes the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -441,7 +454,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSecuritySettings, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Deletes the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -454,7 +468,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+      /// Deletes the specified
+      /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

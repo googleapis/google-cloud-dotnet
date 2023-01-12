@@ -217,7 +217,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
     /// <summary>SessionEntityTypes client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
+    /// Service for managing
+    /// [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
     /// </remarks>
     public abstract partial class SessionEntityTypesClient
     {
@@ -978,7 +979,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
     /// <summary>SessionEntityTypes client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
+    /// Service for managing
+    /// [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
     /// </remarks>
     public sealed partial class SessionEntityTypesClientImpl : SessionEntityTypesClient
     {

@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
-  /// Service for managing [Environments][google.cloud.dialogflow.cx.v3.Environment].
+  /// Service for managing
+  /// [Environments][google.cloud.dialogflow.cx.v3.Environment].
   /// </summary>
   public static partial class Environments
   {
@@ -177,7 +178,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public abstract partial class EnvironmentsBase
     {
       /// <summary>
-      /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Returns the list of all environments in the specified
+      /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -189,7 +191,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Retrieves the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -201,7 +204,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+      /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -221,7 +225,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Updates the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -241,7 +246,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deletes the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -253,7 +259,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Looks up the history of the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -265,14 +272,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Kicks off a continuous test under the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-      /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+      /// - `metadata`:
+      /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+      /// - `response`:
+      /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -296,14 +306,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deploys a flow to the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-      /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+      /// - `metadata`:
+      /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+      /// - `response`:
+      /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -344,7 +357,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Returns the list of all environments in the specified
+      /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,7 +371,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListEnvironments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Returns the list of all environments in the specified
+      /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -368,7 +383,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEnvironments, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Returns the list of all environments in the specified
+      /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -381,7 +397,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListEnvironmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Returns the list of all environments in the specified
+      /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -392,7 +409,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEnvironments, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Retrieves the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,7 +423,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Retrieves the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -416,7 +435,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEnvironment, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Retrieves the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -429,7 +449,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Retrieves the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -440,7 +461,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEnvironment, null, options, request);
       }
       /// <summary>
-      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+      /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -461,7 +483,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+      /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -480,7 +503,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEnvironment, null, options, request);
       }
       /// <summary>
-      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+      /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -501,7 +525,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+      /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+      /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -520,7 +545,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEnvironment, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Updates the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -541,7 +567,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Updates the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -560,7 +587,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEnvironment, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Updates the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -581,7 +609,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Updates the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -600,7 +629,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEnvironment, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deletes the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -613,7 +643,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deletes the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -624,7 +655,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEnvironment, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deletes the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -637,7 +669,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deletes the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -648,7 +681,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEnvironment, null, options, request);
       }
       /// <summary>
-      /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Looks up the history of the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -661,7 +695,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return LookupEnvironmentHistory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Looks up the history of the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -672,7 +707,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_LookupEnvironmentHistory, null, options, request);
       }
       /// <summary>
-      /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Looks up the history of the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -685,7 +721,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return LookupEnvironmentHistoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Looks up the history of the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -696,14 +733,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_LookupEnvironmentHistory, null, options, request);
       }
       /// <summary>
-      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Kicks off a continuous test under the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-      /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+      /// - `metadata`:
+      /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+      /// - `response`:
+      /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -716,14 +756,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return RunContinuousTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Kicks off a continuous test under the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-      /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+      /// - `metadata`:
+      /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+      /// - `response`:
+      /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -734,14 +777,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_RunContinuousTest, null, options, request);
       }
       /// <summary>
-      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Kicks off a continuous test under the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-      /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+      /// - `metadata`:
+      /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+      /// - `response`:
+      /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -754,14 +800,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return RunContinuousTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Kicks off a continuous test under the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-      /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+      /// - `metadata`:
+      /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+      /// - `response`:
+      /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -820,14 +869,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListContinuousTestResults, null, options, request);
       }
       /// <summary>
-      /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deploys a flow to the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-      /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+      /// - `metadata`:
+      /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+      /// - `response`:
+      /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -840,14 +892,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeployFlow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deploys a flow to the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-      /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+      /// - `metadata`:
+      /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+      /// - `response`:
+      /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -858,14 +913,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_DeployFlow, null, options, request);
       }
       /// <summary>
-      /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deploys a flow to the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-      /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+      /// - `metadata`:
+      /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+      /// - `response`:
+      /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -878,14 +936,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeployFlowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Deploys a flow to the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-      /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+      /// - `metadata`:
+      /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+      /// - `response`:
+      /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

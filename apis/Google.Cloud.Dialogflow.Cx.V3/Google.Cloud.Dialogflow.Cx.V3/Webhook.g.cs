@@ -151,15 +151,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovd2ViaG9va3Mv",
             "Kn3aQQRuYW1lGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCvwIK",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCsQIK",
             "IWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IMV2ViaG9va1By",
-            "b3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvZGlhbG9nZmxvdy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNs",
-            "b3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dm",
-            "bG93OjpDWDo6VjPqQXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5j",
-            "b20vU2VydmljZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L25hbWVzcGFjZXMve25hbWVzcGFjZX0vc2VydmljZXMve3NlcnZp",
-            "Y2V9YgZwcm90bzM="));
+            "b3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2",
+            "My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93",
+            "LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYz6kF8",
+            "CidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USUXBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3Bh",
+            "Y2VzL3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -251,10 +250,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the webhook.
-    /// Required for the [Webhooks.UpdateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook] method.
-    /// [Webhooks.CreateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook] populates the name automatically.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/webhooks/&lt;Webhook ID>`.
+    /// Required for the
+    /// [Webhooks.UpdateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook]
+    /// method.
+    /// [Webhooks.CreateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook]
+    /// populates the name automatically. Format: `projects/&lt;Project
+    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/webhooks/&lt;Webhook ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -715,7 +716,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int UriFieldNumber = 1;
         private string uri_ = "";
         /// <summary>
-        /// Required. The webhook URI for receiving POST requests. It must use https protocol.
+        /// Required. The webhook URI for receiving POST requests. It must use https
+        /// protocol.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -779,13 +781,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = pb::FieldCodec.ForBytes(42);
         private readonly pbc::RepeatedField<pb::ByteString> allowedCaCerts_ = new pbc::RepeatedField<pb::ByteString>();
         /// <summary>
-        /// Optional. Specifies a list of allowed custom CA certificates (in DER format) for
-        /// HTTPS verification. This overrides the default SSL trust store. If this
-        /// is empty or unspecified, Dialogflow will use Google's default trust store
-        /// to verify certificates.
-        /// N.B. Make sure the HTTPS server certificates are signed with "subject alt
-        /// name". For instance a certificate can be self-signed using the following
-        /// command,
+        /// Optional. Specifies a list of allowed custom CA certificates (in DER
+        /// format) for HTTPS verification. This overrides the default SSL trust
+        /// store. If this is empty or unspecified, Dialogflow will use Google's
+        /// default trust store to verify certificates. N.B. Make sure the HTTPS
+        /// server certificates are signed with "subject alt name". For instance a
+        /// certificate can be self-signed using the following command,
         /// ```
         ///    openssl x509 -req -days 200 -in example.com.csr \
         ///      -signkey example.com.key \
@@ -1264,7 +1265,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Webhooks.ListWebhooks][google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks].
+  /// The request message for
+  /// [Webhooks.ListWebhooks][google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks].
   /// </summary>
   public sealed partial class ListWebhooksRequest : pb::IMessage<ListWebhooksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1541,7 +1543,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Webhooks.ListWebhooks][google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks].
+  /// The response message for
+  /// [Webhooks.ListWebhooks][google.cloud.dialogflow.cx.v3.Webhooks.ListWebhooks].
   /// </summary>
   public sealed partial class ListWebhooksResponse : pb::IMessage<ListWebhooksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1767,7 +1770,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Webhooks.GetWebhook][google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook].
+  /// The request message for
+  /// [Webhooks.GetWebhook][google.cloud.dialogflow.cx.v3.Webhooks.GetWebhook].
   /// </summary>
   public sealed partial class GetWebhookRequest : pb::IMessage<GetWebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1964,7 +1968,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Webhooks.CreateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook].
+  /// The request message for
+  /// [Webhooks.CreateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.CreateWebhook].
   /// </summary>
   public sealed partial class CreateWebhookRequest : pb::IMessage<CreateWebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2209,7 +2214,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Webhooks.UpdateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook].
+  /// The request message for
+  /// [Webhooks.UpdateWebhook][google.cloud.dialogflow.cx.v3.Webhooks.UpdateWebhook].
   /// </summary>
   public sealed partial class UpdateWebhookRequest : pb::IMessage<UpdateWebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2463,7 +2469,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Webhooks.DeleteWebhook][google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook].
+  /// The request message for
+  /// [Webhooks.DeleteWebhook][google.cloud.dialogflow.cx.v3.Webhooks.DeleteWebhook].
   /// </summary>
   public sealed partial class DeleteWebhookRequest : pb::IMessage<DeleteWebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2537,9 +2544,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// *  If `force` is set to false, an error will be returned with message
     ///    indicating the referenced resources.
     /// *  If `force` is set to true, Dialogflow will remove the webhook, as well
-    ///    as any references to the webhook (i.e. [Webhook][google.cloud.dialogflow.cx.v3.Fulfillment.webhook]
-    ///    and [tag][google.cloud.dialogflow.cx.v3.Fulfillment.tag]in fulfillments that point to this webhook
-    ///    will be removed).
+    ///    as any references to the webhook (i.e.
+    ///    [Webhook][google.cloud.dialogflow.cx.v3.Fulfillment.webhook] and
+    ///    [tag][google.cloud.dialogflow.cx.v3.Fulfillment.tag]in fulfillments that
+    ///    point to this webhook will be removed).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2785,8 +2793,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DetectIntentResponseIdFieldNumber = 1;
     private string detectIntentResponseId_ = "";
     /// <summary>
-    /// Always present. The unique identifier of the [DetectIntentResponse][google.cloud.dialogflow.cx.v3.DetectIntentResponse] that
-    /// will be returned to the API caller.
+    /// Always present. The unique identifier of the
+    /// [DetectIntentResponse][google.cloud.dialogflow.cx.v3.DetectIntentResponse]
+    /// that will be returned to the API caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2800,8 +2809,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 10;
     /// <summary>
-    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was provided as input, this field
-    /// will contain a copy of the text.
+    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was
+    /// provided as input, this field will contain a copy of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2816,9 +2825,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_intent" field.</summary>
     public const int TriggerIntentFieldNumber = 11;
     /// <summary>
-    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as input, this field will
-    /// contain a copy of the intent identifier.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
+    /// input, this field will contain a copy of the intent identifier. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2834,7 +2843,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "transcript" field.</summary>
     public const int TranscriptFieldNumber = 12;
     /// <summary>
-    /// If [natural language speech audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
+    /// If [natural language speech
+    /// audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
     /// this field will contain the transcript for the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2850,8 +2860,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_event" field.</summary>
     public const int TriggerEventFieldNumber = 14;
     /// <summary>
-    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as input, this field will contain
-    /// the name of the event.
+    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as
+    /// input, this field will contain the name of the event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2960,7 +2970,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int PayloadFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Struct payload_;
     /// <summary>
-    /// Custom data set in [QueryParameters.payload][google.cloud.dialogflow.cx.v3.QueryParameters.payload].
+    /// Custom data set in
+    /// [QueryParameters.payload][google.cloud.dialogflow.cx.v3.QueryParameters.payload].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3535,10 +3546,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string tag_ = "";
         /// <summary>
         /// Always present.
-        /// The value of the [Fulfillment.tag][google.cloud.dialogflow.cx.v3.Fulfillment.tag] field will be populated in this
-        /// field by Dialogflow when the associated webhook is called.
-        /// The tag is typically used by the webhook service to identify which
-        /// fulfillment is being called, but it could be used for other purposes.
+        /// The value of the
+        /// [Fulfillment.tag][google.cloud.dialogflow.cx.v3.Fulfillment.tag] field
+        /// will be populated in this field by Dialogflow when the associated webhook
+        /// is called. The tag is typically used by the webhook service to identify
+        /// which fulfillment is being called, but it could be used for other
+        /// purposes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3754,7 +3767,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int DisplayNameFieldNumber = 3;
         private string displayName_ = "";
         /// <summary>
-        /// Always present. The display name of the last matched [intent][google.cloud.dialogflow.cx.v3.Intent].
+        /// Always present. The display name of the last matched
+        /// [intent][google.cloud.dialogflow.cx.v3.Intent].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4600,7 +4614,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int PayloadFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Struct payload_;
     /// <summary>
-    /// Value to append directly to [QueryResult.webhook_payloads][google.cloud.dialogflow.cx.v3.QueryResult.webhook_payloads].
+    /// Value to append directly to
+    /// [QueryResult.webhook_payloads][google.cloud.dialogflow.cx.v3.QueryResult.webhook_payloads].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5273,10 +5288,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 1;
     private string currentPage_ = "";
     /// <summary>
-    /// Always present for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-    /// The unique identifier of the current page.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
+    /// Always present for
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for
+    /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+    /// unique identifier of the current page. Format: `projects/&lt;Project
+    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/pages/&lt;Page
+    /// ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5291,8 +5308,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// Always present for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-    /// The display name of the current page.
+    /// Always present for
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for
+    /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+    /// display name of the current page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5307,7 +5326,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int FormInfoFieldNumber = 3;
     private global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo formInfo_;
     /// <summary>
-    /// Optional for both [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
+    /// Optional for both
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and
+    /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
     /// Information about the form.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5565,9 +5586,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo.Types.ParameterInfo.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo.Types.ParameterInfo> parameterInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo.Types.ParameterInfo>();
         /// <summary>
-        /// Optional for both [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-        /// The parameters contained in the form. Note that the webhook cannot add
-        /// or remove any form parameter.
+        /// Optional for both
+        /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and
+        /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+        /// parameters contained in the form. Note that the webhook cannot add or
+        /// remove any form parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5756,7 +5779,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int DisplayNameFieldNumber = 1;
             private string displayName_ = "";
             /// <summary>
-            /// Always present for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Required for
+            /// Always present for
+            /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest].
+            /// Required for
             /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
             /// The human-readable name of the parameter, unique within the form. This
             /// field cannot be modified by the webhook.
@@ -5774,7 +5799,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int RequiredFieldNumber = 2;
             private bool required_;
             /// <summary>
-            /// Optional for both [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
+            /// Optional for both
+            /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and
+            /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
             /// Indicates whether the parameter is required. Optional parameters will
             /// not trigger prompts; however, they are filled if the user specifies
             /// them. Required parameters must be filled before form filling concludes.
@@ -5792,10 +5819,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int StateFieldNumber = 3;
             private global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo.Types.ParameterInfo.Types.ParameterState state_ = global::Google.Cloud.Dialogflow.Cx.V3.PageInfo.Types.FormInfo.Types.ParameterInfo.Types.ParameterState.Unspecified;
             /// <summary>
-            /// Always present for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Required for
-            /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The state of the parameter. This field can be set
-            /// to [INVALID][google.cloud.dialogflow.cx.v3.PageInfo.FormInfo.ParameterInfo.ParameterState.INVALID] by
-            /// the webhook to invalidate the parameter; other values set by the
+            /// Always present for
+            /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest].
+            /// Required for
+            /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+            /// state of the parameter. This field can be set to
+            /// [INVALID][google.cloud.dialogflow.cx.v3.PageInfo.FormInfo.ParameterInfo.ParameterState.INVALID]
+            /// by the webhook to invalidate the parameter; other values set by the
             /// webhook will be ignored.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5811,9 +5841,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int ValueFieldNumber = 4;
             private global::Google.Protobuf.WellKnownTypes.Value value_;
             /// <summary>
-            /// Optional for both [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-            /// The value of the parameter. This field can be set by the webhook to
-            /// change the parameter value.
+            /// Optional for both
+            /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest] and
+            /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+            /// value of the parameter. This field can be set by the webhook to change
+            /// the parameter value.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5828,7 +5860,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int JustCollectedFieldNumber = 5;
             private bool justCollected_;
             /// <summary>
-            /// Optional for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
+            /// Optional for
+            /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored
+            /// for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
             /// Indicates if the parameter value was just collected on the last
             /// conversation turn.
             /// </summary>
@@ -6173,8 +6207,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    /// Always present for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-    /// The unique identifier of the [session][google.cloud.dialogflow.cx.v3.DetectIntentRequest.session]. This
+    /// Always present for
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Ignored for
+    /// [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The
+    /// unique identifier of the
+    /// [session][google.cloud.dialogflow.cx.v3.DetectIntentRequest.session]. This
     /// field can be used by the webhook to identify a session.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/sessions/&lt;Session ID>` or `projects/&lt;Project ID>/locations/&lt;Location
@@ -6196,12 +6233,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser), 18);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> parameters_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
-    /// Optional for [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Optional for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
-    /// All parameters collected from forms and intents during the session.
-    /// Parameters can be created, updated, or removed by the webhook. To remove a
-    /// parameter from the session, the webhook should explicitly set the parameter
-    /// value to null in [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. The map is keyed by parameters'
-    /// display names.
+    /// Optional for
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]. Optional
+    /// for [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse]. All
+    /// parameters collected from forms and intents during the session. Parameters
+    /// can be created, updated, or removed by the webhook. To remove a parameter
+    /// from the session, the webhook should explicitly set the parameter value to
+    /// null in [WebhookResponse][google.cloud.dialogflow.cx.v3.WebhookResponse].
+    /// The map is keyed by parameters' display names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

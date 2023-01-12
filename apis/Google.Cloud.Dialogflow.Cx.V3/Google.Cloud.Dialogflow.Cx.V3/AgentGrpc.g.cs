@@ -251,7 +251,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+      /// - `response`:
+      /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -627,7 +628,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+      /// - `response`:
+      /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -648,7 +650,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+      /// - `response`:
+      /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -667,7 +670,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+      /// - `response`:
+      /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -688,7 +692,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+      /// - `response`:
+      /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

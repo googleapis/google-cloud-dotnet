@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
-  /// Service for managing [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
+  /// Service for managing
+  /// [SessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityType].
   /// </summary>
   public static partial class SessionEntityTypes
   {

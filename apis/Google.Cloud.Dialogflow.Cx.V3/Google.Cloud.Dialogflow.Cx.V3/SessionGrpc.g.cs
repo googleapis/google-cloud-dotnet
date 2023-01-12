@@ -25,8 +25,9 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
   /// A session represents an interaction with a user. You retrieve user input
-  /// and pass it to the [DetectIntent][google.cloud.dialogflow.cx.v3.Sessions.DetectIntent] method to determine
-  /// user intent and respond.
+  /// and pass it to the
+  /// [DetectIntent][google.cloud.dialogflow.cx.v3.Sessions.DetectIntent] method to
+  /// determine user intent and respond.
   /// </summary>
   public static partial class Sessions
   {
@@ -176,9 +177,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Fulfills a matched intent returned by [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent].
-      /// Must be called after [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with input from
-      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse]. Otherwise, the behavior is undefined.
+      /// Fulfills a matched intent returned by
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent]. Must be
+      /// called after
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with
+      /// input from
+      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse].
+      /// Otherwise, the behavior is undefined.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -381,9 +386,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_MatchIntent, null, options, request);
       }
       /// <summary>
-      /// Fulfills a matched intent returned by [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent].
-      /// Must be called after [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with input from
-      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse]. Otherwise, the behavior is undefined.
+      /// Fulfills a matched intent returned by
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent]. Must be
+      /// called after
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with
+      /// input from
+      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse].
+      /// Otherwise, the behavior is undefined.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -396,9 +405,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return FulfillIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fulfills a matched intent returned by [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent].
-      /// Must be called after [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with input from
-      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse]. Otherwise, the behavior is undefined.
+      /// Fulfills a matched intent returned by
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent]. Must be
+      /// called after
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with
+      /// input from
+      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse].
+      /// Otherwise, the behavior is undefined.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -409,9 +422,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_FulfillIntent, null, options, request);
       }
       /// <summary>
-      /// Fulfills a matched intent returned by [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent].
-      /// Must be called after [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with input from
-      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse]. Otherwise, the behavior is undefined.
+      /// Fulfills a matched intent returned by
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent]. Must be
+      /// called after
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with
+      /// input from
+      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse].
+      /// Otherwise, the behavior is undefined.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -424,9 +441,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return FulfillIntentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fulfills a matched intent returned by [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent].
-      /// Must be called after [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with input from
-      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse]. Otherwise, the behavior is undefined.
+      /// Fulfills a matched intent returned by
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent]. Must be
+      /// called after
+      /// [MatchIntent][google.cloud.dialogflow.cx.v3.Sessions.MatchIntent], with
+      /// input from
+      /// [MatchIntentResponse][google.cloud.dialogflow.cx.v3.MatchIntentResponse].
+      /// Otherwise, the behavior is undefined.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

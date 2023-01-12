@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhUKDWxhbmd1YWdlX2Nv",
             "ZGUYCiABKAkiWAoLTWVzc2FnZVR5cGUSHAoYTUVTU0FHRV9UWVBFX1VOU1BF",
             "Q0lGSUVEEAASDgoKVFJBTlNDUklQVBABEhsKF0VORF9PRl9TSU5HTEVfVVRU",
-            "RVJBTkNFEAIiwwQKD1F1ZXJ5UGFyYW1ldGVycxIRCgl0aW1lX3pvbmUYASAB",
+            "RVJBTkNFEAIi1AQKD1F1ZXJ5UGFyYW1ldGVycxIRCgl0aW1lX3pvbmUYASAB",
             "KAkSKQoMZ2VvX2xvY2F0aW9uGAIgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5n",
             "Ek4KFHNlc3Npb25fZW50aXR5X3R5cGVzGAMgAygLMjAuZ29vZ2xlLmNsb3Vk",
             "LmRpYWxvZ2Zsb3cuY3gudjMuU2Vzc2lvbkVudGl0eVR5cGUSKAoHcGF5bG9h",
@@ -85,108 +85,108 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZXh0X3NlbnRpbWVudBgIIAEoCBJbCg93ZWJob29rX2hlYWRlcnMYCiADKAsy",
             "Qi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5RdWVyeVBhcmFtZXRl",
             "cnMuV2ViaG9va0hlYWRlcnNFbnRyeRI9Cg1mbG93X3ZlcnNpb25zGA4gAygJ",
-            "Qib6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVmVyc2lvbho1ChNX",
-            "ZWJob29rSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEi2wIKClF1ZXJ5SW5wdXQSOAoEdGV4dBgCIAEoCzIoLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlRleHRJbnB1dEgAEjwKBmludGVudBgD",
-            "IAEoCzIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudElu",
-            "cHV0SAASOgoFYXVkaW8YBSABKAsyKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5BdWRpb0lucHV0SAASOgoFZXZlbnQYBiABKAsyKS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5FdmVudElucHV0SAASOAoEZHRtZhgH",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkR0bWZJbnB1",
-            "dEgAEhoKDWxhbmd1YWdlX2NvZGUYBCABKAlCA+BBAkIHCgVpbnB1dCKhBgoL",
-            "UXVlcnlSZXN1bHQSDgoEdGV4dBgBIAEoCUgAEj8KDnRyaWdnZXJfaW50ZW50",
-            "GAsgASgJQiX6QSIKIGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vSW50ZW50",
-            "SAASFAoKdHJhbnNjcmlwdBgMIAEoCUgAEhcKDXRyaWdnZXJfZXZlbnQYDiAB",
-            "KAlIABI4CgRkdG1mGBcgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "Y3gudjMuRHRtZklucHV0SAASFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIrCgpw",
-            "YXJhbWV0ZXJzGAMgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJJChFy",
-            "ZXNwb25zZV9tZXNzYWdlcxgEIAMoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZRIsChB3ZWJob29rX3N0YXR1c2Vz",
-            "GA0gAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSMQoQd2ViaG9va19wYXlsb2Fk",
-            "cxgGIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSOQoMY3VycmVudF9w",
-            "YWdlGAcgASgLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUGFn",
-            "ZRI5CgZpbnRlbnQYCCABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5JbnRlbnRCAhgBEicKG2ludGVudF9kZXRlY3Rpb25fY29uZmlkZW5j",
-            "ZRgJIAEoAkICGAESMwoFbWF0Y2gYDyABKAsyJC5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy5jeC52My5NYXRjaBIwCg9kaWFnbm9zdGljX2luZm8YCiABKAsy",
-            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0ElkKGXNlbnRpbWVudF9hbmFseXNp",
-            "c19yZXN1bHQYESABKAsyNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
-            "My5TZW50aW1lbnRBbmFseXNpc1Jlc3VsdEIHCgVxdWVyeSIeCglUZXh0SW5w",
-            "dXQSEQoEdGV4dBgBIAEoCUID4EECIkcKC0ludGVudElucHV0EjgKBmludGVu",
-            "dBgBIAEoCUIo4EEC+kEiCiBkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0lu",
-            "dGVudCJhCgpBdWRpb0lucHV0EkQKBmNvbmZpZxgBIAEoCzIvLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLklucHV0QXVkaW9Db25maWdCA+BBAhIN",
-            "CgVhdWRpbxgCIAEoDCIbCgpFdmVudElucHV0Eg0KBWV2ZW50GAEgASgJIjEK",
-            "CUR0bWZJbnB1dBIOCgZkaWdpdHMYASABKAkSFAoMZmluaXNoX2RpZ2l0GAIg",
-            "ASgJIvECCgVNYXRjaBI1CgZpbnRlbnQYASABKAsyJS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52My5JbnRlbnQSDQoFZXZlbnQYBiABKAkSKwoKcGFy",
-            "YW1ldGVycxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSFgoOcmVz",
-            "b2x2ZWRfaW5wdXQYAyABKAkSQgoKbWF0Y2hfdHlwZRgEIAEoDjIuLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoLk1hdGNoVHlwZRISCgpj",
-            "b25maWRlbmNlGAUgASgCIoQBCglNYXRjaFR5cGUSGgoWTUFUQ0hfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgoKBklOVEVOVBABEhEKDURJUkVDVF9JTlRFTlQQAhIV",
-            "ChFQQVJBTUVURVJfRklMTElORxADEgwKCE5PX01BVENIEAQSDAoITk9fSU5Q",
-            "VVQQBRIJCgVFVkVOVBAGItsBChJNYXRjaEludGVudFJlcXVlc3QSOgoHc2Vz",
-            "c2lvbhgBIAEoCUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
-            "L1Nlc3Npb24SRAoMcXVlcnlfcGFyYW1zGAIgASgLMi4uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjMuUXVlcnlQYXJhbWV0ZXJzEkMKC3F1ZXJ5X2lu",
-            "cHV0GAMgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUXVl",
-            "cnlJbnB1dEID4EECIpACChNNYXRjaEludGVudFJlc3BvbnNlEg4KBHRleHQY",
-            "ASABKAlIABI/Cg50cmlnZ2VyX2ludGVudBgCIAEoCUIl+kEiCiBkaWFsb2dm",
-            "bG93Lmdvb2dsZWFwaXMuY29tL0ludGVudEgAEhQKCnRyYW5zY3JpcHQYAyAB",
-            "KAlIABIXCg10cmlnZ2VyX2V2ZW50GAYgASgJSAASNQoHbWF0Y2hlcxgEIAMo",
-            "CzIkLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoEjkKDGN1",
-            "cnJlbnRfcGFnZRgFIAEoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzLlBhZ2VCBwoFcXVlcnki6wEKFEZ1bGZpbGxJbnRlbnRSZXF1ZXN0Ek8K",
-            "FG1hdGNoX2ludGVudF9yZXF1ZXN0GAEgASgLMjEuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuTWF0Y2hJbnRlbnRSZXF1ZXN0EjMKBW1hdGNoGAIg",
-            "ASgLMiQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTWF0Y2gSTQoT",
-            "b3V0cHV0X2F1ZGlvX2NvbmZpZxgDIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLk91dHB1dEF1ZGlvQ29uZmlnItMBChVGdWxmaWxsSW50",
-            "ZW50UmVzcG9uc2USEwoLcmVzcG9uc2VfaWQYASABKAkSQAoMcXVlcnlfcmVz",
-            "dWx0GAIgASgLMiouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUXVl",
-            "cnlSZXN1bHQSFAoMb3V0cHV0X2F1ZGlvGAMgASgMEk0KE291dHB1dF9hdWRp",
-            "b19jb25maWcYBCABKAsyMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
-            "My5PdXRwdXRBdWRpb0NvbmZpZyI7ChdTZW50aW1lbnRBbmFseXNpc1Jlc3Vs",
-            "dBINCgVzY29yZRgBIAEoAhIRCgltYWduaXR1ZGUYAiABKAIyxAkKCFNlc3Np",
-            "b25zEqYCCgxEZXRlY3RJbnRlbnQSMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5EZXRlY3RJbnRlbnRSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuRGV0ZWN0SW50ZW50UmVzcG9uc2UirAGC0+STAqUB",
-            "IkUvdjMve3Nlc3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMv",
-            "Ki9zZXNzaW9ucy8qfTpkZXRlY3RJbnRlbnQ6ASpaWSJUL3YzL3tzZXNzaW9u",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJvbm1lbnRz",
-            "Lyovc2Vzc2lvbnMvKn06ZGV0ZWN0SW50ZW50OgEqEpgBChVTdHJlYW1pbmdE",
-            "ZXRlY3RJbnRlbnQSOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5T",
-            "dHJlYW1pbmdEZXRlY3RJbnRlbnRSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVzcG9uc2Ui",
-            "ACgBMAESoQIKC01hdGNoSW50ZW50EjEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuTWF0Y2hJbnRlbnRSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuTWF0Y2hJbnRlbnRSZXNwb25zZSKqAYLT5JMCowEi",
-            "RC92My97c2Vzc2lvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8q",
-            "L3Nlc3Npb25zLyp9Om1hdGNoSW50ZW50OgEqWlgiUy92My97c2Vzc2lvbj1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8q",
-            "L3Nlc3Npb25zLyp9Om1hdGNoSW50ZW50OgEqEtUCCg1GdWxmaWxsSW50ZW50",
-            "EjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbEludGVu",
-            "dFJlcXVlc3QaNC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GdWxm",
-            "aWxsSW50ZW50UmVzcG9uc2Ui2AGC0+STAtEBIlsvdjMve21hdGNoX2ludGVu",
-            "dF9yZXF1ZXN0LnNlc3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2Vu",
-            "dHMvKi9zZXNzaW9ucy8qfTpmdWxmaWxsSW50ZW50OgEqWm8iai92My97bWF0",
-            "Y2hfaW50ZW50X3JlcXVlc3Quc2Vzc2lvbj1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2FnZW50cy8qL2Vudmlyb25tZW50cy8qL3Nlc3Npb25zLyp9OmZ1bGZp",
-            "bGxJbnRlbnQ6ASoaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0KY",
-            "AwohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQgxTZXNzaW9u",
-            "UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUu",
-            "Q2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxv",
-            "Z2Zsb3c6OkNYOjpWM+pB1AEKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20v",
-            "U2Vzc2lvbhJJcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2FnZW50cy97YWdlbnR9L3Nlc3Npb25zL3tzZXNzaW9ufRJkcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FnZW50cy97YWdl",
-            "bnR9L2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnR9L3Nlc3Npb25zL3tzZXNz",
-            "aW9ufWIGcHJvdG8z"));
+            "Qib6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVmVyc2lvbhIPCgdj",
+            "aGFubmVsGA8gASgJGjUKE1dlYmhvb2tIZWFkZXJzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASLbAgoKUXVlcnlJbnB1dBI4CgR0ZXh0",
+            "GAIgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVGV4dElu",
+            "cHV0SAASPAoGaW50ZW50GAMgASgLMiouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuSW50ZW50SW5wdXRIABI6CgVhdWRpbxgFIAEoCzIpLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkF1ZGlvSW5wdXRIABI6CgVldmVu",
+            "dBgGIAEoCzIpLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV2ZW50",
+            "SW5wdXRIABI4CgRkdG1mGAcgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuRHRtZklucHV0SAASGgoNbGFuZ3VhZ2VfY29kZRgEIAEoCUID",
+            "4EECQgcKBWlucHV0IqEGCgtRdWVyeVJlc3VsdBIOCgR0ZXh0GAEgASgJSAAS",
+            "PwoOdHJpZ2dlcl9pbnRlbnQYCyABKAlCJfpBIgogZGlhbG9nZmxvdy5nb29n",
+            "bGVhcGlzLmNvbS9JbnRlbnRIABIUCgp0cmFuc2NyaXB0GAwgASgJSAASFwoN",
+            "dHJpZ2dlcl9ldmVudBgOIAEoCUgAEjgKBGR0bWYYFyABKAsyKC5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5EdG1mSW5wdXRIABIVCg1sYW5ndWFn",
+            "ZV9jb2RlGAIgASgJEisKCnBhcmFtZXRlcnMYAyABKAsyFy5nb29nbGUucHJv",
+            "dG9idWYuU3RydWN0EkkKEXJlc3BvbnNlX21lc3NhZ2VzGAQgAygLMi4uZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlEiwK",
+            "EHdlYmhvb2tfc3RhdHVzZXMYDSADKAsyEi5nb29nbGUucnBjLlN0YXR1cxIx",
+            "ChB3ZWJob29rX3BheWxvYWRzGAYgAygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdBI5CgxjdXJyZW50X3BhZ2UYByABKAsyIy5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy5jeC52My5QYWdlEjkKBmludGVudBgIIAEoCzIlLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudEICGAESJwobaW50ZW50X2Rl",
+            "dGVjdGlvbl9jb25maWRlbmNlGAkgASgCQgIYARIzCgVtYXRjaBgPIAEoCzIk",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoEjAKD2RpYWdu",
+            "b3N0aWNfaW5mbxgKIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSWQoZ",
+            "c2VudGltZW50X2FuYWx5c2lzX3Jlc3VsdBgRIAEoCzI2Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLlNlbnRpbWVudEFuYWx5c2lzUmVzdWx0QgcK",
+            "BXF1ZXJ5Ih4KCVRleHRJbnB1dBIRCgR0ZXh0GAEgASgJQgPgQQIiRwoLSW50",
+            "ZW50SW5wdXQSOAoGaW50ZW50GAEgASgJQijgQQL6QSIKIGRpYWxvZ2Zsb3cu",
+            "Z29vZ2xlYXBpcy5jb20vSW50ZW50ImEKCkF1ZGlvSW5wdXQSRAoGY29uZmln",
+            "GAEgASgLMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuSW5wdXRB",
+            "dWRpb0NvbmZpZ0ID4EECEg0KBWF1ZGlvGAIgASgMIhsKCkV2ZW50SW5wdXQS",
+            "DQoFZXZlbnQYASABKAkiMQoJRHRtZklucHV0Eg4KBmRpZ2l0cxgBIAEoCRIU",
+            "CgxmaW5pc2hfZGlnaXQYAiABKAki8QIKBU1hdGNoEjUKBmludGVudBgBIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudBINCgVl",
+            "dmVudBgGIAEoCRIrCgpwYXJhbWV0ZXJzGAIgASgLMhcuZ29vZ2xlLnByb3Rv",
+            "YnVmLlN0cnVjdBIWCg5yZXNvbHZlZF9pbnB1dBgDIAEoCRJCCgptYXRjaF90",
+            "eXBlGAQgASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTWF0",
+            "Y2guTWF0Y2hUeXBlEhIKCmNvbmZpZGVuY2UYBSABKAIihAEKCU1hdGNoVHlw",
+            "ZRIaChZNQVRDSF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGSU5URU5UEAESEQoN",
+            "RElSRUNUX0lOVEVOVBACEhUKEVBBUkFNRVRFUl9GSUxMSU5HEAMSDAoITk9f",
+            "TUFUQ0gQBBIMCghOT19JTlBVVBAFEgkKBUVWRU5UEAYi2wEKEk1hdGNoSW50",
+            "ZW50UmVxdWVzdBI6CgdzZXNzaW9uGAEgASgJQingQQL6QSMKIWRpYWxvZ2Zs",
+            "b3cuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJECgxxdWVyeV9wYXJhbXMYAiAB",
+            "KAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5RdWVyeVBhcmFt",
+            "ZXRlcnMSQwoLcXVlcnlfaW5wdXQYAyABKAsyKS5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy5jeC52My5RdWVyeUlucHV0QgPgQQIikAIKE01hdGNoSW50ZW50",
+            "UmVzcG9uc2USDgoEdGV4dBgBIAEoCUgAEj8KDnRyaWdnZXJfaW50ZW50GAIg",
+            "ASgJQiX6QSIKIGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vSW50ZW50SAAS",
+            "FAoKdHJhbnNjcmlwdBgDIAEoCUgAEhcKDXRyaWdnZXJfZXZlbnQYBiABKAlI",
+            "ABI1CgdtYXRjaGVzGAQgAygLMiQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjMuTWF0Y2gSOQoMY3VycmVudF9wYWdlGAUgASgLMiMuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuUGFnZUIHCgVxdWVyeSLrAQoURnVsZmls",
+            "bEludGVudFJlcXVlc3QSTwoUbWF0Y2hfaW50ZW50X3JlcXVlc3QYASABKAsy",
+            "MS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRjaEludGVudFJl",
+            "cXVlc3QSMwoFbWF0Y2gYAiABKAsyJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5NYXRjaBJNChNvdXRwdXRfYXVkaW9fY29uZmlnGAMgASgLMjAu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuT3V0cHV0QXVkaW9Db25m",
+            "aWci0wEKFUZ1bGZpbGxJbnRlbnRSZXNwb25zZRITCgtyZXNwb25zZV9pZBgB",
+            "IAEoCRJACgxxdWVyeV9yZXN1bHQYAiABKAsyKi5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy5jeC52My5RdWVyeVJlc3VsdBIUCgxvdXRwdXRfYXVkaW8YAyAB",
+            "KAwSTQoTb3V0cHV0X2F1ZGlvX2NvbmZpZxgEIAEoCzIwLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LmN4LnYzLk91dHB1dEF1ZGlvQ29uZmlnIjsKF1NlbnRp",
+            "bWVudEFuYWx5c2lzUmVzdWx0Eg0KBXNjb3JlGAEgASgCEhEKCW1hZ25pdHVk",
+            "ZRgCIAEoAjLECQoIU2Vzc2lvbnMSpgIKDERldGVjdEludGVudBIyLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRldGVjdEludGVudFJlcXVlc3Qa",
+            "My5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5EZXRlY3RJbnRlbnRS",
+            "ZXNwb25zZSKsAYLT5JMCpQEiRS92My97c2Vzc2lvbj1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoB",
+            "KlpZIlQvdjMve3Nlc3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2Vu",
+            "dHMvKi9lbnZpcm9ubWVudHMvKi9zZXNzaW9ucy8qfTpkZXRlY3RJbnRlbnQ6",
+            "ASoSmAEKFVN0cmVhbWluZ0RldGVjdEludGVudBI7Lmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLlN0cmVhbWluZ0RldGVjdEludGVudFJlcXVlc3Qa",
+            "PC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TdHJlYW1pbmdEZXRl",
+            "Y3RJbnRlbnRSZXNwb25zZSIAKAEwARKhAgoLTWF0Y2hJbnRlbnQSMS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRjaEludGVudFJlcXVlc3Qa",
+            "Mi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRjaEludGVudFJl",
+            "c3BvbnNlIqoBgtPkkwKjASJEL3YzL3tzZXNzaW9uPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovYWdlbnRzLyovc2Vzc2lvbnMvKn06bWF0Y2hJbnRlbnQ6ASpa",
+            "WCJTL3YzL3tzZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRz",
+            "LyovZW52aXJvbm1lbnRzLyovc2Vzc2lvbnMvKn06bWF0Y2hJbnRlbnQ6ASoS",
+            "1QIKDUZ1bGZpbGxJbnRlbnQSMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5GdWxmaWxsSW50ZW50UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLkZ1bGZpbGxJbnRlbnRSZXNwb25zZSLYAYLT5JMC0QEi",
+            "Wy92My97bWF0Y2hfaW50ZW50X3JlcXVlc3Quc2Vzc2lvbj1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Npb25zLyp9OmZ1bGZpbGxJbnRl",
+            "bnQ6ASpabyJqL3YzL3ttYXRjaF9pbnRlbnRfcmVxdWVzdC5zZXNzaW9uPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJvbm1lbnRzLyov",
+            "c2Vzc2lvbnMvKn06ZnVsZmlsbEludGVudDoBKhp4ykEZZGlhbG9nZmxvdy5n",
+            "b29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9kaWFsb2dmbG93QooDCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjNCDFNlc3Npb25Qcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1Hb29n",
+            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRp",
+            "YWxvZ2Zsb3c6OkNYOjpWM+pB1AEKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
+            "b20vU2Vzc2lvbhJJcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2FnZW50cy97YWdlbnR9L3Nlc3Npb25zL3tzZXNzaW9ufRJkcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FnZW50cy97",
+            "YWdlbnR9L2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnR9L3Nlc3Npb25zL3tz",
+            "ZXNzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -195,7 +195,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig", "EnablePartialResponse" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser, new[]{ "RecognitionResult", "DetectIntentResponse" }, new[]{ "Response" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult), global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult.Parser, new[]{ "MessageType", "Transcript", "IsFinal", "Confidence", "Stability", "SpeechWordInfo", "SpeechEndOffset", "LanguageCode" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult.Types.MessageType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters), global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters.Parser, new[]{ "TimeZone", "GeoLocation", "SessionEntityTypes", "Payload", "Parameters", "CurrentPage", "DisableWebhook", "AnalyzeQueryTextSentiment", "WebhookHeaders", "FlowVersions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters), global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters.Parser, new[]{ "TimeZone", "GeoLocation", "SessionEntityTypes", "Payload", "Parameters", "CurrentPage", "DisableWebhook", "AnalyzeQueryTextSentiment", "WebhookHeaders", "FlowVersions", "Channel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryInput), global::Google.Cloud.Dialogflow.Cx.V3.QueryInput.Parser, new[]{ "Text", "Intent", "Audio", "Event", "Dtmf", "LanguageCode" }, new[]{ "Input" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryResult), global::Google.Cloud.Dialogflow.Cx.V3.QueryResult.Parser, new[]{ "Text", "TriggerIntent", "Transcript", "TriggerEvent", "Dtmf", "LanguageCode", "Parameters", "ResponseMessages", "WebhookStatuses", "WebhookPayloads", "CurrentPage", "Intent", "IntentDetectionConfidence", "Match", "DiagnosticInfo", "SentimentAnalysisResult" }, new[]{ "Query" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.TextInput), global::Google.Cloud.Dialogflow.Cx.V3.TextInput.Parser, new[]{ "Text" }, null, null, null, null),
@@ -662,9 +662,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The audio data bytes encoded as specified in the request.
     /// Note: The output audio is generated based on the values of default platform
     /// text responses found in the
-    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages] field. If
-    /// multiple default text responses exist, they will be concatenated when
-    /// generating audio. If no default platform text responses exist, the
+    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages]
+    /// field. If multiple default text responses exist, they will be concatenated
+    /// when generating audio. If no default platform text responses exist, the
     /// generated audio content will be empty.
     ///
     /// In some scenarios, multiple output audio fields may be present in the
@@ -1028,24 +1028,29 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
   /// <summary>
   /// The top-level message sent by the client to the
-  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent] method.
+  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent]
+  /// method.
   ///
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain
   ///     [session][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.session],
-  ///     [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input] plus optionally
-  ///     [query_params][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_params]. If the client
-  ///     wants to receive an audio response, it should also contain
+  ///     [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input]
+  ///     plus optionally
+  ///     [query_params][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_params].
+  ///     If the client wants to receive an audio response, it should also contain
   ///     [output_audio_config][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.output_audio_config].
   ///
-  /// 2.  If [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input] was set to
-  ///     [query_input.audio.config][google.cloud.dialogflow.cx.v3.AudioInput.config], all subsequent messages
-  ///     must contain [query_input.audio.audio][google.cloud.dialogflow.cx.v3.AudioInput.audio] to continue with
-  ///     Speech recognition.
-  ///     If you decide to rather detect an intent from text
-  ///     input after you already started Speech recognition, please send a message
-  ///     with [query_input.text][google.cloud.dialogflow.cx.v3.QueryInput.text].
+  /// 2.  If
+  /// [query_input][google.cloud.dialogflow.cx.v3.StreamingDetectIntentRequest.query_input]
+  /// was set to
+  ///     [query_input.audio.config][google.cloud.dialogflow.cx.v3.AudioInput.config],
+  ///     all subsequent messages must contain
+  ///     [query_input.audio.audio][google.cloud.dialogflow.cx.v3.AudioInput.audio]
+  ///     to continue with Speech recognition. If you decide to rather detect an
+  ///     intent from text input after you already started Speech recognition,
+  ///     please send a message with
+  ///     [query_input.text][google.cloud.dialogflow.cx.v3.QueryInput.text].
   ///
   ///     However, note that:
   ///
@@ -1456,7 +1461,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
   /// <summary>
   /// The top-level message returned from the
-  /// [StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent] method.
+  /// [StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent]
+  /// method.
   ///
   /// Multiple response messages (N) can be returned in order.
   ///
@@ -1467,17 +1473,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   ///     set, and the `StreamingDetectIntentRequest.enable_partial_response`
   ///     field was false, the `recognition_result` field is populated for each
   ///     of the (N-1) responses.
-  ///     See the [StreamingRecognitionResult][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult] message for details
-  ///     about the result message sequence.
+  ///     See the
+  ///     [StreamingRecognitionResult][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult]
+  ///     message for details about the result message sequence.
   ///
   /// *   If the `StreamingDetectIntentRequest.enable_partial_response` field was
   ///     true, the `detect_intent_response` field is populated for each
   ///     of the (N-1) responses, where 1 &lt;= N &lt;= 4.
-  ///     These responses set the [DetectIntentResponse.response_type][google.cloud.dialogflow.cx.v3.DetectIntentResponse.response_type] field
-  ///     to `PARTIAL`.
+  ///     These responses set the
+  ///     [DetectIntentResponse.response_type][google.cloud.dialogflow.cx.v3.DetectIntentResponse.response_type]
+  ///     field to `PARTIAL`.
   ///
   /// For the final Nth response message, the `detect_intent_response` is fully
-  /// populated, and [DetectIntentResponse.response_type][google.cloud.dialogflow.cx.v3.DetectIntentResponse.response_type] is set to `FINAL`.
+  /// populated, and
+  /// [DetectIntentResponse.response_type][google.cloud.dialogflow.cx.v3.DetectIntentResponse.response_type]
+  /// is set to `FINAL`.
   /// </summary>
   public sealed partial class StreamingDetectIntentResponse : pb::IMessage<StreamingDetectIntentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1958,7 +1968,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SpeechWordInfo> speechWordInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.SpeechWordInfo>();
     /// <summary>
     /// Word-specific information for the words recognized by Speech in
-    /// [transcript][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult.transcript]. Populated if and only if `message_type` = `TRANSCRIPT` and
+    /// [transcript][google.cloud.dialogflow.cx.v3.StreamingRecognitionResult.transcript].
+    /// Populated if and only if `message_type` = `TRANSCRIPT` and
     /// [InputAudioConfig.enable_word_info] is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2321,8 +2332,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// additional results). The client should stop sending additional audio
         /// data, half-close the gRPC connection, and wait for any additional results
         /// until the server closes the gRPC connection. This message is only sent if
-        /// [`single_utterance`][google.cloud.dialogflow.cx.v3.InputAudioConfig.single_utterance] was set to
-        /// `true`, and is not used otherwise.
+        /// [`single_utterance`][google.cloud.dialogflow.cx.v3.InputAudioConfig.single_utterance]
+        /// was set to `true`, and is not used otherwise.
         /// </summary>
         [pbr::OriginalName("END_OF_SINGLE_UTTERANCE")] EndOfSingleUtterance = 2,
       }
@@ -2379,6 +2390,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       analyzeQueryTextSentiment_ = other.analyzeQueryTextSentiment_;
       webhookHeaders_ = other.webhookHeaders_.Clone();
       flowVersions_ = other.flowVersions_.Clone();
+      channel_ = other.channel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2502,8 +2514,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 6;
     private string currentPage_ = "";
     /// <summary>
-    /// The unique identifier of the [page][google.cloud.dialogflow.cx.v3.Page] to override the [current
-    /// page][QueryResult.current_page] in the session.
+    /// The unique identifier of the [page][google.cloud.dialogflow.cx.v3.Page] to
+    /// override the [current page][QueryResult.current_page] in the session.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
     ///
@@ -2511,9 +2523,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// ignored by Dialogflow, including the [previous
     /// page][QueryResult.current_page] and the [previous session
     /// parameters][QueryResult.parameters].
-    /// In most cases, [current_page][google.cloud.dialogflow.cx.v3.QueryParameters.current_page] and
-    /// [parameters][google.cloud.dialogflow.cx.v3.QueryParameters.parameters] should be configured together to
-    /// direct a session to a specific state.
+    /// In most cases,
+    /// [current_page][google.cloud.dialogflow.cx.v3.QueryParameters.current_page]
+    /// and [parameters][google.cloud.dialogflow.cx.v3.QueryParameters.parameters]
+    /// should be configured together to direct a session to a specific state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2597,6 +2610,33 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return flowVersions_; }
     }
 
+    /// <summary>Field number for the "channel" field.</summary>
+    public const int ChannelFieldNumber = 15;
+    private string channel_ = "";
+    /// <summary>
+    /// The channel which this query is for.
+    ///
+    /// If specified, only the
+    /// [ResponseMessage][google.cloud.dialogflow.cx.v3.ResponseMessage] associated
+    /// with the channel will be returned. If no
+    /// [ResponseMessage][google.cloud.dialogflow.cx.v3.ResponseMessage] is
+    /// associated with the channel, it falls back to the
+    /// [ResponseMessage][google.cloud.dialogflow.cx.v3.ResponseMessage] with
+    /// unspecified channel.
+    ///
+    /// If unspecified, the
+    /// [ResponseMessage][google.cloud.dialogflow.cx.v3.ResponseMessage] with
+    /// unspecified channel will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Channel {
+      get { return channel_; }
+      set {
+        channel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2622,6 +2662,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (AnalyzeQueryTextSentiment != other.AnalyzeQueryTextSentiment) return false;
       if (!WebhookHeaders.Equals(other.WebhookHeaders)) return false;
       if(!flowVersions_.Equals(other.flowVersions_)) return false;
+      if (Channel != other.Channel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2639,6 +2680,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (AnalyzeQueryTextSentiment != false) hash ^= AnalyzeQueryTextSentiment.GetHashCode();
       hash ^= WebhookHeaders.GetHashCode();
       hash ^= flowVersions_.GetHashCode();
+      if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2688,6 +2730,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       webhookHeaders_.WriteTo(output, _map_webhookHeaders_codec);
       flowVersions_.WriteTo(output, _repeated_flowVersions_codec);
+      if (Channel.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2729,6 +2775,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       webhookHeaders_.WriteTo(ref output, _map_webhookHeaders_codec);
       flowVersions_.WriteTo(ref output, _repeated_flowVersions_codec);
+      if (Channel.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2763,6 +2813,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       size += webhookHeaders_.CalculateSize(_map_webhookHeaders_codec);
       size += flowVersions_.CalculateSize(_repeated_flowVersions_codec);
+      if (Channel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Channel);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2808,6 +2861,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       webhookHeaders_.Add(other.webhookHeaders_);
       flowVersions_.Add(other.flowVersions_);
+      if (other.Channel.Length != 0) {
+        Channel = other.Channel;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2872,6 +2928,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             flowVersions_.AddEntriesFrom(input, _repeated_flowVersions_codec);
             break;
           }
+          case 122: {
+            Channel = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2934,6 +2994,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 114: {
             flowVersions_.AddEntriesFrom(ref input, _repeated_flowVersions_codec);
+            break;
+          }
+          case 122: {
+            Channel = input.ReadString();
             break;
           }
         }
@@ -3534,8 +3598,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 1;
     /// <summary>
-    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was provided as input, this field
-    /// will contain a copy of the text.
+    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was
+    /// provided as input, this field will contain a copy of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3550,9 +3614,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_intent" field.</summary>
     public const int TriggerIntentFieldNumber = 11;
     /// <summary>
-    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as input, this field will
-    /// contain a copy of the intent identifier.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
+    /// input, this field will contain a copy of the intent identifier. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3568,7 +3632,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "transcript" field.</summary>
     public const int TranscriptFieldNumber = 12;
     /// <summary>
-    /// If [natural language speech audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
+    /// If [natural language speech
+    /// audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
     /// this field will contain the transcript for the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3584,8 +3649,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_event" field.</summary>
     public const int TriggerEventFieldNumber = 14;
     /// <summary>
-    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as input, this field will contain
-    /// the name of the event.
+    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as
+    /// input, this field will contain the name of the event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3635,7 +3700,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParametersFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Struct parameters_;
     /// <summary>
-    /// The collected [session parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+    /// The collected [session
+    /// parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
     ///
     /// Depending on your protocol or client library language, this is a
     /// map, associative array, symbol table, dictionary, or JSON object
@@ -3695,8 +3761,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForMessage(50, global::Google.Protobuf.WellKnownTypes.Struct.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct> webhookPayloads_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct>();
     /// <summary>
-    /// The list of webhook payload in [WebhookResponse.payload][google.cloud.dialogflow.cx.v3.WebhookResponse.payload], in
-    /// the order of call sequence. If some webhook call fails or doesn't return
+    /// The list of webhook payload in
+    /// [WebhookResponse.payload][google.cloud.dialogflow.cx.v3.WebhookResponse.payload],
+    /// in the order of call sequence. If some webhook call fails or doesn't return
     /// any payload, an empty `Struct` would be used instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3709,8 +3776,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 7;
     private global::Google.Cloud.Dialogflow.Cx.V3.Page currentPage_;
     /// <summary>
-    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all fields are filled in this message,
-    /// including but not limited to `name` and `display_name`.
+    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all
+    /// fields are filled in this message, including but not limited to `name` and
+    /// `display_name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3725,10 +3793,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int IntentFieldNumber = 8;
     private global::Google.Cloud.Dialogflow.Cx.V3.Intent intent_;
     /// <summary>
-    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the conversational query. Some, not all fields
-    /// are filled in this message, including but not limited to: `name` and
-    /// `display_name`.
-    /// This field is deprecated, please use [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match] instead.
+    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the
+    /// conversational query. Some, not all fields are filled in this message,
+    /// including but not limited to: `name` and `display_name`. This field is
+    /// deprecated, please use
+    /// [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3750,7 +3820,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// help match the best intent within the classification threshold.
     /// This value may change for the same end-user expression at any time due to a
     /// model retraining or change in implementation.
-    /// This field is deprecated, please use [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match] instead.
+    /// This field is deprecated, please use
+    /// [QueryResult.match][google.cloud.dialogflow.cx.v3.QueryResult.match]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3814,7 +3886,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The sentiment analyss result, which depends on
     /// [`analyze_query_text_sentiment`]
-    /// [google.cloud.dialogflow.cx.v3.QueryParameters.analyze_query_text_sentiment], specified in the request.
+    /// [google.cloud.dialogflow.cx.v3.QueryParameters.analyze_query_text_sentiment],
+    /// specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4435,8 +4508,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Required. The UTF-8 encoded natural language text to be processed. Text length must
-    /// not exceed 256 characters.
+    /// Required. The UTF-8 encoded natural language text to be processed. Text
+    /// length must not exceed 256 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4847,8 +4920,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The natural language speech audio to be processed.
     /// A single request can contain up to 1 minute of speech audio data.
-    /// The [transcribed text][google.cloud.dialogflow.cx.v3.QueryResult.transcript] cannot contain more than 256
-    /// bytes.
+    /// The [transcribed
+    /// text][google.cloud.dialogflow.cx.v3.QueryResult.transcript] cannot contain
+    /// more than 256 bytes.
     ///
     /// For non-streaming audio detect intent, both `config` and `audio` must be
     /// provided.
@@ -5516,9 +5590,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int IntentFieldNumber = 1;
     private global::Google.Cloud.Dialogflow.Cx.V3.Intent intent_;
     /// <summary>
-    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the query. Some, not all fields are filled in
-    /// this message, including but not limited to: `name` and `display_name`. Only
-    /// filled for [`INTENT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match type.
+    /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that matched the query.
+    /// Some, not all fields are filled in this message, including but not limited
+    /// to: `name` and `display_name`. Only filled for
+    /// [`INTENT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5534,7 +5609,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string event_ = "";
     /// <summary>
     /// The event that matched the query. Filled for
-    /// [`EVENT`][google.cloud.dialogflow.cx.v3.Match.MatchType], [`NO_MATCH`][google.cloud.dialogflow.cx.v3.Match.MatchType] and
+    /// [`EVENT`][google.cloud.dialogflow.cx.v3.Match.MatchType],
+    /// [`NO_MATCH`][google.cloud.dialogflow.cx.v3.Match.MatchType] and
     /// [`NO_INPUT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6309,8 +6385,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 1;
     /// <summary>
-    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was provided as input, this field
-    /// will contain a copy of the text.
+    /// If [natural language text][google.cloud.dialogflow.cx.v3.TextInput] was
+    /// provided as input, this field will contain a copy of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6325,9 +6401,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_intent" field.</summary>
     public const int TriggerIntentFieldNumber = 2;
     /// <summary>
-    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as input, this field will
-    /// contain a copy of the intent identifier.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// If an [intent][google.cloud.dialogflow.cx.v3.IntentInput] was provided as
+    /// input, this field will contain a copy of the intent identifier. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6343,7 +6419,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "transcript" field.</summary>
     public const int TranscriptFieldNumber = 3;
     /// <summary>
-    /// If [natural language speech audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
+    /// If [natural language speech
+    /// audio][google.cloud.dialogflow.cx.v3.AudioInput] was provided as input,
     /// this field will contain the transcript for the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6359,8 +6436,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "trigger_event" field.</summary>
     public const int TriggerEventFieldNumber = 6;
     /// <summary>
-    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as input, this field will
-    /// contain a copy of the event name.
+    /// If an [event][google.cloud.dialogflow.cx.v3.EventInput] was provided as
+    /// input, this field will contain a copy of the event name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6391,8 +6468,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CurrentPageFieldNumber = 5;
     private global::Google.Cloud.Dialogflow.Cx.V3.Page currentPage_;
     /// <summary>
-    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all fields are filled in this message,
-    /// including but not limited to `name` and `display_name`.
+    /// The current [Page][google.cloud.dialogflow.cx.v3.Page]. Some, not all
+    /// fields are filled in this message, including but not limited to `name` and
+    /// `display_name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7074,9 +7152,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// The audio data bytes encoded as specified in the request.
     /// Note: The output audio is generated based on the values of default platform
     /// text responses found in the
-    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages] field. If
-    /// multiple default text responses exist, they will be concatenated when
-    /// generating audio. If no default platform text responses exist, the
+    /// [`query_result.response_messages`][google.cloud.dialogflow.cx.v3.QueryResult.response_messages]
+    /// field. If multiple default text responses exist, they will be concatenated
+    /// when generating audio. If no default platform text responses exist, the
     /// generated audio content will be empty.
     ///
     /// In some scenarios, multiple output audio fields may be present in the

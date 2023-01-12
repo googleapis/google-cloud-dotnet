@@ -1036,7 +1036,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+        /// - `response`:
+        /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1053,7 +1054,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+        /// - `response`:
+        /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1070,7 +1072,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+        /// - `response`:
+        /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1627,7 +1630,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+        /// - `response`:
+        /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1647,7 +1651,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
+        /// - `response`:
+        /// [ExportAgentResponse][google.cloud.dialogflow.cx.v3.ExportAgentResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

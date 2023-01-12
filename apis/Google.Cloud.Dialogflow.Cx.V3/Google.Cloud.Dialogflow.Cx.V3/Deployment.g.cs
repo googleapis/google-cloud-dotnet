@@ -64,11 +64,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "L2RlcGxveW1lbnRzLyp92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29nbGVh",
             "cGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
             "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9k",
-            "aWFsb2dmbG93QsMBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djNCD0RlcGxveW1lbnRQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjM7Y3j4AQGi",
-            "AgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xl",
-            "OjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
+            "aWFsb2dmbG93QrUBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
+            "djNCD0RlcGxveW1lbnRQcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dvL2Rp",
+            "YWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1Hb29nbGUu",
+            "Q2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxv",
+            "Z2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -770,7 +770,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Deployments.ListDeployments][google.cloud.dialogflow.cx.v3.Deployments.ListDeployments].
+  /// The request message for
+  /// [Deployments.ListDeployments][google.cloud.dialogflow.cx.v3.Deployments.ListDeployments].
   /// </summary>
   public sealed partial class ListDeploymentsRequest : pb::IMessage<ListDeploymentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -822,9 +823,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>`.
+    /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+    /// list all environments for. Format: `projects/&lt;Project
+    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/environments/&lt;Environment
+    /// ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1048,7 +1050,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Deployments.ListDeployments][google.cloud.dialogflow.cx.v3.Deployments.ListDeployments].
+  /// The response message for
+  /// [Deployments.ListDeployments][google.cloud.dialogflow.cx.v3.Deployments.ListDeployments].
   /// </summary>
   public sealed partial class ListDeploymentsResponse : pb::IMessage<ListDeploymentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1276,7 +1279,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Deployments.GetDeployment][google.cloud.dialogflow.cx.v3.Deployments.GetDeployment].
+  /// The request message for
+  /// [Deployments.GetDeployment][google.cloud.dialogflow.cx.v3.Deployments.GetDeployment].
   /// </summary>
   public sealed partial class GetDeploymentRequest : pb::IMessage<GetDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1326,8 +1330,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// Required. The name of the
+    /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/environments/&lt;Environment ID>/deployments/&lt;Deployment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

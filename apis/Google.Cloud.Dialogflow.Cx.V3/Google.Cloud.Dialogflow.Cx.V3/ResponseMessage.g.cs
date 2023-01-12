@@ -27,7 +27,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNz",
             "YWdlLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
-            "L3N0cnVjdC5wcm90byKrCwoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
+            "L3N0cnVjdC5wcm90byK8CwoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
             "KAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
             "c3NhZ2UuVGV4dEgAEioKB3BheWxvYWQYAiABKAsyFy5nb29nbGUucHJvdG9i",
             "dWYuU3RydWN0SAASYgoUY29udmVyc2F0aW9uX3N1Y2Nlc3MYCSABKAsyQi5n",
@@ -44,31 +44,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "MjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
             "YWdlLk1peGVkQXVkaW9CA+BBA0gAEmcKF3RlbGVwaG9ueV90cmFuc2Zlcl9j",
             "YWxsGBIgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAGkMKBFRleHQS",
-            "EQoEdGV4dBgBIAMoCUID4EECEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVw",
-            "dGlvbhgCIAEoCEID4EEDGj0KEExpdmVBZ2VudEhhbmRvZmYSKQoIbWV0YWRh",
-            "dGEYASABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0GkAKE0NvbnZlcnNh",
-            "dGlvblN1Y2Nlc3MSKQoIbWV0YWRhdGEYASABKAsyFy5nb29nbGUucHJvdG9i",
-            "dWYuU3RydWN0GmUKD091dHB1dEF1ZGlvVGV4dBIOCgR0ZXh0GAEgASgJSAAS",
-            "DgoEc3NtbBgCIAEoCUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlv",
-            "bhgDIAEoCEID4EEDQggKBnNvdXJjZRoQCg5FbmRJbnRlcmFjdGlvbhpNCglQ",
-            "bGF5QXVkaW8SFgoJYXVkaW9fdXJpGAEgASgJQgPgQQISKAobYWxsb3dfcGxh",
-            "eWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMawQEKCk1peGVkQXVkaW8S",
-            "UwoIc2VnbWVudHMYASADKAsyQS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
-            "eC52My5SZXNwb25zZU1lc3NhZ2UuTWl4ZWRBdWRpby5TZWdtZW50Gl4KB1Nl",
-            "Z21lbnQSDwoFYXVkaW8YASABKAxIABINCgN1cmkYAiABKAlIABIoChthbGxv",
-            "d19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyABKAhCA+BBA0IJCgdjb250ZW50",
-            "GjsKFVRlbGVwaG9ueVRyYW5zZmVyQ2FsbBIWCgxwaG9uZV9udW1iZXIYASAB",
-            "KAlIAEIKCghlbmRwb2ludEIJCgdtZXNzYWdlQsgBCiFjb20uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cuY3gudjNCFFJlc3BvbnNlTWVzc2FnZVByb3RvUAFa",
-            "P2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "ZGlhbG9nZmxvdy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRp",
-            "YWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpD",
-            "WDo6VjNiBnByb3RvMw=="));
+            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEg8KB2NoYW5u",
+            "ZWwYEyABKAkaQwoEVGV4dBIRCgR0ZXh0GAEgAygJQgPgQQISKAobYWxsb3df",
+            "cGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMaPQoQTGl2ZUFnZW50",
+            "SGFuZG9mZhIpCghtZXRhZGF0YRgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
+            "dHJ1Y3QaQAoTQ29udmVyc2F0aW9uU3VjY2VzcxIpCghtZXRhZGF0YRgBIAEo",
+            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QaZQoPT3V0cHV0QXVkaW9UZXh0",
+            "Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIgASgJSAASKAobYWxsb3dfcGxh",
+            "eWJhY2tfaW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCAoGc291cmNlGhAKDkVu",
+            "ZEludGVyYWN0aW9uGk0KCVBsYXlBdWRpbxIWCglhdWRpb191cmkYASABKAlC",
+            "A+BBAhIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiABKAhCA+BB",
+            "AxrBAQoKTWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJBLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5NaXhlZEF1",
+            "ZGlvLlNlZ21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEoDEgAEg0KA3Vy",
+            "aRgCIAEoCUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlvbhgDIAEo",
+            "CEID4EEDQgkKB2NvbnRlbnQaOwoVVGVsZXBob255VHJhbnNmZXJDYWxsEhYK",
+            "DHBob25lX251bWJlchgBIAEoCUgAQgoKCGVuZHBvaW50QgkKB21lc3NhZ2VC",
+            "ugEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9u",
+            "c2VNZXNzYWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dm",
+            "bG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3Vk",
+            "LkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93",
+            "OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall" }, new[]{ "Message" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "Channel" }, new[]{ "Message" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
@@ -135,6 +135,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseMessage(ResponseMessage other) : this() {
+      channel_ = other.channel_;
       switch (other.MessageCase) {
         case MessageOneofCase.Text:
           Text = other.Text.Clone();
@@ -253,10 +254,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "end_interaction" field.</summary>
     public const int EndInteractionFieldNumber = 11;
     /// <summary>
-    /// Output only. A signal that indicates the interaction with the Dialogflow agent has
-    /// ended.
-    /// This message is generated by Dialogflow only when the conversation
-    /// reaches `END_SESSION` page. It is not supposed to be defined by the user.
+    /// Output only. A signal that indicates the interaction with the Dialogflow
+    /// agent has ended. This message is generated by Dialogflow only when the
+    /// conversation reaches `END_SESSION` page. It is not supposed to be defined
+    /// by the user.
     ///
     /// It's guaranteed that there is at most one such message in each response.
     /// </summary>
@@ -275,8 +276,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Signal that the client should play an audio clip hosted at a
     /// client-specific URI. Dialogflow uses this to construct
-    /// [mixed_audio][google.cloud.dialogflow.cx.v3.ResponseMessage.mixed_audio]. However, Dialogflow itself
-    /// does not try to read or process the URI in any way.
+    /// [mixed_audio][google.cloud.dialogflow.cx.v3.ResponseMessage.mixed_audio].
+    /// However, Dialogflow itself does not try to read or process the URI in any
+    /// way.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,8 +293,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "mixed_audio" field.</summary>
     public const int MixedAudioFieldNumber = 13;
     /// <summary>
-    /// Output only. An audio response message composed of both the synthesized Dialogflow
-    /// agent responses and responses defined via
+    /// Output only. An audio response message composed of both the synthesized
+    /// Dialogflow agent responses and responses defined via
     /// [play_audio][google.cloud.dialogflow.cx.v3.ResponseMessage.play_audio].
     /// This message is generated by Dialogflow only and not supposed to be
     /// defined by the user.
@@ -320,6 +322,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       set {
         message_ = value;
         messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.TelephonyTransferCall;
+      }
+    }
+
+    /// <summary>Field number for the "channel" field.</summary>
+    public const int ChannelFieldNumber = 19;
+    private string channel_ = "";
+    /// <summary>
+    /// The channel which the response is associated with. Clients can specify the
+    /// channel via
+    /// [QueryParameters.channel][google.cloud.dialogflow.cx.v3.QueryParameters.channel],
+    /// and only associated channel response will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Channel {
+      get { return channel_; }
+      set {
+        channel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -375,6 +395,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(PlayAudio, other.PlayAudio)) return false;
       if (!object.Equals(MixedAudio, other.MixedAudio)) return false;
       if (!object.Equals(TelephonyTransferCall, other.TelephonyTransferCall)) return false;
+      if (Channel != other.Channel) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -392,6 +413,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.PlayAudio) hash ^= PlayAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.MixedAudio) hash ^= MixedAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) hash ^= TelephonyTransferCall.GetHashCode();
+      if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -447,6 +469,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(TelephonyTransferCall);
       }
+      if (Channel.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -493,6 +519,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(TelephonyTransferCall);
       }
+      if (Channel.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -530,6 +560,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TelephonyTransferCall);
       }
+      if (Channel.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Channel);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -541,6 +574,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public void MergeFrom(ResponseMessage other) {
       if (other == null) {
         return;
+      }
+      if (other.Channel.Length != 0) {
+        Channel = other.Channel;
       }
       switch (other.MessageCase) {
         case MessageOneofCase.Text:
@@ -695,6 +731,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             TelephonyTransferCall = subBuilder;
             break;
           }
+          case 154: {
+            Channel = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -791,6 +831,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             TelephonyTransferCall = subBuilder;
             break;
           }
+          case 154: {
+            Channel = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -867,8 +911,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int AllowPlaybackInterruptionFieldNumber = 2;
         private bool allowPlaybackInterruption_;
         /// <summary>
-        /// Output only. Whether the playback of this message can be interrupted by the end
-        /// user's speech and the client can then starts the next Dialogflow
+        /// Output only. Whether the playback of this message can be interrupted by
+        /// the end user's speech and the client can then starts the next Dialogflow
         /// request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1035,7 +1079,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// is up to you and your handoff procedures.
       ///
       /// You may set this, for example:
-      /// * In the [entry_fulfillment][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment] of a [Page][google.cloud.dialogflow.cx.v3.Page] if
+      /// * In the
+      /// [entry_fulfillment][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment]
+      /// of a [Page][google.cloud.dialogflow.cx.v3.Page] if
       ///   entering the page indicates something went extremely wrong in the
       ///   conversation.
       /// * In a webhook response when you determine that the customer issue can only
@@ -1254,7 +1300,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// [ConversationSuccess][google.cloud.dialogflow.cx.v3.ResponseMessage.ConversationSuccess].
       ///
       /// You may set this, for example:
-      /// * In the [entry_fulfillment][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment] of a [Page][google.cloud.dialogflow.cx.v3.Page] if
+      /// * In the
+      /// [entry_fulfillment][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment]
+      /// of a [Page][google.cloud.dialogflow.cx.v3.Page] if
       ///   entering the page indicates that the conversation succeeded.
       /// * In a webhook response when you determine that you handled the customer
       ///   issue.
@@ -1552,8 +1600,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int AllowPlaybackInterruptionFieldNumber = 3;
         private bool allowPlaybackInterruption_;
         /// <summary>
-        /// Output only. Whether the playback of this message can be interrupted by the end
-        /// user's speech and the client can then starts the next Dialogflow
+        /// Output only. Whether the playback of this message can be interrupted by
+        /// the end user's speech and the client can then starts the next Dialogflow
         /// request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1981,8 +2029,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int AudioUriFieldNumber = 1;
         private string audioUri_ = "";
         /// <summary>
-        /// Required. URI of the audio clip. Dialogflow does not impose any validation on this
-        /// value. It is specific to the client that reads it.
+        /// Required. URI of the audio clip. Dialogflow does not impose any
+        /// validation on this value. It is specific to the client that reads it.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1997,8 +2045,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int AllowPlaybackInterruptionFieldNumber = 2;
         private bool allowPlaybackInterruption_;
         /// <summary>
-        /// Output only. Whether the playback of this message can be interrupted by the end
-        /// user's speech and the client can then starts the next Dialogflow
+        /// Output only. Whether the playback of this message can be interrupted by
+        /// the end user's speech and the client can then starts the next Dialogflow
         /// request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2452,9 +2500,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int AllowPlaybackInterruptionFieldNumber = 3;
             private bool allowPlaybackInterruption_;
             /// <summary>
-            /// Output only. Whether the playback of this segment can be interrupted by the end
-            /// user's speech and the client should then start the next Dialogflow
-            /// request.
+            /// Output only. Whether the playback of this segment can be interrupted by
+            /// the end user's speech and the client should then start the next
+            /// Dialogflow request.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

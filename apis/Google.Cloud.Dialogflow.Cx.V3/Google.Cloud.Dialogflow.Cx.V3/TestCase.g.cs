@@ -254,12 +254,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "L2xvY2F0aW9ucy8qL2FnZW50cy8qL3Rlc3RDYXNlcy8qL3Jlc3VsdHMvKn3a",
             "QQRuYW1lGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6",
             "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCwQEKIWNv",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCswEKIWNv",
             "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0INVGVzdENhc2VQcm90",
-            "b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2RpYWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91",
-            "ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxv",
-            "dzo6Q1g6OlYzYgZwcm90bzM="));
+            "b1ABWjFjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMv",
+            "Y3hwYjtjeHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5D",
+            "eC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.TestResult), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -384,8 +384,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the test case.
-    /// [TestCases.CreateTestCase][google.cloud.dialogflow.cx.v3.TestCases.CreateTestCase] will populate the name automatically.
-    /// Otherwise use format: `projects/&lt;Project ID>/locations/&lt;LocationID>/agents/
+    /// [TestCases.CreateTestCase][google.cloud.dialogflow.cx.v3.TestCases.CreateTestCase]
+    /// will populate the name automatically. Otherwise use format:
+    /// `projects/&lt;Project ID>/locations/&lt;LocationID>/agents/
     /// &lt;AgentID>/testCases/&lt;TestCase ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -417,8 +418,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The human-readable name of the test case, unique within the agent. Limit of
-    /// 200 characters.
+    /// Required. The human-readable name of the test case, unique within the
+    /// agent. Limit of 200 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1759,8 +1760,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int InputFieldNumber = 5;
         private global::Google.Cloud.Dialogflow.Cx.V3.QueryInput input_;
         /// <summary>
-        /// Supports [text input][google.cloud.dialogflow.cx.v3.QueryInput.text], [event input][google.cloud.dialogflow.cx.v3.QueryInput.event],
-        /// [dtmf input][google.cloud.dialogflow.cx.v3.QueryInput.dtmf] in the test case.
+        /// Supports [text input][google.cloud.dialogflow.cx.v3.QueryInput.text],
+        /// [event input][google.cloud.dialogflow.cx.v3.QueryInput.event], [dtmf
+        /// input][google.cloud.dialogflow.cx.v3.QueryInput.dtmf] in the test case.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2147,8 +2149,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int TriggeredIntentFieldNumber = 7;
         private global::Google.Cloud.Dialogflow.Cx.V3.Intent triggeredIntent_;
         /// <summary>
-        /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that triggered the response. Only name and displayName
-        /// will be set.
+        /// The [Intent][google.cloud.dialogflow.cx.v3.Intent] that triggered the
+        /// response. Only name and displayName will be set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2163,8 +2165,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int CurrentPageFieldNumber = 8;
         private global::Google.Cloud.Dialogflow.Cx.V3.Page currentPage_;
         /// <summary>
-        /// The [Page][google.cloud.dialogflow.cx.v3.Page] on which the utterance was spoken. Only name and displayName
-        /// will be set.
+        /// The [Page][google.cloud.dialogflow.cx.v3.Page] on which the utterance was
+        /// spoken. Only name and displayName will be set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2181,7 +2183,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text> textResponses_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text>();
         /// <summary>
-        /// The [text][google.cloud.dialogflow.cx.v3.ResponseMessage.Text] responses from the agent for the turn.
+        /// The [text][google.cloud.dialogflow.cx.v3.ResponseMessage.Text] responses
+        /// from the agent for the turn.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3068,8 +3071,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>Field number for the "page" field.</summary>
         public const int PageFieldNumber = 1;
         /// <summary>
-        /// Indicates a transition to a [Page][google.cloud.dialogflow.cx.v3.Page]. Only some fields such as name and
-        /// displayname will be set.
+        /// Indicates a transition to a [Page][google.cloud.dialogflow.cx.v3.Page].
+        /// Only some fields such as name and displayname will be set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3084,8 +3087,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>Field number for the "flow" field.</summary>
         public const int FlowFieldNumber = 2;
         /// <summary>
-        /// Indicates a transition to a [Flow][google.cloud.dialogflow.cx.v3.Flow]. Only some fields such as name and
-        /// displayname will be set.
+        /// Indicates a transition to a [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Only some fields such as name and displayname will be set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5016,7 +5019,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.CalculateCoverage][google.cloud.dialogflow.cx.v3.TestCases.CalculateCoverage].
+  /// The request message for
+  /// [TestCases.CalculateCoverage][google.cloud.dialogflow.cx.v3.TestCases.CalculateCoverage].
   /// </summary>
   public sealed partial class CalculateCoverageRequest : pb::IMessage<CalculateCoverageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5282,7 +5286,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.CalculateCoverage][google.cloud.dialogflow.cx.v3.TestCases.CalculateCoverage].
+  /// The response message for
+  /// [TestCases.CalculateCoverage][google.cloud.dialogflow.cx.v3.TestCases.CalculateCoverage].
   /// </summary>
   public sealed partial class CalculateCoverageResponse : pb::IMessage<CalculateCoverageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5673,7 +5678,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.ListTestCases][google.cloud.dialogflow.cx.v3.TestCases.ListTestCases].
+  /// The request message for
+  /// [TestCases.ListTestCases][google.cloud.dialogflow.cx.v3.TestCases.ListTestCases].
   /// </summary>
   public sealed partial class ListTestCasesRequest : pb::IMessage<ListTestCasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6019,7 +6025,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.ListTestCases][google.cloud.dialogflow.cx.v3.TestCases.ListTestCases].
+  /// The response message for
+  /// [TestCases.ListTestCases][google.cloud.dialogflow.cx.v3.TestCases.ListTestCases].
   /// </summary>
   public sealed partial class ListTestCasesResponse : pb::IMessage<ListTestCasesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6245,7 +6252,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.BatchDeleteTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchDeleteTestCases].
+  /// The request message for
+  /// [TestCases.BatchDeleteTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchDeleteTestCases].
   /// </summary>
   public sealed partial class BatchDeleteTestCasesRequest : pb::IMessage<BatchDeleteTestCasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6471,7 +6479,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.CreateTestCase][google.cloud.dialogflow.cx.v3.TestCases.CreateTestCase].
+  /// The request message for
+  /// [TestCases.CreateTestCase][google.cloud.dialogflow.cx.v3.TestCases.CreateTestCase].
   /// </summary>
   public sealed partial class CreateTestCaseRequest : pb::IMessage<CreateTestCaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6716,7 +6725,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.UpdateTestCase][google.cloud.dialogflow.cx.v3.TestCases.UpdateTestCase].
+  /// The request message for
+  /// [TestCases.UpdateTestCase][google.cloud.dialogflow.cx.v3.TestCases.UpdateTestCase].
   /// </summary>
   public sealed partial class UpdateTestCaseRequest : pb::IMessage<UpdateTestCaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6784,7 +6794,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// Required. The mask to specify which fields should be updated. The
     /// [`creationTime`][google.cloud.dialogflow.cx.v3.TestCase.creation_time] and
-    /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result] cannot be updated.
+    /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result]
+    /// cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6971,7 +6982,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.GetTestCase][google.cloud.dialogflow.cx.v3.TestCases.GetTestCase].
+  /// The request message for
+  /// [TestCases.GetTestCase][google.cloud.dialogflow.cx.v3.TestCases.GetTestCase].
   /// </summary>
   public sealed partial class GetTestCaseRequest : pb::IMessage<GetTestCaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7168,7 +7180,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase].
+  /// The request message for
+  /// [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase].
   /// </summary>
   public sealed partial class RunTestCaseRequest : pb::IMessage<RunTestCaseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7219,8 +7232,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Format of test case name to run: `projects/&lt;Project ID>/locations/
-    /// &lt;Location ID>/agents/&lt;AgentID>/testCases/&lt;TestCase ID>`.
+    /// Required. Format of test case name to run: `projects/&lt;Project
+    /// ID>/locations/ &lt;Location ID>/agents/&lt;AgentID>/testCases/&lt;TestCase ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7406,7 +7419,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase].
+  /// The response message for
+  /// [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase].
   /// </summary>
   public sealed partial class RunTestCaseResponse : pb::IMessage<RunTestCaseResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7610,8 +7624,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase] long running operation.
-  /// This message currently has no fields.
+  /// Metadata returned for the
+  /// [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase]
+  /// long running operation. This message currently has no fields.
   /// </summary>
   public sealed partial class RunTestCaseMetadata : pb::IMessage<RunTestCaseMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7766,7 +7781,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases].
+  /// The request message for
+  /// [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases].
   /// </summary>
   public sealed partial class BatchRunTestCasesRequest : pb::IMessage<BatchRunTestCasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7818,8 +7834,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Agent name. Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/
-    /// &lt;AgentID>`.
+    /// Required. Agent name. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/ &lt;AgentID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7834,9 +7850,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int EnvironmentFieldNumber = 2;
     private string environment_ = "";
     /// <summary>
-    /// Optional. If not set, draft environment is assumed. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/environments/&lt;Environment
-    /// ID>`.
+    /// Optional. If not set, draft environment is assumed. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/environments/&lt;Environment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7853,8 +7869,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> testCases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/testCases/&lt;TestCase ID>`.
+    /// Required. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/testCases/&lt;TestCase ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8034,7 +8050,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases].
+  /// The response message for
+  /// [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases].
   /// </summary>
   public sealed partial class BatchRunTestCasesResponse : pb::IMessage<BatchRunTestCasesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8087,8 +8104,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult>();
     /// <summary>
     /// The test case results. The detailed
-    /// [conversation turns][google.cloud.dialogflow.cx.v3.TestCaseResult.conversation_turns] are empty in this
-    /// response.
+    /// [conversation
+    /// turns][google.cloud.dialogflow.cx.v3.TestCaseResult.conversation_turns] are
+    /// empty in this response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8220,8 +8238,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases] long running
-  /// operation.
+  /// Metadata returned for the
+  /// [TestCases.BatchRunTestCases][google.cloud.dialogflow.cx.v3.TestCases.BatchRunTestCases]
+  /// long running operation.
   /// </summary>
   public sealed partial class BatchRunTestCasesMetadata : pb::IMessage<BatchRunTestCasesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8698,7 +8717,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases].
+  /// The request message for
+  /// [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases].
   /// </summary>
   public sealed partial class ImportTestCasesRequest : pb::IMessage<ImportTestCasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9015,7 +9035,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases].
+  /// The response message for
+  /// [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases].
   /// </summary>
   public sealed partial class ImportTestCasesResponse : pb::IMessage<ImportTestCasesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9201,8 +9222,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases] long running
-  /// operation.
+  /// Metadata returned for the
+  /// [TestCases.ImportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ImportTestCases]
+  /// long running operation.
   /// </summary>
   public sealed partial class ImportTestCasesMetadata : pb::IMessage<ImportTestCasesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9639,7 +9661,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases].
+  /// The request message for
+  /// [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases].
   /// </summary>
   public sealed partial class ExportTestCasesRequest : pb::IMessage<ExportTestCasesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10030,7 +10053,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases].
+  /// The response message for
+  /// [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases].
   /// </summary>
   public sealed partial class ExportTestCasesResponse : pb::IMessage<ExportTestCasesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10300,9 +10324,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases] long running
-  /// operation.
-  /// This message currently has no fields.
+  /// Metadata returned for the
+  /// [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases]
+  /// long running operation. This message currently has no fields.
   /// </summary>
   public sealed partial class ExportTestCasesMetadata : pb::IMessage<ExportTestCasesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10457,7 +10481,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.ListTestCaseResults][google.cloud.dialogflow.cx.v3.TestCases.ListTestCaseResults].
+  /// The request message for
+  /// [TestCases.ListTestCaseResults][google.cloud.dialogflow.cx.v3.TestCases.ListTestCaseResults].
   /// </summary>
   public sealed partial class ListTestCaseResultsRequest : pb::IMessage<ListTestCaseResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10799,7 +10824,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [TestCases.ListTestCaseResults][google.cloud.dialogflow.cx.v3.TestCases.ListTestCaseResults].
+  /// The response message for
+  /// [TestCases.ListTestCaseResults][google.cloud.dialogflow.cx.v3.TestCases.ListTestCaseResults].
   /// </summary>
   public sealed partial class ListTestCaseResultsResponse : pb::IMessage<ListTestCaseResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11024,7 +11050,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [TestCases.GetTestCaseResult][google.cloud.dialogflow.cx.v3.TestCases.GetTestCaseResult].
+  /// The request message for
+  /// [TestCases.GetTestCaseResult][google.cloud.dialogflow.cx.v3.TestCases.GetTestCaseResult].
   /// </summary>
   public sealed partial class GetTestCaseResultRequest : pb::IMessage<GetTestCaseResultRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

@@ -47,12 +47,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "KAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
             "c3NhZ2VIABJXChBhZGRpdGlvbmFsX2Nhc2VzGAIgASgLMjsuZ29vZ2xlLmNs",
             "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQuQ29uZGl0aW9uYWxD",
-            "YXNlc0gAQhIKEGNhc2VzX29yX21lc3NhZ2VCxAEKIWNvbS5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy5jeC52M0IQRnVsZmlsbG1lbnRQcm90b1ABWj9nb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxv",
-            "Z2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dm",
-            "bG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYz",
-            "YgZwcm90bzM="));
+            "YXNlc0gAQhIKEGNhc2VzX29yX21lc3NhZ2VCtgEKIWNvbS5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy5jeC52M0IQRnVsZmlsbG1lbnRQcm90b1ABWjFjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi",
+            "+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdv",
+            "b2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,10 +70,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   ///   * Set parameter values.
   ///   * Call the webhook.
   ///
-  /// Fulfillments can be called at various stages in the [Page][google.cloud.dialogflow.cx.v3.Page] or
-  /// [Form][google.cloud.dialogflow.cx.v3.Form] lifecycle. For example, when a [DetectIntentRequest][google.cloud.dialogflow.cx.v3.DetectIntentRequest] drives a
-  /// session to enter a new page, the page's entry fulfillment can add a static
-  /// response to the [QueryResult][google.cloud.dialogflow.cx.v3.QueryResult] in the returning [DetectIntentResponse][google.cloud.dialogflow.cx.v3.DetectIntentResponse],
+  /// Fulfillments can be called at various stages in the
+  /// [Page][google.cloud.dialogflow.cx.v3.Page] or
+  /// [Form][google.cloud.dialogflow.cx.v3.Form] lifecycle. For example, when a
+  /// [DetectIntentRequest][google.cloud.dialogflow.cx.v3.DetectIntentRequest]
+  /// drives a session to enter a new page, the page's entry fulfillment can add a
+  /// static response to the
+  /// [QueryResult][google.cloud.dialogflow.cx.v3.QueryResult] in the returning
+  /// [DetectIntentResponse][google.cloud.dialogflow.cx.v3.DetectIntentResponse],
   /// call the webhook (for example, to load user data from a database), or both.
   /// </summary>
   public sealed partial class Fulfillment : pb::IMessage<Fulfillment>
@@ -184,7 +187,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int TagFieldNumber = 3;
     private string tag_ = "";
     /// <summary>
-    /// The value of this field will be populated in the [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]
+    /// The value of this field will be populated in the
+    /// [WebhookRequest][google.cloud.dialogflow.cx.v3.WebhookRequest]
     /// `fulfillmentInfo.tag` field by Dialogflow when the associated webhook is
     /// called.
     /// The tag is typically used by the webhook service to identify which

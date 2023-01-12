@@ -105,12 +105,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "bG93cy8qL3ZlcnNpb25zLyp9OmNvbXBhcmVWZXJzaW9uczoBKtpBDGJhc2Vf",
             "dmVyc2lvbhp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBz",
             "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QsABCiFj",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrIBCiFj",
             "b20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCDFZlcnNpb25Qcm90",
-            "b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2RpYWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91",
-            "ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxv",
-            "dzo6Q1g6OlYzYgZwcm90bzM="));
+            "b1ABWjFjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMv",
+            "Y3hwYjtjeHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5D",
+            "eC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -463,8 +463,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int StateFieldNumber = 6;
     private global::Google.Cloud.Dialogflow.Cx.V3.Version.Types.State state_ = global::Google.Cloud.Dialogflow.Cx.V3.Version.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The state of this version. This field is read-only and cannot be set by
-    /// create and update methods.
+    /// Output only. The state of this version. This field is read-only and cannot
+    /// be set by create and update methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -777,7 +777,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
+  /// The request message for
+  /// [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
   /// </summary>
   public sealed partial class ListVersionsRequest : pb::IMessage<ListVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -829,9 +830,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all versions for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
+    /// versions for. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1055,7 +1056,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
+  /// The response message for
+  /// [Versions.ListVersions][google.cloud.dialogflow.cx.v3.Versions.ListVersions].
   /// </summary>
   public sealed partial class ListVersionsResponse : pb::IMessage<ListVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1282,7 +1284,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.GetVersion][google.cloud.dialogflow.cx.v3.Versions.GetVersion].
+  /// The request message for
+  /// [Versions.GetVersion][google.cloud.dialogflow.cx.v3.Versions.GetVersion].
   /// </summary>
   public sealed partial class GetVersionRequest : pb::IMessage<GetVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1479,7 +1482,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.CreateVersion][google.cloud.dialogflow.cx.v3.Versions.CreateVersion].
+  /// The request message for
+  /// [Versions.CreateVersion][google.cloud.dialogflow.cx.v3.Versions.CreateVersion].
   /// </summary>
   public sealed partial class CreateVersionRequest : pb::IMessage<CreateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1530,8 +1534,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+    /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/flows/&lt;Flow ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1725,7 +1730,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.UpdateVersion][google.cloud.dialogflow.cx.v3.Versions.UpdateVersion].
+  /// The request message for
+  /// [Versions.UpdateVersion][google.cloud.dialogflow.cx.v3.Versions.UpdateVersion].
   /// </summary>
   public sealed partial class UpdateVersionRequest : pb::IMessage<UpdateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1791,8 +1797,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The mask to control which fields get updated. Currently only `description`
-    /// and `display_name` can be updated.
+    /// Required. The mask to control which fields get updated. Currently only
+    /// `description` and `display_name` can be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1979,7 +1985,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.DeleteVersion][google.cloud.dialogflow.cx.v3.Versions.DeleteVersion].
+  /// The request message for
+  /// [Versions.DeleteVersion][google.cloud.dialogflow.cx.v3.Versions.DeleteVersion].
   /// </summary>
   public sealed partial class DeleteVersionRequest : pb::IMessage<DeleteVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2029,9 +2036,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+    /// to delete. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2176,7 +2183,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.LoadVersion][google.cloud.dialogflow.cx.v3.Versions.LoadVersion].
+  /// The request message for
+  /// [Versions.LoadVersion][google.cloud.dialogflow.cx.v3.Versions.LoadVersion].
   /// </summary>
   public sealed partial class LoadVersionRequest : pb::IMessage<LoadVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2227,9 +2235,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
+    /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+    /// to draft flow. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2416,7 +2424,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
+  /// The request message for
+  /// [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
   /// </summary>
   public sealed partial class CompareVersionsRequest : pb::IMessage<CompareVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2468,8 +2477,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int BaseVersionFieldNumber = 1;
     private string baseVersion_ = "";
     /// <summary>
-    /// Required. Name of the base flow version to compare with the target version. Use
-    /// version ID `0` to indicate the draft version of the specified flow.
+    /// Required. Name of the base flow version to compare with the target version.
+    /// Use version ID `0` to indicate the draft version of the specified flow.
     ///
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/
     /// &lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>`.
@@ -2704,7 +2713,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
+  /// The response message for
+  /// [Versions.CompareVersions][google.cloud.dialogflow.cx.v3.Versions.CompareVersions].
   /// </summary>
   public sealed partial class CompareVersionsResponse : pb::IMessage<CompareVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

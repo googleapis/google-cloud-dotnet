@@ -99,7 +99,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public abstract partial class DeploymentsBase
     {
       /// <summary>
-      /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all deployments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,7 +112,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+      /// Retrieves the specified
+      /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -152,7 +154,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all deployments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +168,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all deployments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -176,7 +180,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeployments, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all deployments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +194,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all deployments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +206,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeployments, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+      /// Retrieves the specified
+      /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +220,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+      /// Retrieves the specified
+      /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +232,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDeployment, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+      /// Retrieves the specified
+      /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +246,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+      /// Retrieves the specified
+      /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

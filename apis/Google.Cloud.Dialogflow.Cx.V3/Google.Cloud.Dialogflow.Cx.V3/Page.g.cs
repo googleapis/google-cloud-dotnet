@@ -107,11 +107,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZW50cy8qL2Zsb3dzLyovcGFnZXMvKn3aQQRuYW1lGnjKQRlkaWFsb2dmbG93",
             "Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
             "YXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2RpYWxvZ2Zsb3dCvQEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy5jeC52M0IJUGFnZVByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy9jeC92MztjePgB",
-            "AaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29n",
-            "bGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "bS9hdXRoL2RpYWxvZ2Zsb3dCrwEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy5jeC52M0IJUGFnZVByb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2ds",
+            "ZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlh",
+            "bG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FulfillmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -204,7 +204,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the page.
-    /// Required for the [Pages.UpdatePage][google.cloud.dialogflow.cx.v3.Pages.UpdatePage] method. [Pages.CreatePage][google.cloud.dialogflow.cx.v3.Pages.CreatePage]
+    /// Required for the
+    /// [Pages.UpdatePage][google.cloud.dialogflow.cx.v3.Pages.UpdatePage] method.
+    /// [Pages.CreatePage][google.cloud.dialogflow.cx.v3.Pages.CreatePage]
     /// populates the name automatically.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/flows/&lt;Flow ID>/pages/&lt;Page ID>`.
@@ -270,8 +272,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> transitionRouteGroups_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Ordered list of [`TransitionRouteGroups`][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] associated
-    /// with the page. Transition route groups must be unique within a page.
+    /// Ordered list of
+    /// [`TransitionRouteGroups`][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+    /// associated with the page. Transition route groups must be unique within a
+    /// page.
     ///
     /// *   If multiple transition routes within a page scope refer to the same
     ///     intent, then the precedence order is: page's transition route -> page's
@@ -304,16 +308,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// *   TransitionRoutes defined in the page with intent specified.
     /// *   TransitionRoutes defined in the
-    ///     [transition route groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups] with intent
-    ///     specified.
+    ///     [transition route
+    ///     groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups]
+    ///     with intent specified.
     /// *   TransitionRoutes defined in flow with intent specified.
     /// *   TransitionRoutes defined in the
-    ///     [transition route groups][google.cloud.dialogflow.cx.v3.Flow.transition_route_groups] with intent
-    ///     specified.
+    ///     [transition route
+    ///     groups][google.cloud.dialogflow.cx.v3.Flow.transition_route_groups]
+    ///     with intent specified.
     /// *   TransitionRoutes defined in the page with only condition specified.
     /// *   TransitionRoutes defined in the
-    ///     [transition route groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups] with only
-    ///     condition specified.
+    ///     [transition route
+    ///     groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups]
+    ///     with only condition specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -605,8 +612,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// A form is a data model that groups related parameters that can be collected
   /// from the user. The process in which the agent prompts the user and collects
   /// parameter values from the user is called form filling. A form can be added to
-  /// a [page][google.cloud.dialogflow.cx.v3.Page]. When form filling is done, the filled parameters will be
-  /// written to the [session][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+  /// a [page][google.cloud.dialogflow.cx.v3.Page]. When form filling is done, the
+  /// filled parameters will be written to the
+  /// [session][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
   /// </summary>
   public sealed partial class Form : pb::IMessage<Form>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -952,8 +960,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// redaction is enabled, the parameter content will be replaced by parameter
         /// name during logging.
         /// Note: the parameter content is subject to redaction if either parameter
-        /// level redaction or [entity type level redaction][google.cloud.dialogflow.cx.v3.EntityType.redact] is
-        /// enabled.
+        /// level redaction or [entity type level
+        /// redaction][google.cloud.dialogflow.cx.v3.EntityType.redact] is enabled.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1538,17 +1546,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// An event handler specifies an [event][google.cloud.dialogflow.cx.v3.EventHandler.event] that can be handled
+  /// An event handler specifies an
+  /// [event][google.cloud.dialogflow.cx.v3.EventHandler.event] that can be handled
   /// during a session. When the specified event happens, the following actions are
   /// taken in order:
   ///
   /// *   If there is a
-  /// [`trigger_fulfillment`][google.cloud.dialogflow.cx.v3.EventHandler.trigger_fulfillment] associated with
-  /// the event, it will be called.
-  /// *   If there is a [`target_page`][google.cloud.dialogflow.cx.v3.EventHandler.target_page] associated
-  /// with the event, the session will transition into the specified page.
-  /// *   If there is a [`target_flow`][google.cloud.dialogflow.cx.v3.EventHandler.target_flow] associated
-  /// with the event, the session will transition into the specified flow.
+  /// [`trigger_fulfillment`][google.cloud.dialogflow.cx.v3.EventHandler.trigger_fulfillment]
+  /// associated with the event, it will be called.
+  /// *   If there is a
+  /// [`target_page`][google.cloud.dialogflow.cx.v3.EventHandler.target_page]
+  /// associated with the event, the session will transition into the specified
+  /// page.
+  /// *   If there is a
+  /// [`target_flow`][google.cloud.dialogflow.cx.v3.EventHandler.target_flow]
+  /// associated with the event, the session will transition into the specified
+  /// flow.
   /// </summary>
   public sealed partial class EventHandler : pb::IMessage<EventHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1952,17 +1965,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// A transition route specifies a [intent][google.cloud.dialogflow.cx.v3.Intent] that can be matched and/or a
-  /// data condition that can be evaluated during a session. When a specified
-  /// transition is matched, the following actions are taken in order:
+  /// A transition route specifies a [intent][google.cloud.dialogflow.cx.v3.Intent]
+  /// that can be matched and/or a data condition that can be evaluated during a
+  /// session. When a specified transition is matched, the following actions are
+  /// taken in order:
   ///
   /// *   If there is a
-  /// [`trigger_fulfillment`][google.cloud.dialogflow.cx.v3.TransitionRoute.trigger_fulfillment] associated with
-  /// the transition, it will be called.
-  /// *   If there is a [`target_page`][google.cloud.dialogflow.cx.v3.TransitionRoute.target_page] associated
-  /// with the transition, the session will transition into the specified page.
-  /// *   If there is a [`target_flow`][google.cloud.dialogflow.cx.v3.TransitionRoute.target_flow] associated
-  /// with the transition, the session will transition into the specified flow.
+  /// [`trigger_fulfillment`][google.cloud.dialogflow.cx.v3.TransitionRoute.trigger_fulfillment]
+  /// associated with the transition, it will be called.
+  /// *   If there is a
+  /// [`target_page`][google.cloud.dialogflow.cx.v3.TransitionRoute.target_page]
+  /// associated with the transition, the session will transition into the
+  /// specified page.
+  /// *   If there is a
+  /// [`target_flow`][google.cloud.dialogflow.cx.v3.TransitionRoute.target_flow]
+  /// associated with the transition, the session will transition into the
+  /// specified flow.
   /// </summary>
   public sealed partial class TransitionRoute : pb::IMessage<TransitionRoute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2061,8 +2079,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ConditionFieldNumber = 2;
     private string condition_ = "";
     /// <summary>
-    /// The condition to evaluate against [form parameters][google.cloud.dialogflow.cx.v3.Form.parameters] or
-    /// [session parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+    /// The condition to evaluate against [form
+    /// parameters][google.cloud.dialogflow.cx.v3.Form.parameters] or [session
+    /// parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
     ///
     /// See the [conditions
     /// reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
@@ -2419,7 +2438,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Pages.ListPages][google.cloud.dialogflow.cx.v3.Pages.ListPages].
+  /// The request message for
+  /// [Pages.ListPages][google.cloud.dialogflow.cx.v3.Pages.ListPages].
   /// </summary>
   public sealed partial class ListPagesRequest : pb::IMessage<ListPagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2757,7 +2777,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Pages.ListPages][google.cloud.dialogflow.cx.v3.Pages.ListPages].
+  /// The response message for
+  /// [Pages.ListPages][google.cloud.dialogflow.cx.v3.Pages.ListPages].
   /// </summary>
   public sealed partial class ListPagesResponse : pb::IMessage<ListPagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2983,7 +3004,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Pages.GetPage][google.cloud.dialogflow.cx.v3.Pages.GetPage].
+  /// The request message for
+  /// [Pages.GetPage][google.cloud.dialogflow.cx.v3.Pages.GetPage].
   /// </summary>
   public sealed partial class GetPageRequest : pb::IMessage<GetPageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3240,7 +3262,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Pages.CreatePage][google.cloud.dialogflow.cx.v3.Pages.CreatePage].
+  /// The request message for
+  /// [Pages.CreatePage][google.cloud.dialogflow.cx.v3.Pages.CreatePage].
   /// </summary>
   public sealed partial class CreatePageRequest : pb::IMessage<CreatePageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3545,7 +3568,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Pages.UpdatePage][google.cloud.dialogflow.cx.v3.Pages.UpdatePage].
+  /// The request message for
+  /// [Pages.UpdatePage][google.cloud.dialogflow.cx.v3.Pages.UpdatePage].
   /// </summary>
   public sealed partial class UpdatePageRequest : pb::IMessage<UpdatePageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3858,7 +3882,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Pages.DeletePage][google.cloud.dialogflow.cx.v3.Pages.DeletePage].
+  /// The request message for
+  /// [Pages.DeletePage][google.cloud.dialogflow.cx.v3.Pages.DeletePage].
   /// </summary>
   public sealed partial class DeletePageRequest : pb::IMessage<DeletePageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

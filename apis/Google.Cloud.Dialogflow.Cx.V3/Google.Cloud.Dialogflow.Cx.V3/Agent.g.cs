@@ -129,11 +129,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cy8qL3ZhbGlkYXRpb25SZXN1bHR92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5n",
             "b29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9kaWFsb2dmbG93Qr4BCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjNCCkFnZW50UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEB",
-            "ogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2ds",
-            "ZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "YXV0aC9kaWFsb2dmbG93QrABCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjNCCkFnZW50UHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "aWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xl",
+            "LkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFs",
+            "b2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -358,9 +358,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// in your app, product, or service to determine user intent and respond to the
   /// user in a natural way.
   ///
-  /// After you create an agent, you can add [Intents][google.cloud.dialogflow.cx.v3.Intent],
-  /// [Entity Types][google.cloud.dialogflow.cx.v3.EntityType], [Flows][google.cloud.dialogflow.cx.v3.Flow], [Fulfillments][google.cloud.dialogflow.cx.v3.Fulfillment],
-  /// [Webhooks][google.cloud.dialogflow.cx.v3.Webhook], and so on to manage the conversation flows..
+  /// After you create an agent, you can add
+  /// [Intents][google.cloud.dialogflow.cx.v3.Intent], [Entity
+  /// Types][google.cloud.dialogflow.cx.v3.EntityType],
+  /// [Flows][google.cloud.dialogflow.cx.v3.Flow],
+  /// [Fulfillments][google.cloud.dialogflow.cx.v3.Fulfillment],
+  /// [Webhooks][google.cloud.dialogflow.cx.v3.Webhook], and so on to manage the
+  /// conversation flows..
   /// </summary>
   public sealed partial class Agent : pb::IMessage<Agent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -424,7 +428,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the agent.
-    /// Required for the [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent] method. [Agents.CreateAgent][google.cloud.dialogflow.cx.v3.Agents.CreateAgent]
+    /// Required for the
+    /// [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent]
+    /// method.
+    /// [Agents.CreateAgent][google.cloud.dialogflow.cx.v3.Agents.CreateAgent]
     /// populates the name automatically.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
     /// </summary>
@@ -460,7 +467,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// See [Language
     /// Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// for a list of the currently supported language codes.
-    /// This field cannot be set by the [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent] method.
+    /// This field cannot be set by the
+    /// [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent]
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -556,11 +565,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int StartFlowFieldNumber = 16;
     private string startFlow_ = "";
     /// <summary>
-    /// Immutable. Name of the start flow in this agent. A start flow will be automatically
-    /// created when the agent is created, and can only be deleted by deleting the
-    /// agent.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>`.
+    /// Immutable. Name of the start flow in this agent. A start flow will be
+    /// automatically created when the agent is created, and can only be deleted by
+    /// deleting the agent. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -575,8 +583,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int SecuritySettingsFieldNumber = 17;
     private string securitySettings_ = "";
     /// <summary>
-    /// Name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] reference for the agent.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Name of the
+    /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]
+    /// reference for the agent. Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/securitySettings/&lt;Security Settings ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -593,7 +602,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private bool enableStackdriverLogging_;
     /// <summary>
     /// Indicates if stackdriver logging is enabled for the agent.
-    /// Please use [agent.advanced_settings][google.cloud.dialogflow.cx.v3.AdvancedSettings.LoggingSettings]
+    /// Please use
+    /// [agent.advanced_settings][google.cloud.dialogflow.cx.v3.AdvancedSettings.LoggingSettings]
     /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -1108,7 +1118,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ListAgents][google.cloud.dialogflow.cx.v3.Agents.ListAgents].
+  /// The request message for
+  /// [Agents.ListAgents][google.cloud.dialogflow.cx.v3.Agents.ListAgents].
   /// </summary>
   public sealed partial class ListAgentsRequest : pb::IMessage<ListAgentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1385,7 +1396,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Agents.ListAgents][google.cloud.dialogflow.cx.v3.Agents.ListAgents].
+  /// The response message for
+  /// [Agents.ListAgents][google.cloud.dialogflow.cx.v3.Agents.ListAgents].
   /// </summary>
   public sealed partial class ListAgentsResponse : pb::IMessage<ListAgentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1611,7 +1623,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.GetAgent][google.cloud.dialogflow.cx.v3.Agents.GetAgent].
+  /// The request message for
+  /// [Agents.GetAgent][google.cloud.dialogflow.cx.v3.Agents.GetAgent].
   /// </summary>
   public sealed partial class GetAgentRequest : pb::IMessage<GetAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1807,7 +1820,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.CreateAgent][google.cloud.dialogflow.cx.v3.Agents.CreateAgent].
+  /// The request message for
+  /// [Agents.CreateAgent][google.cloud.dialogflow.cx.v3.Agents.CreateAgent].
   /// </summary>
   public sealed partial class CreateAgentRequest : pb::IMessage<CreateAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2052,7 +2066,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent].
+  /// The request message for
+  /// [Agents.UpdateAgent][google.cloud.dialogflow.cx.v3.Agents.UpdateAgent].
   /// </summary>
   public sealed partial class UpdateAgentRequest : pb::IMessage<UpdateAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2306,7 +2321,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.DeleteAgent][google.cloud.dialogflow.cx.v3.Agents.DeleteAgent].
+  /// The request message for
+  /// [Agents.DeleteAgent][google.cloud.dialogflow.cx.v3.Agents.DeleteAgent].
   /// </summary>
   public sealed partial class DeleteAgentRequest : pb::IMessage<DeleteAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2502,7 +2518,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ExportAgent][google.cloud.dialogflow.cx.v3.Agents.ExportAgent].
+  /// The request message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.cx.v3.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentRequest : pb::IMessage<ExportAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2571,10 +2588,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int AgentUriFieldNumber = 2;
     private string agentUri_ = "";
     /// <summary>
-    /// Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to
-    /// export the agent to. The format of this URI must be
-    /// `gs://&lt;bucket-name>/&lt;object-name>`.
-    /// If left unspecified, the serialized agent is returned inline.
+    /// Optional. The [Google Cloud
+    /// Storage](https://cloud.google.com/storage/docs/) URI to export the agent
+    /// to. The format of this URI must be `gs://&lt;bucket-name>/&lt;object-name>`. If
+    /// left unspecified, the serialized agent is returned inline.
     ///
     /// Dialogflow performs a write operation for the Cloud Storage object
     /// on the caller's behalf, so your request authentication must
@@ -2595,7 +2612,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DataFormatFieldNumber = 3;
     private global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.DataFormat dataFormat_ = global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.DataFormat.Unspecified;
     /// <summary>
-    /// Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
+    /// Optional. The data format of the exported agent. If not specified, `BLOB`
+    /// is assumed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2851,7 +2869,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Agents.ExportAgent][google.cloud.dialogflow.cx.v3.Agents.ExportAgent].
+  /// The response message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.cx.v3.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentResponse : pb::IMessage<ExportAgentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2909,7 +2928,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int AgentUriFieldNumber = 1;
     /// <summary>
     /// The URI to a file containing the exported agent. This field is populated
-    /// only if `agent_uri` is specified in [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
+    /// only if `agent_uri` is specified in
+    /// [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3120,7 +3140,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.RestoreAgent][google.cloud.dialogflow.cx.v3.Agents.RestoreAgent].
+  /// The request message for
+  /// [Agents.RestoreAgent][google.cloud.dialogflow.cx.v3.Agents.RestoreAgent].
   /// </summary>
   public sealed partial class RestoreAgentRequest : pb::IMessage<RestoreAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3506,7 +3527,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ValidateAgent][google.cloud.dialogflow.cx.v3.Agents.ValidateAgent].
+  /// The request message for
+  /// [Agents.ValidateAgent][google.cloud.dialogflow.cx.v3.Agents.ValidateAgent].
   /// </summary>
   public sealed partial class ValidateAgentRequest : pb::IMessage<ValidateAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3742,7 +3764,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Agents.GetAgentValidationResult][google.cloud.dialogflow.cx.v3.Agents.GetAgentValidationResult].
+  /// The request message for
+  /// [Agents.GetAgentValidationResult][google.cloud.dialogflow.cx.v3.Agents.GetAgentValidationResult].
   /// </summary>
   public sealed partial class GetAgentValidationResultRequest : pb::IMessage<GetAgentValidationResultRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3979,7 +4002,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Agents.GetAgentValidationResult][google.cloud.dialogflow.cx.v3.Agents.GetAgentValidationResult].
+  /// The response message for
+  /// [Agents.GetAgentValidationResult][google.cloud.dialogflow.cx.v3.Agents.GetAgentValidationResult].
   /// </summary>
   public sealed partial class AgentValidationResult : pb::IMessage<AgentValidationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
