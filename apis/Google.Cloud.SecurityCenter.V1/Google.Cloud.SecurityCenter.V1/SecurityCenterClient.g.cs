@@ -4184,8 +4184,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4210,8 +4210,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4236,8 +4236,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4262,8 +4262,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4288,8 +4288,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4314,8 +4314,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4340,8 +4340,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4366,8 +4366,8 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent of sources to list. Its format should
-        /// be "organizations/[organization_id], folders/[folder_id], or
-        /// projects/[project_id]".
+        /// be "organizations/[organization_id]", "folders/[folder_id]", or
+        /// "projects/[project_id]".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
