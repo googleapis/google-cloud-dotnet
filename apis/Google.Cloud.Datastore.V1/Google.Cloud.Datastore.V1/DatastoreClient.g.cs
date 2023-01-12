@@ -928,8 +928,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with incomplete key paths for which to allocate IDs.
-        /// No key may be reserved/read-only.
+        /// Required. A list of keys with incomplete key paths for which to allocate
+        /// IDs. No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -951,8 +951,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with incomplete key paths for which to allocate IDs.
-        /// No key may be reserved/read-only.
+        /// Required. A list of keys with incomplete key paths for which to allocate
+        /// IDs. No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -974,8 +974,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with incomplete key paths for which to allocate IDs.
-        /// No key may be reserved/read-only.
+        /// Required. A list of keys with incomplete key paths for which to allocate
+        /// IDs. No key may be reserved/read-only.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1020,8 +1020,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with complete key paths whose numeric IDs should not be
-        /// auto-allocated.
+        /// Required. A list of keys with complete key paths whose numeric IDs should
+        /// not be auto-allocated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1043,8 +1043,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with complete key paths whose numeric IDs should not be
-        /// auto-allocated.
+        /// Required. A list of keys with complete key paths whose numeric IDs should
+        /// not be auto-allocated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1066,8 +1066,8 @@ namespace Google.Cloud.Datastore.V1
         /// Required. The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        /// Required. A list of keys with complete key paths whose numeric IDs should not be
-        /// auto-allocated.
+        /// Required. A list of keys with complete key paths whose numeric IDs should
+        /// not be auto-allocated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1113,28 +1113,28 @@ namespace Google.Cloud.Datastore.V1
             GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<LookupRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callLookup);
             Modify_LookupApiCall(ref _callLookup);
-            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQueryAsync, grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQueryAsync, grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RunQueryRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
-            _callRunAggregationQuery = clientHelper.BuildApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse>("RunAggregationQuery", grpcClient.RunAggregationQueryAsync, grpcClient.RunAggregationQuery, effectiveSettings.RunAggregationQuerySettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callRunAggregationQuery = clientHelper.BuildApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse>("RunAggregationQuery", grpcClient.RunAggregationQueryAsync, grpcClient.RunAggregationQuery, effectiveSettings.RunAggregationQuerySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RunAggregationQueryRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callRunAggregationQuery);
             Modify_RunAggregationQueryApiCall(ref _callRunAggregationQuery);
-            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>("BeginTransaction", grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>("BeginTransaction", grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<BeginTransactionRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callBeginTransaction);
             Modify_BeginTransactionApiCall(ref _callBeginTransaction);
-            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>("Commit", grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>("Commit", grpcClient.CommitAsync, grpcClient.Commit, effectiveSettings.CommitSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CommitRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callCommit);
             Modify_CommitApiCall(ref _callCommit);
-            _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>("Rollback", grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>("Rollback", grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RollbackRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callRollback);
             Modify_RollbackApiCall(ref _callRollback);
-            _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>("AllocateIds", grpcClient.AllocateIdsAsync, grpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>("AllocateIds", grpcClient.AllocateIdsAsync, grpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<AllocateIdsRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callAllocateIds);
             Modify_AllocateIdsApiCall(ref _callAllocateIds);
-            _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>("ReserveIds", grpcClient.ReserveIdsAsync, grpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>("ReserveIds", grpcClient.ReserveIdsAsync, grpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReserveIdsRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callReserveIds);
             Modify_ReserveIdsApiCall(ref _callReserveIds);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
