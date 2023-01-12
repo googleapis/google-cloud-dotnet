@@ -108,21 +108,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "dGluZ3MvKn3aQQRuYW1lGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
             "0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
             "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zs",
-            "b3dC8AQKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IVU2Vj",
-            "dXJpdHlTZXR0aW5nc1Byb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy9jeC92MztjePgBAaIC",
-            "AkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6",
-            "OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjPqQcgBCiJkbHAuZ29vZ2xlYXBp",
-            "cy5jb20vSW5zcGVjdFRlbXBsYXRlElVvcmdhbml6YXRpb25zL3tvcmdhbml6",
-            "YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3BlY3RUZW1wbGF0ZXMv",
-            "e2luc3BlY3RfdGVtcGxhdGV9Ektwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vaW5zcGVjdFRlbXBsYXRlcy97aW5zcGVjdF90ZW1w",
-            "bGF0ZX3qQdcBCiVkbHAuZ29vZ2xlYXBpcy5jb20vRGVpZGVudGlmeVRlbXBs",
-            "YXRlEltvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2RlaWRlbnRpZnlUZW1wbGF0ZXMve2RlaWRlbnRpZnlfdGVt",
-            "cGxhdGV9ElFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vZGVpZGVudGlmeVRlbXBsYXRlcy97ZGVpZGVudGlmeV90ZW1wbGF0ZX1i",
-            "BnByb3RvMw=="));
+            "b3dC4gQKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IVU2Vj",
+            "dXJpdHlTZXR0aW5nc1Byb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlh",
+            "bG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5D",
+            "bG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9n",
+            "Zmxvdzo6Q1g6OlYz6kHIAQoiZGxwLmdvb2dsZWFwaXMuY29tL0luc3BlY3RU",
+            "ZW1wbGF0ZRJVb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9pbnNwZWN0VGVtcGxhdGVzL3tpbnNwZWN0X3RlbXBs",
+            "YXRlfRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2luc3BlY3RUZW1wbGF0ZXMve2luc3BlY3RfdGVtcGxhdGV96kHXAQolZGxw",
+            "Lmdvb2dsZWFwaXMuY29tL0RlaWRlbnRpZnlUZW1wbGF0ZRJbb3JnYW5pemF0",
+            "aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kZWlk",
+            "ZW50aWZ5VGVtcGxhdGVzL3tkZWlkZW50aWZ5X3RlbXBsYXRlfRJRcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RlaWRlbnRpZnlU",
+            "ZW1wbGF0ZXMve2RlaWRlbnRpZnlfdGVtcGxhdGV9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -141,7 +140,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
   #region Messages
   /// <summary>
-  /// The request message for [SecuritySettingsService.GetSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings].
+  /// The request message for
+  /// [SecuritySettingsService.GetSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.GetSecuritySettings].
   /// </summary>
   public sealed partial class GetSecuritySettingsRequest : pb::IMessage<GetSecuritySettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -338,7 +338,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SecuritySettingsService.UpdateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings].
+  /// The request message for
+  /// [SecuritySettingsService.UpdateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings].
   /// </summary>
   public sealed partial class UpdateSecuritySettingsRequest : pb::IMessage<UpdateSecuritySettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -405,8 +406,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The mask to control which fields get updated. If the mask is not present,
-    /// all fields will be updated.
+    /// Required. The mask to control which fields get updated. If the mask is not
+    /// present, all fields will be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1146,7 +1147,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+    /// Required. The location to create an
+    /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1390,8 +1392,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Required. The name of the
+    /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+    /// delete. Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/securitySettings/&lt;Security Settings ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1604,11 +1607,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// Resource name of the settings.
-    /// Required for the [SecuritySettingsService.UpdateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings] method.
-    /// [SecuritySettingsService.CreateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings] populates the name
-    /// automatically.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/securitySettings/&lt;Security Settings ID>`.
+    /// Required for the
+    /// [SecuritySettingsService.UpdateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.UpdateSecuritySettings]
+    /// method.
+    /// [SecuritySettingsService.CreateSecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettingsService.CreateSecuritySettings]
+    /// populates the name automatically. Format: `projects/&lt;Project
+    /// ID>/locations/&lt;Location ID>/securitySettings/&lt;Security Settings ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1623,8 +1627,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The human-readable name of the security settings, unique within the
-    /// location.
+    /// Required. The human-readable name of the security settings, unique within
+    /// the location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1770,15 +1774,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// ingesting audio to conversations via [Participants.AnalyzeContent][] or
     /// [Participants.StreamingAnalyzeContent][].
     ///
-    /// If [retention_strategy][google.cloud.dialogflow.cx.v3.SecuritySettings.retention_strategy] is set to REMOVE_AFTER_CONVERSATION or
-    /// [audio_export_settings.gcs_bucket][] is empty, audio export is disabled.
+    /// If
+    /// [retention_strategy][google.cloud.dialogflow.cx.v3.SecuritySettings.retention_strategy]
+    /// is set to REMOVE_AFTER_CONVERSATION or [audio_export_settings.gcs_bucket][]
+    /// is empty, audio export is disabled.
     ///
     /// If audio export is enabled, audio is recorded and saved to
     /// [audio_export_settings.gcs_bucket][], subject to retention policy of
     /// [audio_export_settings.gcs_bucket][].
     ///
     /// This setting won't effect audio input for implicit sessions via
-    /// [Sessions.DetectIntent][google.cloud.dialogflow.cx.v3.Sessions.DetectIntent] or [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent].
+    /// [Sessions.DetectIntent][google.cloud.dialogflow.cx.v3.Sessions.DetectIntent]
+    /// or
+    /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.cx.v3.Sessions.StreamingDetectIntent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1796,8 +1804,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Controls conversation exporting settings to Insights after conversation is
     /// completed.
     ///
-    /// If [retention_strategy][google.cloud.dialogflow.cx.v3.SecuritySettings.retention_strategy] is set to REMOVE_AFTER_CONVERSATION,
-    /// Insights export is disabled no matter what you configure here.
+    /// If
+    /// [retention_strategy][google.cloud.dialogflow.cx.v3.SecuritySettings.retention_strategy]
+    /// is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter
+    /// what you configure here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -91,12 +91,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "L2xvY2F0aW9ucy8qL2FnZW50cy8qL2VudGl0eVR5cGVzLyp92kEEbmFtZRp4",
             "ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QsMBCiFjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCD0VudGl0eVR5cGVQcm90b1ABWj9n",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
-            "YWxvZ2Zsb3cvY3gvdjM7Y3j4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6",
-            "OlYzYgZwcm90bzM="));
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrUBCiFjb20uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCD0VudGl0eVR5cGVQcm90b1ABWjFj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtj",
+            "eHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oC",
+            "IUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,7 +137,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   ///
   /// *   **User** - entities that are built for an individual user such as
   ///     favorites, preferences, playlists, and so on. A user entity is
-  ///     represented by the [SessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityType] type.
+  ///     represented by the
+  ///     [SessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityType]
+  ///     type.
   ///
   /// For more information about entity types, see the [Dialogflow
   /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
@@ -199,7 +200,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the entity type.
-    /// Required for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.UpdateEntityType].
+    /// Required for
+    /// [EntityTypes.UpdateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.UpdateEntityType].
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
@@ -216,7 +218,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The human-readable name of the entity type, unique within the agent.
+    /// Required. The human-readable name of the entity type, unique within the
+    /// agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1090,7 +1093,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes].
+  /// The request message for
+  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1418,7 +1422,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes].
+  /// The response message for
+  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1644,7 +1649,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.GetEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.GetEntityType].
+  /// The request message for
+  /// [EntityTypes.GetEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.GetEntityType].
   /// </summary>
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1892,7 +1898,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.CreateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.CreateEntityType].
+  /// The request message for
+  /// [EntityTypes.CreateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.CreateEntityType].
   /// </summary>
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2187,7 +2194,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.UpdateEntityType].
+  /// The request message for
+  /// [EntityTypes.UpdateEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.UpdateEntityType].
   /// </summary>
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2490,7 +2498,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.DeleteEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.DeleteEntityType].
+  /// The request message for
+  /// [EntityTypes.DeleteEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.DeleteEntityType].
   /// </summary>
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2565,9 +2574,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///    indicating the referencing resources.
     /// *  If `force` is set to true, Dialogflow will remove the entity type, as
     ///    well as any references to the entity type (i.e. Page
-    ///    [parameter][google.cloud.dialogflow.cx.v3.Form.Parameter] of the entity type will be changed to
-    ///    '@sys.any' and intent [parameter][google.cloud.dialogflow.cx.v3.Intent.Parameter] of the entity type
-    ///    will be removed).
+    ///    [parameter][google.cloud.dialogflow.cx.v3.Form.Parameter] of the entity
+    ///    type will be changed to
+    ///    '@sys.any' and intent
+    ///    [parameter][google.cloud.dialogflow.cx.v3.Intent.Parameter] of the
+    ///    entity type will be removed).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

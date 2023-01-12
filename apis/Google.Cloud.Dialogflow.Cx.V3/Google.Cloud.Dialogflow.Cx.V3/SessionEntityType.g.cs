@@ -105,11 +105,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "eVR5cGVzLyp92kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
             "bdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
             "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dm",
-            "bG93QsoBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCFlNl",
-            "c3Npb25FbnRpdHlUeXBlUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEB",
-            "ogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2ds",
-            "ZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "bG93QrwBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCFlNl",
+            "c3Npb25FbnRpdHlUeXBlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "aWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xl",
+            "LkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFs",
+            "b2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -132,9 +132,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// preferences, playlists, and so on.
   ///
   /// You can redefine a session entity type at the session level to extend or
-  /// replace a [custom entity type][google.cloud.dialogflow.cx.v3.EntityType] at the user session level (we
-  /// refer to the entity types defined at the agent level as "custom entity
-  /// types").
+  /// replace a [custom entity type][google.cloud.dialogflow.cx.v3.EntityType] at
+  /// the user session level (we refer to the entity types defined at the agent
+  /// level as "custom entity types").
   ///
   /// Note: session entity types apply to all queries, regardless of the language.
   ///
@@ -212,8 +212,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int EntityOverrideModeFieldNumber = 3;
     private global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityType.Types.EntityOverrideMode entityOverrideMode_ = global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityType.Types.EntityOverrideMode.Unspecified;
     /// <summary>
-    /// Required. Indicates whether the additional data should override or supplement the
-    /// custom entity type definition.
+    /// Required. Indicates whether the additional data should override or
+    /// supplement the custom entity type definition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -230,8 +230,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Entity>();
     /// <summary>
-    /// Required. The collection of entities to override or supplement the custom entity
-    /// type.
+    /// Required. The collection of entities to override or supplement the custom
+    /// entity type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -434,8 +434,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// `GetSessionEntityType`, `CreateSessionEntityType` and
         /// `UpdateSessionEntityType` only return the additional entities added in
         /// this session entity type. If you want to get the supplemented list,
-        /// please call [EntityTypes.GetEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.GetEntityType] on the custom entity type
-        /// and merge.
+        /// please call
+        /// [EntityTypes.GetEntityType][google.cloud.dialogflow.cx.v3.EntityTypes.GetEntityType]
+        /// on the custom entity type and merge.
         /// </summary>
         [pbr::OriginalName("ENTITY_OVERRIDE_MODE_SUPPLEMENT")] Supplement = 2,
       }
@@ -446,7 +447,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
+  /// The request message for
+  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesRequest : pb::IMessage<ListSessionEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -727,7 +729,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
+  /// The response message for
+  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.cx.v3.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesResponse : pb::IMessage<ListSessionEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -953,7 +956,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.GetSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.GetSessionEntityType].
   /// </summary>
   public sealed partial class GetSessionEntityTypeRequest : pb::IMessage<GetSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1154,7 +1158,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.CreateSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.CreateSessionEntityType].
   /// </summary>
   public sealed partial class CreateSessionEntityTypeRequest : pb::IMessage<CreateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1403,7 +1408,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.UpdateSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.UpdateSessionEntityType].
   /// </summary>
   public sealed partial class UpdateSessionEntityTypeRequest : pb::IMessage<UpdateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1662,7 +1668,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.DeleteSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.cx.v3.SessionEntityTypes.DeleteSessionEntityType].
   /// </summary>
   public sealed partial class DeleteSessionEntityTypeRequest : pb::IMessage<DeleteSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

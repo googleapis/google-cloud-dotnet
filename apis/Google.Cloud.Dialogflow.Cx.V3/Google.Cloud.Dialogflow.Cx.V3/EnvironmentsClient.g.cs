@@ -366,7 +366,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
     /// <summary>Environments client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Environments][google.cloud.dialogflow.cx.v3.Environment].
+    /// Service for managing
+    /// [Environments][google.cloud.dialogflow.cx.v3.Environment].
     /// </remarks>
     public abstract partial class EnvironmentsClient
     {
@@ -454,7 +455,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -463,7 +465,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -472,11 +475,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
+        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -497,11 +502,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
+        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -522,11 +529,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
+        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -547,11 +556,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
+        /// environments for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -572,7 +583,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -581,7 +593,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -590,7 +603,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -599,11 +613,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -615,11 +631,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -631,11 +649,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -644,11 +664,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -660,11 +682,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -676,11 +700,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -689,7 +715,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -706,7 +733,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -723,7 +751,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -767,7 +796,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<Environment, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEnvironmentOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -778,8 +808,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -794,7 +825,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -805,8 +837,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -821,7 +854,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -832,8 +866,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -844,7 +879,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateEnvironmentAsync(parent, environment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -855,8 +891,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -871,7 +908,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -882,8 +920,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -898,7 +937,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -909,8 +949,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// - `response`: [Environment][google.cloud.dialogflow.cx.v3.Environment]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
         /// </param>
         /// <param name="environment">
         /// Required. The environment to create.
@@ -921,7 +962,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateEnvironmentAsync(parent, environment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -938,7 +980,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -955,7 +998,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -999,7 +1043,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<Environment, wkt::Struct>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateEnvironmentOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1025,7 +1070,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1051,7 +1097,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1073,7 +1120,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateEnvironmentAsync(environment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1082,7 +1130,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,7 +1140,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1100,11 +1150,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,11 +1168,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1132,11 +1186,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1145,11 +1201,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1161,11 +1219,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1177,11 +1237,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1190,7 +1252,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1199,7 +1262,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1208,7 +1272,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
@@ -1234,7 +1299,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
@@ -1260,7 +1326,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
@@ -1286,7 +1353,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the environment to look up the history for.
@@ -1312,14 +1380,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Kicks off a continuous test under the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-        /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+        /// - `metadata`:
+        /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+        /// - `response`:
+        /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1328,14 +1399,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Kicks off a continuous test under the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-        /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+        /// - `metadata`:
+        /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+        /// - `response`:
+        /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1344,14 +1418,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Kicks off a continuous test under the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-        /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+        /// - `metadata`:
+        /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+        /// - `response`:
+        /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1509,14 +1586,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deploys a flow to the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-        /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+        /// - `metadata`:
+        /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+        /// - `response`:
+        /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1525,14 +1605,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deploys a flow to the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-        /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+        /// - `metadata`:
+        /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+        /// - `response`:
+        /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1541,14 +1624,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deploys a flow to the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-        /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+        /// - `metadata`:
+        /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+        /// - `response`:
+        /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1585,7 +1671,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Environments][google.cloud.dialogflow.cx.v3.Environment].
+    /// Service for managing
+    /// [Environments][google.cloud.dialogflow.cx.v3.Environment].
     /// </remarks>
     public sealed partial class EnvironmentsClientImpl : EnvironmentsClient
     {
@@ -1700,7 +1787,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_DeployFlowRequest(ref DeployFlowRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1712,7 +1800,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Returns the list of all environments in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Returns the list of all environments in the specified
+        /// [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1724,7 +1813,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1736,7 +1826,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Retrieves the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1751,7 +1842,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient CreateEnvironmentOperationsClient { get; }
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1771,7 +1863,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
+        /// Creates an [Environment][google.cloud.dialogflow.cx.v3.Environment] in the
+        /// specified [Agent][google.cloud.dialogflow.cx.v3.Agent].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1794,7 +1887,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient UpdateEnvironmentOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1814,7 +1908,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Updates the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Updates the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
@@ -1834,7 +1929,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1846,7 +1942,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deletes the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1858,7 +1955,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1870,7 +1968,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Looks up the history of the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Looks up the history of the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1885,14 +1984,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient RunContinuousTestOperationsClient { get; }
 
         /// <summary>
-        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Kicks off a continuous test under the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-        /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+        /// - `metadata`:
+        /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+        /// - `response`:
+        /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1904,14 +2006,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Kicks off a continuous test under the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Kicks off a continuous test under the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
-        /// - `response`: [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
+        /// - `metadata`:
+        /// [RunContinuousTestMetadata][google.cloud.dialogflow.cx.v3.RunContinuousTestMetadata]
+        /// - `response`:
+        /// [RunContinuousTestResponse][google.cloud.dialogflow.cx.v3.RunContinuousTestResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1950,14 +2055,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient DeployFlowOperationsClient { get; }
 
         /// <summary>
-        /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deploys a flow to the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-        /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+        /// - `metadata`:
+        /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+        /// - `response`:
+        /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1969,14 +2077,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deploys a flow to the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Deploys a flow to the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
-        /// - `response`: [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
+        /// - `metadata`:
+        /// [DeployFlowMetadata][google.cloud.dialogflow.cx.v3.DeployFlowMetadata]
+        /// - `response`:
+        /// [DeployFlowResponse][google.cloud.dialogflow.cx.v3.DeployFlowResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

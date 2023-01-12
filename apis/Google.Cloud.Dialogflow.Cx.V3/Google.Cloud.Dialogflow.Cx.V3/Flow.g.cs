@@ -141,12 +141,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "ZXhwb3J0OgEqykEsChJFeHBvcnRGbG93UmVzcG9uc2USFmdvb2dsZS5wcm90",
             "b2J1Zi5TdHJ1Y3QaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlo",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0K9",
+            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0Kv",
             "AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQglGbG93UHJv",
-            "dG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9kaWFsb2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUuQ2xv",
-            "dWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zs",
-            "b3c6OkNYOjpWM2IGcHJvdG8z"));
+            "dG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYz",
+            "L2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
+            "Q3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessageReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -656,9 +656,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// regardless of the current page. Event handlers defined in the page
     /// have higher priority than those defined in the flow.
     ///
-    /// Unlike [transition_routes][google.cloud.dialogflow.cx.v3.Flow.transition_routes], these handlers are
-    /// evaluated on a first-match basis. The first one that matches the event
-    /// get executed, with the rest being ignored.
+    /// Unlike
+    /// [transition_routes][google.cloud.dialogflow.cx.v3.Flow.transition_routes],
+    /// these handlers are evaluated on a first-match basis. The first one that
+    /// matches the event get executed, with the rest being ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -961,7 +962,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.CreateFlow][google.cloud.dialogflow.cx.v3.Flows.CreateFlow].
+  /// The request message for
+  /// [Flows.CreateFlow][google.cloud.dialogflow.cx.v3.Flows.CreateFlow].
   /// </summary>
   public sealed partial class CreateFlowRequest : pb::IMessage<CreateFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1257,7 +1259,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.DeleteFlow][google.cloud.dialogflow.cx.v3.Flows.DeleteFlow].
+  /// The request message for
+  /// [Flows.DeleteFlow][google.cloud.dialogflow.cx.v3.Flows.DeleteFlow].
   /// </summary>
   public sealed partial class DeleteFlowRequest : pb::IMessage<DeleteFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1503,7 +1506,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.ListFlows][google.cloud.dialogflow.cx.v3.Flows.ListFlows].
+  /// The request message for
+  /// [Flows.ListFlows][google.cloud.dialogflow.cx.v3.Flows.ListFlows].
   /// </summary>
   public sealed partial class ListFlowsRequest : pb::IMessage<ListFlowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1832,7 +1836,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Flows.ListFlows][google.cloud.dialogflow.cx.v3.Flows.ListFlows].
+  /// The response message for
+  /// [Flows.ListFlows][google.cloud.dialogflow.cx.v3.Flows.ListFlows].
   /// </summary>
   public sealed partial class ListFlowsResponse : pb::IMessage<ListFlowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2058,7 +2063,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Flows.GetFlow][google.cloud.dialogflow.cx.v3.Flows.GetFlow].
+  /// The response message for
+  /// [Flows.GetFlow][google.cloud.dialogflow.cx.v3.Flows.GetFlow].
   /// </summary>
   public sealed partial class GetFlowRequest : pb::IMessage<GetFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2307,7 +2313,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.UpdateFlow][google.cloud.dialogflow.cx.v3.Flows.UpdateFlow].
+  /// The request message for
+  /// [Flows.UpdateFlow][google.cloud.dialogflow.cx.v3.Flows.UpdateFlow].
   /// </summary>
   public sealed partial class UpdateFlowRequest : pb::IMessage<UpdateFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2612,7 +2619,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.TrainFlow][google.cloud.dialogflow.cx.v3.Flows.TrainFlow].
+  /// The request message for
+  /// [Flows.TrainFlow][google.cloud.dialogflow.cx.v3.Flows.TrainFlow].
   /// </summary>
   public sealed partial class TrainFlowRequest : pb::IMessage<TrainFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2809,7 +2817,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.ValidateFlow][google.cloud.dialogflow.cx.v3.Flows.ValidateFlow].
+  /// The request message for
+  /// [Flows.ValidateFlow][google.cloud.dialogflow.cx.v3.Flows.ValidateFlow].
   /// </summary>
   public sealed partial class ValidateFlowRequest : pb::IMessage<ValidateFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3046,7 +3055,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.GetFlowValidationResult][google.cloud.dialogflow.cx.v3.Flows.GetFlowValidationResult].
+  /// The request message for
+  /// [Flows.GetFlowValidationResult][google.cloud.dialogflow.cx.v3.Flows.GetFlowValidationResult].
   /// </summary>
   public sealed partial class GetFlowValidationResultRequest : pb::IMessage<GetFlowValidationResultRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3283,7 +3293,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Flows.GetFlowValidationResult][google.cloud.dialogflow.cx.v3.Flows.GetFlowValidationResult].
+  /// The response message for
+  /// [Flows.GetFlowValidationResult][google.cloud.dialogflow.cx.v3.Flows.GetFlowValidationResult].
   /// </summary>
   public sealed partial class FlowValidationResult : pb::IMessage<FlowValidationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3558,7 +3569,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
+  /// The request message for
+  /// [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
   /// </summary>
   public sealed partial class ImportFlowRequest : pb::IMessage<ImportFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3945,7 +3957,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
+  /// The response message for
+  /// [Flows.ImportFlow][google.cloud.dialogflow.cx.v3.Flows.ImportFlow].
   /// </summary>
   public sealed partial class ImportFlowResponse : pb::IMessage<ImportFlowResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4142,7 +4155,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
+  /// The request message for
+  /// [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
   /// </summary>
   public sealed partial class ExportFlowRequest : pb::IMessage<ExportFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4211,10 +4225,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int FlowUriFieldNumber = 2;
     private string flowUri_ = "";
     /// <summary>
-    /// Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to
-    /// export the flow to. The format of this URI must be
-    /// `gs://&lt;bucket-name>/&lt;object-name>`.
-    /// If left unspecified, the serialized flow is returned inline.
+    /// Optional. The [Google Cloud
+    /// Storage](https://cloud.google.com/storage/docs/) URI to export the flow to.
+    /// The format of this URI must be `gs://&lt;bucket-name>/&lt;object-name>`. If left
+    /// unspecified, the serialized flow is returned inline.
     ///
     /// Dialogflow performs a write operation for the Cloud Storage object
     /// on the caller's behalf, so your request authentication must
@@ -4428,7 +4442,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
+  /// The response message for
+  /// [Flows.ExportFlow][google.cloud.dialogflow.cx.v3.Flows.ExportFlow].
   /// </summary>
   public sealed partial class ExportFlowResponse : pb::IMessage<ExportFlowResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4486,7 +4501,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int FlowUriFieldNumber = 1;
     /// <summary>
     /// The URI to a file containing the exported flow. This field is populated
-    /// only if `flow_uri` is specified in [ExportFlowRequest][google.cloud.dialogflow.cx.v3.ExportFlowRequest].
+    /// only if `flow_uri` is specified in
+    /// [ExportFlowRequest][google.cloud.dialogflow.cx.v3.ExportFlowRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

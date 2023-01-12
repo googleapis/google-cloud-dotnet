@@ -241,7 +241,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -250,7 +251,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -259,12 +261,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -285,12 +289,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -311,12 +317,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -337,12 +345,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to list all environments for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
-        /// ID&gt;/environments/&lt;Environment ID&gt;`.
+        /// Required. The [Environment][google.cloud.dialogflow.cx.v3.Environment] to
+        /// list all environments for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/environments/&lt;Environment
+        /// ID&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -363,7 +373,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -372,7 +383,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -381,7 +393,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -390,11 +403,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -406,11 +421,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -422,11 +439,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -435,11 +454,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -451,11 +472,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -467,11 +490,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+        /// Required. The name of the
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
         /// ID&gt;/environments/&lt;Environment ID&gt;/deployments/&lt;Deployment ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -530,7 +555,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_GetDeploymentRequest(ref GetDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,7 +568,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Returns the list of all deployments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+        /// Returns the list of all deployments in the specified
+        /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -554,7 +581,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -566,7 +594,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
+        /// Retrieves the specified
+        /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

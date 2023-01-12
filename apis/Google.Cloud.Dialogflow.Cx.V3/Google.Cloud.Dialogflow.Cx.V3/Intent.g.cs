@@ -90,12 +90,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9pbnRlbnRzLyp9",
             "2kEEbmFtZRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBz",
             "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93Qr8BCiFj",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrEBCiFj",
             "b20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCC0ludGVudFByb3Rv",
-            "UAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvZGlhbG9nZmxvdy9jeC92MztjePgBAaICAkRGqgIdR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93",
-            "OjpDWDo6VjNiBnByb3RvMw=="));
+            "UAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9j",
+            "eHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4",
+            "LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.IntentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -200,7 +200,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of the intent.
-    /// Required for the [Intents.UpdateIntent][google.cloud.dialogflow.cx.v3.Intents.UpdateIntent] method. [Intents.CreateIntent][google.cloud.dialogflow.cx.v3.Intents.CreateIntent]
+    /// Required for the
+    /// [Intents.UpdateIntent][google.cloud.dialogflow.cx.v3.Intents.UpdateIntent]
+    /// method.
+    /// [Intents.CreateIntent][google.cloud.dialogflow.cx.v3.Intents.CreateIntent]
     /// populates the name automatically.
     /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/intents/&lt;Intent ID>`.
@@ -695,7 +698,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// training phrase is well formatted when the parts are concatenated.
         ///
         /// If the training phrase does not need to be annotated with parameters,
-        /// you just need a single part with only the [Part.text][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase.Part.text] field set.
+        /// you just need a single part with only the
+        /// [Part.text][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase.Part.text]
+        /// field set.
         ///
         /// If you want to annotate the training phrase, you must create multiple
         /// parts, where the fields of each part are populated in one of two ways:
@@ -966,9 +971,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int ParameterIdFieldNumber = 2;
             private string parameterId_ = "";
             /// <summary>
-            /// The [parameter][google.cloud.dialogflow.cx.v3.Intent.Parameter] used to annotate this part of the
-            /// training phrase. This field is required for annotated parts of the
-            /// training phrase.
+            /// The [parameter][google.cloud.dialogflow.cx.v3.Intent.Parameter] used to
+            /// annotate this part of the training phrase. This field is required for
+            /// annotated parts of the training phrase.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1196,8 +1201,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private string id_ = "";
         /// <summary>
         /// Required. The unique identifier of the parameter. This field
-        /// is used by [training phrases][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase] to annotate their
-        /// [parts][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase.Part].
+        /// is used by [training
+        /// phrases][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase] to annotate
+        /// their [parts][google.cloud.dialogflow.cx.v3.Intent.TrainingPhrase.Part].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1251,8 +1257,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// redaction is enabled, the parameter content will be replaced by parameter
         /// name during logging.
         /// Note: the parameter content is subject to redaction if either parameter
-        /// level redaction or [entity type level redaction][google.cloud.dialogflow.cx.v3.EntityType.redact] is
-        /// enabled.
+        /// level redaction or [entity type level
+        /// redaction][google.cloud.dialogflow.cx.v3.EntityType.redact] is enabled.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1474,7 +1480,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Intents.ListIntents][google.cloud.dialogflow.cx.v3.Intents.ListIntents].
+  /// The request message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.cx.v3.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsRequest : pb::IMessage<ListIntentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1840,7 +1847,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Intents.ListIntents][google.cloud.dialogflow.cx.v3.Intents.ListIntents].
+  /// The response message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.cx.v3.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsResponse : pb::IMessage<ListIntentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2066,7 +2074,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Intents.GetIntent][google.cloud.dialogflow.cx.v3.Intents.GetIntent].
+  /// The request message for
+  /// [Intents.GetIntent][google.cloud.dialogflow.cx.v3.Intents.GetIntent].
   /// </summary>
   public sealed partial class GetIntentRequest : pb::IMessage<GetIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2312,7 +2321,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Intents.CreateIntent][google.cloud.dialogflow.cx.v3.Intents.CreateIntent].
+  /// The request message for
+  /// [Intents.CreateIntent][google.cloud.dialogflow.cx.v3.Intents.CreateIntent].
   /// </summary>
   public sealed partial class CreateIntentRequest : pb::IMessage<CreateIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2605,7 +2615,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Intents.UpdateIntent][google.cloud.dialogflow.cx.v3.Intents.UpdateIntent].
+  /// The request message for
+  /// [Intents.UpdateIntent][google.cloud.dialogflow.cx.v3.Intents.UpdateIntent].
   /// </summary>
   public sealed partial class UpdateIntentRequest : pb::IMessage<UpdateIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2907,7 +2918,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Intents.DeleteIntent][google.cloud.dialogflow.cx.v3.Intents.DeleteIntent].
+  /// The request message for
+  /// [Intents.DeleteIntent][google.cloud.dialogflow.cx.v3.Intents.DeleteIntent].
   /// </summary>
   public sealed partial class DeleteIntentRequest : pb::IMessage<DeleteIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

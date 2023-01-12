@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
-  /// Service for managing [TransitionRouteGroups][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+  /// Service for managing
+  /// [TransitionRouteGroups][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
   /// </summary>
   public static partial class TransitionRouteGroups
   {
@@ -143,7 +144,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Retrieves the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Retrieves the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +157,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+      /// Creates an
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+      /// in the specified flow.
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -171,7 +175,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Updates the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -187,7 +192,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Deletes the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -280,7 +286,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransitionRouteGroups, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Retrieves the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -293,7 +300,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetTransitionRouteGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Retrieves the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -304,7 +312,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Retrieves the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -317,7 +326,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetTransitionRouteGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Retrieves the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -328,7 +338,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+      /// Creates an
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+      /// in the specified flow.
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -345,7 +357,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateTransitionRouteGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+      /// Creates an
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+      /// in the specified flow.
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -360,7 +374,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+      /// Creates an
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+      /// in the specified flow.
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -377,7 +393,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateTransitionRouteGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup] in the specified flow.
+      /// Creates an
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+      /// in the specified flow.
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -392,7 +410,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Updates the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -409,7 +428,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateTransitionRouteGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Updates the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -424,7 +444,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Updates the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -441,7 +462,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateTransitionRouteGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Updates the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -456,7 +478,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Deletes the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -473,7 +496,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteTransitionRouteGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Deletes the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -488,7 +512,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTransitionRouteGroup, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Deletes the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training
@@ -505,7 +530,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteTransitionRouteGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
+      /// Deletes the specified
+      /// [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
       ///
       /// Note: You should always train a flow prior to sending it queries. See the
       /// [training

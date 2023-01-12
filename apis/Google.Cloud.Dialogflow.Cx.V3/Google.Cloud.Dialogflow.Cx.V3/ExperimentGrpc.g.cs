@@ -151,7 +151,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public abstract partial class ExperimentsBase
     {
       /// <summary>
-      /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all experiments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -163,7 +164,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Retrieves the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -175,7 +177,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+      /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -187,7 +190,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Updates the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -199,7 +203,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Deletes the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -211,8 +216,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from PENDING to RUNNING.
+      /// Starts the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+      /// changes the state of experiment from PENDING to RUNNING.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -224,8 +230,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from RUNNING to DONE.
+      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// This rpc only changes the state of experiment from RUNNING to DONE.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -266,7 +272,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all experiments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -279,7 +286,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListExperiments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all experiments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -290,7 +298,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListExperiments, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all experiments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -303,7 +312,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListExperimentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all experiments in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Returns the list of all experiments in the specified
+      /// [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -314,7 +324,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListExperiments, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Retrieves the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -327,7 +338,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Retrieves the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -338,7 +350,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetExperiment, null, options, request);
       }
       /// <summary>
-      /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Retrieves the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -351,7 +364,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return GetExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Retrieves the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -362,7 +376,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetExperiment, null, options, request);
       }
       /// <summary>
-      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+      /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -375,7 +390,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+      /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -386,7 +402,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExperiment, null, options, request);
       }
       /// <summary>
-      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+      /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -399,7 +416,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
+      /// Creates an [Experiment][google.cloud.dialogflow.cx.v3.Experiment] in the
+      /// specified [Environment][google.cloud.dialogflow.cx.v3.Environment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -410,7 +428,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExperiment, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Updates the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -423,7 +442,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Updates the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -434,7 +454,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateExperiment, null, options, request);
       }
       /// <summary>
-      /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Updates the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -447,7 +468,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return UpdateExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Updates the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -458,7 +480,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateExperiment, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Deletes the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -471,7 +494,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Deletes the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -482,7 +506,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteExperiment, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Deletes the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -495,7 +520,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return DeleteExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// Deletes the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -506,8 +532,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExperiment, null, options, request);
       }
       /// <summary>
-      /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from PENDING to RUNNING.
+      /// Starts the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+      /// changes the state of experiment from PENDING to RUNNING.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -520,8 +547,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return StartExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from PENDING to RUNNING.
+      /// Starts the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+      /// changes the state of experiment from PENDING to RUNNING.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,8 +560,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_StartExperiment, null, options, request);
       }
       /// <summary>
-      /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from PENDING to RUNNING.
+      /// Starts the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+      /// changes the state of experiment from PENDING to RUNNING.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,8 +575,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return StartExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from PENDING to RUNNING.
+      /// Starts the specified
+      /// [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only
+      /// changes the state of experiment from PENDING to RUNNING.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -558,8 +588,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_StartExperiment, null, options, request);
       }
       /// <summary>
-      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from RUNNING to DONE.
+      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// This rpc only changes the state of experiment from RUNNING to DONE.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -572,8 +602,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return StopExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from RUNNING to DONE.
+      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// This rpc only changes the state of experiment from RUNNING to DONE.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -584,8 +614,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_StopExperiment, null, options, request);
       }
       /// <summary>
-      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from RUNNING to DONE.
+      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// This rpc only changes the state of experiment from RUNNING to DONE.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -598,8 +628,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return StopExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment]. This rpc only changes the state of
-      /// experiment from RUNNING to DONE.
+      /// Stops the specified [Experiment][google.cloud.dialogflow.cx.v3.Experiment].
+      /// This rpc only changes the state of experiment from RUNNING to DONE.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

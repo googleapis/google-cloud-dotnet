@@ -341,7 +341,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -360,7 +361,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -379,7 +381,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -394,7 +397,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -413,7 +417,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -432,7 +437,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Create security settings in the specified location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location to create an [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
+        /// Required. The location to create an
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] for.
         /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;`.
         /// </param>
         /// <param name="securitySettings">
@@ -444,8 +450,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateSecuritySettingsAsync(parent, securitySettings, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -454,8 +461,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -464,8 +472,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -474,8 +483,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -491,8 +501,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -508,8 +519,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -522,8 +534,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetSecuritySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -539,8 +552,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -556,8 +570,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the settings.
@@ -570,7 +585,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetSecuritySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -579,7 +595,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -588,7 +605,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -597,15 +615,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="securitySettings">
         /// Required. [SecuritySettings] object that contains values for each of the
         /// fields to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. If the mask is not present,
-        /// all fields will be updated.
+        /// Required. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -617,15 +636,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="securitySettings">
         /// Required. [SecuritySettings] object that contains values for each of the
         /// fields to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. If the mask is not present,
-        /// all fields will be updated.
+        /// Required. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -637,15 +657,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="securitySettings">
         /// Required. [SecuritySettings] object that contains values for each of the
         /// fields to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. If the mask is not present,
-        /// all fields will be updated.
+        /// Required. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -771,7 +792,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -780,7 +802,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -789,7 +812,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -798,11 +822,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteSecuritySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -814,11 +840,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -830,11 +858,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -843,11 +873,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteSecuritySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -859,11 +891,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -875,11 +909,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to delete.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// Required. The name of the
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings] to
+        /// delete. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
         /// ID&gt;/securitySettings/&lt;Security Settings ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -992,8 +1028,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1005,8 +1042,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Retrieves the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
-        /// The returned settings may be stale by up to 1 minute.
+        /// Retrieves the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings]. The
+        /// returned settings may be stale by up to 1 minute.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1018,7 +1056,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1030,7 +1069,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Updates the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Updates the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1066,7 +1106,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1078,7 +1119,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Deletes the specified [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
+        /// Deletes the specified
+        /// [SecuritySettings][google.cloud.dialogflow.cx.v3.SecuritySettings].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

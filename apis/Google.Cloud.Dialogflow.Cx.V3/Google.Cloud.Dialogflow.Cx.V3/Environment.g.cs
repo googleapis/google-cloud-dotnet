@@ -156,11 +156,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "UmVzcG9uc2USEkRlcGxveUZsb3dNZXRhZGF0YRp4ykEZZGlhbG9nZmxvdy5n",
             "b29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9kaWFsb2dmbG93QsQBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjNCEEVudmlyb25tZW50UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L2N4L3Yz",
-            "O2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oC",
-            "IUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "YXV0aC9kaWFsb2dmbG93QrYBCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjNCEEVudmlyb25tZW50UHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgId",
+            "R29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3Vk",
+            "OjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.WebhookReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -271,8 +271,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The human-readable name of the environment (unique in an agent). Limit of
-    /// 64 characters.
+    /// Required. The human-readable name of the environment (unique in an agent).
+    /// Limit of 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -305,8 +305,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.VersionConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.VersionConfig> versionConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.Environment.Types.VersionConfig>();
     /// <summary>
-    /// Required. A list of configurations for flow versions. You should include version
-    /// configs for all flows that are reachable from [`Start
+    /// Required. A list of configurations for flow versions. You should include
+    /// version configs for all flows that are reachable from [`Start
     /// Flow`][Agent.start_flow] in the agent. Otherwise, an error will be
     /// returned.
     /// </summary>
@@ -709,8 +709,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int VersionFieldNumber = 1;
         private string version_ = "";
         /// <summary>
-        /// Required. Format: projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-        /// ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>.
+        /// Required. Format: projects/&lt;Project ID>/locations/&lt;Location
+        /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>/versions/&lt;Version ID>.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -923,8 +923,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int EnableContinuousRunFieldNumber = 2;
         private bool enableContinuousRun_;
         /// <summary>
-        /// Whether to run test cases in [TestCasesConfig.test_cases][google.cloud.dialogflow.cx.v3.Environment.TestCasesConfig.test_cases] periodically.
-        /// Default false. If set to true, run once a day.
+        /// Whether to run test cases in
+        /// [TestCasesConfig.test_cases][google.cloud.dialogflow.cx.v3.Environment.TestCasesConfig.test_cases]
+        /// periodically. Default false. If set to true, run once a day.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -939,8 +940,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int EnablePredeploymentRunFieldNumber = 3;
         private bool enablePredeploymentRun_;
         /// <summary>
-        /// Whether to run test cases in [TestCasesConfig.test_cases][google.cloud.dialogflow.cx.v3.Environment.TestCasesConfig.test_cases] before
-        /// deploying a flow version to the environment. Default false.
+        /// Whether to run test cases in
+        /// [TestCasesConfig.test_cases][google.cloud.dialogflow.cx.v3.Environment.TestCasesConfig.test_cases]
+        /// before deploying a flow version to the environment. Default false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1177,7 +1179,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>
         /// The list of webhooks to override for the agent environment. The webhook
         /// must exist in the agent. You can override fields in
-        /// [`generic_web_service`][google.cloud.dialogflow.cx.v3.Webhook.generic_web_service] and
+        /// [`generic_web_service`][google.cloud.dialogflow.cx.v3.Webhook.generic_web_service]
+        /// and
         /// [`service_directory`][google.cloud.dialogflow.cx.v3.Webhook.service_directory].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1315,7 +1318,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.ListEnvironments][google.cloud.dialogflow.cx.v3.Environments.ListEnvironments].
+  /// The request message for
+  /// [Environments.ListEnvironments][google.cloud.dialogflow.cx.v3.Environments.ListEnvironments].
   /// </summary>
   public sealed partial class ListEnvironmentsRequest : pb::IMessage<ListEnvironmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1367,8 +1371,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all environments for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to list all
+    /// environments for. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1592,7 +1597,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Environments.ListEnvironments][google.cloud.dialogflow.cx.v3.Environments.ListEnvironments].
+  /// The response message for
+  /// [Environments.ListEnvironments][google.cloud.dialogflow.cx.v3.Environments.ListEnvironments].
   /// </summary>
   public sealed partial class ListEnvironmentsResponse : pb::IMessage<ListEnvironmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1820,7 +1826,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.GetEnvironment][google.cloud.dialogflow.cx.v3.Environments.GetEnvironment].
+  /// The request message for
+  /// [Environments.GetEnvironment][google.cloud.dialogflow.cx.v3.Environments.GetEnvironment].
   /// </summary>
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1870,8 +1877,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// Required. The name of the
+    /// [Environment][google.cloud.dialogflow.cx.v3.Environment]. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/environments/&lt;Environment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2017,7 +2025,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.CreateEnvironment][google.cloud.dialogflow.cx.v3.Environments.CreateEnvironment].
+  /// The request message for
+  /// [Environments.CreateEnvironment][google.cloud.dialogflow.cx.v3.Environments.CreateEnvironment].
   /// </summary>
   public sealed partial class CreateEnvironmentRequest : pb::IMessage<CreateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2068,8 +2077,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an [Environment][google.cloud.dialogflow.cx.v3.Environment] for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// Required. The [Agent][google.cloud.dialogflow.cx.v3.Agent] to create an
+    /// [Environment][google.cloud.dialogflow.cx.v3.Environment] for. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2262,7 +2272,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.UpdateEnvironment][google.cloud.dialogflow.cx.v3.Environments.UpdateEnvironment].
+  /// The request message for
+  /// [Environments.UpdateEnvironment][google.cloud.dialogflow.cx.v3.Environments.UpdateEnvironment].
   /// </summary>
   public sealed partial class UpdateEnvironmentRequest : pb::IMessage<UpdateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2515,7 +2526,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.DeleteEnvironment][google.cloud.dialogflow.cx.v3.Environments.DeleteEnvironment].
+  /// The request message for
+  /// [Environments.DeleteEnvironment][google.cloud.dialogflow.cx.v3.Environments.DeleteEnvironment].
   /// </summary>
   public sealed partial class DeleteEnvironmentRequest : pb::IMessage<DeleteEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2565,8 +2577,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// Required. The name of the
+    /// [Environment][google.cloud.dialogflow.cx.v3.Environment] to delete. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
     /// ID>/environments/&lt;Environment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2712,7 +2725,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.LookupEnvironmentHistory][google.cloud.dialogflow.cx.v3.Environments.LookupEnvironmentHistory].
+  /// The request message for
+  /// [Environments.LookupEnvironmentHistory][google.cloud.dialogflow.cx.v3.Environments.LookupEnvironmentHistory].
   /// </summary>
   public sealed partial class LookupEnvironmentHistoryRequest : pb::IMessage<LookupEnvironmentHistoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2990,7 +3004,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Environments.LookupEnvironmentHistory][google.cloud.dialogflow.cx.v3.Environments.LookupEnvironmentHistory].
+  /// The response message for
+  /// [Environments.LookupEnvironmentHistory][google.cloud.dialogflow.cx.v3.Environments.LookupEnvironmentHistory].
   /// </summary>
   public sealed partial class LookupEnvironmentHistoryResponse : pb::IMessage<LookupEnvironmentHistoryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3044,7 +3059,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.Environment> environments_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.Environment>();
     /// <summary>
     /// Represents a list of snapshots for an environment. Time of the snapshots is
-    /// stored in [`update_time`][google.cloud.dialogflow.cx.v3.Environment.update_time].
+    /// stored in
+    /// [`update_time`][google.cloud.dialogflow.cx.v3.Environment.update_time].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3559,7 +3575,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest].
+  /// The request message for
+  /// [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest].
   /// </summary>
   public sealed partial class RunContinuousTestRequest : pb::IMessage<RunContinuousTestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3609,8 +3626,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int EnvironmentFieldNumber = 1;
     private string environment_ = "";
     /// <summary>
-    /// Required. Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/environments/&lt;Environment ID>`.
+    /// Required. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3755,7 +3772,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest].
+  /// The response message for
+  /// [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest].
   /// </summary>
   public sealed partial class RunContinuousTestResponse : pb::IMessage<RunContinuousTestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3959,8 +3977,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest] long running
-  /// operation.
+  /// Metadata returned for the
+  /// [Environments.RunContinuousTest][google.cloud.dialogflow.cx.v3.Environments.RunContinuousTest]
+  /// long running operation.
   /// </summary>
   public sealed partial class RunContinuousTestMetadata : pb::IMessage<RunContinuousTestMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4144,7 +4163,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.ListContinuousTestResults][google.cloud.dialogflow.cx.v3.Environments.ListContinuousTestResults].
+  /// The request message for
+  /// [Environments.ListContinuousTestResults][google.cloud.dialogflow.cx.v3.Environments.ListContinuousTestResults].
   /// </summary>
   public sealed partial class ListContinuousTestResultsRequest : pb::IMessage<ListContinuousTestResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4647,7 +4667,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The request message for [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow].
+  /// The request message for
+  /// [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow].
   /// </summary>
   public sealed partial class DeployFlowRequest : pb::IMessage<DeployFlowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4886,7 +4907,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// The response message for [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow].
+  /// The response message for
+  /// [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow].
   /// </summary>
   public sealed partial class DeployFlowResponse : pb::IMessage<DeployFlowResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4952,8 +4974,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DeploymentFieldNumber = 2;
     private string deployment_ = "";
     /// <summary>
-    /// The name of the flow version [Deployment][google.cloud.dialogflow.cx.v3.Deployment].
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/
+    /// The name of the flow version
+    /// [Deployment][google.cloud.dialogflow.cx.v3.Deployment]. Format:
+    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>/
     /// environments/&lt;Environment ID>/deployments/&lt;Deployment ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5132,8 +5155,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Metadata returned for the [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow] long running
-  /// operation.
+  /// Metadata returned for the
+  /// [Environments.DeployFlow][google.cloud.dialogflow.cx.v3.Environments.DeployFlow]
+  /// long running operation.
   /// </summary>
   public sealed partial class DeployFlowMetadata : pb::IMessage<DeployFlowMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
