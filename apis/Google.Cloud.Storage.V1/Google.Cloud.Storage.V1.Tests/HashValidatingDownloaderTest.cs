@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -76,7 +76,7 @@ namespace Google.Cloud.Storage.V1.Tests
             return new HashValidatingDownloader(metadata, service);
         }
 
-        class MockableService : BaseClientService
+        internal class MockableService : BaseClientService
         {
             internal MockableService(Func<HttpRequestMessage, HttpResponseMessage> handler)
                 : base(GetInitializer(handler))

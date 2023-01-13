@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -129,10 +129,10 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             private struct SigningState
             {
-                private string _scheme;
-                private string _host;
-                private string _urlResourcePath;
-                private List<string> _queryParameters;
+                private readonly string _scheme;
+                private readonly string _host;
+                private readonly string _urlResourcePath;
+                private readonly List<string> _queryParameters;
                 internal byte[] _blobToSign;
 
                 internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, BlobSignerParameters signerParameters)
