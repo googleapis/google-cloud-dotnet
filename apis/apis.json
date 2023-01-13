@@ -1163,6 +1163,27 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.DataCatalog.Lineage.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Lineage",
+      "productUrl": "https://cloud.google.com/data-catalog/docs/concepts/about-data-lineage",
+      "description": "Recommended Google client library to access the Dataplex Data Lineage API",
+      "tags": [
+        "dataplex",
+        "lineage",
+        "data"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/datacatalog/lineage/v1",
+      "shortName": "datalineage",
+      "serviceConfigFile": "datalineage_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.DataCatalog.V1",
       "generator": "micro",
       "protoPath": "google/cloud/datacatalog/v1",
