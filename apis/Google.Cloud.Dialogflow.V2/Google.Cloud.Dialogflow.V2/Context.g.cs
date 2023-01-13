@@ -118,10 +118,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Lyp9L2NvbnRleHRz2kEGcGFyZW50GnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFw",
             "aXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
             "ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Rp",
-            "YWxvZ2Zsb3dCmwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIM",
-            "Q29udGV4dFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogIC",
-            "REaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "YWxvZ2Zsb3dClQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIM",
+            "Q29udGV4dFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxv",
+            "dy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAhpH",
+            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -472,7 +472,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
+  /// The request message for
+  /// [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
   /// </summary>
   public sealed partial class ListContextsRequest : pb::IMessage<ListContextsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -753,7 +754,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
+  /// The response message for
+  /// [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
   /// </summary>
   public sealed partial class ListContextsResponse : pb::IMessage<ListContextsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -979,7 +981,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.GetContext][google.cloud.dialogflow.v2.Contexts.GetContext].
+  /// The request message for
+  /// [Contexts.GetContext][google.cloud.dialogflow.v2.Contexts.GetContext].
   /// </summary>
   public sealed partial class GetContextRequest : pb::IMessage<GetContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1179,7 +1182,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.CreateContext][google.cloud.dialogflow.v2.Contexts.CreateContext].
+  /// The request message for
+  /// [Contexts.CreateContext][google.cloud.dialogflow.v2.Contexts.CreateContext].
   /// </summary>
   public sealed partial class CreateContextRequest : pb::IMessage<CreateContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1428,7 +1432,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.UpdateContext][google.cloud.dialogflow.v2.Contexts.UpdateContext].
+  /// The request message for
+  /// [Contexts.UpdateContext][google.cloud.dialogflow.v2.Contexts.UpdateContext].
   /// </summary>
   public sealed partial class UpdateContextRequest : pb::IMessage<UpdateContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1681,7 +1686,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.DeleteContext][google.cloud.dialogflow.v2.Contexts.DeleteContext].
+  /// The request message for
+  /// [Contexts.DeleteContext][google.cloud.dialogflow.v2.Contexts.DeleteContext].
   /// </summary>
   public sealed partial class DeleteContextRequest : pb::IMessage<DeleteContextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1881,7 +1887,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.DeleteAllContexts][google.cloud.dialogflow.v2.Contexts.DeleteAllContexts].
+  /// The request message for
+  /// [Contexts.DeleteAllContexts][google.cloud.dialogflow.v2.Contexts.DeleteAllContexts].
   /// </summary>
   public sealed partial class DeleteAllContextsRequest : pb::IMessage<DeleteAllContextsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

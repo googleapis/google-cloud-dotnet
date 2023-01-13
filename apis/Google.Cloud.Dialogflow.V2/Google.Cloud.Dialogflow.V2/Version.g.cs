@@ -83,11 +83,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             "PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvdmVyc2lvbnMvKn3aQQRu",
             "YW1lGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93",
             "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCmwEKHmNvbS5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMVmVyc2lvblByb3RvUAFaRGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlh",
-            "bG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQu",
-            "RGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dClQEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMVmVyc2lvblByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93",
+            "cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9n",
+            "Zmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -211,8 +211,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int VersionNumberFieldNumber = 3;
     private int versionNumber_;
     /// <summary>
-    /// Output only. The sequential number of this version. This field is read-only which means
-    /// it cannot be set by create and update methods.
+    /// Output only. The sequential number of this version. This field is read-only
+    /// which means it cannot be set by create and update methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -227,8 +227,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The creation time of this version. This field is read-only, i.e., it cannot
-    /// be set by create and update methods.
+    /// Output only. The creation time of this version. This field is read-only,
+    /// i.e., it cannot be set by create and update methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -243,8 +243,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int StatusFieldNumber = 6;
     private global::Google.Cloud.Dialogflow.V2.Version.Types.VersionStatus status_ = global::Google.Cloud.Dialogflow.V2.Version.Types.VersionStatus.Unspecified;
     /// <summary>
-    /// Output only. The status of this version. This field is read-only and cannot be set by
-    /// create and update methods.
+    /// Output only. The status of this version. This field is read-only and cannot
+    /// be set by create and update methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -524,7 +524,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Versions.ListVersions][google.cloud.dialogflow.v2.Versions.ListVersions].
+  /// The request message for
+  /// [Versions.ListVersions][google.cloud.dialogflow.v2.Versions.ListVersions].
   /// </summary>
   public sealed partial class ListVersionsRequest : pb::IMessage<ListVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -595,8 +596,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return in a single page. By default 100 and
-    /// at most 1000.
+    /// Optional. The maximum number of items to return in a single page. By
+    /// default 100 and at most 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -804,7 +805,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Versions.ListVersions][google.cloud.dialogflow.v2.Versions.ListVersions].
+  /// The response message for
+  /// [Versions.ListVersions][google.cloud.dialogflow.v2.Versions.ListVersions].
   /// </summary>
   public sealed partial class ListVersionsResponse : pb::IMessage<ListVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1030,7 +1032,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Versions.GetVersion][google.cloud.dialogflow.v2.Versions.GetVersion].
+  /// The request message for
+  /// [Versions.GetVersion][google.cloud.dialogflow.v2.Versions.GetVersion].
   /// </summary>
   public sealed partial class GetVersionRequest : pb::IMessage<GetVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1230,7 +1233,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Versions.CreateVersion][google.cloud.dialogflow.v2.Versions.CreateVersion].
+  /// The request message for
+  /// [Versions.CreateVersion][google.cloud.dialogflow.v2.Versions.CreateVersion].
   /// </summary>
   public sealed partial class CreateVersionRequest : pb::IMessage<CreateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1478,7 +1482,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Versions.UpdateVersion][google.cloud.dialogflow.v2.Versions.UpdateVersion].
+  /// The request message for
+  /// [Versions.UpdateVersion][google.cloud.dialogflow.v2.Versions.UpdateVersion].
   /// </summary>
   public sealed partial class UpdateVersionRequest : pb::IMessage<UpdateVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1736,7 +1741,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Versions.DeleteVersion][google.cloud.dialogflow.v2.Versions.DeleteVersion].
+  /// The request message for
+  /// [Versions.DeleteVersion][google.cloud.dialogflow.v2.Versions.DeleteVersion].
   /// </summary>
   public sealed partial class DeleteVersionRequest : pb::IMessage<DeleteVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

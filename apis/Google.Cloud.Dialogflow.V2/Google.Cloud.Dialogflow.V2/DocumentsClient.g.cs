@@ -383,7 +383,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>Documents client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing knowledge [Documents][google.cloud.dialogflow.v2.Document].
+    /// Service for managing knowledge
+    /// [Documents][google.cloud.dialogflow.v2.Document].
     /// </remarks>
     public abstract partial class DocumentsClient
     {
@@ -716,7 +717,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -732,7 +734,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -748,7 +751,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -790,7 +794,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -817,7 +822,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -844,7 +850,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -867,7 +874,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -894,7 +902,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -921,7 +930,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="parent">
@@ -946,8 +956,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
-        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`:
+        /// [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -964,8 +976,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
-        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`:
+        /// [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,8 +996,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
-        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`:
+        /// [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1024,7 +1040,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1041,7 +1058,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1058,7 +1076,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1101,7 +1120,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1125,7 +1145,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1149,7 +1170,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1170,7 +1192,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1194,7 +1217,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1218,7 +1242,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -1239,7 +1264,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1255,7 +1281,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1271,7 +1298,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1313,7 +1341,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="document">
@@ -1340,7 +1369,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="document">
@@ -1367,7 +1397,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="document">
@@ -1393,7 +1424,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1415,7 +1447,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1437,7 +1470,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1485,7 +1519,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1497,8 +1532,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1522,7 +1557,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1534,8 +1570,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1559,7 +1595,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1571,8 +1608,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1592,7 +1629,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1604,8 +1642,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1629,7 +1667,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1641,8 +1680,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1666,7 +1705,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -1678,8 +1718,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// ID&gt;/knowledgeBases/&lt;Knowledge Base ID&gt;/documents/&lt;Document ID&gt;`
         /// </param>
         /// <param name="contentUri">
-        /// Optional. The path of gcs source file for reloading document content. For now,
-        /// only gcs uri is supported.
+        /// Optional. The path of gcs source file for reloading document content. For
+        /// now, only gcs uri is supported.
         /// 
         /// For documents stored in Google Cloud Storage, these URIs must have
         /// the form `gs://&lt;bucket-name&gt;/&lt;object-name&gt;`.
@@ -1697,7 +1737,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1714,7 +1755,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1731,7 +1773,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1769,7 +1812,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>Documents client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing knowledge [Documents][google.cloud.dialogflow.v2.Document].
+    /// Service for managing knowledge
+    /// [Documents][google.cloud.dialogflow.v2.Document].
     /// </remarks>
     public sealed partial class DocumentsClientImpl : DocumentsClient
     {
@@ -1934,7 +1978,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1953,7 +1998,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1977,8 +2023,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
-        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`:
+        /// [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1998,8 +2046,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
-        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`:
+        /// [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2020,7 +2070,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -2040,7 +2091,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: An [Empty
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
@@ -2063,7 +2115,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2082,7 +2135,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2107,7 +2161,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -2132,7 +2187,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// 
         /// Note: The `projects.agent.knowledgeBases.documents` resource is deprecated;
@@ -2158,7 +2214,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2178,7 +2235,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `metadata`:
+        /// [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
         /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

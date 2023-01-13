@@ -79,15 +79,15 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Rk9VUhAEEg0KCURUTUZfRklWRRAFEgwKCERUTUZfU0lYEAYSDgoKRFRNRl9T",
             "RVZFThAHEg4KCkRUTUZfRUlHSFQQCBINCglEVE1GX05JTkUQCRINCglEVE1G",
             "X1pFUk8QChIKCgZEVE1GX0EQCxIKCgZEVE1GX0IQDBIKCgZEVE1GX0MQDRIK",
-            "CgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBBC3AIK",
+            "CgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBBC1gIK",
             "HmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25maWdQ",
-            "cm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29v",
-            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlz",
-            "LmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5j",
-            "b20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjIv",
+            "ZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYvgBAaICAkRGqgIaR29vZ2xlLkNs",
+            "b3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9N",
+            "b2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhy",
+            "YXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +166,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Variant of the specified [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
+  /// Variant of the specified [Speech
+  /// model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
   ///
   /// See the [Cloud Speech
   /// documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -200,8 +201,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Use an enhanced model variant:
     ///
     /// * If an enhanced variant does not exist for the given
-    ///   [model][google.cloud.dialogflow.v2.InputAudioConfig.model] and request language, Dialogflow falls
-    ///   back to the standard variant.
+    ///   [model][google.cloud.dialogflow.v2.InputAudioConfig.model] and request
+    ///   language, Dialogflow falls back to the standard variant.
     ///
     ///   The [Cloud Speech
     ///   documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
@@ -1052,10 +1053,12 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int EnableWordInfoFieldNumber = 13;
     private bool enableWordInfo_;
     /// <summary>
-    /// If `true`, Dialogflow returns [SpeechWordInfo][google.cloud.dialogflow.v2.SpeechWordInfo] in
-    /// [StreamingRecognitionResult][google.cloud.dialogflow.v2.StreamingRecognitionResult] with information about the recognized speech
-    /// words, e.g. start and end time offsets. If false or unspecified, Speech
-    /// doesn't return any word-level information.
+    /// If `true`, Dialogflow returns
+    /// [SpeechWordInfo][google.cloud.dialogflow.v2.SpeechWordInfo] in
+    /// [StreamingRecognitionResult][google.cloud.dialogflow.v2.StreamingRecognitionResult]
+    /// with information about the recognized speech words, e.g. start and end time
+    /// offsets. If false or unspecified, Speech doesn't return any word-level
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1137,7 +1140,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ModelVariantFieldNumber = 10;
     private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant modelVariant_ = global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified;
     /// <summary>
-    /// Which variant of the [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
+    /// Which variant of the [Speech
+    /// model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1176,7 +1180,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int DisableNoSpeechRecognizedEventFieldNumber = 14;
     private bool disableNoSpeechRecognizedEvent_;
     /// <summary>
-    /// Only used in [Participants.AnalyzeContent][google.cloud.dialogflow.v2.Participants.AnalyzeContent] and
+    /// Only used in
+    /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2.Participants.AnalyzeContent]
+    /// and
     /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent].
     /// If `false` and recognition doesn't return any result, trigger
     /// `NO_SPEECH_RECOGNIZED` event to Dialogflow agent.
@@ -1590,9 +1596,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The preferred gender of the voice. If not set, the service will
     /// choose a voice based on the other parameters such as language_code and
-    /// [name][google.cloud.dialogflow.v2.VoiceSelectionParams.name]. Note that this is only a preference, not requirement. If a
-    /// voice of the appropriate gender is not available, the synthesizer should
-    /// substitute a voice with a different gender rather than failing the request.
+    /// [name][google.cloud.dialogflow.v2.VoiceSelectionParams.name]. Note that
+    /// this is only a preference, not requirement. If a voice of the appropriate
+    /// gender is not available, the synthesizer should substitute a voice with a
+    /// different gender rather than failing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2604,7 +2611,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Configures speech transcription for [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile].
+  /// Configures speech transcription for
+  /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile].
   /// </summary>
   public sealed partial class SpeechToTextConfig : pb::IMessage<SpeechToTextConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2657,11 +2665,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The speech model used in speech to text.
     /// `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as
-    /// `USE_ENHANCED`. It can be overridden in [AnalyzeContentRequest][google.cloud.dialogflow.v2.AnalyzeContentRequest] and
-    /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest] request.
-    /// If enhanced model variant is specified and an enhanced
-    /// version of the specified model for the language does not exist, then it
-    /// would emit an error.
+    /// `USE_ENHANCED`. It can be overridden in
+    /// [AnalyzeContentRequest][google.cloud.dialogflow.v2.AnalyzeContentRequest]
+    /// and
+    /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest]
+    /// request. If enhanced model variant is specified and an enhanced version of
+    /// the specified model for the language does not exist, then it would emit an
+    /// error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

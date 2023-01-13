@@ -233,14 +233,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             "YXR1cmVDb25maWdPcGVyYXRpb25NZXRhZGF0YRp4ykEZZGlhbG9nZmxvdy5n",
             "b29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9kaWFsb2dmbG93QqYCCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjJCGENvbnZlcnNhdGlvblByb2ZpbGVQcm90b1ABWkRnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cv",
-            "djI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zs",
-            "b3cuVjLqQXwKLGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ1hTZWN1cml0",
-            "eVNldHRpbmdzEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vc2VjdXJpdHlTZXR0aW5ncy97c2VjdXJpdHlfc2V0dGluZ3N9YgZw",
-            "cm90bzM="));
+            "YXV0aC9kaWFsb2dmbG93QqACCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjJCGENvbnZlcnNhdGlvblByb2ZpbGVQcm90b1ABWj5jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjIvZGlhbG9nZmxvd3BiO2RpYWxv",
+            "Z2Zsb3dwYvgBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLq",
+            "QXwKLGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ1hTZWN1cml0eVNldHRp",
+            "bmdzEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2VjdXJpdHlTZXR0aW5ncy97c2VjdXJpdHlfc2V0dGluZ3N9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1088,7 +1087,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.ListConversationProfiles][google.cloud.dialogflow.v2.ConversationProfiles.ListConversationProfiles].
+  /// The request message for
+  /// [ConversationProfiles.ListConversationProfiles][google.cloud.dialogflow.v2.ConversationProfiles.ListConversationProfiles].
   /// </summary>
   public sealed partial class ListConversationProfilesRequest : pb::IMessage<ListConversationProfilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1365,7 +1365,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [ConversationProfiles.ListConversationProfiles][google.cloud.dialogflow.v2.ConversationProfiles.ListConversationProfiles].
+  /// The response message for
+  /// [ConversationProfiles.ListConversationProfiles][google.cloud.dialogflow.v2.ConversationProfiles.ListConversationProfiles].
   /// </summary>
   public sealed partial class ListConversationProfilesResponse : pb::IMessage<ListConversationProfilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1591,7 +1592,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile].
+  /// The request message for
+  /// [ConversationProfiles.GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile].
   /// </summary>
   public sealed partial class GetConversationProfileRequest : pb::IMessage<GetConversationProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1788,7 +1790,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.CreateConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.CreateConversationProfile].
+  /// The request message for
+  /// [ConversationProfiles.CreateConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.CreateConversationProfile].
   /// </summary>
   public sealed partial class CreateConversationProfileRequest : pb::IMessage<CreateConversationProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2033,7 +2036,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.UpdateConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.UpdateConversationProfile].
+  /// The request message for
+  /// [ConversationProfiles.UpdateConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.UpdateConversationProfile].
   /// </summary>
   public sealed partial class UpdateConversationProfileRequest : pb::IMessage<UpdateConversationProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2286,7 +2290,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationProfiles.DeleteConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.DeleteConversationProfile].
+  /// The request message for
+  /// [ConversationProfiles.DeleteConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.DeleteConversationProfile].
   ///
   /// This operation fails if the conversation profile is still referenced from
   /// a phone number.
@@ -4903,8 +4908,8 @@ namespace Google.Cloud.Dialogflow.V2 {
             public const int AgentFieldNumber = 1;
             private string agent_ = "";
             /// <summary>
-            /// Required. The name of a Dialogflow virtual agent used for end user side intent
-            /// detection and suggestion. Format: `projects/&lt;Project Number/
+            /// Required. The name of a Dialogflow virtual agent used for end user side
+            /// intent detection and suggestion. Format: `projects/&lt;Project Number/
             /// ID>/locations/&lt;Location ID>/agent`. When multiple agents are allowed in
             /// the same Dialogflow project.
             /// </summary>
@@ -5805,11 +5810,17 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// and identifies the prevailing subjective opinion, especially to determine
         /// a user's attitude as positive, negative, or neutral:
         /// https://cloud.google.com/natural-language/docs/basics#sentiment_analysis
-        /// For [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent] method, result will be in
+        /// For
+        /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent]
+        /// method, result will be in
         /// [StreamingAnalyzeContentResponse.message.SentimentAnalysisResult][google.cloud.dialogflow.v2.StreamingAnalyzeContentResponse.message].
-        /// For [Participants.AnalyzeContent][google.cloud.dialogflow.v2.Participants.AnalyzeContent] method, result will be in
+        /// For
+        /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2.Participants.AnalyzeContent]
+        /// method, result will be in
         /// [AnalyzeContentResponse.message.SentimentAnalysisResult][google.cloud.dialogflow.v2.AnalyzeContentResponse.message]
-        /// For [Conversations.ListMessages][google.cloud.dialogflow.v2.Conversations.ListMessages] method, result will be in
+        /// For
+        /// [Conversations.ListMessages][google.cloud.dialogflow.v2.Conversations.ListMessages]
+        /// method, result will be in
         /// [ListMessagesResponse.messages.SentimentAnalysisResult][google.cloud.dialogflow.v2.ListMessagesResponse.messages]
         /// If Pub/Sub notification is configured, result will be in
         /// [ConversationEvent.new_message_payload.SentimentAnalysisResult][google.cloud.dialogflow.v2.ConversationEvent.new_message_payload].
@@ -6859,8 +6870,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Name of the Pub/Sub topic to publish conversation
     /// events like
-    /// [CONVERSATION_STARTED][google.cloud.dialogflow.v2.ConversationEvent.Type.CONVERSATION_STARTED] as
-    /// serialized [ConversationEvent][google.cloud.dialogflow.v2.ConversationEvent] protos.
+    /// [CONVERSATION_STARTED][google.cloud.dialogflow.v2.ConversationEvent.Type.CONVERSATION_STARTED]
+    /// as serialized
+    /// [ConversationEvent][google.cloud.dialogflow.v2.ConversationEvent] protos.
     ///
     /// For telephony integration to receive notification, make sure either this
     /// topic is in the same project as the conversation or you grant
@@ -7132,8 +7144,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private bool enableStackdriverLogging_;
     /// <summary>
     /// Whether to log conversation events like
-    /// [CONVERSATION_STARTED][google.cloud.dialogflow.v2.ConversationEvent.Type.CONVERSATION_STARTED] to
-    /// Stackdriver in the conversation project as JSON format
+    /// [CONVERSATION_STARTED][google.cloud.dialogflow.v2.ConversationEvent.Type.CONVERSATION_STARTED]
+    /// to Stackdriver in the conversation project as JSON format
     /// [ConversationEvent][google.cloud.dialogflow.v2.ConversationEvent] protos.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -66,11 +66,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bnQvZnVsZmlsbG1lbnR9OgtmdWxmaWxsbWVudNpBF2Z1bGZpbGxtZW50LHVw",
             "ZGF0ZV9tYXNrGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCnwEK",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCmQEK",
             "HmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQRnVsZmlsbG1lbnRQ",
-            "cm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29v",
-            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjIv",
+            "ZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYvgBAaICAkRGqgIaR29vZ2xlLkNs",
+            "b3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -174,7 +174,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. The human-readable name of the fulfillment, unique within the agent.
+    /// Optional. The human-readable name of the fulfillment, unique within the
+    /// agent.
     ///
     /// This field is not used for Fulfillment in an Environment.
     /// </summary>
@@ -223,7 +224,8 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dialogflow.V2.Fulfillment.Types.Feature.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Fulfillment.Types.Feature> features_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Fulfillment.Types.Feature>();
     /// <summary>
-    /// Optional. The field defines whether the fulfillment is enabled for certain features.
+    /// Optional. The field defines whether the fulfillment is enabled for certain
+    /// features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -601,7 +603,8 @@ namespace Google.Cloud.Dialogflow.V2 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
         private readonly pbc::MapField<string, string> requestHeaders_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// Optional. The HTTP request headers to send together with fulfillment requests.
+        /// Optional. The HTTP request headers to send together with fulfillment
+        /// requests.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -613,8 +616,8 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int IsCloudFunctionFieldNumber = 5;
         private bool isCloudFunction_;
         /// <summary>
-        /// Optional. Indicates if generic web service is created through Cloud Functions
-        /// integration. Defaults to false.
+        /// Optional. Indicates if generic web service is created through Cloud
+        /// Functions integration. Defaults to false.
         ///
         /// is_cloud_function is deprecated. Cloud functions can be configured by
         /// its uri as a regular web service now.
@@ -1071,7 +1074,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Fulfillments.GetFulfillment][google.cloud.dialogflow.v2.Fulfillments.GetFulfillment].
+  /// The request message for
+  /// [Fulfillments.GetFulfillment][google.cloud.dialogflow.v2.Fulfillments.GetFulfillment].
   /// </summary>
   public sealed partial class GetFulfillmentRequest : pb::IMessage<GetFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1267,7 +1271,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Fulfillments.UpdateFulfillment][google.cloud.dialogflow.v2.Fulfillments.UpdateFulfillment].
+  /// The request message for
+  /// [Fulfillments.UpdateFulfillment][google.cloud.dialogflow.v2.Fulfillments.UpdateFulfillment].
   /// </summary>
   public sealed partial class UpdateFulfillmentRequest : pb::IMessage<UpdateFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

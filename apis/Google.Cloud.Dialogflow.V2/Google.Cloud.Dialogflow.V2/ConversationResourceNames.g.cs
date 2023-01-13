@@ -446,4 +446,37 @@ namespace Google.Cloud.Dialogflow.V2
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class SuggestConversationSummaryRequest
+    {
+        /// <summary>
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Conversation"/> resource name property.
+        /// </summary>
+        public ConversationName ConversationAsConversationName
+        {
+            get => string.IsNullOrEmpty(Conversation) ? null : ConversationName.Parse(Conversation, allowUnparsed: true);
+            set => Conversation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SuggestConversationSummaryResponse
+    {
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
+        }
+    }
 }
