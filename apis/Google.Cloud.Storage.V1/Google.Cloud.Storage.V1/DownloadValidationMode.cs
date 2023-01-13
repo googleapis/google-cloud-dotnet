@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,6 +28,14 @@ namespace Google.Cloud.Storage.V1
         /// The hash is never validated; data integrity errors may still be exposed
         /// via other network layers, but there is a risk of data loss.
         /// </summary>
-        Never = 1
+        Never = 1,
+
+        /// <summary>
+        /// The hash is validated if the library can detect that validation should
+        /// be feasible. If response headers provide information to indicate that
+        /// hash validation will fail (even in the face of correct data), the hash
+        /// is not validated.
+        /// </summary>
+        Automatic = 2
     }
 }

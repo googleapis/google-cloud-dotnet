@@ -36,9 +36,80 @@ namespace Google.Cloud.Storage.V1.Tests
         [InlineData(Md5Value + "," + Crc32Value)]
         [InlineData(Crc32Value + "," + Md5Value)]
         [InlineData(Crc32Value)]
-        public void Valid(string headerValue)
+        public void Valid_ModeAlways(string headerValue)
         {
-            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, headerValue));
+            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, headerValue), DownloadValidationMode.Always);
+            AssertDownloadSucceeds(downloader);
+        }
+
+        [Theory]
+        [InlineData("gzip", "gzip")]
+        [InlineData(null, "gzip")]
+        [InlineData("plain", null)]
+        [InlineData("plain", "gzip")]
+        [InlineData("gzip", "plain")]
+        [InlineData("gzip", null)]
+        [InlineData(null, null)]
+        [InlineData("plain", "plain")]
+        public void Valid_ModeAutomatic(string storedContentEncoding, string contentEncoding)
+        {
+            // This test doesn't try different hashes exhaustively; the way it treats the header
+            // is the same as with Always.
+            string headerValue = Md5Value + "," + Crc32Value;
+            HashValidatingDownloader downloader = CreateDownloader(
+                request => CreateResponse(request, headerValue, storedContentEncoding, contentEncoding),
+                DownloadValidationMode.Automatic);
+            AssertDownloadSucceeds(downloader);
+        }
+
+        [Fact]
+        public void Invalid_ModeAlways()
+        {
+            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, "crc32c=Bogus1=="), DownloadValidationMode.Always);
+            AssertDownloadFails(downloader);
+        }
+
+        // - Mode is DownloadValidationMode.Automatic
+        // - Data is incorrect
+        // - And we're validating (so will throw)
+        [Theory]
+        [InlineData("gzip", "gzip")]
+        [InlineData(null, "gzip")]
+        [InlineData("plain", null)]
+        [InlineData("plain", "gzip")]
+        [InlineData(null, null)]
+        [InlineData("plain", "plain")]
+        public void InvalidData_ModeAutomatic_Validated(string storedContentEncoding, string contentEncoding)
+        {
+            HashValidatingDownloader downloader = CreateDownloader(
+                request => CreateResponse(request, "crc32c=Bogus1==", storedContentEncoding, contentEncoding),
+                DownloadValidationMode.Automatic);
+            AssertDownloadFails(downloader);
+        }
+
+        // - Mode is DownloadValidationMode.Automatic
+        // - Data is incorrect
+        // - We're not validating because of the stored content encoding / content encoding (so will "succeed")
+        [Theory]
+        [InlineData("gzip", "plain")]
+        [InlineData("gzip", null)]
+        public void InvalidData_ModeAutomatic_NotValidated(string storedContentEncoding, string contentEncoding)
+        {
+            HashValidatingDownloader downloader = CreateDownloader(
+                request => CreateResponse(request, "crc32c=Bogus1==", storedContentEncoding, contentEncoding),
+                DownloadValidationMode.Automatic);
+            AssertDownloadSucceeds(downloader);
+        }
+
+        [Fact]
+        public void Invalid_ModeNever()
+        {
+            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, "crc32c=Bogus1=="), DownloadValidationMode.Never);
+            AssertDownloadSucceeds(downloader);
+        }
+
+        private static void AssertDownloadSucceeds(HashValidatingDownloader downloader)
+        {
             for (int chunks = 1; chunks < 5; chunks++)
             {
                 // Make sure it definitely fits...
@@ -50,14 +121,12 @@ namespace Google.Cloud.Storage.V1.Tests
                     throw status.Exception;
                 }
                 Assert.Equal(DownloadStatus.Completed, status.Status);
-                Assert.Equal(s_data, stream.ToArray());                
+                Assert.Equal(s_data, stream.ToArray());
             }
         }
 
-        [Fact]
-        public void Invalid()
+        private static void AssertDownloadFails(HashValidatingDownloader downloader)
         {
-            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, "crc32c=Bogus1=="));
             for (int chunks = 1; chunks < 5; chunks++)
             {
                 // Make sure it definitely fits...
@@ -69,11 +138,11 @@ namespace Google.Cloud.Storage.V1.Tests
             }
         }
 
-        private static HashValidatingDownloader CreateDownloader(Func<HttpRequestMessage, HttpResponseMessage> handler)
+        private static HashValidatingDownloader CreateDownloader(Func<HttpRequestMessage, HttpResponseMessage> handler, DownloadValidationMode mode)
         {
             var service = new MockableService(handler);
             var metadata = new Apis.Storage.v1.Data.Object();
-            return new HashValidatingDownloader(metadata, service);
+            return new HashValidatingDownloader(metadata, service, mode);
         }
 
         internal class MockableService : BaseClientService
@@ -97,12 +166,22 @@ namespace Google.Cloud.Storage.V1.Tests
             }
         }
 
-        private static HttpResponseMessage CreateResponse(HttpRequestMessage request, string headerValue)
+        private static HttpResponseMessage CreateResponse(
+            HttpRequestMessage request, string hashHeaderValue,
+            string storedContentEncoding = null, string contentEncoding = null)
         {
             HttpResponseMessage response = new HttpResponseMessage { Content = new ByteArrayContent(s_data) };
-            if (headerValue != null)
+            if (hashHeaderValue != null)
             {
-                response.Headers.Add(Crc32c.HashHeaderName, headerValue);
+                response.Headers.Add(Crc32c.HashHeaderName, hashHeaderValue);
+            }
+            if (storedContentEncoding != null)
+            {
+                response.Headers.Add(HashValidatingDownloader.StoredContentEncodingHeaderName, storedContentEncoding);
+            }
+            if (contentEncoding != null)
+            {
+                response.Content.Headers.ContentEncoding.Add(contentEncoding);
             }
             MaybeIntercept(request, response);
             return response;

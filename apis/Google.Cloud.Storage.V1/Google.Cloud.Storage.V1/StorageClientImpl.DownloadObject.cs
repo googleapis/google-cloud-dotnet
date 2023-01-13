@@ -173,8 +173,7 @@ namespace Google.Cloud.Storage.V1
             DownloadValidationMode mode = options?.DownloadValidationMode ?? DownloadValidationMode.Always;
             GaxPreconditions.CheckEnumValue(mode, nameof(DownloadObjectOptions.DownloadValidationMode));
 
-            var downloader = mode == DownloadValidationMode.Never
-                ? new ContentMetadataRecordingMediaDownloader(metadata, Service) : new HashValidatingDownloader(metadata, Service);
+            var downloader = new HashValidatingDownloader(metadata, Service, mode);
             options?.ModifyDownloader(downloader);
             ApplyEncryptionKey(options?.EncryptionKey, downloader);
             return downloader;
