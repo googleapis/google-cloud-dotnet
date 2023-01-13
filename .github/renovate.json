@@ -59,6 +59,7 @@
     "apis/Google.Cloud.Compute.V1/Google.Cloud.Compute.V1/**",
     "apis/Google.Cloud.ContactCenterInsights.V1/Google.Cloud.ContactCenterInsights.V1/**",
     "apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1/**",
+    "apis/Google.Cloud.DataCatalog.Lineage.V1/Google.Cloud.DataCatalog.Lineage.V1/**",
     "apis/Google.Cloud.DataCatalog.V1/Google.Cloud.DataCatalog.V1/**",
     "apis/Google.Cloud.DataFusion.V1/Google.Cloud.DataFusion.V1/**",
     "apis/Google.Cloud.DataLabeling.V1Beta1/Google.Cloud.DataLabeling.V1Beta1/**",
