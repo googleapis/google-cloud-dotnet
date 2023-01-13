@@ -347,6 +347,25 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
+        [SkippableFact]
+        public void DownloadGzippedFile_NoClientDecompression_AutomaticValidationMode()
+        {
+            TestEnvironment.SkipIfVpcSc();
+
+            var service = new StorageService(new BaseClientService.Initializer
+            {
+                HttpClientInitializer = _fixture.Client.Service.HttpClientInitializer,
+                GZipEnabled = false
+            });
+            var client = new StorageClientImpl(service);
+            var stream = new MemoryStream();
+            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
+                new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Automatic });
+            var expected = Encoding.UTF8.GetBytes("hello world");
+            var actual = stream.ToArray();
+            Assert.Equal(expected, actual);
+        }
+
         [Fact]
         public void InvalidDownloadValidationMode()
         {

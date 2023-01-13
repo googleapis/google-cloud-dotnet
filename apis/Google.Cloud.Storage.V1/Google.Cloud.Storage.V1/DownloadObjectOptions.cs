@@ -16,10 +16,8 @@ using Google.Apis.Download;
 using Google.Apis.Requests;
 using Google.Apis.Util;
 using System;
-using System.Diagnostics;
 using System.Globalization;
 using System.Net.Http.Headers;
-using System.Text;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -81,10 +79,18 @@ namespace Google.Cloud.Storage.V1
         /// the hash will always be validated.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// This is effectively an escape hatch for situations where hash validation fails.
         /// See https://github.com/googleapis/google-cloud-dotnet/issues/1641 for background
-        /// on this option. It is recommended that you leave this option unset unless you are knowingly
+        /// on this option. It is recommended that you leave this option unset (or use
+        /// <see cref="DownloadValidationMode.Automatic"/>) unless you are knowingly
         /// downloading data for an object where hashing will fail.
+        /// </para>
+        /// <para>
+        /// The current implementation defaults to <see cref="DownloadValidationMode.Always"/>; in a future
+        /// major version the default will change to <see cref="DownloadValidationMode.Automatic"/> which will
+        /// automatically ignore the hash where validation is expected to fail (even with valid data).
+        /// </para>
         /// </remarks>
         public DownloadValidationMode? DownloadValidationMode { get; set; }
 
