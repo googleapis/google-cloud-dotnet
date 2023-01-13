@@ -310,9 +310,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         internal static void VerifyJobLabels(IDictionary<string, string> actual)
         {
             Assert.NotNull(actual);
-            Assert.Equal(2, actual.Count);
+            Assert.Equal(3, actual.Count);
             Assert.Equal("label_value_2", actual["another-label-2"]);
             Assert.Equal("", actual["yet_another_label"]);
+            // Even though we set "one_label" => null, we get back "one_label" => "".
+            Assert.Equal("", actual["one_label"]);
         }
     }
 }
