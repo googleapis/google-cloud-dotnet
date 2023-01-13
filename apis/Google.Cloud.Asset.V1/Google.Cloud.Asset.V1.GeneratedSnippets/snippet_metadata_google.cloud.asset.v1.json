@@ -3343,6 +3343,462 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicies_sync",
+      "title": "AnalyzeOrgPoliciesRequestObject",
+      "description": "Snippet for AnalyzeOrgPolicies",
+      "file": "AssetServiceClient.AnalyzeOrgPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicies",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicies_async",
+      "title": "AnalyzeOrgPoliciesRequestObjectAsync",
+      "description": "Snippet for AnalyzeOrgPoliciesAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPoliciesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicies_sync_flattened",
+      "title": "AnalyzeOrgPolicies",
+      "description": "Snippet for AnalyzeOrgPolicies",
+      "file": "AssetServiceClient.AnalyzeOrgPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicies",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicies",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicies_async_flattened",
+      "title": "AnalyzeOrgPoliciesAsync",
+      "description": "Snippet for AnalyzeOrgPoliciesAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPoliciesAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPoliciesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicies",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedContainers_sync",
+      "title": "AnalyzeOrgPolicyGovernedContainersRequestObject",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedContainers",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedContainersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedContainers",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainers",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedContainers",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedContainers_async",
+      "title": "AnalyzeOrgPolicyGovernedContainersRequestObjectAsync",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedContainersAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedContainersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedContainersAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedContainers",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedContainers_sync_flattened",
+      "title": "AnalyzeOrgPolicyGovernedContainers",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedContainers",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedContainersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedContainers",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainers",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedContainers",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedContainers_async_flattened",
+      "title": "AnalyzeOrgPolicyGovernedContainersAsync",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedContainersAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedContainersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedContainersAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedContainers",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedAssets_sync",
+      "title": "AnalyzeOrgPolicyGovernedAssetsRequestObject",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedAssets",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedAssets",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedAssets",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedAssets_async",
+      "title": "AnalyzeOrgPolicyGovernedAssetsRequestObjectAsync",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedAssetsAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedAssetsAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedAssets",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedAssets_sync_flattened",
+      "title": "AnalyzeOrgPolicyGovernedAssets",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedAssets",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedAssets",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedAssets",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudasset_v1_generated_AssetService_AnalyzeOrgPolicyGovernedAssets_async_flattened",
+      "title": "AnalyzeOrgPolicyGovernedAssetsAsync",
+      "description": "Snippet for AnalyzeOrgPolicyGovernedAssetsAsync",
+      "file": "AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeOrgPolicyGovernedAssetsAsync",
+        "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
+        "client": {
+          "shortName": "AssetServiceClient",
+          "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeOrgPolicyGovernedAssets",
+          "fullName": "google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets",
+          "service": {
+            "shortName": "AssetService",
+            "fullName": "google.cloud.asset.v1.AssetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -28,6 +28,24 @@
                 "AnalyzeMoveAsync"
               ]
             },
+            "AnalyzeOrgPolicies": {
+              "methods": [
+                "AnalyzeOrgPolicies",
+                "AnalyzeOrgPoliciesAsync"
+              ]
+            },
+            "AnalyzeOrgPolicyGovernedAssets": {
+              "methods": [
+                "AnalyzeOrgPolicyGovernedAssets",
+                "AnalyzeOrgPolicyGovernedAssetsAsync"
+              ]
+            },
+            "AnalyzeOrgPolicyGovernedContainers": {
+              "methods": [
+                "AnalyzeOrgPolicyGovernedContainers",
+                "AnalyzeOrgPolicyGovernedContainersAsync"
+              ]
+            },
             "BatchGetAssetsHistory": {
               "methods": [
                 "BatchGetAssetsHistory",

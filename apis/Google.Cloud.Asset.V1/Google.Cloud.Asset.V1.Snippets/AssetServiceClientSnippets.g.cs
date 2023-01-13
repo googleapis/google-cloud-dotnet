@@ -2259,5 +2259,587 @@ namespace Google.Cloud.Asset.V1.Snippets
             BatchGetEffectiveIamPoliciesResponse response = await assetServiceClient.BatchGetEffectiveIamPoliciesAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for AnalyzeOrgPolicies</summary>
+        public void AnalyzeOrgPoliciesRequestObject()
+        {
+            // Snippet: AnalyzeOrgPolicies(AnalyzeOrgPoliciesRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> response = assetServiceClient.AnalyzeOrgPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPoliciesAsync</summary>
+        public async Task AnalyzeOrgPoliciesRequestObjectAsync()
+        {
+            // Snippet: AnalyzeOrgPoliciesAsync(AnalyzeOrgPoliciesRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeOrgPoliciesRequest request = new AnalyzeOrgPoliciesRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> response = assetServiceClient.AnalyzeOrgPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicies</summary>
+        public void AnalyzeOrgPolicies()
+        {
+            // Snippet: AnalyzeOrgPolicies(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> response = assetServiceClient.AnalyzeOrgPolicies(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPoliciesAsync</summary>
+        public async Task AnalyzeOrgPoliciesAsync()
+        {
+            // Snippet: AnalyzeOrgPoliciesAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPoliciesResponse, AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> response = assetServiceClient.AnalyzeOrgPoliciesAsync(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedContainers</summary>
+        public void AnalyzeOrgPolicyGovernedContainersRequestObject()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedContainers(AnalyzeOrgPolicyGovernedContainersRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> response = assetServiceClient.AnalyzeOrgPolicyGovernedContainers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedContainersAsync</summary>
+        public async Task AnalyzeOrgPolicyGovernedContainersRequestObjectAsync()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedContainersAsync(AnalyzeOrgPolicyGovernedContainersRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeOrgPolicyGovernedContainersRequest request = new AnalyzeOrgPolicyGovernedContainersRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> response = assetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPolicyGovernedContainersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedContainers</summary>
+        public void AnalyzeOrgPolicyGovernedContainers()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedContainers(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> response = assetServiceClient.AnalyzeOrgPolicyGovernedContainers(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedContainersAsync</summary>
+        public async Task AnalyzeOrgPolicyGovernedContainersAsync()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedContainersAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedContainersResponse, AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> response = assetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPolicyGovernedContainersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedAssets</summary>
+        public void AnalyzeOrgPolicyGovernedAssetsRequestObject()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedAssets(AnalyzeOrgPolicyGovernedAssetsRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> response = assetServiceClient.AnalyzeOrgPolicyGovernedAssets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedAssetsAsync</summary>
+        public async Task AnalyzeOrgPolicyGovernedAssetsRequestObjectAsync()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedAssetsAsync(AnalyzeOrgPolicyGovernedAssetsRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeOrgPolicyGovernedAssetsRequest request = new AnalyzeOrgPolicyGovernedAssetsRequest
+            {
+                Scope = "",
+                Constraint = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> response = assetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPolicyGovernedAssetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedAssets</summary>
+        public void AnalyzeOrgPolicyGovernedAssets()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedAssets(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> response = assetServiceClient.AnalyzeOrgPolicyGovernedAssets(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeOrgPolicyGovernedAssetsAsync</summary>
+        public async Task AnalyzeOrgPolicyGovernedAssetsAsync()
+        {
+            // Snippet: AnalyzeOrgPolicyGovernedAssetsAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string scope = "";
+            string constraint = "";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<AnalyzeOrgPolicyGovernedAssetsResponse, AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> response = assetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync(scope, constraint, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((AnalyzeOrgPolicyGovernedAssetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
