@@ -131,6 +131,18 @@ namespace Google.Cloud.Asset.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest> __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse> __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedContainersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedContainersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse> __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
@@ -292,6 +304,30 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesRequest,
         __Marshaller_google_cloud_asset_v1_BatchGetEffectiveIamPoliciesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse> __Method_AnalyzeOrgPolicies = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnalyzeOrgPolicies",
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPoliciesRequest,
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse> __Method_AnalyzeOrgPolicyGovernedContainers = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnalyzeOrgPolicyGovernedContainers",
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedContainersRequest,
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedContainersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse> __Method_AnalyzeOrgPolicyGovernedAssets = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnalyzeOrgPolicyGovernedAssets",
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsRequest,
+        __Marshaller_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -306,13 +342,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset Protobuf as
-      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
-      /// which allows you to keep track of the export. We recommend intervals of at
-      /// least 2 seconds with exponential retry to poll the export operation result.
-      /// For regular-size resource parent, the export operation usually finishes
-      /// within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -416,8 +453,8 @@ namespace Google.Cloud.Asset.V1 {
       }
 
       /// <summary>
-      /// Searches all Cloud resources within the specified scope, such as a project,
-      /// folder, or organization. The caller must be granted the
+      /// Searches all Google Cloud resources within the specified scope, such as a
+      /// project, folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -463,11 +500,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -591,6 +629,61 @@ namespace Google.Cloud.Asset.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Analyzes organization policies under a scope.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse> AnalyzeOrgPolicies(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Analyzes organization policies governed containers (projects, folders or
+      /// organization) under a scope.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse> AnalyzeOrgPolicyGovernedContainers(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Analyzes organization policies governed assets (Google Cloud resources or
+      /// policies) under a scope. This RPC supports custom constraints and the
+      /// following 10 canned constraints:
+      ///
+      /// * storage.uniformBucketLevelAccess
+      /// * iam.disableServiceAccountKeyCreation
+      /// * iam.allowedPolicyMemberDomains
+      /// * compute.vmExternalIpAccess
+      /// * appengine.enforceServiceAccountActAsCheck
+      /// * gcp.resourceLocations
+      /// * compute.trustedImageProjects
+      /// * compute.skipDefaultNetworkCreation
+      /// * compute.requireOsLogin
+      /// * compute.disableNestedVirtualization
+      ///
+      /// This RPC only returns either resources of types supported by [searchable
+      /// asset
+      /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+      /// or IAM policies.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse> AnalyzeOrgPolicyGovernedAssets(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for AssetService</summary>
@@ -624,13 +717,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset Protobuf as
-      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
-      /// which allows you to keep track of the export. We recommend intervals of at
-      /// least 2 seconds with exponential retry to poll the export operation result.
-      /// For regular-size resource parent, the export operation usually finishes
-      /// within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -646,13 +740,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset Protobuf as
-      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
-      /// which allows you to keep track of the export. We recommend intervals of at
-      /// least 2 seconds with exponential retry to poll the export operation result.
-      /// For regular-size resource parent, the export operation usually finishes
-      /// within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -666,13 +761,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset Protobuf as
-      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
-      /// which allows you to keep track of the export. We recommend intervals of at
-      /// least 2 seconds with exponential retry to poll the export operation result.
-      /// For regular-size resource parent, the export operation usually finishes
-      /// within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -688,13 +784,14 @@ namespace Google.Cloud.Asset.V1 {
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location/BigQuery table. For Cloud Storage location destinations, the
       /// output format is newline-delimited JSON. Each line represents a
-      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
-      /// destinations, the output table stores the fields in asset Protobuf as
-      /// columns. This API implements the [google.longrunning.Operation][google.longrunning.Operation] API,
-      /// which allows you to keep track of the export. We recommend intervals of at
-      /// least 2 seconds with exponential retry to poll the export operation result.
-      /// For regular-size resource parent, the export operation usually finishes
-      /// within 5 minutes.
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset Protobuf as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API, which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1073,8 +1170,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFeed, null, options, request);
       }
       /// <summary>
-      /// Searches all Cloud resources within the specified scope, such as a project,
-      /// folder, or organization. The caller must be granted the
+      /// Searches all Google Cloud resources within the specified scope, such as a
+      /// project, folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1089,8 +1186,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all Cloud resources within the specified scope, such as a project,
-      /// folder, or organization. The caller must be granted the
+      /// Searches all Google Cloud resources within the specified scope, such as a
+      /// project, folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1103,8 +1200,8 @@ namespace Google.Cloud.Asset.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllResources, null, options, request);
       }
       /// <summary>
-      /// Searches all Cloud resources within the specified scope, such as a project,
-      /// folder, or organization. The caller must be granted the
+      /// Searches all Google Cloud resources within the specified scope, such as a
+      /// project, folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1119,8 +1216,8 @@ namespace Google.Cloud.Asset.V1 {
         return SearchAllResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches all Cloud resources within the specified scope, such as a project,
-      /// folder, or organization. The caller must be granted the
+      /// Searches all Google Cloud resources within the specified scope, such as a
+      /// project, folder, or organization. The caller must be granted the
       /// `cloudasset.assets.searchAllResources` permission on the desired scope,
       /// otherwise the request will be rejected.
       /// </summary>
@@ -1249,11 +1346,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1270,11 +1368,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1289,11 +1388,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1310,11 +1410,12 @@ namespace Google.Cloud.Asset.V1 {
       /// accesses on which resources, and writes the analysis results to a Google
       /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
       /// output format is the JSON format that represents a
-      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
-      /// status. We recommend intervals of at least 2 seconds with exponential
-      /// backoff retry to poll the operation result. The metadata contains the
-      /// metadata for the long-running operation.
+      /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse].
+      /// This method implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation], which allows
+      /// you to track the operation status. We recommend intervals of at least 2
+      /// seconds with exponential backoff retry to poll the operation result. The
+      /// metadata contains the metadata for the long-running operation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1776,6 +1877,226 @@ namespace Google.Cloud.Asset.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetEffectiveIamPolicies, null, options, request);
       }
+      /// <summary>
+      /// Analyzes organization policies under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse AnalyzeOrgPolicies(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse AnalyzeOrgPolicies(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnalyzeOrgPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Analyzes organization policies under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse> AnalyzeOrgPoliciesAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse> AnalyzeOrgPoliciesAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnalyzeOrgPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Analyzes organization policies governed containers (projects, folders or
+      /// organization) under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse AnalyzeOrgPolicyGovernedContainers(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPolicyGovernedContainers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies governed containers (projects, folders or
+      /// organization) under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse AnalyzeOrgPolicyGovernedContainers(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnalyzeOrgPolicyGovernedContainers, null, options, request);
+      }
+      /// <summary>
+      /// Analyzes organization policies governed containers (projects, folders or
+      /// organization) under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse> AnalyzeOrgPolicyGovernedContainersAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPolicyGovernedContainersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies governed containers (projects, folders or
+      /// organization) under a scope.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse> AnalyzeOrgPolicyGovernedContainersAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnalyzeOrgPolicyGovernedContainers, null, options, request);
+      }
+      /// <summary>
+      /// Analyzes organization policies governed assets (Google Cloud resources or
+      /// policies) under a scope. This RPC supports custom constraints and the
+      /// following 10 canned constraints:
+      ///
+      /// * storage.uniformBucketLevelAccess
+      /// * iam.disableServiceAccountKeyCreation
+      /// * iam.allowedPolicyMemberDomains
+      /// * compute.vmExternalIpAccess
+      /// * appengine.enforceServiceAccountActAsCheck
+      /// * gcp.resourceLocations
+      /// * compute.trustedImageProjects
+      /// * compute.skipDefaultNetworkCreation
+      /// * compute.requireOsLogin
+      /// * compute.disableNestedVirtualization
+      ///
+      /// This RPC only returns either resources of types supported by [searchable
+      /// asset
+      /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+      /// or IAM policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse AnalyzeOrgPolicyGovernedAssets(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPolicyGovernedAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies governed assets (Google Cloud resources or
+      /// policies) under a scope. This RPC supports custom constraints and the
+      /// following 10 canned constraints:
+      ///
+      /// * storage.uniformBucketLevelAccess
+      /// * iam.disableServiceAccountKeyCreation
+      /// * iam.allowedPolicyMemberDomains
+      /// * compute.vmExternalIpAccess
+      /// * appengine.enforceServiceAccountActAsCheck
+      /// * gcp.resourceLocations
+      /// * compute.trustedImageProjects
+      /// * compute.skipDefaultNetworkCreation
+      /// * compute.requireOsLogin
+      /// * compute.disableNestedVirtualization
+      ///
+      /// This RPC only returns either resources of types supported by [searchable
+      /// asset
+      /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+      /// or IAM policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse AnalyzeOrgPolicyGovernedAssets(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnalyzeOrgPolicyGovernedAssets, null, options, request);
+      }
+      /// <summary>
+      /// Analyzes organization policies governed assets (Google Cloud resources or
+      /// policies) under a scope. This RPC supports custom constraints and the
+      /// following 10 canned constraints:
+      ///
+      /// * storage.uniformBucketLevelAccess
+      /// * iam.disableServiceAccountKeyCreation
+      /// * iam.allowedPolicyMemberDomains
+      /// * compute.vmExternalIpAccess
+      /// * appengine.enforceServiceAccountActAsCheck
+      /// * gcp.resourceLocations
+      /// * compute.trustedImageProjects
+      /// * compute.skipDefaultNetworkCreation
+      /// * compute.requireOsLogin
+      /// * compute.disableNestedVirtualization
+      ///
+      /// This RPC only returns either resources of types supported by [searchable
+      /// asset
+      /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+      /// or IAM policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse> AnalyzeOrgPolicyGovernedAssetsAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnalyzeOrgPolicyGovernedAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Analyzes organization policies governed assets (Google Cloud resources or
+      /// policies) under a scope. This RPC supports custom constraints and the
+      /// following 10 canned constraints:
+      ///
+      /// * storage.uniformBucketLevelAccess
+      /// * iam.disableServiceAccountKeyCreation
+      /// * iam.allowedPolicyMemberDomains
+      /// * compute.vmExternalIpAccess
+      /// * appengine.enforceServiceAccountActAsCheck
+      /// * gcp.resourceLocations
+      /// * compute.trustedImageProjects
+      /// * compute.skipDefaultNetworkCreation
+      /// * compute.requireOsLogin
+      /// * compute.disableNestedVirtualization
+      ///
+      /// This RPC only returns either resources of types supported by [searchable
+      /// asset
+      /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types),
+      /// or IAM policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse> AnalyzeOrgPolicyGovernedAssetsAsync(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnalyzeOrgPolicyGovernedAssets, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssetServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1809,7 +2130,10 @@ namespace Google.Cloud.Asset.V1 {
           .AddMethod(__Method_ListSavedQueries, serviceImpl.ListSavedQueries)
           .AddMethod(__Method_UpdateSavedQuery, serviceImpl.UpdateSavedQuery)
           .AddMethod(__Method_DeleteSavedQuery, serviceImpl.DeleteSavedQuery)
-          .AddMethod(__Method_BatchGetEffectiveIamPolicies, serviceImpl.BatchGetEffectiveIamPolicies).Build();
+          .AddMethod(__Method_BatchGetEffectiveIamPolicies, serviceImpl.BatchGetEffectiveIamPolicies)
+          .AddMethod(__Method_AnalyzeOrgPolicies, serviceImpl.AnalyzeOrgPolicies)
+          .AddMethod(__Method_AnalyzeOrgPolicyGovernedContainers, serviceImpl.AnalyzeOrgPolicyGovernedContainers)
+          .AddMethod(__Method_AnalyzeOrgPolicyGovernedAssets, serviceImpl.AnalyzeOrgPolicyGovernedAssets).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1839,6 +2163,9 @@ namespace Google.Cloud.Asset.V1 {
       serviceBinder.AddMethod(__Method_UpdateSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.UpdateSavedQueryRequest, global::Google.Cloud.Asset.V1.SavedQuery>(serviceImpl.UpdateSavedQuery));
       serviceBinder.AddMethod(__Method_DeleteSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.DeleteSavedQueryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSavedQuery));
       serviceBinder.AddMethod(__Method_BatchGetEffectiveIamPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse>(serviceImpl.BatchGetEffectiveIamPolicies));
+      serviceBinder.AddMethod(__Method_AnalyzeOrgPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse>(serviceImpl.AnalyzeOrgPolicies));
+      serviceBinder.AddMethod(__Method_AnalyzeOrgPolicyGovernedContainers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse>(serviceImpl.AnalyzeOrgPolicyGovernedContainers));
+      serviceBinder.AddMethod(__Method_AnalyzeOrgPolicyGovernedAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse>(serviceImpl.AnalyzeOrgPolicyGovernedAssets));
     }
 
   }

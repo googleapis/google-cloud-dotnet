@@ -258,92 +258,195 @@ namespace Google.Cloud.Asset.V1 {
             "IAMoCzJZLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEVmZmVjdGl2",
             "ZUlhbVBvbGljaWVzUmVzcG9uc2UuRWZmZWN0aXZlSWFtUG9saWN5LlBvbGlj",
             "eUluZm8aTgoKUG9saWN5SW5mbxIZChFhdHRhY2hlZF9yZXNvdXJjZRgBIAEo",
-            "CRIlCgZwb2xpY3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeSqQAQoL",
-            "Q29udGVudFR5cGUSHAoYQ09OVEVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "UkVTT1VSQ0UQARIOCgpJQU1fUE9MSUNZEAISDgoKT1JHX1BPTElDWRAEEhEK",
-            "DUFDQ0VTU19QT0xJQ1kQBRIQCgxPU19JTlZFTlRPUlkQBhIQCgxSRUxBVElP",
-            "TlNISVAQBzKbGwoMQXNzZXRTZXJ2aWNlEt4BCgxFeHBvcnRBc3NldHMSKi5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iggGC0+STAiIiHS92MS97cGFy",
-            "ZW50PSovKn06ZXhwb3J0QXNzZXRzOgEqykFXCipnb29nbGUuY2xvdWQuYXNz",
-            "ZXQudjEuRXhwb3J0QXNzZXRzUmVzcG9uc2USKWdvb2dsZS5jbG91ZC5hc3Nl",
-            "dC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0EosBCgpMaXN0QXNzZXRzEiguZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RBc3NldHNSZXF1ZXN0GikuZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLkxpc3RBc3NldHNSZXNwb25zZSIogtPkkwIZEhcv",
-            "djEve3BhcmVudD0qLyp9L2Fzc2V0c9pBBnBhcmVudBKyAQoVQmF0Y2hHZXRB",
-            "c3NldHNIaXN0b3J5EjMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNoR2V0",
-            "QXNzZXRzSGlzdG9yeVJlcXVlc3QaNC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "QmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVzcG9uc2UiLoLT5JMCKBImL3YxL3tw",
-            "YXJlbnQ9Ki8qfTpiYXRjaEdldEFzc2V0c0hpc3RvcnkSfwoKQ3JlYXRlRmVl",
-            "ZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5DcmVhdGVGZWVkUmVxdWVzdBob",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkIiqC0+STAhsiFi92MS97cGFy",
-            "ZW50PSovKn0vZmVlZHM6ASraQQZwYXJlbnQSdAoHR2V0RmVlZBIlLmdvb2ds",
-            "ZS5jbG91ZC5hc3NldC52MS5HZXRGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5GZWVkIiWC0+STAhgSFi92MS97bmFtZT0qLyovZmVlZHMv",
-            "Kn3aQQRuYW1lEocBCglMaXN0RmVlZHMSJy5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuTGlzdEZlZWRzUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5hc3NldC52MS5M",
-            "aXN0RmVlZHNSZXNwb25zZSIngtPkkwIYEhYvdjEve3BhcmVudD0qLyp9L2Zl",
-            "ZWRz2kEGcGFyZW50EoIBCgpVcGRhdGVGZWVkEiguZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLlVwZGF0ZUZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkZlZWQiLYLT5JMCIDIbL3YxL3tmZWVkLm5hbWU9Ki8qL2ZlZWRzLyp9",
-            "OgEq2kEEZmVlZBJ1CgpEZWxldGVGZWVkEiguZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkRlbGV0ZUZlZWRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IiWC0+STAhgqFi92MS97bmFtZT0qLyovZmVlZHMvKn3aQQRuYW1lEr8BChJT",
-            "ZWFyY2hBbGxSZXNvdXJjZXMSMC5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2Vh",
-            "cmNoQWxsUmVzb3VyY2VzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5TZWFyY2hBbGxSZXNvdXJjZXNSZXNwb25zZSJEgtPkkwIkEiIvdjEve3Nj",
-            "b3BlPSovKn06c2VhcmNoQWxsUmVzb3VyY2Vz2kEXc2NvcGUscXVlcnksYXNz",
-            "ZXRfdHlwZXMSuwEKFFNlYXJjaEFsbElhbVBvbGljaWVzEjIuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVxdWVzdBozLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxJYW1Qb2xpY2llc1Jlc3Bv",
-            "bnNlIjqC0+STAiYSJC92MS97c2NvcGU9Ki8qfTpzZWFyY2hBbGxJYW1Qb2xp",
-            "Y2llc9pBC3Njb3BlLHF1ZXJ5EqwBChBBbmFseXplSWFtUG9saWN5Ei4uZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lSZXF1ZXN0Gi8u",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lSZXNwb25z",
-            "ZSI3gtPkkwIxEi8vdjEve2FuYWx5c2lzX3F1ZXJ5LnNjb3BlPSovKn06YW5h",
-            "bHl6ZUlhbVBvbGljeRK4AgobQW5hbHl6ZUlhbVBvbGljeUxvbmdydW5uaW5n",
-            "EjkuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lMb25n",
-            "cnVubmluZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "Ir4BgtPkkwI/IjovdjEve2FuYWx5c2lzX3F1ZXJ5LnNjb3BlPSovKn06YW5h",
-            "bHl6ZUlhbVBvbGljeUxvbmdydW5uaW5nOgEqykF2Cjlnb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeUxvbmdydW5uaW5nUmVzcG9uc2US",
-            "OWdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplSWFtUG9saWN5TG9uZ3J1",
-            "bm5pbmdNZXRhZGF0YRKMAQoLQW5hbHl6ZU1vdmUSKS5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuQW5hbHl6ZU1vdmVSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkFuYWx5emVNb3ZlUmVzcG9uc2UiJoLT5JMCIBIeL3YxL3tyZXNv",
-            "dXJjZT0qLyp9OmFuYWx5emVNb3ZlEo0BCgtRdWVyeUFzc2V0cxIpLmdvb2ds",
-            "ZS5jbG91ZC5hc3NldC52MS5RdWVyeUFzc2V0c1JlcXVlc3QaKi5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuUXVlcnlBc3NldHNSZXNwb25zZSIngtPkkwIhIhwv",
-            "djEve3BhcmVudD0qLyp9OnF1ZXJ5QXNzZXRzOgEqEr0BChBDcmVhdGVTYXZl",
-            "ZFF1ZXJ5Ei4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNyZWF0ZVNhdmVkUXVl",
-            "cnlSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNhdmVkUXVlcnki",
-            "VoLT5JMCLCIdL3YxL3twYXJlbnQ9Ki8qfS9zYXZlZFF1ZXJpZXM6C3NhdmVk",
-            "X3F1ZXJ52kEhcGFyZW50LHNhdmVkX3F1ZXJ5LHNhdmVkX3F1ZXJ5X2lkEo0B",
-            "Cg1HZXRTYXZlZFF1ZXJ5EisuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkdldFNh",
-            "dmVkUXVlcnlSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNhdmVk",
-            "UXVlcnkiLILT5JMCHxIdL3YxL3tuYW1lPSovKi9zYXZlZFF1ZXJpZXMvKn3a",
-            "QQRuYW1lEqMBChBMaXN0U2F2ZWRRdWVyaWVzEi4uZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkxpc3RTYXZlZFF1ZXJpZXNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxLkxpc3RTYXZlZFF1ZXJpZXNSZXNwb25zZSIugtPkkwIfEh0v",
-            "djEve3BhcmVudD0qLyp9L3NhdmVkUXVlcmllc9pBBnBhcmVudBK/AQoQVXBk",
-            "YXRlU2F2ZWRRdWVyeRIuLmdvb2dsZS5jbG91ZC5hc3NldC52MS5VcGRhdGVT",
-            "YXZlZFF1ZXJ5UmVxdWVzdBohLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TYXZl",
-            "ZFF1ZXJ5IliC0+STAjgyKS92MS97c2F2ZWRfcXVlcnkubmFtZT0qLyovc2F2",
-            "ZWRRdWVyaWVzLyp9OgtzYXZlZF9xdWVyedpBF3NhdmVkX3F1ZXJ5LHVwZGF0",
-            "ZV9tYXNrEogBChBEZWxldGVTYXZlZFF1ZXJ5Ei4uZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkRlbGV0ZVNhdmVkUXVlcnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IiyC0+STAh8qHS92MS97bmFtZT0qLyovc2F2ZWRRdWVyaWVz",
-            "Lyp92kEEbmFtZRLOAQocQmF0Y2hHZXRFZmZlY3RpdmVJYW1Qb2xpY2llcxI6",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEVmZmVjdGl2ZUlhbVBv",
-            "bGljaWVzUmVxdWVzdBo7Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdl",
-            "dEVmZmVjdGl2ZUlhbVBvbGljaWVzUmVzcG9uc2UiNYLT5JMCLxItL3YxL3tz",
-            "Y29wZT0qLyp9L2VmZmVjdGl2ZUlhbVBvbGljaWVzOmJhdGNoR2V0Gk3KQRlj",
-            "bG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKcAQoZY29tLmdvb2dsZS5j",
-            "bG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo6Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3NldC92MTth",
-            "c3NldKoCFUdvb2dsZS5DbG91ZC5Bc3NldC5WMcoCFUdvb2dsZVxDbG91ZFxB",
-            "c3NldFxWMWIGcHJvdG8z"));
+            "CRIlCgZwb2xpY3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeSKyAwoR",
+            "QW5hbHl6ZXJPcmdQb2xpY3kSGQoRYXR0YWNoZWRfcmVzb3VyY2UYASABKAkS",
+            "GAoQYXBwbGllZF9yZXNvdXJjZRgFIAEoCRI8CgVydWxlcxgCIAMoCzItLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeS5SdWxlEhsK",
+            "E2luaGVyaXRfZnJvbV9wYXJlbnQYAyABKAgSDQoFcmVzZXQYBCABKAga/QEK",
+            "BFJ1bGUSTAoGdmFsdWVzGAMgASgLMjouZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkFuYWx5emVyT3JnUG9saWN5LlJ1bGUuU3RyaW5nVmFsdWVzSAASEwoJYWxs",
+            "b3dfYWxsGAQgASgISAASEgoIZGVueV9hbGwYBSABKAhIABIRCgdlbmZvcmNl",
+            "GAYgASgISAASJAoJY29uZGl0aW9uGAcgASgLMhEuZ29vZ2xlLnR5cGUuRXhw",
+            "cho9CgxTdHJpbmdWYWx1ZXMSFgoOYWxsb3dlZF92YWx1ZXMYASADKAkSFQoN",
+            "ZGVuaWVkX3ZhbHVlcxgCIAMoCUIGCgRraW5kIpEKChtBbmFseXplck9yZ1Bv",
+            "bGljeUNvbnN0cmFpbnQSYgoZZ29vZ2xlX2RlZmluZWRfY29uc3RyYWludBgB",
+            "IAEoCzI9Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGlj",
+            "eUNvbnN0cmFpbnQuQ29uc3RyYWludEgAEmAKEWN1c3RvbV9jb25zdHJhaW50",
+            "GAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9s",
+            "aWN5Q29uc3RyYWludC5DdXN0b21Db25zdHJhaW50SAAavwQKCkNvbnN0cmFp",
+            "bnQSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoLZGVz",
+            "Y3JpcHRpb24YAyABKAkSawoSY29uc3RyYWludF9kZWZhdWx0GAQgASgOMk8u",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Q29uc3Ry",
+            "YWludC5Db25zdHJhaW50LkNvbnN0cmFpbnREZWZhdWx0EmcKD2xpc3RfY29u",
+            "c3RyYWludBgFIAEoCzJMLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
+            "ck9yZ1BvbGljeUNvbnN0cmFpbnQuQ29uc3RyYWludC5MaXN0Q29uc3RyYWlu",
+            "dEgAEm0KEmJvb2xlYW5fY29uc3RyYWludBgGIAEoCzJPLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeUNvbnN0cmFpbnQuQ29uc3Ry",
+            "YWludC5Cb29sZWFuQ29uc3RyYWludEgAGj0KDkxpc3RDb25zdHJhaW50EhMK",
+            "C3N1cHBvcnRzX2luGAEgASgIEhYKDnN1cHBvcnRzX3VuZGVyGAIgASgIGhMK",
+            "EUJvb2xlYW5Db25zdHJhaW50IkwKEUNvbnN0cmFpbnREZWZhdWx0EiIKHkNP",
+            "TlNUUkFJTlRfREVGQVVMVF9VTlNQRUNJRklFRBAAEgkKBUFMTE9XEAESCAoE",
+            "REVOWRACQhEKD2NvbnN0cmFpbnRfdHlwZRrQAwoQQ3VzdG9tQ29uc3RyYWlu",
+            "dBIMCgRuYW1lGAEgASgJEhYKDnJlc291cmNlX3R5cGVzGAIgAygJEmQKDG1l",
+            "dGhvZF90eXBlcxgDIAMoDjJOLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFs",
+            "eXplck9yZ1BvbGljeUNvbnN0cmFpbnQuQ3VzdG9tQ29uc3RyYWludC5NZXRo",
+            "b2RUeXBlEhEKCWNvbmRpdGlvbhgEIAEoCRJjCgthY3Rpb25fdHlwZRgFIAEo",
+            "DjJOLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeUNv",
+            "bnN0cmFpbnQuQ3VzdG9tQ29uc3RyYWludC5BY3Rpb25UeXBlEhQKDGRpc3Bs",
+            "YXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCSJNCgpNZXRob2RU",
+            "eXBlEhsKF01FVEhPRF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAES",
+            "CgoGVVBEQVRFEAISCgoGREVMRVRFEAMiPgoKQWN0aW9uVHlwZRIbChdBQ1RJ",
+            "T05fVFlQRV9VTlNQRUNJRklFRBAAEgkKBUFMTE9XEAESCAoEREVOWRACQhcK",
+            "FWNvbnN0cmFpbnRfZGVmaW5pdGlvbiKSAQoZQW5hbHl6ZU9yZ1BvbGljaWVz",
+            "UmVxdWVzdBISCgVzY29wZRgBIAEoCUID4EECEhcKCmNvbnN0cmFpbnQYAiAB",
+            "KAlCA+BBAhIOCgZmaWx0ZXIYAyABKAkSFgoJcGFnZV9zaXplGAQgASgFSACI",
+            "AQESEgoKcGFnZV90b2tlbhgFIAEoCUIMCgpfcGFnZV9zaXplIvgCChpBbmFs",
+            "eXplT3JnUG9saWNpZXNSZXNwb25zZRJdChJvcmdfcG9saWN5X3Jlc3VsdHMY",
+            "ASADKAsyQS5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGlj",
+            "aWVzUmVzcG9uc2UuT3JnUG9saWN5UmVzdWx0EkYKCmNvbnN0cmFpbnQYAiAB",
+            "KAsyMi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lD",
+            "b25zdHJhaW50EhcKD25leHRfcGFnZV90b2tlbhgDIAEoCRqZAQoPT3JnUG9s",
+            "aWN5UmVzdWx0EkUKE2NvbnNvbGlkYXRlZF9wb2xpY3kYASABKAsyKC5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3kSPwoNcG9saWN5",
+            "X2J1bmRsZRgCIAMoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
+            "ck9yZ1BvbGljeSKiAQopQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFp",
+            "bmVyc1JlcXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhIXCgpjb25zdHJhaW50",
+            "GAIgASgJQgPgQQISDgoGZmlsdGVyGAMgASgJEhYKCXBhZ2Vfc2l6ZRgEIAEo",
+            "BUgAiAEBEhIKCnBhZ2VfdG9rZW4YBSABKAlCDAoKX3BhZ2Vfc2l6ZSLJAwoq",
+            "QW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVyc1Jlc3BvbnNlEnAK",
+            "E2dvdmVybmVkX2NvbnRhaW5lcnMYASADKAsyUy5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVyc1Jlc3Bv",
+            "bnNlLkdvdmVybmVkQ29udGFpbmVyEkYKCmNvbnN0cmFpbnQYAiABKAsyMi5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lDb25zdHJh",
+            "aW50EhcKD25leHRfcGFnZV90b2tlbhgDIAEoCRrHAQoRR292ZXJuZWRDb250",
+            "YWluZXISGgoSZnVsbF9yZXNvdXJjZV9uYW1lGAEgASgJEg4KBnBhcmVudBgC",
+            "IAEoCRJFChNjb25zb2xpZGF0ZWRfcG9saWN5GAMgASgLMiguZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Ej8KDXBvbGljeV9idW5k",
+            "bGUYBCADKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQ",
+            "b2xpY3kingEKJUFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1JlcXVl",
+            "c3QSEgoFc2NvcGUYASABKAlCA+BBAhIXCgpjb25zdHJhaW50GAIgASgJQgPg",
+            "QQISDgoGZmlsdGVyGAMgASgJEhYKCXBhZ2Vfc2l6ZRgEIAEoBUgAiAEBEhIK",
+            "CnBhZ2VfdG9rZW4YBSABKAlCDAoKX3BhZ2Vfc2l6ZSKABwomQW5hbHl6ZU9y",
+            "Z1BvbGljeUdvdmVybmVkQXNzZXRzUmVzcG9uc2USZAoPZ292ZXJuZWRfYXNz",
+            "ZXRzGAEgAygLMksuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQ",
+            "b2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVkQXNzZXQSRgoK",
+            "Y29uc3RyYWludBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFs",
+            "eXplck9yZ1BvbGljeUNvbnN0cmFpbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAMg",
+            "ASgJGnYKEEdvdmVybmVkUmVzb3VyY2USGgoSZnVsbF9yZXNvdXJjZV9uYW1l",
+            "GAEgASgJEg4KBnBhcmVudBgCIAEoCRIPCgdwcm9qZWN0GAUgASgJEg8KB2Zv",
+            "bGRlcnMYBiADKAkSFAoMb3JnYW5pemF0aW9uGAcgASgJGo0BChFHb3Zlcm5l",
+            "ZElhbVBvbGljeRIZChFhdHRhY2hlZF9yZXNvdXJjZRgBIAEoCRIlCgZwb2xp",
+            "Y3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeRIPCgdwcm9qZWN0GAUg",
+            "ASgJEg8KB2ZvbGRlcnMYBiADKAkSFAoMb3JnYW5pemF0aW9uGAcgASgJGoYD",
+            "Cg1Hb3Zlcm5lZEFzc2V0EmsKEWdvdmVybmVkX3Jlc291cmNlGAEgASgLMk4u",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5l",
+            "ZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVkUmVzb3VyY2VIABJuChNnb3Zlcm5l",
+            "ZF9pYW1fcG9saWN5GAIgASgLMk8uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFu",
+            "YWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVk",
+            "SWFtUG9saWN5SAASRQoTY29uc29saWRhdGVkX3BvbGljeRgDIAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeRI/Cg1wb2xp",
+            "Y3lfYnVuZGxlGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5",
+            "emVyT3JnUG9saWN5QhAKDmdvdmVybmVkX2Fzc2V0KpABCgtDb250ZW50VHlw",
+            "ZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJDRRAB",
+            "Eg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoNQUNDRVNTX1BP",
+            "TElDWRAFEhAKDE9TX0lOVkVOVE9SWRAGEhAKDFJFTEFUSU9OU0hJUBAHMtEg",
+            "CgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFzc2V0cxIqLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiIdL3YxL3twYXJlbnQ9Ki8qfTpl",
+            "eHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBv",
+            "cnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9y",
+            "dEFzc2V0c1JlcXVlc3QSiwEKCkxpc3RBc3NldHMSKC5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuTGlzdEFzc2V0c1JlcXVlc3QaKS5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuTGlzdEFzc2V0c1Jlc3BvbnNlIiiC0+STAhkSFy92MS97cGFyZW50",
+            "PSovKn0vYXNzZXRz2kEGcGFyZW50ErIBChVCYXRjaEdldEFzc2V0c0hpc3Rv",
+            "cnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0",
+            "b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEFz",
+            "c2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEve3BhcmVudD0qLyp9",
+            "OmJhdGNoR2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVGZWVkEiguZ29vZ2xl",
+            "LmNsb3VkLmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkZlZWQiKoLT5JMCGyIWL3YxL3twYXJlbnQ9Ki8qfS9m",
+            "ZWVkczoBKtpBBnBhcmVudBJ0CgdHZXRGZWVkEiUuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkZlZWQiJYLT5JMCGBIWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUS",
+            "hwEKCUxpc3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5MaXN0RmVl",
+            "ZHNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RGZWVkc1Jl",
+            "c3BvbnNlIieC0+STAhgSFi92MS97cGFyZW50PSovKn0vZmVlZHPaQQZwYXJl",
+            "bnQSggEKClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVXBk",
+            "YXRlRmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZCIt",
+            "gtPkkwIgMhsvdjEve2ZlZWQubmFtZT0qLyovZmVlZHMvKn06ASraQQRmZWVk",
+            "EnUKCkRlbGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuRGVsZXRl",
+            "RmVlZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT5JMCGCoW",
+            "L3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUSvwEKElNlYXJjaEFsbFJl",
+            "c291cmNlcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxSZXNv",
+            "dXJjZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFs",
+            "bFJlc291cmNlc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9Ki8qfTpz",
+            "ZWFyY2hBbGxSZXNvdXJjZXPaQRdzY29wZSxxdWVyeSxhc3NldF90eXBlcxK7",
+            "AQoUU2VhcmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVzcG9uc2UiOoLT5JMC",
+            "JhIkL3YxL3tzY29wZT0qLyp9OnNlYXJjaEFsbElhbVBvbGljaWVz2kELc2Nv",
+            "cGUscXVlcnkSrAEKEEFuYWx5emVJYW1Qb2xpY3kSLi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlcXVlc3QaLy5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlc3BvbnNlIjeC0+STAjES",
+            "Ly92MS97YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9s",
+            "aWN5ErgCChtBbmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmcSOS5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeUxvbmdydW5uaW5nUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ivgGC0+STAj8i",
+            "Oi92MS97YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9s",
+            "aWN5TG9uZ3J1bm5pbmc6ASrKQXYKOWdvb2dsZS5jbG91ZC5hc3NldC52MS5B",
+            "bmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmdSZXNwb25zZRI5Z29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lMb25ncnVubmluZ01ldGFk",
+            "YXRhEowBCgtBbmFseXplTW92ZRIpLmdvb2dsZS5jbG91ZC5hc3NldC52MS5B",
+            "bmFseXplTW92ZVJlcXVlc3QaKi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5h",
+            "bHl6ZU1vdmVSZXNwb25zZSImgtPkkwIgEh4vdjEve3Jlc291cmNlPSovKn06",
+            "YW5hbHl6ZU1vdmUSjQEKC1F1ZXJ5QXNzZXRzEikuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLlF1ZXJ5QXNzZXRzUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5RdWVyeUFzc2V0c1Jlc3BvbnNlIieC0+STAiEiHC92MS97cGFyZW50",
+            "PSovKn06cXVlcnlBc3NldHM6ASoSvQEKEENyZWF0ZVNhdmVkUXVlcnkSLi5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlU2F2ZWRRdWVyeVJlcXVlc3Qa",
+            "IS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2ZWRRdWVyeSJWgtPkkwIsIh0v",
+            "djEve3BhcmVudD0qLyp9L3NhdmVkUXVlcmllczoLc2F2ZWRfcXVlcnnaQSFw",
+            "YXJlbnQsc2F2ZWRfcXVlcnksc2F2ZWRfcXVlcnlfaWQSjQEKDUdldFNhdmVk",
+            "UXVlcnkSKy5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2V0U2F2ZWRRdWVyeVJl",
+            "cXVlc3QaIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2ZWRRdWVyeSIsgtPk",
+            "kwIfEh0vdjEve25hbWU9Ki8qL3NhdmVkUXVlcmllcy8qfdpBBG5hbWUSowEK",
+            "EExpc3RTYXZlZFF1ZXJpZXMSLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuTGlz",
+            "dFNhdmVkUXVlcmllc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "TGlzdFNhdmVkUXVlcmllc1Jlc3BvbnNlIi6C0+STAh8SHS92MS97cGFyZW50",
+            "PSovKn0vc2F2ZWRRdWVyaWVz2kEGcGFyZW50Er8BChBVcGRhdGVTYXZlZFF1",
+            "ZXJ5Ei4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlVwZGF0ZVNhdmVkUXVlcnlS",
+            "ZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNhdmVkUXVlcnkiWILT",
+            "5JMCODIpL3YxL3tzYXZlZF9xdWVyeS5uYW1lPSovKi9zYXZlZFF1ZXJpZXMv",
+            "Kn06C3NhdmVkX3F1ZXJ52kEXc2F2ZWRfcXVlcnksdXBkYXRlX21hc2sSiAEK",
+            "EERlbGV0ZVNhdmVkUXVlcnkSLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuRGVs",
+            "ZXRlU2F2ZWRRdWVyeVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "LILT5JMCHyodL3YxL3tuYW1lPSovKi9zYXZlZFF1ZXJpZXMvKn3aQQRuYW1l",
+            "Es4BChxCYXRjaEdldEVmZmVjdGl2ZUlhbVBvbGljaWVzEjouZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkJhdGNoR2V0RWZmZWN0aXZlSWFtUG9saWNpZXNSZXF1",
+            "ZXN0GjsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNoR2V0RWZmZWN0aXZl",
+            "SWFtUG9saWNpZXNSZXNwb25zZSI1gtPkkwIvEi0vdjEve3Njb3BlPSovKn0v",
+            "ZWZmZWN0aXZlSWFtUG9saWNpZXM6YmF0Y2hHZXQSvwEKEkFuYWx5emVPcmdQ",
+            "b2xpY2llcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9s",
+            "aWNpZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVP",
+            "cmdQb2xpY2llc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9Ki8qfTph",
+            "bmFseXplT3JnUG9saWNpZXPaQRdzY29wZSxjb25zdHJhaW50LGZpbHRlchL/",
+            "AQoiQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVycxJALmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9saWN5R292ZXJuZWRDb250",
+            "YWluZXJzUmVxdWVzdBpBLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
+            "T3JnUG9saWN5R292ZXJuZWRDb250YWluZXJzUmVzcG9uc2UiVILT5JMCNBIy",
+            "L3YxL3tzY29wZT0qLyp9OmFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZENvbnRh",
+            "aW5lcnPaQRdzY29wZSxjb25zdHJhaW50LGZpbHRlchLvAQoeQW5hbHl6ZU9y",
+            "Z1BvbGljeUdvdmVybmVkQXNzZXRzEjwuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1JlcXVlc3QaPS5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQXNz",
+            "ZXRzUmVzcG9uc2UiUILT5JMCMBIuL3YxL3tzY29wZT0qLyp9OmFuYWx5emVP",
+            "cmdQb2xpY3lHb3Zlcm5lZEFzc2V0c9pBF3Njb3BlLGNvbnN0cmFpbnQsZmls",
+            "dGVyGk3KQRljbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKcAQoZY29t",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo6",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
+            "c3NldC92MTthc3NldKoCFUdvb2dsZS5DbG91ZC5Bc3NldC5WMcoCFUdvb2ds",
+            "ZVxDbG91ZFxBc3NldFxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -404,7 +507,19 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TableSchema), global::Google.Cloud.Asset.V1.TableSchema.Parser, new[]{ "Fields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TableFieldSchema), global::Google.Cloud.Asset.V1.TableFieldSchema.Parser, new[]{ "Field", "Type", "Mode", "Fields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest.Parser, new[]{ "Scope", "Names" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Parser, new[]{ "PolicyResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Parser, new[]{ "FullResourceName", "Policies" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo.Parser, new[]{ "AttachedResource", "Policy" }, null, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Parser, new[]{ "PolicyResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Parser, new[]{ "FullResourceName", "Policies" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo.Parser, new[]{ "AttachedResource", "Policy" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser, new[]{ "AttachedResource", "AppliedResource", "Rules", "InheritFromParent", "Reset" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Parser, new[]{ "Values", "AllowAll", "DenyAll", "Enforce", "Condition" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues.Parser, new[]{ "AllowedValues", "DeniedValues" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Parser, new[]{ "GoogleDefinedConstraint", "CustomConstraint" }, new[]{ "ConstraintDefinition" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Parser, new[]{ "Name", "DisplayName", "Description", "ConstraintDefault", "ListConstraint", "BooleanConstraint" }, new[]{ "ConstraintType" }, new[]{ typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint.Parser, new[]{ "SupportsIn", "SupportsUnder" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Parser, new[]{ "Name", "ResourceTypes", "MethodTypes", "Condition", "ActionType", "DisplayName", "Description" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType), typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Parser, new[]{ "OrgPolicyResults", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult.Parser, new[]{ "ConsolidatedPolicy", "PolicyBundle" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Parser, new[]{ "GovernedContainers", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer.Parser, new[]{ "FullResourceName", "Parent", "ConsolidatedPolicy", "PolicyBundle" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Parser, new[]{ "GovernedAssets", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource.Parser, new[]{ "FullResourceName", "Parent", "Project", "Folders", "Organization" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy.Parser, new[]{ "AttachedResource", "Policy", "Project", "Folders", "Organization" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset.Parser, new[]{ "GovernedResource", "GovernedIamPolicy", "ConsolidatedPolicy", "PolicyBundle" }, new[]{ "GovernedAsset" }, null, null, null)})
           }));
     }
     #endregion
@@ -428,11 +543,11 @@ namespace Google.Cloud.Asset.V1 {
     /// </summary>
     [pbr::OriginalName("IAM_POLICY")] IamPolicy = 2,
     /// <summary>
-    /// The Cloud Organization Policy set on an asset.
+    /// The organization policy set on an asset.
     /// </summary>
     [pbr::OriginalName("ORG_POLICY")] OrgPolicy = 4,
     /// <summary>
-    /// The Cloud Access context manager Policy set on an asset.
+    /// The Access Context Manager policy set on an asset.
     /// </summary>
     [pbr::OriginalName("ACCESS_POLICY")] AccessPolicy = 5,
     /// <summary>
@@ -450,7 +565,7 @@ namespace Google.Cloud.Asset.V1 {
   #region Messages
   /// <summary>
   /// Represents the metadata of the longrunning operation for the
-  /// AnalyzeIamPolicyLongrunning rpc.
+  /// AnalyzeIamPolicyLongrunning RPC.
   /// </summary>
   public sealed partial class AnalyzeIamPolicyLongrunningMetadata : pb::IMessage<AnalyzeIamPolicyLongrunningMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -793,7 +908,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int OutputConfigFieldNumber = 5;
     private global::Google.Cloud.Asset.V1.OutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results will be output to.
+    /// Required. Output configuration indicating where the results will be output
+    /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1085,8 +1201,10 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// The export asset response. This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+  /// method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field.
   /// </summary>
   public sealed partial class ExportAssetsResponse : pb::IMessage<ExportAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1169,10 +1287,10 @@ namespace Google.Cloud.Asset.V1 {
     private global::Google.Cloud.Asset.V1.OutputResult outputResult_;
     /// <summary>
     /// Output result indicating where the assets were exported to. For example, a
-    /// set of actual Google Cloud Storage object uris where the assets are
-    /// exported to. The uris can be different from what [output_config] has
-    /// specified, as the service will split the output object into multiple ones
-    /// once it exceeds a single Google Cloud Storage object limit.
+    /// set of actual Cloud Storage object URIs where the assets are exported to.
+    /// The URIs can be different from what [output_config] has specified, as the
+    /// service will split the output object into multiple ones once it exceeds a
+    /// single Cloud Storage object limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1448,11 +1566,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the organization, folder, or project the assets belong to. Format:
-    /// "organizations/[organization-number]" (such as "organizations/123"),
-    /// "projects/[project-id]" (such as "projects/my-project-id"),
-    /// "projects/[project-number]" (such as "projects/12345"), or
-    /// "folders/[folder-number]" (such as "folders/12345").
+    /// Required. Name of the organization, folder, or project the assets belong
+    /// to. Format: "organizations/[organization-number]" (such as
+    /// "organizations/123"), "projects/[project-id]" (such as
+    /// "projects/my-project-id"), "projects/[project-number]" (such as
+    /// "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2774,9 +2892,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The feed details. The field `name` must be empty and it will be generated
-    /// in the format of:
-    /// projects/project_number/feeds/feed_id
+    /// Required. The feed details. The field `name` must be empty and it will be
+    /// generated in the format of: projects/project_number/feeds/feed_id
     /// folders/folder_number/feeds/feed_id
     /// organizations/organization_number/feeds/feed_id
     /// </summary>
@@ -3607,8 +3724,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 1;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The new values of feed details. It must match an existing feed and the
-    /// field `name` must be in the format of:
+    /// Required. The new values of feed details. It must match an existing feed
+    /// and the field `name` must be in the format of:
     /// projects/project_number/feeds/feed_id or
     /// folders/folder_number/feeds/feed_id or
     /// organizations/organization_number/feeds/feed_id.
@@ -4595,7 +4712,7 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> uris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of uris of the Cloud Storage objects. Example:
+    /// List of URIs of the Cloud Storage objects. Example:
     /// "gs://bucket_name/object_name".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4785,7 +4902,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 1;
     /// <summary>
-    /// The uri of the Cloud Storage object. It's the same uri that is used by
+    /// The URI of the Cloud Storage object. It's the same URI that is used by
     /// gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
     /// Editing Object
     /// Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
@@ -4808,8 +4925,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "uri_prefix" field.</summary>
     public const int UriPrefixFieldNumber = 2;
     /// <summary>
-    /// The uri prefix of all generated Cloud Storage objects. Example:
-    /// "gs://bucket_name/object_name_prefix". Each object uri is in format:
+    /// The URI prefix of all generated Cloud Storage objects. Example:
+    /// "gs://bucket_name/object_name_prefix". Each object URI is in format:
     /// "gs://bucket_name/object_name_prefix/&lt;asset type>/&lt;shard number> and only
     /// contains assets for that type. &lt;shard number> starts from 0. Example:
     /// "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is
@@ -6622,8 +6739,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder, or an organization. The search is
-    /// limited to the resources within the `scope`. The caller must be granted the
+    /// Required. A scope can be a project, a folder, or an organization. The
+    /// search is limited to the resources within the `scope`. The caller must be
+    /// granted the
     /// [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
     /// permission on the desired scope.
     ///
@@ -6654,48 +6772,48 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// Examples:
     ///
-    /// * `name:Important` to find Cloud resources whose name contains
+    /// * `name:Important` to find Google Cloud resources whose name contains
     ///   "Important" as a word.
-    /// * `name=Important` to find the Cloud resource whose name is exactly
+    /// * `name=Important` to find the Google Cloud resource whose name is exactly
     ///   "Important".
-    /// * `displayName:Impor*` to find Cloud resources whose display name
+    /// * `displayName:Impor*` to find Google Cloud resources whose display name
     ///   contains "Impor" as a prefix of any word in the field.
-    /// * `location:us-west*` to find Cloud resources whose location contains both
-    ///   "us" and "west" as prefixes.
-    /// * `labels:prod` to find Cloud resources whose labels contain "prod" as
-    ///   a key or value.
-    /// * `labels.env:prod` to find Cloud resources that have a label "env"
+    /// * `location:us-west*` to find Google Cloud resources whose location
+    ///   contains both "us" and "west" as prefixes.
+    /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+    ///   as a key or value.
+    /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
     ///   and its value is "prod".
-    /// * `labels.env:*` to find Cloud resources that have a label "env".
-    /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
-    ///   encryption key whose name contains "key" as a word. This field is
-    ///   deprecated. Please use the `kmsKeys` field to retrieve KMS key
-    ///   information.
-    /// * `kmsKeys:key` to find Cloud resources encrypted with customer-managed
-    ///   encryption keys whose name contains the word "key".
-    /// * `relationships:instance-group-1` to find Cloud resources that have
+    /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+    /// * `kmsKey:key` to find Google Cloud resources encrypted with a
+    ///   customer-managed encryption key whose name contains "key" as a word. This
+    ///   field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
+    ///   key information.
+    /// * `kmsKeys:key` to find Google Cloud resources encrypted with
+    ///   customer-managed encryption keys whose name contains the word "key".
+    /// * `relationships:instance-group-1` to find Google Cloud resources that have
     ///   relationships with "instance-group-1" in the related resource name.
-    /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
-    ///   have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+    /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
+    ///   instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
     /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-    ///   compute instances that have relationships with "instance-group-1" in the
-    ///   compute instance group resource name, for relationship type
+    ///   Compute Engine instances that have relationships with "instance-group-1"
+    ///   in the Compute Engine instance group resource name, for relationship type
     ///   "INSTANCE_TO_INSTANCEGROUP".
-    /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
-    ///   word.
-    /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
+    /// * `state:ACTIVE` to find Google Cloud resources whose state contains
     ///   "ACTIVE" as a word.
-    /// * `createTime&lt;1609459200` to find Cloud resources that were created before
-    ///   "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+    /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
+    ///   contain "ACTIVE" as a word.
+    /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
+    ///   before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
     ///   "2021-01-01 00:00:00 UTC" in seconds.
-    /// * `updateTime>1609459200` to find Cloud resources that were updated after
-    ///   "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+    /// * `updateTime>1609459200` to find Google Cloud resources that were updated
+    ///   after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
     ///   "2021-01-01 00:00:00 UTC" in seconds.
-    /// * `Important` to find Cloud resources that contain "Important" as a word
-    ///   in any of the searchable fields.
-    /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any
+    /// * `Important` to find Google Cloud resources that contain "Important" as a
     ///   word in any of the searchable fields.
-    /// * `Important location:(us-west1 OR global)` to find Cloud
+    /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+    ///   of any word in any of the searchable fields.
+    /// * `Important location:(us-west1 OR global)` to find Google Cloud
     ///   resources that contain "Important" as a word in any of the searchable
     ///   fields and are also located in the "us-west1" region or the "global"
     ///   location.
@@ -6715,8 +6833,8 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of asset types that this request searches for. If empty, it will
-    /// search all the [searchable asset
+    /// Optional. A list of asset types that this request searches for. If empty,
+    /// it will search all the [searchable asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
     ///
     /// Regular expressions are also supported. For example:
@@ -6740,10 +6858,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped at 500 even
-    /// if a larger value is given. If set to zero, server will pick an appropriate
-    /// default. Returned results may be fewer than requested. When this happens,
-    /// there could be more results as long as `next_page_token` is returned.
+    /// Optional. The page size for search result pagination. Page size is capped
+    /// at 500 even if a larger value is given. If set to zero, server will pick an
+    /// appropriate default. Returned results may be fewer than requested. When
+    /// this happens, there could be more results as long as `next_page_token` is
+    /// returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6758,10 +6877,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, then retrieve the next batch of results from the preceding call
-    /// to this method. `page_token` must be the value of `next_page_token` from
-    /// the previous response. The values of all other method parameters, must be
-    /// identical to those in the previous call.
+    /// Optional. If present, then retrieve the next batch of results from the
+    /// preceding call to this method. `page_token` must be the value of
+    /// `next_page_token` from the previous response. The values of all other
+    /// method parameters, must be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6776,9 +6895,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrderByFieldNumber = 6;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying the sorting order of the
-    /// results. The default order is ascending. Add " DESC" after the field name
-    /// to indicate descending order. Redundant space characters are ignored.
+    /// Optional. A comma-separated list of fields specifying the sorting order of
+    /// the results. The default order is ascending. Add " DESC" after the field
+    /// name to indicate descending order. Redundant space characters are ignored.
     /// Example: "location DESC, name".
     /// Only singular primitive fields in the response are sortable:
     ///
@@ -6811,10 +6930,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int ReadMaskFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying which fields to be returned in
-    /// ResourceSearchResult. Only '*' or combination of top level fields can be
-    /// specified. Field names of both snake_case and camelCase are supported.
-    /// Examples: `"*"`, `"name,location"`, `"name,versionedResources"`.
+    /// Optional. A comma-separated list of fields specifying which fields to be
+    /// returned in ResourceSearchResult. Only '*' or combination of top level
+    /// fields can be specified. Field names of both snake_case and camelCase are
+    /// supported. Examples: `"*"`, `"name,location"`, `"name,versionedResources"`.
     ///
     /// The read_mask paths must be valid field paths listed but not limited to
     /// (both snake_case and camelCase are supported):
@@ -6831,7 +6950,7 @@ namespace Google.Cloud.Asset.V1 {
     ///   * labels
     ///   * networkTags
     ///   * kmsKey (This field is deprecated. Please use the `kmsKeys` field to
-    ///     retrieve KMS key information.)
+    ///     retrieve Cloud KMS key information.)
     ///   * kmsKeys
     ///   * createTime
     ///   * updateTime
@@ -7413,9 +7532,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder, or an organization. The search is
-    /// limited to the IAM policies within the `scope`. The caller must be granted
-    /// the
+    /// Required. A scope can be a project, a folder, or an organization. The
+    /// search is limited to the IAM policies within the `scope`. The caller must
+    /// be granted the
     /// [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
     /// permission on the desired scope.
     ///
@@ -7443,8 +7562,8 @@ namespace Google.Cloud.Asset.V1 {
     /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
     /// for more information. If not specified or empty, it will search all the
     /// IAM policies within the specified `scope`. Note that the query string is
-    /// compared against each Cloud IAM policy binding, including its principals,
-    /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
+    /// compared against each IAM policy binding, including its principals,
+    /// roles, and IAM conditions. The returned IAM policies will only
     /// contain the bindings that match your query. To learn more about the IAM
     /// policy structure, see the [IAM policy
     /// documentation](https://cloud.google.com/iam/help/allow-policies/structure).
@@ -7495,10 +7614,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped at 500 even
-    /// if a larger value is given. If set to zero, server will pick an appropriate
-    /// default. Returned results may be fewer than requested. When this happens,
-    /// there could be more results as long as `next_page_token` is returned.
+    /// Optional. The page size for search result pagination. Page size is capped
+    /// at 500 even if a larger value is given. If set to zero, server will pick an
+    /// appropriate default. Returned results may be fewer than requested. When
+    /// this happens, there could be more results as long as `next_page_token` is
+    /// returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7513,10 +7633,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, retrieve the next batch of results from the preceding call to
-    /// this method. `page_token` must be the value of `next_page_token` from the
-    /// previous response. The values of all other method parameters must be
-    /// identical to those in the previous call.
+    /// Optional. If present, retrieve the next batch of results from the preceding
+    /// call to this method. `page_token` must be the value of `next_page_token`
+    /// from the previous response. The values of all other method parameters must
+    /// be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7533,8 +7653,9 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of asset types that the IAM policies are attached to. If empty, it
-    /// will search the IAM policies that are attached to all the [searchable asset
+    /// Optional. A list of asset types that the IAM policies are attached to. If
+    /// empty, it will search the IAM policies that are attached to all the
+    /// [searchable asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
     ///
     /// Regular expressions are also supported. For example:
@@ -7560,9 +7681,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrderByFieldNumber = 7;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying the sorting order of the
-    /// results. The default order is ascending. Add " DESC" after the field name
-    /// to indicate descending order. Redundant space characters are ignored.
+    /// Optional. A comma-separated list of fields specifying the sorting order of
+    /// the results. The default order is ascending. Add " DESC" after the field
+    /// name to indicate descending order. Redundant space characters are ignored.
     /// Example: "assetType DESC, resource".
     /// Only singular primitive fields in the response are sortable:
     ///   * resource
@@ -7877,8 +7998,8 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Asset.V1.IamPolicySearchResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicySearchResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicySearchResult>();
     /// <summary>
-    /// A list of IamPolicy that match the search query. Related information such
-    /// as the associated resource is returned along with the policy.
+    /// A list of IAM policies that match the search query. Related information
+    /// such as the associated resource is returned along with the policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8106,8 +8227,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. The relative name of the root asset. Only resources and IAM policies within
-    /// the scope will be analyzed.
+    /// Required. The relative name of the root asset. Only resources and IAM
+    /// policies within the scope will be analyzed.
     ///
     /// This can only be an organization number (such as "organizations/123"), a
     /// folder number (such as "folders/123"), a project ID (such as
@@ -9188,9 +9309,10 @@ namespace Google.Cloud.Asset.V1 {
         /// Optional. If true, the identities section of the result will expand any
         /// Google groups appearing in an IAM policy binding.
         ///
-        /// If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
-        /// identity in the result will be determined by the selector, and this flag
-        /// is not allowed to set.
+        /// If
+        /// [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector]
+        /// is specified, the identity in the result will be determined by the
+        /// selector, and this flag is not allowed to set.
         ///
         /// If true, the default max expansion per group is 1000 for
         /// AssetService.AnalyzeIamPolicy][].
@@ -9213,9 +9335,10 @@ namespace Google.Cloud.Asset.V1 {
         /// Optional. If true, the access section of result will expand any roles
         /// appearing in IAM policy bindings to include their permissions.
         ///
-        /// If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
-        /// section of the result will be determined by the selector, and this flag
-        /// is not allowed to set.
+        /// If
+        /// [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector]
+        /// is specified, the access section of the result will be determined by the
+        /// selector, and this flag is not allowed to set.
         ///
         /// Default is false.
         /// </summary>
@@ -9232,25 +9355,27 @@ namespace Google.Cloud.Asset.V1 {
         public const int ExpandResourcesFieldNumber = 3;
         private bool expandResources_;
         /// <summary>
-        /// Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
-        /// specified, the resource section of the result will expand any resource
-        /// attached to an IAM policy to include resources lower in the resource
-        /// hierarchy.
+        /// Optional. If true and
+        /// [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+        /// is not specified, the resource section of the result will expand any
+        /// resource attached to an IAM policy to include resources lower in the
+        /// resource hierarchy.
         ///
         /// For example, if the request analyzes for which resources user A has
-        /// permission P, and the results include an IAM policy with P on a GCP
-        /// folder, the results will also include resources in that folder with
+        /// permission P, and the results include an IAM policy with P on a Google
+        /// Cloud folder, the results will also include resources in that folder with
         /// permission P.
         ///
-        /// If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
-        /// the resource section of the result will expand the specified resource to
-        /// include resources lower in the resource hierarchy. Only project or
-        /// lower resources are supported. Folder and organization resource cannot be
-        /// used together with this option.
+        /// If true and
+        /// [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
+        /// is specified, the resource section of the result will expand the
+        /// specified resource to include resources lower in the resource hierarchy.
+        /// Only project or lower resources are supported. Folder and organization
+        /// resources cannot be used together with this option.
         ///
         /// For example, if the request analyzes for which users have permission P on
-        /// a GCP project with this option enabled, the results will include all
-        /// users who have permission P on that project or any lower resource.
+        /// a Google Cloud project with this option enabled, the results will include
+        /// all users who have permission P on that project or any lower resource.
         ///
         /// If true, the default max expansion per resource is 1000 for
         /// AssetService.AnalyzeIamPolicy][] and 100000 for
@@ -9271,9 +9396,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int OutputResourceEdgesFieldNumber = 4;
         private bool outputResourceEdges_;
         /// <summary>
-        /// Optional. If true, the result will output the relevant parent/child relationships
-        /// between resources.
-        /// Default is false.
+        /// Optional. If true, the result will output the relevant parent/child
+        /// relationships between resources. Default is false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9288,9 +9412,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int OutputGroupEdgesFieldNumber = 5;
         private bool outputGroupEdges_;
         /// <summary>
-        /// Optional. If true, the result will output the relevant membership relationships
-        /// between groups and other groups, and between groups and principals.
-        /// Default is false.
+        /// Optional. If true, the result will output the relevant membership
+        /// relationships between groups and other groups, and between groups and
+        /// principals. Default is false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9305,26 +9429,29 @@ namespace Google.Cloud.Asset.V1 {
         public const int AnalyzeServiceAccountImpersonationFieldNumber = 6;
         private bool analyzeServiceAccountImpersonation_;
         /// <summary>
-        /// Optional. If true, the response will include access analysis from identities to
-        /// resources via service account impersonation. This is a very expensive
-        /// operation, because many derived queries will be executed. We highly
-        /// recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
-        /// instead.
+        /// Optional. If true, the response will include access analysis from
+        /// identities to resources via service account impersonation. This is a very
+        /// expensive operation, because many derived queries will be executed. We
+        /// highly recommend you use
+        /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+        /// RPC instead.
         ///
         /// For example, if the request analyzes for which resources user A has
         /// permission P, and there's an IAM policy states user A has
         /// iam.serviceAccounts.getAccessToken permission to a service account SA,
         /// and there's another IAM policy states service account SA has permission P
-        /// to a GCP folder F, then user A potentially has access to the GCP folder
-        /// F. And those advanced analysis results will be included in
+        /// to a Google Cloud folder F, then user A potentially has access to the
+        /// Google Cloud folder F. And those advanced analysis results will be
+        /// included in
         /// [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
         ///
         /// Another example, if the request analyzes for who has
-        /// permission P to a GCP folder F, and there's an IAM policy states user A
-        /// has iam.serviceAccounts.actAs permission to a service account SA, and
-        /// there's another IAM policy states service account SA has permission P to
-        /// the GCP folder F, then user A potentially has access to the GCP folder
-        /// F. And those advanced analysis results will be included in
+        /// permission P to a Google Cloud folder F, and there's an IAM policy states
+        /// user A has iam.serviceAccounts.actAs permission to a service account SA,
+        /// and there's another IAM policy states service account SA has permission P
+        /// to the Google Cloud folder F, then user A potentially has access to the
+        /// Google Cloud folder F. And those advanced analysis results will be
+        /// included in
         /// [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
         ///
         /// Only the following permissions are considered in this analysis:
@@ -9846,7 +9973,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// A request message for
+  /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyRequest : pb::IMessage<AnalyzeIamPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9943,7 +10071,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ExecutionTimeoutFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration executionTimeout_;
     /// <summary>
-    /// Optional. Amount of time executable has to complete.  See JSON representation of
+    /// Optional. Amount of time executable has to complete.  See JSON
+    /// representation of
     /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
     ///
     /// If this field is set with a value less than the RPC deadline, and the
@@ -10163,7 +10292,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// A response message for
+  /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyResponse : pb::IMessage<AnalyzeIamPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10246,9 +10376,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int FullyExploredFieldNumber = 3;
     private bool fullyExplored_;
     /// <summary>
-    /// Represents whether all entries in the [main_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.main_analysis] and
-    /// [service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis] have been fully explored to
-    /// answer the query in the request.
+    /// Represents whether all entries in the
+    /// [main_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.main_analysis]
+    /// and
+    /// [service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis]
+    /// have been fully explored to answer the query in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10513,8 +10645,9 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult> analysisResults_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult>();
         /// <summary>
-        /// A list of [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult] that matches the analysis query, or
-        /// empty if no result is found.
+        /// A list of
+        /// [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult]
+        /// that matches the analysis query, or empty if no result is found.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10526,8 +10659,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int FullyExploredFieldNumber = 3;
         private bool fullyExplored_;
         /// <summary>
-        /// Represents whether all entries in the [analysis_results][google.cloud.asset.v1.AnalyzeIamPolicyResponse.IamPolicyAnalysis.analysis_results] have been
-        /// fully explored to answer the query.
+        /// Represents whether all entries in the
+        /// [analysis_results][google.cloud.asset.v1.AnalyzeIamPolicyResponse.IamPolicyAnalysis.analysis_results]
+        /// have been fully explored to answer the query.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11099,8 +11233,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int UriFieldNumber = 1;
         private string uri_ = "";
         /// <summary>
-        /// Required. The uri of the Cloud Storage object. It's the same uri that is used by
-        /// gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+        /// Required. The URI of the Cloud Storage object. It's the same URI that is
+        /// used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
         /// Editing Object
         /// Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
         /// for more information.
@@ -11305,9 +11439,10 @@ namespace Google.Cloud.Asset.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
-        /// to which the analysis results should be exported. If this dataset does
-        /// not exist, the export call will return an INVALID_ARGUMENT error.
+        /// Required. The BigQuery dataset in format
+        /// "projects/projectId/datasets/datasetId", to which the analysis results
+        /// should be exported. If this dataset does not exist, the export call will
+        /// return an INVALID_ARGUMENT error.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11322,8 +11457,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int TablePrefixFieldNumber = 2;
         private string tablePrefix_ = "";
         /// <summary>
-        /// Required. The prefix of the BigQuery tables to which the analysis results will be
-        /// written. Tables will be created based on this table_prefix if not exist:
+        /// Required. The prefix of the BigQuery tables to which the analysis results
+        /// will be written. Tables will be created based on this table_prefix if not
+        /// exist:
         /// * &lt;table_prefix>_analysis table will contain export operation's metadata.
         /// * &lt;table_prefix>_analysis_result will contain all the
         ///   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -11358,8 +11494,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int WriteDispositionFieldNumber = 4;
         private string writeDisposition_ = "";
         /// <summary>
-        /// Optional. Specifies the action that occurs if the destination table or partition
-        /// already exists. The following values are supported:
+        /// Optional. Specifies the action that occurs if the destination table or
+        /// partition already exists. The following values are supported:
         ///
         /// * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
         /// overwrites the entire table or all the partitions data.
@@ -11620,7 +11756,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// A request message for
+  /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyLongrunningRequest : pb::IMessage<AnalyzeIamPolicyLongrunningRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11717,7 +11854,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int OutputConfigFieldNumber = 2;
     private global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results will be output to.
+    /// Required. Output configuration indicating where the results will be output
+    /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11928,7 +12066,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// A response message for
+  /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
   public sealed partial class AnalyzeIamPolicyLongrunningResponse : pb::IMessage<AnalyzeIamPolicyLongrunningResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12220,7 +12359,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int LastUpdaterFieldNumber = 6;
     private string lastUpdater_ = "";
     /// <summary>
-    /// Output only. The account's email address who has updated this saved query most recently.
+    /// Output only. The account's email address who has updated this saved query
+    /// most recently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12639,8 +12779,11 @@ namespace Google.Cloud.Asset.V1 {
         public const int IamPolicyAnalysisQueryFieldNumber = 1;
         /// <summary>
         /// An IAM Policy Analysis query, which could be used in
-        /// the [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy] rpc or
-        /// the [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc.
+        /// the
+        /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy]
+        /// RPC or the
+        /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning]
+        /// RPC.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12881,11 +13024,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project/folder/organization where this saved_query
-    /// should be created in. It can only be an organization number (such as
-    /// "organizations/123"), a folder number (such as "folders/123"), a project ID
-    /// (such as "projects/my-project-id")", or a project number (such as
-    /// "projects/12345").
+    /// Required. The name of the project/folder/organization where this
+    /// saved_query should be created in. It can only be an organization number
+    /// (such as "organizations/123"), a folder number (such as "folders/123"), a
+    /// project ID (such as "projects/my-project-id")", or a project number (such
+    /// as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12900,8 +13043,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int SavedQueryFieldNumber = 2;
     private global::Google.Cloud.Asset.V1.SavedQuery savedQuery_;
     /// <summary>
-    /// Required. The saved_query details. The `name` field must be empty as it will be
-    /// generated based on the parent and saved_query_id.
+    /// Required. The saved_query details. The `name` field must be empty as it
+    /// will be generated based on the parent and saved_query_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12916,12 +13059,12 @@ namespace Google.Cloud.Asset.V1 {
     public const int SavedQueryIdFieldNumber = 3;
     private string savedQueryId_ = "";
     /// <summary>
-    /// Required. The ID to use for the saved query, which must be unique in the specified
-    /// parent. It will become the final component of the saved query's resource
-    /// name.
+    /// Required. The ID to use for the saved query, which must be unique in the
+    /// specified parent. It will become the final component of the saved query's
+    /// resource name.
     ///
     /// This value should be 4-63 characters, and valid characters
-    /// are /[a-z][0-9]-/.
+    /// are `[a-z][0-9]-`.
     ///
     /// Notice that this field is required in the saved query creation, and the
     /// `name` field of the `saved_query` will be ignored.
@@ -13378,8 +13521,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent project/folder/organization whose savedQueries are to be
-    /// listed. It can only be using project/folder/organization number (such as
+    /// Required. The parent project/folder/organization whose savedQueries are to
+    /// be listed. It can only be using project/folder/organization number (such as
     /// "folders/12345")", or a project ID (such as "projects/my-project-id").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13416,8 +13559,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of saved queries to return per page. The service may
-    /// return fewer than this value. If unspecified, at most 50 will be returned.
+    /// Optional. The maximum number of saved queries to return per page. The
+    /// service may return fewer than this value. If unspecified, at most 50 will
+    /// be returned.
     ///  The maximum value is 1000; values above 1000 will be coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14189,7 +14333,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the saved query to delete. It must be in the format of:
+    /// Required. The name of the saved query to delete. It must be in the format
+    /// of:
     ///
     /// * projects/project_number/savedQueries/saved_query_id
     /// * folders/folder_number/savedQueries/saved_query_id
@@ -14391,9 +14536,9 @@ namespace Google.Cloud.Asset.V1 {
     private string resource_ = "";
     /// <summary>
     /// Required. Name of the resource to perform the analysis against.
-    /// Only GCP Project are supported as of today. Hence, this can only be Project
-    /// ID (such as "projects/my-project-id") or a Project Number (such as
-    /// "projects/12345").
+    /// Only Google Cloud projects are supported as of today. Hence, this can only
+    /// be a project ID (such as "projects/my-project-id") or a project number
+    /// (such as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14408,10 +14553,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int DestinationParentFieldNumber = 2;
     private string destinationParent_ = "";
     /// <summary>
-    /// Required. Name of the GCP Folder or Organization to reparent the target
-    /// resource. The analysis will be performed against hypothetically moving the
-    /// resource to this specified desitination parent. This can only be a Folder
-    /// number (such as "folders/123") or an Organization number (such as
+    /// Required. Name of the Google Cloud folder or organization to reparent the
+    /// target resource. The analysis will be performed against hypothetically
+    /// moving the resource to this specified desitination parent. This can only be
+    /// a folder number (such as "folders/123") or an organization number (such as
     /// "organizations/123").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14703,7 +14848,7 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.MoveAnalysis> moveAnalysis_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.MoveAnalysis>();
     /// <summary>
     /// The list of analyses returned from performing the intended resource move
-    /// analysis. The analysis is grouped by different Cloud services.
+    /// analysis. The analysis is grouped by different Google Cloud services.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14894,8 +15039,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// The user friendly display name of the analysis. E.g. IAM, Organization
-    /// Policy etc.
+    /// The user friendly display name of the analysis. E.g. IAM, organization
+    /// policy etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15840,8 +15985,8 @@ namespace Google.Cloud.Asset.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Required. The BigQuery dataset where the query results will be saved. It has the
-        /// format of "projects/{projectId}/datasets/{datasetId}".
+        /// Required. The BigQuery dataset where the query results will be saved. It
+        /// has the format of "projects/{projectId}/datasets/{datasetId}".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15856,8 +16001,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int TableFieldNumber = 2;
         private string table_ = "";
         /// <summary>
-        /// Required. The BigQuery table where the query results will be saved. If this table
-        /// does not exist, a new table with the given name will be created.
+        /// Required. The BigQuery table where the query results will be saved. If
+        /// this table does not exist, a new table with the given name will be
+        /// created.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16187,8 +16333,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "job_reference" field.</summary>
     public const int JobReferenceFieldNumber = 3;
     /// <summary>
-    /// Optional. Reference to the query job, which is from the `QueryAssetsResponse` of
-    /// previous `QueryAssets` call.
+    /// Optional. Reference to the query job, which is from the
+    /// `QueryAssetsResponse` of previous `QueryAssets` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16204,8 +16350,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of rows to return in the results. Responses are limited
-    /// to 10 MB and 1000 rows.
+    /// Optional. The maximum number of rows to return in the results. Responses
+    /// are limited to 10 MB and 1000 rows.
     ///
     /// By default, the maximum row count is 1000. When the byte or row count limit
     /// is reached, the rest of the query results will be paginated.
@@ -16242,10 +16388,11 @@ namespace Google.Cloud.Asset.V1 {
     public const int TimeoutFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
     /// <summary>
-    /// Optional. Specifies the maximum amount of time that the client is willing to wait
-    /// for the query to complete. By default, this limit is 5 min for the first
-    /// query, and 1 minute for the following queries. If the query is complete,
-    /// the `done` field in the `QueryAssetsResponse` is true, otherwise false.
+    /// Optional. Specifies the maximum amount of time that the client is willing
+    /// to wait for the query to complete. By default, this limit is 5 min for the
+    /// first query, and 1 minute for the following queries. If the query is
+    /// complete, the `done` field in the `QueryAssetsResponse` is true, otherwise
+    /// false.
     ///
     /// Like BigQuery [jobs.query
     /// API](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query#queryrequest)
@@ -16267,9 +16414,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "read_time_window" field.</summary>
     public const int ReadTimeWindowFieldNumber = 7;
     /// <summary>
-    /// Optional. [start_time] is required. [start_time] must be less than [end_time]
-    /// Defaults [end_time] to now if [start_time] is set and [end_time] isn't.
-    /// Maximum permitted time range is 7 days.
+    /// Optional. [start_time] is required. [start_time] must be less than
+    /// [end_time] Defaults [end_time] to now if [start_time] is set and
+    /// [end_time] isn't. Maximum permitted time range is 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16284,7 +16431,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "read_time" field.</summary>
     public const int ReadTimeFieldNumber = 8;
     /// <summary>
-    /// Optional. Queries cloud assets as they appeared at the specified point in time.
+    /// Optional. Queries cloud assets as they appeared at the specified point in
+    /// time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18000,7 +18148,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A request message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+  /// A request message for
+  /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
   public sealed partial class BatchGetEffectiveIamPoliciesRequest : pb::IMessage<BatchGetEffectiveIamPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -18238,7 +18387,8 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A response message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+  /// A response message for
+  /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
   public sealed partial class BatchGetEffectiveIamPoliciesResponse : pb::IMessage<BatchGetEffectiveIamPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -18292,9 +18442,10 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The effective policies for a batch of resources. Note that the results
     /// order is the same as the order of
-    /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names]. When a resource does not
-    /// have any effective IAM policies, its corresponding policy_result will
-    /// contain empty [EffectiveIamPolicy.policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies].
+    /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names].
+    /// When a resource does not have any effective IAM policies, its corresponding
+    /// policy_result will contain empty
+    /// [EffectiveIamPolicy.policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18482,9 +18633,11 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>
         /// The [full_resource_name]
         /// (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-        /// for which the [policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies] are computed. This is one of the
-        /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names] the caller provides in the
-        /// request.
+        /// for which the
+        /// [policies][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.policies]
+        /// are computed. This is one of the
+        /// [BatchGetEffectiveIamPoliciesRequest.names][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.names]
+        /// the caller provides in the request.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18501,19 +18654,26 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo> policies_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo>();
         /// <summary>
-        /// The effective policies for the [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
+        /// The effective policies for the
+        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
         ///
-        /// These policies include the policy set on the [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name] and
-        /// those set on its parents and ancestors up to the
-        /// [BatchGetEffectiveIamPoliciesRequest.scope][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.scope]. Note that these policies
-        /// are not filtered according to the resource type of the
+        /// These policies include the policy set on the
+        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
+        /// and those set on its parents and ancestors up to the
+        /// [BatchGetEffectiveIamPoliciesRequest.scope][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest.scope].
+        /// Note that these policies are not filtered according to the resource type
+        /// of the
         /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name].
         ///
         /// These policies are hierarchically ordered by
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource] starting from [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource]
+        /// starting from
+        /// [full_resource_name][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.full_resource_name]
         /// itself to its parents and ancestors, such that policies[i]'s
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource] is the child of policies[i+1]'s
-        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource], if policies[i+1] exists.
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource]
+        /// is the child of policies[i+1]'s
+        /// [PolicyInfo.attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource],
+        /// if policies[i+1] exists.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18723,7 +18883,9 @@ namespace Google.Cloud.Asset.V1 {
             public const int AttachedResourceFieldNumber = 1;
             private string attachedResource_ = "";
             /// <summary>
-            /// The full resource name the [policy][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.policy] is directly attached to.
+            /// The full resource name the
+            /// [policy][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.policy]
+            /// is directly attached to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18738,7 +18900,8 @@ namespace Google.Cloud.Asset.V1 {
             public const int PolicyFieldNumber = 2;
             private global::Google.Cloud.Iam.V1.Policy policy_;
             /// <summary>
-            /// The IAM policy that's directly attached to the [attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource].
+            /// The IAM policy that's directly attached to the
+            /// [attached_resource][google.cloud.asset.v1.BatchGetEffectiveIamPoliciesResponse.EffectiveIamPolicy.PolicyInfo.attached_resource].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18917,6 +19080,6381 @@ namespace Google.Cloud.Asset.V1 {
 
         }
         #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// This organization policy message is a modified version of the one defined in
+  /// the Organization Policy system. This message contains several fields defined
+  /// in the original organization policy with some new fields for analysis
+  /// purpose.
+  /// </summary>
+  public sealed partial class AnalyzerOrgPolicy : pb::IMessage<AnalyzerOrgPolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzerOrgPolicy> _parser = new pb::MessageParser<AnalyzerOrgPolicy>(() => new AnalyzerOrgPolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzerOrgPolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[52]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicy(AnalyzerOrgPolicy other) : this() {
+      attachedResource_ = other.attachedResource_;
+      appliedResource_ = other.appliedResource_;
+      rules_ = other.rules_.Clone();
+      inheritFromParent_ = other.inheritFromParent_;
+      reset_ = other.reset_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicy Clone() {
+      return new AnalyzerOrgPolicy(this);
+    }
+
+    /// <summary>Field number for the "attached_resource" field.</summary>
+    public const int AttachedResourceFieldNumber = 1;
+    private string attachedResource_ = "";
+    /// <summary>
+    /// The [full resource name]
+    /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+    /// an organization/folder/project resource where this organization policy is
+    /// set.
+    ///
+    /// Notice that some type of constraints are defined with default policy. This
+    /// field will be empty for them.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AttachedResource {
+      get { return attachedResource_; }
+      set {
+        attachedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "applied_resource" field.</summary>
+    public const int AppliedResourceFieldNumber = 5;
+    private string appliedResource_ = "";
+    /// <summary>
+    /// The [full resource name]
+    /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+    /// an organization/folder/project resource where this organization policy
+    /// applies to.
+    ///
+    /// For any user defined org policies, this field has the same value as
+    /// the [attached_resource] field. Only for default policy, this field has
+    /// the different value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AppliedResource {
+      get { return appliedResource_; }
+      set {
+        appliedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rules" field.</summary>
+    public const int RulesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule> _repeated_rules_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule> rules_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule>();
+    /// <summary>
+    /// List of rules for this organization policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule> Rules {
+      get { return rules_; }
+    }
+
+    /// <summary>Field number for the "inherit_from_parent" field.</summary>
+    public const int InheritFromParentFieldNumber = 3;
+    private bool inheritFromParent_;
+    /// <summary>
+    /// If `inherit_from_parent` is true, Rules set higher up in the
+    /// hierarchy (up to the closest root) are inherited and present in the
+    /// effective policy. If it is false, then no rules are inherited, and this
+    /// policy becomes the effective root for evaluation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InheritFromParent {
+      get { return inheritFromParent_; }
+      set {
+        inheritFromParent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reset" field.</summary>
+    public const int ResetFieldNumber = 4;
+    private bool reset_;
+    /// <summary>
+    /// Ignores policies set above this resource and restores the default behavior
+    /// of the constraint at this resource.
+    /// This field can be set in policies for either list or boolean
+    /// constraints. If set, `rules` must be empty and `inherit_from_parent`
+    /// must be set to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Reset {
+      get { return reset_; }
+      set {
+        reset_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzerOrgPolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzerOrgPolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AttachedResource != other.AttachedResource) return false;
+      if (AppliedResource != other.AppliedResource) return false;
+      if(!rules_.Equals(other.rules_)) return false;
+      if (InheritFromParent != other.InheritFromParent) return false;
+      if (Reset != other.Reset) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AttachedResource.Length != 0) hash ^= AttachedResource.GetHashCode();
+      if (AppliedResource.Length != 0) hash ^= AppliedResource.GetHashCode();
+      hash ^= rules_.GetHashCode();
+      if (InheritFromParent != false) hash ^= InheritFromParent.GetHashCode();
+      if (Reset != false) hash ^= Reset.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AttachedResource.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttachedResource);
+      }
+      rules_.WriteTo(output, _repeated_rules_codec);
+      if (InheritFromParent != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(InheritFromParent);
+      }
+      if (Reset != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Reset);
+      }
+      if (AppliedResource.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AppliedResource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AttachedResource.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttachedResource);
+      }
+      rules_.WriteTo(ref output, _repeated_rules_codec);
+      if (InheritFromParent != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(InheritFromParent);
+      }
+      if (Reset != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Reset);
+      }
+      if (AppliedResource.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AppliedResource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AttachedResource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttachedResource);
+      }
+      if (AppliedResource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppliedResource);
+      }
+      size += rules_.CalculateSize(_repeated_rules_codec);
+      if (InheritFromParent != false) {
+        size += 1 + 1;
+      }
+      if (Reset != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzerOrgPolicy other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AttachedResource.Length != 0) {
+        AttachedResource = other.AttachedResource;
+      }
+      if (other.AppliedResource.Length != 0) {
+        AppliedResource = other.AppliedResource;
+      }
+      rules_.Add(other.rules_);
+      if (other.InheritFromParent != false) {
+        InheritFromParent = other.InheritFromParent;
+      }
+      if (other.Reset != false) {
+        Reset = other.Reset;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AttachedResource = input.ReadString();
+            break;
+          }
+          case 18: {
+            rules_.AddEntriesFrom(input, _repeated_rules_codec);
+            break;
+          }
+          case 24: {
+            InheritFromParent = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Reset = input.ReadBool();
+            break;
+          }
+          case 42: {
+            AppliedResource = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AttachedResource = input.ReadString();
+            break;
+          }
+          case 18: {
+            rules_.AddEntriesFrom(ref input, _repeated_rules_codec);
+            break;
+          }
+          case 24: {
+            InheritFromParent = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Reset = input.ReadBool();
+            break;
+          }
+          case 42: {
+            AppliedResource = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzerOrgPolicy message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents a rule defined in an organization policy
+      /// </summary>
+      public sealed partial class Rule : pb::IMessage<Rule>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Rule> _parser = new pb::MessageParser<Rule>(() => new Rule());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Rule> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Rule() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Rule(Rule other) : this() {
+          condition_ = other.condition_ != null ? other.condition_.Clone() : null;
+          switch (other.KindCase) {
+            case KindOneofCase.Values:
+              Values = other.Values.Clone();
+              break;
+            case KindOneofCase.AllowAll:
+              AllowAll = other.AllowAll;
+              break;
+            case KindOneofCase.DenyAll:
+              DenyAll = other.DenyAll;
+              break;
+            case KindOneofCase.Enforce:
+              Enforce = other.Enforce;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Rule Clone() {
+          return new Rule(this);
+        }
+
+        /// <summary>Field number for the "values" field.</summary>
+        public const int ValuesFieldNumber = 3;
+        /// <summary>
+        /// List of values to be used for this PolicyRule. This field can be set
+        /// only in Policies for list constraints.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues Values {
+          get { return kindCase_ == KindOneofCase.Values ? (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues) kind_ : null; }
+          set {
+            kind_ = value;
+            kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.Values;
+          }
+        }
+
+        /// <summary>Field number for the "allow_all" field.</summary>
+        public const int AllowAllFieldNumber = 4;
+        /// <summary>
+        /// Setting this to true means that all values are allowed. This field can
+        /// be set only in Policies for list constraints.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AllowAll {
+          get { return kindCase_ == KindOneofCase.AllowAll ? (bool) kind_ : false; }
+          set {
+            kind_ = value;
+            kindCase_ = KindOneofCase.AllowAll;
+          }
+        }
+
+        /// <summary>Field number for the "deny_all" field.</summary>
+        public const int DenyAllFieldNumber = 5;
+        /// <summary>
+        /// Setting this to true means that all values are denied. This field can
+        /// be set only in Policies for list constraints.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DenyAll {
+          get { return kindCase_ == KindOneofCase.DenyAll ? (bool) kind_ : false; }
+          set {
+            kind_ = value;
+            kindCase_ = KindOneofCase.DenyAll;
+          }
+        }
+
+        /// <summary>Field number for the "enforce" field.</summary>
+        public const int EnforceFieldNumber = 6;
+        /// <summary>
+        /// If `true`, then the `Policy` is enforced. If `false`, then any
+        /// configuration is acceptable.
+        /// This field can be set only in Policies for boolean constraints.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Enforce {
+          get { return kindCase_ == KindOneofCase.Enforce ? (bool) kind_ : false; }
+          set {
+            kind_ = value;
+            kindCase_ = KindOneofCase.Enforce;
+          }
+        }
+
+        /// <summary>Field number for the "condition" field.</summary>
+        public const int ConditionFieldNumber = 7;
+        private global::Google.Type.Expr condition_;
+        /// <summary>
+        /// The evaluating condition for this rule.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Expr Condition {
+          get { return condition_; }
+          set {
+            condition_ = value;
+          }
+        }
+
+        private object kind_;
+        /// <summary>Enum of possible cases for the "kind" oneof.</summary>
+        public enum KindOneofCase {
+          None = 0,
+          Values = 3,
+          AllowAll = 4,
+          DenyAll = 5,
+          Enforce = 6,
+        }
+        private KindOneofCase kindCase_ = KindOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KindOneofCase KindCase {
+          get { return kindCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKind() {
+          kindCase_ = KindOneofCase.None;
+          kind_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Rule);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Rule other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Values, other.Values)) return false;
+          if (AllowAll != other.AllowAll) return false;
+          if (DenyAll != other.DenyAll) return false;
+          if (Enforce != other.Enforce) return false;
+          if (!object.Equals(Condition, other.Condition)) return false;
+          if (KindCase != other.KindCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (kindCase_ == KindOneofCase.Values) hash ^= Values.GetHashCode();
+          if (kindCase_ == KindOneofCase.AllowAll) hash ^= AllowAll.GetHashCode();
+          if (kindCase_ == KindOneofCase.DenyAll) hash ^= DenyAll.GetHashCode();
+          if (kindCase_ == KindOneofCase.Enforce) hash ^= Enforce.GetHashCode();
+          if (condition_ != null) hash ^= Condition.GetHashCode();
+          hash ^= (int) kindCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (kindCase_ == KindOneofCase.Values) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Values);
+          }
+          if (kindCase_ == KindOneofCase.AllowAll) {
+            output.WriteRawTag(32);
+            output.WriteBool(AllowAll);
+          }
+          if (kindCase_ == KindOneofCase.DenyAll) {
+            output.WriteRawTag(40);
+            output.WriteBool(DenyAll);
+          }
+          if (kindCase_ == KindOneofCase.Enforce) {
+            output.WriteRawTag(48);
+            output.WriteBool(Enforce);
+          }
+          if (condition_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(Condition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (kindCase_ == KindOneofCase.Values) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Values);
+          }
+          if (kindCase_ == KindOneofCase.AllowAll) {
+            output.WriteRawTag(32);
+            output.WriteBool(AllowAll);
+          }
+          if (kindCase_ == KindOneofCase.DenyAll) {
+            output.WriteRawTag(40);
+            output.WriteBool(DenyAll);
+          }
+          if (kindCase_ == KindOneofCase.Enforce) {
+            output.WriteRawTag(48);
+            output.WriteBool(Enforce);
+          }
+          if (condition_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(Condition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (kindCase_ == KindOneofCase.Values) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Values);
+          }
+          if (kindCase_ == KindOneofCase.AllowAll) {
+            size += 1 + 1;
+          }
+          if (kindCase_ == KindOneofCase.DenyAll) {
+            size += 1 + 1;
+          }
+          if (kindCase_ == KindOneofCase.Enforce) {
+            size += 1 + 1;
+          }
+          if (condition_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Rule other) {
+          if (other == null) {
+            return;
+          }
+          if (other.condition_ != null) {
+            if (condition_ == null) {
+              Condition = new global::Google.Type.Expr();
+            }
+            Condition.MergeFrom(other.Condition);
+          }
+          switch (other.KindCase) {
+            case KindOneofCase.Values:
+              if (Values == null) {
+                Values = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues();
+              }
+              Values.MergeFrom(other.Values);
+              break;
+            case KindOneofCase.AllowAll:
+              AllowAll = other.AllowAll;
+              break;
+            case KindOneofCase.DenyAll:
+              DenyAll = other.DenyAll;
+              break;
+            case KindOneofCase.Enforce:
+              Enforce = other.Enforce;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 26: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues();
+                if (kindCase_ == KindOneofCase.Values) {
+                  subBuilder.MergeFrom(Values);
+                }
+                input.ReadMessage(subBuilder);
+                Values = subBuilder;
+                break;
+              }
+              case 32: {
+                AllowAll = input.ReadBool();
+                break;
+              }
+              case 40: {
+                DenyAll = input.ReadBool();
+                break;
+              }
+              case 48: {
+                Enforce = input.ReadBool();
+                break;
+              }
+              case 58: {
+                if (condition_ == null) {
+                  Condition = new global::Google.Type.Expr();
+                }
+                input.ReadMessage(Condition);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 26: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues();
+                if (kindCase_ == KindOneofCase.Values) {
+                  subBuilder.MergeFrom(Values);
+                }
+                input.ReadMessage(subBuilder);
+                Values = subBuilder;
+                break;
+              }
+              case 32: {
+                AllowAll = input.ReadBool();
+                break;
+              }
+              case 40: {
+                DenyAll = input.ReadBool();
+                break;
+              }
+              case 48: {
+                Enforce = input.ReadBool();
+                break;
+              }
+              case 58: {
+                if (condition_ == null) {
+                  Condition = new global::Google.Type.Expr();
+                }
+                input.ReadMessage(Condition);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Rule message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The string values for the list constraints.
+          /// </summary>
+          public sealed partial class StringValues : pb::IMessage<StringValues>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<StringValues> _parser = new pb::MessageParser<StringValues>(() => new StringValues());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<StringValues> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringValues() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringValues(StringValues other) : this() {
+              allowedValues_ = other.allowedValues_.Clone();
+              deniedValues_ = other.deniedValues_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringValues Clone() {
+              return new StringValues(this);
+            }
+
+            /// <summary>Field number for the "allowed_values" field.</summary>
+            public const int AllowedValuesFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_allowedValues_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> allowedValues_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// List of values allowed at this resource.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> AllowedValues {
+              get { return allowedValues_; }
+            }
+
+            /// <summary>Field number for the "denied_values" field.</summary>
+            public const int DeniedValuesFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_deniedValues_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> deniedValues_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// List of values denied at this resource.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> DeniedValues {
+              get { return deniedValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as StringValues);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(StringValues other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!allowedValues_.Equals(other.allowedValues_)) return false;
+              if(!deniedValues_.Equals(other.deniedValues_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= allowedValues_.GetHashCode();
+              hash ^= deniedValues_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              allowedValues_.WriteTo(output, _repeated_allowedValues_codec);
+              deniedValues_.WriteTo(output, _repeated_deniedValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              allowedValues_.WriteTo(ref output, _repeated_allowedValues_codec);
+              deniedValues_.WriteTo(ref output, _repeated_deniedValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += allowedValues_.CalculateSize(_repeated_allowedValues_codec);
+              size += deniedValues_.CalculateSize(_repeated_deniedValues_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(StringValues other) {
+              if (other == null) {
+                return;
+              }
+              allowedValues_.Add(other.allowedValues_);
+              deniedValues_.Add(other.deniedValues_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    allowedValues_.AddEntriesFrom(input, _repeated_allowedValues_codec);
+                    break;
+                  }
+                  case 18: {
+                    deniedValues_.AddEntriesFrom(input, _repeated_deniedValues_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    allowedValues_.AddEntriesFrom(ref input, _repeated_allowedValues_codec);
+                    break;
+                  }
+                  case 18: {
+                    deniedValues_.AddEntriesFrom(ref input, _repeated_deniedValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The organization policy constraint definition.
+  /// </summary>
+  public sealed partial class AnalyzerOrgPolicyConstraint : pb::IMessage<AnalyzerOrgPolicyConstraint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzerOrgPolicyConstraint> _parser = new pb::MessageParser<AnalyzerOrgPolicyConstraint>(() => new AnalyzerOrgPolicyConstraint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzerOrgPolicyConstraint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[53]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicyConstraint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicyConstraint(AnalyzerOrgPolicyConstraint other) : this() {
+      switch (other.ConstraintDefinitionCase) {
+        case ConstraintDefinitionOneofCase.GoogleDefinedConstraint:
+          GoogleDefinedConstraint = other.GoogleDefinedConstraint.Clone();
+          break;
+        case ConstraintDefinitionOneofCase.CustomConstraint:
+          CustomConstraint = other.CustomConstraint.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzerOrgPolicyConstraint Clone() {
+      return new AnalyzerOrgPolicyConstraint(this);
+    }
+
+    /// <summary>Field number for the "google_defined_constraint" field.</summary>
+    public const int GoogleDefinedConstraintFieldNumber = 1;
+    /// <summary>
+    /// The definition of the canned constraint defined by Google.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint GoogleDefinedConstraint {
+      get { return constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint ? (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint) constraintDefinition_ : null; }
+      set {
+        constraintDefinition_ = value;
+        constraintDefinitionCase_ = value == null ? ConstraintDefinitionOneofCase.None : ConstraintDefinitionOneofCase.GoogleDefinedConstraint;
+      }
+    }
+
+    /// <summary>Field number for the "custom_constraint" field.</summary>
+    public const int CustomConstraintFieldNumber = 2;
+    /// <summary>
+    /// The definition of the custom constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint CustomConstraint {
+      get { return constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint ? (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint) constraintDefinition_ : null; }
+      set {
+        constraintDefinition_ = value;
+        constraintDefinitionCase_ = value == null ? ConstraintDefinitionOneofCase.None : ConstraintDefinitionOneofCase.CustomConstraint;
+      }
+    }
+
+    private object constraintDefinition_;
+    /// <summary>Enum of possible cases for the "constraint_definition" oneof.</summary>
+    public enum ConstraintDefinitionOneofCase {
+      None = 0,
+      GoogleDefinedConstraint = 1,
+      CustomConstraint = 2,
+    }
+    private ConstraintDefinitionOneofCase constraintDefinitionCase_ = ConstraintDefinitionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConstraintDefinitionOneofCase ConstraintDefinitionCase {
+      get { return constraintDefinitionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConstraintDefinition() {
+      constraintDefinitionCase_ = ConstraintDefinitionOneofCase.None;
+      constraintDefinition_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzerOrgPolicyConstraint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzerOrgPolicyConstraint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GoogleDefinedConstraint, other.GoogleDefinedConstraint)) return false;
+      if (!object.Equals(CustomConstraint, other.CustomConstraint)) return false;
+      if (ConstraintDefinitionCase != other.ConstraintDefinitionCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) hash ^= GoogleDefinedConstraint.GetHashCode();
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) hash ^= CustomConstraint.GetHashCode();
+      hash ^= (int) constraintDefinitionCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GoogleDefinedConstraint);
+      }
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomConstraint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GoogleDefinedConstraint);
+      }
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomConstraint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleDefinedConstraint);
+      }
+      if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomConstraint);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzerOrgPolicyConstraint other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ConstraintDefinitionCase) {
+        case ConstraintDefinitionOneofCase.GoogleDefinedConstraint:
+          if (GoogleDefinedConstraint == null) {
+            GoogleDefinedConstraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint();
+          }
+          GoogleDefinedConstraint.MergeFrom(other.GoogleDefinedConstraint);
+          break;
+        case ConstraintDefinitionOneofCase.CustomConstraint:
+          if (CustomConstraint == null) {
+            CustomConstraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint();
+          }
+          CustomConstraint.MergeFrom(other.CustomConstraint);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint();
+            if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) {
+              subBuilder.MergeFrom(GoogleDefinedConstraint);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDefinedConstraint = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint();
+            if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) {
+              subBuilder.MergeFrom(CustomConstraint);
+            }
+            input.ReadMessage(subBuilder);
+            CustomConstraint = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint();
+            if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.GoogleDefinedConstraint) {
+              subBuilder.MergeFrom(GoogleDefinedConstraint);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDefinedConstraint = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint();
+            if (constraintDefinitionCase_ == ConstraintDefinitionOneofCase.CustomConstraint) {
+              subBuilder.MergeFrom(CustomConstraint);
+            }
+            input.ReadMessage(subBuilder);
+            CustomConstraint = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzerOrgPolicyConstraint message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The definition of a constraint.
+      /// </summary>
+      public sealed partial class Constraint : pb::IMessage<Constraint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Constraint> _parser = new pb::MessageParser<Constraint>(() => new Constraint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Constraint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Constraint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Constraint(Constraint other) : this() {
+          name_ = other.name_;
+          displayName_ = other.displayName_;
+          description_ = other.description_;
+          constraintDefault_ = other.constraintDefault_;
+          switch (other.ConstraintTypeCase) {
+            case ConstraintTypeOneofCase.ListConstraint:
+              ListConstraint = other.ListConstraint.Clone();
+              break;
+            case ConstraintTypeOneofCase.BooleanConstraint:
+              BooleanConstraint = other.BooleanConstraint.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Constraint Clone() {
+          return new Constraint(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The unique name of the constraint. Format of the name should be
+        /// * `constraints/{constraint_name}`
+        ///
+        /// For example, `constraints/compute.disableSerialPortAccess`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 2;
+        private string displayName_ = "";
+        /// <summary>
+        /// The human readable name of the constraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 3;
+        private string description_ = "";
+        /// <summary>
+        /// Detailed description of what this `Constraint` controls as well as how
+        /// and where it is enforced.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "constraint_default" field.</summary>
+        public const int ConstraintDefaultFieldNumber = 4;
+        private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault constraintDefault_ = global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified;
+        /// <summary>
+        /// The evaluation behavior of this constraint in the absence of 'Policy'.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault ConstraintDefault {
+          get { return constraintDefault_; }
+          set {
+            constraintDefault_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "list_constraint" field.</summary>
+        public const int ListConstraintFieldNumber = 5;
+        /// <summary>
+        /// Defines this constraint as being a ListConstraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint ListConstraint {
+          get { return constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint ? (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint) constraintType_ : null; }
+          set {
+            constraintType_ = value;
+            constraintTypeCase_ = value == null ? ConstraintTypeOneofCase.None : ConstraintTypeOneofCase.ListConstraint;
+          }
+        }
+
+        /// <summary>Field number for the "boolean_constraint" field.</summary>
+        public const int BooleanConstraintFieldNumber = 6;
+        /// <summary>
+        /// Defines this constraint as being a BooleanConstraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint BooleanConstraint {
+          get { return constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint ? (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint) constraintType_ : null; }
+          set {
+            constraintType_ = value;
+            constraintTypeCase_ = value == null ? ConstraintTypeOneofCase.None : ConstraintTypeOneofCase.BooleanConstraint;
+          }
+        }
+
+        private object constraintType_;
+        /// <summary>Enum of possible cases for the "constraint_type" oneof.</summary>
+        public enum ConstraintTypeOneofCase {
+          None = 0,
+          ListConstraint = 5,
+          BooleanConstraint = 6,
+        }
+        private ConstraintTypeOneofCase constraintTypeCase_ = ConstraintTypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConstraintTypeOneofCase ConstraintTypeCase {
+          get { return constraintTypeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearConstraintType() {
+          constraintTypeCase_ = ConstraintTypeOneofCase.None;
+          constraintType_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Constraint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Constraint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (DisplayName != other.DisplayName) return false;
+          if (Description != other.Description) return false;
+          if (ConstraintDefault != other.ConstraintDefault) return false;
+          if (!object.Equals(ListConstraint, other.ListConstraint)) return false;
+          if (!object.Equals(BooleanConstraint, other.BooleanConstraint)) return false;
+          if (ConstraintTypeCase != other.ConstraintTypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
+          if (ConstraintDefault != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified) hash ^= ConstraintDefault.GetHashCode();
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) hash ^= ListConstraint.GetHashCode();
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) hash ^= BooleanConstraint.GetHashCode();
+          hash ^= (int) constraintTypeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Description);
+          }
+          if (ConstraintDefault != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ConstraintDefault);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ListConstraint);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) {
+            output.WriteRawTag(50);
+            output.WriteMessage(BooleanConstraint);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Description);
+          }
+          if (ConstraintDefault != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ConstraintDefault);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ListConstraint);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) {
+            output.WriteRawTag(50);
+            output.WriteMessage(BooleanConstraint);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
+          if (ConstraintDefault != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConstraintDefault);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ListConstraint);
+          }
+          if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(BooleanConstraint);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Constraint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
+          if (other.ConstraintDefault != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault.Unspecified) {
+            ConstraintDefault = other.ConstraintDefault;
+          }
+          switch (other.ConstraintTypeCase) {
+            case ConstraintTypeOneofCase.ListConstraint:
+              if (ListConstraint == null) {
+                ListConstraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint();
+              }
+              ListConstraint.MergeFrom(other.ListConstraint);
+              break;
+            case ConstraintTypeOneofCase.BooleanConstraint:
+              if (BooleanConstraint == null) {
+                BooleanConstraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint();
+              }
+              BooleanConstraint.MergeFrom(other.BooleanConstraint);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 26: {
+                Description = input.ReadString();
+                break;
+              }
+              case 32: {
+                ConstraintDefault = (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint();
+                if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) {
+                  subBuilder.MergeFrom(ListConstraint);
+                }
+                input.ReadMessage(subBuilder);
+                ListConstraint = subBuilder;
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint();
+                if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) {
+                  subBuilder.MergeFrom(BooleanConstraint);
+                }
+                input.ReadMessage(subBuilder);
+                BooleanConstraint = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 26: {
+                Description = input.ReadString();
+                break;
+              }
+              case 32: {
+                ConstraintDefault = (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint();
+                if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) {
+                  subBuilder.MergeFrom(ListConstraint);
+                }
+                input.ReadMessage(subBuilder);
+                ListConstraint = subBuilder;
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint subBuilder = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint();
+                if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) {
+                  subBuilder.MergeFrom(BooleanConstraint);
+                }
+                input.ReadMessage(subBuilder);
+                BooleanConstraint = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Constraint message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specifies the default behavior in the absence of any `Policy` for the
+          /// `Constraint`. This must not be `CONSTRAINT_DEFAULT_UNSPECIFIED`.
+          /// </summary>
+          public enum ConstraintDefault {
+            /// <summary>
+            /// This is only used for distinguishing unset values and should never be
+            /// used.
+            /// </summary>
+            [pbr::OriginalName("CONSTRAINT_DEFAULT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Indicate that all values are allowed for list constraints.
+            /// Indicate that enforcement is off for boolean constraints.
+            /// </summary>
+            [pbr::OriginalName("ALLOW")] Allow = 1,
+            /// <summary>
+            /// Indicate that all values are denied for list constraints.
+            /// Indicate that enforcement is on for boolean constraints.
+            /// </summary>
+            [pbr::OriginalName("DENY")] Deny = 2,
+          }
+
+          /// <summary>
+          /// A `Constraint` that allows or disallows a list of string values, which
+          /// are configured by an organization's policy administrator with a `Policy`.
+          /// </summary>
+          public sealed partial class ListConstraint : pb::IMessage<ListConstraint>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ListConstraint> _parser = new pb::MessageParser<ListConstraint>(() => new ListConstraint());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ListConstraint> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ListConstraint() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ListConstraint(ListConstraint other) : this() {
+              supportsIn_ = other.supportsIn_;
+              supportsUnder_ = other.supportsUnder_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ListConstraint Clone() {
+              return new ListConstraint(this);
+            }
+
+            /// <summary>Field number for the "supports_in" field.</summary>
+            public const int SupportsInFieldNumber = 1;
+            private bool supportsIn_;
+            /// <summary>
+            /// Indicates whether values grouped into categories can be used in
+            /// `Policy.allowed_values` and `Policy.denied_values`. For example,
+            /// `"in:Python"` would match any value in the 'Python' group.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool SupportsIn {
+              get { return supportsIn_; }
+              set {
+                supportsIn_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "supports_under" field.</summary>
+            public const int SupportsUnderFieldNumber = 2;
+            private bool supportsUnder_;
+            /// <summary>
+            /// Indicates whether subtrees of Cloud Resource Manager resource hierarchy
+            /// can be used in `Policy.allowed_values` and `Policy.denied_values`. For
+            /// example, `"under:folders/123"` would match any resource under the
+            /// 'folders/123' folder.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool SupportsUnder {
+              get { return supportsUnder_; }
+              set {
+                supportsUnder_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ListConstraint);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ListConstraint other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (SupportsIn != other.SupportsIn) return false;
+              if (SupportsUnder != other.SupportsUnder) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SupportsIn != false) hash ^= SupportsIn.GetHashCode();
+              if (SupportsUnder != false) hash ^= SupportsUnder.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (SupportsIn != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(SupportsIn);
+              }
+              if (SupportsUnder != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(SupportsUnder);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SupportsIn != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(SupportsIn);
+              }
+              if (SupportsUnder != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(SupportsUnder);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (SupportsIn != false) {
+                size += 1 + 1;
+              }
+              if (SupportsUnder != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ListConstraint other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SupportsIn != false) {
+                SupportsIn = other.SupportsIn;
+              }
+              if (other.SupportsUnder != false) {
+                SupportsUnder = other.SupportsUnder;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    SupportsIn = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    SupportsUnder = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    SupportsIn = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    SupportsUnder = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// A `Constraint` that is either enforced or not.
+          ///
+          /// For example a constraint `constraints/compute.disableSerialPortAccess`.
+          /// If it is enforced on a VM instance, serial port connections will not be
+          /// opened to that instance.
+          /// </summary>
+          public sealed partial class BooleanConstraint : pb::IMessage<BooleanConstraint>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BooleanConstraint> _parser = new pb::MessageParser<BooleanConstraint>(() => new BooleanConstraint());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BooleanConstraint> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BooleanConstraint() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BooleanConstraint(BooleanConstraint other) : this() {
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BooleanConstraint Clone() {
+              return new BooleanConstraint(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BooleanConstraint);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BooleanConstraint other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BooleanConstraint other) {
+              if (other == null) {
+                return;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The definition of a custom constraint.
+      /// </summary>
+      public sealed partial class CustomConstraint : pb::IMessage<CustomConstraint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CustomConstraint> _parser = new pb::MessageParser<CustomConstraint>(() => new CustomConstraint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CustomConstraint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraint(CustomConstraint other) : this() {
+          name_ = other.name_;
+          resourceTypes_ = other.resourceTypes_.Clone();
+          methodTypes_ = other.methodTypes_.Clone();
+          condition_ = other.condition_;
+          actionType_ = other.actionType_;
+          displayName_ = other.displayName_;
+          description_ = other.description_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraint Clone() {
+          return new CustomConstraint(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Name of the constraint. This is unique within the organization. Format of
+        /// the name should be
+        /// * `organizations/{organization_id}/customConstraints/{custom_constraint_id}`
+        ///
+        /// Example :
+        /// "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "resource_types" field.</summary>
+        public const int ResourceTypesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_resourceTypes_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> resourceTypes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The Resource Instance type on which this policy applies to. Format will
+        /// be of the form : "&lt;canonical service name>/&lt;type>" Example:
+        ///  * `compute.googleapis.com/Instance`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ResourceTypes {
+          get { return resourceTypes_; }
+        }
+
+        /// <summary>Field number for the "method_types" field.</summary>
+        public const int MethodTypesFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType> _repeated_methodTypes_codec
+            = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType> methodTypes_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType>();
+        /// <summary>
+        /// All the operations being applied for this constraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType> MethodTypes {
+          get { return methodTypes_; }
+        }
+
+        /// <summary>Field number for the "condition" field.</summary>
+        public const int ConditionFieldNumber = 4;
+        private string condition_ = "";
+        /// <summary>
+        /// Organization Policy condition/expression. For example:
+        /// `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+        /// `resource.management.auto_upgrade == true`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Condition {
+          get { return condition_; }
+          set {
+            condition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "action_type" field.</summary>
+        public const int ActionTypeFieldNumber = 5;
+        private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType actionType_ = global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified;
+        /// <summary>
+        /// Allow or deny type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType ActionType {
+          get { return actionType_; }
+          set {
+            actionType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 6;
+        private string displayName_ = "";
+        /// <summary>
+        /// One line display name for the UI.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 7;
+        private string description_ = "";
+        /// <summary>
+        /// Detailed information about this custom policy constraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CustomConstraint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CustomConstraint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if(!resourceTypes_.Equals(other.resourceTypes_)) return false;
+          if(!methodTypes_.Equals(other.methodTypes_)) return false;
+          if (Condition != other.Condition) return false;
+          if (ActionType != other.ActionType) return false;
+          if (DisplayName != other.DisplayName) return false;
+          if (Description != other.Description) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= resourceTypes_.GetHashCode();
+          hash ^= methodTypes_.GetHashCode();
+          if (Condition.Length != 0) hash ^= Condition.GetHashCode();
+          if (ActionType != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified) hash ^= ActionType.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          resourceTypes_.WriteTo(output, _repeated_resourceTypes_codec);
+          methodTypes_.WriteTo(output, _repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Condition);
+          }
+          if (ActionType != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) ActionType);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DisplayName);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          resourceTypes_.WriteTo(ref output, _repeated_resourceTypes_codec);
+          methodTypes_.WriteTo(ref output, _repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Condition);
+          }
+          if (ActionType != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) ActionType);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DisplayName);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += resourceTypes_.CalculateSize(_repeated_resourceTypes_codec);
+          size += methodTypes_.CalculateSize(_repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Condition);
+          }
+          if (ActionType != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActionType);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CustomConstraint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          resourceTypes_.Add(other.resourceTypes_);
+          methodTypes_.Add(other.methodTypes_);
+          if (other.Condition.Length != 0) {
+            Condition = other.Condition;
+          }
+          if (other.ActionType != global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType.Unspecified) {
+            ActionType = other.ActionType;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                resourceTypes_.AddEntriesFrom(input, _repeated_resourceTypes_codec);
+                break;
+              }
+              case 26:
+              case 24: {
+                methodTypes_.AddEntriesFrom(input, _repeated_methodTypes_codec);
+                break;
+              }
+              case 34: {
+                Condition = input.ReadString();
+                break;
+              }
+              case 40: {
+                ActionType = (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType) input.ReadEnum();
+                break;
+              }
+              case 50: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 58: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                resourceTypes_.AddEntriesFrom(ref input, _repeated_resourceTypes_codec);
+                break;
+              }
+              case 26:
+              case 24: {
+                methodTypes_.AddEntriesFrom(ref input, _repeated_methodTypes_codec);
+                break;
+              }
+              case 34: {
+                Condition = input.ReadString();
+                break;
+              }
+              case 40: {
+                ActionType = (global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType) input.ReadEnum();
+                break;
+              }
+              case 50: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 58: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CustomConstraint message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The operation in which this constraint will be applied. For example:
+          /// If the constraint applies only when create VMs, the method_types will be
+          /// "CREATE" only. If the constraint applied when create or delete VMs, the
+          /// method_types will be "CREATE" and "DELETE".
+          /// </summary>
+          public enum MethodType {
+            /// <summary>
+            /// Unspecified. Will results in user error.
+            /// </summary>
+            [pbr::OriginalName("METHOD_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Constraint applied when creating the resource.
+            /// </summary>
+            [pbr::OriginalName("CREATE")] Create = 1,
+            /// <summary>
+            /// Constraint applied when updating the resource.
+            /// </summary>
+            [pbr::OriginalName("UPDATE")] Update = 2,
+            /// <summary>
+            /// Constraint applied when deleting the resource.
+            /// </summary>
+            [pbr::OriginalName("DELETE")] Delete = 3,
+          }
+
+          /// <summary>
+          /// Allow or deny type.
+          /// </summary>
+          public enum ActionType {
+            /// <summary>
+            /// Unspecified. Will results in user error.
+            /// </summary>
+            [pbr::OriginalName("ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Allowed action type.
+            /// </summary>
+            [pbr::OriginalName("ALLOW")] Allow = 1,
+            /// <summary>
+            /// Deny action type.
+            /// </summary>
+            [pbr::OriginalName("DENY")] Deny = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for
+  /// [AssetService.AnalyzeOrgPolicies][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPoliciesRequest : pb::IMessage<AnalyzeOrgPoliciesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPoliciesRequest> _parser = new pb::MessageParser<AnalyzeOrgPoliciesRequest>(() => new AnalyzeOrgPoliciesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPoliciesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[54]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesRequest(AnalyzeOrgPoliciesRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      scope_ = other.scope_;
+      constraint_ = other.constraint_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesRequest Clone() {
+      return new AnalyzeOrgPoliciesRequest(this);
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 1;
+    private string scope_ = "";
+    /// <summary>
+    /// Required. The organization to scope the request. Only organization
+    /// policies within the scope will be analyzed.
+    ///
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private string constraint_ = "";
+    /// <summary>
+    /// Required. The name of the constraint to analyze organization policies for.
+    /// The response only contains analyzed organization policies for the provided
+    /// constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 3;
+    private string filter_ = "";
+    /// <summary>
+    /// The expression to filter
+    /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results].
+    /// The only supported field is `consolidated_policy.attached_resource`, and
+    /// the only supported operator is `=`.
+    ///
+    /// Example:
+    /// consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
+    /// will return the org policy results of"folders/001".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 4;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of items to return per page. If unspecified,
+    /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results]
+    /// will contain 20 items with a maximum of 200.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        pageSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "page_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPageSize {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "page_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPageSize() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 5;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The pagination token to retrieve the next page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPoliciesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPoliciesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Scope != other.Scope) return false;
+      if (Constraint != other.Constraint) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
+      if (Constraint.Length != 0) hash ^= Constraint.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (HasPageSize) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
+      }
+      if (Constraint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Constraint);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (HasPageSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPoliciesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
+      }
+      if (other.Constraint.Length != 0) {
+        Constraint = other.Constraint;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.HasPageSize) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// [AssetService.AnalyzeOrgPolicies][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPoliciesResponse : pb::IMessage<AnalyzeOrgPoliciesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPoliciesResponse> _parser = new pb::MessageParser<AnalyzeOrgPoliciesResponse>(() => new AnalyzeOrgPoliciesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPoliciesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[55]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesResponse(AnalyzeOrgPoliciesResponse other) : this() {
+      orgPolicyResults_ = other.orgPolicyResults_.Clone();
+      constraint_ = other.constraint_ != null ? other.constraint_.Clone() : null;
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPoliciesResponse Clone() {
+      return new AnalyzeOrgPoliciesResponse(this);
+    }
+
+    /// <summary>Field number for the "org_policy_results" field.</summary>
+    public const int OrgPolicyResultsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> _repeated_orgPolicyResults_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> orgPolicyResults_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult>();
+    /// <summary>
+    /// The organization policies under the
+    /// [AnalyzeOrgPoliciesRequest.scope][google.cloud.asset.v1.AnalyzeOrgPoliciesRequest.scope]
+    /// with the
+    /// [AnalyzeOrgPoliciesRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPoliciesRequest.constraint].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult> OrgPolicyResults {
+      get { return orgPolicyResults_; }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint constraint_;
+    /// <summary>
+    /// The definition of the constraint in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 3;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The page token to fetch the next page for
+    /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPoliciesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPoliciesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!orgPolicyResults_.Equals(other.orgPolicyResults_)) return false;
+      if (!object.Equals(Constraint, other.Constraint)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= orgPolicyResults_.GetHashCode();
+      if (constraint_ != null) hash ^= Constraint.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      orgPolicyResults_.WriteTo(output, _repeated_orgPolicyResults_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      orgPolicyResults_.WriteTo(ref output, _repeated_orgPolicyResults_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += orgPolicyResults_.CalculateSize(_repeated_orgPolicyResults_codec);
+      if (constraint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPoliciesResponse other) {
+      if (other == null) {
+        return;
+      }
+      orgPolicyResults_.Add(other.orgPolicyResults_);
+      if (other.constraint_ != null) {
+        if (constraint_ == null) {
+          Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+        }
+        Constraint.MergeFrom(other.Constraint);
+      }
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            orgPolicyResults_.AddEntriesFrom(input, _repeated_orgPolicyResults_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            orgPolicyResults_.AddEntriesFrom(ref input, _repeated_orgPolicyResults_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzeOrgPoliciesResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The organization policy result to the query.
+      /// </summary>
+      public sealed partial class OrgPolicyResult : pb::IMessage<OrgPolicyResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OrgPolicyResult> _parser = new pb::MessageParser<OrgPolicyResult>(() => new OrgPolicyResult());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OrgPolicyResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrgPolicyResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrgPolicyResult(OrgPolicyResult other) : this() {
+          consolidatedPolicy_ = other.consolidatedPolicy_ != null ? other.consolidatedPolicy_.Clone() : null;
+          policyBundle_ = other.policyBundle_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrgPolicyResult Clone() {
+          return new OrgPolicyResult(this);
+        }
+
+        /// <summary>Field number for the "consolidated_policy" field.</summary>
+        public const int ConsolidatedPolicyFieldNumber = 1;
+        private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy consolidatedPolicy_;
+        /// <summary>
+        /// The consolidated organization policy for the analyzed resource. The
+        /// consolidated organization policy is computed by merging and evaluating
+        /// [AnalyzeOrgPoliciesResponse.policy_bundle][].
+        /// The evaluation will respect the organization policy [hierarchy
+        /// rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-hierarchy).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy ConsolidatedPolicy {
+          get { return consolidatedPolicy_; }
+          set {
+            consolidatedPolicy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "policy_bundle" field.</summary>
+        public const int PolicyBundleFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> _repeated_policyBundle_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> policyBundle_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy>();
+        /// <summary>
+        /// The ordered list of all organization policies from the
+        /// [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][].
+        /// to the scope specified in the request.
+        ///
+        /// If the constraint is defined with default policy, it will also appear in
+        /// the list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> PolicyBundle {
+          get { return policyBundle_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OrgPolicyResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OrgPolicyResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ConsolidatedPolicy, other.ConsolidatedPolicy)) return false;
+          if(!policyBundle_.Equals(other.policyBundle_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (consolidatedPolicy_ != null) hash ^= ConsolidatedPolicy.GetHashCode();
+          hash ^= policyBundle_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(ref output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (consolidatedPolicy_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsolidatedPolicy);
+          }
+          size += policyBundle_.CalculateSize(_repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OrgPolicyResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.consolidatedPolicy_ != null) {
+            if (consolidatedPolicy_ == null) {
+              ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+            }
+            ConsolidatedPolicy.MergeFrom(other.ConsolidatedPolicy);
+          }
+          policyBundle_.Add(other.policyBundle_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 18: {
+                policyBundle_.AddEntriesFrom(input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 18: {
+                policyBundle_.AddEntriesFrom(ref input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for
+  /// [AssetService.AnalyzeOrgPolicyGovernedContainers][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPolicyGovernedContainersRequest : pb::IMessage<AnalyzeOrgPolicyGovernedContainersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPolicyGovernedContainersRequest> _parser = new pb::MessageParser<AnalyzeOrgPolicyGovernedContainersRequest>(() => new AnalyzeOrgPolicyGovernedContainersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPolicyGovernedContainersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[56]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersRequest(AnalyzeOrgPolicyGovernedContainersRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      scope_ = other.scope_;
+      constraint_ = other.constraint_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersRequest Clone() {
+      return new AnalyzeOrgPolicyGovernedContainersRequest(this);
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 1;
+    private string scope_ = "";
+    /// <summary>
+    /// Required. The organization to scope the request. Only organization
+    /// policies within the scope will be analyzed. The output containers will
+    /// also be limited to the ones governed by those in-scope organization
+    /// policies.
+    ///
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private string constraint_ = "";
+    /// <summary>
+    /// Required. The name of the constraint to analyze governed containers for.
+    /// The analysis only contains organization policies for the provided
+    /// constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 3;
+    private string filter_ = "";
+    /// <summary>
+    /// The expression to filter the governed containers in result.
+    /// The only supported field is `parent`, and the only supported operator is
+    /// `=`.
+    ///
+    /// Example:
+    /// parent="//cloudresourcemanager.googleapis.com/folders/001" will return all
+    /// containers under "folders/001".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 4;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of items to return per page. If unspecified,
+    /// [AnalyzeOrgPolicyGovernedContainersResponse.governed_containers][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.governed_containers]
+    /// will contain 100 items with a maximum of 200.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        pageSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "page_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPageSize {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "page_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPageSize() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 5;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The pagination token to retrieve the next page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPolicyGovernedContainersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPolicyGovernedContainersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Scope != other.Scope) return false;
+      if (Constraint != other.Constraint) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
+      if (Constraint.Length != 0) hash ^= Constraint.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (HasPageSize) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
+      }
+      if (Constraint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Constraint);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (HasPageSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPolicyGovernedContainersRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
+      }
+      if (other.Constraint.Length != 0) {
+        Constraint = other.Constraint;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.HasPageSize) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// [AssetService.AnalyzeOrgPolicyGovernedContainers][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPolicyGovernedContainersResponse : pb::IMessage<AnalyzeOrgPolicyGovernedContainersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPolicyGovernedContainersResponse> _parser = new pb::MessageParser<AnalyzeOrgPolicyGovernedContainersResponse>(() => new AnalyzeOrgPolicyGovernedContainersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPolicyGovernedContainersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[57]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersResponse(AnalyzeOrgPolicyGovernedContainersResponse other) : this() {
+      governedContainers_ = other.governedContainers_.Clone();
+      constraint_ = other.constraint_ != null ? other.constraint_.Clone() : null;
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedContainersResponse Clone() {
+      return new AnalyzeOrgPolicyGovernedContainersResponse(this);
+    }
+
+    /// <summary>Field number for the "governed_containers" field.</summary>
+    public const int GovernedContainersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> _repeated_governedContainers_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> governedContainers_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer>();
+    /// <summary>
+    /// The list of the analyzed governed containers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer> GovernedContainers {
+      get { return governedContainers_; }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint constraint_;
+    /// <summary>
+    /// The definition of the constraint in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 3;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The page token to fetch the next page for
+    /// [AnalyzeOrgPolicyGovernedContainersResponse.governed_containers][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.governed_containers].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPolicyGovernedContainersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPolicyGovernedContainersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!governedContainers_.Equals(other.governedContainers_)) return false;
+      if (!object.Equals(Constraint, other.Constraint)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= governedContainers_.GetHashCode();
+      if (constraint_ != null) hash ^= Constraint.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      governedContainers_.WriteTo(output, _repeated_governedContainers_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      governedContainers_.WriteTo(ref output, _repeated_governedContainers_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += governedContainers_.CalculateSize(_repeated_governedContainers_codec);
+      if (constraint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPolicyGovernedContainersResponse other) {
+      if (other == null) {
+        return;
+      }
+      governedContainers_.Add(other.governedContainers_);
+      if (other.constraint_ != null) {
+        if (constraint_ == null) {
+          Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+        }
+        Constraint.MergeFrom(other.Constraint);
+      }
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            governedContainers_.AddEntriesFrom(input, _repeated_governedContainers_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            governedContainers_.AddEntriesFrom(ref input, _repeated_governedContainers_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzeOrgPolicyGovernedContainersResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The organization/folder/project resource governed by organization policies
+      /// of
+      /// [AnalyzeOrgPolicyGovernedContainersRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersRequest.constraint].
+      /// </summary>
+      public sealed partial class GovernedContainer : pb::IMessage<GovernedContainer>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GovernedContainer> _parser = new pb::MessageParser<GovernedContainer>(() => new GovernedContainer());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GovernedContainer> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedContainer() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedContainer(GovernedContainer other) : this() {
+          fullResourceName_ = other.fullResourceName_;
+          parent_ = other.parent_;
+          consolidatedPolicy_ = other.consolidatedPolicy_ != null ? other.consolidatedPolicy_.Clone() : null;
+          policyBundle_ = other.policyBundle_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedContainer Clone() {
+          return new GovernedContainer(this);
+        }
+
+        /// <summary>Field number for the "full_resource_name" field.</summary>
+        public const int FullResourceNameFieldNumber = 1;
+        private string fullResourceName_ = "";
+        /// <summary>
+        /// The [full resource name]
+        /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+        /// an organization/folder/project resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FullResourceName {
+          get { return fullResourceName_; }
+          set {
+            fullResourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "parent" field.</summary>
+        public const int ParentFieldNumber = 2;
+        private string parent_ = "";
+        /// <summary>
+        /// The [full resource name]
+        /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+        /// the parent of
+        /// [AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.full_resource_name][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.full_resource_name].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Parent {
+          get { return parent_; }
+          set {
+            parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "consolidated_policy" field.</summary>
+        public const int ConsolidatedPolicyFieldNumber = 3;
+        private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy consolidatedPolicy_;
+        /// <summary>
+        /// The consolidated organization policy for the analyzed resource. The
+        /// consolidated organization policy is computed by merging and evaluating
+        /// [AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.policy_bundle][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.policy_bundle].
+        /// The evaluation will respect the organization policy [hierarchy
+        /// rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-hierarchy).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy ConsolidatedPolicy {
+          get { return consolidatedPolicy_; }
+          set {
+            consolidatedPolicy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "policy_bundle" field.</summary>
+        public const int PolicyBundleFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> _repeated_policyBundle_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> policyBundle_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy>();
+        /// <summary>
+        /// The ordered list of all organization policies from the
+        /// [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][].
+        /// to the scope specified in the request.
+        ///
+        /// If the constraint is defined with default policy, it will also appear in
+        /// the list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> PolicyBundle {
+          get { return policyBundle_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GovernedContainer);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GovernedContainer other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FullResourceName != other.FullResourceName) return false;
+          if (Parent != other.Parent) return false;
+          if (!object.Equals(ConsolidatedPolicy, other.ConsolidatedPolicy)) return false;
+          if(!policyBundle_.Equals(other.policyBundle_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FullResourceName.Length != 0) hash ^= FullResourceName.GetHashCode();
+          if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+          if (consolidatedPolicy_ != null) hash ^= ConsolidatedPolicy.GetHashCode();
+          hash ^= policyBundle_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Parent);
+          }
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Parent);
+          }
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(ref output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (FullResourceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+          }
+          if (consolidatedPolicy_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsolidatedPolicy);
+          }
+          size += policyBundle_.CalculateSize(_repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GovernedContainer other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FullResourceName.Length != 0) {
+            FullResourceName = other.FullResourceName;
+          }
+          if (other.Parent.Length != 0) {
+            Parent = other.Parent;
+          }
+          if (other.consolidatedPolicy_ != null) {
+            if (consolidatedPolicy_ == null) {
+              ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+            }
+            ConsolidatedPolicy.MergeFrom(other.ConsolidatedPolicy);
+          }
+          policyBundle_.Add(other.policyBundle_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Parent = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 34: {
+                policyBundle_.AddEntriesFrom(input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Parent = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 34: {
+                policyBundle_.AddEntriesFrom(ref input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for
+  /// [AssetService.AnalyzeOrgPolicyGovernedAssets][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPolicyGovernedAssetsRequest : pb::IMessage<AnalyzeOrgPolicyGovernedAssetsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsRequest> _parser = new pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsRequest>(() => new AnalyzeOrgPolicyGovernedAssetsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[58]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsRequest(AnalyzeOrgPolicyGovernedAssetsRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      scope_ = other.scope_;
+      constraint_ = other.constraint_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsRequest Clone() {
+      return new AnalyzeOrgPolicyGovernedAssetsRequest(this);
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 1;
+    private string scope_ = "";
+    /// <summary>
+    /// Required. The organization to scope the request. Only organization
+    /// policies within the scope will be analyzed. The output assets will
+    /// also be limited to the ones governed by those in-scope organization
+    /// policies.
+    ///
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private string constraint_ = "";
+    /// <summary>
+    /// Required. The name of the constraint to analyze governed assets for. The
+    /// analysis only contains analyzed organization policies for the provided
+    /// constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 3;
+    private string filter_ = "";
+    /// <summary>
+    /// The expression to filter the governed assets in result. The only supported
+    /// fields for governed resources are `governed_resource.project` and
+    /// `governed_resource.folders`. The only supported fields for governed iam
+    /// policies are `governed_iam_policy.project` and
+    /// `governed_iam_policy.folders`. The only supported operator is `=`.
+    ///
+    /// Example 1: governed_resource.project="projects/12345678" filter will return
+    /// all governed resources under projects/12345678 including the project
+    /// ifself, if applicable.
+    ///
+    /// Example 2: governed_iam_policy.folders="folders/12345678" filter will
+    /// return all governed iam policies under folders/12345678, if applicable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 4;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of items to return per page. If unspecified,
+    /// [AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets]
+    /// will contain 100 items with a maximum of 200.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        pageSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "page_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPageSize {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "page_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPageSize() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 5;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The pagination token to retrieve the next page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPolicyGovernedAssetsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPolicyGovernedAssetsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Scope != other.Scope) return false;
+      if (Constraint != other.Constraint) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
+      if (Constraint.Length != 0) hash ^= Constraint.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (HasPageSize) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (Constraint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Constraint);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (HasPageSize) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
+      }
+      if (Constraint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Constraint);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (HasPageSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPolicyGovernedAssetsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
+      }
+      if (other.Constraint.Length != 0) {
+        Constraint = other.Constraint;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.HasPageSize) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            Constraint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// [AssetService.AnalyzeOrgPolicyGovernedAssets][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets].
+  /// </summary>
+  public sealed partial class AnalyzeOrgPolicyGovernedAssetsResponse : pb::IMessage<AnalyzeOrgPolicyGovernedAssetsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsResponse> _parser = new pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsResponse>(() => new AnalyzeOrgPolicyGovernedAssetsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnalyzeOrgPolicyGovernedAssetsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[59]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsResponse(AnalyzeOrgPolicyGovernedAssetsResponse other) : this() {
+      governedAssets_ = other.governedAssets_.Clone();
+      constraint_ = other.constraint_ != null ? other.constraint_.Clone() : null;
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnalyzeOrgPolicyGovernedAssetsResponse Clone() {
+      return new AnalyzeOrgPolicyGovernedAssetsResponse(this);
+    }
+
+    /// <summary>Field number for the "governed_assets" field.</summary>
+    public const int GovernedAssetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> _repeated_governedAssets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> governedAssets_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset>();
+    /// <summary>
+    /// The list of the analyzed governed assets.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset> GovernedAssets {
+      get { return governedAssets_; }
+    }
+
+    /// <summary>Field number for the "constraint" field.</summary>
+    public const int ConstraintFieldNumber = 2;
+    private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint constraint_;
+    /// <summary>
+    /// The definition of the constraint in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint Constraint {
+      get { return constraint_; }
+      set {
+        constraint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 3;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The page token to fetch the next page for
+    /// [AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeOrgPolicyGovernedAssetsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnalyzeOrgPolicyGovernedAssetsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!governedAssets_.Equals(other.governedAssets_)) return false;
+      if (!object.Equals(Constraint, other.Constraint)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= governedAssets_.GetHashCode();
+      if (constraint_ != null) hash ^= Constraint.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      governedAssets_.WriteTo(output, _repeated_governedAssets_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      governedAssets_.WriteTo(ref output, _repeated_governedAssets_codec);
+      if (constraint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += governedAssets_.CalculateSize(_repeated_governedAssets_codec);
+      if (constraint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Constraint);
+      }
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnalyzeOrgPolicyGovernedAssetsResponse other) {
+      if (other == null) {
+        return;
+      }
+      governedAssets_.Add(other.governedAssets_);
+      if (other.constraint_ != null) {
+        if (constraint_ == null) {
+          Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+        }
+        Constraint.MergeFrom(other.Constraint);
+      }
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            governedAssets_.AddEntriesFrom(input, _repeated_governedAssets_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            governedAssets_.AddEntriesFrom(ref input, _repeated_governedAssets_codec);
+            break;
+          }
+          case 18: {
+            if (constraint_ == null) {
+              Constraint = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint();
+            }
+            input.ReadMessage(Constraint);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzeOrgPolicyGovernedAssetsResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The Google Cloud resources governed by the organization policies of the
+      /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
+      /// </summary>
+      public sealed partial class GovernedResource : pb::IMessage<GovernedResource>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GovernedResource> _parser = new pb::MessageParser<GovernedResource>(() => new GovernedResource());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GovernedResource> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedResource() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedResource(GovernedResource other) : this() {
+          fullResourceName_ = other.fullResourceName_;
+          parent_ = other.parent_;
+          project_ = other.project_;
+          folders_ = other.folders_.Clone();
+          organization_ = other.organization_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedResource Clone() {
+          return new GovernedResource(this);
+        }
+
+        /// <summary>Field number for the "full_resource_name" field.</summary>
+        public const int FullResourceNameFieldNumber = 1;
+        private string fullResourceName_ = "";
+        /// <summary>
+        /// The [full resource name]
+        /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+        /// the Google Cloud resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FullResourceName {
+          get { return fullResourceName_; }
+          set {
+            fullResourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "parent" field.</summary>
+        public const int ParentFieldNumber = 2;
+        private string parent_ = "";
+        /// <summary>
+        /// The [full resource name]
+        /// (https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+        /// the parent of
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Parent {
+          get { return parent_; }
+          set {
+            parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "project" field.</summary>
+        public const int ProjectFieldNumber = 5;
+        private string project_ = "";
+        /// <summary>
+        /// The project that this resource belongs to, in the form of
+        /// projects/{PROJECT_NUMBER}. This field is available when the resource
+        /// belongs to a project.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Project {
+          get { return project_; }
+          set {
+            project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "folders" field.</summary>
+        public const int FoldersFieldNumber = 6;
+        private static readonly pb::FieldCodec<string> _repeated_folders_codec
+            = pb::FieldCodec.ForString(50);
+        private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The folder(s) that this resource belongs to, in the form of
+        /// folders/{FOLDER_NUMBER}. This field is available when the resource
+        /// belongs(directly or cascadingly) to one or more folders.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Folders {
+          get { return folders_; }
+        }
+
+        /// <summary>Field number for the "organization" field.</summary>
+        public const int OrganizationFieldNumber = 7;
+        private string organization_ = "";
+        /// <summary>
+        /// The organization that this resource belongs to, in the form of
+        /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
+        /// resource belongs(directly or cascadingly) to an organization.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Organization {
+          get { return organization_; }
+          set {
+            organization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GovernedResource);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GovernedResource other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FullResourceName != other.FullResourceName) return false;
+          if (Parent != other.Parent) return false;
+          if (Project != other.Project) return false;
+          if(!folders_.Equals(other.folders_)) return false;
+          if (Organization != other.Organization) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FullResourceName.Length != 0) hash ^= FullResourceName.GetHashCode();
+          if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+          if (Project.Length != 0) hash ^= Project.GetHashCode();
+          hash ^= folders_.GetHashCode();
+          if (Organization.Length != 0) hash ^= Organization.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Parent);
+          }
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Parent);
+          }
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(ref output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (FullResourceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FullResourceName);
+          }
+          if (Parent.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+          }
+          if (Project.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+          }
+          size += folders_.CalculateSize(_repeated_folders_codec);
+          if (Organization.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GovernedResource other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FullResourceName.Length != 0) {
+            FullResourceName = other.FullResourceName;
+          }
+          if (other.Parent.Length != 0) {
+            Parent = other.Parent;
+          }
+          if (other.Project.Length != 0) {
+            Project = other.Project;
+          }
+          folders_.Add(other.folders_);
+          if (other.Organization.Length != 0) {
+            Organization = other.Organization;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Parent = input.ReadString();
+                break;
+              }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Parent = input.ReadString();
+                break;
+              }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The IAM policies governed by the organization policies of the
+      /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
+      /// </summary>
+      public sealed partial class GovernedIamPolicy : pb::IMessage<GovernedIamPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GovernedIamPolicy> _parser = new pb::MessageParser<GovernedIamPolicy>(() => new GovernedIamPolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GovernedIamPolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedIamPolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedIamPolicy(GovernedIamPolicy other) : this() {
+          attachedResource_ = other.attachedResource_;
+          policy_ = other.policy_ != null ? other.policy_.Clone() : null;
+          project_ = other.project_;
+          folders_ = other.folders_.Clone();
+          organization_ = other.organization_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedIamPolicy Clone() {
+          return new GovernedIamPolicy(this);
+        }
+
+        /// <summary>Field number for the "attached_resource" field.</summary>
+        public const int AttachedResourceFieldNumber = 1;
+        private string attachedResource_ = "";
+        /// <summary>
+        /// The full resource name of the resource associated with this IAM policy.
+        /// Example:
+        /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
+        /// See [Cloud Asset Inventory Resource Name
+        /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
+        /// for more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AttachedResource {
+          get { return attachedResource_; }
+          set {
+            attachedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "policy" field.</summary>
+        public const int PolicyFieldNumber = 2;
+        private global::Google.Cloud.Iam.V1.Policy policy_;
+        /// <summary>
+        /// The IAM policy directly set on the given resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Iam.V1.Policy Policy {
+          get { return policy_; }
+          set {
+            policy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "project" field.</summary>
+        public const int ProjectFieldNumber = 5;
+        private string project_ = "";
+        /// <summary>
+        /// The project that this IAM policy belongs to, in the form of
+        /// projects/{PROJECT_NUMBER}. This field is available when the IAM policy
+        /// belongs to a project.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Project {
+          get { return project_; }
+          set {
+            project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "folders" field.</summary>
+        public const int FoldersFieldNumber = 6;
+        private static readonly pb::FieldCodec<string> _repeated_folders_codec
+            = pb::FieldCodec.ForString(50);
+        private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The folder(s) that this IAM policy belongs to, in the form of
+        /// folders/{FOLDER_NUMBER}. This field is available when the IAM policy
+        /// belongs(directly or cascadingly) to one or more folders.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Folders {
+          get { return folders_; }
+        }
+
+        /// <summary>Field number for the "organization" field.</summary>
+        public const int OrganizationFieldNumber = 7;
+        private string organization_ = "";
+        /// <summary>
+        /// The organization that this IAM policy belongs to, in the form of
+        /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
+        /// IAM policy belongs(directly or cascadingly) to an organization.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Organization {
+          get { return organization_; }
+          set {
+            organization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GovernedIamPolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GovernedIamPolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AttachedResource != other.AttachedResource) return false;
+          if (!object.Equals(Policy, other.Policy)) return false;
+          if (Project != other.Project) return false;
+          if(!folders_.Equals(other.folders_)) return false;
+          if (Organization != other.Organization) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AttachedResource.Length != 0) hash ^= AttachedResource.GetHashCode();
+          if (policy_ != null) hash ^= Policy.GetHashCode();
+          if (Project.Length != 0) hash ^= Project.GetHashCode();
+          hash ^= folders_.GetHashCode();
+          if (Organization.Length != 0) hash ^= Organization.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AttachedResource.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AttachedResource);
+          }
+          if (policy_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Policy);
+          }
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AttachedResource.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AttachedResource);
+          }
+          if (policy_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Policy);
+          }
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(ref output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AttachedResource.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AttachedResource);
+          }
+          if (policy_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Policy);
+          }
+          if (Project.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+          }
+          size += folders_.CalculateSize(_repeated_folders_codec);
+          if (Organization.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GovernedIamPolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AttachedResource.Length != 0) {
+            AttachedResource = other.AttachedResource;
+          }
+          if (other.policy_ != null) {
+            if (policy_ == null) {
+              Policy = new global::Google.Cloud.Iam.V1.Policy();
+            }
+            Policy.MergeFrom(other.Policy);
+          }
+          if (other.Project.Length != 0) {
+            Project = other.Project;
+          }
+          folders_.Add(other.folders_);
+          if (other.Organization.Length != 0) {
+            Organization = other.Organization;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                AttachedResource = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (policy_ == null) {
+                  Policy = new global::Google.Cloud.Iam.V1.Policy();
+                }
+                input.ReadMessage(Policy);
+                break;
+              }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                AttachedResource = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (policy_ == null) {
+                  Policy = new global::Google.Cloud.Iam.V1.Policy();
+                }
+                input.ReadMessage(Policy);
+                break;
+              }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents a Google Cloud asset(resource or IAM policy) governed by the
+      /// organization policies of the
+      /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
+      /// </summary>
+      public sealed partial class GovernedAsset : pb::IMessage<GovernedAsset>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GovernedAsset> _parser = new pb::MessageParser<GovernedAsset>(() => new GovernedAsset());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GovernedAsset> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedAsset() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedAsset(GovernedAsset other) : this() {
+          consolidatedPolicy_ = other.consolidatedPolicy_ != null ? other.consolidatedPolicy_.Clone() : null;
+          policyBundle_ = other.policyBundle_.Clone();
+          switch (other.GovernedAssetCase) {
+            case GovernedAssetOneofCase.GovernedResource:
+              GovernedResource = other.GovernedResource.Clone();
+              break;
+            case GovernedAssetOneofCase.GovernedIamPolicy:
+              GovernedIamPolicy = other.GovernedIamPolicy.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedAsset Clone() {
+          return new GovernedAsset(this);
+        }
+
+        /// <summary>Field number for the "governed_resource" field.</summary>
+        public const int GovernedResourceFieldNumber = 1;
+        /// <summary>
+        /// A Google Cloud resource governed by the organization
+        /// policies of the
+        /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource GovernedResource {
+          get { return governedAssetCase_ == GovernedAssetOneofCase.GovernedResource ? (global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource) governedAsset_ : null; }
+          set {
+            governedAsset_ = value;
+            governedAssetCase_ = value == null ? GovernedAssetOneofCase.None : GovernedAssetOneofCase.GovernedResource;
+          }
+        }
+
+        /// <summary>Field number for the "governed_iam_policy" field.</summary>
+        public const int GovernedIamPolicyFieldNumber = 2;
+        /// <summary>
+        /// An IAM policy governed by the organization
+        /// policies of the
+        /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy GovernedIamPolicy {
+          get { return governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy ? (global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy) governedAsset_ : null; }
+          set {
+            governedAsset_ = value;
+            governedAssetCase_ = value == null ? GovernedAssetOneofCase.None : GovernedAssetOneofCase.GovernedIamPolicy;
+          }
+        }
+
+        /// <summary>Field number for the "consolidated_policy" field.</summary>
+        public const int ConsolidatedPolicyFieldNumber = 3;
+        private global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy consolidatedPolicy_;
+        /// <summary>
+        /// The consolidated policy for the analyzed asset. The consolidated
+        /// policy is computed by merging and evaluating
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.policy_bundle][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.policy_bundle].
+        /// The evaluation will respect the organization policy [hierarchy
+        /// rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-hierarchy).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy ConsolidatedPolicy {
+          get { return consolidatedPolicy_; }
+          set {
+            consolidatedPolicy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "policy_bundle" field.</summary>
+        public const int PolicyBundleFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> _repeated_policyBundle_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> policyBundle_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy>();
+        /// <summary>
+        /// The ordered list of all organization policies from the
+        /// [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
+        /// to the scope specified in the request.
+        ///
+        /// If the constraint is defined with default policy, it will also appear in
+        /// the list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy> PolicyBundle {
+          get { return policyBundle_; }
+        }
+
+        private object governedAsset_;
+        /// <summary>Enum of possible cases for the "governed_asset" oneof.</summary>
+        public enum GovernedAssetOneofCase {
+          None = 0,
+          GovernedResource = 1,
+          GovernedIamPolicy = 2,
+        }
+        private GovernedAssetOneofCase governedAssetCase_ = GovernedAssetOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GovernedAssetOneofCase GovernedAssetCase {
+          get { return governedAssetCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGovernedAsset() {
+          governedAssetCase_ = GovernedAssetOneofCase.None;
+          governedAsset_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GovernedAsset);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GovernedAsset other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(GovernedResource, other.GovernedResource)) return false;
+          if (!object.Equals(GovernedIamPolicy, other.GovernedIamPolicy)) return false;
+          if (!object.Equals(ConsolidatedPolicy, other.ConsolidatedPolicy)) return false;
+          if(!policyBundle_.Equals(other.policyBundle_)) return false;
+          if (GovernedAssetCase != other.GovernedAssetCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) hash ^= GovernedResource.GetHashCode();
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) hash ^= GovernedIamPolicy.GetHashCode();
+          if (consolidatedPolicy_ != null) hash ^= ConsolidatedPolicy.GetHashCode();
+          hash ^= policyBundle_.GetHashCode();
+          hash ^= (int) governedAssetCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GovernedResource);
+          }
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) {
+            output.WriteRawTag(18);
+            output.WriteMessage(GovernedIamPolicy);
+          }
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GovernedResource);
+          }
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) {
+            output.WriteRawTag(18);
+            output.WriteMessage(GovernedIamPolicy);
+          }
+          if (consolidatedPolicy_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ConsolidatedPolicy);
+          }
+          policyBundle_.WriteTo(ref output, _repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GovernedResource);
+          }
+          if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GovernedIamPolicy);
+          }
+          if (consolidatedPolicy_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsolidatedPolicy);
+          }
+          size += policyBundle_.CalculateSize(_repeated_policyBundle_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GovernedAsset other) {
+          if (other == null) {
+            return;
+          }
+          if (other.consolidatedPolicy_ != null) {
+            if (consolidatedPolicy_ == null) {
+              ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+            }
+            ConsolidatedPolicy.MergeFrom(other.ConsolidatedPolicy);
+          }
+          policyBundle_.Add(other.policyBundle_);
+          switch (other.GovernedAssetCase) {
+            case GovernedAssetOneofCase.GovernedResource:
+              if (GovernedResource == null) {
+                GovernedResource = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource();
+              }
+              GovernedResource.MergeFrom(other.GovernedResource);
+              break;
+            case GovernedAssetOneofCase.GovernedIamPolicy:
+              if (GovernedIamPolicy == null) {
+                GovernedIamPolicy = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy();
+              }
+              GovernedIamPolicy.MergeFrom(other.GovernedIamPolicy);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource subBuilder = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource();
+                if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) {
+                  subBuilder.MergeFrom(GovernedResource);
+                }
+                input.ReadMessage(subBuilder);
+                GovernedResource = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy subBuilder = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy();
+                if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) {
+                  subBuilder.MergeFrom(GovernedIamPolicy);
+                }
+                input.ReadMessage(subBuilder);
+                GovernedIamPolicy = subBuilder;
+                break;
+              }
+              case 26: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 34: {
+                policyBundle_.AddEntriesFrom(input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource subBuilder = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource();
+                if (governedAssetCase_ == GovernedAssetOneofCase.GovernedResource) {
+                  subBuilder.MergeFrom(GovernedResource);
+                }
+                input.ReadMessage(subBuilder);
+                GovernedResource = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy subBuilder = new global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy();
+                if (governedAssetCase_ == GovernedAssetOneofCase.GovernedIamPolicy) {
+                  subBuilder.MergeFrom(GovernedIamPolicy);
+                }
+                input.ReadMessage(subBuilder);
+                GovernedIamPolicy = subBuilder;
+                break;
+              }
+              case 26: {
+                if (consolidatedPolicy_ == null) {
+                  ConsolidatedPolicy = new global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy();
+                }
+                input.ReadMessage(ConsolidatedPolicy);
+                break;
+              }
+              case 34: {
+                policyBundle_.AddEntriesFrom(ref input, _repeated_policyBundle_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
