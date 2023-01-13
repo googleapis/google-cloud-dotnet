@@ -302,3 +302,30 @@ The release manager tool has a batch release command for this
 purpose. This is a relatively advanced usage scenario, and is
 documented [alongside the source
 code](tools/Google.Cloud.Tools.ReleaseManager/BatchRelease/README.md).
+
+## Updating the .NET SDK
+
+Periodically, we need to update the version of the .NET SDK we use
+for building. This might be to gain access to new C# features, or
+due to security patches being available. This must be done carefully
+in order to avoid other processes breaking. Only start this process
+when you are confident that all the steps below can be completed in
+a reasonable timeframe.
+
+1. Update internal CI systems to include the new SDK.
+1. Create a PR with the following changes:
+   1. Update `global.json` to specify the .NET release version required.
+   1. Edit [owl-bot-post-processor/Dockerfile](owl-bot-post-processor/Dockerfile)
+      to change the base image.
+   1. For new *major* SDK versions, update GitHub actions
+1. Merge the above PR. 
+1. Wait for a new image to be created automatically in
+   [gcr.io/cloud-devrel-public-resources/owlbot-dotnet](https://gcr.io/cloud-devrel-public-resources/owlbot-dotnet)
+1. Create a PR to edit [.github/.OwlBot.lock.yaml](.github/.OwlBot.lock.yaml),
+   specifying the new image hash
+1. Merge the above PR.
+1. If there are any outstanding OwlBot PRs, for each PR:
+   1. Fetch the PR locally
+   1. Rebase it to `main` (which now has the updated lockfile)
+   1. Force-push back to the PR branch
+   1. Add the `owlbot:run` label
