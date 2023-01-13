@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ namespace Google.Cloud.Storage.V1.CreateCommonTestBucket
             _client = StorageClient.Create();
         }
 
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             if (args.Length != 1)
             {

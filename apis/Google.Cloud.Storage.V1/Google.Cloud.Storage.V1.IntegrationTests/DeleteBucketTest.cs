@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,11 +16,10 @@ using Google.Apis.Storage.v1.Data;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using static TestHelpers;
-
     [Collection(nameof(StorageFixture))]
     public class DeleteBucketTest
     {

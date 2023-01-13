@@ -14,13 +14,13 @@
 
 using Google.Cloud.ClientTesting;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using System.Threading.Tasks;
-    using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
     public class CopyObjectTest

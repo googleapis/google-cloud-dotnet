@@ -23,11 +23,11 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
-    using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
     public class UploadObjectTest
