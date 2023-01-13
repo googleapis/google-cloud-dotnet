@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
-  /// Service for managing [KnowledgeBases][google.cloud.dialogflow.v2.KnowledgeBase].
+  /// Service for managing
+  /// [KnowledgeBases][google.cloud.dialogflow.v2.KnowledgeBase].
   /// </summary>
   public static partial class KnowledgeBases
   {

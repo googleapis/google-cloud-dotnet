@@ -297,7 +297,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>ConversationProfiles client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [ConversationProfiles][google.cloud.dialogflow.v2.ConversationProfile].
+    /// Service for managing
+    /// [ConversationProfiles][google.cloud.dialogflow.v2.ConversationProfile].
     /// </remarks>
     public abstract partial class ConversationProfilesClient
     {
@@ -677,7 +678,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -690,7 +692,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -703,7 +706,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -716,7 +720,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -739,7 +744,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -762,7 +768,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -781,7 +788,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -804,7 +812,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -827,7 +836,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -846,7 +856,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -869,7 +880,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -892,7 +904,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="parent">
         /// Required. The project to create a conversation profile for.
@@ -911,7 +924,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -924,7 +938,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -937,7 +952,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -950,7 +966,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to update.
@@ -972,7 +989,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to update.
@@ -994,7 +1012,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The conversation profile to update.
@@ -1134,8 +1153,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1158,8 +1179,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1182,8 +1205,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1233,8 +1258,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1264,8 +1291,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1295,8 +1324,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1321,8 +1352,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1338,8 +1371,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1355,8 +1390,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1399,8 +1436,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
@@ -1423,8 +1462,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
@@ -1447,8 +1488,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="conversationProfile">
         /// Required. The Conversation Profile to add or update the suggestion feature
@@ -1463,7 +1506,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>ConversationProfiles client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [ConversationProfiles][google.cloud.dialogflow.v2.ConversationProfile].
+    /// Service for managing
+    /// [ConversationProfiles][google.cloud.dialogflow.v2.ConversationProfile].
     /// </remarks>
     public sealed partial class ConversationProfilesClientImpl : ConversationProfilesClient
     {
@@ -1611,7 +1655,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1627,7 +1672,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1643,7 +1689,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1659,7 +1706,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// [ConversationProfile.CreateTime][] and [ConversationProfile.UpdateTime][]
         /// aren't populated in the response. You can retrieve them via
-        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile] API.
+        /// [GetConversationProfile][google.cloud.dialogflow.v2.ConversationProfiles.GetConversationProfile]
+        /// API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1707,8 +1755,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1734,8 +1784,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// 
         /// If a long running operation to add or update suggestion feature
         /// config for the same conversation profile, participant role and suggestion
@@ -1762,8 +1814,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1782,8 +1836,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
-        /// - `response`: [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

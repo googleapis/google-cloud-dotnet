@@ -156,7 +156,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>AnswerRecords client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
+    /// Service for managing
+    /// [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
     /// </remarks>
     public abstract partial class AnswerRecordsClient
     {
@@ -505,7 +506,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>AnswerRecords client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
+    /// Service for managing
+    /// [AnswerRecords][google.cloud.dialogflow.v2.AnswerRecord].
     /// </remarks>
     public sealed partial class AnswerRecordsClientImpl : AnswerRecordsClient
     {

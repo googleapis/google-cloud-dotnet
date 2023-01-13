@@ -140,8 +140,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
-      /// - `response`: [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
+      /// - `metadata`:
+      /// [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
+      /// - `response`:
+      /// [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -184,7 +186,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
+      /// - `metadata`:
+      /// [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
       /// - `response`: An [Empty
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       /// </summary>
@@ -206,8 +209,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
-      /// - `response`: [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
+      /// - `metadata`:
+      /// [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
+      /// - `response`:
+      /// [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -254,8 +259,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
-      /// - `response`: [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
+      /// - `metadata`:
+      /// [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
+      /// - `response`:
+      /// [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -274,8 +281,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
-      /// - `response`: [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
+      /// - `metadata`:
+      /// [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
+      /// - `response`:
+      /// [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -292,8 +301,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
-      /// - `response`: [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
+      /// - `metadata`:
+      /// [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
+      /// - `response`:
+      /// [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -312,8 +323,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
-      /// - `response`: [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
+      /// - `metadata`:
+      /// [CreateConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.CreateConversationDatasetOperationMetadata]
+      /// - `response`:
+      /// [ConversationDataset][google.cloud.dialogflow.v2.ConversationDataset]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -430,7 +443,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
+      /// - `metadata`:
+      /// [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
       /// - `response`: An [Empty
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       /// </summary>
@@ -451,7 +465,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
+      /// - `metadata`:
+      /// [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
       /// - `response`: An [Empty
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       /// </summary>
@@ -470,7 +485,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
+      /// - `metadata`:
+      /// [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
       /// - `response`: An [Empty
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       /// </summary>
@@ -491,7 +507,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
+      /// - `metadata`:
+      /// [DeleteConversationDatasetOperationMetadata][google.cloud.dialogflow.v2.DeleteConversationDatasetOperationMetadata]
       /// - `response`: An [Empty
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       /// </summary>
@@ -512,8 +529,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
-      /// - `response`: [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
+      /// - `metadata`:
+      /// [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
+      /// - `response`:
+      /// [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -534,8 +553,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
-      /// - `response`: [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
+      /// - `metadata`:
+      /// [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
+      /// - `response`:
+      /// [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -554,8 +575,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
-      /// - `response`: [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
+      /// - `metadata`:
+      /// [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
+      /// - `response`:
+      /// [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -576,8 +599,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
-      /// - `response`: [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
+      /// - `metadata`:
+      /// [ImportConversationDataOperationMetadata][google.cloud.dialogflow.v2.ImportConversationDataOperationMetadata]
+      /// - `response`:
+      /// [ImportConversationDataOperationResponse][google.cloud.dialogflow.v2.ImportConversationDataOperationResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

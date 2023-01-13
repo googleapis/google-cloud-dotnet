@@ -111,11 +111,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             "YU9wZXJhdGlvbk1ldGFkYXRhGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
             "Y29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
             "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxv",
-            "Z2Zsb3dCpwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIYQ29u",
-            "dmVyc2F0aW9uRGF0YXNldFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dm",
-            "bG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJv",
-            "dG8z"));
+            "Z2Zsb3dCoQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIYQ29u",
+            "dmVyc2F0aW9uRGF0YXNldFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEB",
+            "ogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.GcsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -189,9 +188,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// Optional. The language code of the conversation data within this dataset. See
-    /// https://cloud.google.com/apis/design/standard_fields for more information.
-    /// Supports all UTF-8 languages.
+    /// Optional. The language code of the conversation data within this dataset.
+    /// See https://cloud.google.com/apis/design/standard_fields for more
+    /// information. Supports all UTF-8 languages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -728,7 +727,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ConversationCountFieldNumber = 7;
     private long conversationCount_;
     /// <summary>
-    /// Output only. The number of conversations this conversation dataset contains.
+    /// Output only. The number of conversations this conversation dataset
+    /// contains.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1541,8 +1541,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project and location name to list all conversation datasets for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`
+    /// Required. The project and location name to list all conversation datasets
+    /// for. Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2190,7 +2190,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData].
+  /// The request message for
+  /// [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData].
   /// </summary>
   public sealed partial class ImportConversationDataRequest : pb::IMessage<ImportConversationDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2436,7 +2437,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Metadata for a [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData] operation.
+  /// Metadata for a
+  /// [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData]
+  /// operation.
   /// </summary>
   public sealed partial class ImportConversationDataOperationMetadata : pb::IMessage<ImportConversationDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2713,8 +2716,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Response used for [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData] long
-  /// running operation.
+  /// Response used for
+  /// [ConversationDatasets.ImportConversationData][google.cloud.dialogflow.v2.ConversationDatasets.ImportConversationData]
+  /// long running operation.
   /// </summary>
   public sealed partial class ImportConversationDataOperationResponse : pb::IMessage<ImportConversationDataOperationResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

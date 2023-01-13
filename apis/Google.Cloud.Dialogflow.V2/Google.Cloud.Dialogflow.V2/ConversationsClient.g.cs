@@ -52,6 +52,7 @@ namespace Google.Cloud.Dialogflow.V2
             GetConversationSettings = existing.GetConversationSettings;
             CompleteConversationSettings = existing.CompleteConversationSettings;
             ListMessagesSettings = existing.ListMessagesSettings;
+            SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -149,6 +150,25 @@ namespace Google.Cloud.Dialogflow.V2
         public gaxgrpc::CallSettings ListMessagesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.SuggestConversationSummary</c> and
+        /// <c>ConversationsClient.SuggestConversationSummaryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SuggestConversationSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -212,7 +232,8 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>Conversations client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Conversations][google.cloud.dialogflow.v2.Conversation].
+    /// Service for managing
+    /// [Conversations][google.cloud.dialogflow.v2.Conversation].
     /// </remarks>
     public abstract partial class ConversationsClient
     {
@@ -313,11 +334,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -339,11 +363,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -365,11 +392,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -391,11 +421,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -427,11 +460,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -463,11 +499,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -495,11 +534,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -531,11 +573,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -567,11 +612,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -599,11 +647,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -635,11 +686,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -671,11 +725,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource identifier of the project creating the conversation.
@@ -1245,11 +1302,147 @@ namespace Google.Cloud.Dialogflow.V2
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestConversationSummaryResponse SuggestConversationSummary(SuggestConversationSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(SuggestConversationSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(SuggestConversationSummaryRequest request, st::CancellationToken cancellationToken) =>
+            SuggestConversationSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestConversationSummaryResponse SuggestConversationSummary(string conversation, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestConversationSummary(new SuggestConversationSummaryRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(string conversation, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestConversationSummaryAsync(new SuggestConversationSummaryRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(string conversation, st::CancellationToken cancellationToken) =>
+            SuggestConversationSummaryAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestConversationSummaryResponse SuggestConversationSummary(ConversationName conversation, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestConversationSummary(new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(ConversationName conversation, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestConversationSummaryAsync(new SuggestConversationSummaryRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation to fetch suggestion for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(ConversationName conversation, st::CancellationToken cancellationToken) =>
+            SuggestConversationSummaryAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Conversations client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Conversations][google.cloud.dialogflow.v2.Conversation].
+    /// Service for managing
+    /// [Conversations][google.cloud.dialogflow.v2.Conversation].
     /// </remarks>
     public sealed partial class ConversationsClientImpl : ConversationsClient
     {
@@ -1262,6 +1455,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<CompleteConversationRequest, Conversation> _callCompleteConversation;
 
         private readonly gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> _callListMessages;
+
+        private readonly gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> _callSuggestConversationSummary;
 
         /// <summary>
         /// Constructs a client wrapper for the Conversations service, with the specified gRPC client and settings.
@@ -1290,6 +1485,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callListMessages = clientHelper.BuildApiCall<ListMessagesRequest, ListMessagesResponse>("ListMessages", grpcClient.ListMessagesAsync, grpcClient.ListMessages, effectiveSettings.ListMessagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMessages);
             Modify_ListMessagesApiCall(ref _callListMessages);
+            _callSuggestConversationSummary = clientHelper.BuildApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>("SuggestConversationSummary", grpcClient.SuggestConversationSummaryAsync, grpcClient.SuggestConversationSummary, effectiveSettings.SuggestConversationSummarySettings).WithGoogleRequestParam("conversation", request => request.Conversation);
+            Modify_ApiCall(ref _callSuggestConversationSummary);
+            Modify_SuggestConversationSummaryApiCall(ref _callSuggestConversationSummary);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1304,6 +1502,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_CompleteConversationApiCall(ref gaxgrpc::ApiCall<CompleteConversationRequest, Conversation> call);
 
         partial void Modify_ListMessagesApiCall(ref gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> call);
+
+        partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
 
         partial void OnConstruction(Conversations.ConversationsClient grpcClient, ConversationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1323,6 +1523,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_ListMessagesRequest(ref ListMessagesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Creates a new conversation. Conversations are auto-completed after 24
         /// hours.
@@ -1337,11 +1539,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1366,11 +1571,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// For Assist Stage, there's no dialogflow agent responding to user queries.
         /// But we will provide suggestions which are generated from conversation.
         /// 
-        /// If [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile] is configured for a dialogflow
-        /// agent, conversation will start from `Automated Agent Stage`, otherwise, it
-        /// will start from `Assist Stage`. And during `Automated Agent Stage`, once an
-        /// [Intent][google.cloud.dialogflow.v2.Intent] with [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff] is triggered, conversation
-        /// will transfer to Assist Stage.
+        /// If
+        /// [Conversation.conversation_profile][google.cloud.dialogflow.v2.Conversation.conversation_profile]
+        /// is configured for a dialogflow agent, conversation will start from
+        /// `Automated Agent Stage`, otherwise, it will start from `Assist Stage`. And
+        /// during `Automated Agent Stage`, once an
+        /// [Intent][google.cloud.dialogflow.v2.Intent] with
+        /// [Intent.live_agent_handoff][google.cloud.dialogflow.v2.Intent.live_agent_handoff]
+        /// is triggered, conversation will transfer to Assist Stage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1485,6 +1693,34 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_ListMessagesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMessagesRequest, ListMessagesResponse, Message>(_callListMessages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SuggestConversationSummaryResponse SuggestConversationSummary(SuggestConversationSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestConversationSummaryRequest(ref request, ref callSettings);
+            return _callSuggestConversationSummary.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Suggests summary for a conversation based on specific historical messages.
+        /// The range of the messages to be used for summary can be specified in the
+        /// request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(SuggestConversationSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestConversationSummaryRequest(ref request, ref callSettings);
+            return _callSuggestConversationSummary.Async(request, callSettings);
         }
     }
 

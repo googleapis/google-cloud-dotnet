@@ -46,10 +46,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5VHlwZSJoChtPcmlnaW5hbERldGVj",
             "dEludGVudFJlcXVlc3QSDgoGc291cmNlGAEgASgJEg8KB3ZlcnNpb24YAiAB",
             "KAkSKAoHcGF5bG9hZBgDIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
-            "mwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMV2ViaG9va1By",
-            "b3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29n",
-            "bGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "lQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIMV2ViaG9va1By",
+            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9k",
+            "aWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAhpHb29nbGUuQ2xv",
+            "dWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -406,9 +406,10 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The response message for a webhook call.
   ///
   /// This response is validated by the Dialogflow server. If validation fails,
-  /// an error will be returned in the [QueryResult.diagnostic_info][google.cloud.dialogflow.v2.QueryResult.diagnostic_info] field.
-  /// Setting JSON fields to an empty value with the wrong type is a common error.
-  /// To avoid this error:
+  /// an error will be returned in the
+  /// [QueryResult.diagnostic_info][google.cloud.dialogflow.v2.QueryResult.diagnostic_info]
+  /// field. Setting JSON fields to an empty value with the wrong type is a common
+  /// error. To avoid this error:
   ///
   /// - Use `""` for empty strings
   /// - Use `{}` or `null` for empty objects
@@ -475,7 +476,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The text response message intended for the end-user.
     /// It is recommended to use `fulfillment_messages.text.text[0]` instead.
     /// When provided, Dialogflow uses this field to populate
-    /// [QueryResult.fulfillment_text][google.cloud.dialogflow.v2.QueryResult.fulfillment_text] sent to the integration or API caller.
+    /// [QueryResult.fulfillment_text][google.cloud.dialogflow.v2.QueryResult.fulfillment_text]
+    /// sent to the integration or API caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -494,7 +496,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The rich response messages intended for the end-user.
     /// When provided, Dialogflow uses this field to populate
-    /// [QueryResult.fulfillment_messages][google.cloud.dialogflow.v2.QueryResult.fulfillment_messages] sent to the integration or API caller.
+    /// [QueryResult.fulfillment_messages][google.cloud.dialogflow.v2.QueryResult.fulfillment_messages]
+    /// sent to the integration or API caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -509,7 +512,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. A custom field used to identify the webhook source.
     /// Arbitrary strings are supported.
     /// When provided, Dialogflow uses this field to populate
-    /// [QueryResult.webhook_source][google.cloud.dialogflow.v2.QueryResult.webhook_source] sent to the integration or API caller.
+    /// [QueryResult.webhook_source][google.cloud.dialogflow.v2.QueryResult.webhook_source]
+    /// sent to the integration or API caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -524,11 +528,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int PayloadFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Struct payload_;
     /// <summary>
-    /// Optional. This field can be used to pass custom data from your webhook to the
-    /// integration or API caller. Arbitrary JSON objects are supported.
-    /// When provided, Dialogflow uses this field to populate
-    /// [QueryResult.webhook_payload][google.cloud.dialogflow.v2.QueryResult.webhook_payload] sent to the integration or API caller.
-    /// This field is also used by the
+    /// Optional. This field can be used to pass custom data from your webhook to
+    /// the integration or API caller. Arbitrary JSON objects are supported. When
+    /// provided, Dialogflow uses this field to populate
+    /// [QueryResult.webhook_payload][google.cloud.dialogflow.v2.QueryResult.webhook_payload]
+    /// sent to the integration or API caller. This field is also used by the
     /// [Google Assistant
     /// integration](https://cloud.google.com/dialogflow/docs/integrations/aog)
     /// for rich response messages.
@@ -553,7 +557,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The collection of output contexts that will overwrite currently
     /// active contexts for the session and reset their lifespans.
     /// When provided, Dialogflow uses this field to populate
-    /// [QueryResult.output_contexts][google.cloud.dialogflow.v2.QueryResult.output_contexts] sent to the integration or API caller.
+    /// [QueryResult.output_contexts][google.cloud.dialogflow.v2.QueryResult.output_contexts]
+    /// sent to the integration or API caller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -588,7 +593,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// entity types with. The entity synonyms apply to all languages and persist
     /// for the session. Setting this data from a webhook overwrites
     /// the session entity types that have been set using `detectIntent`,
-    /// `streamingDetectIntent` or [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType] management methods.
+    /// `streamingDetectIntent` or
+    /// [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType]
+    /// management methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
