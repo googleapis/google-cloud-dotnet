@@ -53,6 +53,12 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">Additional options for the copy operation. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <remarks>
+        /// The fact that <paramref name="destinationBucket"/> and <paramref name="destinationObjectName"/> are
+        /// optional is a mistake. These default value of null for these parameters is invalid for this method,
+        /// meaning that any call which doesn't specify the parameters explicitly will fail. Making these parameters
+        /// required would be a compile-time breaking change; this will be implemented in the next major version of this library.
+        /// </remarks>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the new storage object resulting from the copy.</returns>
         public virtual Task<Object> CopyObjectAsync(
