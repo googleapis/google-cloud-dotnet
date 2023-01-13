@@ -55,7 +55,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <remarks>
         /// The fact that <paramref name="destinationBucket"/> and <paramref name="destinationObjectName"/> are
-        /// optional is a mistake. These default value of null for these parameters is invalid for this method,
+        /// optional is a mistake. The default value of null for these parameters is invalid for this method,
         /// meaning that any call which doesn't specify the parameters explicitly will fail. Making these parameters
         /// required would be a compile-time breaking change; this will be implemented in the next major version of this library.
         /// </remarks>
