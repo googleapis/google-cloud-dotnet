@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.4.0, released 2023-01-16
+
+### New features
+
+- Enable REST transport in C# ([commit a6c4606](https://github.com/googleapis/google-cloud-dotnet/commit/a6c46063bd961a9dadc728a780d66de772f28e71))
+- Policy Analyzer for Organization Policy is publicly available ([commit ffb0726](https://github.com/googleapis/google-cloud-dotnet/commit/ffb07260788e807957a43ce951aa32ced725b889))
+
+### Documentation improvements
+
+- Brand and typo fixes ([commit ffb0726](https://github.com/googleapis/google-cloud-dotnet/commit/ffb07260788e807957a43ce951aa32ced725b889))
+- Small change for documentation ([commit 0927419](https://github.com/googleapis/google-cloud-dotnet/commit/0927419e9474930d4043e3a60d8b3c353e4fb8b5))
+- Small change for documentation ([commit e6fa780](https://github.com/googleapis/google-cloud-dotnet/commit/e6fa78083830d592eb72dd28ceaf79215ea04be4))
+
 ## Version 3.3.0, released 2022-10-17
 
 ### Bug fixes
