@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.8.0, released 2023-01-16
+
+### New features
+
+- Add instance_config to BatchPredictionJob in aiplatform v1 batch_prediction_job.proto ([commit f868bc8](https://github.com/googleapis/google-cloud-dotnet/commit/f868bc8f601d12499c7212b0b992ea205fe310f3))
+- Add saved_queries to Dataset in aiplatform v1 dataset.proto ([commit e7acad2](https://github.com/googleapis/google-cloud-dotnet/commit/e7acad20e505522f02023821ee133cc48ad8205c))
+- Add order_by to ListModelVersionRequest in aiplatform v1 model_service.proto ([commit e7acad2](https://github.com/googleapis/google-cloud-dotnet/commit/e7acad20e505522f02023821ee133cc48ad8205c))
+- Add update_all_stopped_trials to ConvexAutomatedStoppingSpec in aiplatform v1 study.proto ([commit e7acad2](https://github.com/googleapis/google-cloud-dotnet/commit/e7acad20e505522f02023821ee133cc48ad8205c))
+- Add ReadTensorboardUsage rpc in aiplatform v1 tensorboard_service.proto ([commit e7acad2](https://github.com/googleapis/google-cloud-dotnet/commit/e7acad20e505522f02023821ee133cc48ad8205c))
+
 ## Version 2.7.0, released 2022-12-14
 
 ### New features
