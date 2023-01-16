@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.2.0, released 2023-01-16
+
+### New features
+
+- Add location methods ([commit 3e84841](https://github.com/googleapis/google-cloud-dotnet/commit/3e848418b3e3442a7842970cf60f7ad1808a8c73))
+
 ## Version 4.1.0, released 2022-12-01
 
 ### New features
