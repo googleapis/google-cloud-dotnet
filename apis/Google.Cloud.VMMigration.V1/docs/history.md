@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.2.0, released 2023-01-16
+
+### New features
+
+- AWS as a source ([commit 8c6bdf0](https://github.com/googleapis/google-cloud-dotnet/commit/8c6bdf05056adb2f6f87045c4209838c00630a76))
+- Cycles history ([commit 8c6bdf0](https://github.com/googleapis/google-cloud-dotnet/commit/8c6bdf05056adb2f6f87045c4209838c00630a76))
+- Cycle\Clone\Cutover steps ([commit 8c6bdf0](https://github.com/googleapis/google-cloud-dotnet/commit/8c6bdf05056adb2f6f87045c4209838c00630a76))
+
 ## Version 2.1.0, released 2022-07-25
 
 ### New features
