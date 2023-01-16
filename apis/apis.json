@@ -286,7 +286,7 @@
     },
     {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
-      "version": "2.0.0-beta01",
+      "version": "2.0.0-beta02",
       "type": "grpc",
       "productName": "Artifact Registry",
       "productUrl": "https://cloud.google.com/artifact-registry",
