@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-01-16
+
+### New features
+
+- Added Snooze API support ([commit e68a83e](https://github.com/googleapis/google-cloud-dotnet/commit/e68a83ef1b5633f4ebe196bbdb0f7efdc5b751c8))
+
 ## Version 3.1.0, released 2022-08-26
 
 ### New features
