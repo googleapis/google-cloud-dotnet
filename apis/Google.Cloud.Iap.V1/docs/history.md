@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.1.0, released 2023-01-16
+
+### New features
+
+- Add AllowedDomainSettings to the UpdateIapSettingsRequest ([commit 5b5c678](https://github.com/googleapis/google-cloud-dotnet/commit/5b5c678d67d38c53653a33e981a7f438f1278aa3))
+- Add AttributePropagationSettings to the UpdateIapSettingsRequest ([commit 5b5c678](https://github.com/googleapis/google-cloud-dotnet/commit/5b5c678d67d38c53653a33e981a7f438f1278aa3))
+- Add remediation_token_generation_enabled to the CsmSettings ([commit 5b5c678](https://github.com/googleapis/google-cloud-dotnet/commit/5b5c678d67d38c53653a33e981a7f438f1278aa3))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
