@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.3.0, released 2023-01-16
+
+### New features
+
+- Support async write mode for WriteUserEvent API ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+- Support collect GA4 event format with prebuilt whistle rule ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+- Support exact searchable and retrievable in catalog attribute config ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+- Deprecate retrievable_fields in product attribute ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+- Support diversity type in serving config ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 300746b](https://github.com/googleapis/google-cloud-dotnet/commit/300746b0cf87e9d1f2ad54836d1c6320c87de2c8))
+
 ## Version 2.2.0, released 2022-08-26
 
 ### New features
