@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-alpha06, released 2023-01-16
+
+### Bug fixes
+
+- ServiceAccount.scopes is no longer deprecated ([commit d15829b](https://github.com/googleapis/google-cloud-dotnet/commit/d15829bc37938440697302acc3ffc0816da8b6be))
+- Removed unused endpoints for IAM methods ([commit d15829b](https://github.com/googleapis/google-cloud-dotnet/commit/d15829bc37938440697302acc3ffc0816da8b6be))
+
+### New features
+
+- Add InstancePolicy.boot_disk ([commit d15829b](https://github.com/googleapis/google-cloud-dotnet/commit/d15829bc37938440697302acc3ffc0816da8b6be))
+
+### Documentation improvements
+
+- Updated documentation for message NetworkInterface ([commit acb6f8f](https://github.com/googleapis/google-cloud-dotnet/commit/acb6f8f8618ee8eb33249e09fd3edc84665c4c6b))
+
 ## Version 1.0.0-alpha05, released 2022-12-01
 
 ### New features
