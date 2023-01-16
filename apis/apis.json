@@ -1359,7 +1359,7 @@
     },
     {
       "id": "Google.Cloud.Datastore.Admin.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud Datastore",
       "description": "Recommended Google client library to access the Google Cloud Datastore Admin API. This accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
@@ -1368,9 +1368,9 @@
         "admin"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/datastore/admin/v1",
