@@ -6,7 +6,6 @@
 declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
-declare -r DOCFX_VERSION=2.59.4
 declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.21.3
@@ -14,7 +13,6 @@ declare -r GRPC_VERSION=2.47.0
 declare -r GAPIC_GENERATOR_VERSION=1.4.9
 
 # Tools that only run under Windows (at the moment)
-declare -r DOCFX=$TOOL_PACKAGES/docfx.$DOCFX_VERSION/docfx.exe
 declare -r DOTCOVER=$TOOL_PACKAGES/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
 declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
 
@@ -139,18 +137,9 @@ install_grpc() {
 }
 
 install_docfx() {
-  if [[ ! -f $DOCFX ]]
-  then
-    (echo "Fetching docfx v${DOCFX_VERSION}";
-     mkdir -p $TOOL_PACKAGES;
-     cd $TOOL_PACKAGES;
-     mkdir docfx.$DOCFX_VERSION;
-     cd docfx.$DOCFX_VERSION;
-     curl -sSL https://github.com/dotnet/docfx/releases/download/v${DOCFX_VERSION}/docfx.zip -o tmp.zip;
-     unzip -q tmp.zip;
-     rm tmp.zip;
-     )
-  fi  
+  # Note that errors will still appear in stderr, but we don't need
+  # the banner of "here's how to invoke the tool" when installing
+  dotnet tool install docfx > /dev/null
 }
 
 # Logs to both stdout and a build timing log, allowing

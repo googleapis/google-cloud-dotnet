@@ -65,6 +65,6 @@ cd ../..
 
 echo 'Building site for local debugging purposes'
 cp devsite-help-docfx.json output/devsite-help/docfx.json
-$DOCFX build --disableGitFeatures output/devsite-help/docfx.json
+dotnet docfx build --disableGitFeatures output/devsite-help/docfx.json
 
 echo 'Done'

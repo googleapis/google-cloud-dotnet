@@ -124,7 +124,7 @@ do
 done
 
 echo 'Running docfx metadata'
-$DOCFX metadata --logLevel Error -o output --property TargetFramework=$TARGET_FRAMEWORK $PROJECTS_TMP
+dotnet docfx metadata --logLevel Error -o output --property TargetFramework=$TARGET_FRAMEWORK $PROJECTS_TMP
 
 # This will have created an output/output directory. 
 # (For some reason docfx takes "output" and doubles it to output/output.)
