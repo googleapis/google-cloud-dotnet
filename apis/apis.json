@@ -2459,7 +2459,7 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/location",
-      "serviceConfigFile": "location.yaml",
+      "serviceConfigFile": "none",
       "restNumericEnums": true
     },
     {
@@ -4688,7 +4688,7 @@
         "Grpc.Core": "2.46.3"
       },
       "shortName": "containeranalysis",
-      "serviceConfigFile": "none",
+      "serviceConfigFile": "grafeas_v1.yaml",
       "restNumericEnums": true
     }
   ],
