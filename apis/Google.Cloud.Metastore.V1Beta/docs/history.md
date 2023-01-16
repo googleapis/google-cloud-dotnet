@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.0.0-beta03, released 2023-01-16
+
+### New features
+
+- Added RemoveIamPolicy API ([commit d87bbd9](https://github.com/googleapis/google-cloud-dotnet/commit/d87bbd98854765b5fe797745a308b7a795ca7fda))
+- Added QueryMetadata API ([commit d87bbd9](https://github.com/googleapis/google-cloud-dotnet/commit/d87bbd98854765b5fe797745a308b7a795ca7fda))
+- Added MoveTableToDatabase API ([commit d87bbd9](https://github.com/googleapis/google-cloud-dotnet/commit/d87bbd98854765b5fe797745a308b7a795ca7fda))
+- Added AlterMetadataResourceLocation API ([commit d87bbd9](https://github.com/googleapis/google-cloud-dotnet/commit/d87bbd98854765b5fe797745a308b7a795ca7fda))
+
+### Documentation improvements
+
+- Fix formatting for subnetwork field pattern ([commit b86e735](https://github.com/googleapis/google-cloud-dotnet/commit/b86e73590f171a4656f4ffca9fda332b50c3315c))
+
 ## Version 2.0.0-beta02, released 2022-12-01
 
 ### New features
