@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.3.0, released 2023-01-16
+
+### New features
+
+- Enable REST transport in C# ([commit a6c4606](https://github.com/googleapis/google-cloud-dotnet/commit/a6c46063bd961a9dadc728a780d66de772f28e71))
+
 ## Version 5.2.0, released 2022-12-14
 
 ### New features
