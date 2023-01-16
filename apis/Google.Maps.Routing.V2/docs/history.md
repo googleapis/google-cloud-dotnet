@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2023-01-16
+
+### New features
+
+- Enable REST transport in C# ([commit a6c4606](https://github.com/googleapis/google-cloud-dotnet/commit/a6c46063bd961a9dadc728a780d66de772f28e71))
+
+### Documentation improvements
+
+- Updated comment for ComputeRoutesRequest and ComputeRouteMatrixRequest ([commit aa27ea4](https://github.com/googleapis/google-cloud-dotnet/commit/aa27ea43ff5c26cafcc9761f2822e7e39aaa4efe))
+- Updated comment for Route.route_token ([commit 174d1ca](https://github.com/googleapis/google-cloud-dotnet/commit/174d1ca296ccf2a9fb3ea4b91c4946d0d9cb7409))
+- Updated comment for RouteTravelMode ([commit 174d1ca](https://github.com/googleapis/google-cloud-dotnet/commit/174d1ca296ccf2a9fb3ea4b91c4946d0d9cb7409))
+
 ## Version 1.0.0-beta05, released 2022-11-02
 
 ### New features
