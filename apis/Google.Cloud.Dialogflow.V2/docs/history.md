@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.6.0, released 2023-01-16
+
+### New features
+
+- Added SuggestConversationSummary RPC ([commit 833acec](https://github.com/googleapis/google-cloud-dotnet/commit/833acec549980676e804fab02b422be55ddcbc5f))
+
+### Documentation improvements
+
+- Updated go library package ([commit 833acec](https://github.com/googleapis/google-cloud-dotnet/commit/833acec549980676e804fab02b422be55ddcbc5f))
+
 ## Version 4.5.0, released 2022-12-01
 
 ### New features
