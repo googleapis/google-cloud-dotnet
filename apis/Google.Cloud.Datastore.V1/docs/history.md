@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.4.0, released 2023-01-16
+
+### New features
+
+- Enable REST transport in C# ([commit a6c4606](https://github.com/googleapis/google-cloud-dotnet/commit/a6c46063bd961a9dadc728a780d66de772f28e71))
+- New transaction options for datastoreV1 ([commit 9e48eda](https://github.com/googleapis/google-cloud-dotnet/commit/9e48eda004a534ce7b4e53bbb6d6ef53471a2568))
+- Add dynamic routing header annotation to DatastoreV1 ([commit 1e6c8b7](https://github.com/googleapis/google-cloud-dotnet/commit/1e6c8b78b0409f142f2e6f7e54bf1a4900e0428a))
+
 ## Version 4.3.0, released 2022-11-02
 
 ### New features
