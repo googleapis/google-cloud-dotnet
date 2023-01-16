@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.7.0, released 2023-01-16
+
+### New features
+
+- Add etags for cluster and node pool update operations ([commit 04b4db4](https://github.com/googleapis/google-cloud-dotnet/commit/04b4db4faaeb16f14e51206aa51dd3e557a10282))
+- Release GKE CloudDNS Cluster Scope ([commit 7d1eafe](https://github.com/googleapis/google-cloud-dotnet/commit/7d1eafef6b4479c9672e51498b71ce8b7218d702))
+- Add WindowsNodeConfig field to v1alpha1, v1beta1, v1 ([commit 7d1eafe](https://github.com/googleapis/google-cloud-dotnet/commit/7d1eafef6b4479c9672e51498b71ce8b7218d702))
+- Add EphemeralStorageLocalSsdConfig and LocalNvmeSsdBlockConfig APIs to v1alpha1, v1beta1, v1 ([commit 7d1eafe](https://github.com/googleapis/google-cloud-dotnet/commit/7d1eafef6b4479c9672e51498b71ce8b7218d702))
+- Add support for specifying stack type for clusters. This will allow clusters to be created as dual stack or toggled between IPV4 and dual stack ([commit 1cb1704](https://github.com/googleapis/google-cloud-dotnet/commit/1cb170400140ed79feec2dbee05e3113d5ec4e63))
+
 ## Version 3.6.0, released 2022-12-01
 
 ### New features
