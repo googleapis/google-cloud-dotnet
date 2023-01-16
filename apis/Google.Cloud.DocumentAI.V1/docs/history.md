@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.3.0, released 2023-01-16
+
+### New features
+
+- Added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto ([commit 2fb53d4](https://github.com/googleapis/google-cloud-dotnet/commit/2fb53d43cd8eb55b33ee6e08cef02413cf453e53))
+- Added process_options field in ProcessRequest in document_processor_service.proto ([commit 2fb53d4](https://github.com/googleapis/google-cloud-dotnet/commit/2fb53d43cd8eb55b33ee6e08cef02413cf453e53))
+- Added sample_document_uris field in ProcessorType in processor_type.proto ([commit 2fb53d4](https://github.com/googleapis/google-cloud-dotnet/commit/2fb53d43cd8eb55b33ee6e08cef02413cf453e53))
+
 ## Version 3.2.0, released 2022-12-14
 
 ### New features
