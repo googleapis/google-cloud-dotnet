@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0-beta01, released 2023-01-16
+
+### New features
+
+- Enable self-signed JWTs for Storage and Translation clients ([commit 10d2787](https://github.com/googleapis/google-cloud-dotnet/commit/10d2787c9963b49199ffdf8d4ed69169142272fb))
+
 ## Version 3.1.0, released 2022-07-25
 
 ## New features
