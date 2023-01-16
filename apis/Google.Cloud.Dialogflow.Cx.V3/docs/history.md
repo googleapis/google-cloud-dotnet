@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.3.0, released 2023-01-16
+
+### New features
+
+- Enable REST transport in C# ([commit a6c4606](https://github.com/googleapis/google-cloud-dotnet/commit/a6c46063bd961a9dadc728a780d66de772f28e71))
+- ResponseMessage proto contains channel information ([commit 8e8343d](https://github.com/googleapis/google-cloud-dotnet/commit/8e8343d1e2407d38b6f9db0af08214b6628506f3))
+
+### Documentation improvements
+
+- Updated go library package ([commit 8e8343d](https://github.com/googleapis/google-cloud-dotnet/commit/8e8343d1e2407d38b6f9db0af08214b6628506f3))
+
 ## Version 2.2.0, released 2022-12-01
 
 ### Documentation improvements
