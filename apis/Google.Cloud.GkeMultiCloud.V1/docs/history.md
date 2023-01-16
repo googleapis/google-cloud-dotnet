@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.1.0, released 2023-01-16
+
+### New features
+
+- Support AttachedClusters ([commit aee0849](https://github.com/googleapis/google-cloud-dotnet/commit/aee0849f0679a9557375d70887436926f6ec1c16))
+- Add errors output fields for cluster and nodepool resources ([commit aee0849](https://github.com/googleapis/google-cloud-dotnet/commit/aee0849f0679a9557375d70887436926f6ec1c16))
+- Add AWS Autoscaling Group metrics collection for AWS nodepools ([commit aee0849](https://github.com/googleapis/google-cloud-dotnet/commit/aee0849f0679a9557375d70887436926f6ec1c16))
+- Add monitoring config ([commit aee0849](https://github.com/googleapis/google-cloud-dotnet/commit/aee0849f0679a9557375d70887436926f6ec1c16))
+
 ## Version 2.0.0, released 2022-09-15
 
 No API surface changes; just dependency updates and promotion to GA.
