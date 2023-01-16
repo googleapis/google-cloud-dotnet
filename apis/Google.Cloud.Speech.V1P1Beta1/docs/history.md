@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta03, released 2023-01-16
+
+### New features
+
+- Added ABNF Grammars field in Speech Adaptation ([commit abc551e](https://github.com/googleapis/google-cloud-dotnet/commit/abc551e160cef5b1a8e23f8635261521d557a1c0))
+
 ## Version 3.0.0-beta02, released 2022-12-14
 
 ### New features
