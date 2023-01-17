@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,37 +41,54 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
     };
 
     public CopyTransportFromJavaCommand()
-        : base("copy-transport-from-java", "Copies transport values from BUILD.bazel java targets to corresponding csharp targets", "root")
+        : base("copy-transport-from-java", "Copies transport values from BUILD.bazel java targets to corresponding csharp targets", "root", "max-modifications")
     {
     }
 
     protected override void ExecuteImpl(string[] args)
     {
         string root = args[0];
+        int maxModifications = int.Parse(args[1]);
+        var apiCatalog = ApiCatalog.Load();
 
         var bazelFiles = Directory.GetFiles(root, "BUILD.bazel", SearchOption.AllDirectories);
 
+        var possibleDirectories = apiCatalog.Apis
+            .Select(api => api.ProtoPath)
+            .Except(ExcludedDirectories)
+            .ToHashSet();
+
+        int count = 0;
         foreach (var bazelFile in bazelFiles)
         {
             var relativePath = Path.GetRelativePath(root, bazelFile);
-            MaybeModify(bazelFile, Path.GetDirectoryName(relativePath).Replace("\\", "/"));
+            string relativeDirectory = Path.GetDirectoryName(relativePath).Replace("\\", "/");
+            if (!possibleDirectories.Contains(relativeDirectory))
+            {
+                continue;
+            }
+            if (MaybeModify(bazelFile))
+            {
+                Console.WriteLine($"Modified {relativeDirectory}");
+                count++;
+                if (count == maxModifications)
+                {
+                    Console.WriteLine("Reached maximum number of modifications; stopping.");
+                    break;
+                }
+            }
         }
+        Console.WriteLine($"Modified files: {count}");
     }
 
-    private static void MaybeModify(string file, string relativeDirectory)
+    private static bool MaybeModify(string file)
     {
-        if (ExcludedDirectories.Contains(relativeDirectory))
-        {
-            return;
-        }
-
         var lines = File.ReadLines(file).ToList();
-
         int javaStart = lines.IndexOf("java_gapic_library(");
         int csharpStart = lines.IndexOf("csharp_gapic_library(");
         if (javaStart == -1 || csharpStart == -1)
         {
-            return;
+            return false;
         }
 
         int javaEnd = lines.IndexOf(")", javaStart);
@@ -81,7 +99,7 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
 
         if (javaTransportLine is null || javaTransportLine == csharpTransportLine)
         {
-            return;
+            return false;
         }
 
         if (csharpTransportLine is null)
@@ -94,6 +112,6 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
             lines[index] = javaTransportLine;
         }
         File.WriteAllLines(file, lines);
-        Console.WriteLine($"Modified {relativeDirectory}");
+        return true;
     }
 }
