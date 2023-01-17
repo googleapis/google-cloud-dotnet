@@ -2016,8 +2016,8 @@ namespace Google.Cloud.Container.V1
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2050,8 +2050,8 @@ namespace Google.Cloud.Container.V1
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2084,8 +2084,8 @@ namespace Google.Cloud.Container.V1
         /// This field has been deprecated and replaced by the name field.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2101,8 +2101,8 @@ namespace Google.Cloud.Container.V1
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2121,8 +2121,8 @@ namespace Google.Cloud.Container.V1
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2141,8 +2141,8 @@ namespace Google.Cloud.Container.V1
         /// Specified in the format `projects/*/locations/*/clusters/*`.
         /// </param>
         /// <param name="addonsConfig">
-        /// Required. The desired configurations for the various addons available to run in the
-        /// cluster.
+        /// Required. The desired configurations for the various addons available to
+        /// run in the cluster.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
