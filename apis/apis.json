@@ -237,7 +237,7 @@
     },
     {
       "id": "Google.Cloud.AppEngine.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "App Engine",
       "productUrl": "https://cloud.google.com/appengine",
@@ -248,9 +248,9 @@
         "appengine"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/appengine/v1",
