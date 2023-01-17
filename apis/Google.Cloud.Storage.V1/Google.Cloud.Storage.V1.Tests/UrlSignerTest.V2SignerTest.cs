@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void EncryptionKeyAndHashAreIgnored()
             {
-                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
                 var options = Options
                     .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
@@ -63,7 +63,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void ResumableEquivalentToPostWithStartHeader()
             {
-                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var baseRequestTemplate = RequestTemplate.FromBucket("bucket-name").WithObjectName("object-name");
                 var options = Options
                     .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
@@ -112,7 +112,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public async Task ThrowsIfQueryParametersSpecified()
             {
-                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var requestTemplate = RequestTemplate
                     .FromBucket("bucket-name")
                     .WithObjectName("object-name")
@@ -160,7 +160,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public async Task ThrowsIfBucketBoundHostSpecified()
             {
-                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var requestTemplate = RequestTemplate
                     .FromBucket("bucket-name")
                     .WithObjectName("object-name");
@@ -176,7 +176,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public async void Unsupported_SignPostPolicy()
             {
-                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var options = Options
                     .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
                     .WithSigningVersion(SigningVersion.V2);

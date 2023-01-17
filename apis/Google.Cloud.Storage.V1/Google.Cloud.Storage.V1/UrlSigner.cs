@@ -38,6 +38,8 @@ namespace Google.Cloud.Storage.V1
 
         private const string GoogHeaderPrefix = "x-goog-";
 
+        private const string CredentialsDefaultAlgorithm = "GOOG4-RSA-SHA256";
+
         /// <summary>
         /// Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable for more information.
@@ -63,18 +65,114 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a service account.
         /// </summary>
+        /// <param name="credential">The credential for the a service account. Must not be null.</param>
+        /// <remarks>
+        /// Signing happens locally using the private key included on the service account credential.
+        /// </remarks>
+        public static UrlSigner FromCredential(ServiceAccountCredential credential) =>
+            FromBlobSigner(new CredentialBlobSigner(GaxPreconditions.CheckNotNull(credential, nameof(credential)), credential.Id, CredentialsDefaultAlgorithm));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance for an impersonated credential.
+        /// Signing is done by the impersonated service account.
+        /// </summary>
+        /// <param name="credential">The impersonated credential. Must not be null.</param>
+        /// <remarks>
+        /// A request to the IAM API is executed for signing which increases latency
+        /// as compared with <see cref="FromCredential(ServiceAccountCredential)"/> 
+        /// and that counts towards IAM API quoata consumption.
+        /// </remarks>
+        public static UrlSigner FromCredential(ImpersonatedCredential credential) =>
+            FromBlobSigner(new CredentialBlobSigner(GaxPreconditions.CheckNotNull(credential, nameof(credential)), credential.TargetPrincipal, CredentialsDefaultAlgorithm));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance for a compute credential.
+        /// </summary>
+        /// <param name="credential">The compute credential. Must not be null.</param>
+        /// <remarks>
+        /// <para>
+        /// A request to the IAM API is executed for signing which increases latency
+        /// as compared with <see cref="FromCredential(ServiceAccountCredential)"/> 
+        /// and that counts towards IAM API quoata consumption.
+        /// </para>
+        /// <para>
+        /// The first time a compute credential is used for signing, a request to the
+        /// metadata server is executed, to obtain the associated service account ID,
+        /// which may increase latency of the overall signing request.
+        /// </para>
+        /// </remarks>
+        public static UrlSigner FromCredential(ComputeCredential credential)
+        {
+            GaxPreconditions.CheckNotNull(credential, nameof(credential));
+            return FromBlobSignerAsyncProvider(async () => new CredentialBlobSigner(
+                credential,
+                await credential.GetDefaultServiceAccountEmailAsync().ConfigureAwait(false),
+                CredentialsDefaultAlgorithm));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance for a Google credential if
+        /// the wrapped credential type is supported for signing. In that case, this method
+        /// relies on the appropiate UrlSigner.FromCredential overload.
+        /// </summary>
+        /// <param name="credential">
+        /// The Google credential. Must not be null.
+        /// Must wrap a credential currently supported for signing.
+        /// </param>
+        /// <exception cref="InvalidOperationException">
+        /// The credential wrapped by the Google credential is not currently supported for signing.
+        /// </exception>
+        /// <remarks>
+        /// Please see the specific UrlSigner.FromCredential overloads for more information.
+        /// </remarks>
+        public static UrlSigner FromCredential(GoogleCredential credential) =>
+            GaxPreconditions.CheckNotNull(credential, nameof(credential)).UnderlyingCredential switch
+            {
+                ServiceAccountCredential sa => FromCredential(sa),
+                ImpersonatedCredential imp => FromCredential(imp),
+                ComputeCredential comp => FromCredential(comp),
+                _ => throw new InvalidOperationException($"The credential type {credential.UnderlyingCredential.GetType()} is not supported for signing.")
+            };
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance from the JSON configuration file of a Google credential.
+        /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
+        /// </summary>
+        public static UrlSigner FromCredentialFile(string credentialFilePath) =>
+            FromCredential(GoogleCredential.FromFile(credentialFilePath));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance from the JSON configuration file of a Google credential,
+        /// which is read asyncrhonously.
+        /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
+        /// </summary>
+        public static async Task<UrlSigner> FromCredentialFileAsync(string credentialFilePath, CancellationToken cancellationToken = default) =>
+            FromCredential(await GoogleCredential.FromFileAsync(credentialFilePath, cancellationToken).ConfigureAwait(false));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance from a Stream containing the JSON configuration file of a Google Credential.
+        /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
+        /// </summary>
+        public static UrlSigner FromCredentialStream(Stream credentialData) =>
+            FromCredential(GoogleCredential.FromStream(GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData))));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance from a Stream containing the JSON configuration file of a Google Credential.
+        /// The data is read asynchronously.
+        /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
+        /// </summary>
+        public static async Task<UrlSigner> FromCredentialStreamAsync(Stream credentialData, CancellationToken cancellationToken = default) =>
+            FromCredential(await GoogleCredential.FromStreamAsync(GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData)), cancellationToken).ConfigureAwait(false));
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance for a service account.
+        /// </summary>
         /// <param name="credentialFilePath">The path to the JSON key file for a service account. Must not be null.</param>
         /// <exception cref="InvalidOperationException">
         /// The <paramref name="credentialFilePath"/> does not refer to a valid JSON service account key file.
         /// </exception>
-        public static UrlSigner FromServiceAccountPath(string credentialFilePath)
-        {
-            GaxPreconditions.CheckNotNull(credentialFilePath, nameof(credentialFilePath));
-            using (var credentialData = File.OpenRead(credentialFilePath))
-            {
-                return FromServiceAccountData(credentialData);
-            }
-        }
+        [Obsolete("Use FromCredentialFile(string) which is equivalent.")]
+        public static UrlSigner FromServiceAccountPath(string credentialFilePath) => FromCredentialFile(credentialFilePath);
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a service account.
@@ -83,21 +181,15 @@ namespace Google.Cloud.Storage.V1
         /// <exception cref="InvalidOperationException">
         /// The <paramref name="credentialData"/> does not contain valid JSON service account key data.
         /// </exception>
-        public static UrlSigner FromServiceAccountData(Stream credentialData)
-        {
-            GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData));
-            return UrlSigner.FromServiceAccountCredential(ServiceAccountCredential.FromServiceAccountData(credentialData));
-        }
+        [Obsolete("Use FromCredentialStream(Stream) which is equivalent.")]
+        public static UrlSigner FromServiceAccountData(Stream credentialData) => FromCredentialStream(credentialData);
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a service account.
         /// </summary>
         /// <param name="credential">The credential for the a service account. Must not be null.</param>
-        public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)
-        {
-            GaxPreconditions.CheckNotNull(credential, nameof(credential));
-            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential), SystemClock.Instance);
-        }
+        [Obsolete("Use FromCredential(ServiceAccountCredential) which is equivalent.")]
+        public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential) => FromCredential(credential);
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a custom blob signer.

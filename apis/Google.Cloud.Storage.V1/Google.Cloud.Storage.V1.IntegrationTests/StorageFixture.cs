@@ -123,7 +123,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// Gets a <see cref="UrlSigner"/> instance which can be used for testing.
         /// </summary>
         public UrlSigner UrlSigner { get; } =
-            UrlSigner.FromServiceAccountCredential(GoogleCredential.GetApplicationDefaultAsync().Result.UnderlyingCredential as ServiceAccountCredential);
+            UrlSigner.FromCredential(GoogleCredential.GetApplicationDefault());
 
         public IEnumerable<string> ReadBucketObjects => new[] { SmallObject, LargeObject, SmallThenLargeObject }.Concat(s_objectsInFolders);
 

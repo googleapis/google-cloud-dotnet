@@ -57,6 +57,26 @@ Or write-only access to put specific object content into a bucket:
 
 {{sample:UrlSigner.SignedURLPut}}
 
+### Supported credential types for URL signing
+
+`Google.Apis.Auth.OAuth2.ServiceAccountCredential`, `Google.Apis.Auth.OAuth2.ComputeCredential`
+and `Google.Apis.Auth.OAuth2.ImpersonatedCredential` are all supported credentials from
+which you can build a `UrlSigner` by calling the appropiate `UrlSigner.FromCredential`
+method overload. `Google.Apis.Auth.OAuth2.GoogleCredential` is also supported as long as the
+underlying credential is one of the supported specific types. The following example demonstrates
+how to explicitly use a Compute credential for URL signing.
+
+{{sample:UrlSigner.ComputeSignedURLGet}}
+
+When using a `UrlSigner` it's worth being aware of the underlying synchronous/asynchronous nature
+of the signing operations depending on the credential type the signer was created from. If you used
+a service account credential, signing happens locally and the signing operation is synchronous.
+But if you use an impersonated credential or a Compute credential, then a request to the IAM API
+is made for signing and the operation is asynchronous. In this case, you can still use the
+synchronous versions of the signing methods but they will block until the asynchronous operation
+has completed, which could lead to deadlocks. In general, if you are unsure of which credential
+was used to create a given URL signer, it is safer to use the asynchronous signing methods.
+
 ### HMAC Signed URLs
 
 If you have access to an HMAC key, you can also sign URLs, even if you
@@ -68,33 +88,13 @@ HMAC signed URLs using this library:
 
 {{sample:UrlSigner.HmacSignedURLGet}}
 
-### Signing URLs without a service account credential file or HMAC key
+### Signing URLs with a custom blob signer
 
-If you need to sign URLs but don't have a full service account
-credential file (with private keys) available, you can create a
-`UrlSigner.IBlobSigner` implementation to perform the signing part.
-The most common implementation of this is likely to be to use the
-IAM service to perform the signing, with the
-[Google.Apis.Iam.v1](https://www.nuget.org/packages/Google.Apis.Iam.v1/)
-package. Here's a sample implementation:
-
-{{sample:UrlSigner.IamServiceBlobSigner}}
-
-(We may make this available in its own package at some point in the
-future.)
-
-To make use of this, the account making the request needs the
-`iam.serviceAccounts.signBlob` permission, which is usually granted
-via the "Service Account Token Creator" role.
-
-Here's an example showing how you could use this to sign a
-URL on behalf of the default Compute Engine credential on an
-instance. (This example will only work when running on Google Cloud
-Platform, as it relies on information from the metadata server.) If
-you want to use a different service account, you could include the
-account ID as part of your application configuration.
-
-{{sample:UrlSigner.IamServiceBlobSignerUsage}}
+If you need to sign URLs but none of the supported signer options
+apply to your use case, you can create a `UrlSigner.IBlobSigner`
+implementation to perform the signing part. Use the
+`UrlSigner.FromBlobSigner(UrlSigner.IBlobSigner)` method to obtain
+a URL signer that uses your custom signer implementation.
 
 ### Specifying the signing version
 
