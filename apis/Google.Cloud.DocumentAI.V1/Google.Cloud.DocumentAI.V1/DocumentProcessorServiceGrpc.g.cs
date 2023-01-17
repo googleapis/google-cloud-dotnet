@@ -83,6 +83,10 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ListProcessorTypesResponse> __Marshaller_google_cloud_documentai_v1_ListProcessorTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ListProcessorTypesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest> __Marshaller_google_cloud_documentai_v1_GetProcessorTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ProcessorType> __Marshaller_google_cloud_documentai_v1_ProcessorType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ProcessorType.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest> __Marshaller_google_cloud_documentai_v1_ListProcessorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse> __Marshaller_google_cloud_documentai_v1_ListProcessorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse.Parser));
@@ -148,6 +152,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         "ListProcessorTypes",
         __Marshaller_google_cloud_documentai_v1_ListProcessorTypesRequest,
         __Marshaller_google_cloud_documentai_v1_ListProcessorTypesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest, global::Google.Cloud.DocumentAI.V1.ProcessorType> __Method_GetProcessorType = new grpc::Method<global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest, global::Google.Cloud.DocumentAI.V1.ProcessorType>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProcessorType",
+        __Marshaller_google_cloud_documentai_v1_GetProcessorTypeRequest,
+        __Marshaller_google_cloud_documentai_v1_ProcessorType);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse> __Method_ListProcessors = new grpc::Method<global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse>(
@@ -309,6 +321,18 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.ListProcessorTypesResponse> ListProcessorTypes(global::Google.Cloud.DocumentAI.V1.ListProcessorTypesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a processor type detail.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.ProcessorType> GetProcessorType(global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -705,6 +729,54 @@ namespace Google.Cloud.DocumentAI.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ListProcessorTypesResponse> ListProcessorTypesAsync(global::Google.Cloud.DocumentAI.V1.ListProcessorTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProcessorTypes, null, options, request);
+      }
+      /// <summary>
+      /// Gets a processor type detail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.ProcessorType GetProcessorType(global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProcessorType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a processor type detail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.ProcessorType GetProcessorType(global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProcessorType, null, options, request);
+      }
+      /// <summary>
+      /// Gets a processor type detail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ProcessorType> GetProcessorTypeAsync(global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProcessorTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a processor type detail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ProcessorType> GetProcessorTypeAsync(global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProcessorType, null, options, request);
       }
       /// <summary>
       /// Lists all processors which belong to this project.
@@ -1380,6 +1452,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           .AddMethod(__Method_BatchProcessDocuments, serviceImpl.BatchProcessDocuments)
           .AddMethod(__Method_FetchProcessorTypes, serviceImpl.FetchProcessorTypes)
           .AddMethod(__Method_ListProcessorTypes, serviceImpl.ListProcessorTypes)
+          .AddMethod(__Method_GetProcessorType, serviceImpl.GetProcessorType)
           .AddMethod(__Method_ListProcessors, serviceImpl.ListProcessors)
           .AddMethod(__Method_GetProcessor, serviceImpl.GetProcessor)
           .AddMethod(__Method_GetProcessorVersion, serviceImpl.GetProcessorVersion)
@@ -1406,6 +1479,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       serviceBinder.AddMethod(__Method_BatchProcessDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.BatchProcessRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchProcessDocuments));
       serviceBinder.AddMethod(__Method_FetchProcessorTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.FetchProcessorTypesRequest, global::Google.Cloud.DocumentAI.V1.FetchProcessorTypesResponse>(serviceImpl.FetchProcessorTypes));
       serviceBinder.AddMethod(__Method_ListProcessorTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ListProcessorTypesRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorTypesResponse>(serviceImpl.ListProcessorTypes));
+      serviceBinder.AddMethod(__Method_GetProcessorType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest, global::Google.Cloud.DocumentAI.V1.ProcessorType>(serviceImpl.GetProcessorType));
       serviceBinder.AddMethod(__Method_ListProcessors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse>(serviceImpl.ListProcessors));
       serviceBinder.AddMethod(__Method_GetProcessor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorRequest, global::Google.Cloud.DocumentAI.V1.Processor>(serviceImpl.GetProcessor));
       serviceBinder.AddMethod(__Method_GetProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest, global::Google.Cloud.DocumentAI.V1.ProcessorVersion>(serviceImpl.GetProcessorVersion));

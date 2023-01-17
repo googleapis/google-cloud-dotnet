@@ -672,6 +672,93 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetProcessorType</summary>
+        public void GetProcessorTypeRequestObject()
+        {
+            // Snippet: GetProcessorType(GetProcessorTypeRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            GetProcessorTypeRequest request = new GetProcessorTypeRequest
+            {
+                ProcessorTypeName = ProcessorTypeName.FromProjectLocationProcessorType("[PROJECT]", "[LOCATION]", "[PROCESSOR_TYPE]"),
+            };
+            // Make the request
+            ProcessorType response = documentProcessorServiceClient.GetProcessorType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProcessorTypeAsync</summary>
+        public async Task GetProcessorTypeRequestObjectAsync()
+        {
+            // Snippet: GetProcessorTypeAsync(GetProcessorTypeRequest, CallSettings)
+            // Additional: GetProcessorTypeAsync(GetProcessorTypeRequest, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProcessorTypeRequest request = new GetProcessorTypeRequest
+            {
+                ProcessorTypeName = ProcessorTypeName.FromProjectLocationProcessorType("[PROJECT]", "[LOCATION]", "[PROCESSOR_TYPE]"),
+            };
+            // Make the request
+            ProcessorType response = await documentProcessorServiceClient.GetProcessorTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProcessorType</summary>
+        public void GetProcessorType()
+        {
+            // Snippet: GetProcessorType(string, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/processorTypes/[PROCESSOR_TYPE]";
+            // Make the request
+            ProcessorType response = documentProcessorServiceClient.GetProcessorType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProcessorTypeAsync</summary>
+        public async Task GetProcessorTypeAsync()
+        {
+            // Snippet: GetProcessorTypeAsync(string, CallSettings)
+            // Additional: GetProcessorTypeAsync(string, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/processorTypes/[PROCESSOR_TYPE]";
+            // Make the request
+            ProcessorType response = await documentProcessorServiceClient.GetProcessorTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProcessorType</summary>
+        public void GetProcessorTypeResourceNames()
+        {
+            // Snippet: GetProcessorType(ProcessorTypeName, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ProcessorTypeName name = ProcessorTypeName.FromProjectLocationProcessorType("[PROJECT]", "[LOCATION]", "[PROCESSOR_TYPE]");
+            // Make the request
+            ProcessorType response = documentProcessorServiceClient.GetProcessorType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProcessorTypeAsync</summary>
+        public async Task GetProcessorTypeResourceNamesAsync()
+        {
+            // Snippet: GetProcessorTypeAsync(ProcessorTypeName, CallSettings)
+            // Additional: GetProcessorTypeAsync(ProcessorTypeName, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessorTypeName name = ProcessorTypeName.FromProjectLocationProcessorType("[PROJECT]", "[LOCATION]", "[PROCESSOR_TYPE]");
+            // Make the request
+            ProcessorType response = await documentProcessorServiceClient.GetProcessorTypeAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListProcessors</summary>
         public void ListProcessorsRequestObject()
         {

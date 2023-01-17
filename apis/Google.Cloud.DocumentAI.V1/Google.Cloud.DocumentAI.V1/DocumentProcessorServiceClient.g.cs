@@ -56,6 +56,7 @@ namespace Google.Cloud.DocumentAI.V1
             BatchProcessDocumentsOperationsSettings = existing.BatchProcessDocumentsOperationsSettings.Clone();
             FetchProcessorTypesSettings = existing.FetchProcessorTypesSettings;
             ListProcessorTypesSettings = existing.ListProcessorTypesSettings;
+            GetProcessorTypeSettings = existing.GetProcessorTypeSettings;
             ListProcessorsSettings = existing.ListProcessorsSettings;
             GetProcessorSettings = existing.GetProcessorSettings;
             GetProcessorVersionSettings = existing.GetProcessorVersionSettings;
@@ -170,6 +171,19 @@ namespace Google.Cloud.DocumentAI.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListProcessorTypesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.GetProcessorType</c> and
+        /// <c>DocumentProcessorServiceClient.GetProcessorTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetProcessorTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1225,6 +1239,111 @@ namespace Google.Cloud.DocumentAI.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProcessorType GetProcessorType(GetProcessorTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(GetProcessorTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(GetProcessorTypeRequest request, st::CancellationToken cancellationToken) =>
+            GetProcessorTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProcessorType GetProcessorType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProcessorType(new GetProcessorTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProcessorTypeAsync(new GetProcessorTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetProcessorTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProcessorType GetProcessorType(ProcessorTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProcessorType(new GetProcessorTypeRequest
+            {
+                ProcessorTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(ProcessorTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProcessorTypeAsync(new GetProcessorTypeRequest
+            {
+                ProcessorTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The processor type resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProcessorType> GetProcessorTypeAsync(ProcessorTypeName name, st::CancellationToken cancellationToken) =>
+            GetProcessorTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all processors which belong to this project.
@@ -2711,6 +2830,8 @@ namespace Google.Cloud.DocumentAI.V1
 
         private readonly gaxgrpc::ApiCall<ListProcessorTypesRequest, ListProcessorTypesResponse> _callListProcessorTypes;
 
+        private readonly gaxgrpc::ApiCall<GetProcessorTypeRequest, ProcessorType> _callGetProcessorType;
+
         private readonly gaxgrpc::ApiCall<ListProcessorsRequest, ListProcessorsResponse> _callListProcessors;
 
         private readonly gaxgrpc::ApiCall<GetProcessorRequest, Processor> _callGetProcessor;
@@ -2773,6 +2894,9 @@ namespace Google.Cloud.DocumentAI.V1
             _callListProcessorTypes = clientHelper.BuildApiCall<ListProcessorTypesRequest, ListProcessorTypesResponse>("ListProcessorTypes", grpcClient.ListProcessorTypesAsync, grpcClient.ListProcessorTypes, effectiveSettings.ListProcessorTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProcessorTypes);
             Modify_ListProcessorTypesApiCall(ref _callListProcessorTypes);
+            _callGetProcessorType = clientHelper.BuildApiCall<GetProcessorTypeRequest, ProcessorType>("GetProcessorType", grpcClient.GetProcessorTypeAsync, grpcClient.GetProcessorType, effectiveSettings.GetProcessorTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetProcessorType);
+            Modify_GetProcessorTypeApiCall(ref _callGetProcessorType);
             _callListProcessors = clientHelper.BuildApiCall<ListProcessorsRequest, ListProcessorsResponse>("ListProcessors", grpcClient.ListProcessorsAsync, grpcClient.ListProcessors, effectiveSettings.ListProcessorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProcessors);
             Modify_ListProcessorsApiCall(ref _callListProcessors);
@@ -2825,6 +2949,8 @@ namespace Google.Cloud.DocumentAI.V1
 
         partial void Modify_ListProcessorTypesApiCall(ref gaxgrpc::ApiCall<ListProcessorTypesRequest, ListProcessorTypesResponse> call);
 
+        partial void Modify_GetProcessorTypeApiCall(ref gaxgrpc::ApiCall<GetProcessorTypeRequest, ProcessorType> call);
+
         partial void Modify_ListProcessorsApiCall(ref gaxgrpc::ApiCall<ListProcessorsRequest, ListProcessorsResponse> call);
 
         partial void Modify_GetProcessorApiCall(ref gaxgrpc::ApiCall<GetProcessorRequest, Processor> call);
@@ -2866,6 +2992,8 @@ namespace Google.Cloud.DocumentAI.V1
         partial void Modify_FetchProcessorTypesRequest(ref FetchProcessorTypesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListProcessorTypesRequest(ref ListProcessorTypesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetProcessorTypeRequest(ref GetProcessorTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListProcessorsRequest(ref ListProcessorsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2994,6 +3122,30 @@ namespace Google.Cloud.DocumentAI.V1
         {
             Modify_ListProcessorTypesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListProcessorTypesRequest, ListProcessorTypesResponse, ProcessorType>(_callListProcessorTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ProcessorType GetProcessorType(GetProcessorTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProcessorTypeRequest(ref request, ref callSettings);
+            return _callGetProcessorType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a processor type detail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ProcessorType> GetProcessorTypeAsync(GetProcessorTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProcessorTypeRequest(ref request, ref callSettings);
+            return _callGetProcessorType.Async(request, callSettings);
         }
 
         /// <summary>
