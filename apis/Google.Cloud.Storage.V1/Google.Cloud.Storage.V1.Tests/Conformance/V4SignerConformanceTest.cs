@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,9 +42,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
         {
             var timestamp = test.Timestamp.ToDateTime();
             var clock = new FakeClock(timestamp);
-            var signer = UrlSigner
-                .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                .WithClock(clock);
+            var signer = UrlSigner.FromCredential(StorageConformanceTestData.TestCredential).WithClock(clock);
 
             var requestTemplate = RequestTemplate
                 .FromBucket(test.Bucket)
@@ -86,9 +84,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
         {
             var timestamp = test.PolicyInput.Timestamp.ToDateTime();
             var clock = new FakeClock(timestamp);
-            var signer = UrlSigner
-                .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                .WithClock(clock);
+            var signer = UrlSigner.FromCredential(StorageConformanceTestData.TestCredential).WithClock(clock);
 
             var options = Options
                 .FromDuration(TimeSpan.FromSeconds(test.PolicyInput.Expiration))

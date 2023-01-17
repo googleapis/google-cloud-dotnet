@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,22 +35,25 @@ namespace Google.Cloud.Storage.V1.Tests
     public partial class UrlSignerTest
     {
         [Fact]
-        public void FromServiceAccountPath_Validations()
+        public void FromCredentialFile_Validations()
         {
-            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromServiceAccountPath(null));
-            Assert.Throws<FileNotFoundException>(() => UrlSigner.FromServiceAccountPath("does_not_exist.txt"));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredentialFile(null));
+            Assert.Throws<FileNotFoundException>(() => UrlSigner.FromCredentialFile("does_not_exist.txt"));
         }
 
         [Fact]
-        public void FromServiceAccountData_Validations()
+        public void FromCredentialStream_Validations()
         {
-            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromServiceAccountData(null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredentialStream(null));
         }
 
         [Fact]
-        public void FromServiceAccountCredential_Validations()
+        public void FromCredential_Validations()
         {
-            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromServiceAccountCredential(null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((GoogleCredential) null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ComputeCredential) null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ServiceAccountCredential) null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ImpersonatedCredential) null));
         }
 
         [Fact]

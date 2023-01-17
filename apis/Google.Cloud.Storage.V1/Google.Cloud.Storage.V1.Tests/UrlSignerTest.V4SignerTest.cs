@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,9 +37,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 var requestTemplate = RequestTemplate.FromBucket("jessefrank2").WithObjectName("kitten.png");
                 var options = Options.FromDuration(TimeSpan.FromHours(1)).WithSigningVersion(SigningVersion.V4);
                 var serviceAccount = CreateFakeServiceAccountCredential("test-account@spec-test-ruby-samples.iam.gserviceaccount.com");
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(serviceAccount)
-                    .WithClock(clock);
+                var signer = UrlSigner.FromCredential(serviceAccount).WithClock(clock);
 
                 var uriString = signer.Sign(requestTemplate, options);
                 var parameters = ExtractQueryParameters(uriString);
@@ -59,9 +57,7 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 var clock = new FakeClock(new DateTime(2018, 11, 19, 5, 56, 54, DateTimeKind.Utc));
                 var serviceAccount = CreateFakeServiceAccountCredential("test-account@spec-test-ruby-samples.iam.gserviceaccount.com");
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(serviceAccount)
-                    .WithClock(clock);
+                var signer = UrlSigner.FromCredential(serviceAccount).WithClock(clock);
 
                 var uriString = signer.Sign("jessefrank2", "kitten.png", TimeSpan.FromHours(1), signingVersion: SigningVersion.V4);
                 var parameters = ExtractQueryParameters(uriString);
@@ -92,8 +88,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [InlineData(7 * 24 * 60 * 60 + 1 /* One week + 1 second */)]
             public void ExpiryValidation_Invalid(int seconds)
             {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
+                var signer = UrlSigner.FromCredential(StorageConformanceTestData.TestCredential)
                     .WithClock(new FakeClock());
                 var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
                 var options = Options.FromDuration(TimeSpan.FromSeconds(seconds)).WithSigningVersion(SigningVersion.V4);
@@ -104,9 +99,7 @@ namespace Google.Cloud.Storage.V1.Tests
             [Fact]
             public void ExpiryValidation_Exactly1Week()
             {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
-                    .WithClock(new FakeClock());
+                var signer = UrlSigner.FromCredential(StorageConformanceTestData.TestCredential).WithClock(new FakeClock());
 
                 var requestTemplate = RequestTemplate.FromBucket("bucket").WithObjectName("object");
                 var options = Options.FromDuration(TimeSpan.FromDays(7)).WithSigningVersion(SigningVersion.V4);
