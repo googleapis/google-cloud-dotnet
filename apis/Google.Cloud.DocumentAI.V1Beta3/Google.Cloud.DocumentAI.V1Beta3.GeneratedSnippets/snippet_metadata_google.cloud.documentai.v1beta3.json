@@ -919,6 +919,233 @@
       ]
     },
     {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_sync",
+      "title": "GetProcessorTypeRequestObject",
+      "description": "Snippet for GetProcessorType",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorType",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_async",
+      "title": "GetProcessorTypeRequestObjectAsync",
+      "description": "Snippet for GetProcessorTypeAsync",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorTypeAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_sync_flattened",
+      "title": "GetProcessorType",
+      "description": "Snippet for GetProcessorType",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorType",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_async_flattened",
+      "title": "GetProcessorTypeAsync",
+      "description": "Snippet for GetProcessorTypeAsync",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorTypeAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_sync_flattened_resourceNames",
+      "title": "GetProcessorTypeResourceNames",
+      "description": "Snippet for GetProcessorType",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorType",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_GetProcessorType_async_flattened_resourceNames",
+      "title": "GetProcessorTypeResourceNamesAsync",
+      "description": "Snippet for GetProcessorTypeAsync",
+      "file": "DocumentProcessorServiceClient.GetProcessorTypeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProcessorTypeAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "GetProcessorType",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ListProcessors_sync",
       "title": "ListProcessorsRequestObject",
       "description": "Snippet for ListProcessors",
