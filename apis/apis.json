@@ -4666,7 +4666,7 @@
     },
     {
       "id": "Google.Maps.AddressValidation.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Address Validation",
       "productUrl": "https://developers.google.com/maps/documentation/address-validation/requests-validate-address",
@@ -4683,8 +4683,7 @@
       "protoPath": "google/maps/addressvalidation/v1",
       "shortName": "addressvalidation",
       "serviceConfigFile": "addressvalidation_v1.yaml",
-      "restNumericEnums": true,
-      "transport": "grpc+rest"
+      "restNumericEnums": true
     },
     {
       "id": "Google.Maps.Routing.V2",
