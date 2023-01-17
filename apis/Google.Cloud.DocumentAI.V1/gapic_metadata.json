@@ -64,6 +64,12 @@
                 "GetProcessorAsync"
               ]
             },
+            "GetProcessorType": {
+              "methods": [
+                "GetProcessorType",
+                "GetProcessorTypeAsync"
+              ]
+            },
             "GetProcessorVersion": {
               "methods": [
                 "GetProcessorVersion",

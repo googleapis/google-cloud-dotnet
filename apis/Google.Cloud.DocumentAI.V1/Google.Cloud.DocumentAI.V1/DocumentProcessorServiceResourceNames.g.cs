@@ -332,6 +332,18 @@ namespace Google.Cloud.DocumentAI.V1
         }
     }
 
+    public partial class GetProcessorTypeRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ProcessorTypeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ProcessorTypeName ProcessorTypeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ProcessorTypeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetProcessorRequest
     {
         /// <summary>
