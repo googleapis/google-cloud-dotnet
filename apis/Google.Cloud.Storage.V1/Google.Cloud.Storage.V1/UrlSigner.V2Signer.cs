@@ -29,8 +29,9 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V2Signer : ISigner
         {
-            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, BlobSignerProvider blobSignerProvider, IClock clock)
             {
+                var blobSigner = blobSignerProvider.GetBlobSigner();
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new SigningState(requestTemplate, options, blobSigner, signerParameters);
                 var signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
@@ -38,18 +39,19 @@ namespace Google.Cloud.Storage.V1
             }
 
             public async Task<string> SignAsync(
-                RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
+                RequestTemplate requestTemplate, Options options, BlobSignerProvider blobSignerProvider, IClock clock, CancellationToken cancellationToken)
             {
+                var blobSigner = await blobSignerProvider.GetBlobSignerAsync(cancellationToken).ConfigureAwait(false);
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new SigningState(requestTemplate, options, blobSigner, signerParameters);
                 var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);
                 return state.GetResult(signature);
             }
 
-            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock) =>
+            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, BlobSignerProvider blobSignerProvider, IClock clock) =>
                 throw new NotSupportedException($"Post policy signing is not supported by {nameof(SigningVersion)}.{SigningVersion.V2}.");
 
-            public Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken) =>
+            public Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, BlobSignerProvider blobSignerProvider, IClock clock, CancellationToken cancellationToken) =>
                 throw new NotSupportedException($"Post policy signing is not supported by {nameof(SigningVersion)}.{SigningVersion.V2}.");
 
             private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(

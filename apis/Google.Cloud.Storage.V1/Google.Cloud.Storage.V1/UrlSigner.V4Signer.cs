@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,8 +37,9 @@ namespace Google.Cloud.Storage.V1
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
             // and ServiceAccountCredential.CreateSignature returns base64 anyway.
 
-            public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
+            public string Sign(RequestTemplate requestTemplate, Options options, BlobSignerProvider blobSignerProvider, IClock clock)
             {
+                var blobSigner = blobSignerProvider.GetBlobSigner();
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new UrlSigningState(requestTemplate, options, blobSigner, signerParameters);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
@@ -48,8 +49,9 @@ namespace Google.Cloud.Storage.V1
             }
 
             public async Task<string> SignAsync(
-                RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
+                RequestTemplate requestTemplate, Options options, BlobSignerProvider blobSignerProvider, IClock clock, CancellationToken cancellationToken)
             {
+                var blobSigner = await blobSignerProvider.GetBlobSignerAsync(cancellationToken).ConfigureAwait(false);
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new UrlSigningState(requestTemplate, options, blobSigner, signerParameters);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);
@@ -58,8 +60,9 @@ namespace Google.Cloud.Storage.V1
                 return state.GetResult(hexSignature);
             }
 
-            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock)
+            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, BlobSignerProvider blobSignerProvider, IClock clock)
             {
+                var blobSigner = blobSignerProvider.GetBlobSigner();
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, signerParameters);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign, signerParameters);
@@ -68,8 +71,9 @@ namespace Google.Cloud.Storage.V1
                 return state.GetResult(hexSignature);
             }
 
-            public async Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
+            public async Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, BlobSignerProvider blobSignerProvider, IClock clock, CancellationToken cancellationToken)
             {
+                var blobSigner = await blobSignerProvider.GetBlobSignerAsync(cancellationToken).ConfigureAwait(false);
                 var signerParameters = BlobSignerParameters.ForCurrentTimestamp(clock);
                 var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, signerParameters);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, signerParameters, cancellationToken).ConfigureAwait(false);

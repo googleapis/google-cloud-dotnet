@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -100,6 +100,65 @@ namespace Google.Cloud.Storage.V1
             public static BlobSignerParameters ForTimestamp(DateTimeOffset requestDateTime) => new BlobSignerParameters(requestDateTime);
 
             internal static BlobSignerParameters ForCurrentTimestamp(IClock clock) => ForTimestamp(new DateTimeOffset(clock.GetCurrentDateTimeUtc()));
+        }
+
+        /// <summary>
+        /// Class to allow UrlSigner to be independent of whether the IBlobSigner
+        /// is obtained synchronously or asynchronously.
+        /// </summary>
+        private sealed class BlobSignerProvider
+        {
+            /// <summary>
+            /// This is the blob signer that was used for building this instance
+            /// via <see cref="BlobSignerProvider(IBlobSigner)"/>, if indeed this
+            /// constructor was used. Null otherwise.
+            /// </summary>
+            private readonly IBlobSigner _blobSigner;
+
+            /// <summary>
+            /// The cached blob signer building task if this instance was built via
+            /// <see cref="BlobSignerProvider(Func{Task{IBlobSigner}})"/>. Null otherwise.
+            /// </summary>
+            /// <remarks>
+            /// Once this cached task completes and a blog signer is built,
+            /// obtaining the blob signer is a sync operation. Basically, accessing the cached blob signer is async
+            /// only for the first few threads that attempt it, before the blob signer has been built.
+            /// </remarks>
+            private readonly Lazy<Task<IBlobSigner>> _cachedBlobSignerTask;
+
+            internal BlobSignerProvider(IBlobSigner blobSigner) =>
+                _blobSigner = GaxPreconditions.CheckNotNull(blobSigner, nameof(blobSigner));
+
+            internal BlobSignerProvider(Func<Task<IBlobSigner>> blobSignerAsyncProvider)
+            {
+                GaxPreconditions.CheckNotNull(blobSignerAsyncProvider,nameof(blobSignerAsyncProvider));
+                _cachedBlobSignerTask = new Lazy<Task<IBlobSigner>>(SafeBlobSignerProvider, LazyThreadSafetyMode.ExecutionAndPublication);
+
+                async Task<IBlobSigner> SafeBlobSignerProvider()
+                {
+                    var blobSigner = await blobSignerAsyncProvider().ConfigureAwait(false);
+                    if (blobSigner is null)
+                    {
+                        throw new InvalidOperationException("The given IBlobSigner factory returned a null blob signer.");
+                    }
+                    return blobSigner;
+                }
+            }
+
+            internal IBlobSigner GetBlobSigner() => _cachedBlobSignerTask switch
+            {
+                null => _blobSigner,
+                { Value.IsCompleted: true } => _cachedBlobSignerTask.Value.ResultWithUnwrappedExceptions(),
+                _ => Task.Run(() => _cachedBlobSignerTask.Value).ResultWithUnwrappedExceptions()
+            };
+
+            internal Task<IBlobSigner> GetBlobSignerAsync(CancellationToken cancellationToken = default) => _cachedBlobSignerTask switch
+            {
+                null => Task.FromResult(_blobSigner),
+                { Value.IsCompleted : true } => _cachedBlobSignerTask.Value,
+                // When the task hasn't completed, we use Task.Run to take the cancellation token into account.
+                _ => Task.Run(() => _cachedBlobSignerTask.Value, cancellationToken)
+            };
         }
     }
 }
