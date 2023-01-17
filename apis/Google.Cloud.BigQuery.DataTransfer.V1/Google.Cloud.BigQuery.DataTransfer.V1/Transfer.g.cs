@@ -1218,9 +1218,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public const int OwnerInfoFieldNumber = 27;
     private global::Google.Cloud.BigQuery.DataTransfer.V1.UserInfo ownerInfo_;
     /// <summary>
-    /// Output only. Information about the user whose credentials are used to transfer data.
-    /// Populated only for `transferConfigs.get` requests. In case the user
-    /// information is not available, this field will not be populated.
+    /// Output only. Information about the user whose credentials are used to
+    /// transfer data. Populated only for `transferConfigs.get` requests. In case
+    /// the user information is not available, this field will not be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2008,9 +2008,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public const int ParamsFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Struct params_;
     /// <summary>
-    /// Output only. Parameters specific to each data source. For more information see the
-    /// bq tab in the 'Setting up a data transfer' section for each data source.
-    /// For example the parameters for Cloud Storage transfers are listed here:
+    /// Output only. Parameters specific to each data source. For more information
+    /// see the bq tab in the 'Setting up a data transfer' section for each data
+    /// source. For example the parameters for Cloud Storage transfers are listed
+    /// here:
     /// https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
