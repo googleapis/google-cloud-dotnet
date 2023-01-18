@@ -45,9 +45,6 @@ cd $(dirname $0)
 rm -rf releasebuild
 git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input --recursive
 
-# TODO: Remove this hack after a round of releases
-cp toolversions.sh releasebuild
-
 cd releasebuild
 
 # Make sure the package is deterministic. We don't do this for local builds,
@@ -60,6 +57,9 @@ then
 else
   git checkout $commit
 fi
+
+# TODO: Remove this hack after a round of releases
+cp ../toolversions.sh .
 
 # Turn the multi-line output of git tag --points-at into space-separated list of projects
 projects=$(git tag --points-at $commit | sed 's/-.*//g' | awk -vORS=\  '{print $1}' | sed 's/ $//')
