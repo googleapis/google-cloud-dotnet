@@ -1432,7 +1432,7 @@
     },
     {
       "id": "Google.Cloud.Datastream.V1Alpha1",
-      "version": "2.0.0-alpha01",
+      "version": "2.0.0-alpha02",
       "type": "grpc",
       "productName": "DataStream",
       "productUrl": "https://cloud.google.com/datastream/docs",
