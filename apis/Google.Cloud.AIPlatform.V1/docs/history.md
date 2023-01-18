@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2023-01-18
+
+### New features
+
+- Add enable_dashboard_access in aiplatform v1 and v1beta1 ([commit 5eef07b](https://github.com/googleapis/google-cloud-dotnet/commit/5eef07bfa85941015645598a0df3362e7db55378))
+
 ## Version 2.8.0, released 2023-01-16
 
 ### New features
