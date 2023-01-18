@@ -387,8 +387,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -416,8 +416,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -445,8 +445,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -474,8 +474,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -503,8 +503,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -532,8 +532,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -561,8 +561,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -590,8 +590,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Lists `Constraints` that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that parents the constraint. Must be in one of
+        /// the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -637,9 +637,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -667,9 +667,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -697,9 +697,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -727,9 +727,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -757,9 +757,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -787,9 +787,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -817,9 +817,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -847,9 +847,9 @@ namespace Google.Cloud.OrgPolicy.V2
         /// Retrieves all of the `Policies` that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and policies
-        /// that will be returned from this call. Must be in one of the following
-        /// forms:
+        /// Required. The target Cloud resource that parents the set of constraints and
+        /// policies that will be returned from this call. Must be in one of the
+        /// following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -920,7 +920,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -938,7 +939,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -956,7 +958,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -971,7 +974,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -989,7 +993,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1007,7 +1012,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// `Policy` during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming requirements.
+        /// Required. Resource name of the policy. See `Policy` for naming
+        /// requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1215,8 +1221,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1243,8 +1249,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1271,8 +1277,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1295,8 +1301,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1323,8 +1329,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1351,8 +1357,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1375,8 +1381,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1403,8 +1409,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1431,8 +1437,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1455,8 +1461,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1483,8 +1489,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -1511,8 +1517,8 @@ namespace Google.Cloud.OrgPolicy.V2
         /// policy already exists on the given Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in one of the
-        /// following forms:
+        /// Required. The Cloud resource that will parent the new Policy. Must be in
+        /// one of the following forms:
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
