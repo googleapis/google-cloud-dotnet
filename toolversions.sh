@@ -3,6 +3,9 @@
 
 # TODO: Make all of this work under Linux too, if it's useful
 
+# Note: versions of dotnet tools (e.g. docfx) are under
+# .config/dotnet-tools.json
+
 declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
@@ -138,8 +141,10 @@ install_grpc() {
 
 install_docfx() {
   # Note that errors will still appear in stderr, but we don't need
-  # the banner of "here's how to invoke the tool" when installing
-  dotnet tool install docfx > /dev/null
+  # the banner of "here's how to invoke the tool" when installing.
+  # TODO: We can probably remove this soon, and just use "dotnet tool restore"
+  # directly.
+  dotnet tool restore > /dev/null
 }
 
 # Logs to both stdout and a build timing log, allowing
