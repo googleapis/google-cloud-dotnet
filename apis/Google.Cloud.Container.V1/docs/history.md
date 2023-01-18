@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.8.0, released 2023-01-18
+
+### New features
+
+- Add support for viewing the subnet IPv6 CIDR and services IPv6 CIDR assigned to dual stack clusters ([commit f4ea790](https://github.com/googleapis/google-cloud-dotnet/commit/f4ea7907f39cdf76b88453e23809c43f2ab0beb5))
+
 ## Version 3.7.0, released 2023-01-16
 
 ### New features
