@@ -45,6 +45,9 @@ cd $(dirname $0)
 rm -rf releasebuild
 git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input --recursive
 
+# TODO: Remove this hack after a round of releases
+cp toolversions.sh releasebuild
+
 cd releasebuild
 
 # Make sure the package is deterministic. We don't do this for local builds,
