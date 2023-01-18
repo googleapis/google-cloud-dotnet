@@ -22,9 +22,10 @@ namespace Google.Cloud.Tools.ReleaseManager;
 
 /// <summary>
 /// Command to modify BUILD.bazel files in-place, copying the transport value from
-/// java_gapic_library to csharp_gapic_library. This is expected to be run against
-/// a Google-internal source control location (as the source of truth for the BUILD.bazel files)
-/// but is present in ReleaseManager for ease of development and testing.
+/// java_gapic_library to csharp_gapic_library, only if rest_numeric_enums is set to True.
+/// This is expected to be run against a Google-internal source control location
+/// (as the source of truth for the BUILD.bazel files) but is present in ReleaseManager
+/// for ease of development and testing.
 /// </summary>
 public sealed class CopyTransportFromJavaCommand : CommandBase
 {
@@ -93,6 +94,11 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
 
         int javaEnd = lines.IndexOf(")", javaStart);
         int csharpEnd = lines.IndexOf(")", csharpStart);
+
+        if (!lines.Skip(csharpStart).Take(csharpEnd - csharpStart).Any(line => line.Contains("rest_numeric_enums = True")))
+        {
+            return false;
+        }
 
         var javaTransportLine = lines.Skip(javaStart).Take(javaEnd - javaStart).FirstOrDefault(line => line.Contains("transport ="));
         var csharpTransportLine = lines.Skip(csharpStart).Take(csharpEnd - csharpStart).FirstOrDefault(line => line.Contains("transport ="));
