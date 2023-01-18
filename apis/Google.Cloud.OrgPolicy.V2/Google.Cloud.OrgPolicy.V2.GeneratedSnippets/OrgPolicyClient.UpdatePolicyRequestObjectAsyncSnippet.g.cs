@@ -18,6 +18,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
 {
     // [START orgpolicy_v2_generated_OrgPolicy_UpdatePolicy_async]
     using Google.Cloud.OrgPolicy.V2;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedOrgPolicyClientSnippets
@@ -38,6 +39,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await orgPolicyClient.UpdatePolicyAsync(request);

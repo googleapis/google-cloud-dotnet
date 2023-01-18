@@ -18,6 +18,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -1272,6 +1273,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = orgPolicyClient.UpdatePolicy(request);
@@ -1289,6 +1291,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
                 Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Policy response = await orgPolicyClient.UpdatePolicyAsync(request);
