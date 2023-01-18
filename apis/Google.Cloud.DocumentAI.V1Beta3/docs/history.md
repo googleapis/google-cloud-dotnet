@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta06, released 2023-01-18
+
+### New features
+
+- Exposed GetProcessorType to v1beta3 ([commit a1b1e1a](https://github.com/googleapis/google-cloud-dotnet/commit/a1b1e1a83942009f96189e75df8f8b5c9b6280ff))
+
 ## Version 2.0.0-beta05, released 2023-01-16
 
 ### New features
