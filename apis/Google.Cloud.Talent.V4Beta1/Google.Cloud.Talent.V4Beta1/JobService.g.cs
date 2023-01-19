@@ -200,8 +200,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
   #region Enums
   /// <summary>
   /// An enum that specifies the job attributes that are returned in the
-  /// [MatchingJob.job][google.cloud.talent.v4beta1.SearchJobsResponse.MatchingJob.job] or
-  /// [ListJobsResponse.jobs][google.cloud.talent.v4beta1.ListJobsResponse.jobs] fields.
+  /// [MatchingJob.job][google.cloud.talent.v4beta1.SearchJobsResponse.MatchingJob.job]
+  /// or [ListJobsResponse.jobs][google.cloud.talent.v4beta1.ListJobsResponse.jobs]
+  /// fields.
   /// </summary>
   public enum JobView {
     /// <summary>
@@ -210,20 +211,31 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("JOB_VIEW_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// A ID only view of job, with following attributes:
-    /// [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
+    /// [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_ID_ONLY")] IdOnly = 1,
     /// <summary>
     /// A minimal view of the job, with the following attributes:
-    /// [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.title][google.cloud.talent.v4beta1.Job.title],
-    /// [Job.company][google.cloud.talent.v4beta1.Job.company], [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations], [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
+    /// [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.company][google.cloud.talent.v4beta1.Job.company],
+    /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_MINIMAL")] Minimal = 2,
     /// <summary>
     /// A small view of the job, with the following attributes in the search
-    /// results: [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.title][google.cloud.talent.v4beta1.Job.title],
-    /// [Job.company][google.cloud.talent.v4beta1.Job.company], [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations], [Job.visibility][google.cloud.talent.v4beta1.Job.visibility],
-    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], [Job.description][google.cloud.talent.v4beta1.Job.description].
+    /// results: [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.company][google.cloud.talent.v4beta1.Job.company],
+    /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
+    /// [Job.visibility][google.cloud.talent.v4beta1.Job.visibility],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
+    /// [Job.description][google.cloud.talent.v4beta1.Job.description].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_SMALL")] Small = 3,
     /// <summary>
@@ -754,8 +766,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Strongly recommended for the best service experience.
     ///
-    /// If [update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask] is provided, only the specified fields in
-    /// [job][google.cloud.talent.v4beta1.UpdateJobRequest.job] are updated. Otherwise all the fields are updated.
+    /// If [update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask]
+    /// is provided, only the specified fields in
+    /// [job][google.cloud.talent.v4beta1.UpdateJobRequest.job] are updated.
+    /// Otherwise all the fields are updated.
     ///
     /// A field mask to restrict the fields that are updated. Only
     /// top level fields of [Job][google.cloud.talent.v4beta1.Job] are supported.
@@ -1523,8 +1537,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// The maximum number of jobs to be returned per page of results.
     ///
-    /// If [job_view][google.cloud.talent.v4beta1.ListJobsRequest.job_view] is set to [JobView.JOB_VIEW_ID_ONLY][google.cloud.talent.v4beta1.JobView.JOB_VIEW_ID_ONLY], the maximum allowed
-    /// page size is 1000. Otherwise, the maximum allowed page size is 100.
+    /// If [job_view][google.cloud.talent.v4beta1.ListJobsRequest.job_view] is set
+    /// to
+    /// [JobView.JOB_VIEW_ID_ONLY][google.cloud.talent.v4beta1.JobView.JOB_VIEW_ID_ONLY],
+    /// the maximum allowed page size is 1000. Otherwise, the maximum allowed page
+    /// size is 100.
     ///
     /// Default is 100 if empty or a number &lt; 1 is specified.
     /// </summary>
@@ -1542,8 +1559,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified;
     /// <summary>
     /// The desired job attributes returned for jobs in the
-    /// search response. Defaults to [JobView.JOB_VIEW_FULL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_FULL] if no value is
-    /// specified.
+    /// search response. Defaults to
+    /// [JobView.JOB_VIEW_FULL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_FULL]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2147,7 +2165,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Mode of a search.
     ///
-    /// Defaults to [SearchMode.JOB_SEARCH][google.cloud.talent.v4beta1.SearchJobsRequest.SearchMode.JOB_SEARCH].
+    /// Defaults to
+    /// [SearchMode.JOB_SEARCH][google.cloud.talent.v4beta1.SearchJobsRequest.SearchMode.JOB_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2162,9 +2181,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequestMetadataFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.RequestMetadata requestMetadata_;
     /// <summary>
-    /// Required. The meta information collected about the job searcher, used to improve the
-    /// search quality of the service. The identifiers (such as `user_id`) are
-    /// provided by users, and must be unique and consistent.
+    /// Required. The meta information collected about the job searcher, used to
+    /// improve the search quality of the service. The identifiers (such as
+    /// `user_id`) are provided by users, and must be unique and consistent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2265,23 +2284,34 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Job histogram facets:
     ///
-    /// * company_display_name: histogram by [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name].
-    /// * employment_type: histogram by [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types], for example,
+    /// * company_display_name: histogram by
+    /// [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name].
+    /// * employment_type: histogram by
+    /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types],
+    /// for example,
     ///   "FULL_TIME", "PART_TIME".
-    /// * company_size (DEPRECATED): histogram by [CompanySize][google.cloud.talent.v4beta1.CompanySize], for example,
+    /// * company_size (DEPRECATED): histogram by
+    /// [CompanySize][google.cloud.talent.v4beta1.CompanySize], for example,
     /// "SMALL", "MEDIUM", "BIG".
-    /// * publish_time_in_day: histogram by the [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    /// * publish_time_in_day: histogram by the
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
     ///   in days.
     ///   Must specify list of numeric buckets in spec.
-    /// * publish_time_in_month: histogram by the [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    /// * publish_time_in_month: histogram by the
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
     ///   in months.
     ///   Must specify list of numeric buckets in spec.
-    /// * publish_time_in_year: histogram by the [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    /// * publish_time_in_year: histogram by the
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
     ///   in years.
     ///   Must specify list of numeric buckets in spec.
-    /// * degree_types: histogram by the [Job.degree_types][google.cloud.talent.v4beta1.Job.degree_types], for example,
+    /// * degree_types: histogram by the
+    /// [Job.degree_types][google.cloud.talent.v4beta1.Job.degree_types], for
+    /// example,
     ///   "Bachelors", "Masters".
-    /// * job_level: histogram by the [Job.job_level][google.cloud.talent.v4beta1.Job.job_level], for example, "Entry
+    /// * job_level: histogram by the
+    /// [Job.job_level][google.cloud.talent.v4beta1.Job.job_level], for example,
+    /// "Entry
     ///   Level".
     /// * country: histogram by the country code of jobs, for example, "US", "FR".
     /// * admin1: histogram by the admin1 code of jobs, which is a global
@@ -2296,25 +2326,31 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///   and longitude), for example, 37.4038522,-122.0987765. Since the
     ///   coordinates of a city center can change, customers may need to refresh
     ///   them periodically.
-    /// * locale: histogram by the [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], for example, "en-US",
+    /// * locale: histogram by the
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], for
+    /// example, "en-US",
     ///   "fr-FR".
-    /// * language: histogram by the language subtag of the [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
+    /// * language: histogram by the language subtag of the
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
     ///   for example, "en", "fr".
-    /// * category: histogram by the [JobCategory][google.cloud.talent.v4beta1.JobCategory], for example,
+    /// * category: histogram by the
+    /// [JobCategory][google.cloud.talent.v4beta1.JobCategory], for example,
     ///   "COMPUTER_AND_IT", "HEALTHCARE".
     /// * base_compensation_unit: histogram by the
-    ///   [CompensationInfo.CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit] of base
-    ///   salary, for example, "WEEKLY", "MONTHLY".
+    ///   [CompensationInfo.CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit]
+    ///   of base salary, for example, "WEEKLY", "MONTHLY".
     /// * base_compensation: histogram by the base salary. Must specify list of
     ///   numeric buckets to group results by.
     /// * annualized_base_compensation: histogram by the base annualized salary.
     ///   Must specify list of numeric buckets to group results by.
     /// * annualized_total_compensation: histogram by the total annualized salary.
     ///   Must specify list of numeric buckets to group results by.
-    /// * string_custom_attribute: histogram by string [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
+    /// * string_custom_attribute: histogram by string
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
     ///   Values can be accessed via square bracket notations like
     ///   string_custom_attribute["key1"].
-    /// * numeric_custom_attribute: histogram by numeric [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
+    /// * numeric_custom_attribute: histogram by numeric
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
     ///   Values can be accessed via square bracket notations like
     ///   numeric_custom_attribute["key1"]. Must specify list of numeric buckets to
     ///   group results by.
@@ -2339,7 +2375,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Cloud.Talent.V4Beta1.JobView jobView_ = global::Google.Cloud.Talent.V4Beta1.JobView.Unspecified;
     /// <summary>
     /// The desired job attributes returned for jobs in the search response.
-    /// Defaults to [JobView.JOB_VIEW_SMALL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_SMALL] if no value is specified.
+    /// Defaults to
+    /// [JobView.JOB_VIEW_SMALL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_SMALL]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2356,7 +2394,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// An integer that specifies the current offset (that is, starting result
     /// location, amongst the jobs deemed by the API as relevant) in search
-    /// results. This field is only considered if [page_token][google.cloud.talent.v4beta1.SearchJobsRequest.page_token] is unset.
+    /// results. This field is only considered if
+    /// [page_token][google.cloud.talent.v4beta1.SearchJobsRequest.page_token] is
+    /// unset.
     ///
     /// The maximum allowed value is 5000. Otherwise an error is thrown.
     ///
@@ -2396,8 +2436,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string pageToken_ = "";
     /// <summary>
     /// The token specifying the current offset within
-    /// search results. See [SearchJobsResponse.next_page_token][google.cloud.talent.v4beta1.SearchJobsResponse.next_page_token] for
-    /// an explanation of how to obtain the next set of query results.
+    /// search results. See
+    /// [SearchJobsResponse.next_page_token][google.cloud.talent.v4beta1.SearchJobsResponse.next_page_token]
+    /// for an explanation of how to obtain the next set of query results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2420,33 +2461,37 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * `"relevance desc"`: By relevance descending, as determined by the API
     ///   algorithms. Relevance thresholding of query results is only available
     ///   with this ordering.
-    /// * `"posting_publish_time desc"`: By [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    /// * `"posting_publish_time desc"`: By
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
     ///   descending.
-    /// * `"posting_update_time desc"`: By [Job.posting_update_time][google.cloud.talent.v4beta1.Job.posting_update_time]
+    /// * `"posting_update_time desc"`: By
+    /// [Job.posting_update_time][google.cloud.talent.v4beta1.Job.posting_update_time]
     ///   descending.
-    /// * `"title"`: By [Job.title][google.cloud.talent.v4beta1.Job.title] ascending.
-    /// * `"title desc"`: By [Job.title][google.cloud.talent.v4beta1.Job.title] descending.
+    /// * `"title"`: By [Job.title][google.cloud.talent.v4beta1.Job.title]
+    /// ascending.
+    /// * `"title desc"`: By [Job.title][google.cloud.talent.v4beta1.Job.title]
+    /// descending.
     /// * `"annualized_base_compensation"`: By job's
-    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range] ascending. Jobs
-    ///   whose annualized base compensation is unspecified are put at the end of
-    ///   search results.
+    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range]
+    ///   ascending. Jobs whose annualized base compensation is unspecified are put
+    ///   at the end of search results.
     /// * `"annualized_base_compensation desc"`: By job's
-    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range] descending. Jobs
-    ///   whose annualized base compensation is unspecified are put at the end of
-    ///   search results.
+    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range]
+    ///   descending. Jobs whose annualized base compensation is unspecified are
+    ///   put at the end of search results.
     /// * `"annualized_total_compensation"`: By job's
-    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range] ascending. Jobs
-    ///   whose annualized base compensation is unspecified are put at the end of
-    ///   search results.
+    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range]
+    ///   ascending. Jobs whose annualized base compensation is unspecified are put
+    ///   at the end of search results.
     /// * `"annualized_total_compensation desc"`: By job's
-    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range] descending. Jobs
-    ///   whose annualized base compensation is unspecified are put at the end of
-    ///   search results.
+    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range]
+    ///   descending. Jobs whose annualized base compensation is unspecified are
+    ///   put at the end of search results.
     /// * `"custom_ranking desc"`: By the relevance score adjusted to the
-    ///   [SearchJobsRequest.CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression] with weight
-    ///   factor assigned by
-    ///   [SearchJobsRequest.CustomRankingInfo.importance_level][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.importance_level] in descending
-    ///   order.
+    ///   [SearchJobsRequest.CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression]
+    ///   with weight factor assigned by
+    ///   [SearchJobsRequest.CustomRankingInfo.importance_level][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.importance_level]
+    ///   in descending order.
     /// * Location sorting: Use the special syntax to order jobs by distance:&lt;br>
     ///   `"distance_from('Hawaii')"`: Order by distance from Hawaii.&lt;br>
     ///   `"distance_from(19.89, 155.5)"`: Order by distance from a coordinate.&lt;br>
@@ -2483,8 +2528,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// displayed to the job seeker higher up in the results, with the other jobs
     /// being displayed lower down in the results.
     ///
-    /// Defaults to [DiversificationLevel.SIMPLE][google.cloud.talent.v4beta1.SearchJobsRequest.DiversificationLevel.SIMPLE] if no value
-    /// is specified.
+    /// Defaults to
+    /// [DiversificationLevel.SIMPLE][google.cloud.talent.v4beta1.SearchJobsRequest.DiversificationLevel.SIMPLE]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2516,29 +2562,38 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private bool disableKeywordMatch_;
     /// <summary>
     /// This field is deprecated. Please use
-    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode] going forward.
+    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode]
+    /// going forward.
     ///
     /// To migrate, disable_keyword_match set to false maps to
-    /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL], and disable_keyword_match set to
-    /// true maps to [KeywordMatchMode.KEYWORD_MATCH_DISABLED][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_DISABLED]. If
-    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode] is set, this field is ignored.
+    /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL],
+    /// and disable_keyword_match set to true maps to
+    /// [KeywordMatchMode.KEYWORD_MATCH_DISABLED][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_DISABLED].
+    /// If
+    /// [SearchJobsRequest.keyword_match_mode][google.cloud.talent.v4beta1.SearchJobsRequest.keyword_match_mode]
+    /// is set, this field is ignored.
     ///
-    /// Controls whether to disable exact keyword match on [Job.title][google.cloud.talent.v4beta1.Job.title],
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description], [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name], [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
-    /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications]. When disable keyword match is turned off, a
-    /// keyword match returns jobs that do not match given category filters when
-    /// there are matching keywords. For example, for the query "program manager,"
-    /// a result is returned even if the job posting has the title "software
-    /// developer," which doesn't fall into "program manager" ontology, but does
-    /// have "program manager" appearing in its description.
+    /// Controls whether to disable exact keyword match on
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.description][google.cloud.talent.v4beta1.Job.description],
+    /// [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name],
+    /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
+    /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications]. When
+    /// disable keyword match is turned off, a keyword match returns jobs that do
+    /// not match given category filters when there are matching keywords. For
+    /// example, for the query "program manager," a result is returned even if the
+    /// job posting has the title "software developer," which doesn't fall into
+    /// "program manager" ontology, but does have "program manager" appearing in
+    /// its description.
     ///
     /// For queries like "cloud" that don't contain title or
     /// location specific ontology, jobs with "cloud" keyword matches are returned
     /// regardless of this flag's value.
     ///
-    /// Use [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes] if
-    /// company-specific globally matched custom field/attribute string values are
-    /// needed. Enabling keyword match improves recall of subsequent search
+    /// Use
+    /// [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes]
+    /// if company-specific globally matched custom field/attribute string values
+    /// are needed. Enabling keyword match improves recall of subsequent search
     /// requests.
     ///
     /// Defaults to false.
@@ -2558,8 +2613,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Controls what keyword match options to use.
     ///
-    /// Defaults to [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL] if no value
-    /// is specified.
+    /// Defaults to
+    /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3151,15 +3207,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// location specific ontology, jobs with "cloud" keyword matches are returned
       /// regardless of this enum's value.
       ///
-      /// Use [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes] if
-      /// company-specific globally matched custom field/attribute string values are
-      /// needed. Enabling keyword match improves recall of subsequent search
+      /// Use
+      /// [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes]
+      /// if company-specific globally matched custom field/attribute string values
+      /// are needed. Enabling keyword match improves recall of subsequent search
       /// requests.
       /// </summary>
       public enum KeywordMatchMode {
         /// <summary>
         /// The keyword match option isn't specified. Defaults to
-        /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL] behavior.
+        /// [KeywordMatchMode.KEYWORD_MATCH_ALL][google.cloud.talent.v4beta1.SearchJobsRequest.KeywordMatchMode.KEYWORD_MATCH_ALL]
+        /// behavior.
         /// </summary>
         [pbr::OriginalName("KEYWORD_MATCH_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -3167,20 +3225,27 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// </summary>
         [pbr::OriginalName("KEYWORD_MATCH_DISABLED")] KeywordMatchDisabled = 1,
         /// <summary>
-        /// Enable keyword matching over [Job.title][google.cloud.talent.v4beta1.Job.title],
-        /// [Job.description][google.cloud.talent.v4beta1.Job.description], [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name], [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
-        /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications], and keyword searchable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+        /// Enable keyword matching over
+        /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+        /// [Job.description][google.cloud.talent.v4beta1.Job.description],
+        /// [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name],
+        /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
+        /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications], and
+        /// keyword searchable
+        /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
         /// fields.
         /// </summary>
         [pbr::OriginalName("KEYWORD_MATCH_ALL")] KeywordMatchAll = 2,
         /// <summary>
-        /// Only enable keyword matching over [Job.title][google.cloud.talent.v4beta1.Job.title].
+        /// Only enable keyword matching over
+        /// [Job.title][google.cloud.talent.v4beta1.Job.title].
         /// </summary>
         [pbr::OriginalName("KEYWORD_MATCH_TITLE_ONLY")] KeywordMatchTitleOnly = 3,
       }
 
       /// <summary>
-      /// Custom ranking information for [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Custom ranking information for
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       /// </summary>
       public sealed partial class CustomRankingInfo : pb::IMessage<CustomRankingInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3232,8 +3297,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel importanceLevel_ = global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified;
         /// <summary>
         /// Required. Controls over how important the score of
-        /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression] gets applied to job's final
-        /// ranking position.
+        /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression]
+        /// gets applied to job's final ranking position.
         ///
         /// An error is thrown if not specified.
         /// </summary>
@@ -3250,16 +3315,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int RankingExpressionFieldNumber = 2;
         private string rankingExpression_ = "";
         /// <summary>
-        /// Required. Controls over how job documents get ranked on top of existing relevance
-        /// score (determined by API algorithm). A combination of the ranking
-        /// expression and relevance score is used to determine job's final ranking
-        /// position.
+        /// Required. Controls over how job documents get ranked on top of existing
+        /// relevance score (determined by API algorithm). A combination of the
+        /// ranking expression and relevance score is used to determine job's final
+        /// ranking position.
         ///
         /// The syntax for this expression is a subset of Google SQL syntax.
         ///
         /// Supported operators are: +, -, *, /, where the left and right side of
-        /// the operator is either a numeric [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] key,
-        /// integer/double value or an expression that can be evaluated to a number.
+        /// the operator is either a numeric
+        /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+        /// key, integer/double value or an expression that can be evaluated to a
+        /// number.
         ///
         /// Parenthesis are supported to adjust calculation precedence. The
         /// expression must be &lt; 200 characters in length.
@@ -3442,7 +3509,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// The importance level for [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression].
+          /// The importance level for
+          /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression].
           /// </summary>
           public enum ImportanceLevel {
             /// <summary>
@@ -3558,7 +3626,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob> matchingJobs_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob>();
     /// <summary>
-    /// The Job entities that match the specified [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+    /// The Job entities that match the specified
+    /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3604,7 +3673,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location>();
     /// <summary>
     /// The location filters that the service applied to the specified query. If
-    /// any filters are lat-lng based, the [Location.location_type][google.cloud.talent.v4beta1.Location.location_type] is
+    /// any filters are lat-lng based, the
+    /// [Location.location_type][google.cloud.talent.v4beta1.Location.location_type]
+    /// is
     /// [Location.LocationType.LOCATION_TYPE_UNSPECIFIED][google.cloud.talent.v4beta1.Location.LocationType.LOCATION_TYPE_UNSPECIFIED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3620,7 +3691,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// An estimation of the number of jobs that match the specified query.
     ///
     /// This number isn't guaranteed to be accurate. For accurate results,
-    /// see [SearchJobsResponse.total_size][google.cloud.talent.v4beta1.SearchJobsResponse.total_size].
+    /// see
+    /// [SearchJobsResponse.total_size][google.cloud.talent.v4beta1.SearchJobsResponse.total_size].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4015,7 +4087,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Job entry with metadata inside [SearchJobsResponse][google.cloud.talent.v4beta1.SearchJobsResponse].
+      /// Job entry with metadata inside
+      /// [SearchJobsResponse][google.cloud.talent.v4beta1.SearchJobsResponse].
       /// </summary>
       public sealed partial class MatchingJob : pb::IMessage<MatchingJob>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4069,7 +4142,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int JobFieldNumber = 1;
         private global::Google.Cloud.Talent.V4Beta1.Job job_;
         /// <summary>
-        /// Job resource that matches the specified [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Job resource that matches the specified
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4100,9 +4174,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int JobTitleSnippetFieldNumber = 3;
         private string jobTitleSnippet_ = "";
         /// <summary>
-        /// Contains snippets of text from the [Job.title][google.cloud.talent.v4beta1.Job.title] field most
-        /// closely matching a search query's keywords, if available. The matching
-        /// query keywords are enclosed in HTML bold tags.
+        /// Contains snippets of text from the
+        /// [Job.title][google.cloud.talent.v4beta1.Job.title] field most closely
+        /// matching a search query's keywords, if available. The matching query
+        /// keywords are enclosed in HTML bold tags.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4117,10 +4192,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int SearchTextSnippetFieldNumber = 4;
         private string searchTextSnippet_ = "";
         /// <summary>
-        /// Contains snippets of text from the [Job.description][google.cloud.talent.v4beta1.Job.description] and similar
-        /// fields that most closely match a search query's keywords, if available.
-        /// All HTML tags in the original fields are stripped when returned in this
-        /// field, and matching query keywords are enclosed in HTML bold tags.
+        /// Contains snippets of text from the
+        /// [Job.description][google.cloud.talent.v4beta1.Job.description] and
+        /// similar fields that most closely match a search query's keywords, if
+        /// available. All HTML tags in the original fields are stripped when
+        /// returned in this field, and matching query keywords are enclosed in HTML
+        /// bold tags.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4972,17 +5049,22 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Strongly recommended for the best service experience. Be aware that it will
     /// also increase latency when checking the status of a batch operation.
     ///
-    /// If [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask] is provided, only the specified fields in
-    /// [Job][google.cloud.talent.v4beta1.Job] are updated. Otherwise all the fields are updated.
+    /// If
+    /// [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask]
+    /// is provided, only the specified fields in
+    /// [Job][google.cloud.talent.v4beta1.Job] are updated. Otherwise all the
+    /// fields are updated.
     ///
     /// A field mask to restrict the fields that are updated. Only
     /// top level fields of [Job][google.cloud.talent.v4beta1.Job] are supported.
     ///
-    /// If [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask] is provided, The [Job][google.cloud.talent.v4beta1.Job] inside
+    /// If
+    /// [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask]
+    /// is provided, The [Job][google.cloud.talent.v4beta1.Job] inside
     /// [JobResult][google.cloud.talent.v4beta1.JobOperationResult.JobResult]
     /// will only contains fields that is updated, plus the Id of the Job.
-    /// Otherwise,  [Job][google.cloud.talent.v4beta1.Job] will include all fields, which can yield a very
-    /// large response.
+    /// Otherwise,  [Job][google.cloud.talent.v4beta1.Job] will include all fields,
+    /// which can yield a very large response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5174,9 +5256,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// The result of [JobService.BatchCreateJobs][google.cloud.talent.v4beta1.JobService.BatchCreateJobs] or
-  /// [JobService.BatchUpdateJobs][google.cloud.talent.v4beta1.JobService.BatchUpdateJobs] APIs. It's used to
-  /// replace [google.longrunning.Operation.response][google.longrunning.Operation.response] in case of success.
+  /// The result of
+  /// [JobService.BatchCreateJobs][google.cloud.talent.v4beta1.JobService.BatchCreateJobs]
+  /// or
+  /// [JobService.BatchUpdateJobs][google.cloud.talent.v4beta1.JobService.BatchUpdateJobs]
+  /// APIs. It's used to replace
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// in case of success.
   /// </summary>
   public sealed partial class JobOperationResult : pb::IMessage<JobOperationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5415,10 +5501,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int JobFieldNumber = 1;
         private global::Google.Cloud.Talent.V4Beta1.Job job_;
         /// <summary>
-        /// Here [Job][google.cloud.talent.v4beta1.Job] only contains basic information including [name][google.cloud.talent.v4beta1.Job.name],
-        /// [company][google.cloud.talent.v4beta1.Job.company], [language_code][google.cloud.talent.v4beta1.Job.language_code]
-        /// and [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], use getJob method to retrieve
-        /// detailed information of the created/updated job.
+        /// Here [Job][google.cloud.talent.v4beta1.Job] only contains basic
+        /// information including [name][google.cloud.talent.v4beta1.Job.name],
+        /// [company][google.cloud.talent.v4beta1.Job.company],
+        /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
+        /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], use
+        /// getJob method to retrieve detailed information of the created/updated
+        /// job.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5434,7 +5523,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private global::Google.Rpc.Status status_;
         /// <summary>
         /// The status of the job processed. This field is populated if the
-        /// processing of the [job][google.cloud.talent.v4beta1.JobOperationResult.JobResult.job] fails.
+        /// processing of the
+        /// [job][google.cloud.talent.v4beta1.JobOperationResult.JobResult.job]
+        /// fails.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

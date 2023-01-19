@@ -126,7 +126,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Required. Client side tenant identifier, used to uniquely identify the tenant.
+    /// Required. Client side tenant identifier, used to uniquely identify the
+    /// tenant.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -146,7 +147,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Indicates whether data owned by this tenant may be used to provide product
     /// improvements across other tenants.
     ///
-    /// Defaults behavior is [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED] if it's unset.
+    /// Defaults behavior is
+    /// [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED]
+    /// if it's unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,9 +166,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> keywordSearchableProfileCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of keys of filterable [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes], whose
-    /// corresponding `string_values` are used in keyword searches. Profiles with
-    /// `string_values` under these specified field keys are returned if any
+    /// A list of keys of filterable
+    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes],
+    /// whose corresponding `string_values` are used in keyword searches. Profiles
+    /// with `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
     /// and must be surrounded by quotes.
