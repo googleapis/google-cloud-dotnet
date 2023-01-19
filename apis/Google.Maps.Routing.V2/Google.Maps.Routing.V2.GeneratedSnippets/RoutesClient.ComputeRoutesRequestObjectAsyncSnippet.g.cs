@@ -54,6 +54,10 @@ namespace Google.Maps.Routing.V2.Snippets
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
                 },
+                ExtraComputations =
+                {
+                    ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
+                },
             };
             // Make the request
             ComputeRoutesResponse response = await routesClient.ComputeRoutesAsync(request);

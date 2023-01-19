@@ -48,6 +48,10 @@ namespace Google.Maps.Routing.V2.Snippets
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
                 },
+                ExtraComputations =
+                {
+                    ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
+                },
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);
@@ -80,6 +84,10 @@ namespace Google.Maps.Routing.V2.Snippets
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
                 },
+                ExtraComputations =
+                {
+                    ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
+                },
             };
             // Make the request
             ComputeRoutesResponse response = await routesClient.ComputeRoutesAsync(request);
@@ -106,6 +114,10 @@ namespace Google.Maps.Routing.V2.Snippets
                 TravelMode = RouteTravelMode.TravelModeUnspecified,
                 RoutingPreference = RoutingPreference.Unspecified,
                 DepartureTime = new Timestamp(),
+                ExtraComputations =
+                {
+                    ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,
+                },
             };
             // Make the request, returning a streaming response
             RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
