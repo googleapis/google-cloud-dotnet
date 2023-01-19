@@ -2646,7 +2646,7 @@
     },
     {
       "id": "Google.Cloud.Memcache.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Cloud Memorystore for Memcached",
       "productUrl": "https://cloud.google.com/memorystore/",
@@ -2656,10 +2656,10 @@
         "Memorystore"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/cloud/memcache/v1",
