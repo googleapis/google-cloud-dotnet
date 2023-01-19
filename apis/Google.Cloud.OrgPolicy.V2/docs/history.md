@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-01-19
+
+### New features
+
+- Support for OrgPolicy dry runs ([commit edfcb7b](https://github.com/googleapis/google-cloud-dotnet/commit/edfcb7b10fc124d1847e4208a68e7aa9b084c547))
+
 ## Version 2.1.0, released 2023-01-18
 
 ### New features
