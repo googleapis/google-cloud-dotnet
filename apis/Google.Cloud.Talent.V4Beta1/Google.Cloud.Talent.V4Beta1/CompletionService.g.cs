@@ -224,7 +224,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ScopeFieldNumber = 6;
     private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope scope_ = global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope.Unspecified;
     /// <summary>
-    /// The scope of the completion. The defaults is [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
+    /// The scope of the completion. The defaults is
+    /// [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -239,7 +240,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TypeFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType.Unspecified;
     /// <summary>
-    /// The completion topic. The default is [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
+    /// The completion topic. The default is
+    /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -550,24 +552,33 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Suggest job titles for jobs autocomplete.
         ///
-        /// For [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE] type, only open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
+        /// For
+        /// [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE]
+        /// type, only open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+        /// are returned.
         /// </summary>
         [pbr::OriginalName("JOB_TITLE")] JobTitle = 1,
         /// <summary>
         /// Suggest company names for jobs autocomplete.
         ///
-        /// For [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME] type,
-        /// only companies having open jobs with the same [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are
-        /// returned.
+        /// For
+        /// [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME]
+        /// type, only companies having open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+        /// are returned.
         /// </summary>
         [pbr::OriginalName("COMPANY_NAME")] CompanyName = 2,
         /// <summary>
         /// Suggest both job titles and company names for jobs autocomplete.
         ///
-        /// For [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED] type, only open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] or companies having open jobs with the same
-        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
+        /// For
+        /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED]
+        /// type, only open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+        /// or companies having open jobs with the same
+        /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+        /// are returned.
         /// </summary>
         [pbr::OriginalName("COMBINED")] Combined = 3,
       }

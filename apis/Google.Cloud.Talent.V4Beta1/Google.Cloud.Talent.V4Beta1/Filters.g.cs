@@ -171,8 +171,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int QueryLanguageCodeFieldNumber = 14;
     private string queryLanguageCode_ = "";
     /// <summary>
-    /// The language code of [query][google.cloud.talent.v4beta1.JobQuery.query]. For example, "en-US". This field helps to
-    /// better interpret the query.
+    /// The language code of [query][google.cloud.talent.v4beta1.JobQuery.query].
+    /// For example, "en-US". This field helps to better interpret the query.
     ///
     /// If a value isn't specified, the query language code is automatically
     /// detected, which may not be accurate.
@@ -226,15 +226,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter>();
     /// <summary>
     /// The location filter specifies geo-regions containing the jobs to
-    /// search against. See [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more information.
+    /// search against. See
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more
+    /// information.
     ///
     /// If a location value isn't specified, jobs fitting the other search
     /// criteria are retrieved regardless of where they're located.
     ///
     /// If multiple values are specified, jobs are retrieved from any of the
     /// specified locations. If different values are specified for the
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] parameter, the maximum provided
-    /// distance is used for all locations.
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
+    /// parameter, the maximum provided distance is used for all locations.
     ///
     /// At most 5 location filters are allowed.
     /// </summary>
@@ -251,7 +253,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> jobCategories_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory>();
     /// <summary>
     /// The category filter specifies the categories of jobs to search against.
-    /// See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for more information.
+    /// See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for more
+    /// information.
     ///
     /// If a value isn't specified, jobs from any category are searched against.
     ///
@@ -271,8 +274,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Allows filtering jobs by commute time with different travel methods (for
     ///  example, driving or public transit).
     ///
-    /// Note: This only works when you specify a [CommuteMethod][google.cloud.talent.v4beta1.CommuteMethod]. In this case,
-    /// [location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters] is ignored.
+    /// Note: This only works when you specify a
+    /// [CommuteMethod][google.cloud.talent.v4beta1.CommuteMethod]. In this case,
+    /// [location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters]
+    /// is ignored.
     ///
     ///  Currently we don't support sorting by commute time.
     /// </summary>
@@ -291,9 +296,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> companyDisplayNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// This filter specifies the company [Company.display_name][google.cloud.talent.v4beta1.Company.display_name]
-    /// of the jobs to search against. The company name must match the value
-    /// exactly.
+    /// This filter specifies the company
+    /// [Company.display_name][google.cloud.talent.v4beta1.Company.display_name] of
+    /// the jobs to search against. The company name must match the value exactly.
     ///
     /// Alternatively, the value being searched for can be wrapped in different
     /// match operators.
@@ -329,10 +334,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private global::Google.Cloud.Talent.V4Beta1.CompensationFilter compensationFilter_;
     /// <summary>
     /// This search filter is applied only to
-    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info]. For example, if the filter is specified
-    /// as "Hourly job with per-hour compensation > $15", only jobs meeting
-    /// these criteria are searched. If a filter isn't defined, all open jobs
-    /// are searched.
+    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info].
+    /// For example, if the filter is specified as "Hourly job with per-hour
+    /// compensation > $15", only jobs meeting these criteria are searched. If a
+    /// filter isn't defined, all open jobs are searched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -348,7 +353,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string customAttributeFilter_ = "";
     /// <summary>
     /// This filter specifies a structured syntax to match against the
-    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] marked as `filterable`.
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+    /// marked as `filterable`.
     ///
     /// The syntax for this expression is a subset of SQL syntax.
     ///
@@ -405,7 +411,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType> employmentTypes_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType>();
     /// <summary>
     /// The employment type filter specifies the employment type of jobs to
-    /// search against, such as [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
+    /// search against, such as
+    /// [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
     ///
     /// If a value isn't specified, jobs in the search results includes any
     /// employment type.
@@ -1017,14 +1024,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Allows the client to return jobs without a
     /// set location, specifically, telecommuting jobs (telecommuting is considered
     /// by the service as a special location).
-    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region] indicates if a job permits telecommuting.
-    /// If this field is set to [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
-    /// telecommuting jobs are searched, and [address][google.cloud.talent.v4beta1.LocationFilter.address] and [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are
-    /// ignored. If not set or set to
-    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED], the telecommute status of
-    /// the jobs is ignored. Jobs that have [PostingRegion.TELECOMMUTE][google.cloud.talent.v4beta1.PostingRegion.TELECOMMUTE] and have
-    /// additional [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] may still be matched based on other location
-    /// filters using [address][google.cloud.talent.v4beta1.LocationFilter.address] or [latlng][].
+    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region]
+    /// indicates if a job permits telecommuting. If this field is set to
+    /// [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
+    /// telecommuting jobs are searched, and
+    /// [address][google.cloud.talent.v4beta1.LocationFilter.address] and
+    /// [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are ignored.
+    /// If not set or set to
+    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED],
+    /// the telecommute status of the jobs is ignored. Jobs that have
+    /// [PostingRegion.TELECOMMUTE][google.cloud.talent.v4beta1.PostingRegion.TELECOMMUTE]
+    /// and have additional
+    /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] may still be
+    /// matched based on other location filters using
+    /// [address][google.cloud.talent.v4beta1.LocationFilter.address] or
+    /// [latlng][].
     ///
     /// This filter can be used by itself to search exclusively for telecommuting
     /// jobs, or it can be combined with another location
@@ -1684,35 +1698,45 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Filter by `base compensation entry's` unit. A job is a match if and
         /// only if the job contains a base CompensationEntry and the base
-        /// CompensationEntry's unit matches provided [units][google.cloud.talent.v4beta1.CompensationFilter.units].
-        /// Populate one or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// CompensationEntry's unit matches provided
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units]. Populate
+        /// one or more
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         ///
-        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
-        /// base compensation entry.
+        /// See
+        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+        /// for definition of base compensation entry.
         /// </summary>
         [pbr::OriginalName("UNIT_ONLY")] UnitOnly = 1,
         /// <summary>
         /// Filter by `base compensation entry's` unit and amount / range. A job
         /// is a match if and only if the job contains a base CompensationEntry, and
         /// the base entry's unit matches provided
-        /// [CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit] and
-        /// amount or range overlaps with provided
+        /// [CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit]
+        /// and amount or range overlaps with provided
         /// [CompensationRange][google.cloud.talent.v4beta1.CompensationInfo.CompensationRange].
         ///
-        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
-        /// base compensation entry.
+        /// See
+        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+        /// for definition of base compensation entry.
         ///
-        /// Set exactly one [units][google.cloud.talent.v4beta1.CompensationFilter.units] and populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
+        /// Set exactly one
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units] and
+        /// populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
         /// </summary>
         [pbr::OriginalName("UNIT_AND_AMOUNT")] UnitAndAmount = 2,
         /// <summary>
         /// Filter by annualized base compensation amount and `base compensation
-        /// entry's` unit. Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit. Populate
+        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
+        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_BASE_AMOUNT")] AnnualizedBaseAmount = 3,
         /// <summary>
         /// Filter by annualized total compensation amount and `base compensation
-        /// entry's` unit . Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit . Populate
+        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
+        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_TOTAL_AMOUNT")] AnnualizedTotalAmount = 4,
       }
@@ -1816,8 +1840,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TravelDurationFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration travelDuration_;
     /// <summary>
-    /// Required. The maximum travel time in seconds. The maximum allowed value is `3600s`
-    /// (one hour). Format is `123s`.
+    /// Required. The maximum travel time in seconds. The maximum allowed value is
+    /// `3600s` (one hour). Format is `123s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
