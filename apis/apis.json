@@ -3332,7 +3332,7 @@
       "protoPath": "google/cloud/redis/v1beta1",
       "productName": "Google Cloud Memorystore for Redis",
       "productUrl": "https://cloud.google.com/memorystore/",
-      "version": "3.0.0-beta01",
+      "version": "3.0.0-beta02",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
