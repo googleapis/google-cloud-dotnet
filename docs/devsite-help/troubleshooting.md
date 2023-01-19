@@ -183,6 +183,10 @@ by adding the element below to a `<PropertyGroup>` element in your project file:
 <CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
 ```
 
+Note that this requires the .NET 7 SDK (even if you have a different target
+for your application), and you should have the "Enable Just My Code" checkbox
+in Visual Studio *unchecked*.
+
 ## Why aren't the gRPC native libraries being found?
 
 The native libraries that gRPC relies on are present in
