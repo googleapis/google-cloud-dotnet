@@ -31,10 +31,8 @@ Although "REST gRPC adapter" sounds like a contradiction in terms, this is an im
 in Grpc.Core.Api (and in particular its `ChannelBase` and `CallInvoker` aspects) that communicates using HTTP/1.1 and JSON.
 Using the gRPC API as a common abstraction allows most code to be transport-agnostic.
 
-As of June 2022, the Google.Cloud.Compute.V1 package *only* supports the REST transport, and all other
-packages *only* support the gRPC transport. Over time we expect more packages to support the REST
-transport, which may be useful in situations where HTTP/2.0 is not fully supported on customer networks.
-(For example, we sometimes see proxies which don't fully support it.)
+As of June 2022, the Google.Cloud.Compute.V1 package *only* supports the REST transport, whereas most other
+packages support both the gRPC transport and the REST transport.
 
 In many situations, application code does not need to customize the choice of gRPC adapter at all.
 However, it can provide additional control, and the remainder of this page documents the ways in which the
@@ -82,6 +80,16 @@ which in turn means that other dependencies (such as logging and `HttpClient`) c
 As such, when using dependency injection to construct clients (and where Grpc.Net.Client works - see below),
 we recommend using the extension method rather than just relying on the default selection process
 (which doesn't have access to dependency injection, and so can't configure logging etc).
+
+## Notes on the REST transport
+
+The REST transport may be useful in situations where HTTP/2.0 is not fully supported on customer networks.
+(For example, we sometimes see proxies which don't fully support it.)
+
+Libraries which support the REST transport but which default to the gRPC transport indicate this in their
+"getting started" (see the [Google.Cloud.Vision.V1 getting started page](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Vision.V1/latest) for an example).
+
+Even when a library supports the REST transport in general, some specific RPCs may not be supported. In particular, bi-directional streaming RPCs are currently not supported. Any attempt to call unsupported RPCs will result in an `RpcException` with a status code of "Unimplemented".
 
 ## Notes on using Grpc.Net.Client
 
