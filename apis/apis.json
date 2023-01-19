@@ -911,7 +911,7 @@
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Cloud Billing Budget",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
@@ -922,8 +922,8 @@
         "budget"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
-        "Grpc.Core": "2.46.3"
+        "Google.Api.Gax.Grpc": "4.3.0",
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/cloud/billing/budgets/v1",
