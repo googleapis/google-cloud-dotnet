@@ -1904,7 +1904,7 @@
     },
     {
       "id": "Google.Cloud.Eventarc.Publishing.V1",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0-beta03",
       "type": "grpc",
       "productName": "Eventarc Publishing",
       "productUrl": "https://cloud.google.com/eventarc/docs",
