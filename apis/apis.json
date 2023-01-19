@@ -402,13 +402,13 @@
       "protoPath": "google/cloud/automl/v1",
       "productName": "Google AutoML",
       "productUrl": "https://cloud.google.com/automl/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the AutoML API, which allows you to train high-quality custom machine learning models with minimal effort and machine learning expertise.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "tags": [
         "automl",
