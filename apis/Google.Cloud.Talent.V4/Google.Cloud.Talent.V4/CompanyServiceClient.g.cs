@@ -591,16 +591,20 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask] is provided, only the specified fields in
-        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask]
+        /// is provided, only the specified fields in
+        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated.
+        /// Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the company fields to be updated. Only
-        /// top level fields of [Company][google.cloud.talent.v4.Company] are supported.
+        /// top level fields of [Company][google.cloud.talent.v4.Company] are
+        /// supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -615,16 +619,20 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask] is provided, only the specified fields in
-        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask]
+        /// is provided, only the specified fields in
+        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated.
+        /// Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the company fields to be updated. Only
-        /// top level fields of [Company][google.cloud.talent.v4.Company] are supported.
+        /// top level fields of [Company][google.cloud.talent.v4.Company] are
+        /// supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -639,16 +647,20 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required. The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask] is provided, only the specified fields in
-        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask]
+        /// is provided, only the specified fields in
+        /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated.
+        /// Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the company fields to be updated. Only
-        /// top level fields of [Company][google.cloud.talent.v4.Company] are supported.
+        /// top level fields of [Company][google.cloud.talent.v4.Company] are
+        /// supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
