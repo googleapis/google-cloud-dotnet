@@ -1488,7 +1488,7 @@
       "protoPath": "google/devtools/clouddebugger/v2",
       "productName": "Google Cloud Debugger",
       "productUrl": "https://cloud.google.com/debugger/",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Debugger API.",
       "tags": [
@@ -1498,9 +1498,9 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.Cloud.DevTools.Common": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "shortName": "clouddebugger",
       "serviceConfigFile": "clouddebugger_v2.yaml",
