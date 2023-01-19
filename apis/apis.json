@@ -15,7 +15,8 @@
       "protoPath": "google/analytics/admin/v1alpha",
       "shortName": "analyticsadmin",
       "serviceConfigFile": "analyticsadmin_v1alpha.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Analytics.Admin.V1Beta",
@@ -32,7 +33,8 @@
       "protoPath": "google/analytics/admin/v1beta",
       "shortName": "analyticsadmin",
       "serviceConfigFile": "analyticsadmin.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Analytics.Data.V1Beta",
@@ -49,7 +51,8 @@
       "protoPath": "google/analytics/data/v1beta",
       "shortName": "analyticsdata",
       "serviceConfigFile": "analyticsdata_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Apps.Script.Type",
@@ -80,7 +83,8 @@
       "protoPath": "google/area120/tables/v1alpha1",
       "shortName": "area120tables",
       "serviceConfigFile": "area120tables_v1alpha1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AccessApproval.V1",
@@ -124,7 +128,8 @@
       "protoPath": "google/cloud/apigateway/v1",
       "shortName": "apigateway",
       "serviceConfigFile": "apigateway_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
@@ -192,7 +197,8 @@
       "protoPath": "google/cloud/apigeeconnect/v1",
       "shortName": "apigeeconnect",
       "serviceConfigFile": "apigeeconnect_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ApigeeRegistry.V1",
@@ -214,7 +220,8 @@
       "protoPath": "google/cloud/apigeeregistry/v1",
       "shortName": "apigeeregistry",
       "serviceConfigFile": "apigeeregistry_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AppEngine.Logging.V1",
@@ -256,7 +263,8 @@
       "protoPath": "google/appengine/v1",
       "shortName": "appengine",
       "serviceConfigFile": "appengine_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ArtifactRegistry.V1",
@@ -357,7 +365,8 @@
       "protoPath": "google/cloud/assuredworkloads/v1",
       "shortName": "assuredworkloads",
       "serviceConfigFile": "assuredworkloads_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
@@ -377,7 +386,8 @@
       "protoPath": "google/cloud/assuredworkloads/v1beta1",
       "shortName": "assuredworkloads",
       "serviceConfigFile": "assuredworkloads_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Audit",
@@ -416,7 +426,8 @@
       ],
       "shortName": "automl",
       "serviceConfigFile": "automl_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BareMetalSolution.V2",
@@ -440,7 +451,8 @@
       "protoPath": "google/cloud/baremetalsolution/v2",
       "shortName": "baremetalsolution",
       "serviceConfigFile": "baremetalsolution_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Batch.V1",
@@ -485,7 +497,8 @@
       "protoPath": "google/cloud/batch/v1alpha",
       "shortName": "batch",
       "serviceConfigFile": "batch_v1alpha.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
@@ -643,7 +656,8 @@
       "protoPath": "google/cloud/bigquery/connection/v1",
       "shortName": "bigqueryconnection",
       "serviceConfigFile": "bigqueryconnection_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
@@ -683,7 +697,8 @@
       "protoPath": "google/cloud/bigquery/datapolicies/v1",
       "shortName": "bigquerydatapolicy",
       "serviceConfigFile": "bigquerydatapolicy_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.DataPolicies.V1Beta1",
@@ -724,7 +739,8 @@
       ],
       "shortName": "bigquerydatatransfer",
       "serviceConfigFile": "bigquerydatatransfer_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.Logging.V1",
@@ -783,7 +799,8 @@
       "protoPath": "google/cloud/bigquery/reservation/v1",
       "shortName": "bigqueryreservation",
       "serviceConfigFile": "bigqueryreservation_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.V2",
@@ -912,7 +929,8 @@
       "protoPath": "google/cloud/billing/budgets/v1",
       "shortName": "billingbudgets",
       "serviceConfigFile": "billingbudgets.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1Beta1",
@@ -952,7 +970,8 @@
       ],
       "shortName": "cloudbilling",
       "serviceConfigFile": "cloudbilling_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1",
@@ -977,7 +996,8 @@
       "protoPath": "google/cloud/binaryauthorization/v1",
       "shortName": "binaryauthorization",
       "serviceConfigFile": "binaryauthorization_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1Beta1",
@@ -998,7 +1018,8 @@
       "protoPath": "google/cloud/binaryauthorization/v1beta1",
       "shortName": "binaryauthorization",
       "serviceConfigFile": "binaryauthorization_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.CertificateManager.V1",
@@ -1022,7 +1043,8 @@
       "protoPath": "google/cloud/certificatemanager/v1",
       "shortName": "certificatemanager",
       "serviceConfigFile": "certificatemanager_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Channel.V1",
@@ -1044,7 +1066,8 @@
       "protoPath": "google/cloud/channel/v1",
       "shortName": "cloudchannel",
       "serviceConfigFile": "cloudchannel_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
@@ -1066,7 +1089,8 @@
       "protoPath": "google/devtools/cloudbuild/v1",
       "shortName": "cloudbuild",
       "serviceConfigFile": "cloudbuild_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.CloudDms.V1",
@@ -1144,7 +1168,8 @@
       "protoPath": "google/cloud/contactcenterinsights/v1",
       "shortName": "contactcenterinsights",
       "serviceConfigFile": "contactcenterinsights_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Container.V1",
@@ -1185,7 +1210,8 @@
       "protoPath": "google/cloud/datacatalog/lineage/v1",
       "shortName": "datalineage",
       "serviceConfigFile": "datalineage_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DataCatalog.V1",
@@ -1231,7 +1257,8 @@
       "protoPath": "google/cloud/datafusion/v1",
       "shortName": "datafusion",
       "serviceConfigFile": "datafusion_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DataLabeling.V1Beta1",
@@ -1285,7 +1312,8 @@
       "protoPath": "google/dataflow/v1beta3",
       "shortName": "dataflow",
       "serviceConfigFile": "dataflow_v1beta3.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Dataform.V1Beta1",
@@ -1308,7 +1336,8 @@
       "protoPath": "google/cloud/dataform/v1beta1",
       "shortName": "dataform",
       "serviceConfigFile": "dataform_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Dataplex.V1",
@@ -1332,7 +1361,8 @@
       "protoPath": "google/cloud/dataplex/v1",
       "shortName": "dataplex",
       "serviceConfigFile": "dataplex_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Dataproc.V1",
@@ -1428,7 +1458,8 @@
       "protoPath": "google/cloud/datastream/v1",
       "shortName": "datastream",
       "serviceConfigFile": "datastream_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Datastream.V1Alpha1",
@@ -1448,7 +1479,8 @@
       "protoPath": "google/cloud/datastream/v1alpha1",
       "shortName": "datastream",
       "serviceConfigFile": "datastream_v1alpha1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Debugger.V2",
@@ -1472,7 +1504,8 @@
       },
       "shortName": "clouddebugger",
       "serviceConfigFile": "clouddebugger_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Deploy.V1",
@@ -1500,7 +1533,8 @@
       "protoPath": "google/cloud/deploy/v1",
       "shortName": "clouddeploy",
       "serviceConfigFile": "clouddeploy_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DevTools.Common",
@@ -1539,7 +1573,8 @@
       },
       "shortName": "containeranalysis",
       "serviceConfigFile": "containeranalysis_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
@@ -1643,7 +1678,8 @@
       },
       "shortName": "dialogflow",
       "serviceConfigFile": "dialogflow_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Dialogflow.V2Beta1",
@@ -1661,7 +1697,8 @@
       "protoPath": "google/cloud/dialogflow/v2beta1",
       "shortName": "dialogflow",
       "serviceConfigFile": "dialogflow_v2beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
@@ -1681,7 +1718,8 @@
       "protoPath": "google/cloud/discoveryengine/v1beta",
       "shortName": "discoveryengine",
       "serviceConfigFile": "discoveryengine_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Dlp.V2",
@@ -1705,7 +1743,8 @@
       ],
       "shortName": "dlp",
       "serviceConfigFile": "dlp_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
@@ -1732,7 +1771,8 @@
       "protoPath": "google/cloud/documentai/v1",
       "shortName": "documentai",
       "serviceConfigFile": "documentai_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DocumentAI.V1Beta3",
@@ -1757,7 +1797,8 @@
       "protoPath": "google/cloud/documentai/v1beta3",
       "shortName": "documentai",
       "serviceConfigFile": "documentai_v1beta3.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Domains.V1",
@@ -1798,7 +1839,8 @@
       "protoPath": "google/cloud/domains/v1beta1",
       "shortName": "domains",
       "serviceConfigFile": "domains_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
@@ -1815,7 +1857,8 @@
       "protoPath": "google/cloud/enterpriseknowledgegraph/v1",
       "shortName": "enterpriseknowledgegraph",
       "serviceConfigFile": "enterpriseknowledgegraph_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ErrorReporting.V1Beta1",
@@ -1833,7 +1876,8 @@
       ],
       "shortName": "clouderrorreporting",
       "serviceConfigFile": "clouderrorreporting_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
@@ -1855,7 +1899,8 @@
       "protoPath": "google/cloud/essentialcontacts/v1",
       "shortName": "essentialcontacts",
       "serviceConfigFile": "essentialcontacts_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Eventarc.Publishing.V1",
@@ -1873,7 +1918,8 @@
       "protoPath": "google/cloud/eventarc/publishing/v1",
       "shortName": "eventarcpublishing",
       "serviceConfigFile": "eventarcpublishing_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Eventarc.V1",
@@ -1897,7 +1943,8 @@
       "protoPath": "google/cloud/eventarc/v1",
       "shortName": "eventarc",
       "serviceConfigFile": "eventarc_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Filestore.V1",
@@ -1916,7 +1963,8 @@
       "protoPath": "google/cloud/filestore/v1",
       "shortName": "file",
       "serviceConfigFile": "file_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Firestore.Admin.V1",
@@ -2022,7 +2070,8 @@
       "protoPath": "google/cloud/functions/v1",
       "shortName": "cloudfunctions",
       "serviceConfigFile": "cloudfunctions_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Functions.V2",
@@ -2045,7 +2094,8 @@
       "protoPath": "google/cloud/functions/v2",
       "shortName": "cloudfunctions",
       "serviceConfigFile": "cloudfunctions_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Functions.V2Beta",
@@ -2066,7 +2116,8 @@
       "protoPath": "google/cloud/functions/v2beta",
       "shortName": "cloudfunctions",
       "serviceConfigFile": "cloudfunctions_v2beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
@@ -2089,7 +2140,8 @@
       "protoPath": "google/cloud/gsuiteaddons/v1",
       "shortName": "gsuiteaddons",
       "serviceConfigFile": "gsuiteaddons_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Gaming.V1",
@@ -2132,7 +2184,8 @@
       },
       "shortName": "gameservices",
       "serviceConfigFile": "gameservices_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.GkeBackup.V1",
@@ -2155,7 +2208,8 @@
       "protoPath": "google/cloud/gkebackup/v1",
       "shortName": "gkebackup",
       "serviceConfigFile": "gkebackup_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.GkeConnect.Gateway.V1Beta1",
@@ -2199,7 +2253,8 @@
       "protoPath": "google/cloud/gkehub/v1beta1",
       "shortName": "gkehub",
       "serviceConfigFile": "gkehub_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.GkeHub.V1",
@@ -2295,7 +2350,8 @@
       "protoPath": "google/iam/credentials/v1",
       "shortName": "iamcredentials",
       "serviceConfigFile": "iamcredentials_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Iam.V1",
@@ -2362,7 +2418,8 @@
       "protoPath": "google/cloud/iap/v1",
       "shortName": "iap",
       "serviceConfigFile": "iap_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Ids.V1",
@@ -2387,7 +2444,8 @@
       "protoPath": "google/cloud/ids/v1",
       "shortName": "ids",
       "serviceConfigFile": "ids_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Iot.V1",
@@ -2408,7 +2466,8 @@
       "protoPath": "google/cloud/iot/v1",
       "shortName": "cloudiot",
       "serviceConfigFile": "cloudiot_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Kms.V1",
@@ -2433,7 +2492,8 @@
       },
       "shortName": "cloudkms",
       "serviceConfigFile": "cloudkms_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Language.V1",
@@ -2475,7 +2535,8 @@
       "protoPath": "google/cloud/lifesciences/v2beta",
       "shortName": "lifesciences",
       "serviceConfigFile": "lifesciences_v2beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Location",
@@ -2642,7 +2703,8 @@
       "protoPath": "google/cloud/mediatranslation/v1beta1",
       "shortName": "mediatranslation",
       "serviceConfigFile": "mediatranslation_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Memcache.V1",
@@ -2665,7 +2727,8 @@
       "protoPath": "google/cloud/memcache/v1",
       "shortName": "memcache",
       "serviceConfigFile": "memcache_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Memcache.V1Beta2",
@@ -2688,7 +2751,8 @@
       ],
       "shortName": "memcache",
       "serviceConfigFile": "memcache_v1beta2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Metastore.V1",
@@ -2735,7 +2799,8 @@
       "protoPath": "google/cloud/metastore/v1alpha",
       "shortName": "metastore",
       "serviceConfigFile": "metastore_v1alpha.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Metastore.V1Beta",
@@ -2757,7 +2822,8 @@
       "protoPath": "google/cloud/metastore/v1beta",
       "shortName": "metastore",
       "serviceConfigFile": "metastore_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Monitoring.V3",
@@ -2850,7 +2916,8 @@
       "protoPath": "google/cloud/networkmanagement/v1",
       "shortName": "networkmanagement",
       "serviceConfigFile": "networkmanagement_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
@@ -2878,7 +2945,8 @@
       "protoPath": "google/cloud/networksecurity/v1beta1",
       "shortName": "networksecurity",
       "serviceConfigFile": "networksecurity_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Notebooks.V1",
@@ -2945,7 +3013,8 @@
       "protoPath": "google/cloud/optimization/v1",
       "shortName": "cloudoptimization",
       "serviceConfigFile": "cloudoptimization_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
@@ -2968,7 +3037,8 @@
       "protoPath": "google/cloud/orchestration/airflow/service/v1",
       "shortName": "composer",
       "serviceConfigFile": "composer_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.OrgPolicy.V1",
@@ -3003,7 +3073,8 @@
       "protoPath": "google/cloud/orgpolicy/v2",
       "shortName": "orgpolicy",
       "serviceConfigFile": "orgpolicy_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.OsConfig.V1",
@@ -3028,7 +3099,8 @@
       },
       "shortName": "osconfig",
       "serviceConfigFile": "osconfig_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.OsConfig.V1Alpha",
@@ -3051,7 +3123,8 @@
       "protoPath": "google/cloud/osconfig/v1alpha",
       "shortName": "osconfig",
       "serviceConfigFile": "osconfig_v1alpha.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.OsLogin.Common",
@@ -3094,7 +3167,8 @@
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
       "serviceConfigFile": "oslogin_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.OsLogin.V1Beta",
@@ -3118,7 +3192,8 @@
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
       "serviceConfigFile": "oslogin_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
@@ -3135,7 +3210,8 @@
       ],
       "shortName": "phishingprotection",
       "serviceConfigFile": "phishingprotection_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
@@ -3157,7 +3233,8 @@
       "protoPath": "google/cloud/policytroubleshooter/v1",
       "shortName": "policytroubleshooter",
       "serviceConfigFile": "policytroubleshooter_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.PrivateCatalog.V1Beta1",
@@ -3177,7 +3254,8 @@
       "protoPath": "google/cloud/privatecatalog/v1beta1",
       "shortName": "cloudprivatecatalog",
       "serviceConfigFile": "cloudprivatecatalog_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Profiler.V2",
@@ -3198,7 +3276,8 @@
       "protoPath": "google/devtools/cloudprofiler/v2",
       "shortName": "cloudprofiler",
       "serviceConfigFile": "cloudprofiler_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.PubSub.V1",
@@ -3262,7 +3341,8 @@
       ],
       "shortName": "recaptchaenterprise",
       "serviceConfigFile": "recaptchaenterprise_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.RecommendationEngine.V1Beta1",
@@ -3282,7 +3362,8 @@
       "protoPath": "google/cloud/recommendationengine/v1beta1",
       "shortName": "recommendationengine",
       "serviceConfigFile": "recommendationengine_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Recommender.V1",
@@ -3302,7 +3383,8 @@
       ],
       "shortName": "recommender",
       "serviceConfigFile": "recommender_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Redis.V1",
@@ -3324,7 +3406,8 @@
       ],
       "shortName": "redis",
       "serviceConfigFile": "redis_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Redis.V1Beta1",
@@ -3345,7 +3428,8 @@
       ],
       "shortName": "redis",
       "serviceConfigFile": "redis_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
@@ -3367,7 +3451,8 @@
       "protoPath": "google/cloud/resourcemanager/v3",
       "shortName": "cloudresourcemanager",
       "serviceConfigFile": "cloudresourcemanager_v3.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ResourceSettings.V1",
@@ -3388,7 +3473,8 @@
       "protoPath": "google/cloud/resourcesettings/v1",
       "shortName": "resourcesettings",
       "serviceConfigFile": "resourcesettings_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Retail.V2",
@@ -3410,7 +3496,8 @@
       "protoPath": "google/cloud/retail/v2",
       "shortName": "retail",
       "serviceConfigFile": "retail_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Run.V2",
@@ -3432,7 +3519,8 @@
       "protoPath": "google/cloud/run/v2",
       "shortName": "run",
       "serviceConfigFile": "run_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Scheduler.V1",
@@ -3500,7 +3588,8 @@
       ],
       "shortName": "secretmanager",
       "serviceConfigFile": "secretmanager_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
@@ -3525,7 +3614,8 @@
       "protoPath": "google/cloud/security/privateca/v1",
       "shortName": "privateca",
       "serviceConfigFile": "privateca_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1Beta1",
@@ -3546,7 +3636,8 @@
       "protoPath": "google/cloud/security/privateca/v1beta1",
       "shortName": "privateca",
       "serviceConfigFile": "privateca_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Security.PublicCA.V1Beta1",
@@ -3565,7 +3656,8 @@
       "protoPath": "google/cloud/security/publicca/v1beta1",
       "shortName": "publicca",
       "serviceConfigFile": "publicca_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
@@ -3611,7 +3703,8 @@
       ],
       "shortName": "securitycenter",
       "serviceConfigFile": "securitycenter_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.SecurityCenter.V1P1Beta1",
@@ -3634,7 +3727,8 @@
       ],
       "shortName": "securitycenter",
       "serviceConfigFile": "securitycenter_v1p1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ServiceControl.V1",
@@ -3656,7 +3750,8 @@
       "protoPath": "google/api/servicecontrol/v1",
       "shortName": "servicecontrol",
       "serviceConfigFile": "servicecontrol.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1",
@@ -3677,7 +3772,8 @@
       "protoPath": "google/cloud/servicedirectory/v1",
       "shortName": "servicedirectory",
       "serviceConfigFile": "servicedirectory_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1Beta1",
@@ -3696,7 +3792,8 @@
       ],
       "shortName": "servicedirectory",
       "serviceConfigFile": "servicedirectory_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ServiceManagement.V1",
@@ -3719,7 +3816,8 @@
       "protoPath": "google/api/servicemanagement/v1",
       "shortName": "servicemanagement",
       "serviceConfigFile": "servicemanagement_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ServiceUsage.V1",
@@ -3741,7 +3839,8 @@
       "protoPath": "google/api/serviceusage/v1",
       "shortName": "serviceusage",
       "serviceConfigFile": "serviceusage_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Shell.V1",
@@ -3762,7 +3861,8 @@
       "protoPath": "google/cloud/shell/v1",
       "shortName": "cloudshell",
       "serviceConfigFile": "cloudshell_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Database.V1",
@@ -3787,7 +3887,8 @@
       "noVersionHistory": true,
       "shortName": "spanner",
       "serviceConfigFile": "spanner.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
@@ -3812,7 +3913,8 @@
       "noVersionHistory": true,
       "shortName": "spanner",
       "serviceConfigFile": "spanner_admin_instance.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Spanner.Data",
@@ -3904,7 +4006,8 @@
       },
       "shortName": "speech",
       "serviceConfigFile": "speech_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Speech.V1P1Beta1",
@@ -3925,7 +4028,8 @@
       },
       "shortName": "speech",
       "serviceConfigFile": "speech_v1p1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Speech.V2",
@@ -3944,7 +4048,8 @@
       "protoPath": "google/cloud/speech/v2",
       "shortName": "speech",
       "serviceConfigFile": "speech_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Storage.V1",
@@ -4035,7 +4140,8 @@
       },
       "shortName": "jobs",
       "serviceConfigFile": "jobs_v4beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Tasks.V2",
@@ -4077,7 +4183,8 @@
       },
       "shortName": "cloudtasks",
       "serviceConfigFile": "cloudtasks_v2beta3.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1",
@@ -4164,7 +4271,8 @@
       ],
       "shortName": "cloudtrace",
       "serviceConfigFile": "cloudtrace_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Trace.V2",
@@ -4185,7 +4293,8 @@
       ],
       "shortName": "cloudtrace",
       "serviceConfigFile": "cloudtrace_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Translate.V3",
@@ -4207,7 +4316,8 @@
       ],
       "shortName": "translate",
       "serviceConfigFile": "translate_v3.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Translation.V2",
@@ -4249,7 +4359,8 @@
       "protoPath": "google/cloud/vmmigration/v1",
       "shortName": "vmmigration",
       "serviceConfigFile": "vmmigration_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Video.LiveStream.V1",
@@ -4272,7 +4383,8 @@
       "protoPath": "google/cloud/video/livestream/v1",
       "shortName": "livestream",
       "serviceConfigFile": "livestream_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
@@ -4316,7 +4428,8 @@
       "protoPath": "google/cloud/video/transcoder/v1",
       "shortName": "transcoder",
       "serviceConfigFile": "transcoder_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.VideoIntelligence.V1",
@@ -4338,7 +4451,8 @@
       },
       "shortName": "videointelligence",
       "serviceConfigFile": "videointelligence_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Vision.V1",
@@ -4382,7 +4496,8 @@
       "protoPath": "google/cloud/vmwareengine/v1",
       "restNumericEnums": true,
       "shortName": "vmwareengine",
-      "serviceConfigFile": "vmwareengine_v1.yaml"
+      "serviceConfigFile": "vmwareengine_v1.yaml",
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.VpcAccess.V1",
@@ -4404,7 +4519,8 @@
       "protoPath": "google/cloud/vpcaccess/v1",
       "shortName": "vpcaccess",
       "serviceConfigFile": "vpcaccess_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.WebRisk.V1",
@@ -4429,7 +4545,8 @@
       },
       "shortName": "webrisk",
       "serviceConfigFile": "webrisk_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.WebRisk.V1Beta1",
@@ -4451,7 +4568,8 @@
       ],
       "shortName": "webrisk",
       "serviceConfigFile": "webrisk_v1beta1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.WebSecurityScanner.V1",
@@ -4472,7 +4590,8 @@
       "protoPath": "google/cloud/websecurityscanner/v1",
       "shortName": "websecurityscanner",
       "serviceConfigFile": "websecurityscanner_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Workflows.Common.V1",
@@ -4563,7 +4682,8 @@
       "protoPath": "google/cloud/workflows/v1",
       "shortName": "workflows",
       "serviceConfigFile": "workflows_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Workflows.V1Beta",
@@ -4584,7 +4704,8 @@
       "protoPath": "google/cloud/workflows/v1beta",
       "shortName": "workflows",
       "serviceConfigFile": "workflows_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Geo.Type",
@@ -4639,7 +4760,8 @@
       },
       "shortName": "accesscontextmanager",
       "serviceConfigFile": "accesscontextmanager_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.LongRunning",
@@ -4683,7 +4805,8 @@
       "protoPath": "google/maps/addressvalidation/v1",
       "shortName": "addressvalidation",
       "serviceConfigFile": "addressvalidation_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Maps.Routing.V2",
