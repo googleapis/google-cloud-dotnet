@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0-beta02, released 2023-01-19
+
+### New features
+
+- Enable REST transport in C# ([commit 6ce3faf](https://github.com/googleapis/google-cloud-dotnet/commit/6ce3faf6f74ea6c63e14ee4c77627a6774fb807f))
+
+### Documentation improvements
+
+- Marking keyword_searchable_job_custom_attributes on the company object as deprecated ([commit b8dc192](https://github.com/googleapis/google-cloud-dotnet/commit/b8dc1922c3c190d26afc1fa2f1ac33424a49ecbd))
+- Marking company_size histogram facet as deprecated ([commit b8dc192](https://github.com/googleapis/google-cloud-dotnet/commit/b8dc1922c3c190d26afc1fa2f1ac33424a49ecbd))
+
 ## Version 3.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
