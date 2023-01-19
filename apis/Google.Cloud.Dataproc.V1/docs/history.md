@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.4.0, released 2023-01-19
+
+### New features
+
+- Add SPOT to Preemptibility enum ([commit dc383fa](https://github.com/googleapis/google-cloud-dotnet/commit/dc383fa02bda1ba57739aa3a1e1df1204949e366))
+
 ## Version 5.3.0, released 2023-01-16
 
 ### New features
