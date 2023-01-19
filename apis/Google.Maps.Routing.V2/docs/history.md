@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2023-01-19
+
+### New features
+
+- Add ExtraComputations feature to ComputeRoutes and ComputeRouteMatrix ([commit df357d9](https://github.com/googleapis/google-cloud-dotnet/commit/df357d954eba50b3572dfb8a4a5b64eb79c576b8))
+
 ## Version 1.0.0-beta06, released 2023-01-16
 
 ### New features
