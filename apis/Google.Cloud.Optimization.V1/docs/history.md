@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.1.0, released 2023-01-19
+
+### New features
+
+- Enable REST transport in C# ([commit e04406f](https://github.com/googleapis/google-cloud-dotnet/commit/e04406fbc8700134ab6955e5244a5f2924a16a0a))
+
+### Documentation improvements
+
+- Fix minor docstring formatting ([commit dd7d952](https://github.com/googleapis/google-cloud-dotnet/commit/dd7d952d23d4fb91815edcbca9f15e6462158b23))
+
 ## Version 2.0.0, released 2022-09-15
 
 No API surface changes; just dependency updates and promotion to GA.
