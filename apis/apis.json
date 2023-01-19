@@ -2673,14 +2673,14 @@
       "protoPath": "google/cloud/memcache/v1beta2",
       "productName": "Google Cloud Memorystore for Memcache",
       "productUrl": "https://cloud.google.com/memorystore/",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0-beta03",
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Memcache (v1beta2).",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "tags": [
         "Redis",
