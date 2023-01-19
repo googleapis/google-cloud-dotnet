@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.8.0, released 2023-01-19
+
+### New features
+
+- Enable REST transport in C# ([commit f6a1c3e](https://github.com/googleapis/google-cloud-dotnet/commit/f6a1c3e8930f0e8209a079352765be3bb9039be2))
+
+### Documentation improvements
+
+- Update documentation for Security Command Center *.assets.list "parent" parameter ([commit d352c47](https://github.com/googleapis/google-cloud-dotnet/commit/d352c47317550afe2777c84186389a2fb1d1595b))
+
 ## Version 3.7.0, released 2022-12-14
 
 ### New features
