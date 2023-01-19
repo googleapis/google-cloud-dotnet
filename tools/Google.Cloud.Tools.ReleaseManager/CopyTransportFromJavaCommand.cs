@@ -50,21 +50,15 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
     {
         string root = args[0];
         int maxModifications = int.Parse(args[1]);
-        var apiCatalog = ApiCatalog.Load();
 
         var bazelFiles = Directory.GetFiles(root, "BUILD.bazel", SearchOption.AllDirectories);
-
-        var possibleDirectories = apiCatalog.Apis
-            .Select(api => api.ProtoPath)
-            .Except(ExcludedDirectories)
-            .ToHashSet();
 
         int count = 0;
         foreach (var bazelFile in bazelFiles)
         {
             var relativePath = Path.GetRelativePath(root, bazelFile);
             string relativeDirectory = Path.GetDirectoryName(relativePath).Replace("\\", "/");
-            if (!possibleDirectories.Contains(relativeDirectory))
+            if (ExcludedDirectories.Contains(relativeDirectory))
             {
                 continue;
             }
@@ -105,6 +99,12 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
 
         if (javaTransportLine is null || javaTransportLine == csharpTransportLine)
         {
+            return false;
+        }
+
+        if (javaTransportLine.Contains("= \"grpc\"") && csharpTransportLine is not null)
+        {
+            Console.WriteLine($"Ignoring downgrade in {file} from {csharpTransportLine.Trim()} to just grpc");
             return false;
         }
 
