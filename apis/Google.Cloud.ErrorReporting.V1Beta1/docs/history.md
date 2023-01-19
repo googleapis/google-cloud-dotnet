@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta02, released 2023-01-19
+
+### New features
+
+- Enable REST transport in C# ([commit 31e55cd](https://github.com/googleapis/google-cloud-dotnet/commit/31e55cdbafe12bfae68e28a75a1b75ceb445684f))
+
 ## Version 3.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
