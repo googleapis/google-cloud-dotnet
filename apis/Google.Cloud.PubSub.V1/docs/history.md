@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-01-19
+
+### New features
+
+- Add schema evolution methods and fields ([commit 4003c4d](https://github.com/googleapis/google-cloud-dotnet/commit/4003c4d2446ff7f36ca573405d169b4d610a63cc))
+
 ## Version 3.2.0, released 2022-08-26
 
 ### New features
