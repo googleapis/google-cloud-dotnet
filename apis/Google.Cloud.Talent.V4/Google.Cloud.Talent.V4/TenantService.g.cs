@@ -582,7 +582,8 @@ namespace Google.Cloud.Talent.V4 {
     public const int TenantFieldNumber = 1;
     private global::Google.Cloud.Talent.V4.Tenant tenant_;
     /// <summary>
-    /// Required. The tenant resource to replace the current resource in the system.
+    /// Required. The tenant resource to replace the current resource in the
+    /// system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -599,8 +600,10 @@ namespace Google.Cloud.Talent.V4 {
     /// <summary>
     /// Strongly recommended for the best service experience.
     ///
-    /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is provided, only the specified fields in
-    /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated. Otherwise all the fields are updated.
+    /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is
+    /// provided, only the specified fields in
+    /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated.
+    /// Otherwise all the fields are updated.
     ///
     /// A field mask to specify the tenant fields to be updated. Only
     /// top level fields of [Tenant][google.cloud.talent.v4.Tenant] are supported.

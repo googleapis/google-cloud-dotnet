@@ -955,8 +955,10 @@ namespace Google.Cloud.Talent.V4
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is provided, only the specified fields in
-        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is
+        /// provided, only the specified fields in
+        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise
+        /// all the fields are updated.
         /// 
         /// A field mask to restrict the fields that are updated. Only
         /// top level fields of [Job][google.cloud.talent.v4.Job] are supported.
@@ -982,8 +984,10 @@ namespace Google.Cloud.Talent.V4
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is provided, only the specified fields in
-        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is
+        /// provided, only the specified fields in
+        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise
+        /// all the fields are updated.
         /// 
         /// A field mask to restrict the fields that are updated. Only
         /// top level fields of [Job][google.cloud.talent.v4.Job] are supported.
@@ -1009,8 +1013,10 @@ namespace Google.Cloud.Talent.V4
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is provided, only the specified fields in
-        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateJobRequest.update_mask] is
+        /// provided, only the specified fields in
+        /// [job][google.cloud.talent.v4.UpdateJobRequest.job] are updated. Otherwise
+        /// all the fields are updated.
         /// 
         /// A field mask to restrict the fields that are updated. Only
         /// top level fields of [Job][google.cloud.talent.v4.Job] are supported.
@@ -1821,11 +1827,13 @@ namespace Google.Cloud.Talent.V4
             }, callSettings);
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs that the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1834,11 +1842,13 @@ namespace Google.Cloud.Talent.V4
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs that the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1847,11 +1857,13 @@ namespace Google.Cloud.Talent.V4
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs that the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1860,16 +1872,18 @@ namespace Google.Cloud.Talent.V4
             SearchJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), it has different algorithmic
         /// adjustments that are designed to specifically target passive job seekers.
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1878,16 +1892,18 @@ namespace Google.Cloud.Talent.V4
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), it has different algorithmic
         /// adjustments that are designed to specifically target passive job seekers.
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1896,16 +1912,18 @@ namespace Google.Cloud.Talent.V4
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), it has different algorithmic
         /// adjustments that are designed to specifically target passive job seekers.
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2254,11 +2272,13 @@ namespace Google.Cloud.Talent.V4
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs that the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2270,11 +2290,13 @@ namespace Google.Cloud.Talent.V4
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs that the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2286,16 +2308,18 @@ namespace Google.Cloud.Talent.V4
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), it has different algorithmic
         /// adjustments that are designed to specifically target passive job seekers.
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2307,16 +2331,18 @@ namespace Google.Cloud.Talent.V4
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
         /// 
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), it has different algorithmic
         /// adjustments that are designed to specifically target passive job seekers.
         /// 
-        /// This call constrains the [visibility][google.cloud.talent.v4.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4.Job.visibility] of jobs present in the
+        /// database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

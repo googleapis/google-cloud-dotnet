@@ -119,7 +119,8 @@ namespace Google.Cloud.Talent.V4 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Required. Client side tenant identifier, used to uniquely identify the tenant.
+    /// Required. Client side tenant identifier, used to uniquely identify the
+    /// tenant.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
