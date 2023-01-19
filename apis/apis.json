@@ -19,7 +19,7 @@
     },
     {
       "id": "Google.Analytics.Admin.V1Beta",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Google Analytics Admin",
       "productUrl": "https://developers.google.com/analytics",
