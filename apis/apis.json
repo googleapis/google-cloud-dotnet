@@ -3032,7 +3032,7 @@
     },
     {
       "id": "Google.Cloud.OsConfig.V1Alpha",
-      "version": "2.0.0-alpha01",
+      "version": "2.0.0-alpha02",
       "type": "grpc",
       "productName": "Google Cloud OS Config",
       "productUrl": "https://cloud.google.com/compute/docs/osconfig/rest",
