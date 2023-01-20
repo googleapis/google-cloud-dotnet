@@ -41,7 +41,7 @@ namespace Google.Cloud.Run.V2 {
             "cnVuLnYyLkV4ZWN1dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkicQoW",
             "RGVsZXRlRXhlY3V0aW9uUmVxdWVzdBIyCgRuYW1lGAEgASgJQiTgQQL6QR4K",
             "HHJ1bi5nb29nbGVhcGlzLmNvbS9FeGVjdXRpb24SFQoNdmFsaWRhdGVfb25s",
-            "eRgCIAEoCBIMCgRldGFnGAMgASgJIowJCglFeGVjdXRpb24SEQoEbmFtZRgB",
+            "eRgCIAEoCBIMCgRldGFnGAMgASgJItwJCglFeGVjdXRpb24SEQoEbmFtZRgB",
             "IAEoCUID4EEDEhAKA3VpZBgCIAEoCUID4EEDEhcKCmdlbmVyYXRpb24YAyAB",
             "KANCA+BBAxI6CgZsYWJlbHMYBCADKAsyKi5nb29nbGUuY2xvdWQucnVuLnYy",
             "LkV4ZWN1dGlvbi5MYWJlbHNFbnRyeRJECgthbm5vdGF0aW9ucxgFIAMoCzIv",
@@ -62,28 +62,30 @@ namespace Google.Cloud.Run.V2 {
             "LmNsb3VkLnJ1bi52Mi5Db25kaXRpb25CA+BBAxIgChNvYnNlcnZlZF9nZW5l",
             "cmF0aW9uGBIgASgDQgPgQQMSGgoNcnVubmluZ19jb3VudBgTIAEoBUID4EED",
             "EhwKD3N1Y2NlZWRlZF9jb3VudBgUIAEoBUID4EEDEhkKDGZhaWxlZF9jb3Vu",
-            "dBgVIAEoBUID4EEDEhEKBGV0YWcYYyABKAlCA+BBAxotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRp",
-            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpv6kFs",
-            "ChxydW4uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEklwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9ifS9leGVjdXRp",
-            "b25zL3tleGVjdXRpb259UgEBMugECgpFeGVjdXRpb25zEp4BCgxHZXRFeGVj",
-            "dXRpb24SKC5nb29nbGUuY2xvdWQucnVuLnYyLkdldEV4ZWN1dGlvblJlcXVl",
-            "c3QaHi5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbiJEgtPkkwI3EjUv",
-            "djIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovZXhlY3V0",
-            "aW9ucy8qfdpBBG5hbWUSsQEKDkxpc3RFeGVjdXRpb25zEiouZ29vZ2xlLmNs",
-            "b3VkLnJ1bi52Mi5MaXN0RXhlY3V0aW9uc1JlcXVlc3QaKy5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLkxpc3RFeGVjdXRpb25zUmVzcG9uc2UiRoLT5JMCNxI1L3Yy",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9L2V4ZWN1",
-            "dGlvbnPaQQZwYXJlbnQSvAEKD0RlbGV0ZUV4ZWN1dGlvbhIrLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuRGVsZXRlRXhlY3V0aW9uUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24iXYLT5JMCNyo1L3YyL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKn3aQQRuYW1l",
-            "ykEWCglFeGVjdXRpb24SCUV4ZWN1dGlvbhpGykEScnVuLmdvb2dsZWFwaXMu",
-            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybUJjChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIORXhlY3V0aW9u",
-            "UHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9ydW4vdjI7cnVuYgZwcm90bzM="));
+            "dBgVIAEoBUID4EEDEhwKD2NhbmNlbGxlZF9jb3VudBgYIAEoBUID4EEDEhoK",
+            "DXJldHJpZWRfY291bnQYGSABKAVCA+BBAxIUCgdsb2dfdXJpGBogASgJQgPg",
+            "QQMSEQoEZXRhZxhjIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOm/qQWwKHHJ1bi5nb29n",
+            "bGVhcGlzLmNvbS9FeGVjdXRpb24SSXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L2V4ZWN1dGlvbnMve2V4ZWN1",
+            "dGlvbn1SAQEy6AQKCkV4ZWN1dGlvbnMSngEKDEdldEV4ZWN1dGlvbhIoLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjIuR2V0RXhlY3V0aW9uUmVxdWVzdBoeLmdvb2ds",
+            "ZS5jbG91ZC5ydW4udjIuRXhlY3V0aW9uIkSC0+STAjcSNS92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyp92kEE",
+            "bmFtZRKxAQoOTGlzdEV4ZWN1dGlvbnMSKi5nb29nbGUuY2xvdWQucnVuLnYy",
+            "Lkxpc3RFeGVjdXRpb25zUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5ydW4udjIu",
+            "TGlzdEV4ZWN1dGlvbnNSZXNwb25zZSJGgtPkkwI3EjUvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn0vZXhlY3V0aW9uc9pBBnBh",
+            "cmVudBK8AQoPRGVsZXRlRXhlY3V0aW9uEisuZ29vZ2xlLmNsb3VkLnJ1bi52",
+            "Mi5EZWxldGVFeGVjdXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiJdgtPkkwI3KjUvdjIve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9qb2JzLyovZXhlY3V0aW9ucy8qfdpBBG5hbWXKQRYKCUV4ZWN1",
+            "dGlvbhIJRXhlY3V0aW9uGkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQmMK",
+            "F2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5FeGVjdXRpb25Qcm90b1ABWjZn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1",
+            "bi92MjtydW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,7 +93,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListExecutionsRequest), global::Google.Cloud.Run.V2.ListExecutionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListExecutionsResponse), global::Google.Cloud.Run.V2.ListExecutionsResponse.Parser, new[]{ "Executions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteExecutionRequest), global::Google.Cloud.Run.V2.DeleteExecutionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Execution), global::Google.Cloud.Run.V2.Execution.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Job", "Parallelism", "TaskCount", "Template", "Reconciling", "Conditions", "ObservedGeneration", "RunningCount", "SucceededCount", "FailedCount", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Execution), global::Google.Cloud.Run.V2.Execution.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Job", "Parallelism", "TaskCount", "Template", "Reconciling", "Conditions", "ObservedGeneration", "RunningCount", "SucceededCount", "FailedCount", "CancelledCount", "RetriedCount", "LogUri", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1181,6 +1183,9 @@ namespace Google.Cloud.Run.V2 {
       runningCount_ = other.runningCount_;
       succeededCount_ = other.succeededCount_;
       failedCount_ = other.failedCount_;
+      cancelledCount_ = other.cancelledCount_;
+      retriedCount_ = other.retriedCount_;
+      logUri_ = other.logUri_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1210,8 +1215,9 @@ namespace Google.Cloud.Run.V2 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the Execution. The value is a UUID4
-    /// string and guaranteed to remain unchanged until the resource is deleted.
+    /// Output only. Server assigned unique identifier for the Execution. The value
+    /// is a UUID4 string and guaranteed to remain unchanged until the resource is
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1250,9 +1256,6 @@ namespace Google.Cloud.Run.V2 {
     /// environment, state, etc. For more information, visit
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
     /// https://cloud.google.com/run/docs/configuring/labels
-    /// Cloud Run will populate some labels with 'run.googleapis.com' or
-    /// 'serving.knative.dev' namespaces. Those labels are read-only, and user
-    /// changes will not be preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1278,9 +1281,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Represents time when the execution was acknowledged by the execution
-    /// controller. It is not guaranteed to be set in happens-before order across
-    /// separate operations.
+    /// Output only. Represents time when the execution was acknowledged by the
+    /// execution controller. It is not guaranteed to be set in happens-before
+    /// order across separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1312,8 +1315,8 @@ namespace Google.Cloud.Run.V2 {
     public const int CompletionTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp completionTime_;
     /// <summary>
-    /// Output only. Represents time when the execution was completed. It is not guaranteed to
-    /// be set in happens-before order across separate operations.
+    /// Output only. Represents time when the execution was completed. It is not
+    /// guaranteed to be set in happens-before order across separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1409,8 +1412,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ParallelismFieldNumber = 13;
     private int parallelism_;
     /// <summary>
-    /// Output only. Specifies the maximum desired number of tasks the execution should
-    /// run at any given time. Must be &lt;= task_count. The actual number of
+    /// Output only. Specifies the maximum desired number of tasks the execution
+    /// should run at any given time. Must be &lt;= task_count. The actual number of
     /// tasks running in steady state will be less than this number when
     /// ((.spec.task_count - .status.successful) &lt; .spec.parallelism), i.e. when
     /// the work left to do is less than max parallelism. More info:
@@ -1429,8 +1432,8 @@ namespace Google.Cloud.Run.V2 {
     public const int TaskCountFieldNumber = 14;
     private int taskCount_;
     /// <summary>
-    /// Output only. Specifies the desired number of tasks the execution should run.
-    /// Setting to 1 means that parallelism is limited to 1 and the success of
+    /// Output only. Specifies the desired number of tasks the execution should
+    /// run. Setting to 1 means that parallelism is limited to 1 and the success of
     /// that task signals the success of the execution.
     /// More info:
     /// https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
@@ -1463,8 +1466,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ReconcilingFieldNumber = 16;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether the resource's reconciliation is still in progress.
-    /// See comments in `Job.reconciling` for additional information on
+    /// Output only. Indicates whether the resource's reconciliation is still in
+    /// progress. See comments in `Job.reconciling` for additional information on
     /// reconciliation process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1482,8 +1485,9 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(138, global::Google.Cloud.Run.V2.Condition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition>();
     /// <summary>
-    /// Output only. The Condition of this Execution, containing its readiness status, and
-    /// detailed error information in case it did not reach the desired state.
+    /// Output only. The Condition of this Execution, containing its readiness
+    /// status, and detailed error information in case it did not reach the desired
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1495,8 +1499,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ObservedGenerationFieldNumber = 18;
     private long observedGeneration_;
     /// <summary>
-    /// Output only. The generation of this Execution. See comments in `reconciling` for
-    /// additional information on reconciliation process in Cloud Run.
+    /// Output only. The generation of this Execution. See comments in
+    /// `reconciling` for additional information on reconciliation process in Cloud
+    /// Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1549,6 +1554,52 @@ namespace Google.Cloud.Run.V2 {
       get { return failedCount_; }
       set {
         failedCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cancelled_count" field.</summary>
+    public const int CancelledCountFieldNumber = 24;
+    private int cancelledCount_;
+    /// <summary>
+    /// Output only. The number of tasks which reached phase Cancelled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CancelledCount {
+      get { return cancelledCount_; }
+      set {
+        cancelledCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retried_count" field.</summary>
+    public const int RetriedCountFieldNumber = 25;
+    private int retriedCount_;
+    /// <summary>
+    /// Output only. The number of tasks which have retried at least once.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RetriedCount {
+      get { return retriedCount_; }
+      set {
+        retriedCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "log_uri" field.</summary>
+    public const int LogUriFieldNumber = 26;
+    private string logUri_ = "";
+    /// <summary>
+    /// Output only. URI where logs for this execution can be found in Cloud
+    /// Console.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LogUri {
+      get { return logUri_; }
+      set {
+        logUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1605,6 +1656,9 @@ namespace Google.Cloud.Run.V2 {
       if (RunningCount != other.RunningCount) return false;
       if (SucceededCount != other.SucceededCount) return false;
       if (FailedCount != other.FailedCount) return false;
+      if (CancelledCount != other.CancelledCount) return false;
+      if (RetriedCount != other.RetriedCount) return false;
+      if (LogUri != other.LogUri) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1635,6 +1689,9 @@ namespace Google.Cloud.Run.V2 {
       if (RunningCount != 0) hash ^= RunningCount.GetHashCode();
       if (SucceededCount != 0) hash ^= SucceededCount.GetHashCode();
       if (FailedCount != 0) hash ^= FailedCount.GetHashCode();
+      if (CancelledCount != 0) hash ^= CancelledCount.GetHashCode();
+      if (RetriedCount != 0) hash ^= RetriedCount.GetHashCode();
+      if (LogUri.Length != 0) hash ^= LogUri.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1733,6 +1790,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(StartTime);
       }
+      if (CancelledCount != 0) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt32(CancelledCount);
+      }
+      if (RetriedCount != 0) {
+        output.WriteRawTag(200, 1);
+        output.WriteInt32(RetriedCount);
+      }
+      if (LogUri.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(LogUri);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1826,6 +1895,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(StartTime);
       }
+      if (CancelledCount != 0) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt32(CancelledCount);
+      }
+      if (RetriedCount != 0) {
+        output.WriteRawTag(200, 1);
+        output.WriteInt32(RetriedCount);
+      }
+      if (LogUri.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(LogUri);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1899,6 +1980,15 @@ namespace Google.Cloud.Run.V2 {
       }
       if (FailedCount != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(FailedCount);
+      }
+      if (CancelledCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(CancelledCount);
+      }
+      if (RetriedCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RetriedCount);
+      }
+      if (LogUri.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LogUri);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -1995,6 +2085,15 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.FailedCount != 0) {
         FailedCount = other.FailedCount;
+      }
+      if (other.CancelledCount != 0) {
+        CancelledCount = other.CancelledCount;
+      }
+      if (other.RetriedCount != 0) {
+        RetriedCount = other.RetriedCount;
+      }
+      if (other.LogUri.Length != 0) {
+        LogUri = other.LogUri;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2123,6 +2222,18 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(StartTime);
             break;
           }
+          case 192: {
+            CancelledCount = input.ReadInt32();
+            break;
+          }
+          case 200: {
+            RetriedCount = input.ReadInt32();
+            break;
+          }
+          case 210: {
+            LogUri = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2249,6 +2360,18 @@ namespace Google.Cloud.Run.V2 {
               StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(StartTime);
+            break;
+          }
+          case 192: {
+            CancelledCount = input.ReadInt32();
+            break;
+          }
+          case 200: {
+            RetriedCount = input.ReadInt32();
+            break;
+          }
+          case 210: {
+            LogUri = input.ReadString();
             break;
           }
           case 794: {

@@ -47,6 +47,11 @@ namespace Google.Cloud.Run.V2
                     // { "get": "/v2/{name=projects/*/locations/*}/operations" }
                     proto::ByteString.FromBase64("EiwvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9ucw==")
                 },
+                {
+                    "google.longrunning.Operations.WaitOperation",
+                    // { "post": "/v2/{name=projects/*/locations/*/operations/*}:wait", "body": "*" }
+                    proto::ByteString.FromBase64("IjMvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OndhaXQ6ASo=")
+                },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()

@@ -714,9 +714,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
+        /// Location must be a valid Google Cloud region, and cannot be the "-"
+        /// wildcard. Format: projects/{project}/locations/{location}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -741,9 +741,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
+        /// Location must be a valid Google Cloud region, and cannot be the "-"
+        /// wildcard. Format: projects/{project}/locations/{location}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -768,9 +768,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
+        /// Location must be a valid Google Cloud region, and cannot be the "-"
+        /// wildcard. Format: projects/{project}/locations/{location}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -795,9 +795,9 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Location must be a valid GCP region, and cannot be the "-" wildcard.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
+        /// Location must be a valid Google Cloud region, and cannot be the "-"
+        /// wildcard. Format: projects/{project}/locations/{location}, where {project}
+        /// can be project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
