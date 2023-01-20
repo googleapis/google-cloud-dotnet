@@ -4806,7 +4806,7 @@
       "shortName": "addressvalidation",
       "serviceConfigFile": "addressvalidation_v1.yaml",
       "restNumericEnums": true,
-      "transport": "grpc+rest"
+      "transport": "grpc"
     },
     {
       "id": "Google.Maps.Routing.V2",

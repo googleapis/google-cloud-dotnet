@@ -38,7 +38,9 @@ public sealed class CopyTransportFromJavaCommand : CommandBase
         "grafeas/v1",
         "google/bigtable/v2",
         "google/pubsub/v1",
-        "google/spanner/v1"
+        "google/spanner/v1",
+        // Known issue with auth
+        "google/maps/addressvalidation/v1"
     };
 
     public CopyTransportFromJavaCommand()
