@@ -1129,7 +1129,7 @@
     },
     {
       "id": "Google.Cloud.Compute.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "regapic",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",
@@ -1138,7 +1138,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
