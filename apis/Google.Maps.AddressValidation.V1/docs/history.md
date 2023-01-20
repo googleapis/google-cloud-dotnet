@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2023-01-20
+
+### Documentation improvements
+
+- Document that PREMISE_PROXIMITY is a valid value for an address granularity ([commit 174a1c0](https://github.com/googleapis/google-cloud-dotnet/commit/174a1c011fc45775ee62172425d46c441dc1feb5))
+
 ## Version 1.0.0-beta02, released 2022-11-10
 
 ### New features
