@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2023-01-20
+
+### New features
+
+- Enable REST transport ([commit 46d4fe8](https://github.com/googleapis/google-cloud-dotnet/commit/46d4fe8461ac30e7666600e44e7bd16228768621))
+
 ## Version 1.0.0-beta03, released 2022-12-14
 
 ### New features
