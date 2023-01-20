@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta05, released 2023-01-20
+
+### New features
+
+- Adding support for encryption_key_revocation_action and encryption_key_shutdown_duration for RevisionTemplate and ExecutionTemplate ([commit 1ba9bc3](https://github.com/googleapis/google-cloud-dotnet/commit/1ba9bc37c06b483268f38acedd0e71f1f9d494f4))
+
+### Documentation improvements
+
+- Documentation improvements, including clarification that v1 labels/annotations are rejected in v2 API ([commit 1ba9bc3](https://github.com/googleapis/google-cloud-dotnet/commit/1ba9bc37c06b483268f38acedd0e71f1f9d494f4))
+
 ## Version 2.0.0-beta04, released 2023-01-18
 
 ### New features
