@@ -38,7 +38,7 @@ namespace Google.Cloud.Run.V2 {
             "YXBpcy5jb20vVGFzaxIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
             "bhgDIAEoCRIUCgxzaG93X2RlbGV0ZWQYBCABKAgiVgoRTGlzdFRhc2tzUmVz",
             "cG9uc2USKAoFdGFza3MYASADKAsyGS5nb29nbGUuY2xvdWQucnVuLnYyLlRh",
-            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIsMLCgRUYXNrEhEKBG5hbWUY",
+            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJItkLCgRUYXNrEhEKBG5hbWUY",
             "ASABKAlCA+BBAxIQCgN1aWQYAiABKAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMg",
             "ASgDQgPgQQMSNQoGbGFiZWxzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52",
             "Mi5UYXNrLkxhYmVsc0VudHJ5Ej8KC2Fubm90YXRpb25zGAUgAygLMiouZ29v",
@@ -66,32 +66,33 @@ namespace Google.Cloud.Run.V2 {
             "dHRlbXB0UmVzdWx0QgPgQQMSQQoOZW5jcnlwdGlvbl9rZXkYHCABKAlCKeBB",
             "A/pBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EjcKCnZw",
             "Y19hY2Nlc3MYHSABKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLlZwY0FjY2Vz",
-            "c0ID4EEDEhEKBGV0YWcYYyABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp36kF0ChdydW4u",
-            "Z29vZ2xlYXBpcy5jb20vVGFzaxJWcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2pvYnMve2pvYn0vZXhlY3V0aW9ucy97ZXhlY3V0",
-            "aW9ufS90YXNrcy97dGFza31SAQEiVAoRVGFza0F0dGVtcHRSZXN1bHQSJwoG",
-            "c3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxIWCglleGl0",
-            "X2NvZGUYAiABKAVCA+BBAzKWAwoFVGFza3MSlwEKB0dldFRhc2sSIy5nb29n",
-            "bGUuY2xvdWQucnVuLnYyLkdldFRhc2tSZXF1ZXN0GhkuZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5UYXNrIkyC0+STAj8SPS92Mi97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyovdGFza3MvKn3aQQRuYW1l",
-            "EqoBCglMaXN0VGFza3MSJS5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RUYXNr",
-            "c1JlcXVlc3QaJi5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RUYXNrc1Jlc3Bv",
-            "bnNlIk6C0+STAj8SPS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovam9icy8qL2V4ZWN1dGlvbnMvKn0vdGFza3PaQQZwYXJlbnQaRspBEnJ1",
-            "bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1CXgoXY29tLmdvb2dsZS5jbG91ZC5ydW4u",
-            "djJCCVRhc2tQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "c0ID4EEDEhQKB2xvZ191cmkYICABKAlCA+BBAxIRCgRldGFnGGMgASgJQgPg",
+            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAE6d+pBdAoXcnVuLmdvb2dsZWFwaXMuY29tL1Rhc2sSVnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tq",
+            "b2J9L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn0vdGFza3Mve3Rhc2t9UgEBIlQK",
+            "EVRhc2tBdHRlbXB0UmVzdWx0EicKBnN0YXR1cxgBIAEoCzISLmdvb2dsZS5y",
+            "cGMuU3RhdHVzQgPgQQMSFgoJZXhpdF9jb2RlGAIgASgFQgPgQQMylgMKBVRh",
+            "c2tzEpcBCgdHZXRUYXNrEiMuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRUYXNr",
+            "UmVxdWVzdBoZLmdvb2dsZS5jbG91ZC5ydW4udjIuVGFzayJMgtPkkwI/Ej0v",
+            "djIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovZXhlY3V0",
+            "aW9ucy8qL3Rhc2tzLyp92kEEbmFtZRKqAQoJTGlzdFRhc2tzEiUuZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5MaXN0VGFza3NSZXF1ZXN0GiYuZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52Mi5MaXN0VGFza3NSZXNwb25zZSJOgtPkkwI/Ej0vdjIve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyp9",
+            "L3Rhc2tz2kEGcGFyZW50GkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQl4K",
+            "F2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQglUYXNrUHJvdG9QAVo2Z29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9ydW4vdjI7",
+            "cnVuYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetTaskRequest), global::Google.Cloud.Run.V2.GetTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksRequest), global::Google.Cloud.Run.V2.ListTasksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksResponse), global::Google.Cloud.Run.V2.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskAttemptResult), global::Google.Cloud.Run.V2.TaskAttemptResult.Parser, new[]{ "Status", "ExitCode" }, null, null, null, null)
           }));
     }
@@ -904,6 +905,7 @@ namespace Google.Cloud.Run.V2 {
       lastAttemptResult_ = other.lastAttemptResult_ != null ? other.lastAttemptResult_.Clone() : null;
       encryptionKey_ = other.encryptionKey_;
       vpcAccess_ = other.vpcAccess_ != null ? other.vpcAccess_.Clone() : null;
+      logUri_ = other.logUri_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -933,8 +935,9 @@ namespace Google.Cloud.Run.V2 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the Task. The value is a UUID4
-    /// string and guaranteed to remain unchanged until the resource is deleted.
+    /// Output only. Server assigned unique identifier for the Task. The value is a
+    /// UUID4 string and guaranteed to remain unchanged until the resource is
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -973,9 +976,6 @@ namespace Google.Cloud.Run.V2 {
     /// environment, state, etc. For more information, visit
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
     /// https://cloud.google.com/run/docs/configuring/labels
-    /// Cloud Run will populate some labels with 'run.googleapis.com' or
-    /// 'serving.knative.dev' namespaces. Those labels are read-only, and user
-    /// changes will not be preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1001,9 +1001,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Represents time when the task was created by the job controller.
-    /// It is not guaranteed to be set in happens-before order across separate
-    /// operations.
+    /// Output only. Represents time when the task was created by the job
+    /// controller. It is not guaranteed to be set in happens-before order across
+    /// separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1035,8 +1035,8 @@ namespace Google.Cloud.Run.V2 {
     public const int CompletionTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp completionTime_;
     /// <summary>
-    /// Output only. Represents time when the Task was completed. It is not guaranteed to
-    /// be set in happens-before order across separate operations.
+    /// Output only. Represents time when the Task was completed. It is not
+    /// guaranteed to be set in happens-before order across separate operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1223,8 +1223,8 @@ namespace Google.Cloud.Run.V2 {
     public const int ReconcilingFieldNumber = 21;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether the resource's reconciliation is still in progress.
-    /// See comments in `Job.reconciling` for additional information on
+    /// Output only. Indicates whether the resource's reconciliation is still in
+    /// progress. See comments in `Job.reconciling` for additional information on
     /// reconciliation process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1242,8 +1242,8 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(178, global::Google.Cloud.Run.V2.Condition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition>();
     /// <summary>
-    /// Output only. The Condition of this Task, containing its readiness status, and
-    /// detailed error information in case it did not reach the desired state.
+    /// Output only. The Condition of this Task, containing its readiness status,
+    /// and detailed error information in case it did not reach the desired state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1317,8 +1317,8 @@ namespace Google.Cloud.Run.V2 {
     public const int EncryptionKeyFieldNumber = 28;
     private string encryptionKey_ = "";
     /// <summary>
-    /// Output only. A reference to a customer managed encryption key (CMEK) to use to encrypt
-    /// this container image. For more information, go to
+    /// Output only. A reference to a customer managed encryption key (CMEK) to use
+    /// to encrypt this container image. For more information, go to
     /// https://cloud.google.com/run/docs/securing/using-cmek
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1334,8 +1334,9 @@ namespace Google.Cloud.Run.V2 {
     public const int VpcAccessFieldNumber = 29;
     private global::Google.Cloud.Run.V2.VpcAccess vpcAccess_;
     /// <summary>
-    /// Output only. VPC Access configuration to use for this Task. For more information,
-    /// visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+    /// Output only. VPC Access configuration to use for this Task. For more
+    /// information, visit
+    /// https://cloud.google.com/run/docs/configuring/connecting-vpc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1343,6 +1344,22 @@ namespace Google.Cloud.Run.V2 {
       get { return vpcAccess_; }
       set {
         vpcAccess_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "log_uri" field.</summary>
+    public const int LogUriFieldNumber = 32;
+    private string logUri_ = "";
+    /// <summary>
+    /// Output only. URI where logs for this execution can be found in Cloud
+    /// Console.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LogUri {
+      get { return logUri_; }
+      set {
+        logUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1404,6 +1421,7 @@ namespace Google.Cloud.Run.V2 {
       if (!object.Equals(LastAttemptResult, other.LastAttemptResult)) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (!object.Equals(VpcAccess, other.VpcAccess)) return false;
+      if (LogUri != other.LogUri) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1439,6 +1457,7 @@ namespace Google.Cloud.Run.V2 {
       if (lastAttemptResult_ != null) hash ^= LastAttemptResult.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (vpcAccess_ != null) hash ^= VpcAccess.GetHashCode();
+      if (LogUri.Length != 0) hash ^= LogUri.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1551,6 +1570,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(234, 1);
         output.WriteMessage(VpcAccess);
       }
+      if (LogUri.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(LogUri);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1658,6 +1681,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(234, 1);
         output.WriteMessage(VpcAccess);
       }
+      if (LogUri.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(LogUri);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1742,6 +1769,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (vpcAccess_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(VpcAccess);
+      }
+      if (LogUri.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LogUri);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -1855,6 +1885,9 @@ namespace Google.Cloud.Run.V2 {
           VpcAccess = new global::Google.Cloud.Run.V2.VpcAccess();
         }
         VpcAccess.MergeFrom(other.VpcAccess);
+      }
+      if (other.LogUri.Length != 0) {
+        LogUri = other.LogUri;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2009,6 +2042,10 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(VpcAccess);
             break;
           }
+          case 258: {
+            LogUri = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2161,6 +2198,10 @@ namespace Google.Cloud.Run.V2 {
               VpcAccess = new global::Google.Cloud.Run.V2.VpcAccess();
             }
             input.ReadMessage(VpcAccess);
+            break;
+          }
+          case 258: {
+            LogUri = input.ReadString();
             break;
           }
           case 794: {

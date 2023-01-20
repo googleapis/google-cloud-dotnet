@@ -40,13 +40,16 @@ namespace Google.Cloud.Run.V2 {
             "X09OTFkQAhIqCiZJTkdSRVNTX1RSQUZGSUNfSU5URVJOQUxfTE9BRF9CQUxB",
             "TkNFUhADKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9F",
             "TlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9O",
-            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAkJo",
-            "Chdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkITVmVuZG9yU2V0dGluZ3NQcm90",
-            "b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipw",
+            "Ch1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9O",
+            "X0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZF",
+            "TlRfTkVXEAESDAoIU0hVVERPV04QAkJoChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52MkITVmVuZG9yU2V0dGluZ3NQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null)
@@ -94,6 +97,24 @@ namespace Google.Cloud.Run.V2 {
     /// Uses Second Generation environment.
     /// </summary>
     [pbr::OriginalName("EXECUTION_ENVIRONMENT_GEN2")] Gen2 = 2,
+  }
+
+  /// <summary>
+  /// Specifies behavior if an encryption key used by a resource is revoked.
+  /// </summary>
+  public enum EncryptionKeyRevocationAction {
+    /// <summary>
+    /// Unspecified
+    /// </summary>
+    [pbr::OriginalName("ENCRYPTION_KEY_REVOCATION_ACTION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Prevents the creation of new instances.
+    /// </summary>
+    [pbr::OriginalName("PREVENT_NEW")] PreventNew = 1,
+    /// <summary>
+    /// Shuts down existing instances, and prevents creation of new ones.
+    /// </summary>
+    [pbr::OriginalName("SHUTDOWN")] Shutdown = 2,
   }
 
   #endregion

@@ -172,7 +172,7 @@ namespace Google.Cloud.Run.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the container specified as a DNS_LABEL.
+    /// Name of the container specified as a DNS_LABEL (RFC 1123).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,10 @@ namespace Google.Cloud.Run.V2 {
     public const int ImageFieldNumber = 2;
     private string image_ = "";
     /// <summary>
-    /// Required. URL of the Container image in Google Container Registry or Google Artifact
-    /// Registry. More info: https://kubernetes.io/docs/concepts/containers/images
+    /// Required. Name of the container image in Dockerhub, Google Artifact
+    /// Registry, or Google Container Registry. If the host is not provided,
+    /// Dockerhub is assumed. More info:
+    /// https://kubernetes.io/docs/concepts/containers/images
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1000,8 +1002,8 @@ namespace Google.Cloud.Run.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the environment variable. Must be a C_IDENTIFIER, and mnay not
-    /// exceed 32768 characters.
+    /// Required. Name of the environment variable. Must be a C_IDENTIFIER, and
+    /// mnay not exceed 32768 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2017,8 +2019,8 @@ namespace Google.Cloud.Run.V2 {
     public const int MountPathFieldNumber = 3;
     private string mountPath_ = "";
     /// <summary>
-    /// Required. Path within the container at which the volume should be mounted.  Must
-    /// not contain ':'. For Cloud SQL volumes, it can be left empty, or must
+    /// Required. Path within the container at which the volume should be mounted.
+    /// Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must
     /// otherwise be `/cloudsql`. All instances defined in the Volume will be
     /// available as `/cloudsql/[instance]`. For more information on Cloud SQL
     /// volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
@@ -3109,7 +3111,10 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
-  /// Represents a specific Cloud SQL instance.
+  /// Represents a set of Cloud SQL instances. Each one will be available under
+  /// /cloudsql/[instance]. Visit
+  /// https://cloud.google.com/sql/docs/mysql/connect-run for more information on
+  /// how to connect Cloud SQL and Cloud Run.
   /// </summary>
   public sealed partial class CloudSqlInstance : pb::IMessage<CloudSqlInstance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

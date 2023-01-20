@@ -43,7 +43,7 @@ namespace Google.Cloud.Run.V2 {
             "bi52Mi5SZXZpc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkibwoVRGVs",
             "ZXRlUmV2aXNpb25SZXF1ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobcnVu",
             "Lmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEhUKDXZhbGlkYXRlX29ubHkYAiAB",
-            "KAgSDAoEZXRhZxgDIAEoCSLBCgoIUmV2aXNpb24SEQoEbmFtZRgBIAEoCUID",
+            "KAgSDAoEZXRhZxgDIAEoCSLkCwoIUmV2aXNpb24SEQoEbmFtZRgBIAEoCUID",
             "4EEDEhAKA3VpZBgCIAEoCUID4EEDEhcKCmdlbmVyYXRpb24YAyABKANCA+BB",
             "AxI5CgZsYWJlbHMYBCADKAsyKS5nb29nbGUuY2xvdWQucnVuLnYyLlJldmlz",
             "aW9uLkxhYmVsc0VudHJ5EkMKC2Fubm90YXRpb25zGAUgAygLMi4uZ29vZ2xl",
@@ -65,34 +65,38 @@ namespace Google.Cloud.Run.V2 {
             "ZXhlY3V0aW9uX2Vudmlyb25tZW50GBQgASgOMikuZ29vZ2xlLmNsb3VkLnJ1",
             "bi52Mi5FeGVjdXRpb25FbnZpcm9ubWVudBI+Cg5lbmNyeXB0aW9uX2tleRgV",
             "IAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkS",
-            "GAoLcmVjb25jaWxpbmcYHiABKAhCA+BBAxI3Cgpjb25kaXRpb25zGB8gAygL",
-            "Mh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Db25kaXRpb25CA+BBAxIgChNvYnNl",
-            "cnZlZF9nZW5lcmF0aW9uGCAgASgDQgPgQQMSFAoHbG9nX3VyaRghIAEoCUID",
-            "4EEDEhEKBGV0YWcYYyABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp06kFxChtydW4uZ29v",
-            "Z2xlYXBpcy5jb20vUmV2aXNpb24ST3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9zZXJ2aWNlcy97c2VydmljZX0vcmV2aXNpb25z",
-            "L3tyZXZpc2lvbn1SAQEyhQYKCVJldmlzaW9ucxLSAQoLR2V0UmV2aXNpb24S",
-            "Jy5nb29nbGUuY2xvdWQucnVuLnYyLkdldFJldmlzaW9uUmVxdWVzdBodLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb24ie4LT5JMCOhI4L3YyL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKi9yZXZpc2lvbnMv",
-            "Kn2K0+STAi4SLAoEbmFtZRIkcHJvamVjdHMvKi9sb2NhdGlvbnMve2xvY2F0",
-            "aW9uPSp9Lyoq2kEEbmFtZRLnAQoNTGlzdFJldmlzaW9ucxIpLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuTGlzdFJldmlzaW9uc1JlcXVlc3QaKi5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLkxpc3RSZXZpc2lvbnNSZXNwb25zZSJ/gtPkkwI6EjgvdjIv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9L3Jl",
-            "dmlzaW9uc4rT5JMCMBIuCgZwYXJlbnQSJHByb2plY3RzLyovbG9jYXRpb25z",
-            "L3tsb2NhdGlvbj0qfS8qKtpBBnBhcmVudBLwAQoORGVsZXRlUmV2aXNpb24S",
-            "Ki5nb29nbGUuY2xvdWQucnVuLnYyLkRlbGV0ZVJldmlzaW9uUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ikgGC0+STAjoqOC92Mi97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyovcmV2aXNp",
-            "b25zLyp9itPkkwIuEiwKBG5hbWUSJHByb2plY3RzLyovbG9jYXRpb25zL3ts",
-            "b2NhdGlvbj0qfS8qKtpBBG5hbWXKQRQKCFJldmlzaW9uEghSZXZpc2lvbhpG",
-            "ykEScnVuLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJiChdjb20uZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52MkINUmV2aXNpb25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "XAogZW5jcnlwdGlvbl9rZXlfcmV2b2NhdGlvbl9hY3Rpb24YFyABKA4yMi5n",
+            "b29nbGUuY2xvdWQucnVuLnYyLkVuY3J5cHRpb25LZXlSZXZvY2F0aW9uQWN0",
+            "aW9uEkMKIGVuY3J5cHRpb25fa2V5X3NodXRkb3duX2R1cmF0aW9uGBggASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhgKC3JlY29uY2lsaW5nGB4g",
+            "ASgIQgPgQQMSNwoKY29uZGl0aW9ucxgfIAMoCzIeLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuQ29uZGl0aW9uQgPgQQMSIAoTb2JzZXJ2ZWRfZ2VuZXJhdGlvbhgg",
+            "IAEoA0ID4EEDEhQKB2xvZ191cmkYISABKAlCA+BBAxIRCgRldGFnGGMgASgJ",
+            "QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAE6dOpBcQobcnVuLmdvb2dsZWFwaXMuY29tL1Jldmlz",
+            "aW9uEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2VydmljZXMve3NlcnZpY2V9L3JldmlzaW9ucy97cmV2aXNpb259UgEBMoUG",
+            "CglSZXZpc2lvbnMS0gEKC0dldFJldmlzaW9uEicuZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52Mi5HZXRSZXZpc2lvblJlcXVlc3QaHS5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LlJldmlzaW9uInuC0+STAjoSOC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3NlcnZpY2VzLyovcmV2aXNpb25zLyp9itPkkwIuEiwKBG5hbWUS",
+            "JHByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlvbj0qfS8qKtpBBG5hbWUS",
+            "5wEKDUxpc3RSZXZpc2lvbnMSKS5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RS",
+            "ZXZpc2lvbnNSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5MaXN0UmV2",
+            "aXNpb25zUmVzcG9uc2Uif4LT5JMCOhI4L3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qfS9yZXZpc2lvbnOK0+STAjASLgoG",
+            "cGFyZW50EiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKira",
+            "QQZwYXJlbnQS8AEKDkRlbGV0ZVJldmlzaW9uEiouZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52Mi5EZWxldGVSZXZpc2lvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIpIBgtPkkwI6KjgvdjIve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3JldmlzaW9ucy8qfYrT5JMCLhIsCgRu",
+            "YW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKiraQQRu",
+            "YW1lykEUCghSZXZpc2lvbhIIUmV2aXNpb24aRspBEnJ1bi5nb29nbGVhcGlz",
+            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm1CYgoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCDVJldmlzaW9u",
+            "UHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9ydW4vdjI7cnVuYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -100,7 +104,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsRequest), global::Google.Cloud.Run.V2.ListRevisionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsResponse), global::Google.Cloud.Run.V2.ListRevisionsResponse.Parser, new[]{ "Revisions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteRevisionRequest), global::Google.Cloud.Run.V2.DeleteRevisionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1188,6 +1192,8 @@ namespace Google.Cloud.Run.V2 {
       volumes_ = other.volumes_.Clone();
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
+      encryptionKeyRevocationAction_ = other.encryptionKeyRevocationAction_;
+      encryptionKeyShutdownDuration_ = other.encryptionKeyShutdownDuration_ != null ? other.encryptionKeyShutdownDuration_.Clone() : null;
       reconciling_ = other.reconciling_;
       conditions_ = other.conditions_.Clone();
       observedGeneration_ = other.observedGeneration_;
@@ -1221,8 +1227,9 @@ namespace Google.Cloud.Run.V2 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the Revision. The value is a UUID4
-    /// string and guaranteed to remain unchanged until the resource is deleted.
+    /// Output only. Server assigned unique identifier for the Revision. The value
+    /// is a UUID4 string and guaranteed to remain unchanged until the resource is
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1261,9 +1268,6 @@ namespace Google.Cloud.Run.V2 {
     /// environment, state, etc. For more information, visit
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
     /// https://cloud.google.com/run/docs/configuring/labels
-    /// Cloud Run will populate some labels with 'run.googleapis.com' or
-    /// 'serving.knative.dev' namespaces. Those labels are read-only, and user
-    /// changes will not be preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1520,13 +1524,44 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "encryption_key_revocation_action" field.</summary>
+    public const int EncryptionKeyRevocationActionFieldNumber = 23;
+    private global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction encryptionKeyRevocationAction_ = global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified;
+    /// <summary>
+    /// The action to take if the encryption key is revoked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction EncryptionKeyRevocationAction {
+      get { return encryptionKeyRevocationAction_; }
+      set {
+        encryptionKeyRevocationAction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_key_shutdown_duration" field.</summary>
+    public const int EncryptionKeyShutdownDurationFieldNumber = 24;
+    private global::Google.Protobuf.WellKnownTypes.Duration encryptionKeyShutdownDuration_;
+    /// <summary>
+    /// If encryption_key_revocation_action is SHUTDOWN, the duration before
+    /// shutting down all instances. The minimum increment is 1 hour.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration EncryptionKeyShutdownDuration {
+      get { return encryptionKeyShutdownDuration_; }
+      set {
+        encryptionKeyShutdownDuration_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reconciling" field.</summary>
     public const int ReconcilingFieldNumber = 30;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether the resource's reconciliation is still in progress.
-    /// See comments in `Service.reconciling` for additional information on
-    /// reconciliation process in Cloud Run.
+    /// Output only. Indicates whether the resource's reconciliation is still in
+    /// progress. See comments in `Service.reconciling` for additional information
+    /// on reconciliation process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1543,8 +1578,9 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(250, global::Google.Cloud.Run.V2.Condition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.Condition>();
     /// <summary>
-    /// Output only. The Condition of this Revision, containing its readiness status, and
-    /// detailed error information in case it did not reach a serving state.
+    /// Output only. The Condition of this Revision, containing its readiness
+    /// status, and detailed error information in case it did not reach a serving
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1556,9 +1592,9 @@ namespace Google.Cloud.Run.V2 {
     public const int ObservedGenerationFieldNumber = 32;
     private long observedGeneration_;
     /// <summary>
-    /// Output only. The generation of this Revision currently serving traffic. See comments in
-    /// `reconciling` for additional information on reconciliation process in Cloud
-    /// Run.
+    /// Output only. The generation of this Revision currently serving traffic. See
+    /// comments in `reconciling` for additional information on reconciliation
+    /// process in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1635,6 +1671,8 @@ namespace Google.Cloud.Run.V2 {
       if(!volumes_.Equals(other.volumes_)) return false;
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
+      if (EncryptionKeyRevocationAction != other.EncryptionKeyRevocationAction) return false;
+      if (!object.Equals(EncryptionKeyShutdownDuration, other.EncryptionKeyShutdownDuration)) return false;
       if (Reconciling != other.Reconciling) return false;
       if(!conditions_.Equals(other.conditions_)) return false;
       if (ObservedGeneration != other.ObservedGeneration) return false;
@@ -1667,6 +1705,8 @@ namespace Google.Cloud.Run.V2 {
       hash ^= volumes_.GetHashCode();
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) hash ^= EncryptionKeyRevocationAction.GetHashCode();
+      if (encryptionKeyShutdownDuration_ != null) hash ^= EncryptionKeyShutdownDuration.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       hash ^= conditions_.GetHashCode();
       if (ObservedGeneration != 0L) hash ^= ObservedGeneration.GetHashCode();
@@ -1753,6 +1793,14 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) {
         output.WriteRawTag(170, 1);
         output.WriteString(EncryptionKey);
+      }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        output.WriteRawTag(184, 1);
+        output.WriteEnum((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(EncryptionKeyShutdownDuration);
       }
       if (Reconciling != false) {
         output.WriteRawTag(240, 1);
@@ -1849,6 +1897,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(170, 1);
         output.WriteString(EncryptionKey);
       }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        output.WriteRawTag(184, 1);
+        output.WriteEnum((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(EncryptionKeyShutdownDuration);
+      }
       if (Reconciling != false) {
         output.WriteRawTag(240, 1);
         output.WriteBool(Reconciling);
@@ -1931,6 +1987,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (EncryptionKey.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EncryptionKey);
+      }
+      if (EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionKeyRevocationAction);
+      }
+      if (encryptionKeyShutdownDuration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKeyShutdownDuration);
       }
       if (Reconciling != false) {
         size += 2 + 1;
@@ -2029,6 +2091,15 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.EncryptionKey.Length != 0) {
         EncryptionKey = other.EncryptionKey;
+      }
+      if (other.EncryptionKeyRevocationAction != global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction.Unspecified) {
+        EncryptionKeyRevocationAction = other.EncryptionKeyRevocationAction;
+      }
+      if (other.encryptionKeyShutdownDuration_ != null) {
+        if (encryptionKeyShutdownDuration_ == null) {
+          EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        EncryptionKeyShutdownDuration.MergeFrom(other.EncryptionKeyShutdownDuration);
       }
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
@@ -2153,6 +2224,17 @@ namespace Google.Cloud.Run.V2 {
           }
           case 170: {
             EncryptionKey = input.ReadString();
+            break;
+          }
+          case 184: {
+            EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
+            break;
+          }
+          case 194: {
+            if (encryptionKeyShutdownDuration_ == null) {
+              EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EncryptionKeyShutdownDuration);
             break;
           }
           case 240: {
@@ -2289,6 +2371,17 @@ namespace Google.Cloud.Run.V2 {
           }
           case 170: {
             EncryptionKey = input.ReadString();
+            break;
+          }
+          case 184: {
+            EncryptionKeyRevocationAction = (global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction) input.ReadEnum();
+            break;
+          }
+          case 194: {
+            if (encryptionKeyShutdownDuration_ == null) {
+              EncryptionKeyShutdownDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EncryptionKeyShutdownDuration);
             break;
           }
           case 240: {

@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byLkCwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
+            "byL/CwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
             "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
             "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
@@ -49,20 +49,20 @@ namespace Google.Cloud.Run.V2 {
             "RVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NIRUNLX0ZB",
             "SUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAMEhkKFVdB",
             "SVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRSWRAOEhMK",
-            "D1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAirwIKDlJldmlzaW9u",
+            "D1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAiygIKDlJldmlzaW9u",
             "UmVhc29uEh0KGVJFVklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQRU5E",
             "SU5HEAESCwoHUkVTRVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklORxAE",
             "Eg4KClJFQ1JFQVRJTkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVSX0VS",
             "Uk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIh",
             "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
             "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
-            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsifgoPRXhlY3V0aW9uUmVhc29uEh4K",
-            "GkVYRUNVVElPTl9SRUFTT05fVU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19T",
-            "RVJWSUNFX1BPTExJTkdfRVJST1IQARIWChJOT05fWkVST19FWElUX0NPREUQ",
-            "AhINCglDQU5DRUxMRUQQA0IJCgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3Rv",
-            "Mw=="));
+            "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJN",
+            "SU5HEAwifgoPRXhlY3V0aW9uUmVhc29uEh4KGkVYRUNVVElPTl9SRUFTT05f",
+            "VU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19TRVJWSUNFX1BPTExJTkdfRVJS",
+            "T1IQARIWChJOT05fWkVST19FWElUX0NPREUQAhINCglDQU5DRUxMRUQQA0IJ",
+            "CgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRp",
+            "b25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -778,6 +778,11 @@ namespace Google.Cloud.Run.V2 {
         /// manually scaled service with 0 instance count
         /// </summary>
         [pbr::OriginalName("HEALTH_CHECK_SKIPPED")] HealthCheckSkipped = 11,
+        /// <summary>
+        /// A revision with min_instance_count > 0 was created and is waiting for
+        /// enough instances to begin a traffic migration.
+        /// </summary>
+        [pbr::OriginalName("MIN_INSTANCES_WARMING")] MinInstancesWarming = 12,
       }
 
       /// <summary>
