@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.2.0, released 2023-01-20
+
+### New features
+
+- Enable REST transport ([commit 46d4fe8](https://github.com/googleapis/google-cloud-dotnet/commit/46d4fe8461ac30e7666600e44e7bd16228768621))
+
+### Documentation improvements
+
+- Marking keyword_searchable_job_custom_attributes on the company object as deprecated ([commit 30e9c09](https://github.com/googleapis/google-cloud-dotnet/commit/30e9c09203c5238c48dffcdc7742504428234bfe))
+- Marking company_size histogram facet as deprecated ([commit 30e9c09](https://github.com/googleapis/google-cloud-dotnet/commit/30e9c09203c5238c48dffcdc7742504428234bfe))
+
 ## Version 2.1.0, released 2022-09-15
 
 No API surface changes, just dependency updates.
