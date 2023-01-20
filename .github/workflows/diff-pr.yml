@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOTNET_NOLOGO: true
+    permissions:
+      # By default, the access token only has read permission.
+      # Even though we're creating a comment on a PR, that's
+      # an issue comment as far as the API and permissions are concerned.
+      issues: write
 
     steps:
     - uses: actions/checkout@v3
@@ -45,4 +50,16 @@ jobs:
         then
           SCRIPT_OPTION=--allow-breaking-changes
         fi
-        ./detect-pr-changes.sh $SCRIPT_OPTION
+        
+        # Run the diff, recording the results
+        echo "**Pull request diff results**" >> diff.txt
+        set -o pipefail
+        ./detect-pr-changes.sh $SCRIPT_OPTION 2>&1 | tee -a diff.txt        
+        set +o pipefail
+
+    - name: Post diff as a comment, if possible
+      if: github.event.pull_request.head.repo.full_name == github.repository
+      run: |
+        ./prepare-release.sh add-pr-comment diff.txt \
+           ${{github.event.pull_request.number }} \
+           ${{secrets.GITHUB_TOKEN}}
