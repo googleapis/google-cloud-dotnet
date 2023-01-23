@@ -733,9 +733,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. A reference to the POSIX account to update. POSIX accounts are identified
-    /// by the project ID they are associated with. A reference to the POSIX
-    /// account is in format `users/{user}/projects/{project}`.
+    /// Required. A reference to the POSIX account to update. POSIX accounts are
+    /// identified by the project ID they are associated with. A reference to the
+    /// POSIX account is in format `users/{user}/projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -930,9 +930,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fingerprint of the public key to update. Public keys are identified by
-    /// their SHA-256 fingerprint. The fingerprint of the public key is in format
-    /// `users/{user}/sshPublicKeys/{fingerprint}`.
+    /// Required. The fingerprint of the public key to update. Public keys are
+    /// identified by their SHA-256 fingerprint. The fingerprint of the public key
+    /// is in format `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1442,9 +1442,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fingerprint of the public key to retrieve. Public keys are identified
-    /// by their SHA-256 fingerprint. The fingerprint of the public key is in
-    /// format `users/{user}/sshPublicKeys/{fingerprint}`.
+    /// Required. The fingerprint of the public key to retrieve. Public keys are
+    /// identified by their SHA-256 fingerprint. The fingerprint of the public key
+    /// is in format `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2209,9 +2209,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fingerprint of the public key to update. Public keys are identified by
-    /// their SHA-256 fingerprint. The fingerprint of the public key is in format
-    /// `users/{user}/sshPublicKeys/{fingerprint}`.
+    /// Required. The fingerprint of the public key to update. Public keys are
+    /// identified by their SHA-256 fingerprint. The fingerprint of the public key
+    /// is in format `users/{user}/sshPublicKeys/{fingerprint}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
