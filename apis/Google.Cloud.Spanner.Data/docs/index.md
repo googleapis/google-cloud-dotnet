@@ -254,3 +254,43 @@ If you want to diagnose session management issues,
 the statistics for the session pool associated with the connection:
 
 {{sample:SpannerConnection.GetSessionPoolSegmentStatistics}}
+
+## Retrieving an RpcException from a SpannerException
+
+The `RpcException` property of `SpannerException` returns the underlying
+`RpcException` which caused the `SpannerException`. The returned 
+value may be null if the `SpannerException` was not caused by an `RpcException`.
+
+This can in turn be used to [obtain an ErrorInfo](../../../docs/devsite-help/troubleshooting.md#how-can-i-get-errorinfo-from-rpcexception) 
+which can provide actionable error details. 
+
+Sample code:
+
+```csharp
+using Google.Api.Gax.Grpc;
+try
+{
+    // Code using Spanner. 
+}
+catch (SpannerException ex)
+{
+    if (ex.RpcException is RpcException rpcException)
+    {
+        if (rpcException.GetErrorInfo() is ErrorInfo errorInfo)
+        {
+            var domain = errorInfo.Domain;
+            var reason = errorInfo.Reason;
+            var metadata = errorInfo.Metadata;
+            // Use the domain, reason and metadata of ErrorInfo, e.g. for logging or taking remedial action.
+        }
+        else
+        {
+            // Use RpcException's other properties (e.g. Status and Message) to handle the exception appropriately.
+        }
+    }
+    else
+    {
+        // Use SpannerException's other properties (e.g. ErrorCode and Message) to handle the exception appropriately.
+    }
+}
+```
