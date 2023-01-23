@@ -8733,10 +8733,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     /// location parts of the resource name must match the project and location of
     /// the lineage resource being created. Examples:
     ///
-    /// - {source_type: COMPOSER, name:
-    /// "projects/foo/locations/us/environments/bar"}
-    /// - {source_type: BIGQUERY, name: "projects/foo/locations/eu"}
-    /// - {source_type: CUSTOM,   name: "myCustomIntegration"}
+    /// - `{source_type: COMPOSER, name:
+    ///   "projects/foo/locations/us/environments/bar"}`
+    /// - `{source_type: BIGQUERY, name: "projects/foo/locations/eu"}`
+    /// - `{source_type: CUSTOM,   name: "myCustomIntegration"}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
