@@ -1,5 +1,20 @@
 # Version history
 
+## Version 4.2.0, released 2023-01-23
+
+### New features
+
+- Improve credential support for URL signing. ([commit d36a8dd](https://github.com/googleapis/google-cloud-dotnet/commit/d36a8dd4f3ccd91b70f4a454dfa7f1dd4317308b))
+- Add DownloadValidationMode.Automatic ([commit c9f2b19](https://github.com/googleapis/google-cloud-dotnet/commit/c9f2b19c2e624771df497a969a5b60d37c1bfec5))
+- Support HMAC URL signing. ([commit dfad68e](https://github.com/googleapis/google-cloud-dotnet/commit/dfad68e47ed7a72c9ef97b5676c59adec2f87aa2))
+- Enable self-signed JWTs for Storage and Translation clients ([commit 10d2787](https://github.com/googleapis/google-cloud-dotnet/commit/10d2787c9963b49199ffdf8d4ed69169142272fb))
+- Add invocation ID and attempt count in x-goog-api-client header. Fixes [issue 8881](https://github.com/googleapis/google-cloud-dotnet/issues/8881) ([commit 1ac6f68](https://github.com/googleapis/google-cloud-dotnet/commit/1ac6f6812d829081c096e3ae5da0de7972feb368))
+- Disabled default ExponentialBackOffPolicy in message handler via StorageClientBuilder ([commit 62aec51](https://github.com/googleapis/google-cloud-dotnet/commit/62aec51d17922857f260f32a9dc17099062c47a0))
+
+### Documentation improvements
+
+- Add commentary on accidentally-optional parameters ([commit 228bdfc](https://github.com/googleapis/google-cloud-dotnet/commit/228bdfcb90b62b40cf68591ee2c7b468964adcfa))
+
 ## Version 4.1.0, released 2022-07-22
 
 No API surface changes; just dependency updates.
