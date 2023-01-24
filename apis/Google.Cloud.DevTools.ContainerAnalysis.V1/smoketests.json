@@ -1,0 +1,14 @@
+[
+  {
+    "client": "ContainerAnalysisClient",
+    "clientNavigationProperty": "GrafeasClient",
+    "method": "ListNotes",
+    // Remove this when https://github.com/googleapis/google-cloud-dotnet/issues/9776
+    // is fixed.
+    "transports": [ "Grpc" ],
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}",
+      "filter": ""
+    }
+  }
+]

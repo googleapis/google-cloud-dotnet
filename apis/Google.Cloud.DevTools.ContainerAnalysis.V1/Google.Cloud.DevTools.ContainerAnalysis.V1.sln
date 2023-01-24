@@ -3,25 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.DevTools.ContainerAnalysis.V1", "Google.Cloud.DevTools.ContainerAnalysis.V1\Google.Cloud.DevTools.ContainerAnalysis.V1.csproj", "{454873F2-5F3A-44BE-8006-8D1A80EF8BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.DevTools.ContainerAnalysis.V1", "Google.Cloud.DevTools.ContainerAnalysis.V1\Google.Cloud.DevTools.ContainerAnalysis.V1.csproj", "{454873F2-5F3A-44BE-8006-8D1A80EF8BA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafeas.V1", "..\Grafeas.V1\Grafeas.V1\Grafeas.V1.csproj", "{D45815CE-4F06-4C1E-9507-213DAE55FD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1", "..\Grafeas.V1\Grafeas.V1\Grafeas.V1.csproj", "{D45815CE-4F06-4C1E-9507-213DAE55FD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets", "Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets\Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets.csproj", "{CD6F1621-D828-4AF0-9FC4-0D1C446A630F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets", "Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets\Google.Cloud.DevTools.ContainerAnalysis.V1.GeneratedSnippets.csproj", "{CD6F1621-D828-4AF0-9FC4-0D1C446A630F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{3F3EE7E2-2F83-44DC-A82F-83CB79CEC8AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{3F3EE7E2-2F83-44DC-A82F-83CB79CEC8AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.DevTools.ContainerAnalysis.V1.SmokeTests", "Google.Cloud.DevTools.ContainerAnalysis.V1.SmokeTests\Google.Cloud.DevTools.ContainerAnalysis.V1.SmokeTests.csproj", "{B79C30FA-1E8F-4800-B91C-5D96B0B519B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets", "Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets\Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets.csproj", "{0BF3E92F-D006-4DEE-8B70-F882F2C72694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets", "Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets\Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets.csproj", "{0BF3E92F-D006-4DEE-8B70-F882F2C72694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{454873F2-5F3A-44BE-8006-8D1A80EF8BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,13 +35,15 @@ Global
 		{3F3EE7E2-2F83-44DC-A82F-83CB79CEC8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F3EE7E2-2F83-44DC-A82F-83CB79CEC8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F3EE7E2-2F83-44DC-A82F-83CB79CEC8AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B79C30FA-1E8F-4800-B91C-5D96B0B519B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B79C30FA-1E8F-4800-B91C-5D96B0B519B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B79C30FA-1E8F-4800-B91C-5D96B0B519B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B79C30FA-1E8F-4800-B91C-5D96B0B519B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BF3E92F-D006-4DEE-8B70-F882F2C72694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BF3E92F-D006-4DEE-8B70-F882F2C72694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BF3E92F-D006-4DEE-8B70-F882F2C72694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BF3E92F-D006-4DEE-8B70-F882F2C72694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA31D9DD-8AA4-4C14-B8DC-0AD03F220E3C}
 	EndGlobalSection
 EndGlobal
