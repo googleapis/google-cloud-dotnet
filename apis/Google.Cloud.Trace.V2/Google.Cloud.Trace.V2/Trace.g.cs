@@ -134,7 +134,7 @@ namespace Google.Cloud.Trace.V2 {
   /// its sub-operations.
   ///
   /// A trace can also contain multiple root spans, or none at all.
-  /// Spans do not need to be contiguous&amp;mdash;there might be
+  /// Spans do not need to be contiguous. There might be
   /// gaps or overlaps between spans in a trace.
   /// </summary>
   public sealed partial class Span : pb::IMessage<Span>
