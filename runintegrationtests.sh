@@ -86,11 +86,6 @@ then
       temp_testdirs+=($snip_dir)
     fi 
 
-    smoke_dir="${api}/${api}.SmokeTests"
-    if [[ -d "$smoke_dir" ]]
-    then
-      temp_testdirs+=($smoke_dir)
-    fi
     smoke_file="${api}/smoketests.json"
     if [[ -f "$smoke_file" ]]
     then
@@ -103,7 +98,7 @@ then
   declare -r testdirs=$(cat $FAILURE_FILE)
 elif [[ "$SMOKE_ARG" == "yes" ]]
 then
-  declare -r testdirs=$(echo */*.SmokeTests */smoketests.json)
+  declare -r testdirs=$(echo */smoketests.json)
 else
   declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */*.SmokeTests */smoketests.json)
 fi
