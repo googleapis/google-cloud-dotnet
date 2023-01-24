@@ -8091,7 +8091,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         public const int IssuanceConfigFieldNumber = 6;
         private string issuanceConfig_ = "";
         /// <summary>
-        /// The resource name for a
+        /// Immutable. The resource name for a
         /// [CertificateIssuanceConfig][google.cloud.certificatemanager.v1.CertificateIssuanceConfig]
         /// used to configure private PKI certificates in the format
         /// `projects/*/locations/*/certificateIssuanceConfigs/*`.
@@ -8389,7 +8389,13 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// State of the managed certificate resource.
+          /// </summary>
           public enum State {
+            /// <summary>
+            /// State is unspecified.
+            /// </summary>
             [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// Certificate Manager attempts to provision or renew the certificate.
@@ -8651,7 +8657,13 @@ namespace Google.Cloud.CertificateManager.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
+              /// <summary>
+              /// Reason for provisioning failures.
+              /// </summary>
               public enum Reason {
+                /// <summary>
+                /// Reason is unspecified.
+                /// </summary>
                 [pbr::OriginalName("REASON_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
                 /// Certificate provisioning failed due to an issue with one or more of
@@ -8994,7 +9006,13 @@ namespace Google.Cloud.CertificateManager.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
+              /// <summary>
+              /// State of the domain for managed certificate issuance.
+              /// </summary>
               public enum State {
+                /// <summary>
+                /// State is unspecified.
+                /// </summary>
                 [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
                 /// Certificate provisioning for this domain is under way. GCP will
@@ -9013,7 +9031,13 @@ namespace Google.Cloud.CertificateManager.V1 {
                 [pbr::OriginalName("FAILED")] Failed = 7,
               }
 
+              /// <summary>
+              /// Reason for failure of the authorization attempt for the domain.
+              /// </summary>
               public enum FailureReason {
+                /// <summary>
+                /// FailureReason is unspecified.
+                /// </summary>
                 [pbr::OriginalName("FAILURE_REASON_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
                 /// There was a problem with the user's DNS or load balancer
@@ -9181,7 +9205,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.CertificateManager.V1.CertificateMap.Types.GclbTarget.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.CertificateMap.Types.GclbTarget> gclbTargets_ = new pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.CertificateMap.Types.GclbTarget>();
     /// <summary>
-    /// Output only. A list of GCLB targets which use this Certificate Map.
+    /// Output only. A list of GCLB targets that use this Certificate Map.
     /// A Target Proxy is only present on this list if it's attached to a
     /// Forwarding Rule.
     /// </summary>
@@ -9446,7 +9470,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Describes a Target Proxy which uses this Certificate Map.
+      /// Describes a Target Proxy that uses this Certificate Map.
       /// </summary>
       public sealed partial class GclbTarget : pb::IMessage<GclbTarget>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10696,7 +10720,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int DomainFieldNumber = 6;
     private string domain_ = "";
     /// <summary>
-    /// Required. Immutable. A domain which is being authorized. A DnsAuthorization
+    /// Required. Immutable. A domain that is being authorized. A DnsAuthorization
     /// resource covers a single domain and its wildcard, e.g. authorization for
     /// `example.com` can be used to issue certificates for `example.com` and
     /// `*.example.com`.
