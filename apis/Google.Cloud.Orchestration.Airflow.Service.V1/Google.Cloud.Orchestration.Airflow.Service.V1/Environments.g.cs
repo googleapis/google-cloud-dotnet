@@ -2912,10 +2912,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int DagGcsPrefixFieldNumber = 2;
     private string dagGcsPrefix_ = "";
     /// <summary>
-    /// Output only. The Cloud Storage prefix of the DAGs for this environment. Although Cloud
-    /// Storage objects reside in a flat namespace, a hierarchical file tree
-    /// can be simulated using "/"-delimited object name prefixes. DAG objects for
-    /// this environment reside in a simulated directory with the given prefix.
+    /// Output only. The Cloud Storage prefix of the DAGs for this environment.
+    /// Although Cloud Storage objects reside in a flat namespace, a hierarchical
+    /// file tree can be simulated using "/"-delimited object name prefixes. DAG
+    /// objects for this environment reside in a simulated directory with the given
+    /// prefix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2994,8 +2995,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int WebServerNetworkAccessControlFieldNumber = 8;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerNetworkAccessControl webServerNetworkAccessControl_;
     /// <summary>
-    /// Optional. The network-level access control policy for the Airflow web server. If
-    /// unspecified, no network-level access restrictions will be applied.
+    /// Optional. The network-level access control policy for the Airflow web
+    /// server. If unspecified, no network-level access restrictions will be
+    /// applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3010,8 +3012,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int DatabaseConfigFieldNumber = 9;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseConfig databaseConfig_;
     /// <summary>
-    /// Optional. The configuration settings for Cloud SQL instance used internally by Apache
-    /// Airflow software.
+    /// Optional. The configuration settings for Cloud SQL instance used internally
+    /// by Apache Airflow software.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3026,7 +3028,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int WebServerConfigFieldNumber = 10;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerConfig webServerConfig_;
     /// <summary>
-    /// Optional. The configuration settings for the Airflow web server App Engine instance.
+    /// Optional. The configuration settings for the Airflow web server App Engine
+    /// instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3057,9 +3060,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int MaintenanceWindowFieldNumber = 12;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.MaintenanceWindow maintenanceWindow_;
     /// <summary>
-    /// Optional. The maintenance window is the period when Cloud Composer components may
-    /// undergo maintenance. It is defined so that maintenance is not executed
-    /// during peak hours or critical time periods.
+    /// Optional. The maintenance window is the period when Cloud Composer
+    /// components may undergo maintenance. It is defined so that maintenance is
+    /// not executed during peak hours or critical time periods.
     ///
     /// The system will not be under maintenance for every occurrence of this
     /// window, but when maintenance is planned, it will be scheduled
@@ -3085,9 +3088,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int WorkloadsConfigFieldNumber = 15;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.WorkloadsConfig workloadsConfig_;
     /// <summary>
-    /// Optional. The workloads configuration settings for the GKE cluster associated with
-    /// the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web
-    /// server and workers workloads.
+    /// Optional. The workloads configuration settings for the GKE cluster
+    /// associated with the Cloud Composer environment. The GKE cluster runs
+    /// Airflow scheduler, web server and workers workloads.
     ///
     /// This field is supported for Cloud Composer environments in versions
     /// composer-2.*.*-airflow-*.*.* and newer.
@@ -3123,8 +3126,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int AirflowUriFieldNumber = 6;
     private string airflowUri_ = "";
     /// <summary>
-    /// Output only. The URI of the Apache Airflow Web UI hosted within this environment (see
-    /// [Airflow web
+    /// Output only. The URI of the Apache Airflow Web UI hosted within this
+    /// environment (see [Airflow web
     /// interface](/composer/docs/how-to/accessing/airflow-web-interface)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3140,8 +3143,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int MasterAuthorizedNetworksConfigFieldNumber = 17;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig_;
     /// <summary>
-    /// Optional. The configuration options for GKE cluster master authorized networks.
-    /// By default master authorized networks feature is:
+    /// Optional. The configuration options for GKE cluster master authorized
+    /// networks. By default master authorized networks feature is:
     /// - in case of private environment: enabled with no external networks
     /// allowlisted.
     /// - in case of public environment: disabled.
@@ -4056,7 +4059,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         public const int DescriptionFieldNumber = 2;
         private string description_ = "";
         /// <summary>
-        /// Optional. User-provided description. It must contain at most 300 characters.
+        /// Optional. User-provided description. It must contain at most 300
+        /// characters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4684,9 +4688,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int KmsKeyNameFieldNumber = 1;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// Optional. Customer-managed Encryption Key available through Google's Key Management
-    /// Service. Cannot be updated.
-    /// If not specified, Google-managed key will be used.
+    /// Optional. Customer-managed Encryption Key available through Google's Key
+    /// Management Service. Cannot be updated. If not specified, Google-managed key
+    /// will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4910,10 +4914,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Required. Maintenance window end time. It is used only to calculate the duration of
-    /// the maintenance window.
-    /// The value for end-time must be in the future, relative to
-    /// `start_time`.
+    /// Required. Maintenance window end time. It is used only to calculate the
+    /// duration of the maintenance window. The value for end-time must be in the
+    /// future, relative to `start_time`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6297,7 +6300,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int IpAllocationPolicyFieldNumber = 9;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.IPAllocationPolicy ipAllocationPolicy_;
     /// <summary>
-    /// Optional. The configuration for controlling how IPs are allocated in the GKE cluster.
+    /// Optional. The configuration for controlling how IPs are allocated in the
+    /// GKE cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6736,8 +6740,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int MasterIpv4CidrBlockFieldNumber = 2;
     private string masterIpv4CidrBlock_ = "";
     /// <summary>
-    /// Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If
-    /// left blank, the default value of '172.16.0.0/23' is used.
+    /// Optional. The CIDR block from which IPv4 range for GKE master will be
+    /// reserved. If left blank, the default value of '172.16.0.0/23' is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6752,11 +6756,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int MasterIpv4ReservedRangeFieldNumber = 3;
     private string masterIpv4ReservedRange_ = "";
     /// <summary>
-    /// Output only. The IP range in CIDR notation to use for the hosted master network. This
-    /// range is used for assigning internal IP addresses to the GKE cluster
-    /// master or set of masters and to the internal load balancer virtual IP.
-    /// This range must not overlap with any other ranges in use
-    /// within the cluster's network.
+    /// Output only. The IP range in CIDR notation to use for the hosted master
+    /// network. This range is used for assigning internal IP addresses to the GKE
+    /// cluster master or set of masters and to the internal load balancer virtual
+    /// IP. This range must not overlap with any other ranges in use within the
+    /// cluster's network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7000,9 +7004,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int ConnectionTypeFieldNumber = 1;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.NetworkingConfig.Types.ConnectionType connectionType_ = global::Google.Cloud.Orchestration.Airflow.Service.V1.NetworkingConfig.Types.ConnectionType.Unspecified;
     /// <summary>
-    /// Optional. Indicates the user requested specifc connection type between Tenant and
-    /// Customer projects.
-    /// You cannot set networking connection type in public IP environment.
+    /// Optional. Indicates the user requested specifc connection type between
+    /// Tenant and Customer projects. You cannot set networking connection type in
+    /// public IP environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7272,8 +7276,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int WebServerIpv4CidrBlockFieldNumber = 3;
     private string webServerIpv4CidrBlock_ = "";
     /// <summary>
-    /// Optional. The CIDR block from which IP range for web server will be reserved. Needs
-    /// to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and
+    /// Optional. The CIDR block from which IP range for web server will be
+    /// reserved. Needs to be disjoint from
+    /// `private_cluster_config.master_ipv4_cidr_block` and
     /// `cloud_sql_ipv4_cidr_block`.
     ///
     /// This field is supported for Cloud Composer environments in versions
@@ -7292,8 +7297,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int CloudSqlIpv4CidrBlockFieldNumber = 4;
     private string cloudSqlIpv4CidrBlock_ = "";
     /// <summary>
-    /// Optional. The CIDR block from which IP range in tenant project will be reserved for
-    /// Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
+    /// Optional. The CIDR block from which IP range in tenant project will be
+    /// reserved for Cloud SQL. Needs to be disjoint from
+    /// `web_server_ipv4_cidr_block`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7326,8 +7332,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int CloudComposerNetworkIpv4CidrBlockFieldNumber = 7;
     private string cloudComposerNetworkIpv4CidrBlock_ = "";
     /// <summary>
-    /// Optional. The CIDR block from which IP range for Cloud Composer Network in tenant
-    /// project will be reserved. Needs to be disjoint from
+    /// Optional. The CIDR block from which IP range for Cloud Composer Network in
+    /// tenant project will be reserved. Needs to be disjoint from
     /// private_cluster_config.master_ipv4_cidr_block and
     /// cloud_sql_ipv4_cidr_block.
     ///
@@ -7347,7 +7353,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int CloudComposerNetworkIpv4ReservedRangeFieldNumber = 8;
     private string cloudComposerNetworkIpv4ReservedRange_ = "";
     /// <summary>
-    /// Output only. The IP range reserved for the tenant project's Cloud Composer network.
+    /// Output only. The IP range reserved for the tenant project's Cloud Composer
+    /// network.
     ///
     /// This field is supported for Cloud Composer environments in versions
     /// composer-2.*.*-airflow-*.*.* and newer.
@@ -7365,8 +7372,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int EnablePrivatelyUsedPublicIpsFieldNumber = 6;
     private bool enablePrivatelyUsedPublicIps_;
     /// <summary>
-    /// Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for
-    /// `IPAllocationPolicy.cluster_ipv4_cidr_block` and
+    /// Optional. When enabled, IPs from public (non-RFC1918) ranges can be used
+    /// for `IPAllocationPolicy.cluster_ipv4_cidr_block` and
     /// `IPAllocationPolicy.service_ipv4_cidr_block`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7400,7 +7407,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int NetworkingConfigFieldNumber = 10;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.NetworkingConfig networkingConfig_;
     /// <summary>
-    /// Optional. Configuration for the network connections configuration in the environment.
+    /// Optional. Configuration for the network connections configuration in the
+    /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8154,7 +8162,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         public const int MemoryGbFieldNumber = 2;
         private float memoryGb_;
         /// <summary>
-        /// Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+        /// Optional. Memory (GB) request and limit for a single Airflow scheduler
+        /// replica.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8169,7 +8178,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         public const int StorageGbFieldNumber = 3;
         private float storageGb_;
         /// <summary>
-        /// Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+        /// Optional. Storage (GB) request and limit for a single Airflow scheduler
+        /// replica.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8745,7 +8755,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         public const int MemoryGbFieldNumber = 2;
         private float memoryGb_;
         /// <summary>
-        /// Optional. Memory (GB) request and limit for a single Airflow worker replica.
+        /// Optional. Memory (GB) request and limit for a single Airflow worker
+        /// replica.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8760,7 +8771,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         public const int StorageGbFieldNumber = 3;
         private float storageGb_;
         /// <summary>
-        /// Optional. Storage (GB) request and limit for a single Airflow worker replica.
+        /// Optional. Storage (GB) request and limit for a single Airflow worker
+        /// replica.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9308,7 +9320,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int SnapshotLocationFieldNumber = 6;
     private string snapshotLocation_ = "";
     /// <summary>
-    /// Optional. The Cloud Storage location for storing automatically created snapshots.
+    /// Optional. The Cloud Storage location for storing automatically created
+    /// snapshots.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9323,9 +9336,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int SnapshotCreationScheduleFieldNumber = 3;
     private string snapshotCreationSchedule_ = "";
     /// <summary>
-    /// Optional. The cron expression representing the time when snapshots creation mechanism
-    /// runs. This field is subject to additional validation around frequency of
-    /// execution.
+    /// Optional. The cron expression representing the time when snapshots creation
+    /// mechanism runs. This field is subject to additional validation around
+    /// frequency of execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9340,7 +9353,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int TimeZoneFieldNumber = 5;
     private string timeZone_ = "";
     /// <summary>
-    /// Optional. Time zone that sets the context to interpret snapshot_creation_schedule.
+    /// Optional. Time zone that sets the context to interpret
+    /// snapshot_creation_schedule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10118,8 +10132,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int UuidFieldNumber = 3;
     private string uuid_ = "";
     /// <summary>
-    /// Output only. The UUID (Universally Unique IDentifier) associated with this environment.
-    /// This value is generated when the environment is created.
+    /// Output only. The UUID (Universally Unique IDentifier) associated with this
+    /// environment. This value is generated when the environment is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10615,8 +10629,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int PypiConflictBuildLogExtractFieldNumber = 3;
     private string pypiConflictBuildLogExtract_ = "";
     /// <summary>
-    /// Output only. Extract from a docker image build log containing information about pypi
-    /// modules conflicts.
+    /// Output only. Extract from a docker image build log containing information
+    /// about pypi modules conflicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

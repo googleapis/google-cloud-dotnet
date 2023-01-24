@@ -186,8 +186,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int EndTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. The time when the operation terminated, regardless of its success.
-    /// This field is unset if the operation is still ongoing.
+    /// Output only. The time when the operation terminated, regardless of its
+    /// success. This field is unset if the operation is still ongoing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
