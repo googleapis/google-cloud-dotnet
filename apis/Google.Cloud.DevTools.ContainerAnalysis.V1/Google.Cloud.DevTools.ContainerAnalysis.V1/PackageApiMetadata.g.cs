@@ -31,6 +31,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ContaineranalysisReflection.Descriptor;
+            yield return global::Grafeas.V1.GrafeasReflection.Descriptor;
         }
     }
 }
