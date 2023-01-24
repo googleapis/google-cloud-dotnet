@@ -1,0 +1,9 @@
+[
+  {
+    "client": "OsLoginServiceClient",
+    "method": "GetLoginProfile",
+    "arguments": {
+      "name": "users/${SERVICE_ACCOUNT_ID}"
+    }
+  }
+]

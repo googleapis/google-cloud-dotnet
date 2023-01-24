@@ -3,25 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.V1Beta", "Google.Cloud.OsLogin.V1Beta\Google.Cloud.OsLogin.V1Beta.csproj", "{2784986A-F734-4BF6-B50A-5F4CB5C21BC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.V1Beta", "Google.Cloud.OsLogin.V1Beta\Google.Cloud.OsLogin.V1Beta.csproj", "{2784986A-F734-4BF6-B50A-5F4CB5C21BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.Common", "..\Google.Cloud.OsLogin.Common\Google.Cloud.OsLogin.Common\Google.Cloud.OsLogin.Common.csproj", "{3E7E0A5F-7FAC-427F-80B6-F02F345179BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.Common", "..\Google.Cloud.OsLogin.Common\Google.Cloud.OsLogin.Common\Google.Cloud.OsLogin.Common.csproj", "{3E7E0A5F-7FAC-427F-80B6-F02F345179BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.V1Beta.GeneratedSnippets", "Google.Cloud.OsLogin.V1Beta.GeneratedSnippets\Google.Cloud.OsLogin.V1Beta.GeneratedSnippets.csproj", "{5BA14808-29F1-4F43-88E9-EECF3CECD120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.V1Beta.GeneratedSnippets", "Google.Cloud.OsLogin.V1Beta.GeneratedSnippets\Google.Cloud.OsLogin.V1Beta.GeneratedSnippets.csproj", "{5BA14808-29F1-4F43-88E9-EECF3CECD120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{9989939A-CE8A-40D1-B143-0E1F9DEE2103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{9989939A-CE8A-40D1-B143-0E1F9DEE2103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.V1Beta.SmokeTests", "Google.Cloud.OsLogin.V1Beta.SmokeTests\Google.Cloud.OsLogin.V1Beta.SmokeTests.csproj", "{8B8DC779-9165-4770-ACAC-9E0BC2581FDD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.OsLogin.V1Beta.Snippets", "Google.Cloud.OsLogin.V1Beta.Snippets\Google.Cloud.OsLogin.V1Beta.Snippets.csproj", "{C2501E20-91D7-4781-94E9-16A12A739044}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.OsLogin.V1Beta.Snippets", "Google.Cloud.OsLogin.V1Beta.Snippets\Google.Cloud.OsLogin.V1Beta.Snippets.csproj", "{C2501E20-91D7-4781-94E9-16A12A739044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2784986A-F734-4BF6-B50A-5F4CB5C21BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,13 +35,15 @@ Global
 		{9989939A-CE8A-40D1-B143-0E1F9DEE2103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9989939A-CE8A-40D1-B143-0E1F9DEE2103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9989939A-CE8A-40D1-B143-0E1F9DEE2103}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B8DC779-9165-4770-ACAC-9E0BC2581FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B8DC779-9165-4770-ACAC-9E0BC2581FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B8DC779-9165-4770-ACAC-9E0BC2581FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B8DC779-9165-4770-ACAC-9E0BC2581FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2501E20-91D7-4781-94E9-16A12A739044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2501E20-91D7-4781-94E9-16A12A739044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2501E20-91D7-4781-94E9-16A12A739044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2501E20-91D7-4781-94E9-16A12A739044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0897E27-B4C1-4E65-9C95-37EB9C316015}
 	EndGlobalSection
 EndGlobal
