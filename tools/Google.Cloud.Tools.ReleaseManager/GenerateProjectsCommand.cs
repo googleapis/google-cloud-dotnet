@@ -629,7 +629,7 @@ api-name: {api.Id}
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
+            WriteProjectFile(directory, propertyGroup, dependenciesElement);
         }
 
         private static string GetTestTargetFrameworks(ApiMetadata api) =>
@@ -653,7 +653,7 @@ api-name: {api.Id}
 
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
+            WriteProjectFile(directory, propertyGroup, dependenciesElement);
         }
 
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
@@ -692,7 +692,7 @@ api-name: {api.Id}
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
+            WriteProjectFile(directory, propertyGroup, dependenciesElement);
         }
 
         private static void GenerateCoverageFile(ApiMetadata api, string directory)
@@ -735,8 +735,7 @@ api-name: {api.Id}
             }
         }
 
-        private static void WriteProjectFile(
-            ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup)
+        private static void WriteProjectFile(string directory, XElement propertyGroup, XElement dependenciesItemGroup)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             string beforeHash = GetFileHash(file);
