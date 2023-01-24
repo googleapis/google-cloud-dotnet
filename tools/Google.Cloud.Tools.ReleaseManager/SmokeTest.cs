@@ -59,26 +59,47 @@ namespace Google.Cloud.Tools.ReleaseManager
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// Used to navigate from the named client (in <see cref="Client"/>) to another client,
+        /// e.g. for a mixin. <see cref="Method"/> is then expected to be within the referenced client.
+        /// </summary>
+        public string ClientNavigationProperty { get; set; }
+
+        /// <summary>
+        /// The transports to test. This should only be used for temporarily providing a smoke
+        /// test for a subset of transports while problematic ones are being fixed.
+        /// </summary>
+        public string[] Transports { get; set; }
+
+        /// <summary>
         /// Executes a smoke test.
         /// </summary>
         /// <param name="assembly">The assembly of the client library being tests.</param>
         /// <param name="templateVariables">Variables to replace within the template.</param>
         public void Execute(Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
-            var clientType = FindClient(assembly);
-            var transports = FindTransports(clientType).Split(',').Select(t => t.Trim());
-            var method = FindMethod(clientType);
+            var constructionClientType = FindClient(assembly);
+            var transports = Transports ?? FindTransports(constructionClientType).Split(',').Select(t => t.Trim());
+
+            // Work out which type we're actually going to test
+            var navigationProperty = ClientNavigationProperty is null ? null : constructionClientType.GetProperty(ClientNavigationProperty);
+            var effectiveClientType = navigationProperty is null ? constructionClientType : navigationProperty.PropertyType;
+
+            var method = FindMethod(effectiveClientType);
             var arguments = ConvertArguments(method, templateVariables);
 
             if (Skip is object)
             {
-                Console.WriteLine($"*** Skipping test for {clientType.Name}.{Method}: {Skip} ***");
+                Console.WriteLine($"*** Skipping test for {constructionClientType.Name}.{Method}: {Skip} ***");
                 return;
             }
             foreach (var transport in transports)
             {
-                Console.WriteLine($"Running test for {clientType.Name}.{Method} with transport {transport}");
-                var clientInstance = CreateClient(clientType, transport);
+                Console.WriteLine($"Running test for {effectiveClientType.Name}.{Method} with transport {transport}");
+                var clientInstance = CreateClient(constructionClientType, transport);
+                if (navigationProperty is not null)
+                {
+                    clientInstance = navigationProperty.GetValue(clientInstance);
+                }
                 var result = method.Invoke(clientInstance, arguments);
                 DisplayResult(result);
             }
@@ -107,16 +128,24 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
             var builder = Activator.CreateInstance(builderType);
-            // We only actually need to set the gRPC adapter explicitly if there's more than one transport,
-            // and if we're trying to use REST. It's simplest to always do it for REST though.
-            // We fetch everything via reflection to avoid a direct dependency on GAX which could interfere with the
-            // client's dependency.
-            if (transport == "Rest")
+            switch (transport)
             {
-                var restTransport = builderType.BaseType.Assembly.GetType("Google.Api.Gax.Grpc.Rest.RestGrpcAdapter")
-                    .GetProperty("Default", BindingFlags.Public | BindingFlags.Static)
-                    .GetValue(null);
-                builderType.GetProperty("GrpcAdapter").SetValue(builder, restTransport);
+                case "Grpc": break;
+                // We only actually need to set the gRPC adapter explicitly if there's more than one transport,
+                // and if we're trying to use REST. It's simplest to always do it for REST though.
+                // We fetch everything via reflection to avoid a direct dependency on GAX which could interfere with the
+                // client's dependency.
+                case "Rest":
+                    if (transport == "Rest")
+                    {
+                        var restTransport = builderType.BaseType.Assembly.GetType("Google.Api.Gax.Grpc.Rest.RestGrpcAdapter")
+                            .GetProperty("Default", BindingFlags.Public | BindingFlags.Static)
+                            .GetValue(null);
+                        builderType.GetProperty("GrpcAdapter").SetValue(builder, restTransport);
+                    }
+                    break;
+                default:
+                    throw new UserErrorException($"Unknown transport '{transport}'");
             }
             builderType.GetProperty("Endpoint").SetValue(builder, Endpoint);
             return builderType.GetMethod("Build", Type.EmptyTypes, null).Invoke(builder, new object[0]);
