@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,6 @@ namespace Google.Cloud.Tools.ReleaseManager
     public class SmokeTestCommand : CommandBase
     {
         private const string PublishTargetFramework = "netstandard2.1";
-        private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
 
         public SmokeTestCommand()
             : base("smoke-test", "Runs smoke tests for a package", "id")
@@ -39,12 +39,6 @@ namespace Google.Cloud.Tools.ReleaseManager
         protected override void ExecuteImpl(string[] args)
         {
             string id = args[0];
-            string projectId = Environment.GetEnvironmentVariable(TestProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(projectId))
-            {
-                throw new UserErrorException($"Environment variable {TestProjectEnvironmentVariable} must be set before running smoke tests");
-            }
-
             var smokeTests = LoadSmokeTests(id);
             if (smokeTests.Count == 0)
             {
@@ -53,7 +47,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
 
             var assembly = PublishAndLoadAssembly(id);
-            RunTests(smokeTests, assembly, projectId);
+            var templateVariables = CreateTemplateVariables();
+            RunTests(smokeTests, assembly, templateVariables);
         }
 
         private List<SmokeTest> LoadSmokeTests(string id)
@@ -74,14 +69,53 @@ namespace Google.Cloud.Tools.ReleaseManager
             return Assembly.LoadFrom(assemblyFile);
         }
 
-        private void RunTests(List<SmokeTest> tests, Assembly assembly, string projectId)
+        private void RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var testOrTests = tests.Count == 1 ? "test" : "tests";
             Console.WriteLine($"Running {tests.Count} smoke {testOrTests}");
 
             foreach (var test in tests)
             {
-                test.Execute(assembly, projectId);
+                test.Execute(assembly, templateVariables);
+            }
+        }
+
+        private static IReadOnlyDictionary<string, string> CreateTemplateVariables()
+        {
+            var ret = new Dictionary<string, string>();
+
+            MaybeAddEnvironmentVariable("TEST_PROJECT", "PROJECT_ID");
+            MaybeAddEnvironmentVariable("FIRESTORE_TEST_PROJECT", "FIRESTORE_PROJECT_ID");
+            MaybeAddEnvironmentVariable("TEST_PROJECT_LOCATION", "PROJECT_APPENGINE_LOCATION");
+            if (MaybeGetServiceAccountId() is string serviceAccountId)
+            {
+                ret["SERVICE_ACCOUNT_ID"] = serviceAccountId;
+            }
+            return ret;
+
+            void MaybeAddEnvironmentVariable(string environmentVariableId, string templateVariableId)
+            {
+                var value = Environment.GetEnvironmentVariable(environmentVariableId);                
+                if (!string.IsNullOrEmpty(value))
+                {
+                    ret[templateVariableId] = value;
+                }
+            }
+
+            string MaybeGetServiceAccountId()
+            {
+                var credentialFile = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
+                if (string.IsNullOrEmpty(credentialFile))
+                {
+                    return null;
+                }
+                var json = File.ReadAllText(credentialFile);
+                var obj = JObject.Parse(json);
+                return obj["type"] is JToken typeToken &&
+                    typeToken.Value<string>() == "service_account" &&
+                    obj["client_email"] is JToken clientEmailToken
+                    ? clientEmailToken.Value<string>()
+                    : null;
             }
         }
     }

@@ -62,13 +62,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// Executes a smoke test.
         /// </summary>
         /// <param name="assembly">The assembly of the client library being tests.</param>
-        /// <param name="projectId">The project ID, to allow ${PROJECT_ID} to be replaced.</param>
-        public void Execute(Assembly assembly, string projectId)
+        /// <param name="templateVariables">Variables to replace within the template.</param>
+        public void Execute(Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var clientType = FindClient(assembly);
             var transports = FindTransports(clientType).Split(',').Select(t => t.Trim());
             var method = FindMethod(clientType);
-            var arguments = ConvertArguments(method, projectId);
+            var arguments = ConvertArguments(method, templateVariables);
 
             if (Skip is object)
             {
@@ -175,38 +175,51 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private object[] ConvertArguments(MethodInfo method, string projectId)
+        private object[] ConvertArguments(MethodInfo method, IReadOnlyDictionary<string, string> templateVariables)
         {
             foreach (var value in Arguments.Values)
             {
-                ReplaceProjectId(value, projectId);
+                ReplaceVariables(value);
             }
             var parameters = method.GetParameters();
             return parameters.Select(p => GetCorrespondingArgument(p)).ToArray();
 
-            void ReplaceProjectId(JToken token, string projectId)
+            void ReplaceVariables(JToken token)
             {
                 switch (token.Type)
                 {
                     case JTokenType.String:
                         var value = (JValue) token;
-                        value.Value = ((string) value.Value).Replace("${PROJECT_ID}", projectId);
+                        value.Value = ReplaceVariablesInString((string) value.Value);
                         break;
                     case JTokenType.Array:
                         var array = (JArray) token;
                         foreach (var element in array.Children())
                         {
-                            ReplaceProjectId(element, projectId);
+                            ReplaceVariables(element);
                         }
                         break;
                     case JTokenType.Object:
                         var obj = (JObject) token;
                         foreach (var property in obj.Properties())
                         {
-                            ReplaceProjectId(property.Value, projectId);
+                            ReplaceVariables(property.Value);
                         }
                         break;
                 }
+            }
+
+            string ReplaceVariablesInString(string text)
+            {
+                foreach (var pair in templateVariables)
+                {
+                    text = text.Replace($"${{{pair.Key}}}", pair.Value);
+                }
+                if (text.Contains("$\""))
+                {
+                    throw new UserErrorException($"Unable to replace all variables within request text for method {method.Name}.");
+                }
+                return text;
             }
 
             object GetCorrespondingArgument(ParameterInfo parameter)
