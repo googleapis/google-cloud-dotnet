@@ -59,11 +59,20 @@ namespace Google.Cloud.Trace.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 30000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 120 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchWriteSpansSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+        public gaxgrpc::CallSettings BatchWriteSpansSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -144,11 +153,13 @@ namespace Google.Cloud.Trace.V2
 
     /// <summary>TraceService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// This file describes an API for collecting and viewing traces and spans
-    /// within a trace.  A Trace is a collection of spans corresponding to a single
-    /// operation or set of operations for an application. A span is an individual
-    /// timed event which forms a node of the trace tree. A single trace may
-    /// contain span(s) from multiple services.
+    /// Service for collecting and viewing traces and spans within a trace.
+    /// 
+    /// A trace is a collection of spans corresponding to a single
+    /// operation or a set of operations in an application.
+    /// 
+    /// A span is an individual timed event which forms a node of the trace tree.
+    /// A single trace can contain spans from multiple services.
     /// </remarks>
     public abstract partial class TraceServiceClient
     {
@@ -233,7 +244,7 @@ namespace Google.Cloud.Trace.V2
         public virtual TraceService.TraceServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -243,7 +254,7 @@ namespace Google.Cloud.Trace.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -253,7 +264,7 @@ namespace Google.Cloud.Trace.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -263,7 +274,7 @@ namespace Google.Cloud.Trace.V2
             BatchWriteSpansAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -272,7 +283,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -287,7 +298,7 @@ namespace Google.Cloud.Trace.V2
             }, callSettings);
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -296,7 +307,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -311,7 +322,7 @@ namespace Google.Cloud.Trace.V2
             }, callSettings);
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -320,7 +331,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -328,7 +339,7 @@ namespace Google.Cloud.Trace.V2
             BatchWriteSpansAsync(name, spans, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -337,7 +348,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -352,7 +363,7 @@ namespace Google.Cloud.Trace.V2
             }, callSettings);
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -361,7 +372,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -376,7 +387,7 @@ namespace Google.Cloud.Trace.V2
             }, callSettings);
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="name">
@@ -385,7 +396,7 @@ namespace Google.Cloud.Trace.V2
         /// </param>
         /// <param name="spans">
         /// Required. A list of new spans. The span names must not match existing
-        /// spans, or the results are undefined.
+        /// spans, otherwise the results are undefined.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -422,11 +433,13 @@ namespace Google.Cloud.Trace.V2
 
     /// <summary>TraceService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// This file describes an API for collecting and viewing traces and spans
-    /// within a trace.  A Trace is a collection of spans corresponding to a single
-    /// operation or set of operations for an application. A span is an individual
-    /// timed event which forms a node of the trace tree. A single trace may
-    /// contain span(s) from multiple services.
+    /// Service for collecting and viewing traces and spans within a trace.
+    /// 
+    /// A trace is a collection of spans corresponding to a single
+    /// operation or a set of operations in an application.
+    /// 
+    /// A span is an individual timed event which forms a node of the trace tree.
+    /// A single trace can contain spans from multiple services.
     /// </remarks>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
@@ -470,7 +483,7 @@ namespace Google.Cloud.Trace.V2
         partial void Modify_Span(ref Span request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -483,7 +496,7 @@ namespace Google.Cloud.Trace.V2
         }
 
         /// <summary>
-        /// Sends new spans to new or existing traces. You cannot update
+        /// Batch writes new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
