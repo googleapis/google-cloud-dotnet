@@ -384,9 +384,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                     case "":
                         GenerateMainProject(api, dir, apiNames);
                         break;
-                    case ".SmokeTests":
-                        GenerateSmokeTestProject(api, dir, apiNames);
-                        break;
                     case ".IntegrationTests":
                     case ".Snippets":
                     case ".Tests":
@@ -637,25 +634,6 @@ api-name: {api.Id}
 
         private static string GetTestTargetFrameworks(ApiMetadata api) =>
             api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
-
-
-        private static void GenerateSmokeTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
-        {
-            // Don't generate a project file if we've got a placeholder directory
-            if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
-            {
-                return;
-            }
-            var propertyGroup =
-                new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "net6.0"),
-                    new XElement("OutputType", "Exe"),
-                    new XElement("IsPackable", false));
-            var dependenciesElement =
-                new XElement("ItemGroup",
-                    CreateDependencyElement(Path.GetFileName(directory), api.Id, ProjectVersionValue, stableRelease: false, testProject: true, apiNames));
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
-        }
 
         private static void GenerateSampleProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
