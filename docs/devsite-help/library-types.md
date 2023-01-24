@@ -64,7 +64,7 @@ for an example).
 In a few cases (most notably Google.Cloud.Spanner.V1) the hand-written code is
 primarily present to help other libraries to provide a more customized layer.
 
-# Handwritten libraries providing a layer over gRPC libraries
+## Handwritten libraries providing a layer over gRPC libraries
 
 Some libraries provide entirely hand-written surfaces,
 taking a dependency on another fully/mostly generated library.
@@ -92,7 +92,7 @@ Other libraries exist to integrate Cloud Logging with other .NET frameworks:
 - Google.Cloud.Logging.Log4Net
 - Google.Cloud.Logging.NLog
 
-# Handwritten libraries providing a layer over HTTP/1.1 + REST libraries
+## Handwritten libraries providing a layer over HTTP/1.1 + REST libraries
 
 There are three libraries of this type:
 
@@ -111,13 +111,13 @@ Translation AI product. (There are additional differences between Translation v2
 the [product documentation](https://cloud.google.com/translate/docs/editions#supported_features)
 for more details.)
 
-# Console logging
+## Console logging
 
 The [Google.Cloud.Logging.Console](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Logging.Console/latest) library provides
 [custom console log formatting](https://learn.microsoft.com/en-us/dotnet/core/extensions/console-log-formatter) for use with the [Microsoft .NET Logging API](https://learn.microsoft.com/en-us/dotnet/core/extensions/logging?tabs=command-line),
 producing rich logs for [Cloud Logging](https://cloud.google.com/logging).
 
-# Legacy HTTP/1.1 + REST libraries
+## Legacy HTTP/1.1 + REST libraries
 
 The API-specific libraries with source code in the [google-api-dotnet-client repository](https://github.com/googleapis/google-api-dotnet-client) are all generated from
 [Discovery documents](https://developers.google.com/discovery/v1/getting_started)
