@@ -12,5 +12,15 @@
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }
+  },
+  {
+    "method": "ListLocations",
+    "client": "FunctionServiceClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
   }
 ]
