@@ -129,7 +129,7 @@ namespace Google.Cloud.Trace.V2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V2.Span> spans_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V2.Span>();
     /// <summary>
     /// Required. A list of new spans. The span names must not match existing
-    /// spans, or the results are undefined.
+    /// spans, otherwise the results are undefined.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

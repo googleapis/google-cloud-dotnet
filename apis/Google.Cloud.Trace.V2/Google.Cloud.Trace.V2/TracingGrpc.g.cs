@@ -3,7 +3,7 @@
 //     source: google/devtools/cloudtrace/v2/tracing.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,11 +24,13 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Trace.V2 {
   /// <summary>
-  /// This file describes an API for collecting and viewing traces and spans
-  /// within a trace.  A Trace is a collection of spans corresponding to a single
-  /// operation or set of operations for an application. A span is an individual
-  /// timed event which forms a node of the trace tree. A single trace may
-  /// contain span(s) from multiple services.
+  /// Service for collecting and viewing traces and spans within a trace.
+  ///
+  /// A trace is a collection of spans corresponding to a single
+  /// operation or a set of operations in an application.
+  ///
+  /// A span is an individual timed event which forms a node of the trace tree.
+  /// A single trace can contain spans from multiple services.
   /// </summary>
   public static partial class TraceService
   {
@@ -101,7 +103,7 @@ namespace Google.Cloud.Trace.V2 {
     public abstract partial class TraceServiceBase
     {
       /// <summary>
-      /// Sends new spans to new or existing traces. You cannot update
+      /// Batch writes new spans to new or existing traces. You cannot update
       /// existing spans.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -155,7 +157,7 @@ namespace Google.Cloud.Trace.V2 {
       }
 
       /// <summary>
-      /// Sends new spans to new or existing traces. You cannot update
+      /// Batch writes new spans to new or existing traces. You cannot update
       /// existing spans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -169,7 +171,7 @@ namespace Google.Cloud.Trace.V2 {
         return BatchWriteSpans(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sends new spans to new or existing traces. You cannot update
+      /// Batch writes new spans to new or existing traces. You cannot update
       /// existing spans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -181,7 +183,7 @@ namespace Google.Cloud.Trace.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchWriteSpans, null, options, request);
       }
       /// <summary>
-      /// Sends new spans to new or existing traces. You cannot update
+      /// Batch writes new spans to new or existing traces. You cannot update
       /// existing spans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -195,7 +197,7 @@ namespace Google.Cloud.Trace.V2 {
         return BatchWriteSpansAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sends new spans to new or existing traces. You cannot update
+      /// Batch writes new spans to new or existing traces. You cannot update
       /// existing spans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
