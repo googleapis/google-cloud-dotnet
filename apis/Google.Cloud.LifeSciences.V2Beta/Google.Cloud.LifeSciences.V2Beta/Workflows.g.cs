@@ -1137,9 +1137,9 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     public const int ImageUriFieldNumber = 2;
     private string imageUri_ = "";
     /// <summary>
-    /// Required. The URI to pull the container image from. Note that all images referenced
-    /// by actions in the pipeline are pulled before the first action runs. If
-    /// multiple actions reference the same image, it is only pulled once,
+    /// Required. The URI to pull the container image from. Note that all images
+    /// referenced by actions in the pipeline are pulled before the first action
+    /// runs. If multiple actions reference the same image, it is only pulled once,
     /// ensuring that the same image is used for all actions in a single pipeline.
     ///
     /// The image URI can be either a complete host and image specification (e.g.,
@@ -1150,7 +1150,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If the specified image is not public, the service account specified for
     /// the Virtual Machine must have access to pull the images from GCR, or
     /// appropriate credentials must be specified in the
-    /// [google.cloud.lifesciences.v2beta.Action.credentials][google.cloud.lifesciences.v2beta.Action.credentials] field.
+    /// [google.cloud.lifesciences.v2beta.Action.credentials][google.cloud.lifesciences.v2beta.Action.credentials]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1200,7 +1201,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private readonly pbc::MapField<string, string> environment_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The environment to pass into the container. This environment is merged
-    /// with values specified in the [google.cloud.lifesciences.v2beta.Pipeline][google.cloud.lifesciences.v2beta.Pipeline]
+    /// with values specified in the
+    /// [google.cloud.lifesciences.v2beta.Pipeline][google.cloud.lifesciences.v2beta.Pipeline]
     /// message, overwriting any duplicate values.
     ///
     /// In addition to the values passed here, a few other values are
@@ -1228,8 +1230,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>
     /// The encrypted environment to pass into the container. This environment is
     /// merged with values specified in the
-    /// [google.cloud.lifesciences.v2beta.Pipeline][google.cloud.lifesciences.v2beta.Pipeline] message, overwriting any
-    /// duplicate values.
+    /// [google.cloud.lifesciences.v2beta.Pipeline][google.cloud.lifesciences.v2beta.Pipeline]
+    /// message, overwriting any duplicate values.
     ///
     /// The secret must decrypt to a JSON-encoded dictionary where key-value pairs
     /// serve as environment variable names and their values. The decoded
@@ -2920,11 +2922,11 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     public const int MachineTypeFieldNumber = 1;
     private string machineType_ = "";
     /// <summary>
-    /// Required. The machine type of the virtual machine to create. Must be the short name
-    /// of a standard machine type (such as "n1-standard-1") or a custom machine
-    /// type (such as "custom-1-4096", where "1" indicates the number of vCPUs and
-    /// "4096" indicates the memory in MB). See
-    /// [Creating an instance with a custom machine
+    /// Required. The machine type of the virtual machine to create. Must be the
+    /// short name of a standard machine type (such as "n1-standard-1") or a custom
+    /// machine type (such as "custom-1-4096", where "1" indicates the number of
+    /// vCPUs and "4096" indicates the memory in MB). See [Creating an instance
+    /// with a custom machine
     /// type](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create)
     /// for more specifications on creating a custom machine type.
     /// </summary>
@@ -6363,7 +6365,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "delayed" field.</summary>
     public const int DelayedFieldNumber = 17;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.DelayedEvent][google.cloud.lifesciences.v2beta.DelayedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.DelayedEvent][google.cloud.lifesciences.v2beta.DelayedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6378,7 +6381,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "worker_assigned" field.</summary>
     public const int WorkerAssignedFieldNumber = 18;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.WorkerAssignedEvent][google.cloud.lifesciences.v2beta.WorkerAssignedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.WorkerAssignedEvent][google.cloud.lifesciences.v2beta.WorkerAssignedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6393,7 +6397,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "worker_released" field.</summary>
     public const int WorkerReleasedFieldNumber = 19;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.WorkerReleasedEvent][google.cloud.lifesciences.v2beta.WorkerReleasedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.WorkerReleasedEvent][google.cloud.lifesciences.v2beta.WorkerReleasedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6408,7 +6413,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "pull_started" field.</summary>
     public const int PullStartedFieldNumber = 20;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.PullStartedEvent][google.cloud.lifesciences.v2beta.PullStartedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.PullStartedEvent][google.cloud.lifesciences.v2beta.PullStartedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6423,7 +6429,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "pull_stopped" field.</summary>
     public const int PullStoppedFieldNumber = 21;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.PullStoppedEvent][google.cloud.lifesciences.v2beta.PullStoppedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.PullStoppedEvent][google.cloud.lifesciences.v2beta.PullStoppedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6438,7 +6445,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "container_started" field.</summary>
     public const int ContainerStartedFieldNumber = 22;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.ContainerStartedEvent][google.cloud.lifesciences.v2beta.ContainerStartedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.ContainerStartedEvent][google.cloud.lifesciences.v2beta.ContainerStartedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6453,7 +6461,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "container_stopped" field.</summary>
     public const int ContainerStoppedFieldNumber = 23;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.ContainerStoppedEvent][google.cloud.lifesciences.v2beta.ContainerStoppedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.ContainerStoppedEvent][google.cloud.lifesciences.v2beta.ContainerStoppedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6468,7 +6477,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "container_killed" field.</summary>
     public const int ContainerKilledFieldNumber = 24;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.ContainerKilledEvent][google.cloud.lifesciences.v2beta.ContainerKilledEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.ContainerKilledEvent][google.cloud.lifesciences.v2beta.ContainerKilledEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6483,7 +6493,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "unexpected_exit_status" field.</summary>
     public const int UnexpectedExitStatusFieldNumber = 25;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent][google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent][google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6498,7 +6509,8 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// <summary>Field number for the "failed" field.</summary>
     public const int FailedFieldNumber = 26;
     /// <summary>
-    /// See [google.cloud.lifesciences.v2beta.FailedEvent][google.cloud.lifesciences.v2beta.FailedEvent].
+    /// See
+    /// [google.cloud.lifesciences.v2beta.FailedEvent][google.cloud.lifesciences.v2beta.FailedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
