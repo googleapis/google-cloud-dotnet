@@ -16,8 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
-using gcl = Google.Cloud.Location;
 using gcnv = Google.Cloud.NetworkConnectivity.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -42,24 +40,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcnv::HubServiceClientBuilder builder = new gcnv::HubServiceClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>
-        /// Adds a singleton <see cref="gcnv::PolicyBasedRoutingServiceClient"/> to <paramref name="services"/>.
-        /// </summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddPolicyBasedRoutingServiceClient(this IServiceCollection services, sys::Action<gcnv::PolicyBasedRoutingServiceClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcnv::PolicyBasedRoutingServiceClientBuilder builder = new gcnv::PolicyBasedRoutingServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
