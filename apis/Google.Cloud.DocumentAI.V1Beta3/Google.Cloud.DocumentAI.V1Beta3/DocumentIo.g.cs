@@ -44,13 +44,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2Nz",
             "T3V0cHV0Q29uZmlnLlNoYXJkaW5nQ29uZmlnGkAKDlNoYXJkaW5nQ29uZmln",
             "EhcKD3BhZ2VzX3Blcl9zaGFyZBgBIAEoBRIVCg1wYWdlc19vdmVybGFwGAIg",
-            "ASgFQg0KC2Rlc3RpbmF0aW9uIi4KCU9jckNvbmZpZxIhChllbmFibGVfbmF0",
-            "aXZlX3BkZl9wYXJzaW5nGAMgASgIQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmRv",
-            "Y3VtZW50YWkudjFiZXRhM0IPRG9jdW1lbnRJb1Byb3RvUAFaSWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1lbnRh",
-            "aS92MWJldGEzO2RvY3VtZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRB",
-            "SS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRhM+oC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
+            "ASgFQg0KC2Rlc3RpbmF0aW9uIkwKCU9jckNvbmZpZxIhChllbmFibGVfbmF0",
+            "aXZlX3BkZl9wYXJzaW5nGAMgASgIEhwKFGFkdmFuY2VkX29jcl9vcHRpb25z",
+            "GAUgAygJQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
+            "M0IPRG9jdW1lbnRJb1Byb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzO2RvY3Vt",
+            "ZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29v",
+            "Z2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,7 +61,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask", "ShardingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig.Parser, new[]{ "PagesPerShard", "PagesOverlap" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "EnableNativePdfParsing" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "EnableNativePdfParsing", "AdvancedOcrOptions" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2034,6 +2035,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OcrConfig(OcrConfig other) : this() {
       enableNativePdfParsing_ = other.enableNativePdfParsing_;
+      advancedOcrOptions_ = other.advancedOcrOptions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2059,6 +2061,20 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "advanced_ocr_options" field.</summary>
+    public const int AdvancedOcrOptionsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_advancedOcrOptions_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> advancedOcrOptions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of advanced OCR options to further fine-tune OCR behavior.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AdvancedOcrOptions {
+      get { return advancedOcrOptions_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2075,6 +2091,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         return true;
       }
       if (EnableNativePdfParsing != other.EnableNativePdfParsing) return false;
+      if(!advancedOcrOptions_.Equals(other.advancedOcrOptions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2083,6 +2100,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (EnableNativePdfParsing != false) hash ^= EnableNativePdfParsing.GetHashCode();
+      hash ^= advancedOcrOptions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2105,6 +2123,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(24);
         output.WriteBool(EnableNativePdfParsing);
       }
+      advancedOcrOptions_.WriteTo(output, _repeated_advancedOcrOptions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2119,6 +2138,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(24);
         output.WriteBool(EnableNativePdfParsing);
       }
+      advancedOcrOptions_.WriteTo(ref output, _repeated_advancedOcrOptions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2132,6 +2152,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (EnableNativePdfParsing != false) {
         size += 1 + 1;
       }
+      size += advancedOcrOptions_.CalculateSize(_repeated_advancedOcrOptions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2147,6 +2168,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (other.EnableNativePdfParsing != false) {
         EnableNativePdfParsing = other.EnableNativePdfParsing;
       }
+      advancedOcrOptions_.Add(other.advancedOcrOptions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2166,6 +2188,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             EnableNativePdfParsing = input.ReadBool();
             break;
           }
+          case 42: {
+            advancedOcrOptions_.AddEntriesFrom(input, _repeated_advancedOcrOptions_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2183,6 +2209,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             break;
           case 24: {
             EnableNativePdfParsing = input.ReadBool();
+            break;
+          }
+          case 42: {
+            advancedOcrOptions_.AddEntriesFrom(ref input, _repeated_advancedOcrOptions_codec);
             break;
           }
         }
