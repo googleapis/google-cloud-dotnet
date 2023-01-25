@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.3.0, released 2023-01-25
+
+### New features
+
+- Add Cloud Trace v2 retry defaults for BatchWriteSpans ([commit be4bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/be4bdf14bdb2dbfeff2eb3a747c07c1b952a3ec5))
+
+### Documentation improvements
+
+- Remove html formatting (cleanup) ([commit 8b31e3d](https://github.com/googleapis/google-cloud-dotnet/commit/8b31e3d4fe7aaf88e25aa933a66586d22b088e03))
+
 ## Version 3.2.0, released 2023-01-19
 
 ### New features
