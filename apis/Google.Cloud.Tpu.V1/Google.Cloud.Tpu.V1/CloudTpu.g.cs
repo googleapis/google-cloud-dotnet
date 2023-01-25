@@ -825,8 +825,8 @@ namespace Google.Cloud.Tpu.V1 {
     public const int HealthDescriptionFieldNumber = 10;
     private string healthDescription_ = "";
     /// <summary>
-    /// Output only. If this field is populated, it contains a description of why the TPU Node
-    /// is unhealthy.
+    /// Output only. If this field is populated, it contains a description of why
+    /// the TPU Node is unhealthy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -895,10 +895,10 @@ namespace Google.Cloud.Tpu.V1 {
     public const int ServiceAccountFieldNumber = 15;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Output only. The service account used to run the tensor flow services within the node.
-    /// To share resources, including Google Cloud Storage data, with the
-    /// Tensorflow job running in the Node, this account must have permissions to
-    /// that data.
+    /// Output only. The service account used to run the tensor flow services
+    /// within the node. To share resources, including Google Cloud Storage data,
+    /// with the Tensorflow job running in the Node, this account must have
+    /// permissions to that data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3778,7 +3778,8 @@ namespace Google.Cloud.Tpu.V1 {
   }
 
   /// <summary>
-  /// Request for [GetTensorFlowVersion][google.cloud.tpu.v1.Tpu.GetTensorFlowVersion].
+  /// Request for
+  /// [GetTensorFlowVersion][google.cloud.tpu.v1.Tpu.GetTensorFlowVersion].
   /// </summary>
   public sealed partial class GetTensorFlowVersionRequest : pb::IMessage<GetTensorFlowVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3973,7 +3974,8 @@ namespace Google.Cloud.Tpu.V1 {
   }
 
   /// <summary>
-  /// Request for [ListTensorFlowVersions][google.cloud.tpu.v1.Tpu.ListTensorFlowVersions].
+  /// Request for
+  /// [ListTensorFlowVersions][google.cloud.tpu.v1.Tpu.ListTensorFlowVersions].
   /// </summary>
   public sealed partial class ListTensorFlowVersionsRequest : pb::IMessage<ListTensorFlowVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4328,7 +4330,8 @@ namespace Google.Cloud.Tpu.V1 {
   }
 
   /// <summary>
-  /// Response for [ListTensorFlowVersions][google.cloud.tpu.v1.Tpu.ListTensorFlowVersions].
+  /// Response for
+  /// [ListTensorFlowVersions][google.cloud.tpu.v1.Tpu.ListTensorFlowVersions].
   /// </summary>
   public sealed partial class ListTensorFlowVersionsResponse : pb::IMessage<ListTensorFlowVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5011,7 +5014,8 @@ namespace Google.Cloud.Tpu.V1 {
   }
 
   /// <summary>
-  /// Request for [ListAcceleratorTypes][google.cloud.tpu.v1.Tpu.ListAcceleratorTypes].
+  /// Request for
+  /// [ListAcceleratorTypes][google.cloud.tpu.v1.Tpu.ListAcceleratorTypes].
   /// </summary>
   public sealed partial class ListAcceleratorTypesRequest : pb::IMessage<ListAcceleratorTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5366,7 +5370,8 @@ namespace Google.Cloud.Tpu.V1 {
   }
 
   /// <summary>
-  /// Response for [ListAcceleratorTypes][google.cloud.tpu.v1.Tpu.ListAcceleratorTypes].
+  /// Response for
+  /// [ListAcceleratorTypes][google.cloud.tpu.v1.Tpu.ListAcceleratorTypes].
   /// </summary>
   public sealed partial class ListAcceleratorTypesResponse : pb::IMessage<ListAcceleratorTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
