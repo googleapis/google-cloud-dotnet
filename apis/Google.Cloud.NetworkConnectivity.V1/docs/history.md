@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.2.0, released 2023-01-25
+
+BREAKING CHANGE: This release removes some API aspects that were
+accidentally included earlier, but which were access-checked
+server-side. These RPCs would never have worked for customers, and
+the package has low usage, so we're performing a *minor* version
+bump on this occasion.
 ## Version 2.1.0, released 2022-11-02
 
 ### New features
