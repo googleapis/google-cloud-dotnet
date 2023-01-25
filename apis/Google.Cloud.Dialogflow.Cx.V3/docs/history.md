@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-01-25
+
+### New features
+
+- Added JSON_PACKAGE field to ExportAgentRequest ([commit a336a72](https://github.com/googleapis/google-cloud-dotnet/commit/a336a72f5259a3b33318dde2f929201122515371))
+
 ## Version 2.3.0, released 2023-01-16
 
 ### New features
