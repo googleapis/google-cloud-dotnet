@@ -100,7 +100,7 @@ elif [[ "$SMOKE_ARG" == "yes" ]]
 then
   declare -r testdirs=$(echo */smoketests.json)
 else
-  declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */*.SmokeTests */smoketests.json)
+  declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */smoketests.json)
 fi
 
 log_build_action "(Start) Integration tests"
@@ -134,12 +134,6 @@ do
     dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- \
       smoke-test $(dirname $testdir) \
       || echo "$testdir" >> $FAILURE_TEMP_FILE
-  elif [[ "$testdir" =~ SmokeTests ]]
-  then
-    # Smoke tests aren't unit tests - we just run them as console apps,
-    # passing in the project ID
-    echo "Running $testdir"
-    dotnet run --project $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
