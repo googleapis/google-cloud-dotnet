@@ -100,88 +100,88 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "LlNwb2tlQgPgQQISFwoKcmVxdWVzdF9pZBgDIAEoCUID4EEBIm0KEkRlbGV0",
             "ZVNwb2tlUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKG5ldHdvcmtj",
             "b25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5jb20vU3Bva2USFwoKcmVxdWVzdF9p",
-            "ZBgCIAEoCUID4EEBImsKEExpbmtlZFZwblR1bm5lbHMSMwoEdXJpcxgBIAMo",
-            "CUIl+kEiCiBjb21wdXRlLmdvb2dsZWFwaXMuY29tL1ZwblR1bm5lbBIiChpz",
-            "aXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgCIAEoCCKFAQodTGlua2VkSW50",
-            "ZXJjb25uZWN0QXR0YWNobWVudHMSQAoEdXJpcxgBIAMoCUIy+kEvCi1jb21w",
-            "dXRlLmdvb2dsZWFwaXMuY29tL0ludGVyY29ubmVjdEF0dGFjaG1lbnQSIgoa",
-            "c2l0ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgilQEKHkxpbmtlZFJv",
-            "dXRlckFwcGxpYW5jZUluc3RhbmNlcxJPCglpbnN0YW5jZXMYASADKAsyPC5n",
-            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5Sb3V0ZXJBcHBs",
-            "aWFuY2VJbnN0YW5jZRIiChpzaXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgC",
-            "IAEoCCJsChdSb3V0ZXJBcHBsaWFuY2VJbnN0YW5jZRI9Cg92aXJ0dWFsX21h",
-            "Y2hpbmUYASABKAlCJPpBIQofY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9JbnN0",
-            "YW5jZRISCgppcF9hZGRyZXNzGAMgASgJImMKEExvY2F0aW9uTWV0YWRhdGES",
-            "TwoRbG9jYXRpb25fZmVhdHVyZXMYASADKA4yNC5nb29nbGUuY2xvdWQubmV0",
-            "d29ya2Nvbm5lY3Rpdml0eS52MS5Mb2NhdGlvbkZlYXR1cmUqRgoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElW",
-            "RRACEgwKCERFTEVUSU5HEAMqZgoPTG9jYXRpb25GZWF0dXJlEiAKHExPQ0FU",
-            "SU9OX0ZFQVRVUkVfVU5TUEVDSUZJRUQQABIYChRTSVRFX1RPX0NMT1VEX1NQ",
-            "T0tFUxABEhcKE1NJVEVfVE9fU0lURV9TUE9LRVMQAjKdEAoKSHViU2Vydmlj",
-            "ZRK3AQoITGlzdEh1YnMSNC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rp",
-            "dml0eS52MS5MaXN0SHVic1JlcXVlc3QaNS5nb29nbGUuY2xvdWQubmV0d29y",
-            "a2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1Jlc3BvbnNlIj6C0+STAi8SLS92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbH0vaHVic9pB",
-            "BnBhcmVudBKkAQoGR2V0SHViEjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
-            "ZWN0aXZpdHkudjEuR2V0SHViUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5uZXR3",
-            "b3JrY29ubmVjdGl2aXR5LnYxLkh1YiI8gtPkkwIvEi0vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2h1YnMvKn3aQQRuYW1lEswBCglD",
-            "cmVhdGVIdWISNS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
-            "MS5DcmVhdGVIdWJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJpgtPkkwI0Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy9nbG9iYWx9L2h1YnM6A2h1YtpBEXBhcmVudCxodWIsaHViX2lkykEYCgNI",
-            "dWISEU9wZXJhdGlvbk1ldGFkYXRhEs4BCglVcGRhdGVIdWISNS5nb29nbGUu",
-            "Y2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVIdWJSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJrgtPkkwI4MjEvdjEv",
-            "e2h1Yi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zL2dsb2JhbC9odWJzLyp9",
-            "OgNodWLaQQ9odWIsdXBkYXRlX21hc2vKQRgKA0h1YhIRT3BlcmF0aW9uTWV0",
-            "YWRhdGESzAEKCURlbGV0ZUh1YhI1Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29u",
-            "bmVjdGl2aXR5LnYxLkRlbGV0ZUh1YlJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uImmC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy9nbG9iYWwvaHVicy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGESugEKCkxpc3RTcG9r",
-            "ZXMSNi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaXN0",
-            "U3Bva2VzUmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2",
-            "aXR5LnYxLkxpc3RTcG9rZXNSZXNwb25zZSI7gtPkkwIsEiovdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zcG9rZXPaQQZwYXJlbnQSpwEK",
-            "CEdldFNwb2tlEjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHku",
-            "djEuR2V0U3Bva2VSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
-            "ZWN0aXZpdHkudjEuU3Bva2UiOYLT5JMCLBIqL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZRLVAQoLQ3JlYXRlU3Bv",
-            "a2USNy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5DcmVh",
-            "dGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "Im6C0+STAjMiKi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L3Nwb2tlczoFc3Bva2XaQRVwYXJlbnQsc3Bva2Usc3Bva2VfaWTKQRoKBVNw",
-            "b2tlEhFPcGVyYXRpb25NZXRhZGF0YRLXAQoLVXBkYXRlU3Bva2USNy5nb29n",
-            "bGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5VcGRhdGVTcG9rZVJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInCC0+STAjky",
-            "MC92MS97c3Bva2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nwb2tl",
-            "cy8qfToFc3Bva2XaQRFzcG9rZSx1cGRhdGVfbWFza8pBGgoFU3Bva2USEU9w",
-            "ZXJhdGlvbk1ldGFkYXRhEs0BCgtEZWxldGVTcG9rZRI3Lmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkRlbGV0ZVNwb2tlUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZoLT5JMCLCoqL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEEbmFtZcpB",
-            "KgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YRpW",
-            "ykEibmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkQUK",
-            "J2NvbS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MUIISHVi",
-            "UHJvdG9QAVpWZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9uZXR3b3JrY29ubmVjdGl2aXR5L3YxO25ldHdvcmtjb25uZWN0",
-            "aXZpdHmqAiNHb29nbGUuQ2xvdWQuTmV0d29ya0Nvbm5lY3Rpdml0eS5WMcoC",
-            "I0dvb2dsZVxDbG91ZFxOZXR3b3JrQ29ubmVjdGl2aXR5XFYx6gImR29vZ2xl",
-            "OjpDbG91ZDo6TmV0d29ya0Nvbm5lY3Rpdml0eTo6VjHqQWAKIGNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vVnBuVHVubmVsEjxwcm9qZWN0cy97cHJvamVjdH0v",
-            "cmVnaW9ucy97cmVnaW9ufS92cG5UdW5uZWxzL3tyZXNvdXJjZV9pZH3qQXoK",
-            "LWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW50ZXJjb25uZWN0QXR0YWNobWVu",
-            "dBJJcHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vaW50ZXJj",
-            "b25uZWN0QXR0YWNobWVudHMve3Jlc291cmNlX2lkfepBVwofY29tcHV0ZS5n",
-            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRI0cHJvamVjdHMve3Byb2plY3R9L3pv",
-            "bmVzL3t6b25lfS9pbnN0YW5jZXMve2luc3RhbmNlfepBUgoeY29tcHV0ZS5n",
-            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEjBwcm9qZWN0cy97cHJvamVjdH0vZ2xv",
-            "YmFsL25ldHdvcmtzL3tyZXNvdXJjZV9pZH1iBnByb3RvMw=="));
+            "ZBgCIAEoCUID4EEBIqgBChBMaW5rZWRWcG5UdW5uZWxzEjMKBHVyaXMYASAD",
+            "KAlCJfpBIgogY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9WcG5UdW5uZWwSIgoa",
+            "c2l0ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgSOwoLdnBjX25ldHdv",
+            "cmsYAyABKAlCJuBBA/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3",
+            "b3JrIsIBCh1MaW5rZWRJbnRlcmNvbm5lY3RBdHRhY2htZW50cxJACgR1cmlz",
+            "GAEgAygJQjL6QS8KLWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW50ZXJjb25u",
+            "ZWN0QXR0YWNobWVudBIiChpzaXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgC",
+            "IAEoCBI7Cgt2cGNfbmV0d29yaxgDIAEoCUIm4EED+kEgCh5jb21wdXRlLmdv",
+            "b2dsZWFwaXMuY29tL05ldHdvcmsi0gEKHkxpbmtlZFJvdXRlckFwcGxpYW5j",
+            "ZUluc3RhbmNlcxJPCglpbnN0YW5jZXMYASADKAsyPC5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya2Nvbm5lY3Rpdml0eS52MS5Sb3V0ZXJBcHBsaWFuY2VJbnN0YW5j",
+            "ZRIiChpzaXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgCIAEoCBI7Cgt2cGNf",
+            "bmV0d29yaxgDIAEoCUIm4EED+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29t",
+            "L05ldHdvcmsibAoXUm91dGVyQXBwbGlhbmNlSW5zdGFuY2USPQoPdmlydHVh",
+            "bF9tYWNoaW5lGAEgASgJQiT6QSEKH2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20v",
+            "SW5zdGFuY2USEgoKaXBfYWRkcmVzcxgDIAEoCSJjChBMb2NhdGlvbk1ldGFk",
+            "YXRhEk8KEWxvY2F0aW9uX2ZlYXR1cmVzGAEgAygOMjQuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtjb25uZWN0aXZpdHkudjEuTG9jYXRpb25GZWF0dXJlKmYKD0xv",
+            "Y2F0aW9uRmVhdHVyZRIgChxMT0NBVElPTl9GRUFUVVJFX1VOU1BFQ0lGSUVE",
+            "EAASGAoUU0lURV9UT19DTE9VRF9TUE9LRVMQARIXChNTSVRFX1RPX1NJVEVf",
+            "U1BPS0VTEAIqVAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghD",
+            "UkVBVElORxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMSDAoIVVBEQVRJ",
+            "TkcQBjKdEAoKSHViU2VydmljZRK3AQoITGlzdEh1YnMSNC5nb29nbGUuY2xv",
+            "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1JlcXVlc3QaNS5n",
+            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1Jl",
+            "c3BvbnNlIj6C0+STAi8SLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zL2dsb2JhbH0vaHVic9pBBnBhcmVudBKkAQoGR2V0SHViEjIuZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjEuR2V0SHViUmVxdWVzdBoo",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkh1YiI8gtPk",
+            "kwIvEi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL2h1",
+            "YnMvKn3aQQRuYW1lEswBCglDcmVhdGVIdWISNS5nb29nbGUuY2xvdWQubmV0",
+            "d29ya2Nvbm5lY3Rpdml0eS52MS5DcmVhdGVIdWJSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJpgtPkkwI0Ii0vdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWx9L2h1YnM6A2h1YtpBEXBhcmVu",
+            "dCxodWIsaHViX2lkykEYCgNIdWISEU9wZXJhdGlvbk1ldGFkYXRhEs4BCglV",
+            "cGRhdGVIdWISNS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
+            "MS5VcGRhdGVIdWJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJrgtPkkwI4MjEvdjEve2h1Yi5uYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zL2dsb2JhbC9odWJzLyp9OgNodWLaQQ9odWIsdXBkYXRlX21hc2vKQRgK",
+            "A0h1YhIRT3BlcmF0aW9uTWV0YWRhdGESzAEKCURlbGV0ZUh1YhI1Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkRlbGV0ZUh1YlJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAi8qLS92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy9nbG9iYWwvaHVicy8qfdpB",
+            "BG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
+            "YWRhdGESugEKCkxpc3RTcG9rZXMSNi5nb29nbGUuY2xvdWQubmV0d29ya2Nv",
+            "bm5lY3Rpdml0eS52MS5MaXN0U3Bva2VzUmVxdWVzdBo3Lmdvb2dsZS5jbG91",
+            "ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkxpc3RTcG9rZXNSZXNwb25zZSI7",
+            "gtPkkwIsEiovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9z",
+            "cG9rZXPaQQZwYXJlbnQSpwEKCEdldFNwb2tlEjQuZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmtjb25uZWN0aXZpdHkudjEuR2V0U3Bva2VSZXF1ZXN0GiouZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjEuU3Bva2UiOYLT5JMCLBIq",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc3Bva2VzLyp92kEE",
+            "bmFtZRLVAQoLQ3JlYXRlU3Bva2USNy5nb29nbGUuY2xvdWQubmV0d29ya2Nv",
+            "bm5lY3Rpdml0eS52MS5DcmVhdGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIm6C0+STAjMiKi92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L3Nwb2tlczoFc3Bva2XaQRVwYXJlbnQsc3Bv",
+            "a2Usc3Bva2VfaWTKQRoKBVNwb2tlEhFPcGVyYXRpb25NZXRhZGF0YRLXAQoL",
+            "VXBkYXRlU3Bva2USNy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0",
+            "eS52MS5VcGRhdGVTcG9rZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uInCC0+STAjkyMC92MS97c3Bva2UubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3Nwb2tlcy8qfToFc3Bva2XaQRFzcG9rZSx1cGRhdGVf",
+            "bWFza8pBGgoFU3Bva2USEU9wZXJhdGlvbk1ldGFkYXRhEs0BCgtEZWxldGVT",
+            "cG9rZRI3Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkRl",
+            "bGV0ZVNwb2tlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iZoLT5JMCLCoqL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "c3Bva2VzLyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFP",
+            "cGVyYXRpb25NZXRhZGF0YRpWykEibmV0d29ya2Nvbm5lY3Rpdml0eS5nb29n",
+            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm1CvwMKJ2NvbS5nb29nbGUuY2xvdWQubmV0d29ya2Nv",
+            "bm5lY3Rpdml0eS52MUIISHViUHJvdG9QAVpWZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9uZXR3b3JrY29ubmVjdGl2aXR5",
+            "L3YxO25ldHdvcmtjb25uZWN0aXZpdHmqAiNHb29nbGUuQ2xvdWQuTmV0d29y",
+            "a0Nvbm5lY3Rpdml0eS5WMcoCI0dvb2dsZVxDbG91ZFxOZXR3b3JrQ29ubmVj",
+            "dGl2aXR5XFYx6gImR29vZ2xlOjpDbG91ZDo6TmV0d29ya0Nvbm5lY3Rpdml0",
+            "eTo6VjHqQWAKIGNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vVnBuVHVubmVsEjxw",
+            "cm9qZWN0cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9ufS92cG5UdW5uZWxz",
+            "L3tyZXNvdXJjZV9pZH3qQVcKH2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW5z",
+            "dGFuY2USNHByb2plY3RzL3twcm9qZWN0fS96b25lcy97em9uZX0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkConnectivity.V1.State), typeof(global::Google.Cloud.NetworkConnectivity.V1.LocationFeature), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkConnectivity.V1.LocationFeature), typeof(global::Google.Cloud.NetworkConnectivity.V1.State), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Hub), global::Google.Cloud.NetworkConnectivity.V1.Hub.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "UniqueId", "State", "RoutingVpcs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC), global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser, new[]{ "Uri", "RequiredForNewSiteToSiteDataTransferSpokes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Spoke), global::Google.Cloud.NetworkConnectivity.V1.Spoke.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Hub", "LinkedVpnTunnels", "LinkedInterconnectAttachments", "LinkedRouterApplianceInstances", "UniqueId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -197,9 +197,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest.Parser, new[]{ "Parent", "SpokeId", "Spoke", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest.Parser, new[]{ "UpdateMask", "Spoke", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest), global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels), global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments), global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances), global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances.Parser, new[]{ "Instances", "SiteToSiteDataTransfer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels), global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels.Parser, new[]{ "Uris", "SiteToSiteDataTransfer", "VpcNetwork" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments), global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments.Parser, new[]{ "Uris", "SiteToSiteDataTransfer", "VpcNetwork" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances), global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances.Parser, new[]{ "Instances", "SiteToSiteDataTransfer", "VpcNetwork" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance), global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance.Parser, new[]{ "VirtualMachine", "IpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LocationMetadata), global::Google.Cloud.NetworkConnectivity.V1.LocationMetadata.Parser, new[]{ "LocationFeatures" }, null, null, null, null)
           }));
@@ -208,6 +208,24 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
   }
   #region Enums
+  /// <summary>
+  /// Supported features for a location
+  /// </summary>
+  public enum LocationFeature {
+    /// <summary>
+    /// No publicly supported feature in this location
+    /// </summary>
+    [pbr::OriginalName("LOCATION_FEATURE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Site-to-cloud spokes are supported in this location
+    /// </summary>
+    [pbr::OriginalName("SITE_TO_CLOUD_SPOKES")] SiteToCloudSpokes = 1,
+    /// <summary>
+    /// Site-to-site spokes are supported in this location
+    /// </summary>
+    [pbr::OriginalName("SITE_TO_SITE_SPOKES")] SiteToSiteSpokes = 2,
+  }
+
   /// <summary>
   /// The State enum represents the lifecycle stage of a Network Connectivity
   /// Center resource.
@@ -229,35 +247,21 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// The resource's Delete operation is in progress
     /// </summary>
     [pbr::OriginalName("DELETING")] Deleting = 3,
-  }
-
-  /// <summary>
-  /// Supported features for a location
-  /// </summary>
-  public enum LocationFeature {
     /// <summary>
-    /// No publicly supported feature in this location
+    /// The resource's Update operation is in progress
     /// </summary>
-    [pbr::OriginalName("LOCATION_FEATURE_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// Site-to-cloud spokes are supported in this location
-    /// </summary>
-    [pbr::OriginalName("SITE_TO_CLOUD_SPOKES")] SiteToCloudSpokes = 1,
-    /// <summary>
-    /// Site-to-site spokes are supported in this location
-    /// </summary>
-    [pbr::OriginalName("SITE_TO_SITE_SPOKES")] SiteToSiteSpokes = 2,
+    [pbr::OriginalName("UPDATING")] Updating = 6,
   }
 
   #endregion
 
   #region Messages
   /// <summary>
-  /// A hub is a collection of spokes. A single hub can contain spokes from
-  /// multiple regions. However, if any of a hub's spokes use the data transfer
-  /// feature, the resources associated with those spokes must all reside in the
-  /// same VPC network. Spokes that do not use data transfer can be associated
-  /// with any VPC network in your project.
+  /// A Network Connectivity Center hub is a collection of spokes. A single hub
+  /// can contain spokes from multiple regions. However, if any of a hub's spokes
+  /// use the data transfer feature, the resources associated with those spokes
+  /// must all reside in the same VPC network. Spokes that do not use data
+  /// transfer can be associated with any VPC network in your project.
   /// </summary>
   public sealed partial class Hub : pb::IMessage<Hub>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -392,9 +396,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UniqueIdFieldNumber = 8;
     private string uniqueId_ = "";
     /// <summary>
-    /// Output only. The Google-generated UUID for the hub. This value is unique across all hub
-    /// resources. If a hub is deleted and another with the same name is created,
-    /// the new hub is assigned a different unique_id.
+    /// Output only. The Google-generated UUID for the hub. This value is unique
+    /// across all hub resources. If a hub is deleted and another with the same
+    /// name is created, the new hub is assigned a different unique_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -737,8 +741,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// RoutingVPC contains information about the VPC networks that are associated
-  /// with a hub's spokes.
+  /// RoutingVPC contains information about the VPC networks associated
+  /// with the spokes of a Network Connectivity Center hub.
   /// </summary>
   public sealed partial class RoutingVPC : pb::IMessage<RoutingVPC>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -804,8 +808,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequiredForNewSiteToSiteDataTransferSpokesFieldNumber = 2;
     private bool requiredForNewSiteToSiteDataTransferSpokes_;
     /// <summary>
-    /// Output only. If true, indicates that this VPC network is currently associated with
-    /// spokes that use the data transfer feature (spokes where the
+    /// Output only. If true, indicates that this VPC network is currently
+    /// associated with spokes that use the data transfer feature (spokes where the
     /// site_to_site_data_transfer field is set to true). If you create new spokes
     /// that use data transfer, they must be associated with this VPC network. At
     /// most, one VPC network will have this field set to true.
@@ -977,8 +981,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// A spoke represents a connection between your Google Cloud network resources
-  /// and a non-Google-Cloud network.
+  /// A Network Connectivity Center spoke represents a connection between your
+  /// Google Cloud network resources and a non-Google-Cloud network.
   ///
   /// When you create a spoke, you associate it with a hub. You must also identify
   /// a value for exactly one of the following fields:
@@ -1183,9 +1187,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UniqueIdFieldNumber = 11;
     private string uniqueId_ = "";
     /// <summary>
-    /// Output only. The Google-generated UUID for the spoke. This value is unique across all
-    /// spoke resources. If a spoke is deleted and another with the same name is
-    /// created, the new spoke is assigned a different unique_id.
+    /// Output only. The Google-generated UUID for the spoke. This value is unique
+    /// across all spoke resources. If a spoke is deleted and another with the same
+    /// name is created, the new spoke is assigned a different unique_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1620,7 +1624,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [HubService.ListHubs][google.cloud.networkconnectivity.v1.HubService.ListHubs] method.
+  /// Request for
+  /// [HubService.ListHubs][google.cloud.networkconnectivity.v1.HubService.ListHubs]
+  /// method.
   /// </summary>
   public sealed partial class ListHubsRequest : pb::IMessage<ListHubsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1975,7 +1981,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Response for [HubService.ListHubs][google.cloud.networkconnectivity.v1.HubService.ListHubs] method.
+  /// Response for
+  /// [HubService.ListHubs][google.cloud.networkconnectivity.v1.HubService.ListHubs]
+  /// method.
   /// </summary>
   public sealed partial class ListHubsResponse : pb::IMessage<ListHubsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2229,7 +2237,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [HubService.GetHub][google.cloud.networkconnectivity.v1.HubService.GetHub] method.
+  /// Request for
+  /// [HubService.GetHub][google.cloud.networkconnectivity.v1.HubService.GetHub]
+  /// method.
   /// </summary>
   public sealed partial class GetHubRequest : pb::IMessage<GetHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2424,7 +2434,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [HubService.CreateHub][google.cloud.networkconnectivity.v1.HubService.CreateHub] method.
+  /// Request for
+  /// [HubService.CreateHub][google.cloud.networkconnectivity.v1.HubService.CreateHub]
+  /// method.
   /// </summary>
   public sealed partial class CreateHubRequest : pb::IMessage<CreateHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2522,11 +2534,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -2761,7 +2773,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [HubService.UpdateHub][google.cloud.networkconnectivity.v1.HubService.UpdateHub] method.
+  /// Request for
+  /// [HubService.UpdateHub][google.cloud.networkconnectivity.v1.HubService.UpdateHub]
+  /// method.
   /// </summary>
   public sealed partial class UpdateHubRequest : pb::IMessage<UpdateHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2813,11 +2827,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. In the case of an update to an existing hub, field mask is used to specify
-    /// the fields to be overwritten. The fields specified in the update_mask are
-    /// relative to the resource, not the full request. A field is overwritten if
-    /// it is in the mask. If the user does not provide a mask, then all fields are
-    /// overwritten.
+    /// Optional. In the case of an update to an existing hub, field mask is used
+    /// to specify the fields to be overwritten. The fields specified in the
+    /// update_mask are relative to the resource, not the full request. A field is
+    /// overwritten if it is in the mask. If the user does not provide a mask, then
+    /// all fields are overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2847,11 +2861,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -3071,7 +3085,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.DeleteHub][google.cloud.networkconnectivity.v1.HubService.DeleteHub].
+  /// The request for
+  /// [HubService.DeleteHub][google.cloud.networkconnectivity.v1.HubService.DeleteHub].
   /// </summary>
   public sealed partial class DeleteHubRequest : pb::IMessage<DeleteHubRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3137,11 +3152,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -3319,7 +3334,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.ListSpokes][google.cloud.networkconnectivity.v1.HubService.ListSpokes].
+  /// The request for
+  /// [HubService.ListSpokes][google.cloud.networkconnectivity.v1.HubService.ListSpokes].
   /// </summary>
   public sealed partial class ListSpokesRequest : pb::IMessage<ListSpokesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3674,7 +3690,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The response for [HubService.ListSpokes][google.cloud.networkconnectivity.v1.HubService.ListSpokes].
+  /// The response for
+  /// [HubService.ListSpokes][google.cloud.networkconnectivity.v1.HubService.ListSpokes].
   /// </summary>
   public sealed partial class ListSpokesResponse : pb::IMessage<ListSpokesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3928,7 +3945,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.GetSpoke][google.cloud.networkconnectivity.v1.HubService.GetSpoke].
+  /// The request for
+  /// [HubService.GetSpoke][google.cloud.networkconnectivity.v1.HubService.GetSpoke].
   /// </summary>
   public sealed partial class GetSpokeRequest : pb::IMessage<GetSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4123,7 +4141,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.CreateSpoke][google.cloud.networkconnectivity.v1.HubService.CreateSpoke].
+  /// The request for
+  /// [HubService.CreateSpoke][google.cloud.networkconnectivity.v1.HubService.CreateSpoke].
   /// </summary>
   public sealed partial class CreateSpokeRequest : pb::IMessage<CreateSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4221,11 +4240,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -4460,7 +4479,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [HubService.UpdateSpoke][google.cloud.networkconnectivity.v1.HubService.UpdateSpoke] method.
+  /// Request for
+  /// [HubService.UpdateSpoke][google.cloud.networkconnectivity.v1.HubService.UpdateSpoke]
+  /// method.
   /// </summary>
   public sealed partial class UpdateSpokeRequest : pb::IMessage<UpdateSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4512,8 +4533,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. In the case of an update to an existing spoke, field mask is used to
-    /// specify the fields to be overwritten. The fields specified in the
+    /// Optional. In the case of an update to an existing spoke, field mask is used
+    /// to specify the fields to be overwritten. The fields specified in the
     /// update_mask are relative to the resource, not the full request. A field is
     /// overwritten if it is in the mask. If the user does not provide a mask, then
     /// all fields are overwritten.
@@ -4546,11 +4567,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -4770,7 +4791,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// The request for [HubService.DeleteSpoke][google.cloud.networkconnectivity.v1.HubService.DeleteSpoke].
+  /// The request for
+  /// [HubService.DeleteSpoke][google.cloud.networkconnectivity.v1.HubService.DeleteSpoke].
   /// </summary>
   public sealed partial class DeleteSpokeRequest : pb::IMessage<DeleteSpokeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4836,11 +4858,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A unique request ID (optional). If you specify this ID, you can use it
-    /// in cases when you need to retry your request. When you need to retry, this
-    /// ID lets the server know that it can ignore the request if it has already
-    /// been completed. The server guarantees that for at least 60 minutes after
-    /// the first request.
+    /// Optional. A unique request ID (optional). If you specify this ID, you can
+    /// use it in cases when you need to retry your request. When you need to
+    /// retry, this ID lets the server know that it can ignore the request if it
+    /// has already been completed. The server guarantees that for at least 60
+    /// minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
@@ -5059,6 +5081,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public LinkedVpnTunnels(LinkedVpnTunnels other) : this() {
       uris_ = other.uris_.Clone();
       siteToSiteDataTransfer_ = other.siteToSiteDataTransfer_;
+      vpcNetwork_ = other.vpcNetwork_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5099,6 +5122,21 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
     }
 
+    /// <summary>Field number for the "vpc_network" field.</summary>
+    public const int VpcNetworkFieldNumber = 3;
+    private string vpcNetwork_ = "";
+    /// <summary>
+    /// Output only. The VPC network where these VPN tunnels are located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcNetwork {
+      get { return vpcNetwork_; }
+      set {
+        vpcNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5116,6 +5154,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
       if(!uris_.Equals(other.uris_)) return false;
       if (SiteToSiteDataTransfer != other.SiteToSiteDataTransfer) return false;
+      if (VpcNetwork != other.VpcNetwork) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5125,6 +5164,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       int hash = 1;
       hash ^= uris_.GetHashCode();
       if (SiteToSiteDataTransfer != false) hash ^= SiteToSiteDataTransfer.GetHashCode();
+      if (VpcNetwork.Length != 0) hash ^= VpcNetwork.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5148,6 +5188,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5163,6 +5207,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5176,6 +5224,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       size += uris_.CalculateSize(_repeated_uris_codec);
       if (SiteToSiteDataTransfer != false) {
         size += 1 + 1;
+      }
+      if (VpcNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcNetwork);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5192,6 +5243,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       uris_.Add(other.uris_);
       if (other.SiteToSiteDataTransfer != false) {
         SiteToSiteDataTransfer = other.SiteToSiteDataTransfer;
+      }
+      if (other.VpcNetwork.Length != 0) {
+        VpcNetwork = other.VpcNetwork;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5216,6 +5270,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             SiteToSiteDataTransfer = input.ReadBool();
             break;
           }
+          case 26: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5237,6 +5295,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           }
           case 16: {
             SiteToSiteDataTransfer = input.ReadBool();
+            break;
+          }
+          case 26: {
+            VpcNetwork = input.ReadString();
             break;
           }
         }
@@ -5288,6 +5350,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public LinkedInterconnectAttachments(LinkedInterconnectAttachments other) : this() {
       uris_ = other.uris_.Clone();
       siteToSiteDataTransfer_ = other.siteToSiteDataTransfer_;
+      vpcNetwork_ = other.vpcNetwork_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5328,6 +5391,21 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
     }
 
+    /// <summary>Field number for the "vpc_network" field.</summary>
+    public const int VpcNetworkFieldNumber = 3;
+    private string vpcNetwork_ = "";
+    /// <summary>
+    /// Output only. The VPC network where these VLAN attachments are located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcNetwork {
+      get { return vpcNetwork_; }
+      set {
+        vpcNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5345,6 +5423,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
       if(!uris_.Equals(other.uris_)) return false;
       if (SiteToSiteDataTransfer != other.SiteToSiteDataTransfer) return false;
+      if (VpcNetwork != other.VpcNetwork) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5354,6 +5433,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       int hash = 1;
       hash ^= uris_.GetHashCode();
       if (SiteToSiteDataTransfer != false) hash ^= SiteToSiteDataTransfer.GetHashCode();
+      if (VpcNetwork.Length != 0) hash ^= VpcNetwork.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5377,6 +5457,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5392,6 +5476,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5405,6 +5493,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       size += uris_.CalculateSize(_repeated_uris_codec);
       if (SiteToSiteDataTransfer != false) {
         size += 1 + 1;
+      }
+      if (VpcNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcNetwork);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5421,6 +5512,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       uris_.Add(other.uris_);
       if (other.SiteToSiteDataTransfer != false) {
         SiteToSiteDataTransfer = other.SiteToSiteDataTransfer;
+      }
+      if (other.VpcNetwork.Length != 0) {
+        VpcNetwork = other.VpcNetwork;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5445,6 +5539,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             SiteToSiteDataTransfer = input.ReadBool();
             break;
           }
+          case 26: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5466,6 +5564,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           }
           case 16: {
             SiteToSiteDataTransfer = input.ReadBool();
+            break;
+          }
+          case 26: {
+            VpcNetwork = input.ReadString();
             break;
           }
         }
@@ -5517,6 +5619,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public LinkedRouterApplianceInstances(LinkedRouterApplianceInstances other) : this() {
       instances_ = other.instances_.Clone();
       siteToSiteDataTransfer_ = other.siteToSiteDataTransfer_;
+      vpcNetwork_ = other.vpcNetwork_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5557,6 +5660,22 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
     }
 
+    /// <summary>Field number for the "vpc_network" field.</summary>
+    public const int VpcNetworkFieldNumber = 3;
+    private string vpcNetwork_ = "";
+    /// <summary>
+    /// Output only. The VPC network where these router appliance instances are
+    /// located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcNetwork {
+      get { return vpcNetwork_; }
+      set {
+        vpcNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5574,6 +5693,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
       if(!instances_.Equals(other.instances_)) return false;
       if (SiteToSiteDataTransfer != other.SiteToSiteDataTransfer) return false;
+      if (VpcNetwork != other.VpcNetwork) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5583,6 +5703,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       int hash = 1;
       hash ^= instances_.GetHashCode();
       if (SiteToSiteDataTransfer != false) hash ^= SiteToSiteDataTransfer.GetHashCode();
+      if (VpcNetwork.Length != 0) hash ^= VpcNetwork.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5606,6 +5727,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5621,6 +5746,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(16);
         output.WriteBool(SiteToSiteDataTransfer);
       }
+      if (VpcNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VpcNetwork);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5634,6 +5763,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       size += instances_.CalculateSize(_repeated_instances_codec);
       if (SiteToSiteDataTransfer != false) {
         size += 1 + 1;
+      }
+      if (VpcNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcNetwork);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5650,6 +5782,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       instances_.Add(other.instances_);
       if (other.SiteToSiteDataTransfer != false) {
         SiteToSiteDataTransfer = other.SiteToSiteDataTransfer;
+      }
+      if (other.VpcNetwork.Length != 0) {
+        VpcNetwork = other.VpcNetwork;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5674,6 +5809,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             SiteToSiteDataTransfer = input.ReadBool();
             break;
           }
+          case 26: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5695,6 +5834,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           }
           case 16: {
             SiteToSiteDataTransfer = input.ReadBool();
+            break;
+          }
+          case 26: {
+            VpcNetwork = input.ReadString();
             break;
           }
         }
