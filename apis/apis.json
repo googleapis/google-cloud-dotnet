@@ -4810,7 +4810,7 @@
     },
     {
       "id": "Google.Maps.MapsPlatformDatasets.V1Alpha",
-      "version": "1.0.0-alpha00",
+      "version": "1.0.0-alpha01",
       "type": "grpc",
       "productName": "Maps Platform Datasets",
       "productUrl": "https://developers.google.com/maps/documentation",
