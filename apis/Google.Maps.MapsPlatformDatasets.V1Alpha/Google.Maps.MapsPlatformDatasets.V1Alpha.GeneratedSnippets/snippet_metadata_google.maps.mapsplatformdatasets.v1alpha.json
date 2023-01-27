@@ -1,0 +1,1522 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.MapsPlatformDatasets.V1Alpha",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.mapsplatformdatasets.v1alpha",
+        "version": "v1alpha"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_sync",
+      "title": "CreateDatasetRequestObject",
+      "description": "Snippet for CreateDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_async",
+      "title": "CreateDatasetRequestObjectAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_sync_flattened",
+      "title": "CreateDataset",
+      "description": "Snippet for CreateDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_async_flattened",
+      "title": "CreateDatasetAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_sync_flattened_resourceNames",
+      "title": "CreateDatasetResourceNames",
+      "description": "Snippet for CreateDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_CreateDataset_async_flattened_resourceNames",
+      "title": "CreateDatasetResourceNamesAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.CreateDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.CreateDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_UpdateDatasetMetadata_sync",
+      "title": "UpdateDatasetMetadataRequestObject",
+      "description": "Snippet for UpdateDatasetMetadata",
+      "file": "MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetMetadata",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadata",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetMetadata",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.UpdateDatasetMetadata",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_UpdateDatasetMetadata_async",
+      "title": "UpdateDatasetMetadataRequestObjectAsync",
+      "description": "Snippet for UpdateDatasetMetadataAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetMetadataAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetMetadata",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.UpdateDatasetMetadata",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_UpdateDatasetMetadata_sync_flattened",
+      "title": "UpdateDatasetMetadata",
+      "description": "Snippet for UpdateDatasetMetadata",
+      "file": "MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetMetadata",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadata",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetMetadata",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.UpdateDatasetMetadata",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_UpdateDatasetMetadata_async_flattened",
+      "title": "UpdateDatasetMetadataAsync",
+      "description": "Snippet for UpdateDatasetMetadataAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetMetadataAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetMetadata",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.UpdateDatasetMetadata",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_sync",
+      "title": "GetDatasetRequestObject",
+      "description": "Snippet for GetDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_async",
+      "title": "GetDatasetRequestObjectAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_sync_flattened",
+      "title": "GetDataset",
+      "description": "Snippet for GetDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_async_flattened",
+      "title": "GetDatasetAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_sync_flattened_resourceNames",
+      "title": "GetDatasetResourceNames",
+      "description": "Snippet for GetDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_async_flattened_resourceNames",
+      "title": "GetDatasetResourceNamesAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.GetDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.GetDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_sync",
+      "title": "ListDatasetVersionsRequestObject",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_async",
+      "title": "ListDatasetVersionsRequestObjectAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_sync_flattened",
+      "title": "ListDatasetVersions",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_async_flattened",
+      "title": "ListDatasetVersionsAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_sync_flattened_resourceNames",
+      "title": "ListDatasetVersionsResourceNames",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasetVersions_async_flattened_resourceNames",
+      "title": "ListDatasetVersionsResourceNamesAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasetVersions",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_sync",
+      "title": "ListDatasetsRequestObject",
+      "description": "Snippet for ListDatasets",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_async",
+      "title": "ListDatasetsRequestObjectAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_sync_flattened",
+      "title": "ListDatasets",
+      "description": "Snippet for ListDatasets",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_async_flattened",
+      "title": "ListDatasetsAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_sync_flattened_resourceNames",
+      "title": "ListDatasetsResourceNames",
+      "description": "Snippet for ListDatasets",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_ListDatasets_async_flattened_resourceNames",
+      "title": "ListDatasetsResourceNamesAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.ListDatasetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.ListDatasets",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_sync",
+      "title": "DeleteDatasetRequestObject",
+      "description": "Snippet for DeleteDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_async",
+      "title": "DeleteDatasetRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_sync_flattened",
+      "title": "DeleteDataset",
+      "description": "Snippet for DeleteDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_async_flattened",
+      "title": "DeleteDatasetAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_sync_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNames",
+      "description": "Snippet for DeleteDataset",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDataset_async_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDataset",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_sync",
+      "title": "DeleteDatasetVersionRequestObject",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_async",
+      "title": "DeleteDatasetVersionRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_sync_flattened",
+      "title": "DeleteDatasetVersion",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_async_flattened",
+      "title": "DeleteDatasetVersionAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_sync_flattened_resourceNames",
+      "title": "DeleteDatasetVersionResourceNames",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_DeleteDatasetVersion_async_flattened_resourceNames",
+      "title": "DeleteDatasetVersionResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MapsPlatformDatasetsV1AlphaClient",
+          "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha.DeleteDatasetVersion",
+          "service": {
+            "shortName": "MapsPlatformDatasetsV1Alpha",
+            "fullName": "google.maps.mapsplatformdatasets.v1alpha.MapsPlatformDatasetsV1Alpha"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

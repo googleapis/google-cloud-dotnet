@@ -1,0 +1,7 @@
+{
+  "distribution_name": "Google.Maps.MapsPlatformDatasets.V1Alpha",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.MapsPlatformDatasets.V1Alpha/latest",
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "mapsplatformdatasets"
+}
