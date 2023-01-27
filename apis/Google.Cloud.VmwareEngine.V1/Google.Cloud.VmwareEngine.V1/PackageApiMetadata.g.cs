@@ -82,6 +82,7 @@ namespace Google.Cloud.VmwareEngine.V1
             yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return VmwareengineReflection.Descriptor;
+            yield return VmwareengineResourcesReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
