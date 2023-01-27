@@ -1203,7 +1203,8 @@ namespace Google.Cloud.Container.V1 {
   /// </summary>
   public enum NodePoolUpdateStrategy {
     /// <summary>
-    /// Default value.
+    /// Default value if unset. GKE internally defaults the update strategy to
+    /// SURGE for unspecified strategies.
     /// </summary>
     [pbr::OriginalName("NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -2312,7 +2313,9 @@ namespace Google.Cloud.Container.V1 {
     private string imageType_ = "";
     /// <summary>
     /// The image type to use for this node. Note that for a given image type,
-    /// the latest version of it will be used.
+    /// the latest version of it will be used. Please see
+    /// https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for
+    /// available image types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -21546,7 +21549,9 @@ namespace Google.Cloud.Container.V1 {
     public const int ImageTypeFieldNumber = 6;
     private string imageType_ = "";
     /// <summary>
-    /// Required. The desired image type for the node pool.
+    /// Required. The desired image type for the node pool. Please see
+    /// https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for
+    /// available image types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -36934,7 +36939,9 @@ namespace Google.Cloud.Container.V1 {
     public const int ImageTypeFieldNumber = 10;
     private string imageType_ = "";
     /// <summary>
-    /// The image type to use for NAP created node.
+    /// The image type to use for NAP created node. Please see
+    /// https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for
+    /// available image types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
