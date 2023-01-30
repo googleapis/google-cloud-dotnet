@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2023-01-30
+
+No API surface changes; just dependency updates. However, the
+dependency update to GAX 4.3.1 fixes [issue
+9396](https://github.com/googleapis/google-cloud-dotnet/issues/9396).
+
 ## Version 2.0.0-beta03, released 2023-01-17
 
 ### New features
