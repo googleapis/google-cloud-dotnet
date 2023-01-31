@@ -23,7 +23,6 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -97,13 +96,7 @@ public class RetryConformanceTest
             try
             {
                 RunRetryTest(response, context, method.Group, specifyPreconditions);
-
-                // storage.buckets.setIamPolicy has no preconditions implemented in .NET and hence will retry successfully
-                // Created an issue https://github.com/googleapis/google-cloud-dotnet/issues/9362 for this.
-                if (!method.Name.Contains("buckets.setIamPolicy"))
-                {
-                    Assert.False(response.Completed);
-                }
+                Assert.False(response.Completed);
             }
             catch (GoogleApiException ex) when (InstructionContainsErrorCode(ex.HttpStatusCode))
             {
@@ -212,6 +205,7 @@ public class RetryConformanceTest
                 Role = "roles/storage.objectViewer"
             };
             policy.Bindings.Add(AllUsersViewer);
+            policy.ETag = specifyPreconditions ? policy.ETag ?? "MQ==" : null;
             return policy;
         }
     }
