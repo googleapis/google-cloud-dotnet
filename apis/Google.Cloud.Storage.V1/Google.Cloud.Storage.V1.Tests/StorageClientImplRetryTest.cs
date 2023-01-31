@@ -107,6 +107,8 @@ namespace Google.Cloud.Storage.V1.Tests
 
         #region IAM test cases
 
+        private static readonly Policy s_policy = new Policy { ETag = "MQ==" };
+
         [Fact]
         public void GetBucketIamPolicy_NoRetry() => NoRetryHelper(service => service.Buckets.GetIamPolicy("bucket"), client => client.GetBucketIamPolicy("bucket"));
 
@@ -117,19 +119,25 @@ namespace Google.Cloud.Storage.V1.Tests
         public void GetBucketIamPolicy_RetryThenFail() => RetryThenFailHelper(service => service.Buckets.GetIamPolicy("bucket"), client => client.GetBucketIamPolicy("bucket"));
 
         [Fact]
-        public void SetBucketIamPolicy_NoRetry() => NoRetryHelper(
-            service => service.Buckets.SetIamPolicy(new Policy(), "bucket"), 
-            client => client.SetBucketIamPolicy("bucket", new Policy()));
+        public void SetBucketIamPolicy_NoRetry_NonRetriableCode() => NoRetryHelper(
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), 
+            client => client.SetBucketIamPolicy("bucket", s_policy));
+
+        [Fact]
+        public void SetBucketIamPolicy_NoRetry_RetriableCode() => NoRetryHelper(
+            service => service.Buckets.SetIamPolicy(new Policy(), "bucket"),
+            client => client.SetBucketIamPolicy("bucket", new Policy()),
+            HttpStatusCode.BadGateway);
 
         [Fact]
         public void SetBucketIamPolicy_RetryOnce() => RetryOnceHelper(
-            service => service.Buckets.SetIamPolicy(new Policy(), "bucket"), 
-            client => client.SetBucketIamPolicy("bucket", new Policy()));
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), 
+            client => client.SetBucketIamPolicy("bucket", s_policy));
 
         [Fact]
         public void SetBucketIamPolicy_RetryThenFail() => RetryThenFailHelper(
-            service => service.Buckets.SetIamPolicy(new Policy(), "bucket"), client => 
-            client.SetBucketIamPolicy("bucket", new Policy()));
+            service => service.Buckets.SetIamPolicy(s_policy, "bucket"), client => 
+            client.SetBucketIamPolicy("bucket", s_policy));
 
         [Fact]
         public void TestBucketIamPolicy_NoRetry() => NoRetryHelper(
@@ -382,7 +390,7 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         /// <summary>
-        /// Helper method to check if the operation is retrying in case of retirable error codes with a return response 
+        /// Helper method to check if the operation is retrying in case of retriable error codes with a return response 
         /// </summary>
         private static void RetryOnce<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
@@ -398,7 +406,7 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         /// <summary>
-        /// Helper method to check if the operation is retrying in case of retirable error codes
+        /// Helper method to check if the operation is retrying in case of retriable error codes
         /// </summary>
         private static void RetryOnceHelper<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction,
            HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
