@@ -189,15 +189,15 @@ namespace Google.Cloud.Dataplex.V1 {
   /// </summary>
   public enum DataScanType {
     /// <summary>
-    /// The DataScan Type is unspecified.
+    /// The DataScan type is unspecified.
     /// </summary>
     [pbr::OriginalName("DATA_SCAN_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Data Quality Scan.
+    /// Data Quality scan.
     /// </summary>
     [pbr::OriginalName("DATA_QUALITY")] DataQuality = 1,
     /// <summary>
-    /// Data Profile Scan.
+    /// Data Profile scan.
     /// </summary>
     [pbr::OriginalName("DATA_PROFILE")] DataProfile = 2,
   }
@@ -259,8 +259,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the parent location:
-    /// projects/{project}/locations/{location_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -292,6 +292,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string dataScanId_ = "";
     /// <summary>
     /// Required. DataScan identifier.
+    ///
     /// * Must contain only lowercase letters, numbers and hyphens.
     /// * Must start with a letter.
     /// * Must end with a number or a letter.
@@ -549,7 +550,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DataScanFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.DataScan dataScan_;
     /// <summary>
-    /// Required. Update description.
+    /// Required. DataScan resource to be updated.
+    ///
     /// Only fields specified in `update_mask` are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -803,8 +805,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the dataScan:
-    /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1002,8 +1004,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the dataScan:
-    /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1019,8 +1021,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Dataplex.V1.GetDataScanRequest.Types.DataScanView view_ = global::Google.Cloud.Dataplex.V1.GetDataScanRequest.Types.DataScanView.Unspecified;
     /// <summary>
-    /// Optional. Used to select the subset of DataScan information to return.
-    /// Defaults to `BASIC`.
+    /// Optional. Select the DataScan view to return. Defaults to `BASIC`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1192,7 +1193,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// DataScan views for getting a partial dataScan.
+      /// DataScan view options.
       /// </summary>
       public enum DataScanView {
         /// <summary>
@@ -1200,7 +1201,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("DATA_SCAN_VIEW_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Basic view that does not include spec and result.
+        /// Basic view that does not include *spec* and *result*.
         /// </summary>
         [pbr::OriginalName("BASIC")] Basic = 1,
         /// <summary>
@@ -1269,8 +1270,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. projects/{project}/locations/{location_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// Required. The resource name of the parent location:
+    /// `projects/{project}/locations/{location_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1336,7 +1338,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Order by fields (name or create_time) for the result.
+    /// Optional. Order by fields (`name` or `create_time`) for the result.
     /// If not specified, the ordering is undefined.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1632,7 +1634,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.DataScan.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataScan> dataScans_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataScan>();
     /// <summary>
-    /// DataScans (metadata only) under the given parent location.
+    /// DataScans (`BASIC` view only) under the given parent location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1883,10 +1885,11 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the DataScan:
-    /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
-    /// Only on-demand DataScans are allowed.
+    ///
+    /// Only **OnDemand** data scans are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2081,7 +2084,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int JobFieldNumber = 1;
     private global::Google.Cloud.Dataplex.V1.DataScanJob job_;
     /// <summary>
-    /// DataScanJob created by RunDataScan API.
+    /// DataScanJob created by RunDataScan request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2287,8 +2290,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the DataScanJob:
-    /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2304,8 +2307,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest.Types.DataScanJobView view_ = global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest.Types.DataScanJobView.Unspecified;
     /// <summary>
-    /// Optional. Used to select the subset of DataScan information to return.
-    /// Defaults to `BASIC`.
+    /// Optional. Select the DataScanJob view to return. Defaults to `BASIC`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2477,7 +2479,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// DataScanJob views for getting a partial dataScanJob.
+      /// DataScanJob view options.
       /// </summary>
       public enum DataScanJobView {
         /// <summary>
@@ -2485,7 +2487,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("DATA_SCAN_JOB_VIEW_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Basic view that does not include spec and result.
+        /// Basic view that does not include *spec* and *result*.
         /// </summary>
         [pbr::OriginalName("BASIC")] Basic = 1,
         /// <summary>
@@ -2553,8 +2555,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the parent environment:
-    /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2837,7 +2839,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataplex.V1.DataScanJob.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataScanJob> dataScanJobs_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataScanJob>();
     /// <summary>
-    /// DataScanJobs (metadata only) under a given dataScan.
+    /// DataScanJobs (`BASIC` view only) under a given dataScan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3098,8 +3100,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The relative resource name of the scan, of the form:
-    /// projects/{project}/locations/{location_id}/dataScans/{datascan_id}.
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{datascan_id}`,
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3132,6 +3134,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string description_ = "";
     /// <summary>
     /// Optional. Description of the scan.
+    ///
     /// * Must be between 1-1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3148,6 +3151,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Optional. User friendly display name.
+    ///
     /// * Must be between 1-256 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3238,7 +3242,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec executionSpec_;
     /// <summary>
     /// Optional. DataScan execution settings.
-    /// If not specified, the fields under it will use their default values.
+    ///
+    /// If not specified, the fields in it will use their default values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4032,8 +4037,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private global::Google.Cloud.Dataplex.V1.Trigger trigger_;
         /// <summary>
         /// Optional. Spec related to how often and when a scan should be triggered.
-        /// If not specified, the default is OnDemand, which means the scan will not
-        /// run until the user calls RunDataScan API.
+        ///
+        /// If not specified, the default is `OnDemand`, which means the scan will
+        /// not run until the user calls `RunDataScan` API.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4047,8 +4053,10 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "field" field.</summary>
         public const int FieldFieldNumber = 100;
         /// <summary>
-        /// Immutable. The unnested field (Date or Timestamp) that contains values
-        /// that monotonically increase over time.
+        /// Immutable. The unnested field (of type *Date* or *Timestamp*) that
+        /// contains values which monotonically increase over time.
+        ///
+        /// If not specified, a data scan will run for all data in the table.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4510,7 +4518,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// A DataScanJob represents an instance of a data scan.
+  /// A DataScanJob represents an instance of DataScan execution.
   /// </summary>
   public sealed partial class DataScanJob : pb::IMessage<DataScanJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4585,8 +4593,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The relative resource name of the DataScanJob, of the form:
-    /// projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}.
-    /// where `{project}` refers to a project_id or project_number and
+    /// `projects/{project}/locations/{location_id}/dataScans/{datascan_id}/jobs/{job_id}`,
+    /// where `project` refers to a *project_id* or *project_number* and
     /// `location_id` refers to a GCP region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
