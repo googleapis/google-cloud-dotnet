@@ -23,6 +23,11 @@
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataplex.V1 {
+  /// <summary>
+  /// DataScanService manages DataScan resources which can be configured to run
+  /// various types of data scanning workload and generate enriched metadata (e.g.
+  /// Data Profile, Data Quality) for the data source.
+  /// </summary>
   public static partial class DataScanService
   {
     static readonly string __ServiceName = "google.cloud.dataplex.v1.DataScanService";
@@ -164,7 +169,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public abstract partial class DataScanServiceBase
     {
       /// <summary>
-      /// Creates a dataScan resource.
+      /// Creates a DataScan resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -176,7 +181,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Update the dataScan resource.
+      /// Updates a DataScan resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -188,7 +193,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Delete the dataScan resource.
+      /// Deletes a DataScan resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -200,7 +205,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Get dataScan resource.
+      /// Gets a DataScan resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -212,7 +217,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Lists dataScans.
+      /// Lists DataScans.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -224,7 +229,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Run an on demand execution of a DataScan.
+      /// Runs an on-demand execution of a DataScan
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -236,7 +241,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Get DataScanJob resource.
+      /// Gets a DataScanJob resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -248,7 +253,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Lists DataScanJobs under the given dataScan.
+      /// Lists DataScanJobs under the given DataScan.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -289,7 +294,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Creates a dataScan resource.
+      /// Creates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -302,7 +307,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateDataScan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a dataScan resource.
+      /// Creates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -313,7 +318,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataScan, null, options, request);
       }
       /// <summary>
-      /// Creates a dataScan resource.
+      /// Creates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -326,7 +331,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CreateDataScanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a dataScan resource.
+      /// Creates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -337,7 +342,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataScan, null, options, request);
       }
       /// <summary>
-      /// Update the dataScan resource.
+      /// Updates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -350,7 +355,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateDataScan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the dataScan resource.
+      /// Updates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -361,7 +366,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDataScan, null, options, request);
       }
       /// <summary>
-      /// Update the dataScan resource.
+      /// Updates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -374,7 +379,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return UpdateDataScanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the dataScan resource.
+      /// Updates a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -385,7 +390,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataScan, null, options, request);
       }
       /// <summary>
-      /// Delete the dataScan resource.
+      /// Deletes a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -398,7 +403,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteDataScan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete the dataScan resource.
+      /// Deletes a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -409,7 +414,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataScan, null, options, request);
       }
       /// <summary>
-      /// Delete the dataScan resource.
+      /// Deletes a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -422,7 +427,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return DeleteDataScanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete the dataScan resource.
+      /// Deletes a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -433,7 +438,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataScan, null, options, request);
       }
       /// <summary>
-      /// Get dataScan resource.
+      /// Gets a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -446,7 +451,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetDataScan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get dataScan resource.
+      /// Gets a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -457,7 +462,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataScan, null, options, request);
       }
       /// <summary>
-      /// Get dataScan resource.
+      /// Gets a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -470,7 +475,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetDataScanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get dataScan resource.
+      /// Gets a DataScan resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -481,7 +486,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataScan, null, options, request);
       }
       /// <summary>
-      /// Lists dataScans.
+      /// Lists DataScans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -494,7 +499,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListDataScans(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists dataScans.
+      /// Lists DataScans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -505,7 +510,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataScans, null, options, request);
       }
       /// <summary>
-      /// Lists dataScans.
+      /// Lists DataScans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -518,7 +523,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListDataScansAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists dataScans.
+      /// Lists DataScans.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -529,7 +534,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataScans, null, options, request);
       }
       /// <summary>
-      /// Run an on demand execution of a DataScan.
+      /// Runs an on-demand execution of a DataScan
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -542,7 +547,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return RunDataScan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Run an on demand execution of a DataScan.
+      /// Runs an on-demand execution of a DataScan
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -553,7 +558,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RunDataScan, null, options, request);
       }
       /// <summary>
-      /// Run an on demand execution of a DataScan.
+      /// Runs an on-demand execution of a DataScan
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -566,7 +571,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return RunDataScanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Run an on demand execution of a DataScan.
+      /// Runs an on-demand execution of a DataScan
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -577,7 +582,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RunDataScan, null, options, request);
       }
       /// <summary>
-      /// Get DataScanJob resource.
+      /// Gets a DataScanJob resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -590,7 +595,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetDataScanJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get DataScanJob resource.
+      /// Gets a DataScanJob resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -601,7 +606,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataScanJob, null, options, request);
       }
       /// <summary>
-      /// Get DataScanJob resource.
+      /// Gets a DataScanJob resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -614,7 +619,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return GetDataScanJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get DataScanJob resource.
+      /// Gets a DataScanJob resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -625,7 +630,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataScanJob, null, options, request);
       }
       /// <summary>
-      /// Lists DataScanJobs under the given dataScan.
+      /// Lists DataScanJobs under the given DataScan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -638,7 +643,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListDataScanJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataScanJobs under the given dataScan.
+      /// Lists DataScanJobs under the given DataScan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -649,7 +654,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataScanJobs, null, options, request);
       }
       /// <summary>
-      /// Lists DataScanJobs under the given dataScan.
+      /// Lists DataScanJobs under the given DataScan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -662,7 +667,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return ListDataScanJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists DataScanJobs under the given dataScan.
+      /// Lists DataScanJobs under the given DataScan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

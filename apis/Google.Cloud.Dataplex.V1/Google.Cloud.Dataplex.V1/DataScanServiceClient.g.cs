@@ -287,6 +287,9 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>DataScanService client wrapper, for convenient use.</summary>
     /// <remarks>
+    /// DataScanService manages DataScan resources which can be configured to run
+    /// various types of data scanning workload and generate enriched metadata (e.g.
+    /// Data Profile, Data Quality) for the data source.
     /// </remarks>
     public abstract partial class DataScanServiceClient
     {
@@ -375,7 +378,7 @@ namespace Google.Cloud.Dataplex.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,7 +387,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -393,7 +396,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -428,12 +431,12 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<DataScan, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataScanOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -441,6 +444,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -458,12 +462,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -471,6 +475,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -488,12 +493,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -501,6 +506,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -513,12 +519,12 @@ namespace Google.Cloud.Dataplex.V1
             CreateDataScanAsync(parent, dataScan, dataScanId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -526,6 +532,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -543,12 +550,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -556,6 +563,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -573,12 +581,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location:
-        /// projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataScan">
@@ -586,6 +594,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="dataScanId">
         /// Required. DataScan identifier.
+        /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
         /// * Must end with a number or a letter.
@@ -598,7 +607,7 @@ namespace Google.Cloud.Dataplex.V1
             CreateDataScanAsync(parent, dataScan, dataScanId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -607,7 +616,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -616,7 +625,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -651,10 +660,11 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<DataScan, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataScanOperationsClient, callSettings);
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="dataScan">
-        /// Required. Update description.
+        /// Required. DataScan resource to be updated.
+        /// 
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
@@ -670,10 +680,11 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="dataScan">
-        /// Required. Update description.
+        /// Required. DataScan resource to be updated.
+        /// 
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
@@ -689,10 +700,11 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="dataScan">
-        /// Required. Update description.
+        /// Required. DataScan resource to be updated.
+        /// 
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
@@ -704,7 +716,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataScanAsync(dataScan, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -713,7 +725,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -722,7 +734,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -757,12 +769,12 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataScanOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -774,12 +786,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -791,12 +803,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -805,12 +817,12 @@ namespace Google.Cloud.Dataplex.V1
             DeleteDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -822,12 +834,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -839,12 +851,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -853,7 +865,7 @@ namespace Google.Cloud.Dataplex.V1
             DeleteDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -862,7 +874,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -871,7 +883,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -880,12 +892,12 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -897,12 +909,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -914,12 +926,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -928,12 +940,12 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -945,12 +957,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -962,12 +974,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the dataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -976,7 +988,7 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -985,7 +997,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -994,11 +1006,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="parent">
-        /// Required. projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// Required. The resource name of the parent location:
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1020,11 +1033,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="parent">
-        /// Required. projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// Required. The resource name of the parent location:
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1046,11 +1060,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="parent">
-        /// Required. projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// Required. The resource name of the parent location:
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1072,11 +1087,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="parent">
-        /// Required. projects/{project}/locations/{location_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// Required. The resource name of the parent location:
+        /// `projects/{project}/locations/{location_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1098,7 +1114,7 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1107,7 +1123,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,7 +1132,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1125,14 +1141,15 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1143,14 +1160,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1161,14 +1179,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1176,14 +1195,15 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1194,14 +1214,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1212,14 +1233,15 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScan:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}.
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
-        /// Only on-demand DataScans are allowed.
+        /// 
+        /// Only **OnDemand** data scans are allowed.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1227,7 +1249,7 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1236,7 +1258,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1245,7 +1267,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1254,12 +1276,12 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1271,12 +1293,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1288,12 +1310,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1302,12 +1324,12 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1319,12 +1341,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1336,12 +1358,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DataScanJob:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1350,7 +1372,7 @@ namespace Google.Cloud.Dataplex.V1
             GetDataScanJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1359,7 +1381,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1368,12 +1390,12 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1395,12 +1417,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1422,12 +1444,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1449,12 +1471,12 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent environment:
-        /// projects/{project}/locations/{location_id}/dataScans/{data_scan_id}
-        /// where `{project}` refers to a project_id or project_number and
+        /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
+        /// where `project` refers to a *project_id* or *project_number* and
         /// `location_id` refers to a GCP region.
         /// </param>
         /// <param name="pageToken">
@@ -1478,6 +1500,9 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>DataScanService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
+    /// DataScanService manages DataScan resources which can be configured to run
+    /// various types of data scanning workload and generate enriched metadata (e.g.
+    /// Data Profile, Data Quality) for the data source.
     /// </remarks>
     public sealed partial class DataScanServiceClientImpl : DataScanServiceClient
     {
@@ -1589,7 +1614,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient CreateDataScanOperationsClient { get; }
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1601,7 +1626,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates a dataScan resource.
+        /// Creates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1616,7 +1641,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient UpdateDataScanOperationsClient { get; }
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1628,7 +1653,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Update the dataScan resource.
+        /// Updates a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1643,7 +1668,7 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient DeleteDataScanOperationsClient { get; }
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1655,7 +1680,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Delete the dataScan resource.
+        /// Deletes a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1667,7 +1692,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1679,7 +1704,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Get dataScan resource.
+        /// Gets a DataScan resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1691,7 +1716,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1703,7 +1728,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists dataScans.
+        /// Lists DataScans.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1715,7 +1740,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1727,7 +1752,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Run an on demand execution of a DataScan.
+        /// Runs an on-demand execution of a DataScan
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1739,7 +1764,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1751,7 +1776,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Get DataScanJob resource.
+        /// Gets a DataScanJob resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1763,7 +1788,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1775,7 +1800,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Lists DataScanJobs under the given dataScan.
+        /// Lists DataScanJobs under the given DataScan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
