@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,7 +57,21 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The time to wait before the buffer is flushed, only used for <see cref="BufferType.Timed"/></summary>
         public TimeSpan BufferWaitTime { get; }
 
-        internal BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null)
+        /// <summary>
+        /// An action that will be called whenever an exception is thrown during a timed flush of the buffer.
+        /// May be null. Only used for <see cref="BufferType.Timed"/>.
+        /// </summary>
+        /// <remarks>
+        /// Throwing an exception within the timer thread risks inmediately crashing the applicaiton, so we
+        /// never do that, even if <see cref="RetryOptions.ExceptionHandling"/> has been set to
+        /// <see cref="ExceptionHandling.Propagate"/> because propagating exceptions is different than crashing
+        /// an application.
+        /// Instead, client code can specify a value for this action, that will be called when an exception is thrown
+        /// within the timer thread. Client code may decide what to do in such cases.
+        /// </remarks>
+        public Action<Exception> TimerExceptionHandler { get; }
+
+        internal BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null, Action<Exception> timerExceptionHandler = null)
         {
             BufferType = bufferType;
             BufferSizeBytes = bufferSizeBytes ?? default;
@@ -73,14 +87,23 @@ namespace Google.Cloud.Diagnostics.Common
         /// Create <see cref="BufferOptions"/> for <see cref="BufferType.Sized"/>
         /// </summary>
         /// <param name="bufferSizeBytes">Optional, The buffer size in bytes.</param>
-        public static BufferOptions SizedBuffer(int bufferSizeBytes = DefaultBufferSize)
-            => new BufferOptions(BufferType.Sized, bufferSizeBytes);
+        public static BufferOptions SizedBuffer(int bufferSizeBytes = DefaultBufferSize) =>
+            new BufferOptions(BufferType.Sized, bufferSizeBytes);
 
         /// <summary>
         /// Create <see cref="BufferOptions"/> for <see cref="BufferType.Timed"/>
         /// </summary>
         /// <param name="bufferWaitTime">Optional, The minimum amount of time between flushes.</param>
-        public static BufferOptions TimedBuffer(TimeSpan? bufferWaitTime = null)
-            => new BufferOptions(BufferType.Timed, null, bufferWaitTime ?? DefaultWaitTime);
+        public static BufferOptions TimedBuffer(TimeSpan? bufferWaitTime = null) =>
+            new BufferOptions(BufferType.Timed, null, bufferWaitTime ?? DefaultWaitTime);
+
+        /// <summary>
+        /// Creates a new <see cref="BufferOptions"/> instance which is identical to this one
+        /// but with the given timer exception handler.
+        /// </summary>
+        public BufferOptions WithTimerExceptionHandler(Action<Exception> handler) =>
+            BufferType == BufferType.Timed
+            ? new BufferOptions(BufferType.Timed, null, BufferWaitTime, handler)
+            : throw new InvalidOperationException($"This buffer is of type {BufferType.Sized} and timer exception handlers can only be added to buffers of type {BufferType.Timed}");
     }
 }

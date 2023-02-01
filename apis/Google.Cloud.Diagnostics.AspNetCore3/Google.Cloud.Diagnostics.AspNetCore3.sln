@@ -3,29 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3", "Google.Cloud.Diagnostics.AspNetCore3\Google.Cloud.Diagnostics.AspNetCore3.csproj", "{23D8A49D-947C-4CA6-B551-87B2BDECD3A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3", "Google.Cloud.Diagnostics.AspNetCore3\Google.Cloud.Diagnostics.AspNetCore3.csproj", "{23D8A49D-947C-4CA6-B551-87B2BDECD3A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj", "{CC6B069E-A4F1-4DED-8BC7-1E670C48E3DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj", "{CC6B069E-A4F1-4DED-8BC7-1E670C48E3DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj", "{CCE7A221-2FCD-46B4-BB45-8173B3475138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj", "{CCE7A221-2FCD-46B4-BB45-8173B3475138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{48F406D2-8BEC-4FCC-A7AC-CE2A1BE9E5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{48F406D2-8BEC-4FCC-A7AC-CE2A1BE9E5BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj", "{5D5E2B8B-04D4-457D-95DA-26C13351AD70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj", "{5D5E2B8B-04D4-457D-95DA-26C13351AD70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.Common.Tests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj", "{06AAB8AE-1833-44A9-92B7-6590AFEC8542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.Tests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj", "{06AAB8AE-1833-44A9-92B7-6590AFEC8542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.Snippets", "Google.Cloud.Diagnostics.AspNetCore3.Snippets\Google.Cloud.Diagnostics.AspNetCore3.Snippets.csproj", "{A1ADC7D3-BFF9-4FA2-AF06-AACA6CFF46E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.Snippets", "Google.Cloud.Diagnostics.AspNetCore3.Snippets\Google.Cloud.Diagnostics.AspNetCore3.Snippets.csproj", "{A1ADC7D3-BFF9-4FA2-AF06-AACA6CFF46E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.Tests", "Google.Cloud.Diagnostics.AspNetCore3.Tests\Google.Cloud.Diagnostics.AspNetCore3.Tests.csproj", "{7E9F338F-95C6-4C2B-A3B2-979D4D34918F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.Tests", "Google.Cloud.Diagnostics.AspNetCore3.Tests\Google.Cloud.Diagnostics.AspNetCore3.Tests.csproj", "{7E9F338F-95C6-4C2B-A3B2-979D4D34918F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.Snippets", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Snippets\Google.Cloud.Diagnostics.Common.Snippets.csproj", "{D2D3D836-9D94-4F4E-B167-796AB085F4C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{23D8A49D-947C-4CA6-B551-87B2BDECD3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -60,5 +59,15 @@ Global
 		{7E9F338F-95C6-4C2B-A3B2-979D4D34918F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9F338F-95C6-4C2B-A3B2-979D4D34918F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9F338F-95C6-4C2B-A3B2-979D4D34918F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D3D836-9D94-4F4E-B167-796AB085F4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D3D836-9D94-4F4E-B167-796AB085F4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D3D836-9D94-4F4E-B167-796AB085F4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D3D836-9D94-4F4E-B167-796AB085F4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {891EF638-28FB-453F-B9AD-6D73AC83EF93}
 	EndGlobalSection
 EndGlobal

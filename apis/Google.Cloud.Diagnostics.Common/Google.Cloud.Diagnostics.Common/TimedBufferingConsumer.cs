@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -33,7 +32,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The timer to automatically flush the buffer.</summary>
         private IThreadingTimer _timer;
 
-        internal TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IThreadingTimer timer)
+        internal TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, Action<Exception> timerExceptionHandler, IThreadingTimer timer)
             : base(consumer)
         {
             _timer = GaxPreconditions.CheckNotNull(timer, nameof(timer));
@@ -43,10 +42,14 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     Flush();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    // TODO(atarafamas): This is a short term solution to ensure 
-                    // we do not kill a process. See issue #2182 (currently in backlog) to track the long solution.
+                    // Rethrowing exceptions here on the timer thread risks inmediately
+                    // crashing the application, so we don't do that even if the library
+                    // has been configured to propagate exceptions.
+                    // Instead calling code can specify an exception handling action
+                    // through options.
+                    timerExceptionHandler?.Invoke(ex);
                 }
             }, waitTime);
         }
@@ -57,8 +60,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to flush to. Must not be null.</param>
         /// <param name="waitTime">The amount of time between automatic flushes.</param>
-        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
-            => new TimedBufferingConsumer<T>(consumer, waitTime, new SimpleThreadingTimer());
+        /// <param name="timerExceptionHandler">The action to handle exceptions thrown within the timer thread. May be null.</param>
+        internal static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime, Action<Exception> timerExceptionHandler)
+            => new TimedBufferingConsumer<T>(consumer, waitTime, timerExceptionHandler, new SimpleThreadingTimer());
 
         /// <inheritdoc />
         public override void Dispose()
