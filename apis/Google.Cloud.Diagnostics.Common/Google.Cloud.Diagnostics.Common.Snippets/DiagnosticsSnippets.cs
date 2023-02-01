@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -74,10 +74,32 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             // End sample
         }
 
+        private static class TimedBufferHandlesTimerException
+        {
+            // Sample: TimedBufferHandlesTimerException
+            public static IHostBuilder CreateHostBuilder() =>
+                new HostBuilder()
+                    .ConfigureServices(services =>
+                    {
+                        // Replace ProjectId with your Google Cloud Project ID.
+                        // Replace Service with a name or identifier for the service.
+                        // Replace Version with a version for the service.
+                        services.AddGoogleDiagnostics(ProjectId, Service, Version,
+                            // Configure the three components so that exceptions thrown in the timer thread
+                            // of timed buffers are handled by the given handler.
+                            traceOptions: TraceOptions.Create(bufferOptions: BufferOptions.TimedBuffer().WithTimerExceptionHandler(ex => Console.WriteLine(ex))),
+                            loggingOptions: LoggingOptions.Create(bufferOptions: BufferOptions.TimedBuffer().WithTimerExceptionHandler(ex => Console.WriteLine(ex))),
+                            errorReportingOptions: ErrorReportingOptions.Create(bufferOptions: BufferOptions.TimedBuffer().WithTimerExceptionHandler(ex => Console.WriteLine(ex))));
+                        // Register other services here if you need them.
+                    });
+            // End sample
+        }
+
         public static TheoryData<Func<IHostBuilder>> HostBuilders => new TheoryData<Func<IHostBuilder>>
         {
             DefaultHostBuilder.CreateHostBuilder,
-            NoBuffersHostBuilder.CreateHostBuilder
+            NoBuffersHostBuilder.CreateHostBuilder,
+            TimedBufferHandlesTimerException.CreateHostBuilder,
         };
 
         [Theory]

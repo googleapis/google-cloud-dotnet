@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using Grpc.Core;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -31,7 +29,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Receive()
         {
             var mockConsumer = new Mock<IConsumer<int>>();
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
             consumer.Receive(new[] { 1, 2, 3, 4, 5 });
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
         }
@@ -42,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             int[] intArray = { 1, 2, 3, 4 };
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(intArray));
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
 
             consumer.Receive(intArray);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
@@ -56,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(new int[] { }));
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
 
             consumer.Receive(new int[] { });
             consumer.Flush();
@@ -67,7 +65,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task ReceiveAsync()
         {
             var mockConsumer = new Mock<IConsumer<int>>();
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
             await consumer.ReceiveAsync(new[] { 1, 2, 3, 4, 5 }, CancellationToken.None);
             mockConsumer.Verify(c => c.ReceiveAsync(
                 It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
@@ -81,7 +79,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.ReceiveAsync(
                 intArray, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
 
             await consumer.ReceiveAsync(intArray, CancellationToken.None);
             mockConsumer.Verify(c => c.ReceiveAsync(
@@ -97,7 +95,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.ReceiveAsync(
                 new int[] { }, CancellationToken.None));
-            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime);
+            var consumer = TimedBufferingConsumer<int>.Create(mockConsumer.Object, _waitTime, null);
 
             await consumer.ReceiveAsync(new int[] { }, CancellationToken.None);
             await consumer.FlushAsync();
@@ -110,7 +108,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockConsumer = new Mock<IConsumer<int>>();
             var fakeTimer = new FakeThreadingTimer();
-            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, fakeTimer);
+            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, null, fakeTimer);
 
             var intArray = new[] { 1, 2, 3, 4, 5 };
             consumer.Receive(intArray);
@@ -129,12 +127,29 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockConsumer = new Mock<IConsumer<int>>();
             var fakeTimer = new FakeThreadingTimer();
-            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, fakeTimer);
+            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, null, fakeTimer);
 
             mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>())).Throws(new Exception());
             consumer.Receive(new[] { 1, 2, 3, 4, 5 });
             fakeTimer.FullTick();
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Once());
+        }
+
+        [Fact]
+        public void Timer_HandleException()
+        {
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var fakeTimer = new FakeThreadingTimer();
+            int exceptionsCaught = 0;
+            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, HandleException, fakeTimer);
+
+            mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>())).Throws(new Exception());
+            consumer.Receive(new[] { 1, 2, 3, 4, 5 });
+            fakeTimer.FullTick();
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Once());
+            Assert.Equal(1, exceptionsCaught);
+
+            void HandleException(Exception exception) => exceptionsCaught++;
         }
     }
 }

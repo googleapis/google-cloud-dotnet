@@ -101,6 +101,17 @@ Below you can see sample code that forces all three components to use no bufferi
 
 {{sample:Diagnostics.ConfigureBuffers}}
 
+#### Exceptions thrown in timed buffers' timer thread
+
+Rethrowing exceptions thrown in timed buffers' timer thread may immediately crash the application. These exceptions are not propagated
+by default, even if the library has been configured to propagate all other exceptions. If you need to handle these exceptions, for
+diagnostic or other purposes, you can provide your own exception handler when configuring a timed buffer.
+
+Below you can see sample code that configures all three components to use timed buffers that will write timer thread exceptions
+to the console.
+
+{{sample:Diagnostics.TimedBufferHandlesTimerException}}
+
 ## Error reporting
 
 The error reporting component allows you to create error reports from exceptions thrown in your application.

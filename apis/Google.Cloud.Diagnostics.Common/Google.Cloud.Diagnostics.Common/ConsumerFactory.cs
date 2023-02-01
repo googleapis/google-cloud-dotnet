@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
                 case BufferType.Sized:
                     return SizedBufferingConsumer<T>.Create(retryConsumer, sizer, bufferOptions.BufferSizeBytes);
                 case BufferType.Timed:
-                    return TimedBufferingConsumer<T>.Create(retryConsumer, bufferOptions.BufferWaitTime);
+                    return TimedBufferingConsumer<T>.Create(retryConsumer, bufferOptions.BufferWaitTime, bufferOptions.TimerExceptionHandler);
                 case BufferType.None:
                     return retryConsumer;
                 default:
