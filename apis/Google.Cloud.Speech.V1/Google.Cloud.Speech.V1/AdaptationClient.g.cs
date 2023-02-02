@@ -361,7 +361,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -397,7 +398,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -433,7 +435,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -464,7 +467,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -500,7 +504,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -536,7 +541,8 @@ namespace Google.Cloud.Speech.V1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created. Format:
+        /// Required. The parent resource where this phrase set will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/phraseSets`
         /// 
@@ -1118,7 +1124,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1152,7 +1159,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1186,7 +1194,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1215,7 +1224,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1249,7 +1259,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
@@ -1283,7 +1294,8 @@ namespace Google.Cloud.Speech.V1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created. Format:
+        /// Required. The parent resource where this custom class will be created.
+        /// Format:
         /// 
         /// `projects/{project}/locations/{location}/customClasses`
         /// 
