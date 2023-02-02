@@ -599,7 +599,7 @@ namespace Google.Cloud.Optimization.V1 {
     public const int MaxValidationErrorsFieldNumber = 5;
     private int maxValidationErrors_;
     /// <summary>
-    /// Truncates the number of validation errors returned. Those errors are
+    /// Truncates the number of validation errors returned. These errors are
     /// typically attached to an INVALID_ARGUMENT error payload as a BadRequest
     /// error detail (https://cloud.google.com/apis/design/errors#error_details),
     /// unless solving_mode=VALIDATE_ONLY: see the
@@ -957,7 +957,8 @@ namespace Google.Cloud.Optimization.V1 {
     public const int PopulateTravelStepPolylinesFieldNumber = 20;
     private bool populateTravelStepPolylines_;
     /// <summary>
-    /// Deprecated: Use [OptimizeToursRequest.populate_transition_polylines][]
+    /// Deprecated: Use
+    /// [OptimizeToursRequest.populate_transition_polylines][google.cloud.optimization.v1.OptimizeToursRequest.populate_transition_polylines]
     /// instead. If true, polylines will be populated in response
     /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions].
     /// Note that in this case, the polylines will also be populated in the
@@ -1714,10 +1715,11 @@ namespace Google.Cloud.Optimization.V1 {
     public const int TotalCostFieldNumber = 2;
     private double totalCost_;
     /// <summary>
-    /// Deprecated: Use [Metrics.total_cost][] instead.
-    /// Total cost of the solution. This takes into account all costs: costs per
-    /// per hour and travel hour, fixed vehicle costs, unperformed shipment penalty
-    /// costs, global duration cost, etc.
+    /// Deprecated: Use
+    /// [Metrics.total_cost][google.cloud.optimization.v1.OptimizeToursResponse.Metrics.total_cost]
+    /// instead. Total cost of the solution. This takes into account all costs:
+    /// costs per per hour and travel hour, fixed vehicle costs, unperformed
+    /// shipment penalty costs, global duration cost, etc.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4822,7 +4824,8 @@ namespace Google.Cloud.Optimization.V1 {
       }
 
       /// <summary>
-      /// Deprecated: Use top level [BreakRule][] instead.
+      /// Deprecated: Use top level
+      /// [BreakRule][google.cloud.optimization.v1.ShipmentModel.BreakRule] instead.
       /// Rules to generate time breaks for a vehicle (e.g. lunch
       /// breaks). A break is a contiguous period of time during which the vehicle
       /// remains idle at its current position and cannot perform any visit. A break
@@ -4830,10 +4833,10 @@ namespace Google.Cloud.Optimization.V1 {
       ///
       /// * during the travel between two visits (which includes the time right
       ///   before or right after a visit, but not in the middle of a visit), in
-      ///   which case it extends the corresponding transit time between the visits,
-      /// * or before the vehicle start (the vehicle may not start in the middle of
+      ///   which case it extends the corresponding transit time between the visits
+      /// * before the vehicle start (the vehicle may not start in the middle of
       ///   a break), in which case it does not affect the vehicle start time.
-      /// * or after the vehicle end (ditto, with the vehicle end time).
+      /// * after the vehicle end (ditto, with the vehicle end time).
       /// </summary>
       [global::System.ObsoleteAttribute]
       public sealed partial class BreakRule : pb::IMessage<BreakRule>
@@ -6024,7 +6027,9 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> demands_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
     /// <summary>
-    /// Deprecated: Use [Shipment.load_demands][] instead.
+    /// Deprecated: Use
+    /// [Shipment.load_demands][google.cloud.optimization.v1.Shipment.load_demands]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6704,7 +6709,9 @@ namespace Google.Cloud.Optimization.V1 {
             = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> demands_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
         /// <summary>
-        /// Deprecated: Use [VisitRequest.load_demands][] instead.
+        /// Deprecated: Use
+        /// [VisitRequest.load_demands][google.cloud.optimization.v1.Shipment.VisitRequest.load_demands]
+        /// instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8439,7 +8446,8 @@ namespace Google.Cloud.Optimization.V1 {
     /// <summary>
     /// Deprecated: No longer used.
     /// Indices in the `break_rule` field in the source
-    /// [ShipmentModel][]. They correspond to break rules enforced on the vehicle.
+    /// [ShipmentModel][google.cloud.optimization.v1.ShipmentModel]. They
+    /// correspond to break rules enforced on the vehicle.
     ///
     /// As of 2018/03, at most one rule index per vehicle can be specified.
     /// </summary>
@@ -8456,7 +8464,9 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> capacities_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
     /// <summary>
-    /// Deprecated: Use [Vehicle.load_limits][] instead.
+    /// Deprecated: Use
+    /// [Vehicle.load_limits][google.cloud.optimization.v1.Vehicle.load_limits]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8471,7 +8481,9 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.Optimization.V1.CapacityQuantityInterval.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantityInterval> startLoadIntervals_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantityInterval>();
     /// <summary>
-    /// Deprecated: Use [Vehicle.LoadLimit.start_load_interval][] instead.
+    /// Deprecated: Use
+    /// [Vehicle.LoadLimit.start_load_interval][google.cloud.optimization.v1.Vehicle.LoadLimit.start_load_interval]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8486,7 +8498,9 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(122, global::Google.Cloud.Optimization.V1.CapacityQuantityInterval.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantityInterval> endLoadIntervals_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantityInterval>();
     /// <summary>
-    /// Deprecated: Use [Vehicle.LoadLimit.end_load_interval][] instead.
+    /// Deprecated: Use
+    /// [Vehicle.LoadLimit.end_load_interval][google.cloud.optimization.v1.Vehicle.LoadLimit.end_load_interval]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10911,8 +10925,9 @@ namespace Google.Cloud.Optimization.V1 {
   }
 
   /// <summary>
-  /// Deprecated: Use [Shipment.Load][], [Vehicle.LoadLimit][] and
-  /// [ShipmentRoute.VehicleLoad][] instead.
+  /// Deprecated: Use
+  /// [Vehicle.LoadLimit.Interval][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval]
+  /// instead.
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class CapacityQuantity : pb::IMessage<CapacityQuantity>
@@ -11142,7 +11157,9 @@ namespace Google.Cloud.Optimization.V1 {
   }
 
   /// <summary>
-  /// Deprecated: Use [Vehicle.LoadLimit.Interval][] instead.
+  /// Deprecated: Use
+  /// [Vehicle.LoadLimit.Interval][google.cloud.optimization.v1.Vehicle.LoadLimit.Interval]
+  /// instead.
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class CapacityQuantityInterval : pb::IMessage<CapacityQuantityInterval>
@@ -11557,8 +11574,8 @@ namespace Google.Cloud.Optimization.V1 {
     public const int CostPerKilometerAboveSoftMaxFieldNumber = 3;
     private double costPerKilometerAboveSoftMax_;
     /// <summary>
-    /// Cost per kilometer incurred if `soft_max_meters` limit is violated. The
-    /// additional cost is 0 if the distance is under the limit, otherwise the
+    /// Cost per kilometer incurred if distance is above `soft_max_meters` limit.
+    /// The additional cost is 0 if the distance is under the limit, otherwise the
     /// formula used to compute the cost is the following:
     /// ```
     ///   (distance_meters - soft_max_meters) / 1000.0 *
@@ -14069,9 +14086,10 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> endLoads_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.Transition.loads][] instead.
-    /// Vehicle loads upon arrival at its end location, for each
-    /// type specified in
+    /// Deprecated: Use
+    /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]
+    /// instead. Vehicle loads upon arrival at its end location, for each type
+    /// specified in
     /// [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities],
     /// `start_load_intervals`, `end_load_intervals` or demands. Exception: we omit
     /// loads for quantity types unconstrained by intervals and that don't have any
@@ -14090,8 +14108,9 @@ namespace Google.Cloud.Optimization.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.TravelStep.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.TravelStep> travelSteps_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.TravelStep>();
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.Transition][] instead.
-    /// Ordered list of travel steps for the route.
+    /// Deprecated: Use
+    /// [ShipmentRoute.transitions][google.cloud.optimization.v1.ShipmentRoute.transitions]
+    /// instead. Ordered list of travel steps for the route.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14107,7 +14126,10 @@ namespace Google.Cloud.Optimization.V1 {
     /// Deprecated: No longer used.
     /// This field will only be populated at the
     /// [ShipmentRoute.Visit][google.cloud.optimization.v1.ShipmentRoute.Visit]
-    /// level. Extra detour time due to the shipments visited on the route.
+    /// level.
+    ///
+    /// This field is the extra detour time due to the shipments visited on the
+    /// route.
     ///
     /// It is equal to `vehicle_end_time` - `vehicle_start_time` - travel duration
     /// from the vehicle's start_location to its `end_location`.
@@ -14126,8 +14148,7 @@ namespace Google.Cloud.Optimization.V1 {
     public const int DelayBeforeVehicleEndFieldNumber = 16;
     private global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.Delay delayBeforeVehicleEnd_;
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.Transition.delay_duration][] instead.
-    /// Delay occurring before the vehicle end. See
+    /// Deprecated: Delay occurring before the vehicle end. See
     /// [TransitionAttributes.delay][google.cloud.optimization.v1.TransitionAttributes.delay].
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -14631,8 +14652,9 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Deprecated: Use [ShipmentRoute.Transition.delay_duration][] instead.
-      /// Time interval spent on the route resulting from a
+      /// Deprecated: Use
+      /// [ShipmentRoute.Transition.delay_duration][google.cloud.optimization.v1.ShipmentRoute.Transition.delay_duration]
+      /// instead. Time interval spent on the route resulting from a
       /// [TransitionAttributes.delay][google.cloud.optimization.v1.TransitionAttributes.delay].
       /// </summary>
       [global::System.ObsoleteAttribute]
@@ -15095,9 +15117,10 @@ namespace Google.Cloud.Optimization.V1 {
             = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> arrivalLoads_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
         /// <summary>
-        /// Deprecated: Use [ShipmentRoute.Transition.loads][] instead.
-        /// Vehicle loads upon arrival at the visit location, for each
-        /// type specified in
+        /// Deprecated: Use
+        /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]
+        /// instead. Vehicle loads upon arrival at the visit location, for each type
+        /// specified in
         /// [Vehicle.capacities][google.cloud.optimization.v1.Vehicle.capacities],
         /// `start_load_intervals`, `end_load_intervals` or `demands`.
         ///
@@ -15115,7 +15138,9 @@ namespace Google.Cloud.Optimization.V1 {
         public const int DelayBeforeStartFieldNumber = 10;
         private global::Google.Cloud.Optimization.V1.ShipmentRoute.Types.Delay delayBeforeStart_;
         /// <summary>
-        /// Deprecated: Use [ShipmentRoute.Transition.delay_duration][] instead.
+        /// Deprecated: Use
+        /// [ShipmentRoute.Transition.delay_duration][google.cloud.optimization.v1.ShipmentRoute.Transition.delay_duration]
+        /// instead. Delay occurring before the visit starts.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15133,7 +15158,9 @@ namespace Google.Cloud.Optimization.V1 {
             = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> demands_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
         /// <summary>
-        /// Deprecated: Use [Visit.load_demands][] instead.
+        /// Deprecated: Use
+        /// [Visit.load_demands][google.cloud.optimization.v1.ShipmentRoute.Visit.load_demands]
+        /// instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15761,7 +15788,9 @@ namespace Google.Cloud.Optimization.V1 {
             = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity> loads_ = new pbc::RepeatedField<global::Google.Cloud.Optimization.V1.CapacityQuantity>();
         /// <summary>
-        /// Deprecated: Use [Transition.vehicle_loads][] instead.
+        /// Deprecated: Use
+        /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]
+        /// instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16837,10 +16866,11 @@ namespace Google.Cloud.Optimization.V1 {
       }
 
       /// <summary>
-      /// Deprecated: Use [ShipmentRoute.transitions][] instead.
-      /// Travel between each visit, along the route: from the
-      /// vehicle's `start_location` to the first visit's `arrival_location`, then
-      /// from the first visit's `departure_location` to the second visit's
+      /// Deprecated: Use
+      /// [ShipmentRoute.Transition][google.cloud.optimization.v1.ShipmentRoute.Transition]
+      /// instead. Travel between each visit along the route: from the vehicle's
+      /// `start_location` to the first visit's `arrival_location`, then from the
+      /// first visit's `departure_location` to the second visit's
       /// `arrival_location`, and so on until the vehicle's `end_location`. This
       /// accounts only for the actual travel between visits, not counting the
       /// waiting time, the time spent performing a visit, nor the distance covered
@@ -18068,8 +18098,11 @@ namespace Google.Cloud.Optimization.V1 {
         = new pbc::MapField<string, double>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForDouble(17, 0D), 82);
     private readonly pbc::MapField<string, double> costs_ = new pbc::MapField<string, double>();
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.route_costs][] and
-    /// [OptimizeToursResponse.Metrics.costs][] instead.
+    /// Deprecated: Use
+    /// [ShipmentRoute.route_costs][google.cloud.optimization.v1.ShipmentRoute.route_costs]
+    /// and
+    /// [OptimizeToursResponse.Metrics.costs][google.cloud.optimization.v1.OptimizeToursResponse.Metrics.costs]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18082,8 +18115,11 @@ namespace Google.Cloud.Optimization.V1 {
     public const int TotalCostFieldNumber = 11;
     private double totalCost_;
     /// <summary>
-    /// Deprecated: Use [ShipmentRoute.route_total_cost][] and
-    /// [OptimizeToursResponse.Metrics.total_cost][] instead.
+    /// Deprecated: Use
+    /// [ShipmentRoute.route_total_cost][google.cloud.optimization.v1.ShipmentRoute.route_total_cost]
+    /// and
+    /// [OptimizeToursResponse.Metrics.total_cost][google.cloud.optimization.v1.OptimizeToursResponse.Metrics.total_cost]
+    /// instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19075,7 +19111,7 @@ namespace Google.Cloud.Optimization.V1 {
             /// <summary>
             /// The constraint relaxation level that applies when the conditions
             /// at or after `threshold_time` AND at least `threshold_visit_count` are
-            /// satified.
+            /// satisfied.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19317,7 +19353,7 @@ namespace Google.Cloud.Optimization.V1 {
             public static partial class Types {
               /// <summary>
               /// Expresses the different constraint relaxation levels, which are
-              /// applied for a visit and those that follow when it satifies the
+              /// applied for a visit and those that follow when it satisfies the
               /// threshold conditions.
               ///
               /// The enumeration below is in order of increasing relaxation.
@@ -19327,7 +19363,7 @@ namespace Google.Cloud.Optimization.V1 {
                 /// Implicit default relaxation level: no constraints are relaxed,
                 /// i.e., all visits are fully constrained.
                 ///
-                /// This value must not be explicly used in `level`.
+                /// This value must not be explicitly used in `level`.
                 /// </summary>
                 [pbr::OriginalName("LEVEL_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
@@ -19465,6 +19501,11 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * INJECTED_SOLUTION_MISSING_LABEL = 2000;
     ///     * INJECTED_SOLUTION_DUPLICATE_LABEL = 2001;
     ///     * INJECTED_SOLUTION_AMBIGUOUS_INDEX = 2002;
+    ///     * INJECTED_SOLUTION_INFEASIBLE_AFTER_GETTING_TRAVEL_TIMES = 2003;
+    ///     * INJECTED_SOLUTION_TRANSITION_INCONSISTENT_WITH_ACTUAL_TRAVEL = 2004;
+    ///     * INJECTED_SOLUTION_CONCURRENT_SOLUTION_TYPES = 2005;
+    ///     * INJECTED_SOLUTION_MORE_THAN_ONE_PER_TYPE = 2006;
+    ///     * INJECTED_SOLUTION_REFRESH_WITHOUT_POPULATE = 2008;
     /// * SHIPMENT_MODEL_ERROR = 22;
     ///     * SHIPMENT_MODEL_TOO_LARGE = 2200;
     ///     * SHIPMENT_MODEL_TOO_MANY_CAPACITY_TYPES = 2201;
@@ -19472,6 +19513,8 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * SHIPMENT_MODEL_GLOBAL_END_TIME_TOO_LARGE_OR_NAN = 2203;
     ///     * SHIPMENT_MODEL_GLOBAL_START_TIME_AFTER_GLOBAL_END_TIME = 2204;
     ///     * SHIPMENT_MODEL_GLOBAL_DURATION_TOO_LONG = 2205;
+    ///     * SHIPMENT_MODEL_MAX_ACTIVE_VEHICLES_NOT_POSITIVE = 2206;
+    ///     * SHIPMENT_MODEL_DURATION_MATRIX_TOO_LARGE = 2207;
     /// * INDEX_ERROR = 24;
     /// * TAG_ERROR = 26;
     /// * TIME_WINDOW_ERROR = 28;
@@ -19553,9 +19596,12 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * DURATION_LIMIT_QUADRATIC_SOFT_MAX_DURATION_EXCEEDS_GLOBAL_DURATION
     ///       = 3815;
     /// * SHIPMENT_ERROR = 40;
+    ///     * SHIPMENT_PD_LIMIT_WITHOUT_PICKUP_AND_DELIVERY = 4014;
     ///     * SHIPMENT_PD_ABSOLUTE_DETOUR_LIMIT_DURATION_NEGATIVE_OR_NAN = 4000;
     ///     * SHIPMENT_PD_ABSOLUTE_DETOUR_LIMIT_DURATION_EXCEEDS_GLOBAL_DURATION
     ///       = 4001;
+    ///     * SHIPMENT_PD_RELATIVE_DETOUR_LIMIT_INVALID = 4015;
+    ///     * SHIPMENT_PD_DETOUR_LIMIT_AND_EXTRA_VISIT_DURATION = 4016;
     ///     * SHIPMENT_PD_TIME_LIMIT_DURATION_NEGATIVE_OR_NAN = 4002;
     ///     * SHIPMENT_PD_TIME_LIMIT_DURATION_EXCEEDS_GLOBAL_DURATION = 4003;
     ///     * SHIPMENT_EMPTY_SHIPMENT_TYPE = 4004;
@@ -19568,7 +19614,6 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * SHIPMENT_INVALID_COST_FOR_VEHICLE = 4011;
     ///     * SHIPMENT_COST_FOR_VEHICLE_INDEX_OUT_OF_BOUNDS = 4012;
     ///     * SHIPMENT_DUPLICATE_COST_FOR_VEHICLE_INDEX = 4013;
-    ///     * SHIPMENT_DETOUR_WITHOUT_PICKUP_AND_DELIVERY = 4014;
     /// * VEHICLE_ERROR = 42;
     ///     * VEHICLE_EMPTY_REQUIRED_OPERATOR_TYPE = 4200;
     ///     * VEHICLE_DUPLICATE_REQUIRED_OPERATOR_TYPE = 4201;
@@ -19592,6 +19637,9 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * VEHICLE_INVALID_COST_PER_TRAVELED_HOUR = 4219;
     ///     * VEHICLE_INVALID_FIXED_COST = 4220;
     ///     * VEHICLE_INVALID_TRAVEL_DURATION_MULTIPLE = 4221;
+    ///     * VEHICLE_TRAVEL_DURATION_MULTIPLE_WITH_SHIPMENT_PD_DETOUR_LIMITS
+    ///       = 4223;
+    ///     * VEHICLE_MATRIX_INDEX_WITH_SHIPMENT_PD_DETOUR_LIMITS = 4224;
     ///     * VEHICLE_MINIMUM_DURATION_LONGER_THAN_DURATION_LIMIT = 4222;
     /// * VISIT_REQUEST_ERROR = 44;
     ///     * VISIT_REQUEST_EMPTY_TAG = 4400;
@@ -19644,9 +19692,6 @@ namespace Google.Cloud.Optimization.V1 {
     /// * DURATION_SECONDS_MATRIX_ERROR = 56;
     ///     * DURATION_SECONDS_MATRIX_DURATION_NEGATIVE_OR_NAN = 5600;
     ///     * DURATION_SECONDS_MATRIX_DURATION_EXCEEDS_GLOBAL_DURATION = 5601;
-    /// * GRAPH_ARC_ERROR = 58;
-    ///     * GRAPH_ARC_DURATION_NEGATIVE_OR_NAN = 5800;
-    ///     * GRAPH_ARC_DURATION_EXCEEDS_GLOBAL_DURATION = 5801;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
