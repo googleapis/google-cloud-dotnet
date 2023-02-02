@@ -189,7 +189,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where this phrase set will be created. Format:
+    /// Required. The parent resource where this phrase set will be created.
+    /// Format:
     ///
     /// `projects/{project}/locations/{location}/phraseSets`
     ///
@@ -1664,7 +1665,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where this custom class will be created. Format:
+    /// Required. The parent resource where this custom class will be created.
+    /// Format:
     ///
     /// `projects/{project}/locations/{location}/customClasses`
     ///
