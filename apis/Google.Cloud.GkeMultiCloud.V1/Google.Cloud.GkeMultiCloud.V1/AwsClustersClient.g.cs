@@ -502,7 +502,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -516,7 +516,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -530,7 +530,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -570,7 +570,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -613,7 +613,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -656,7 +656,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -694,7 +694,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -737,7 +737,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -780,7 +780,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1155,7 +1155,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1255,7 +1255,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1286,7 +1286,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1460,7 +1460,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1486,7 +1486,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1515,7 +1515,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1544,7 +1544,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2925,7 +2925,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2942,7 +2942,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
-        /// resource on a given GCP project and region.
+        /// resource on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be

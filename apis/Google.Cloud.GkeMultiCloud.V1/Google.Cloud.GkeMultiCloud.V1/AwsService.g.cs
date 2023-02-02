@@ -890,7 +890,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1378,7 +1378,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> awsClusters_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster>();
     /// <summary>
     /// A list of [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
-    /// in the specified GCP project and region region.
+    /// in the specified Google Cloud Platform project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1610,7 +1610,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
