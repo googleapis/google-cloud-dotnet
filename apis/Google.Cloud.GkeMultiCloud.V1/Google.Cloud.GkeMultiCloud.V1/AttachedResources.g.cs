@@ -170,7 +170,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-number>/locations/&lt;region>/attachedClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1561,9 +1561,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// OIDC discovery information of the target cluster.
   ///
   /// Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster
-  /// API server. This fields indicates how GCP services
+  /// API server. This fields indicates how Google Cloud Platform services
   /// validate KSA tokens in order to allow system workloads (such as GKE Connect
-  /// and telemetry agents) to authenticate back to GCP.
+  /// and telemetry agents) to authenticate back to Google Cloud Platform.
   ///
   /// Both clusters with public and private issuer URLs are supported.
   /// Clusters with public issuers only need to specify the `issuer_url` field

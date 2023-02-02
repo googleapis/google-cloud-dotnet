@@ -410,7 +410,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -425,7 +425,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -440,7 +440,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -482,7 +482,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -526,7 +526,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -570,7 +570,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -609,7 +609,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -653,7 +653,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -697,7 +697,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1245,7 +1245,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1265,7 +1265,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1288,7 +1288,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1311,7 +1311,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1349,7 +1349,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1380,7 +1380,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1411,7 +1411,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1442,7 +1442,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1547,7 +1547,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1573,7 +1573,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1622,7 +1622,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1674,7 +1674,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/attachedClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-        /// for more details on GCP resource names.
+        /// for more details on Google Cloud Platform resource names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1884,7 +1884,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -1897,7 +1897,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1923,7 +1923,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -1936,7 +1936,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -1975,7 +1975,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1997,7 +1997,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -2010,7 +2010,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2036,7 +2036,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -2049,7 +2049,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2075,7 +2075,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// for more details on Google Cloud resource names.
         /// </param>
         /// <param name="attachedClusterId">
-        /// Required. A client provided ID the resource. Must be unique within the
+        /// Required. A client provided ID of the resource. Must be unique within the
         /// parent resource.
         /// 
         /// The provided ID will be part of the
@@ -2088,7 +2088,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// When generating an install manifest for importing an existing Membership
         /// resource, the attached_cluster_id field must be the Membership id.
         /// 
-        /// Membership names are formatted as `resource name formatted as
+        /// Membership names are formatted as
         /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/memberships/&lt;membership-id&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2208,7 +2208,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be
@@ -2226,7 +2226,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// Creates a new
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster] resource
-        /// on a given GCP project and region.
+        /// on a given Google Cloud Platform project and region.
         /// 
         /// If successful, the response contains a newly created
         /// [Operation][google.longrunning.Operation] resource that can be

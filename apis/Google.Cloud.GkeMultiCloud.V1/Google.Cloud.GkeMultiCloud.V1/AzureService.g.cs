@@ -650,6 +650,9 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `annotations`.
     ///  *   `authorization.admin_users`.
     ///  *   `control_plane.root_volume.size_gib`.
+    ///  *   `azure_services_authentication`.
+    ///  *   `azure_services_authentication.tenant_id`.
+    ///  *   `azure_services_authentication.application_id`.
     ///  *   `control_plane.proxy_config`.
     ///  *   `control_plane.proxy_config.resource_group_id`.
     ///  *   `control_plane.proxy_config.secret_id`.
@@ -924,7 +927,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1127,7 +1130,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1412,7 +1415,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureCluster> azureClusters_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AzureCluster>();
     /// <summary>
     /// A list of [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
-    /// resources in the specified GCP project and region region.
+    /// resources in the specified Google Cloud Platform project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1644,7 +1647,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/azureClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4418,7 +4421,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

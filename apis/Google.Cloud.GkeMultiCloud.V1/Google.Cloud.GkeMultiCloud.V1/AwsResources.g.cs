@@ -268,7 +268,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-number>/locations/&lt;region>/awsClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

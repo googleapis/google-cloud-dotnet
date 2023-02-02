@@ -214,7 +214,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     public const int AttachedClusterIdFieldNumber = 2;
     private string attachedClusterId_ = "";
     /// <summary>
-    /// Required. A client provided ID the resource. Must be unique within the
+    /// Required. A client provided ID of the resource. Must be unique within the
     /// parent resource.
     ///
     /// The provided ID will be part of the
@@ -227,7 +227,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// When generating an install manifest for importing an existing Membership
     /// resource, the attached_cluster_id field must be the Membership id.
     ///
-    /// Membership names are formatted as `resource name formatted as
+    /// Membership names are formatted as
     /// `projects/&lt;project-id>/locations/&lt;region>/memberships/&lt;membership-id>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1708,7 +1708,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/attachedClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1911,7 +1911,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Location names are formatted as `projects/&lt;project-id>/locations/&lt;region>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2196,7 +2196,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster> attachedClusters_ = new pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster>();
     /// <summary>
     /// A list of [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
-    /// resources in the specified GCP project and region region.
+    /// resources in the specified Google Cloud Platform project and region region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2429,7 +2429,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// `projects/&lt;project-id>/locations/&lt;region>/attachedClusters/&lt;cluster-id>`.
     ///
     /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
-    /// for more details on GCP resource names.
+    /// for more details on Google Cloud Platform resource names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
