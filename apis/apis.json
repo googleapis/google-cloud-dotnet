@@ -1541,7 +1541,7 @@
       "version": "3.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
       "tags": [
         "Tools"
@@ -1582,7 +1582,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
-      "testTargetFrameworks": "netcoreapp3.1",
+      "testTargetFrameworks": "net6.0",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3.",
       "tags": [
         "Error",
@@ -1606,7 +1606,7 @@
       "version": "5.0.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -1974,7 +1974,7 @@
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
@@ -2003,7 +2003,7 @@
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "Recommended Google client library to access the Firestore API.",
       "tags": [
         "firestore",
@@ -2034,7 +2034,7 @@
       "version": "3.0.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
       "tags": [
         "firestore",
@@ -2564,7 +2564,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "Log4Net client library for the Google Cloud Logging API.",
       "tags": [
         "Log4Net",
@@ -2588,7 +2588,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1",
-      "testTargetFrameworks": "netcoreapp3.1",
+      "testTargetFrameworks": "net6.0",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
         "Logging",
@@ -2606,7 +2606,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "description": "NLog target for the Google Cloud Logging API.",
       "tags": [
         "NLog",
@@ -3919,7 +3919,7 @@
     {
       "id": "Google.Cloud.Spanner.Data",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "netcoreapp3.1;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "version": "4.2.0",
       "type": "other",
       "metadataType": "INTEGRATION",

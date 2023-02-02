@@ -74,7 +74,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { ApiType.Regapic, "netstandard2.1;net462" }
         };
 
-        private const string DefaultTestTargetFrameworks = "netcoreapp3.1;net462";
+        private const string DefaultTestTargetFrameworks = "net6.0;net462";
 
         private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
         {
