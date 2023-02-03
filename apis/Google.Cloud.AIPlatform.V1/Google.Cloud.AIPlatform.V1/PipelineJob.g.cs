@@ -114,26 +114,27 @@ namespace Google.Cloud.AIPlatform.V1 {
             "c3Q6AjgBIqYBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BF",
             "TkRJTkcQARILCgdSVU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSEgoOQ0FOQ0VM",
             "X1BFTkRJTkcQBBIOCgpDQU5DRUxMSU5HEAUSDQoJQ0FOQ0VMTEVEEAYSCgoG",
-            "RkFJTEVEEAcSCwoHU0tJUFBFRBAIEhEKDU5PVF9UUklHR0VSRUQQCSK3BAoa",
+            "RkFJTEVEEAcSCwoHU0tJUFBFRBAIEhEKDU5PVF9UUklHR0VSRUQQCSLLBAoa",
             "UGlwZWxpbmVUYXNrRXhlY3V0b3JEZXRhaWwSZwoQY29udGFpbmVyX2RldGFp",
             "bBgBIAEoCzJGLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5l",
-            "VGFza0V4ZWN1dG9yRGV0YWlsLkNvbnRhaW5lckRldGFpbEID4EEDSAASagoR",
+            "VGFza0V4ZWN1dG9yRGV0YWlsLkNvbnRhaW5lckRldGFpbEID4EEDSAASaAoR",
             "Y3VzdG9tX2pvYl9kZXRhaWwYAiABKAsyRi5nb29nbGUuY2xvdWQuYWlwbGF0",
             "Zm9ybS52MS5QaXBlbGluZVRhc2tFeGVjdXRvckRldGFpbC5DdXN0b21Kb2JE",
-            "ZXRhaWxCBRgB4EEDSAAa5wEKD0NvbnRhaW5lckRldGFpbBI9CghtYWluX2pv",
-            "YhgBIAEoCUIr4EED+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0N1",
-            "c3RvbUpvYhJKChVwcmVfY2FjaGluZ19jaGVja19qb2IYAiABKAlCK+BBA/pB",
-            "JQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0b21Kb2ISHQoQZmFp",
-            "bGVkX21haW5fam9icxgDIAMoCUID4EEDEioKHWZhaWxlZF9wcmVfY2FjaGlu",
-            "Z19jaGVja19qb2JzGAQgAygJQgPgQQMaTwoPQ3VzdG9tSm9iRGV0YWlsEjgK",
-            "A2pvYhgBIAEoCUIr4EED+kElCiNhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
-            "L0N1c3RvbUpvYjoCGAFCCQoHZGV0YWlsc0KXAgoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQghQaXBlbGluZVABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MepBTgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEixwcm9qZWN0",
-            "cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3JrfWIGcHJvdG8z"));
+            "ZXRhaWxCA+BBA0gAGucBCg9Db250YWluZXJEZXRhaWwSPQoIbWFpbl9qb2IY",
+            "ASABKAlCK+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0",
+            "b21Kb2ISSgoVcHJlX2NhY2hpbmdfY2hlY2tfam9iGAIgASgJQivgQQP6QSUK",
+            "I2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEh0KEGZhaWxl",
+            "ZF9tYWluX2pvYnMYAyADKAlCA+BBAxIqCh1mYWlsZWRfcHJlX2NhY2hpbmdf",
+            "Y2hlY2tfam9icxgEIAMoCUID4EEDGmUKD0N1c3RvbUpvYkRldGFpbBI4CgNq",
+            "b2IYASABKAlCK+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9D",
+            "dXN0b21Kb2ISGAoLZmFpbGVkX2pvYnMYAyADKAlCA+BBA0IJCgdkZXRhaWxz",
+            "QpcCCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCFBpcGVsaW5l",
+            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
+            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
+            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
+            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYx6kFOCh5jb21wdXRlLmdvb2dsZWFwaXMu",
+            "Y29tL05ldHdvcmsSLHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29y",
+            "a3Mve25ldHdvcmt9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ArtifactReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContextReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExecutionReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineFailurePolicyReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -146,7 +147,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList.Parser, new[]{ "Artifacts" }, null, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Parser, new[]{ "ContainerDetail", "CustomJobDetail" }, new[]{ "Details" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail.Parser, new[]{ "MainJob", "PreCachingCheckJob", "FailedMainJobs", "FailedPreCachingCheckJobs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail.Parser, new[]{ "Job" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail.Parser, new[]{ "Job", "FailedJobs" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -3493,7 +3494,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Output only. The detailed info for a custom job executor.
     /// </summary>
-    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail CustomJobDetail {
@@ -4026,7 +4026,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The detailed info for a custom job executor.
       /// </summary>
-      [global::System.ObsoleteAttribute]
       public sealed partial class CustomJobDetail : pb::IMessage<CustomJobDetail>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4062,6 +4061,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CustomJobDetail(CustomJobDetail other) : this() {
           job_ = other.job_;
+          failedJobs_ = other.failedJobs_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4087,6 +4087,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "failed_jobs" field.</summary>
+        public const int FailedJobsFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_failedJobs_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> failedJobs_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Output only. The names of the previously failed
+        /// [CustomJob][google.cloud.aiplatform.v1.CustomJob]. The list includes the
+        /// all attempts in chronological order.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> FailedJobs {
+          get { return failedJobs_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4103,6 +4119,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             return true;
           }
           if (Job != other.Job) return false;
+          if(!failedJobs_.Equals(other.failedJobs_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4111,6 +4128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Job.Length != 0) hash ^= Job.GetHashCode();
+          hash ^= failedJobs_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4133,6 +4151,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(10);
             output.WriteString(Job);
           }
+          failedJobs_.WriteTo(output, _repeated_failedJobs_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4147,6 +4166,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(10);
             output.WriteString(Job);
           }
+          failedJobs_.WriteTo(ref output, _repeated_failedJobs_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4160,6 +4180,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (Job.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Job);
           }
+          size += failedJobs_.CalculateSize(_repeated_failedJobs_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4175,6 +4196,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other.Job.Length != 0) {
             Job = other.Job;
           }
+          failedJobs_.Add(other.failedJobs_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4194,6 +4216,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 Job = input.ReadString();
                 break;
               }
+              case 26: {
+                failedJobs_.AddEntriesFrom(input, _repeated_failedJobs_codec);
+                break;
+              }
             }
           }
         #endif
@@ -4211,6 +4237,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 break;
               case 10: {
                 Job = input.ReadString();
+                break;
+              }
+              case 26: {
+                failedJobs_.AddEntriesFrom(ref input, _repeated_failedJobs_codec);
                 break;
               }
             }

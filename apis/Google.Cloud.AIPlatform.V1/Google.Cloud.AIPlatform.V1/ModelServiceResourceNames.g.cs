@@ -126,6 +126,46 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class CopyModelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ModelName"/>-typed view over the <see cref="SourceModel"/> resource name property.
+        /// </summary>
+        public ModelName SourceModelAsModelName
+        {
+            get => string.IsNullOrEmpty(SourceModel) ? null : ModelName.Parse(SourceModel, allowUnparsed: true);
+            set => SourceModel = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ModelName"/>-typed view over the <see cref="ParentModel"/> resource name property.
+        /// </summary>
+        public ModelName ParentModelAsModelName
+        {
+            get => string.IsNullOrEmpty(ParentModel) ? null : ModelName.Parse(ParentModel, allowUnparsed: true);
+            set => ParentModel = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CopyModelResponse
+    {
+        /// <summary><see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.</summary>
+        public ModelName ModelAsModelName
+        {
+            get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
+            set => Model = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportModelEvaluationRequest
     {
         /// <summary><see cref="ModelName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

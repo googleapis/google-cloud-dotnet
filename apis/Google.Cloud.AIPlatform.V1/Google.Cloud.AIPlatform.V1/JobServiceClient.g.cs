@@ -68,6 +68,14 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteHyperparameterTuningJobSettings = existing.DeleteHyperparameterTuningJobSettings;
             DeleteHyperparameterTuningJobOperationsSettings = existing.DeleteHyperparameterTuningJobOperationsSettings.Clone();
             CancelHyperparameterTuningJobSettings = existing.CancelHyperparameterTuningJobSettings;
+            CreateNasJobSettings = existing.CreateNasJobSettings;
+            GetNasJobSettings = existing.GetNasJobSettings;
+            ListNasJobsSettings = existing.ListNasJobsSettings;
+            DeleteNasJobSettings = existing.DeleteNasJobSettings;
+            DeleteNasJobOperationsSettings = existing.DeleteNasJobOperationsSettings.Clone();
+            CancelNasJobSettings = existing.CancelNasJobSettings;
+            GetNasTrialDetailSettings = existing.GetNasTrialDetailSettings;
+            ListNasTrialDetailsSettings = existing.ListNasTrialDetailsSettings;
             CreateBatchPredictionJobSettings = existing.CreateBatchPredictionJobSettings;
             GetBatchPredictionJobSettings = existing.GetBatchPredictionJobSettings;
             ListBatchPredictionJobsSettings = existing.ListBatchPredictionJobsSettings;
@@ -329,6 +337,108 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CancelHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.CreateNasJob</c> and <c>JobServiceClient.CreateNasJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateNasJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>JobServiceClient.GetNasJob</c>
+        ///  and <c>JobServiceClient.GetNasJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNasJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.ListNasJobs</c> and <c>JobServiceClient.ListNasJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNasJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.DeleteNasJob</c> and <c>JobServiceClient.DeleteNasJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNasJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteNasJob</c> and
+        /// <c>JobServiceClient.DeleteNasJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteNasJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.CancelNasJob</c> and <c>JobServiceClient.CancelNasJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelNasJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.GetNasTrialDetail</c> and <c>JobServiceClient.GetNasTrialDetailAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNasTrialDetailSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.ListNasTrialDetails</c> and <c>JobServiceClient.ListNasTrialDetailsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNasTrialDetailsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -631,11 +741,13 @@ namespace Google.Cloud.AIPlatform.V1
         /// The default JobService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -2835,6 +2947,981 @@ namespace Google.Cloud.AIPlatform.V1
             CancelHyperparameterTuningJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob CreateNasJob(CreateNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(CreateNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(CreateNasJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateNasJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob CreateNasJob(string parent, NasJob nasJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNasJob(new CreateNasJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NasJob = gax::GaxPreconditions.CheckNotNull(nasJob, nameof(nasJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(string parent, NasJob nasJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNasJobAsync(new CreateNasJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NasJob = gax::GaxPreconditions.CheckNotNull(nasJob, nameof(nasJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(string parent, NasJob nasJob, st::CancellationToken cancellationToken) =>
+            CreateNasJobAsync(parent, nasJob, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob CreateNasJob(gagr::LocationName parent, NasJob nasJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNasJob(new CreateNasJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NasJob = gax::GaxPreconditions.CheckNotNull(nasJob, nameof(nasJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(gagr::LocationName parent, NasJob nasJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNasJobAsync(new CreateNasJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NasJob = gax::GaxPreconditions.CheckNotNull(nasJob, nameof(nasJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the NasJob in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="nasJob">
+        /// Required. The NasJob to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> CreateNasJobAsync(gagr::LocationName parent, NasJob nasJob, st::CancellationToken cancellationToken) =>
+            CreateNasJobAsync(parent, nasJob, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob GetNasJob(GetNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(GetNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(GetNasJobRequest request, st::CancellationToken cancellationToken) =>
+            GetNasJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob GetNasJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasJob(new GetNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasJobAsync(new GetNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasJob GetNasJob(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasJob(new GetNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasJobAsync(new GetNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasJob> GetNasJobAsync(NasJobName name, st::CancellationToken cancellationToken) =>
+            GetNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(ListNasJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(ListNasJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the NasJobs
+        /// from. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasJobs(new ListNasJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the NasJobs
+        /// from. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasJobsAsync(new ListNasJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the NasJobs
+        /// from. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasJobs(new ListNasJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list the NasJobs
+        /// from. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasJobsAsync(new ListNasJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNasJob(DeleteNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(DeleteNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(DeleteNasJobRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNasJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteNasJob</c>.</summary>
+        public virtual lro::OperationsClient DeleteNasJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteNasJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteNasJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNasJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNasJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteNasJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNasJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNasJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNasJob(new DeleteNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNasJobAsync(new DeleteNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNasJob(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNasJob(new DeleteNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNasJobAsync(new DeleteNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob resource to be deleted.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(NasJobName name, st::CancellationToken cancellationToken) =>
+            DeleteNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelNasJob(CancelNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(CancelNasJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(CancelNasJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelNasJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelNasJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelNasJob(new CancelNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelNasJobAsync(new CancelNasJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CancelNasJob(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelNasJob(new CancelNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(NasJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelNasJobAsync(new CancelNasJobRequest
+            {
+                NasJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasJob to cancel.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CancelNasJobAsync(NasJobName name, st::CancellationToken cancellationToken) =>
+            CancelNasJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasTrialDetail GetNasTrialDetail(GetNasTrialDetailRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(GetNasTrialDetailRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(GetNasTrialDetailRequest request, st::CancellationToken cancellationToken) =>
+            GetNasTrialDetailAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasTrialDetail GetNasTrialDetail(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasTrialDetail(new GetNasTrialDetailRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasTrialDetailAsync(new GetNasTrialDetailRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNasTrialDetailAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NasTrialDetail GetNasTrialDetail(NasTrialDetailName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasTrialDetail(new GetNasTrialDetailRequest
+            {
+                NasTrialDetailName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(NasTrialDetailName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNasTrialDetailAsync(new GetNasTrialDetailRequest
+            {
+                NasTrialDetailName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the NasTrialDetail resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}/nasTrialDetails/{nas_trial_detail}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NasTrialDetail> GetNasTrialDetailAsync(NasTrialDetailName name, st::CancellationToken cancellationToken) =>
+            GetNasTrialDetailAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(ListNasTrialDetailsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(ListNasTrialDetailsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasTrialDetails(new ListNasTrialDetailsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasTrialDetailsAsync(new ListNasTrialDetailsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasTrialDetails(new ListNasTrialDetailsRequest
+            {
+                ParentAsNasJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the NasJob resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/nasJobs/{nas_job}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(NasJobName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNasTrialDetailsAsync(new ListNasTrialDetailsRequest
+            {
+                ParentAsNasJobName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Creates a BatchPredictionJob. A BatchPredictionJob once created will
         /// right away be attempted to start.
         /// </summary>
@@ -4747,6 +5834,20 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<CancelHyperparameterTuningJobRequest, wkt::Empty> _callCancelHyperparameterTuningJob;
 
+        private readonly gaxgrpc::ApiCall<CreateNasJobRequest, NasJob> _callCreateNasJob;
+
+        private readonly gaxgrpc::ApiCall<GetNasJobRequest, NasJob> _callGetNasJob;
+
+        private readonly gaxgrpc::ApiCall<ListNasJobsRequest, ListNasJobsResponse> _callListNasJobs;
+
+        private readonly gaxgrpc::ApiCall<DeleteNasJobRequest, lro::Operation> _callDeleteNasJob;
+
+        private readonly gaxgrpc::ApiCall<CancelNasJobRequest, wkt::Empty> _callCancelNasJob;
+
+        private readonly gaxgrpc::ApiCall<GetNasTrialDetailRequest, NasTrialDetail> _callGetNasTrialDetail;
+
+        private readonly gaxgrpc::ApiCall<ListNasTrialDetailsRequest, ListNasTrialDetailsResponse> _callListNasTrialDetails;
+
         private readonly gaxgrpc::ApiCall<CreateBatchPredictionJobRequest, BatchPredictionJob> _callCreateBatchPredictionJob;
 
         private readonly gaxgrpc::ApiCall<GetBatchPredictionJobRequest, BatchPredictionJob> _callGetBatchPredictionJob;
@@ -4787,6 +5888,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteCustomJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCustomJobOperationsSettings, logger);
             DeleteDataLabelingJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataLabelingJobOperationsSettings, logger);
             DeleteHyperparameterTuningJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHyperparameterTuningJobOperationsSettings, logger);
+            DeleteNasJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNasJobOperationsSettings, logger);
             DeleteBatchPredictionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBatchPredictionJobOperationsSettings, logger);
             UpdateModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateModelDeploymentMonitoringJobOperationsSettings, logger);
             DeleteModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelDeploymentMonitoringJobOperationsSettings, logger);
@@ -4837,6 +5939,27 @@ namespace Google.Cloud.AIPlatform.V1
             _callCancelHyperparameterTuningJob = clientHelper.BuildApiCall<CancelHyperparameterTuningJobRequest, wkt::Empty>("CancelHyperparameterTuningJob", grpcClient.CancelHyperparameterTuningJobAsync, grpcClient.CancelHyperparameterTuningJob, effectiveSettings.CancelHyperparameterTuningJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelHyperparameterTuningJob);
             Modify_CancelHyperparameterTuningJobApiCall(ref _callCancelHyperparameterTuningJob);
+            _callCreateNasJob = clientHelper.BuildApiCall<CreateNasJobRequest, NasJob>("CreateNasJob", grpcClient.CreateNasJobAsync, grpcClient.CreateNasJob, effectiveSettings.CreateNasJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateNasJob);
+            Modify_CreateNasJobApiCall(ref _callCreateNasJob);
+            _callGetNasJob = clientHelper.BuildApiCall<GetNasJobRequest, NasJob>("GetNasJob", grpcClient.GetNasJobAsync, grpcClient.GetNasJob, effectiveSettings.GetNasJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNasJob);
+            Modify_GetNasJobApiCall(ref _callGetNasJob);
+            _callListNasJobs = clientHelper.BuildApiCall<ListNasJobsRequest, ListNasJobsResponse>("ListNasJobs", grpcClient.ListNasJobsAsync, grpcClient.ListNasJobs, effectiveSettings.ListNasJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNasJobs);
+            Modify_ListNasJobsApiCall(ref _callListNasJobs);
+            _callDeleteNasJob = clientHelper.BuildApiCall<DeleteNasJobRequest, lro::Operation>("DeleteNasJob", grpcClient.DeleteNasJobAsync, grpcClient.DeleteNasJob, effectiveSettings.DeleteNasJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteNasJob);
+            Modify_DeleteNasJobApiCall(ref _callDeleteNasJob);
+            _callCancelNasJob = clientHelper.BuildApiCall<CancelNasJobRequest, wkt::Empty>("CancelNasJob", grpcClient.CancelNasJobAsync, grpcClient.CancelNasJob, effectiveSettings.CancelNasJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelNasJob);
+            Modify_CancelNasJobApiCall(ref _callCancelNasJob);
+            _callGetNasTrialDetail = clientHelper.BuildApiCall<GetNasTrialDetailRequest, NasTrialDetail>("GetNasTrialDetail", grpcClient.GetNasTrialDetailAsync, grpcClient.GetNasTrialDetail, effectiveSettings.GetNasTrialDetailSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNasTrialDetail);
+            Modify_GetNasTrialDetailApiCall(ref _callGetNasTrialDetail);
+            _callListNasTrialDetails = clientHelper.BuildApiCall<ListNasTrialDetailsRequest, ListNasTrialDetailsResponse>("ListNasTrialDetails", grpcClient.ListNasTrialDetailsAsync, grpcClient.ListNasTrialDetails, effectiveSettings.ListNasTrialDetailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNasTrialDetails);
+            Modify_ListNasTrialDetailsApiCall(ref _callListNasTrialDetails);
             _callCreateBatchPredictionJob = clientHelper.BuildApiCall<CreateBatchPredictionJobRequest, BatchPredictionJob>("CreateBatchPredictionJob", grpcClient.CreateBatchPredictionJobAsync, grpcClient.CreateBatchPredictionJob, effectiveSettings.CreateBatchPredictionJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBatchPredictionJob);
             Modify_CreateBatchPredictionJobApiCall(ref _callCreateBatchPredictionJob);
@@ -4911,6 +6034,20 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_CancelHyperparameterTuningJobApiCall(ref gaxgrpc::ApiCall<CancelHyperparameterTuningJobRequest, wkt::Empty> call);
 
+        partial void Modify_CreateNasJobApiCall(ref gaxgrpc::ApiCall<CreateNasJobRequest, NasJob> call);
+
+        partial void Modify_GetNasJobApiCall(ref gaxgrpc::ApiCall<GetNasJobRequest, NasJob> call);
+
+        partial void Modify_ListNasJobsApiCall(ref gaxgrpc::ApiCall<ListNasJobsRequest, ListNasJobsResponse> call);
+
+        partial void Modify_DeleteNasJobApiCall(ref gaxgrpc::ApiCall<DeleteNasJobRequest, lro::Operation> call);
+
+        partial void Modify_CancelNasJobApiCall(ref gaxgrpc::ApiCall<CancelNasJobRequest, wkt::Empty> call);
+
+        partial void Modify_GetNasTrialDetailApiCall(ref gaxgrpc::ApiCall<GetNasTrialDetailRequest, NasTrialDetail> call);
+
+        partial void Modify_ListNasTrialDetailsApiCall(ref gaxgrpc::ApiCall<ListNasTrialDetailsRequest, ListNasTrialDetailsResponse> call);
+
         partial void Modify_CreateBatchPredictionJobApiCall(ref gaxgrpc::ApiCall<CreateBatchPredictionJobRequest, BatchPredictionJob> call);
 
         partial void Modify_GetBatchPredictionJobApiCall(ref gaxgrpc::ApiCall<GetBatchPredictionJobRequest, BatchPredictionJob> call);
@@ -4977,6 +6114,20 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteHyperparameterTuningJobRequest(ref DeleteHyperparameterTuningJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelHyperparameterTuningJobRequest(ref CancelHyperparameterTuningJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateNasJobRequest(ref CreateNasJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNasJobRequest(ref GetNasJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNasJobsRequest(ref ListNasJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteNasJobRequest(ref DeleteNasJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelNasJobRequest(ref CancelNasJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNasTrialDetailRequest(ref GetNasTrialDetailRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNasTrialDetailsRequest(ref ListNasTrialDetailsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBatchPredictionJobRequest(ref CreateBatchPredictionJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5426,6 +6577,201 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NasJob CreateNasJob(CreateNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNasJobRequest(ref request, ref callSettings);
+            return _callCreateNasJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NasJob> CreateNasJobAsync(CreateNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNasJobRequest(ref request, ref callSettings);
+            return _callCreateNasJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NasJob GetNasJob(GetNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNasJobRequest(ref request, ref callSettings);
+            return _callGetNasJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a NasJob
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NasJob> GetNasJobAsync(GetNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNasJobRequest(ref request, ref callSettings);
+            return _callGetNasJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNasJobsResponse, NasJob> ListNasJobs(ListNasJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNasJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNasJobsRequest, ListNasJobsResponse, NasJob>(_callListNasJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists NasJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNasJobsResponse, NasJob> ListNasJobsAsync(ListNasJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNasJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNasJobsRequest, ListNasJobsResponse, NasJob>(_callListNasJobs, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteNasJob</c>.</summary>
+        public override lro::OperationsClient DeleteNasJobOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteNasJob(DeleteNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNasJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteNasJob.Sync(request, callSettings), DeleteNasJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteNasJobAsync(DeleteNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNasJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteNasJob.Async(request, callSettings).ConfigureAwait(false), DeleteNasJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CancelNasJob(CancelNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelNasJobRequest(ref request, ref callSettings);
+            _callCancelNasJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a NasJob.
+        /// Starts asynchronous cancellation on the NasJob. The server
+        /// makes a best effort to cancel the job, but success is not
+        /// guaranteed. Clients can use
+        /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// job completed despite cancellation. On successful cancellation,
+        /// the NasJob is not deleted; instead it becomes a job with
+        /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`, and
+        /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+        /// `CANCELLED`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CancelNasJobAsync(CancelNasJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelNasJobRequest(ref request, ref callSettings);
+            return _callCancelNasJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NasTrialDetail GetNasTrialDetail(GetNasTrialDetailRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNasTrialDetailRequest(ref request, ref callSettings);
+            return _callGetNasTrialDetail.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a NasTrialDetail.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NasTrialDetail> GetNasTrialDetailAsync(GetNasTrialDetailRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNasTrialDetailRequest(ref request, ref callSettings);
+            return _callGetNasTrialDetail.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetails(ListNasTrialDetailsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNasTrialDetailsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNasTrialDetailsRequest, ListNasTrialDetailsResponse, NasTrialDetail>(_callListNasTrialDetails, request, callSettings);
+        }
+
+        /// <summary>
+        /// List top NasTrialDetails of a NasJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NasTrialDetail"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> ListNasTrialDetailsAsync(ListNasTrialDetailsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNasTrialDetailsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNasTrialDetailsRequest, ListNasTrialDetailsResponse, NasTrialDetail>(_callListNasTrialDetails, request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a BatchPredictionJob. A BatchPredictionJob once created will
         /// right away be attempted to start.
         /// </summary>
@@ -5799,6 +7145,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListNasJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListNasTrialDetailsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBatchPredictionJobsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5831,6 +7185,22 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<HyperparameterTuningJob> GetEnumerator() => HyperparameterTuningJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNasJobsResponse : gaxgrpc::IPageResponse<NasJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NasJob> GetEnumerator() => NasJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNasTrialDetailsResponse : gaxgrpc::IPageResponse<NasTrialDetail>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NasTrialDetail> GetEnumerator() => NasTrialDetails.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

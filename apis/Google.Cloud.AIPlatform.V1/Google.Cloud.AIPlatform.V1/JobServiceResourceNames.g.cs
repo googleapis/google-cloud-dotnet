@@ -203,6 +203,88 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class CreateNasJobRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNasJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NasJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NasJobName NasJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NasJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListNasJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteNasJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NasJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NasJobName NasJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NasJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CancelNasJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NasJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NasJobName NasJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NasJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNasTrialDetailRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::NasTrialDetailName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::NasTrialDetailName NasTrialDetailName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::NasTrialDetailName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListNasTrialDetailsRequest
+    {
+        /// <summary><see cref="NasJobName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public NasJobName ParentAsNasJobName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NasJobName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateBatchPredictionJobRequest
     {
         /// <summary>

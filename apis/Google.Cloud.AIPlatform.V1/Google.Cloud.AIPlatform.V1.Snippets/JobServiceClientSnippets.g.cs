@@ -2219,6 +2219,1099 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateNasJob</summary>
+        public void CreateNasJobRequestObject()
+        {
+            // Snippet: CreateNasJob(CreateNasJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            CreateNasJobRequest request = new CreateNasJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NasJob = new NasJob(),
+            };
+            // Make the request
+            NasJob response = jobServiceClient.CreateNasJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNasJobAsync</summary>
+        public async Task CreateNasJobRequestObjectAsync()
+        {
+            // Snippet: CreateNasJobAsync(CreateNasJobRequest, CallSettings)
+            // Additional: CreateNasJobAsync(CreateNasJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNasJobRequest request = new CreateNasJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NasJob = new NasJob(),
+            };
+            // Make the request
+            NasJob response = await jobServiceClient.CreateNasJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNasJob</summary>
+        public void CreateNasJob()
+        {
+            // Snippet: CreateNasJob(string, NasJob, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NasJob nasJob = new NasJob();
+            // Make the request
+            NasJob response = jobServiceClient.CreateNasJob(parent, nasJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNasJobAsync</summary>
+        public async Task CreateNasJobAsync()
+        {
+            // Snippet: CreateNasJobAsync(string, NasJob, CallSettings)
+            // Additional: CreateNasJobAsync(string, NasJob, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NasJob nasJob = new NasJob();
+            // Make the request
+            NasJob response = await jobServiceClient.CreateNasJobAsync(parent, nasJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNasJob</summary>
+        public void CreateNasJobResourceNames()
+        {
+            // Snippet: CreateNasJob(LocationName, NasJob, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NasJob nasJob = new NasJob();
+            // Make the request
+            NasJob response = jobServiceClient.CreateNasJob(parent, nasJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNasJobAsync</summary>
+        public async Task CreateNasJobResourceNamesAsync()
+        {
+            // Snippet: CreateNasJobAsync(LocationName, NasJob, CallSettings)
+            // Additional: CreateNasJobAsync(LocationName, NasJob, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NasJob nasJob = new NasJob();
+            // Make the request
+            NasJob response = await jobServiceClient.CreateNasJobAsync(parent, nasJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJob</summary>
+        public void GetNasJobRequestObject()
+        {
+            // Snippet: GetNasJob(GetNasJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            GetNasJobRequest request = new GetNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            NasJob response = jobServiceClient.GetNasJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJobAsync</summary>
+        public async Task GetNasJobRequestObjectAsync()
+        {
+            // Snippet: GetNasJobAsync(GetNasJobRequest, CallSettings)
+            // Additional: GetNasJobAsync(GetNasJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNasJobRequest request = new GetNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            NasJob response = await jobServiceClient.GetNasJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJob</summary>
+        public void GetNasJob()
+        {
+            // Snippet: GetNasJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            NasJob response = jobServiceClient.GetNasJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJobAsync</summary>
+        public async Task GetNasJobAsync()
+        {
+            // Snippet: GetNasJobAsync(string, CallSettings)
+            // Additional: GetNasJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            NasJob response = await jobServiceClient.GetNasJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJob</summary>
+        public void GetNasJobResourceNames()
+        {
+            // Snippet: GetNasJob(NasJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            NasJob response = jobServiceClient.GetNasJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasJobAsync</summary>
+        public async Task GetNasJobResourceNamesAsync()
+        {
+            // Snippet: GetNasJobAsync(NasJobName, CallSettings)
+            // Additional: GetNasJobAsync(NasJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            NasJob response = await jobServiceClient.GetNasJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobs</summary>
+        public void ListNasJobsRequestObject()
+        {
+            // Snippet: ListNasJobs(ListNasJobsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ListNasJobsRequest request = new ListNasJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobsAsync</summary>
+        public async Task ListNasJobsRequestObjectAsync()
+        {
+            // Snippet: ListNasJobsAsync(ListNasJobsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNasJobsRequest request = new ListNasJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobs</summary>
+        public void ListNasJobs()
+        {
+            // Snippet: ListNasJobs(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobsAsync</summary>
+        public async Task ListNasJobsAsync()
+        {
+            // Snippet: ListNasJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobs</summary>
+        public void ListNasJobsResourceNames()
+        {
+            // Snippet: ListNasJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasJobsAsync</summary>
+        public async Task ListNasJobsResourceNamesAsync()
+        {
+            // Snippet: ListNasJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListNasJobsResponse, NasJob> response = jobServiceClient.ListNasJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJob</summary>
+        public void DeleteNasJobRequestObject()
+        {
+            // Snippet: DeleteNasJob(DeleteNasJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteNasJobRequest request = new DeleteNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteNasJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteNasJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJobAsync</summary>
+        public async Task DeleteNasJobRequestObjectAsync()
+        {
+            // Snippet: DeleteNasJobAsync(DeleteNasJobRequest, CallSettings)
+            // Additional: DeleteNasJobAsync(DeleteNasJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNasJobRequest request = new DeleteNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteNasJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteNasJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJob</summary>
+        public void DeleteNasJob()
+        {
+            // Snippet: DeleteNasJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteNasJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteNasJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJobAsync</summary>
+        public async Task DeleteNasJobAsync()
+        {
+            // Snippet: DeleteNasJobAsync(string, CallSettings)
+            // Additional: DeleteNasJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteNasJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteNasJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJob</summary>
+        public void DeleteNasJobResourceNames()
+        {
+            // Snippet: DeleteNasJob(NasJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteNasJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteNasJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNasJobAsync</summary>
+        public async Task DeleteNasJobResourceNamesAsync()
+        {
+            // Snippet: DeleteNasJobAsync(NasJobName, CallSettings)
+            // Additional: DeleteNasJobAsync(NasJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteNasJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteNasJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJob</summary>
+        public void CancelNasJobRequestObject()
+        {
+            // Snippet: CancelNasJob(CancelNasJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            CancelNasJobRequest request = new CancelNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            jobServiceClient.CancelNasJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJobAsync</summary>
+        public async Task CancelNasJobRequestObjectAsync()
+        {
+            // Snippet: CancelNasJobAsync(CancelNasJobRequest, CallSettings)
+            // Additional: CancelNasJobAsync(CancelNasJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelNasJobRequest request = new CancelNasJobRequest
+            {
+                NasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            await jobServiceClient.CancelNasJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJob</summary>
+        public void CancelNasJob()
+        {
+            // Snippet: CancelNasJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            jobServiceClient.CancelNasJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJobAsync</summary>
+        public async Task CancelNasJobAsync()
+        {
+            // Snippet: CancelNasJobAsync(string, CallSettings)
+            // Additional: CancelNasJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            await jobServiceClient.CancelNasJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJob</summary>
+        public void CancelNasJobResourceNames()
+        {
+            // Snippet: CancelNasJob(NasJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            jobServiceClient.CancelNasJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelNasJobAsync</summary>
+        public async Task CancelNasJobResourceNamesAsync()
+        {
+            // Snippet: CancelNasJobAsync(NasJobName, CallSettings)
+            // Additional: CancelNasJobAsync(NasJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NasJobName name = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            await jobServiceClient.CancelNasJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetail</summary>
+        public void GetNasTrialDetailRequestObject()
+        {
+            // Snippet: GetNasTrialDetail(GetNasTrialDetailRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            GetNasTrialDetailRequest request = new GetNasTrialDetailRequest
+            {
+                NasTrialDetailName = NasTrialDetailName.FromProjectLocationNasJobNasTrialDetail("[PROJECT]", "[LOCATION]", "[NAS_JOB]", "[NAS_TRIAL_DETAIL]"),
+            };
+            // Make the request
+            NasTrialDetail response = jobServiceClient.GetNasTrialDetail(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetailAsync</summary>
+        public async Task GetNasTrialDetailRequestObjectAsync()
+        {
+            // Snippet: GetNasTrialDetailAsync(GetNasTrialDetailRequest, CallSettings)
+            // Additional: GetNasTrialDetailAsync(GetNasTrialDetailRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNasTrialDetailRequest request = new GetNasTrialDetailRequest
+            {
+                NasTrialDetailName = NasTrialDetailName.FromProjectLocationNasJobNasTrialDetail("[PROJECT]", "[LOCATION]", "[NAS_JOB]", "[NAS_TRIAL_DETAIL]"),
+            };
+            // Make the request
+            NasTrialDetail response = await jobServiceClient.GetNasTrialDetailAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetail</summary>
+        public void GetNasTrialDetail()
+        {
+            // Snippet: GetNasTrialDetail(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]/nasTrialDetails/[NAS_TRIAL_DETAIL]";
+            // Make the request
+            NasTrialDetail response = jobServiceClient.GetNasTrialDetail(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetailAsync</summary>
+        public async Task GetNasTrialDetailAsync()
+        {
+            // Snippet: GetNasTrialDetailAsync(string, CallSettings)
+            // Additional: GetNasTrialDetailAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]/nasTrialDetails/[NAS_TRIAL_DETAIL]";
+            // Make the request
+            NasTrialDetail response = await jobServiceClient.GetNasTrialDetailAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetail</summary>
+        public void GetNasTrialDetailResourceNames()
+        {
+            // Snippet: GetNasTrialDetail(NasTrialDetailName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            NasTrialDetailName name = NasTrialDetailName.FromProjectLocationNasJobNasTrialDetail("[PROJECT]", "[LOCATION]", "[NAS_JOB]", "[NAS_TRIAL_DETAIL]");
+            // Make the request
+            NasTrialDetail response = jobServiceClient.GetNasTrialDetail(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNasTrialDetailAsync</summary>
+        public async Task GetNasTrialDetailResourceNamesAsync()
+        {
+            // Snippet: GetNasTrialDetailAsync(NasTrialDetailName, CallSettings)
+            // Additional: GetNasTrialDetailAsync(NasTrialDetailName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NasTrialDetailName name = NasTrialDetailName.FromProjectLocationNasJobNasTrialDetail("[PROJECT]", "[LOCATION]", "[NAS_JOB]", "[NAS_TRIAL_DETAIL]");
+            // Make the request
+            NasTrialDetail response = await jobServiceClient.GetNasTrialDetailAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetails</summary>
+        public void ListNasTrialDetailsRequestObject()
+        {
+            // Snippet: ListNasTrialDetails(ListNasTrialDetailsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
+            {
+                ParentAsNasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetails(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasTrialDetail item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasTrialDetailsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetailsAsync</summary>
+        public async Task ListNasTrialDetailsRequestObjectAsync()
+        {
+            // Snippet: ListNasTrialDetailsAsync(ListNasTrialDetailsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNasTrialDetailsRequest request = new ListNasTrialDetailsRequest
+            {
+                ParentAsNasJobName = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetailsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasTrialDetail item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasTrialDetailsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetails</summary>
+        public void ListNasTrialDetails()
+        {
+            // Snippet: ListNasTrialDetails(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetails(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasTrialDetail item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasTrialDetailsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetailsAsync</summary>
+        public async Task ListNasTrialDetailsAsync()
+        {
+            // Snippet: ListNasTrialDetailsAsync(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/nasJobs/[NAS_JOB]";
+            // Make the request
+            PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetailsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasTrialDetail item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasTrialDetailsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetails</summary>
+        public void ListNasTrialDetailsResourceNames()
+        {
+            // Snippet: ListNasTrialDetails(NasJobName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            NasJobName parent = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            PagedEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetails(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NasTrialDetail item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNasTrialDetailsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNasTrialDetailsAsync</summary>
+        public async Task ListNasTrialDetailsResourceNamesAsync()
+        {
+            // Snippet: ListNasTrialDetailsAsync(NasJobName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NasJobName parent = NasJobName.FromProjectLocationNasJob("[PROJECT]", "[LOCATION]", "[NAS_JOB]");
+            // Make the request
+            PagedAsyncEnumerable<ListNasTrialDetailsResponse, NasTrialDetail> response = jobServiceClient.ListNasTrialDetailsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NasTrialDetail item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNasTrialDetailsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NasTrialDetail item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NasTrialDetail> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NasTrialDetail item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBatchPredictionJob</summary>
         public void CreateBatchPredictionJobRequestObject()
         {
