@@ -230,14 +230,14 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
             "EjUvc2V0dGluZ3MvdjFiZXRhMS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKn0v",
             "Y29tcG9uZW50c9pBBnBhcmVudBpRykEdc2VjdXJpdHljZW50ZXIuZ29vZ2xl",
             "YXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
-            "b3VkLXBsYXRmb3JtQrQCCjBjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
+            "b3VkLXBsYXRmb3JtQqwCCjBjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
             "dGVyLnNldHRpbmdzLnYxYmV0YTFCFFNldHRpbmdzU2VydmljZVByb3RvUAFa",
-            "VGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "c2VjdXJpdHljZW50ZXIvc2V0dGluZ3MvdjFiZXRhMTtzZXR0aW5nc/gBAaoC",
-            "LEdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5TZXR0aW5ncy5WMUJldGEx",
-            "ygIsR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFNldHRpbmdzXFYxYmV0",
-            "YTHqAjBHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6U2V0dGluZ3M6",
-            "OlYxYmV0YTFiBnByb3RvMw=="));
+            "TGNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvc2V0dGluZ3Mv",
+            "YXBpdjFiZXRhMS9zZXR0aW5nc3BiO3NldHRpbmdzcGL4AQGqAixHb29nbGUu",
+            "Q2xvdWQuU2VjdXJpdHlDZW50ZXIuU2V0dGluZ3MuVjFCZXRhMcoCLEdvb2ds",
+            "ZVxDbG91ZFxTZWN1cml0eUNlbnRlclxTZXR0aW5nc1xWMWJldGEx6gIwR29v",
+            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlNldHRpbmdzOjpWMWJldGEx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettingsReflection.Descriptor, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.DetectorReflection.Descriptor, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.SettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -43,10 +43,9 @@ namespace Google.Cloud.Run.V2 {
             "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipw",
             "Ch1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9O",
             "X0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZF",
-            "TlRfTkVXEAESDAoIU0hVVERPV04QAkJoChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52MkITVmVuZG9yU2V0dGluZ3NQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3Rv",
-            "Mw=="));
+            "TlRfTkVXEAESDAoIU0hVVERPV04QAkJbChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52MkITVmVuZG9yU2V0dGluZ3NQcm90b1ABWiljbG91ZC5nb29nbGUuY29t",
+            "L2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {

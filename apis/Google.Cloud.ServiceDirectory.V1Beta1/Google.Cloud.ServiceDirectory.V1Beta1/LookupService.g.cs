@@ -44,8 +44,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             "ZWN0b3J5Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
             "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKWAgopY29tLmdvb2dsZS5jbG91",
             "ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxYmV0YTFCEkxvb2t1cFNlcnZpY2VQcm90",
-            "b1ABWlVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3NlcnZpY2VkaXJlY3RvcnkvdjFiZXRhMTtzZXJ2aWNlZGlyZWN0b3J5",
+            "b1ABWlVjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2VkaXJlY3RvcnkvYXBp",
+            "djFiZXRhMS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2VydmljZWRpcmVjdG9yeXBi",
             "+AEBqgIlR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjFCZXRhMcoC",
             "JUdvb2dsZVxDbG91ZFxTZXJ2aWNlRGlyZWN0b3J5XFYxYmV0YTHqAihHb29n",
             "bGU6OkNsb3VkOjpTZXJ2aWNlRGlyZWN0b3J5OjpWMWJldGExYgZwcm90bzM="));

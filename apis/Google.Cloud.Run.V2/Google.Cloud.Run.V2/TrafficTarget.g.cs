@@ -37,9 +37,9 @@ namespace Google.Cloud.Run.V2 {
             "YXJnZXRBbGxvY2F0aW9uVHlwZRIuCipUUkFGRklDX1RBUkdFVF9BTExPQ0FU",
             "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABIpCiVUUkFGRklDX1RBUkdFVF9BTExP",
             "Q0FUSU9OX1RZUEVfTEFURVNUEAESKwonVFJBRkZJQ19UQVJHRVRfQUxMT0NB",
-            "VElPTl9UWVBFX1JFVklTSU9OEAJCZwoXY29tLmdvb2dsZS5jbG91ZC5ydW4u",
-            "djJCElRyYWZmaWNUYXJnZXRQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "VElPTl9UWVBFX1JFVklTSU9OEAJCWgoXY29tLmdvb2dsZS5jbG91ZC5ydW4u",
+            "djJCElRyYWZmaWNUYXJnZXRQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dv",
+            "L3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.TrafficTargetAllocationType), }, null, new pbr::GeneratedClrTypeInfo[] {
