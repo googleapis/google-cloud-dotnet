@@ -123,13 +123,13 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "djEve3BhcmVudD1wcm9qZWN0cy8qL3NjYW5Db25maWdzLyovc2NhblJ1bnMv",
             "Kn0vZmluZGluZ1R5cGVTdGF0cxpVykEhd2Vic2VjdXJpdHlzY2FubmVyLmdv",
             "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUKLAgomY29tLmdvb2dsZS5jbG91ZC53ZWJzZWN1",
-            "cml0eXNjYW5uZXIudjFCF1dlYlNlY3VyaXR5U2Nhbm5lclByb3RvUAFaVGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvd2Vi",
-            "c2VjdXJpdHlzY2FubmVyL3YxO3dlYnNlY3VyaXR5c2Nhbm5lcqoCIkdvb2ds",
-            "ZS5DbG91ZC5XZWJTZWN1cml0eVNjYW5uZXIuVjHKAiJHb29nbGVcQ2xvdWRc",
-            "V2ViU2VjdXJpdHlTY2FubmVyXFYx6gIlR29vZ2xlOjpDbG91ZDo6V2ViU2Vj",
-            "dXJpdHlTY2FubmVyOjpWMWIGcHJvdG8z"));
+            "aC9jbG91ZC1wbGF0Zm9ybUKNAgomY29tLmdvb2dsZS5jbG91ZC53ZWJzZWN1",
+            "cml0eXNjYW5uZXIudjFCF1dlYlNlY3VyaXR5U2Nhbm5lclByb3RvUAFaVmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vd2Vic2VjdXJpdHlzY2FubmVyL2FwaXYxL3dl",
+            "YnNlY3VyaXR5c2Nhbm5lcnBiO3dlYnNlY3VyaXR5c2Nhbm5lcnBiqgIiR29v",
+            "Z2xlLkNsb3VkLldlYlNlY3VyaXR5U2Nhbm5lci5WMcoCIkdvb2dsZVxDbG91",
+            "ZFxXZWJTZWN1cml0eVNjYW5uZXJcVjHqAiVHb29nbGU6OkNsb3VkOjpXZWJT",
+            "ZWN1cml0eVNjYW5uZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.CrawledUrlReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.FindingReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.FindingTypeStatsReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.ScanConfigReflection.Descriptor, global::Google.Cloud.WebSecurityScanner.V1.ScanRunReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
