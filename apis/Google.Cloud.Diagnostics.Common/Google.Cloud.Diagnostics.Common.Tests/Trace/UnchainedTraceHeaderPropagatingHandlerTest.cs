@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -180,6 +180,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Equal(value, Assert.Contains(key, _spanLabels));
         }
 
+        // HttpRequestMessage.Properties is obsolete, but that's what the support library uses, and
+        // HttpRequestMessage.Options isn't even available in .NET Framework.
+#pragma warning disable CS0618 // Type or member is obsolete
         // TODO: Use Options instead of Properties
         private static void SetOutgoingHttpTraceContext(HttpRequestMessage request, ITraceContext context)
         {
@@ -198,6 +201,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.DoesNotContain("traceId", request.Properties);
             Assert.DoesNotContain("spanId", request.Properties);
         }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         private void AssertContainsGoogleTraceHeader(HttpRequestMessage request)
         {
