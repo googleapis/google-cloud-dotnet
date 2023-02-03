@@ -222,10 +222,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -247,10 +243,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -272,10 +264,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -297,10 +285,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -336,10 +320,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -375,10 +355,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -410,10 +386,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -449,10 +421,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -488,10 +456,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
@@ -561,10 +525,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -589,10 +549,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// **Note:** [Error Reporting](/error-reporting) is a global service built
         /// on Cloud Logging and doesn't analyze logs stored
         /// in regional log buckets or logs routed to other Google Cloud projects.
-        /// 
-        /// For more information, see
-        /// [Using Error Reporting with regionalized
-        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
