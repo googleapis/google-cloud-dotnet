@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -142,7 +142,7 @@ namespace Google.Cloud.Datastore.V1
             DatastoreTransaction.Create(Client, ProjectId, NamespaceId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
 
         /// <inheritdoc/>
-        public async override Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
+        public override async Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
         {
             var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
             return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
@@ -157,7 +157,7 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public async override Task<DatastoreTransaction> BeginTransactionAsync(TransactionOptions options, CallSettings callSettings = null)
+        public override async Task<DatastoreTransaction> BeginTransactionAsync(TransactionOptions options, CallSettings callSettings = null)
         {
             var request = new BeginTransactionRequest { ProjectId = ProjectId, TransactionOptions = options };
             var response = await Client.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
@@ -175,7 +175,7 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public async override Task<IReadOnlyList<Key>> AllocateIdsAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
+        public override async Task<IReadOnlyList<Key>> AllocateIdsAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
             // TODO: Validation. All keys should be non-null, and have a filled in path element
             // until the final one, which should just have a kind. Or we could just let the server validate...
