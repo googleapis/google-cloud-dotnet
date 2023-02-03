@@ -30,10 +30,10 @@ namespace Google.Cloud.Deploy.V1 {
             "dGlmaWNhdGlvbkV2ZW50Eg8KB21lc3NhZ2UYASABKAkSDwoHam9iX3J1bhgC",
             "IAEoCRIUCgxwaXBlbGluZV91aWQYAyABKAkSEwoLcmVsZWFzZV91aWQYBCAB",
             "KAkSEwoLcm9sbG91dF91aWQYBSABKAkSEQoJdGFyZ2V0X2lkGAYgASgJEioK",
-            "BHR5cGUYByABKA4yHC5nb29nbGUuY2xvdWQuZGVwbG95LnYxLlR5cGVCfAoa",
+            "BHR5cGUYByABKA4yHC5nb29nbGUuY2xvdWQuZGVwbG95LnYxLlR5cGVCcgoa",
             "Y29tLmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCHkpvYlJ1bk5vdGlmaWNhdGlv",
-            "blBheWxvYWRQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL2RlcGxveS92MTtkZXBsb3liBnByb3RvMw=="));
+            "blBheWxvYWRQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL2RlcGxveS9h",
+            "cGl2MS9kZXBsb3lwYjtkZXBsb3lwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Deploy.V1.LogEnumsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -290,9 +290,9 @@ namespace Google.Cloud.Domains.V1Beta1 {
             "aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06cmVzZXRBdXRob3JpemF0aW9uQ29k",
             "ZToBKtpBDHJlZ2lzdHJhdGlvbhpKykEWZG9tYWlucy5nb29nbGVhcGlzLmNv",
             "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CdwogY29tLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTFCDERv",
-            "bWFpbnNQcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL2RvbWFpbnMvdjFiZXRhMTtkb21haW5zYgZwcm90bzM="));
+            "dGZvcm1CbgogY29tLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTFCDERv",
+            "bWFpbnNQcm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dvL2RvbWFpbnMvYXBp",
+            "djFiZXRhMS9kb21haW5zcGI7ZG9tYWluc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Domains.V1Beta1.ContactPrivacy), typeof(global::Google.Cloud.Domains.V1Beta1.DomainNotice), typeof(global::Google.Cloud.Domains.V1Beta1.ContactNotice), typeof(global::Google.Cloud.Domains.V1Beta1.TransferLockState), }, null, new pbr::GeneratedClrTypeInfo[] {

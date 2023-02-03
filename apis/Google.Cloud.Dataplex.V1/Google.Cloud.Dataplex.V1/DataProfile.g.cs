@@ -55,9 +55,9 @@ namespace Google.Cloud.Dataplex.V1 {
             "ASABKAESGgoSc3RhbmRhcmRfZGV2aWF0aW9uGAMgASgBEgsKA21pbhgEIAEo",
             "ARIRCglxdWFydGlsZXMYBiADKAESCwoDbWF4GAUgASgBGikKCVRvcE5WYWx1",
             "ZRINCgV2YWx1ZRgBIAEoCRINCgVjb3VudBgCIAEoA0IMCgpmaWVsZF9pbmZv",
-            "QnQKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFQcm9maWxl",
-            "UHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9kYXRhcGxleC92MTtkYXRhcGxleGIGcHJvdG8z"));
+            "QmwKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFQcm9maWxl",
+            "UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9k",
+            "YXRhcGxleHBiO2RhdGFwbGV4cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

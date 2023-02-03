@@ -227,12 +227,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNo",
             "b3ISFAoMY2hhbmdlZF90ZXh0GAIgASgJEkwKCnByb3ZlbmFuY2UYAyADKAsy",
             "NC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBy",
-            "b3ZlbmFuY2VCAhgBQggKBnNvdXJjZULqAQojY29tLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpJZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFp",
-            "L3YxYmV0YTM7ZG9jdW1lbnRhaaoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJ",
-            "LlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIi",
-            "R29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "b3ZlbmFuY2VCAhgBQggKBnNvdXJjZULkAQojY29tLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpDY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBi",
+            "O2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0",
+            "YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xl",
+            "OjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
