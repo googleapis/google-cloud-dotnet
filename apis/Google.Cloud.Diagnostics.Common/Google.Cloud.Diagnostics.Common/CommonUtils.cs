@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,13 +24,13 @@ namespace Google.Cloud.Diagnostics.Common
         internal const string AgentName = "google-cloud-csharp-diagnostics";
 
         /// <summary>A completed <see cref="Task"/>.</summary>
-        internal readonly static Task CompletedTask = Task.FromResult(false);
+        internal static readonly Task CompletedTask = Task.FromResult(false);
 
         /// <summary>
         /// The agent name <see cref="AgentName"/> and version of the agent in the
         /// format "[agent-name] [agent-version]".
         /// </summary>
-        internal readonly static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
+        internal static readonly string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
 
         /// <summary>Gets the version of the current library using reflection.</summary>
         internal static string GetVersion(System.Type type) =>

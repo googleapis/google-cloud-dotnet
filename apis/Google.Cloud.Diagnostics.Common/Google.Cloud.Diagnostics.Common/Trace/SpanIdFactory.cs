@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal sealed class SpanIdFactory
     {
         /// <summary>A mutex to the instance of <see cref="Random"/>.</summary>
-        private static object _randomMutex = new object();
+        private static readonly object _randomMutex = new object();
 
         private static readonly Random _random = new Random();
 
