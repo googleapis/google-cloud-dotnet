@@ -309,12 +309,12 @@ namespace Google.Cloud.Notebooks.V1 {
             "bnM6CWV4ZWN1dGlvbtpBHXBhcmVudCxleGVjdXRpb24sZXhlY3V0aW9uX2lk",
             "ykEeCglFeGVjdXRpb24SEU9wZXJhdGlvbk1ldGFkYXRhGkzKQRhub3RlYm9v",
             "a3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQswBCh1jb20uZ29vZ2xlLmNsb3VkLm5v",
-            "dGVib29rcy52MUIOTm90ZWJvb2tzUHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9ub3RlYm9va3MvdjE7bm90",
-            "ZWJvb2tzqgIZR29vZ2xlLkNsb3VkLk5vdGVib29rcy5WMcoCGUdvb2dsZVxD",
-            "bG91ZFxOb3RlYm9va3NcVjHqAhxHb29nbGU6OkNsb3VkOjpOb3RlYm9va3M6",
-            "OlYxYgZwcm90bzM="));
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsUBCh1jb20uZ29vZ2xlLmNsb3VkLm5v",
+            "dGVib29rcy52MUIOTm90ZWJvb2tzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9ub3RlYm9va3MvYXBpdjEvbm90ZWJvb2tzcGI7bm90ZWJvb2tzcGKq",
+            "AhlHb29nbGUuQ2xvdWQuTm90ZWJvb2tzLlYxygIZR29vZ2xlXENsb3VkXE5v",
+            "dGVib29rc1xWMeoCHEdvb2dsZTo6Q2xvdWQ6Ok5vdGVib29rczo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.DiagnosticConfigReflection.Descriptor, global::Google.Cloud.Notebooks.V1.EnvironmentReflection.Descriptor, global::Google.Cloud.Notebooks.V1.ExecutionReflection.Descriptor, global::Google.Cloud.Notebooks.V1.InstanceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.InstanceConfigReflection.Descriptor, global::Google.Cloud.Notebooks.V1.ScheduleReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Notebooks.V1.UpgradeType), }, null, new pbr::GeneratedClrTypeInfo[] {

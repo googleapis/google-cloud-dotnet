@@ -75,13 +75,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "dWFudGl0eRgGIAEoBUID4EEBEh8KEmF2YWlsYWJsZV9xdWFudGl0eRgHIAEo",
             "BUID4EEBElMKD2l0ZW1fYXR0cmlidXRlcxgIIAEoCzI1Lmdvb2dsZS5jbG91",
             "ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExLkZlYXR1cmVNYXBCA+BB",
-            "AUKfAgotY29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52",
-            "MWJldGExUAFaXWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvcmVjb21tZW5kYXRpb25lbmdpbmUvdjFiZXRhMTtyZWNvbW1l",
-            "bmRhdGlvbmVuZ2luZaICBVJFQ0FJqgIpR29vZ2xlLkNsb3VkLlJlY29tbWVu",
-            "ZGF0aW9uRW5naW5lLlYxQmV0YTHKAilHb29nbGVcQ2xvdWRcUmVjb21tZW5k",
-            "YXRpb25FbmdpbmVcVjFiZXRhMeoCLEdvb2dsZTo6Q2xvdWQ6OlJlY29tbWVu",
-            "ZGF0aW9uRW5naW5lOjpWMWJldGExYgZwcm90bzM="));
+            "AUKjAgotY29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52",
+            "MWJldGExUAFaYWNsb3VkLmdvb2dsZS5jb20vZ28vcmVjb21tZW5kYXRpb25l",
+            "bmdpbmUvYXBpdjFiZXRhMS9yZWNvbW1lbmRhdGlvbmVuZ2luZXBiO3JlY29t",
+            "bWVuZGF0aW9uZW5naW5lcGKiAgVSRUNBSaoCKUdvb2dsZS5DbG91ZC5SZWNv",
+            "bW1lbmRhdGlvbkVuZ2luZS5WMUJldGExygIpR29vZ2xlXENsb3VkXFJlY29t",
+            "bWVuZGF0aW9uRW5naW5lXFYxYmV0YTHqAixHb29nbGU6OkNsb3VkOjpSZWNv",
+            "bW1lbmRhdGlvbkVuZ2luZTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

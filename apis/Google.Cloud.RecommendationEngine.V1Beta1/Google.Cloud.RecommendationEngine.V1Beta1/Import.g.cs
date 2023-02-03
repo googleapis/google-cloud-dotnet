@@ -75,14 +75,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "bWFyeRgDIAEoCzJBLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2lu",
             "ZS52MWJldGExLlVzZXJFdmVudEltcG9ydFN1bW1hcnkiVAoWVXNlckV2ZW50",
             "SW1wb3J0U3VtbWFyeRIbChNqb2luZWRfZXZlbnRzX2NvdW50GAEgASgDEh0K",
-            "FXVuam9pbmVkX2V2ZW50c19jb3VudBgCIAEoA0KfAgotY29tLmdvb2dsZS5j",
-            "bG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExUAFaXWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmVjb21tZW5k",
-            "YXRpb25lbmdpbmUvdjFiZXRhMTtyZWNvbW1lbmRhdGlvbmVuZ2luZaICBVJF",
-            "Q0FJqgIpR29vZ2xlLkNsb3VkLlJlY29tbWVuZGF0aW9uRW5naW5lLlYxQmV0",
-            "YTHKAilHb29nbGVcQ2xvdWRcUmVjb21tZW5kYXRpb25FbmdpbmVcVjFiZXRh",
-            "MeoCLEdvb2dsZTo6Q2xvdWQ6OlJlY29tbWVuZGF0aW9uRW5naW5lOjpWMWJl",
-            "dGExYgZwcm90bzM="));
+            "FXVuam9pbmVkX2V2ZW50c19jb3VudBgCIAEoA0KjAgotY29tLmdvb2dsZS5j",
+            "bG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExUAFaYWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vcmVjb21tZW5kYXRpb25lbmdpbmUvYXBpdjFiZXRhMS9y",
+            "ZWNvbW1lbmRhdGlvbmVuZ2luZXBiO3JlY29tbWVuZGF0aW9uZW5naW5lcGKi",
+            "AgVSRUNBSaoCKUdvb2dsZS5DbG91ZC5SZWNvbW1lbmRhdGlvbkVuZ2luZS5W",
+            "MUJldGExygIpR29vZ2xlXENsb3VkXFJlY29tbWVuZGF0aW9uRW5naW5lXFYx",
+            "YmV0YTHqAixHb29nbGU6OkNsb3VkOjpSZWNvbW1lbmRhdGlvbkVuZ2luZTo6",
+            "VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.UserEventReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.RecommendationengineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

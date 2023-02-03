@@ -38,13 +38,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "TWFwLlN0cmluZ0xpc3Q6AjgBGnkKFk51bWVyaWNhbEZlYXR1cmVzRW50cnkS",
             "CwoDa2V5GAEgASgJEk4KBXZhbHVlGAIgASgLMj8uZ29vZ2xlLmNsb3VkLnJl",
             "Y29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuRmVhdHVyZU1hcC5GbG9hdExp",
-            "c3Q6AjgBQp8CCi1jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5n",
-            "aW5lLnYxYmV0YTFQAVpdZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9yZWNvbW1lbmRhdGlvbmVuZ2luZS92MWJldGExO3Jl",
-            "Y29tbWVuZGF0aW9uZW5naW5logIFUkVDQUmqAilHb29nbGUuQ2xvdWQuUmVj",
-            "b21tZW5kYXRpb25FbmdpbmUuVjFCZXRhMcoCKUdvb2dsZVxDbG91ZFxSZWNv",
-            "bW1lbmRhdGlvbkVuZ2luZVxWMWJldGEx6gIsR29vZ2xlOjpDbG91ZDo6UmVj",
-            "b21tZW5kYXRpb25FbmdpbmU6OlYxYmV0YTFiBnByb3RvMw=="));
+            "c3Q6AjgBQqMCCi1jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5n",
+            "aW5lLnYxYmV0YTFQAVphY2xvdWQuZ29vZ2xlLmNvbS9nby9yZWNvbW1lbmRh",
+            "dGlvbmVuZ2luZS9hcGl2MWJldGExL3JlY29tbWVuZGF0aW9uZW5naW5lcGI7",
+            "cmVjb21tZW5kYXRpb25lbmdpbmVwYqICBVJFQ0FJqgIpR29vZ2xlLkNsb3Vk",
+            "LlJlY29tbWVuZGF0aW9uRW5naW5lLlYxQmV0YTHKAilHb29nbGVcQ2xvdWRc",
+            "UmVjb21tZW5kYXRpb25FbmdpbmVcVjFiZXRhMeoCLEdvb2dsZTo6Q2xvdWQ6",
+            "OlJlY29tbWVuZGF0aW9uRW5naW5lOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -117,14 +117,14 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9L3Z1bG5lcmFi",
             "aWxpdHlSZXBvcnRz2kEGcGFyZW50GkvKQRdvc2NvbmZpZy5nb29nbGVhcGlz",
             "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm1CzAIKIWNvbS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBo",
-            "YUIZT3NDb25maWdab25hbFNlcnZpY2VQcm90b1ABWkVnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL29zY29uZmlnL3YxYWxw",
-            "aGE7b3Njb25maWeqAh1Hb29nbGUuQ2xvdWQuT3NDb25maWcuVjFBbHBoYcoC",
-            "HUdvb2dsZVxDbG91ZFxPc0NvbmZpZ1xWMWFscGhh6gIgR29vZ2xlOjpDbG91",
-            "ZDo6T3NDb25maWc6OlYxYWxwaGHqQV8KH2NvbXB1dGUuZ29vZ2xlYXBpcy5j",
-            "b20vSW5zdGFuY2USPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9pbnN0YW5jZXMve2luc3RhbmNlfWIGcHJvdG8z"));
+            "cGxhdGZvcm1CxAIKIWNvbS5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBo",
+            "YUIZT3NDb25maWdab25hbFNlcnZpY2VQcm90b1ABWj1jbG91ZC5nb29nbGUu",
+            "Y29tL2dvL29zY29uZmlnL2FwaXYxYWxwaGEvb3Njb25maWdwYjtvc2NvbmZp",
+            "Z3BiqgIdR29vZ2xlLkNsb3VkLk9zQ29uZmlnLlYxQWxwaGHKAh1Hb29nbGVc",
+            "Q2xvdWRcT3NDb25maWdcVjFhbHBoYeoCIEdvb2dsZTo6Q2xvdWQ6Ok9zQ29u",
+            "ZmlnOjpWMWFscGhh6kFfCh9jb21wdXRlLmdvb2dsZWFwaXMuY29tL0luc3Rh",
+            "bmNlEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "aW5zdGFuY2VzL3tpbnN0YW5jZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.InstanceOsPoliciesComplianceReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.InventoryReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.OsPolicyAssignmentReportsReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.OsPolicyAssignmentsReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));

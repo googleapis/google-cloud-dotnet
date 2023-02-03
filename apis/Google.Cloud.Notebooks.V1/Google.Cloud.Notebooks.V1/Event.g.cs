@@ -34,9 +34,9 @@ namespace Google.Cloud.Notebooks.V1 {
             "4EEBGi4KDERldGFpbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
             "KAk6AjgBIl0KCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVE",
             "EAASCAoESURMRRABEg0KCUhFQVJUQkVBVBACEgoKBkhFQUxUSBADEg8KC01B",
-            "SU5URU5BTkNFEARCcQodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFC",
-            "CkV2ZW50UHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9ub3RlYm9va3MvdjE7bm90ZWJvb2tzYgZwcm90bzM="));
+            "SU5URU5BTkNFEARCagodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFC",
+            "CkV2ZW50UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9ub3RlYm9va3Mv",
+            "YXBpdjEvbm90ZWJvb2tzcGI7bm90ZWJvb2tzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

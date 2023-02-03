@@ -39,14 +39,14 @@ namespace Google.Cloud.PhishingProtection.V1Beta1 {
             "cG9uc2UiRILT5JMCMSIsL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9w",
             "aGlzaGluZzpyZXBvcnQ6ASraQQpwYXJlbnQsdXJpGlXKQSFwaGlzaGluZ3By",
             "b3RlY3Rpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqUCCiVjb20uZ29vZ2xlLnBo",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqcCCiVjb20uZ29vZ2xlLnBo",
             "aXNoaW5ncHJvdGVjdGlvbi52MWJldGExQhdQaGlzaGluZ1Byb3RlY3Rpb25Q",
-            "cm90b1ABWllnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3BoaXNoaW5ncHJvdGVjdGlvbi92MWJldGExO3BoaXNoaW5ncHJv",
-            "dGVjdGlvbqICBEdDUFCqAidHb29nbGUuQ2xvdWQuUGhpc2hpbmdQcm90ZWN0",
-            "aW9uLlYxQmV0YTHKAidHb29nbGVcQ2xvdWRcUGhpc2hpbmdQcm90ZWN0aW9u",
-            "XFYxYmV0YTHqAipHb29nbGU6OkNsb3VkOjpQaGlzaGluZ1Byb3RlY3Rpb246",
-            "OlYxYmV0YTFiBnByb3RvMw=="));
+            "cm90b1ABWltjbG91ZC5nb29nbGUuY29tL2dvL3BoaXNoaW5ncHJvdGVjdGlv",
+            "bi9hcGl2MWJldGExL3BoaXNoaW5ncHJvdGVjdGlvbnBiO3BoaXNoaW5ncHJv",
+            "dGVjdGlvbnBiogIER0NQUKoCJ0dvb2dsZS5DbG91ZC5QaGlzaGluZ1Byb3Rl",
+            "Y3Rpb24uVjFCZXRhMcoCJ0dvb2dsZVxDbG91ZFxQaGlzaGluZ1Byb3RlY3Rp",
+            "b25cVjFiZXRhMeoCKkdvb2dsZTo6Q2xvdWQ6OlBoaXNoaW5nUHJvdGVjdGlv",
+            "bjo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

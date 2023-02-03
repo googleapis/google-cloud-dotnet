@@ -39,11 +39,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "EAISDQoJU1VDQ0VFREVEEAMSDgoKU1VDQ0VTU0ZVTBADEgoKBkZBSUxFRBAE",
             "GgIQASJxCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQ",
             "ARIKCgZERUxFVEUQAhIKCgZVUERBVEUQAxIJCgVDSEVDSxAEEhEKDVNBVkVf",
-            "U05BUFNIT1QQBRIRCg1MT0FEX1NOQVBTSE9UEAZCnAEKMWNvbS5nb29nbGUu",
+            "U05BUFNIT1QQBRIRCg1MT0FEX1NOQVBTSE9UEAZCkwEKMWNvbS5nb29nbGUu",
             "Y2xvdWQub3JjaGVzdHJhdGlvbi5haXJmbG93LnNlcnZpY2UudjFCD09wZXJh",
-            "dGlvbnNQcm90b1ABWlRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL29yY2hlc3RyYXRpb24vYWlyZmxvdy9zZXJ2aWNlL3Yx",
-            "O3NlcnZpY2ViBnByb3RvMw=="));
+            "dGlvbnNQcm90b1ABWktjbG91ZC5nb29nbGUuY29tL2dvL29yY2hlc3RyYXRp",
+            "b24vYWlyZmxvdy9zZXJ2aWNlL2FwaXYxL3NlcnZpY2VwYjtzZXJ2aWNlcGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
