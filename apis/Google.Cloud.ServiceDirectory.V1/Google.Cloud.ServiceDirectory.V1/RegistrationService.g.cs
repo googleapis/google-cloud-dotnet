@@ -177,8 +177,8 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "cnkuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoMCCiRjb20uZ29vZ2xlLmNsb3VkLnNl",
             "cnZpY2VkaXJlY3RvcnkudjFCGFJlZ2lzdHJhdGlvblNlcnZpY2VQcm90b1AB",
-            "WlBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3NlcnZpY2VkaXJlY3RvcnkvdjE7c2VydmljZWRpcmVjdG9yefgBAaoCIEdv",
+            "WlBjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2VkaXJlY3RvcnkvYXBpdjEv",
+            "c2VydmljZWRpcmVjdG9yeXBiO3NlcnZpY2VkaXJlY3RvcnlwYvgBAaoCIEdv",
             "b2dsZS5DbG91ZC5TZXJ2aWNlRGlyZWN0b3J5LlYxygIgR29vZ2xlXENsb3Vk",
             "XFNlcnZpY2VEaXJlY3RvcnlcVjHqAiNHb29nbGU6OkNsb3VkOjpTZXJ2aWNl",
             "RGlyZWN0b3J5OjpWMWIGcHJvdG8z"));

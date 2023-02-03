@@ -225,10 +225,10 @@ namespace Google.Cloud.Redis.V1Beta1 {
             "c2NoZWR1bGVfdGltZcpBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
             "SW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5BbnkaSMpBFHJlZGlzLmdvb2ds",
             "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybUJ/Ch5jb20uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0",
-            "YTFCGkNsb3VkUmVkaXNTZXJ2aWNlQmV0YVByb3RvUAFaP2dvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmVkaXMvdjFiZXRh",
-            "MTtyZWRpc2IGcHJvdG8z"));
+            "bG91ZC1wbGF0Zm9ybUJ0Ch5jb20uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0",
+            "YTFCGkNsb3VkUmVkaXNTZXJ2aWNlQmV0YVByb3RvUAFaNGNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vcmVkaXMvYXBpdjFiZXRhMS9yZWRpc3BiO3JlZGlzcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

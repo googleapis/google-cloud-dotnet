@@ -320,13 +320,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "Y2VzLyovZmluZGluZ3MvKi9zZWN1cml0eU1hcmtzfToOc2VjdXJpdHlfbWFy",
             "a3PaQQ5zZWN1cml0eV9tYXJrc9pBGnNlY3VyaXR5X21hcmtzLHVwZGF0ZV9t",
             "YXNrGlHKQR1zZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/QEK",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C+wEK",
             "KWNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExUAFa",
-            "U2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "c2VjdXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3VyaXR5Y2VudGVyqgIlR29v",
-            "Z2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFCZXRhMcoCJUdvb2dsZVxD",
-            "bG91ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHqAihHb29nbGU6OkNsb3Vk",
-            "OjpTZWN1cml0eUNlbnRlcjo6VjFwMWJldGExUABQAWIGcHJvdG8z"));
+            "UWNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjFwMWJl",
+            "dGExL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCJUdvb2ds",
+            "ZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMVAxQmV0YTHKAiVHb29nbGVcQ2xv",
+            "dWRcU2VjdXJpdHlDZW50ZXJcVjFwMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6",
+            "U2VjdXJpdHlDZW50ZXI6OlYxcDFiZXRhMVAAUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationMessageReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponseReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.FolderReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettingsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.SourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

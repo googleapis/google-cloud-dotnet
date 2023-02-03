@@ -262,13 +262,13 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
             "QU5HRUQQAxIOCgpTVVBFUlNFREVEEAQSGgoWQ0VTU0FUSU9OX09GX09QRVJB",
             "VElPThAFEhQKEENFUlRJRklDQVRFX0hPTEQQBhIXChNQUklWSUxFR0VfV0lU",
             "SERSQVdOEAcSIgoeQVRUUklCVVRFX0FVVEhPUklUWV9DT01QUk9NSVNFEAhC",
-            "nwIKK2NvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxYmV0",
-            "YTFCF1ByaXZhdGVDYVJlc291cmNlc1Byb3RvUAFaUGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHkvcHJpdmF0",
-            "ZWNhL3YxYmV0YTE7cHJpdmF0ZWNh+AEBqgInR29vZ2xlLkNsb3VkLlNlY3Vy",
-            "aXR5LlByaXZhdGVDQS5WMUJldGExygInR29vZ2xlXENsb3VkXFNlY3VyaXR5",
-            "XFByaXZhdGVDQVxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHk6",
-            "OlByaXZhdGVDQTo6VjFiZXRhMWIGcHJvdG8z"));
+            "mAIKK2NvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxYmV0",
+            "YTFCF1ByaXZhdGVDYVJlc291cmNlc1Byb3RvUAFaSWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VjdXJpdHkvcHJpdmF0ZWNhL2FwaXYxYmV0YTEvcHJpdmF0ZWNh",
+            "cGI7cHJpdmF0ZWNhcGL4AQGqAidHb29nbGUuQ2xvdWQuU2VjdXJpdHkuUHJp",
+            "dmF0ZUNBLlYxQmV0YTHKAidHb29nbGVcQ2xvdWRcU2VjdXJpdHlcUHJpdmF0",
+            "ZUNBXFYxYmV0YTHqAitHb29nbGU6OkNsb3VkOjpTZWN1cml0eTo6UHJpdmF0",
+            "ZUNBOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason), }, null, new pbr::GeneratedClrTypeInfo[] {

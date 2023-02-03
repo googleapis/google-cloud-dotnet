@@ -35,9 +35,9 @@ namespace Google.Cloud.Run.V2 {
             "dGUYBSABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tUZW1wbGF0ZUID",
             "4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
             "CToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBQmsKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhZFeGVj",
-            "dXRpb25UZW1wbGF0ZVByb3RvUAFaNmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvcnVuL3YyO3J1bmIGcHJvdG8z"));
+            "dWUYAiABKAk6AjgBQl4KF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhZFeGVj",
+            "dXRpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vcnVu",
+            "L2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

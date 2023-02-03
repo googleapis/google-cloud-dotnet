@@ -60,9 +60,9 @@ namespace Google.Cloud.Run.V2 {
             "SU5HEAwifgoPRXhlY3V0aW9uUmVhc29uEh4KGkVYRUNVVElPTl9SRUFTT05f",
             "VU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19TRVJWSUNFX1BPTExJTkdfRVJS",
             "T1IQARIWChJOT05fWkVST19FWElUX0NPREUQAhINCglDQU5DRUxMRUQQA0IJ",
-            "CgdyZWFzb25zQmMKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRp",
-            "b25Qcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3J1bi92MjtydW5iBnByb3RvMw=="));
+            "CgdyZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRp",
+            "b25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5w",
+            "YjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

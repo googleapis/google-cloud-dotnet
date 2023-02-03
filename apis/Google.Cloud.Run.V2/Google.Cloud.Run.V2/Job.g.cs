@@ -114,9 +114,9 @@ namespace Google.Cloud.Run.V2 {
             "IkqC0+STAkQiPy92Mi97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
             "Ki9qb2JzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhpGykEScnVuLmdvb2ds",
             "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybUJdChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIISm9i",
-            "UHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9ydW4vdjI7cnVuUABiBnByb3RvMw=="));
+            "bG91ZC1wbGF0Zm9ybUJQChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIISm9i",
+            "UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7",
+            "cnVucGJQAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Run.V2.ExecutionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.ExecutionTemplateReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

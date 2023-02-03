@@ -87,8 +87,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
             "dGluZ3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
             "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoACCiRjb20uZ29vZ2xlLmNsb3Vk",
             "LnJlc291cmNlc2V0dGluZ3MudjFCFVJlc291cmNlU2V0dGluZ3NQcm90b1AB",
-            "WlBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3Jlc291cmNlc2V0dGluZ3MvdjE7cmVzb3VyY2VzZXR0aW5nc/gBAaoCIEdv",
+            "WlBjbG91ZC5nb29nbGUuY29tL2dvL3Jlc291cmNlc2V0dGluZ3MvYXBpdjEv",
+            "cmVzb3VyY2VzZXR0aW5nc3BiO3Jlc291cmNlc2V0dGluZ3NwYvgBAaoCIEdv",
             "b2dsZS5DbG91ZC5SZXNvdXJjZVNldHRpbmdzLlYxygIgR29vZ2xlXENsb3Vk",
             "XFJlc291cmNlU2V0dGluZ3NcVjHqAiNHb29nbGU6OkNsb3VkOjpSZXNvdXJj",
             "ZVNldHRpbmdzOjpWMWIGcHJvdG8z"));

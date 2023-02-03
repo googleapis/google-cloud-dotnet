@@ -44,10 +44,9 @@ namespace Google.Cloud.Speech.V1 {
             "b2dsZS5jbG91ZC5zcGVlY2gudjEuQ3VzdG9tQ2xhc3MSSgoMYWJuZl9ncmFt",
             "bWFyGAQgASgLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hBZGFw",
             "dGF0aW9uLkFCTkZHcmFtbWFyGiMKC0FCTkZHcmFtbWFyEhQKDGFibmZfc3Ry",
-            "aW5ncxgBIAMoCUJ6Chpjb20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MUITU3Bl",
-            "ZWNoUmVzb3VyY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92MTtzcGVlY2j4AQGiAgNHQ1Ni",
-            "BnByb3RvMw=="));
+            "aW5ncxgBIAMoCUJwChpjb20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MUITU3Bl",
+            "ZWNoUmVzb3VyY2VQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3NwZWVj",
+            "aC9hcGl2MS9zcGVlY2hwYjtzcGVlY2hwYvgBAaICA0dDU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
