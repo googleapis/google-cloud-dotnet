@@ -43,9 +43,9 @@ namespace Google.Cloud.Notebooks.V1 {
             "QUlMRUQQBBIQCgxJTklUSUFMSVpJTkcQBRIMCghERUxFVElORxAGOmPqQWAK",
             "IW5vdGVib29rcy5nb29nbGVhcGlzLmNvbS9TY2hlZHVsZRI7cHJvamVjdHMv",
             "e3Byb2plY3R9L2xvY2F0aW9uL3tsb2NhdGlvbn0vc2NoZWR1bGVzL3tzY2hl",
-            "ZHVsZX1CdAodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFCDVNjaGVk",
-            "dWxlUHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9ub3RlYm9va3MvdjE7bm90ZWJvb2tzYgZwcm90bzM="));
+            "ZHVsZX1CbQodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFCDVNjaGVk",
+            "dWxlUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9ub3RlYm9va3MvYXBp",
+            "djEvbm90ZWJvb2tzcGI7bm90ZWJvb2tzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1.ExecutionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

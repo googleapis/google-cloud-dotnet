@@ -30,10 +30,10 @@ namespace Google.Cloud.Notebooks.V1 {
             "Cmdjc19idWNrZXQYASABKAlCA+BBAhIaCg1yZWxhdGl2ZV9wYXRoGAIgASgJ",
             "QgPgQQESIAoTcmVwYWlyX2ZsYWdfZW5hYmxlZBgDIAEoCEID4EEBEigKG3Bh",
             "Y2tldF9jYXB0dXJlX2ZsYWdfZW5hYmxlZBgEIAEoCEID4EEBEikKHGNvcHlf",
-            "aG9tZV9maWxlc19mbGFnX2VuYWJsZWQYBSABKAhCA+BBAUJ8Ch1jb20uZ29v",
+            "aG9tZV9maWxlc19mbGFnX2VuYWJsZWQYBSABKAhCA+BBAUJ1Ch1jb20uZ29v",
             "Z2xlLmNsb3VkLm5vdGVib29rcy52MUIVRGlhZ25vc3RpY0NvbmZpZ1Byb3Rv",
-            "UAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvbm90ZWJvb2tzL3YxO25vdGVib29rc2IGcHJvdG8z"));
+            "UAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vbm90ZWJvb2tzL2FwaXYxL25vdGVi",
+            "b29rc3BiO25vdGVib29rc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

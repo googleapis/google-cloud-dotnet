@@ -65,13 +65,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "cmVzLyovcGxhY2VtZW50cy8qfTpwcmVkaWN0OgEq2kEPbmFtZSx1c2VyX2V2",
             "ZW50GlfKQSNyZWNvbW1lbmRhdGlvbmVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
             "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1CnwIKLWNvbS5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
-            "djFiZXRhMVABWl1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL3JlY29tbWVuZGF0aW9uZW5naW5lL3YxYmV0YTE7cmVjb21t",
-            "ZW5kYXRpb25lbmdpbmWiAgVSRUNBSaoCKUdvb2dsZS5DbG91ZC5SZWNvbW1l",
-            "bmRhdGlvbkVuZ2luZS5WMUJldGExygIpR29vZ2xlXENsb3VkXFJlY29tbWVu",
-            "ZGF0aW9uRW5naW5lXFYxYmV0YTHqAixHb29nbGU6OkNsb3VkOjpSZWNvbW1l",
-            "bmRhdGlvbkVuZ2luZTo6VjFiZXRhMWIGcHJvdG8z"));
+            "cm1CowIKLWNvbS5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUu",
+            "djFiZXRhMVABWmFjbG91ZC5nb29nbGUuY29tL2dvL3JlY29tbWVuZGF0aW9u",
+            "ZW5naW5lL2FwaXYxYmV0YTEvcmVjb21tZW5kYXRpb25lbmdpbmVwYjtyZWNv",
+            "bW1lbmRhdGlvbmVuZ2luZXBiogIFUkVDQUmqAilHb29nbGUuQ2xvdWQuUmVj",
+            "b21tZW5kYXRpb25FbmdpbmUuVjFCZXRhMcoCKUdvb2dsZVxDbG91ZFxSZWNv",
+            "bW1lbmRhdGlvbkVuZ2luZVxWMWJldGEx6gIsR29vZ2xlOjpDbG91ZDo6UmVj",
+            "b21tZW5kYXRpb25FbmdpbmU6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
