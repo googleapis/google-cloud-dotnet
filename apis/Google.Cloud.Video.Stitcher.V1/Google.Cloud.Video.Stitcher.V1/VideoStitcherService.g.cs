@@ -193,11 +193,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "by5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbiI/gtPkkwIyEjAvdjEve25hbWU9",
             "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9saXZlU2Vzc2lvbnMvKn3aQQRuYW1l",
             "GlDKQRx2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKJAQoiY29t",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKBAQoiY29t",
             "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIZVmlkZW9TdGl0Y2hl",
-            "clNlcnZpY2VQcm90b1ABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxO3N0aXRjaGVyYgZw",
-            "cm90bzM="));
+            "clNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0",
+            "aXRjaGVyL2FwaXYxL3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.AdTagDetailsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CdnKeysReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SlatesReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.StitchDetailsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

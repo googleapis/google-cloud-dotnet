@@ -25,10 +25,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvYmF0Y2gucHJvdG8SG2dv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUJ4Ch9jb20uZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExQgpCYXRjaFByb3RvUAFaQWdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7",
-            "dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUJuCh9jb20uZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExQgpCYXRjaFByb3RvUAFaN2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vdGFsZW50L2FwaXY0YmV0YTEvdGFsZW50cGI7dGFsZW50cGKiAgND",
+            "VFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, null));

@@ -81,15 +81,15 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             "djFiZXRhMS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiPoLT5JMCHSIYL3Yx",
             "YmV0YTEvdGV4dDpzeW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9f",
             "Y29uZmlnGk/KQRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtUC",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtEC",
             "CiVjb20uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExQhFUZXh0",
-            "VG9TcGVlY2hQcm90b1ABWk1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL3RleHR0b3NwZWVjaC92MWJldGExO3RleHR0b3Nw",
-            "ZWVjaPgBAaoCIUdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjFCZXRhMcoC",
-            "IUdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hcVjFiZXRhMeoCJEdvb2dsZTo6",
-            "Q2xvdWQ6OlRleHRUb1NwZWVjaDo6VjFiZXRhMepBVQobYXV0b21sLmdvb2ds",
-            "ZWFwaXMuY29tL01vZGVsEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vbW9kZWxzL3ttb2RlbH1iBnByb3RvMw=="));
+            "VG9TcGVlY2hQcm90b1ABWkljbG91ZC5nb29nbGUuY29tL2dvL3RleHR0b3Nw",
+            "ZWVjaC9hcGl2MWJldGExL3RleHR0b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBi",
+            "+AEBqgIhR29vZ2xlLkNsb3VkLlRleHRUb1NwZWVjaC5WMUJldGExygIhR29v",
+            "Z2xlXENsb3VkXFRleHRUb1NwZWVjaFxWMWJldGEx6gIkR29vZ2xlOjpDbG91",
+            "ZDo6VGV4dFRvU3BlZWNoOjpWMWJldGEx6kFVChthdXRvbWwuZ29vZ2xlYXBp",
+            "cy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1Beta1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {

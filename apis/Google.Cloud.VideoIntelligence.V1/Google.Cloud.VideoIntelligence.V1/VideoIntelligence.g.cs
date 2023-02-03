@@ -230,14 +230,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "djEvdmlkZW9zOmFubm90YXRlOgEq2kESaW5wdXRfdXJpLGZlYXR1cmVzykEu",
             "ChVBbm5vdGF0ZVZpZGVvUmVzcG9uc2USFUFubm90YXRlVmlkZW9Qcm9ncmVz",
             "cxpUykEgdmlkZW9pbnRlbGxpZ2VuY2UuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQosC",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQowC",
             "CiVjb20uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxQh1WaWRl",
-            "b0ludGVsbGlnZW5jZVNlcnZpY2VQcm90b1ABWlJnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3ZpZGVvaW50ZWxsaWdlbmNl",
-            "L3YxO3ZpZGVvaW50ZWxsaWdlbmNlqgIhR29vZ2xlLkNsb3VkLlZpZGVvSW50",
-            "ZWxsaWdlbmNlLlYxygIhR29vZ2xlXENsb3VkXFZpZGVvSW50ZWxsaWdlbmNl",
-            "XFYx6gIkR29vZ2xlOjpDbG91ZDo6VmlkZW9JbnRlbGxpZ2VuY2U6OlYxYgZw",
-            "cm90bzM="));
+            "b0ludGVsbGlnZW5jZVNlcnZpY2VQcm90b1ABWlNjbG91ZC5nb29nbGUuY29t",
+            "L2dvL3ZpZGVvaW50ZWxsaWdlbmNlL2FwaXYxL3ZpZGVvaW50ZWxsaWdlbmNl",
+            "cGI7dmlkZW9pbnRlbGxpZ2VuY2VwYqoCIUdvb2dsZS5DbG91ZC5WaWRlb0lu",
+            "dGVsbGlnZW5jZS5WMcoCIUdvb2dsZVxDbG91ZFxWaWRlb0ludGVsbGlnZW5j",
+            "ZVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvSW50ZWxsaWdlbmNlOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {

@@ -48,9 +48,9 @@ namespace Google.Cloud.Tasks.V2 {
             "KAkSEAoIYXVkaWVuY2UYAiABKAkqcwoKSHR0cE1ldGhvZBIbChdIVFRQX01F",
             "VEhPRF9VTlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQAhIICgRIRUFE",
             "EAMSBwoDUFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhILCgdPUFRJT05T",
-            "EAdCZgoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkILVGFyZ2V0UHJvdG9Q",
-            "AVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC90YXNrcy92Mjt0YXNrc2IGcHJvdG8z"));
+            "EAdCWwoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkILVGFyZ2V0UHJvdG9Q",
+            "AVovY2xvdWQuZ29vZ2xlLmNvbS9nby90YXNrcy9hcGl2Mi90YXNrc3BiO3Rh",
+            "c2tzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2.HttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {

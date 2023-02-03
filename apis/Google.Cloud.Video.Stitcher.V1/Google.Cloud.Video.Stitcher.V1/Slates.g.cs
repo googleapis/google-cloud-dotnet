@@ -30,10 +30,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "dG8iiAEKBVNsYXRlEhEKBG5hbWUYASABKAlCA+BBAxILCgN1cmkYAiABKAk6",
             "X+pBXAoidmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9TbGF0ZRI2cHJv",
             "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NsYXRlcy97",
-            "c2xhdGV9QnsKImNvbS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjFC",
-            "C1NsYXRlc1Byb3RvUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjE7c3RpdGNoZXJiBnBy",
-            "b3RvMw=="));
+            "c2xhdGV9QnMKImNvbS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjFC",
+            "C1NsYXRlc1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3Rp",
+            "dGNoZXIvYXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -41,10 +41,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "czoBKtpBE3BhcmVudCxjbGllbnRfZXZlbnQabMpBE2pvYnMuZ29vZ2xlYXBp",
             "cy5jb23SQVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9i",
-            "c0J/Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhFFdmVudFNl",
-            "cnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJv",
-            "dG8z"));
+            "c0J1Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhFFdmVudFNl",
+            "cnZpY2VQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL3RhbGVudC9hcGl2",
+            "NGJldGExL3RhbGVudHBiO3RhbGVudHBiogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -141,10 +141,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Q0lGSUVEEAASHgoaSFRNTF9TQU5JVElaQVRJT05fRElTQUJMRUQQARIaChZT",
             "SU1QTEVfRk9STUFUVElOR19PTkxZEAIqYwoNQ29tbXV0ZU1ldGhvZBIeChpD",
             "T01NVVRFX01FVEhPRF9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQARILCgdU",
-            "UkFOU0lUEAISCwoHV0FMS0lORxADEgsKB0NZQ0xJTkcQBEJ5Ch9jb20uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQgtDb21tb25Qcm90b1ABWkFnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
-            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "UkFOU0lUEAISCwoHV0FMS0lORxADEgsKB0NZQ0xJTkcQBEJvCh9jb20uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQgtDb21tb25Qcm90b1ABWjdjbG91",
+            "ZC5nb29nbGUuY29tL2dvL3RhbGVudC9hcGl2NGJldGExL3RhbGVudHBiO3Rh",
+            "bGVudHBiogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
