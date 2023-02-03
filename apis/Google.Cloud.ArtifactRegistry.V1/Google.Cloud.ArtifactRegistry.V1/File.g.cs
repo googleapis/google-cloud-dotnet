@@ -25,36 +25,40 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MS9maWxlLnBy",
-            "b3RvEiNnb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MRoZZ29v",
-            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byKTAQoESGFzaBJACgR0eXBlGAEgASgOMjIuZ29vZ2xlLmRl",
-            "dnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaC5IYXNoVHlwZRINCgV2",
-            "YWx1ZRgCIAEoDCI6CghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZTSEEyNTYQARIHCgNNRDUQAiLPAgoERmlsZRIMCgRuYW1lGAEg",
-            "ASgJEhIKCnNpemVfYnl0ZXMYAyABKAMSOQoGaGFzaGVzGAQgAygLMikuZ29v",
-            "Z2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaBIvCgtjcmVh",
-            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
-            "dXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "Eg0KBW93bmVyGAcgASgJOnnqQXYKJGFydGlmYWN0cmVnaXN0cnkuZ29vZ2xl",
-            "YXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0vZmlsZXMve2Zp",
-            "bGV9ImsKEExpc3RGaWxlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEg4KBmZp",
-            "bHRlchgEIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
-            "IAEoCRIQCghvcmRlcl9ieRgFIAEoCSJmChFMaXN0RmlsZXNSZXNwb25zZRI4",
-            "CgVmaWxlcxgBIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lz",
-            "dHJ5LnYxLkZpbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIh4KDkdldEZp",
-            "bGVSZXF1ZXN0EgwKBG5hbWUYASABKAlC9wEKJ2NvbS5nb29nbGUuZGV2dG9v",
-            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIJRmlsZVByb3RvUAFaU2dvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvYXJ0aWZh",
-            "Y3RyZWdpc3RyeS92MTthcnRpZmFjdHJlZ2lzdHJ5qgIgR29vZ2xlLkNsb3Vk",
-            "LkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVcQ2xvdWRcQXJ0aWZhY3RS",
-            "ZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVnaXN0cnk6",
-            "OlYxYgZwcm90bzM="));
+            "b3RvEiNnb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MRofZ29v",
+            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
+            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKT",
+            "AQoESGFzaBJACgR0eXBlGAEgASgOMjIuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
+            "YWN0cmVnaXN0cnkudjEuSGFzaC5IYXNoVHlwZRINCgV2YWx1ZRgCIAEoDCI6",
+            "CghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTSEEy",
+            "NTYQARIHCgNNRDUQAiKOAwoERmlsZRIMCgRuYW1lGAEgASgJEhIKCnNpemVf",
+            "Ynl0ZXMYAyABKAMSOQoGaGFzaGVzGAQgAygLMikuZ29vZ2xlLmRldnRvb2xz",
+            "LmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaBI0CgtjcmVhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
+            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIN",
+            "CgVvd25lchgHIAEoCRIzCgpmZXRjaF90aW1lGAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDOnnqQXYKJGFydGlmYWN0cmVnaXN0cnku",
+            "Z29vZ2xlYXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0vZmls",
+            "ZXMve2ZpbGV9IpkBChBMaXN0RmlsZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEo",
+            "CUIs4EEC+kEmEiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0Zp",
+            "bGUSDgoGZmlsdGVyGAQgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
+            "X3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAUgASgJImYKEUxpc3RGaWxlc1Jl",
+            "c3BvbnNlEjgKBWZpbGVzGAEgAygLMikuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
+            "YWN0cmVnaXN0cnkudjEuRmlsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "TAoOR2V0RmlsZVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRhcnRp",
+            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0ZpbGVC9wEKJ2NvbS5nb29n",
+            "bGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIJRmlsZVByb3RvUAFa",
+            "U2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9v",
+            "bHMvYXJ0aWZhY3RyZWdpc3RyeS92MTthcnRpZmFjdHJlZ2lzdHJ5qgIgR29v",
+            "Z2xlLkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVcQ2xvdWRc",
+            "QXJ0aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0",
+            "UmVnaXN0cnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Hash), global::Google.Cloud.ArtifactRegistry.V1.Hash.Parser, new[]{ "Type", "Value" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1.Hash.Types.HashType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.File), global::Google.Cloud.ArtifactRegistry.V1.File.Parser, new[]{ "Name", "SizeBytes", "Hashes", "CreateTime", "UpdateTime", "Owner" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.File), global::Google.Cloud.ArtifactRegistry.V1.File.Parser, new[]{ "Name", "SizeBytes", "Hashes", "CreateTime", "UpdateTime", "Owner", "FetchTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListFilesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListFilesResponse.Parser, new[]{ "Files", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest), global::Google.Cloud.ArtifactRegistry.V1.GetFileRequest.Parser, new[]{ "Name" }, null, null, null, null)
@@ -368,6 +372,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       owner_ = other.owner_;
+      fetchTime_ = other.fetchTime_ != null ? other.fetchTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -427,7 +432,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The time when the File was created.
+    /// Output only. The time when the File was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -442,7 +447,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int UpdateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// The time when the File was last updated.
+    /// Output only. The time when the File was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -468,6 +473,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "fetch_time" field.</summary>
+    public const int FetchTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp fetchTime_;
+    /// <summary>
+    /// Output only. The time when the last attempt to refresh the file's data was
+    /// made. Only set when the repository is remote.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FetchTime {
+      get { return fetchTime_; }
+      set {
+        fetchTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -489,6 +510,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Owner != other.Owner) return false;
+      if (!object.Equals(FetchTime, other.FetchTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -502,6 +524,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Owner.Length != 0) hash ^= Owner.GetHashCode();
+      if (fetchTime_ != null) hash ^= FetchTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -541,6 +564,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(58);
         output.WriteString(Owner);
       }
+      if (fetchTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FetchTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -572,6 +599,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(58);
         output.WriteString(Owner);
       }
+      if (fetchTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FetchTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -597,6 +628,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (Owner.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Owner);
+      }
+      if (fetchTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FetchTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -631,6 +665,12 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
       if (other.Owner.Length != 0) {
         Owner = other.Owner;
+      }
+      if (other.fetchTime_ != null) {
+        if (fetchTime_ == null) {
+          FetchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FetchTime.MergeFrom(other.FetchTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -677,6 +717,13 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             Owner = input.ReadString();
             break;
           }
+          case 66: {
+            if (fetchTime_ == null) {
+              FetchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FetchTime);
+            break;
+          }
         }
       }
     #endif
@@ -720,6 +767,13 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 58: {
             Owner = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (fetchTime_ == null) {
+              FetchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FetchTime);
             break;
           }
         }
@@ -784,8 +838,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The name of the repository whose files will be listed. For example:
-    /// "projects/p1/locations/us-central1/repositories/repo1
+    /// Required. The name of the repository whose files will be listed. For
+    /// example: "projects/p1/locations/us-central1/repositories/repo1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1372,7 +1426,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of the file to retrieve.
+    /// Required. The name of the file to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

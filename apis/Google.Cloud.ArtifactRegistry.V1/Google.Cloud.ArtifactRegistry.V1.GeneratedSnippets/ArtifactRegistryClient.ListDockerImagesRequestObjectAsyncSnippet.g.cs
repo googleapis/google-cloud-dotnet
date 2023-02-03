@@ -38,7 +38,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListDockerImagesRequest request = new ListDockerImagesRequest { Parent = "", };
+            ListDockerImagesRequest request = new ListDockerImagesRequest
+            {
+                Parent = "",
+                OrderBy = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(request);
 

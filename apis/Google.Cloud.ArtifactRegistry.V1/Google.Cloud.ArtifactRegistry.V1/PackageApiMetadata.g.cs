@@ -60,6 +60,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             yield return SettingsReflection.Descriptor;
             yield return TagReflection.Descriptor;
             yield return VersionReflection.Descriptor;
+            yield return VpcscConfigReflection.Descriptor;
             yield return YumArtifactReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
