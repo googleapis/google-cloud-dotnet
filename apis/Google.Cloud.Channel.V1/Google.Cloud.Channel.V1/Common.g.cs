@@ -50,9 +50,9 @@ namespace Google.Cloud.Channel.V1 {
             "X3ZhbHVlGAQgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueUgAEhQKCmJvb2xf",
             "dmFsdWUYBSABKAhIAEIGCgRraW5kIkMKCUFkbWluVXNlchINCgVlbWFpbBgB",
             "IAEoCRISCgpnaXZlbl9uYW1lGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMgASgJ",
-            "QmwKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJvdG9Q",
-            "AVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9jaGFubmVsL3YxO2NoYW5uZWxiBnByb3RvMw=="));
+            "QmMKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJvdG9Q",
+            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5uZWxw",
+            "YjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

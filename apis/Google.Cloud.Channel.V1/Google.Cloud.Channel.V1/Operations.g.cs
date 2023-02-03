@@ -35,9 +35,9 @@ namespace Google.Cloud.Channel.V1 {
             "RU5USVRMRU1FTlQQCRIZChVUUkFOU0ZFUl9FTlRJVExFTUVOVFMQChIjCh9U",
             "UkFOU0ZFUl9FTlRJVExFTUVOVFNfVE9fR09PR0xFEAsSEAoMQ0hBTkdFX09G",
             "RkVSEA4SFQoRQ0hBTkdFX1BBUkFNRVRFUlMQDxIcChhQUk9WSVNJT05fQ0xP",
-            "VURfSURFTlRJVFkQEEJwChtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFC",
-            "D09wZXJhdGlvbnNQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL2NoYW5uZWwvdjE7Y2hhbm5lbGIGcHJvdG8z"));
+            "VURfSURFTlRJVFkQEEJnChtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFC",
+            "D09wZXJhdGlvbnNQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL2NoYW5u",
+            "ZWwvYXBpdjEvY2hhbm5lbHBiO2NoYW5uZWxwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

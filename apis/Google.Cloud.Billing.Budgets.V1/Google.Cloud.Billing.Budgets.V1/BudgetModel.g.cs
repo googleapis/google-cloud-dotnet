@@ -70,11 +70,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             "ZXJpb2QSKgoKc3RhcnRfZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVC",
             "A+BBAhIoCghlbmRfZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BB",
             "ASpTCg5DYWxlbmRhclBlcmlvZBIfChtDQUxFTkRBUl9QRVJJT0RfVU5TUEVD",
-            "SUZJRUQQABIJCgVNT05USBABEgsKB1FVQVJURVIQAhIICgRZRUFSEANCgQEK",
-            "I2NvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxQhBCdWRnZXRN",
-            "b2RlbFByb3RvUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvYmlsbGluZy9idWRnZXRzL3YxO2J1ZGdldHNiBnByb3Rv",
-            "Mw=="));
+            "SUZJRUQQABIJCgVNT05USBABEgsKB1FVQVJURVIQAhIICgRZRUFSEANCeAoj",
+            "Y29tLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFCEEJ1ZGdldE1v",
+            "ZGVsUHJvdG9QAVo9Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWxsaW5nL2J1ZGdl",
+            "dHMvYXBpdjEvYnVkZ2V0c3BiO2J1ZGdldHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
