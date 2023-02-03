@@ -202,9 +202,9 @@ namespace Google.Cloud.Iot.V1 {
             "YXRld2F5X2lkLGRldmljZV9pZBp0ykEXY2xvdWRpb3QuZ29vZ2xlYXBpcy5j",
             "b23SQVdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
             "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWRp",
-            "b3RCagoXY29tLmdvb2dsZS5jbG91ZC5pb3QudjFCEkRldmljZU1hbmFnZXJQ",
-            "cm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2lvdC92MTtpb3T4AQFiBnByb3RvMw=="));
+            "b3RCXQoXY29tLmdvb2dsZS5jbG91ZC5pb3QudjFCEkRldmljZU1hbmFnZXJQ",
+            "cm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2lvdC9hcGl2MS9pb3RwYjtp",
+            "b3RwYvgBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

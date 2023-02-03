@@ -82,10 +82,10 @@ namespace Google.Cloud.Gaming.V1Beta {
             "cnZlZF9yZXBsaWNhcxgDIAEoAxIQCghyZXBsaWNhcxgEIAEoAxqJAQoXRGVw",
             "bG95ZWRGbGVldEF1dG9zY2FsZXISEgoKYXV0b3NjYWxlchgBIAEoCRI7Cgtz",
             "cGVjX3NvdXJjZRgEIAEoCzImLmdvb2dsZS5jbG91ZC5nYW1pbmcudjFiZXRh",
-            "LlNwZWNTb3VyY2USHQoVZmxlZXRfYXV0b3NjYWxlcl9zcGVjGAMgASgJQmQK",
-            "HmNvbS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxYmV0YVABWkBnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2dhbWluZy92MWJl",
-            "dGE7Z2FtaW5nYgZwcm90bzM="));
+            "LlNwZWNTb3VyY2USHQoVZmxlZXRfYXV0b3NjYWxlcl9zcGVjGAMgASgJQloK",
+            "HmNvbS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxYmV0YVABWjZjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2dhbWluZy9hcGl2MWJldGEvZ2FtaW5ncGI7Z2FtaW5ncGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

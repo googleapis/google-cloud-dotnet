@@ -295,15 +295,15 @@ namespace Google.Cloud.Metastore.V1 {
             "ZXJ2aWNlcy8qL2JhY2t1cHMvKn3aQQRuYW1lykFEChVnb29nbGUucHJvdG9i",
             "dWYuRW1wdHkSK2dvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjEuT3BlcmF0aW9u",
             "TWV0YWRhdGEaTMpBGG1ldGFzdG9yZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CxgIK",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CvwIK",
             "HWNvbS5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxQg5NZXRhc3RvcmVQcm90",
-            "b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL21ldGFzdG9yZS92MTttZXRhc3RvcmXKAhlHb29nbGVcQ2xvdWRcTWV0",
-            "YXN0b3JlXFYx6kFOCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsS",
-            "LHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29ya3Mve25ldHdvcmt9",
-            "6kFhCiFjb21wdXRlLmdvb2dsZWFwaXMuY29tL1N1Ym5ldHdvcmsSPHByb2pl",
-            "Y3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259L3N1Ym5ldHdvcmtzL3tz",
-            "dWJuZXR3b3JrfWIGcHJvdG8z"));
+            "b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL21ldGFzdG9yZS9hcGl2MS9tZXRh",
+            "c3RvcmVwYjttZXRhc3RvcmVwYsoCGUdvb2dsZVxDbG91ZFxNZXRhc3RvcmVc",
+            "VjHqQU4KHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIscHJvamVj",
+            "dHMve3Byb2plY3R9L2dsb2JhbC9uZXR3b3Jrcy97bmV0d29ya33qQWEKIWNv",
+            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vU3VibmV0d29yaxI8cHJvamVjdHMve3By",
+            "b2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vc3VibmV0d29ya3Mve3N1Ym5ldHdv",
+            "cmt9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

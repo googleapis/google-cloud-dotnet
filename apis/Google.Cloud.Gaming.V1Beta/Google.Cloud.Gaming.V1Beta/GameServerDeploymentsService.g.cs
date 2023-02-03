@@ -85,10 +85,9 @@ namespace Google.Cloud.Gaming.V1Beta {
             "dGlvbnMvKi9nYW1lU2VydmVyRGVwbG95bWVudHMvKn06ZmV0Y2hEZXBsb3lt",
             "ZW50U3RhdGU6ASoaT8pBG2dhbWVzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbdJB",
             "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1CgQEKHmNvbS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxYmV0YVABWkBnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2dhbWlu",
-            "Zy92MWJldGE7Z2FtaW5nygIaR29vZ2xlXENsb3VkXEdhbWluZ1xWMWJldGFi",
-            "BnByb3RvMw=="));
+            "cm1CdwoeY29tLmdvb2dsZS5jbG91ZC5nYW1pbmcudjFiZXRhUAFaNmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZ2FtaW5nL2FwaXYxYmV0YS9nYW1pbmdwYjtnYW1p",
+            "bmdwYsoCGkdvb2dsZVxDbG91ZFxHYW1pbmdcVjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));

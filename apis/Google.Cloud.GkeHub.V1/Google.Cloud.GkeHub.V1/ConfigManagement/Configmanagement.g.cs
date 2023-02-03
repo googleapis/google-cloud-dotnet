@@ -127,9 +127,9 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
             "REVQTE9ZTUVOVF9TVEFURV9VTlNQRUNJRklFRBAAEhEKDU5PVF9JTlNUQUxM",
             "RUQQARINCglJTlNUQUxMRUQQAhIJCgVFUlJPUhADQqECCitjb20uZ29vZ2xl",
             "LmNsb3VkLmdrZWh1Yi5jb25maWdtYW5hZ2VtZW50LnYxQhVDb25maWdNYW5h",
-            "Z2VtZW50UHJvdG9QAVpXZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9na2VodWIvY29uZmlnbWFuYWdlbWVudC92MTtjb25m",
-            "aWdtYW5hZ2VtZW50qgInR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5Db25maWdN",
+            "Z2VtZW50UHJvdG9QAVpXY2xvdWQuZ29vZ2xlLmNvbS9nby9na2VodWIvY29u",
+            "ZmlnbWFuYWdlbWVudC9hcGl2MS9jb25maWdtYW5hZ2VtZW50cGI7Y29uZmln",
+            "bWFuYWdlbWVudHBiqgInR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5Db25maWdN",
             "YW5hZ2VtZW50ygInR29vZ2xlXENsb3VkXEdrZUh1YlxDb25maWdNYW5hZ2Vt",
             "ZW50XFYx6gIrR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpDb25maWdNYW5hZ2Vt",
             "ZW50OjpWMWIGcHJvdG8z"));

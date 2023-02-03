@@ -27,14 +27,14 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
             "CkRnb29nbGUvY2xvdWQvZ2tlaHViL3YxL211bHRpY2x1c3RlcmluZ3Jlc3Mv",
             "bXVsdGljbHVzdGVyaW5ncmVzcy5wcm90bxIqZ29vZ2xlLmNsb3VkLmdrZWh1",
             "Yi5tdWx0aWNsdXN0ZXJpbmdyZXNzLnYxIigKC0ZlYXR1cmVTcGVjEhkKEWNv",
-            "bmZpZ19tZW1iZXJzaGlwGAEgASgJQrYCCi5jb20uZ29vZ2xlLmNsb3VkLmdr",
+            "bmZpZ19tZW1iZXJzaGlwGAEgASgJQrkCCi5jb20uZ29vZ2xlLmNsb3VkLmdr",
             "ZWh1Yi5tdWx0aWNsdXN0ZXJpbmdyZXNzLnYxQhhNdWx0aUNsdXN0ZXJJbmdy",
-            "ZXNzUHJvdG9QAVpdZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9na2VodWIvbXVsdGljbHVzdGVyaW5ncmVzcy92MTttdWx0",
-            "aWNsdXN0ZXJpbmdyZXNzqgIqR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5NdWx0",
-            "aUNsdXN0ZXJJbmdyZXNzygIqR29vZ2xlXENsb3VkXEdrZUh1YlxNdWx0aUNs",
-            "dXN0ZXJJbmdyZXNzXFYx6gIuR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpNdWx0",
-            "aUNsdXN0ZXJJbmdyZXNzOjpWMWIGcHJvdG8z"));
+            "ZXNzUHJvdG9QAVpgY2xvdWQuZ29vZ2xlLmNvbS9nby9na2VodWIvbXVsdGlj",
+            "bHVzdGVyaW5ncmVzcy9hcGl2MS9tdWx0aWNsdXN0ZXJpbmdyZXNzcGI7bXVs",
+            "dGljbHVzdGVyaW5ncmVzc3BiqgIqR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMS5N",
+            "dWx0aUNsdXN0ZXJJbmdyZXNzygIqR29vZ2xlXENsb3VkXEdrZUh1YlxNdWx0",
+            "aUNsdXN0ZXJJbmdyZXNzXFYx6gIuR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpN",
+            "dWx0aUNsdXN0ZXJJbmdyZXNzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
