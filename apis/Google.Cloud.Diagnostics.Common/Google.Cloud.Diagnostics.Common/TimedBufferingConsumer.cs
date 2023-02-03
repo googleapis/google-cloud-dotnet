@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
         private List<T> _items = new List<T>();
 
         /// <summary>The timer to automatically flush the buffer.</summary>
-        private IThreadingTimer _timer;
+        private readonly IThreadingTimer _timer;
 
         internal TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, Action<Exception> timerExceptionHandler, IThreadingTimer timer)
             : base(consumer)

@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A timer that will automatically call a callback after every wait time interval.
     /// </summary>
-    interface IThreadingTimer : IDisposable
+    internal interface IThreadingTimer : IDisposable
     {
         /// <summary>
         /// Initialize the timer.

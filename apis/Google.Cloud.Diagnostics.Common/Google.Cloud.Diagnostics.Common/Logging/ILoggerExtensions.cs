@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -104,8 +104,8 @@ namespace Google.Cloud.Diagnostics.Common
 
         private class AugmentedLogger : ILogger
         {
-            private ILogger _innerLogger;
-            private IEnumerable<KeyValuePair<string, string>> _labels;
+            private readonly ILogger _innerLogger;
+            private readonly IEnumerable<KeyValuePair<string, string>> _labels;
 
             private AugmentedLogger(ILogger logger, IEnumerable<KeyValuePair<string, string>> labels) =>
                 (_innerLogger, _labels) = 

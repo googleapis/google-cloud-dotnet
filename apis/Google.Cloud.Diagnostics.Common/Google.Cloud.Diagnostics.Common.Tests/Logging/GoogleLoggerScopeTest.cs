@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -348,7 +348,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private class DummyKeyValuePairs : IEnumerable<KeyValuePair<string, object>>
         {
-            private IList<KeyValuePair<string, object>> _pairs = new List<KeyValuePair<string, object>>();
+            private readonly IList<KeyValuePair<string, object>> _pairs = new List<KeyValuePair<string, object>>();
 
             public void Add(string key, object value) => _pairs.Add(new KeyValuePair<string, object>(key, value));
 

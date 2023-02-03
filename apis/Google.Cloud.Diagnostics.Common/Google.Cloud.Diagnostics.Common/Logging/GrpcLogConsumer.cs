@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal sealed class GrpcLogConsumer : IConsumer<LogEntry>
     {
-        private LoggingServiceV2Client _client;
+        private readonly LoggingServiceV2Client _client;
 
         /// <param name="client">The logging client that will push logs to the Google Cloud Logging API.</param>
         public GrpcLogConsumer(LoggingServiceV2Client client)

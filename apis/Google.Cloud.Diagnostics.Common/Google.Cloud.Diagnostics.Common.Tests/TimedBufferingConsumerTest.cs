@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class TimedBufferingConsumerTest
     {
-        private static TimeSpan _waitTime = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan _waitTime = TimeSpan.FromSeconds(5);
         
         [Fact]
         public void Receive()
