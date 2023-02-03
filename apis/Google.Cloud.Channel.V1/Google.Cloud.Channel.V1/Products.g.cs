@@ -39,10 +39,10 @@ namespace Google.Cloud.Channel.V1 {
             "ZS5jbG91ZC5jaGFubmVsLnYxLk1lZGlhIlkKBU1lZGlhEg0KBXRpdGxlGAEg",
             "ASgJEg8KB2NvbnRlbnQYAiABKAkSMAoEdHlwZRgDIAEoDjIiLmdvb2dsZS5j",
             "bG91ZC5jaGFubmVsLnYxLk1lZGlhVHlwZSo9CglNZWRpYVR5cGUSGgoWTUVE",
-            "SUFfVFlQRV9VTlNQRUNJRklFRBAAEhQKEE1FRElBX1RZUEVfSU1BR0UQAUJu",
+            "SUFfVFlQRV9VTlNQRUNJRklFRBAAEhQKEE1FRElBX1RZUEVfSU1BR0UQAUJl",
             "Chtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCDVByb2R1Y3RzUHJvdG9Q",
-            "AVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9jaGFubmVsL3YxO2NoYW5uZWxiBnByb3RvMw=="));
+            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5uZWxw",
+            "YjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.MediaType), }, null, new pbr::GeneratedClrTypeInfo[] {

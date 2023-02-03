@@ -246,13 +246,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "czoBKlosIicvdjEve25hbWU9cHJvamVjdHMvKn06ZW5yb2xsRGF0YVNvdXJj",
             "ZXM6ASoaV8pBI2JpZ3F1ZXJ5ZGF0YXRyYW5zZmVyLmdvb2dsZWFwaXMuY29t",
             "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybUKPAgopY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNm",
-            "ZXIudjFCEURhdGFUcmFuc2ZlclByb3RvUAFaUWdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvZGF0YXRyYW5z",
-            "ZmVyL3YxO2RhdGF0cmFuc2ZlcqoCJUdvb2dsZS5DbG91ZC5CaWdRdWVyeS5E",
-            "YXRhVHJhbnNmZXIuVjHKAiVHb29nbGVcQ2xvdWRcQmlnUXVlcnlcRGF0YVRy",
-            "YW5zZmVyXFYx6gIpR29vZ2xlOjpDbG91ZDo6QmlncXVlcnk6OkRhdGFUcmFu",
-            "c2Zlcjo6VjFiBnByb3RvMw=="));
+            "Zm9ybUKLAgopY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNm",
+            "ZXIudjFCEURhdGFUcmFuc2ZlclByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYmlncXVlcnkvZGF0YXRyYW5zZmVyL2FwaXYxL2RhdGF0cmFuc2ZlcnBi",
+            "O2RhdGF0cmFuc2ZlcnBiqgIlR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkRhdGFU",
+            "cmFuc2Zlci5WMcoCJUdvb2dsZVxDbG91ZFxCaWdRdWVyeVxEYXRhVHJhbnNm",
+            "ZXJcVjHqAilHb29nbGU6OkNsb3VkOjpCaWdxdWVyeTo6RGF0YVRyYW5zZmVy",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

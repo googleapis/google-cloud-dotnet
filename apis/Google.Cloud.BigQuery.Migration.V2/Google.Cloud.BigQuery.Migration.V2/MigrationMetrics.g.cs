@@ -43,12 +43,12 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "ZFZhbHVlEhQKCmJvb2xfdmFsdWUYASABKAhIABIVCgtpbnQ2NF92YWx1ZRgC",
             "IAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEhYKDHN0cmluZ192YWx1",
             "ZRgEIAEoCUgAEjYKEmRpc3RyaWJ1dGlvbl92YWx1ZRgFIAEoCzIYLmdvb2ds",
-            "ZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWVC2AEKJmNvbS5nb29nbGUu",
+            "ZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWVC0QEKJmNvbS5nb29nbGUu",
             "Y2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyQhVNaWdyYXRpb25NZXRyaWNz",
-            "UHJvdG9QAVpLZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9iaWdxdWVyeS9taWdyYXRpb24vdjI7bWlncmF0aW9uqgIiR29v",
-            "Z2xlLkNsb3VkLkJpZ1F1ZXJ5Lk1pZ3JhdGlvbi5WMsoCIkdvb2dsZVxDbG91",
-            "ZFxCaWdRdWVyeVxNaWdyYXRpb25cVjJiBnByb3RvMw=="));
+            "UHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9taWdyYXRp",
+            "b24vYXBpdjIvbWlncmF0aW9ucGI7bWlncmF0aW9ucGKqAiJHb29nbGUuQ2xv",
+            "dWQuQmlnUXVlcnkuTWlncmF0aW9uLlYyygIiR29vZ2xlXENsb3VkXEJpZ1F1",
+            "ZXJ5XE1pZ3JhdGlvblxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -151,14 +151,14 @@ namespace Google.Cloud.DataFusion.V1 {
             "Y2F0aW9ucy8qL2luc3RhbmNlcy8qfTpyZXN0YXJ0OgEqykEdCghJbnN0YW5j",
             "ZRIRT3BlcmF0aW9uTWV0YWRhdGEaTcpBGWRhdGFmdXNpb24uZ29vZ2xlYXBp",
             "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtQr0CCh5jb20uZ29vZ2xlLmNsb3VkLmRhdGFmdXNpb24udjFQ",
-            "AVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9kYXRhZnVzaW9uL3YxO2RhdGFmdXNpb26qAhpHb29nbGUuQ2xvdWQuRGF0",
-            "YUZ1c2lvbi5WMcoCGkdvb2dsZVxDbG91ZFxEYXRhRnVzaW9uXFYx6gIdR29v",
-            "Z2xlOjpDbG91ZDo6RGF0YUZ1c2lvbjo6VjHqQXgKIWNsb3Vka21zLmdvb2ds",
-            "ZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5",
-            "cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
+            "LXBsYXRmb3JtQrcCCh5jb20uZ29vZ2xlLmNsb3VkLmRhdGFmdXNpb24udjFQ",
+            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhZnVzaW9uL2FwaXYxL2RhdGFm",
+            "dXNpb25wYjtkYXRhZnVzaW9ucGKqAhpHb29nbGUuQ2xvdWQuRGF0YUZ1c2lv",
+            "bi5WMcoCGkdvb2dsZVxDbG91ZFxEYXRhRnVzaW9uXFYx6gIdR29vZ2xlOjpD",
+            "bG91ZDo6RGF0YUZ1c2lvbjo6VjHqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMu",
+            "Y29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5",
+            "cHRvX2tleX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
