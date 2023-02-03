@@ -125,12 +125,12 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
             "dHVzIkCC0+STAjMSMS92MS97bmFtZT1wcm9qZWN0cy8qL2RlcGxveW1lbnRz",
             "LyovaW5zdGFsbFN0YXR1c33aQQRuYW1lGk/KQRtnc3VpdGVhZGRvbnMuZ29v",
             "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQuEBCiBjb20uZ29vZ2xlLmNsb3VkLmdzdWl0ZWFk",
-            "ZG9ucy52MUIRR1N1aXRlQWRkT25zUHJvdG9QAVpIZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9nc3VpdGVhZGRvbnMvdjE7",
-            "Z3N1aXRlYWRkb25zqgIcR29vZ2xlLkNsb3VkLkdTdWl0ZUFkZE9ucy5WMcoC",
-            "HEdvb2dsZVxDbG91ZFxHU3VpdGVBZGRPbnNcVjHqAh9Hb29nbGU6OkNsb3Vk",
-            "OjpHU3VpdGVBZGRPbnM6OlYxYgZwcm90bzM="));
+            "L2Nsb3VkLXBsYXRmb3JtQt0BCiBjb20uZ29vZ2xlLmNsb3VkLmdzdWl0ZWFk",
+            "ZG9ucy52MUIRR1N1aXRlQWRkT25zUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9nc3VpdGVhZGRvbnMvYXBpdjEvZ3N1aXRlYWRkb25zcGI7Z3N1aXRl",
+            "YWRkb25zcGKqAhxHb29nbGUuQ2xvdWQuR1N1aXRlQWRkT25zLlYxygIcR29v",
+            "Z2xlXENsb3VkXEdTdWl0ZUFkZE9uc1xWMeoCH0dvb2dsZTo6Q2xvdWQ6OkdT",
+            "dWl0ZUFkZE9uczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Script.Type.Calendar.CalendarAddonManifestReflection.Descriptor, global::Google.Apps.Script.Type.Docs.DocsAddonManifestReflection.Descriptor, global::Google.Apps.Script.Type.Drive.DriveAddonManifestReflection.Descriptor, global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor, global::Google.Apps.Script.Type.ScriptManifestReflection.Descriptor, global::Google.Apps.Script.Type.Sheets.SheetsAddonManifestReflection.Descriptor, global::Google.Apps.Script.Type.Slides.SlidesAddonManifestReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

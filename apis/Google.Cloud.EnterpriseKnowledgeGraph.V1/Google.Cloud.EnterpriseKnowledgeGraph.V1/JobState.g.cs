@@ -32,14 +32,14 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
             "RkFJTEVEEAMSFwoTSk9CX1NUQVRFX0NBTkNFTExFRBAEEiIKHkpPQl9TVEFU",
             "RV9LTk9XTEVER0VfRVhUUkFDVElPThAFEiEKHUpPQl9TVEFURV9SRUNPTl9Q",
             "UkVQUk9DRVNTSU5HEAYSGAoUSk9CX1NUQVRFX0NMVVNURVJJTkcQBxIgChxK",
-            "T0JfU1RBVEVfRVhQT1JUSU5HX0NMVVNURVJTEAhCpQIKLGNvbS5nb29nbGUu",
+            "T0JfU1RBVEVfRVhQT1JUSU5HX0NMVVNURVJTEAhCrQIKLGNvbS5nb29nbGUu",
             "Y2xvdWQuZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoLnYxQg1Kb2JTdGF0ZVBy",
-            "b3RvUAFaYGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvZW50ZXJwcmlzZWtub3dsZWRnZWdyYXBoL3YxO2VudGVycHJpc2Vr",
-            "bm93bGVkZ2VncmFwaKoCKEdvb2dsZS5DbG91ZC5FbnRlcnByaXNlS25vd2xl",
-            "ZGdlR3JhcGguVjHKAihHb29nbGVcQ2xvdWRcRW50ZXJwcmlzZUtub3dsZWRn",
-            "ZUdyYXBoXFYx6gIrR29vZ2xlOjpDbG91ZDo6RW50ZXJwcmlzZUtub3dsZWRn",
-            "ZUdyYXBoOjpWMWIGcHJvdG8z"));
+            "b3RvUAFaaGNsb3VkLmdvb2dsZS5jb20vZ28vZW50ZXJwcmlzZWtub3dsZWRn",
+            "ZWdyYXBoL2FwaXYxL2VudGVycHJpc2Vrbm93bGVkZ2VncmFwaHBiO2VudGVy",
+            "cHJpc2Vrbm93bGVkZ2VncmFwaHBiqgIoR29vZ2xlLkNsb3VkLkVudGVycHJp",
+            "c2VLbm93bGVkZ2VHcmFwaC5WMcoCKEdvb2dsZVxDbG91ZFxFbnRlcnByaXNl",
+            "S25vd2xlZGdlR3JhcGhcVjHqAitHb29nbGU6OkNsb3VkOjpFbnRlcnByaXNl",
+            "S25vd2xlZGdlR3JhcGg6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.EnterpriseKnowledgeGraph.V1.JobState), }, null, null));

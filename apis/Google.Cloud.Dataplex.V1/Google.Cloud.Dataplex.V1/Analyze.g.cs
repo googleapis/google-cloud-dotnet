@@ -95,9 +95,9 @@ namespace Google.Cloud.Dataplex.V1 {
             "AepBhQEKH2RhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SYnByb2pl",
             "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9sYWtlcy97bGFr",
             "ZX0vZW52aXJvbm1lbnRzL3tlbnZpcm9ubWVudH0vc2Vzc2lvbnMve3Nlc3Np",
-            "b259QnAKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDEFuYWx5emVQ",
-            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2RhdGFwbGV4L3YxO2RhdGFwbGV4YgZwcm90bzM="));
+            "b259QmgKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDEFuYWx5emVQ",
+            "cm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2Rh",
+            "dGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

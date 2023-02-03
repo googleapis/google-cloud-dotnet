@@ -46,12 +46,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "EhcKD3BhZ2VzX3Blcl9zaGFyZBgBIAEoBRIVCg1wYWdlc19vdmVybGFwGAIg",
             "ASgFQg0KC2Rlc3RpbmF0aW9uIkwKCU9jckNvbmZpZxIhChllbmFibGVfbmF0",
             "aXZlX3BkZl9wYXJzaW5nGAMgASgIEhwKFGFkdmFuY2VkX29jcl9vcHRpb25z",
-            "GAUgAygJQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "M0IPRG9jdW1lbnRJb1Byb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzO2RvY3Vt",
-            "ZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29v",
-            "Z2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6",
-            "OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
+            "GAUgAygJQuYBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
+            "M0IPRG9jdW1lbnRJb1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9j",
+            "dW1lbnRhaS9hcGl2MWJldGEzL2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKq",
+            "Ah9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENs",
+            "b3VkXERvY3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3Vt",
+            "ZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -89,9 +89,9 @@ namespace Google.Cloud.Dataproc.V1 {
             "B0pVUFlURVIQARIKCgZQUkVTVE8QBhIKCgZSQU5HRVIQDBIICgRTT0xSEAoS",
             "DAoIWkVQUEVMSU4QBBINCglaT09LRUVQRVIQCCpKCg1GYWlsdXJlQWN0aW9u",
             "Eh4KGkZBSUxVUkVfQUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJTk9fQUNUSU9O",
-            "EAESCgoGREVMRVRFEAJCbwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
-            "MUILU2hhcmVkUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC9kYXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
+            "EAESCgoGREVMRVRFEAJCZwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MUILU2hhcmVkUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJv",
+            "Yy9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {

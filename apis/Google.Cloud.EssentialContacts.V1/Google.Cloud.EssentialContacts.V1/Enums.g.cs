@@ -31,13 +31,13 @@ namespace Google.Cloud.EssentialContacts.V1 {
             "SVRZEAUSDQoJVEVDSE5JQ0FMEAYSCwoHQklMTElORxAHEgkKBUxFR0FMEAgS",
             "EwoPUFJPRFVDVF9VUERBVEVTEAkSFwoTVEVDSE5JQ0FMX0lOQ0lERU5UUxAK",
             "KksKD1ZhbGlkYXRpb25TdGF0ZRIgChxWQUxJREFUSU9OX1NUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASCQoFVkFMSUQQARILCgdJTlZBTElEEAJC+AEKJWNvbS5nb29n",
-            "bGUuY2xvdWQuZXNzZW50aWFsY29udGFjdHMudjFCCkVudW1zUHJvdG9QAVpS",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9l",
-            "c3NlbnRpYWxjb250YWN0cy92MTtlc3NlbnRpYWxjb250YWN0c6oCIUdvb2ds",
-            "ZS5DbG91ZC5Fc3NlbnRpYWxDb250YWN0cy5WMcoCIUdvb2dsZVxDbG91ZFxF",
-            "c3NlbnRpYWxDb250YWN0c1xWMeoCJEdvb2dsZTo6Q2xvdWQ6OkVzc2VudGlh",
-            "bENvbnRhY3RzOjpWMWIGcHJvdG8z"));
+            "Q0lGSUVEEAASCQoFVkFMSUQQARILCgdJTlZBTElEEAJC+QEKJWNvbS5nb29n",
+            "bGUuY2xvdWQuZXNzZW50aWFsY29udGFjdHMudjFCCkVudW1zUHJvdG9QAVpT",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9lc3NlbnRpYWxjb250YWN0cy9hcGl2MS9l",
+            "c3NlbnRpYWxjb250YWN0c3BiO2Vzc2VudGlhbGNvbnRhY3RzcGKqAiFHb29n",
+            "bGUuQ2xvdWQuRXNzZW50aWFsQ29udGFjdHMuVjHKAiFHb29nbGVcQ2xvdWRc",
+            "RXNzZW50aWFsQ29udGFjdHNcVjHqAiRHb29nbGU6OkNsb3VkOjpFc3NlbnRp",
+            "YWxDb250YWN0czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.EssentialContacts.V1.NotificationCategory), typeof(global::Google.Cloud.EssentialContacts.V1.ValidationState), }, null, null));

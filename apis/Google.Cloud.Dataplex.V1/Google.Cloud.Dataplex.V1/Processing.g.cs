@@ -36,10 +36,10 @@ namespace Google.Cloud.Dataplex.V1 {
             "AQoLU2Nhbm5lZERhdGESUwoRaW5jcmVtZW50YWxfZmllbGQYASABKAsyNi5n",
             "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGEuSW5jcmVtZW50",
             "YWxGaWVsZEgAGj0KEEluY3JlbWVudGFsRmllbGQSDQoFZmllbGQYASABKAkS",
-            "DQoFc3RhcnQYAiABKAkSCwoDZW5kGAMgASgJQgwKCmRhdGFfcmFuZ2VCcwoc",
+            "DQoFc3RhcnQYAiABKAkSCwoDZW5kGAMgASgJQgwKCmRhdGFfcmFuZ2VCawoc",
             "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIPUHJvY2Vzc2luZ1Byb3Rv",
-            "UAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvZGF0YXBsZXgvdjE7ZGF0YXBsZXhiBnByb3RvMw=="));
+            "UAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBs",
+            "ZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
