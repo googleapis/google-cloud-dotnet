@@ -192,7 +192,11 @@ namespace Google.Cloud.Storage.V1.Tests
         // internal. Fake it for now. An alternative might be to use reflection, but that's brittle too.
         private static void MaybeIntercept(HttpRequestMessage request, HttpResponseMessage response)
         {
+            // HttpRequestMessage.Properties is obsolete, but that's what the support library uses, and
+            // HttpRequestMessage.Options isn't even available in .NET Framework.
+#pragma warning disable CS0618
             var provider = request.Properties[ConfigurableMessageHandler.ResponseStreamInterceptorProviderKey] as Func<HttpResponseMessage, StreamInterceptor>;
+#pragma warning restore CS0618
             if (provider == null)
             {
                 return;
