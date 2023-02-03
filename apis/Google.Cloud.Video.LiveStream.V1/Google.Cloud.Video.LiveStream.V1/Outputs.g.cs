@@ -77,12 +77,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "dF9jaGFubmVsGAMgASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBCABKAVC",
             "A+BBAiIgCgpUZXh0U3RyZWFtEhIKBWNvZGVjGAEgASgJQgPgQQIiRgoPU2Vn",
             "bWVudFNldHRpbmdzEjMKEHNlZ21lbnRfZHVyYXRpb24YASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb25C7wEKJGNvbS5nb29nbGUuY2xvdWQudmlk",
-            "ZW8ubGl2ZXN0cmVhbS52MUIMT3V0cHV0c1Byb3RvUAFaSmdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdmlkZW8vbGl2ZXN0",
-            "cmVhbS92MTtsaXZlc3RyZWFtqgIgR29vZ2xlLkNsb3VkLlZpZGVvLkxpdmVT",
-            "dHJlYW0uVjHKAiBHb29nbGVcQ2xvdWRcVmlkZW9cTGl2ZVN0cmVhbVxWMeoC",
-            "JEdvb2dsZTo6Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
+            "bGUucHJvdG9idWYuRHVyYXRpb25C6QEKJGNvbS5nb29nbGUuY2xvdWQudmlk",
+            "ZW8ubGl2ZXN0cmVhbS52MUIMT3V0cHV0c1Byb3RvUAFaRGNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vdmlkZW8vbGl2ZXN0cmVhbS9hcGl2MS9saXZlc3RyZWFtcGI7",
+            "bGl2ZXN0cmVhbXBiqgIgR29vZ2xlLkNsb3VkLlZpZGVvLkxpdmVTdHJlYW0u",
+            "VjHKAiBHb29nbGVcQ2xvdWRcVmlkZW9cTGl2ZVN0cmVhbVxWMeoCJEdvb2ds",
+            "ZTo6Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

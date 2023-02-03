@@ -51,10 +51,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "dmljZV9hY2NvdW50X2VtYWlsGAEgASgJEhAKCGF1ZGllbmNlGAIgASgJKnMK",
             "Ckh0dHBNZXRob2QSGwoXSFRUUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIICgRQ",
             "T1NUEAESBwoDR0VUEAISCAoESEVBRBADEgcKA1BVVBAEEgoKBkRFTEVURRAF",
-            "EgkKBVBBVENIEAYSCwoHT1BUSU9OUxAHQnAKHmNvbS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhM0ILVGFyZ2V0UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YXNrcy92MmJldGEzO3Rh",
-            "c2tzYgZwcm90bzM="));
+            "EgkKBVBBVENIEAYSCwoHT1BUSU9OUxAHQmUKHmNvbS5nb29nbGUuY2xvdWQu",
+            "dGFza3MudjJiZXRhM0ILVGFyZ2V0UHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby90YXNrcy9hcGl2MmJldGEzL3Rhc2tzcGI7dGFza3NwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2Beta3.HttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {

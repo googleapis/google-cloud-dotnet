@@ -832,12 +832,12 @@ namespace Google.Cloud.VMMigration.V1 {
             "Il2C0+STAlASTi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Nv",
             "dXJjZXMvKi9taWdyYXRpbmdWbXMvKi9yZXBsaWNhdGlvbkN5Y2xlcy8qfdpB",
             "BG5hbWUaTspBGnZtbWlncmF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULaAQof",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULVAQof",
             "Y29tLmdvb2dsZS5jbG91ZC52bW1pZ3JhdGlvbi52MUIQVm1NaWdyYXRpb25Q",
-            "cm90b1ABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3ZtbWlncmF0aW9uL3YxO3ZtbWlncmF0aW9uqgIbR29vZ2xlLkNs",
-            "b3VkLlZNTWlncmF0aW9uLlYxygIbR29vZ2xlXENsb3VkXFZNTWlncmF0aW9u",
-            "XFYx6gIeR29vZ2xlOjpDbG91ZDo6Vk1NaWdyYXRpb246OlYxYgZwcm90bzM="));
+            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL3ZtbWlncmF0aW9uL2FwaXYx",
+            "L3ZtbWlncmF0aW9ucGI7dm1taWdyYXRpb25wYqoCG0dvb2dsZS5DbG91ZC5W",
+            "TU1pZ3JhdGlvbi5WMcoCG0dvb2dsZVxDbG91ZFxWTU1pZ3JhdGlvblxWMeoC",
+            "Hkdvb2dsZTo6Q2xvdWQ6OlZNTWlncmF0aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VMMigration.V1.UtilizationReportView), typeof(global::Google.Cloud.VMMigration.V1.MigratingVmView), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineDiskType), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineLicenseType), typeof(global::Google.Cloud.VMMigration.V1.ComputeEngineBootOption), }, null, new pbr::GeneratedClrTypeInfo[] {

@@ -48,10 +48,9 @@ namespace Google.Cloud.Tasks.V2 {
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlzcGF0Y2hfdGltZRgCIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcmVzcG9uc2VfdGlt",
             "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoPcmVzcG9u",
-            "c2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCZAoZY29tLmdv",
-            "b2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3RvUAFaOmdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjI7dGFz",
-            "a3NiBnByb3RvMw=="));
+            "c2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCWQoZY29tLmdv",
+            "b2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3RvUAFaL2Nsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vdGFza3MvYXBpdjIvdGFza3NwYjt0YXNrc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
