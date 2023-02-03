@@ -47,7 +47,9 @@ namespace Google.Cloud.Storage.V1
                 504 // Gateway timeout
         };
         private static readonly RetryHandler s_instance = new RetryHandler();
-        private static double delayMultiplier;
+        private static double backoffMultiplier;
+        private static TimeSpan initialBackoff = TimeSpan.FromSeconds(0);
+        private static TimeSpan maxBackoff;
 
         private RetryHandler() { }
 
@@ -62,7 +64,9 @@ namespace Google.Cloud.Storage.V1
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
         {
             request.AddUnsuccessfulResponseHandler(s_instance);
-            delayMultiplier = options.RetryTimings.BackoffMultiplier;
+            backoffMultiplier = options.RetryTimings.BackoffMultiplier;
+            initialBackoff = options.RetryTimings.InitialBackoff;
+            maxBackoff = options.RetryTimings.MaxBackoff;
         }
 
         // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
@@ -76,11 +80,20 @@ namespace Google.Cloud.Storage.V1
             {
                 return false;
             }
-            int power = Math.Min(args.CurrentFailedTry - 1, 5);
-            if (delayMultiplier != 0)
+
+            if (args.CurrentFailedTry == 1)
             {
-                power = (int)delayMultiplier;
+                await Task.Delay(initialBackoff, args.CancellationToken).ConfigureAwait(false);
             }
+            else if (args.CurrentFailedTry > 1)
+            {
+                double del = initialBackoff.TotalSeconds + (args.CurrentFailedTry * backoffMultiplier);
+                TimeSpan fin = TimeSpan.FromSeconds(del);
+                TimeSpan temp = (fin < initialBackoff) ? initialBackoff : (fin > maxBackoff) ? maxBackoff : fin;
+                await Task.Delay(temp, args.CancellationToken).ConfigureAwait(false);
+            }
+
+            int power = Math.Min(args.CurrentFailedTry - 1, 5);
             // The first failure will have args.CurrentFailedTry set to 1,
             // whereas we want the first delay to be 1 second. We use Math.Min on the power
             // rather than on the result to obtain a max retry of 32 seconds without risking
