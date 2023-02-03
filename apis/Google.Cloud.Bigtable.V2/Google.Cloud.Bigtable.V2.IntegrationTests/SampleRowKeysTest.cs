@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All rights reserved.
+// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             var stream = client.SampleRowKeys(tableName);
 
-            BigtableByteString previousRowKey;
+            BigtableByteString previousRowKey = default;
             long previousByteOffset = 0;
             bool hasResponses = false;
             while (await stream.GrpcCall.ResponseStream.MoveNext(default))
@@ -72,7 +72,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             Assert.NotEmpty(samples);
 
-            BigtableByteString previousRowKey;
+            BigtableByteString previousRowKey = default;
             long previousByteOffset = 0;
             foreach(var sample in samples)
             {
@@ -97,7 +97,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             Assert.NotEmpty(samples);
 
-            BigtableByteString previousRowKey;
+            BigtableByteString previousRowKey = default;
             long previousByteOffset = 0;
             foreach(var sample in samples)
             {
