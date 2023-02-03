@@ -153,13 +153,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
             "dGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9waXBlbGluZXM6",
             "cnVuOgEqykEfChNSdW5QaXBlbGluZVJlc3BvbnNlEghNZXRhZGF0YRpPykEb",
             "bGlmZXNjaWVuY2VzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL5AQokY29tLmdvb2ds",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL1AQokY29tLmdvb2ds",
             "ZS5jbG91ZC5saWZlc2NpZW5jZXMudjJiZXRhQg5Xb3JrZmxvd3NQcm90b1AB",
-            "Wkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L2xpZmVzY2llbmNlcy92MmJldGE7bGlmZXNjaWVuY2VzogIEQ0xTV6oCIEdv",
-            "b2dsZS5DbG91ZC5MaWZlU2NpZW5jZXMuVjJCZXRhygIgR29vZ2xlXENsb3Vk",
-            "XExpZmVTY2llbmNlc1xWMmJldGHqAiNHb29nbGU6OkNsb3VkOjpMaWZlU2Np",
-            "ZW5jZXM6OlYyYmV0YWIGcHJvdG8z"));
+            "WkhjbG91ZC5nb29nbGUuY29tL2dvL2xpZmVzY2llbmNlcy9hcGl2MmJldGEv",
+            "bGlmZXNjaWVuY2VzcGI7bGlmZXNjaWVuY2VzcGKiAgRDTFNXqgIgR29vZ2xl",
+            "LkNsb3VkLkxpZmVTY2llbmNlcy5WMkJldGHKAiBHb29nbGVcQ2xvdWRcTGlm",
+            "ZVNjaWVuY2VzXFYyYmV0YeoCI0dvb2dsZTo6Q2xvdWQ6OkxpZmVTY2llbmNl",
+            "czo6VjJiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

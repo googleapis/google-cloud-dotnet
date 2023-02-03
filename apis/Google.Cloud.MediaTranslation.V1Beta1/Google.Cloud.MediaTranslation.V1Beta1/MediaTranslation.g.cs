@@ -61,9 +61,9 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             "QR9tZWRpYXRyYW5zbGF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
             "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKZAgopY29t",
             "Lmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTFCFU1lZGlh",
-            "VHJhbnNsYXRpb25Qcm90b1ABWlVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL21lZGlhdHJhbnNsYXRpb24vdjFiZXRhMTtt",
-            "ZWRpYXRyYW5zbGF0aW9u+AEBqgIlR29vZ2xlLkNsb3VkLk1lZGlhVHJhbnNs",
+            "VHJhbnNsYXRpb25Qcm90b1ABWlVjbG91ZC5nb29nbGUuY29tL2dvL21lZGlh",
+            "dHJhbnNsYXRpb24vYXBpdjFiZXRhMS9tZWRpYXRyYW5zbGF0aW9ucGI7bWVk",
+            "aWF0cmFuc2xhdGlvbnBi+AEBqgIlR29vZ2xlLkNsb3VkLk1lZGlhVHJhbnNs",
             "YXRpb24uVjFCZXRhMcoCJUdvb2dsZVxDbG91ZFxNZWRpYVRyYW5zbGF0aW9u",
             "XFYxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpNZWRpYVRyYW5zbGF0aW9uOjpW",
             "MWJldGExYgZwcm90bzM="));

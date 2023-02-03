@@ -108,10 +108,10 @@ namespace Google.Cloud.Iot.V1 {
             "TElDX0tFWV9DRVJUSUZJQ0FURV9GT1JNQVQQABIYChRYNTA5X0NFUlRJRklD",
             "QVRFX1BFTRABKnYKD1B1YmxpY0tleUZvcm1hdBIhCh1VTlNQRUNJRklFRF9Q",
             "VUJMSUNfS0VZX0ZPUk1BVBAAEgsKB1JTQV9QRU0QAxIQCgxSU0FfWDUwOV9Q",
-            "RU0QARINCglFUzI1Nl9QRU0QAhISCg5FUzI1Nl9YNTA5X1BFTRAEQmYKF2Nv",
-            "bS5nb29nbGUuY2xvdWQuaW90LnYxQg5SZXNvdXJjZXNQcm90b1ABWjZnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2lvdC92",
-            "MTtpb3T4AQFiBnByb3RvMw=="));
+            "RU0QARINCglFUzI1Nl9QRU0QAhISCg5FUzI1Nl9YNTA5X1BFTRAEQlkKF2Nv",
+            "bS5nb29nbGUuY2xvdWQuaW90LnYxQg5SZXNvdXJjZXNQcm90b1ABWiljbG91",
+            "ZC5nb29nbGUuY29tL2dvL2lvdC9hcGl2MS9pb3RwYjtpb3RwYvgBAWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Iot.V1.MqttState), typeof(global::Google.Cloud.Iot.V1.HttpState), typeof(global::Google.Cloud.Iot.V1.LogLevel), typeof(global::Google.Cloud.Iot.V1.GatewayType), typeof(global::Google.Cloud.Iot.V1.GatewayAuthMethod), typeof(global::Google.Cloud.Iot.V1.PublicKeyCertificateFormat), typeof(global::Google.Cloud.Iot.V1.PublicKeyFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
