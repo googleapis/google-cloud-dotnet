@@ -38,7 +38,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListDockerImagesRequest request = new ListDockerImagesRequest { Parent = "", };
+            ListDockerImagesRequest request = new ListDockerImagesRequest
+            {
+                Parent = "",
+                OrderBy = "",
+            };
             // Make the request
             PagedEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImages(request);
 
@@ -83,7 +87,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListDockerImagesRequest request = new ListDockerImagesRequest { Parent = "", };
+            ListDockerImagesRequest request = new ListDockerImagesRequest
+            {
+                Parent = "",
+                OrderBy = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(request);
 
@@ -295,6 +303,1095 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             DockerImageName name = DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]");
             // Make the request
             DockerImage response = await artifactRegistryClient.GetDockerImageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifacts</summary>
+        public void ListMavenArtifactsRequestObject()
+        {
+            // Snippet: ListMavenArtifacts(ListMavenArtifactsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MavenArtifact item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifactsAsync</summary>
+        public async Task ListMavenArtifactsRequestObjectAsync()
+        {
+            // Snippet: ListMavenArtifactsAsync(ListMavenArtifactsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MavenArtifact item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifacts</summary>
+        public void ListMavenArtifacts()
+        {
+            // Snippet: ListMavenArtifacts(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MavenArtifact item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifactsAsync</summary>
+        public async Task ListMavenArtifactsAsync()
+        {
+            // Snippet: ListMavenArtifactsAsync(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MavenArtifact item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifacts</summary>
+        public void ListMavenArtifactsResourceNames()
+        {
+            // Snippet: ListMavenArtifacts(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MavenArtifact item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMavenArtifactsAsync</summary>
+        public async Task ListMavenArtifactsResourceNamesAsync()
+        {
+            // Snippet: ListMavenArtifactsAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MavenArtifact item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MavenArtifact item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MavenArtifact item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifact</summary>
+        public void GetMavenArtifactRequestObject()
+        {
+            // Snippet: GetMavenArtifact(GetMavenArtifactRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            GetMavenArtifactRequest request = new GetMavenArtifactRequest
+            {
+                MavenArtifactName = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
+            };
+            // Make the request
+            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifactAsync</summary>
+        public async Task GetMavenArtifactRequestObjectAsync()
+        {
+            // Snippet: GetMavenArtifactAsync(GetMavenArtifactRequest, CallSettings)
+            // Additional: GetMavenArtifactAsync(GetMavenArtifactRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMavenArtifactRequest request = new GetMavenArtifactRequest
+            {
+                MavenArtifactName = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
+            };
+            // Make the request
+            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifact</summary>
+        public void GetMavenArtifact()
+        {
+            // Snippet: GetMavenArtifact(string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/mavenArtifacts/[MAVEN_ARTIFACT]";
+            // Make the request
+            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifactAsync</summary>
+        public async Task GetMavenArtifactAsync()
+        {
+            // Snippet: GetMavenArtifactAsync(string, CallSettings)
+            // Additional: GetMavenArtifactAsync(string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/mavenArtifacts/[MAVEN_ARTIFACT]";
+            // Make the request
+            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifact</summary>
+        public void GetMavenArtifactResourceNames()
+        {
+            // Snippet: GetMavenArtifact(MavenArtifactName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            MavenArtifactName name = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
+            // Make the request
+            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMavenArtifactAsync</summary>
+        public async Task GetMavenArtifactResourceNamesAsync()
+        {
+            // Snippet: GetMavenArtifactAsync(MavenArtifactName, CallSettings)
+            // Additional: GetMavenArtifactAsync(MavenArtifactName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            MavenArtifactName name = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
+            // Make the request
+            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackages</summary>
+        public void ListNpmPackagesRequestObject()
+        {
+            // Snippet: ListNpmPackages(ListNpmPackagesRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NpmPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackagesAsync</summary>
+        public async Task ListNpmPackagesRequestObjectAsync()
+        {
+            // Snippet: ListNpmPackagesAsync(ListNpmPackagesRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNpmPackagesRequest request = new ListNpmPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NpmPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackages</summary>
+        public void ListNpmPackages()
+        {
+            // Snippet: ListNpmPackages(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NpmPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackagesAsync</summary>
+        public async Task ListNpmPackagesAsync()
+        {
+            // Snippet: ListNpmPackagesAsync(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NpmPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackages</summary>
+        public void ListNpmPackagesResourceNames()
+        {
+            // Snippet: ListNpmPackages(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NpmPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNpmPackagesAsync</summary>
+        public async Task ListNpmPackagesResourceNamesAsync()
+        {
+            // Snippet: ListNpmPackagesAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NpmPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NpmPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NpmPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackage</summary>
+        public void GetNpmPackageRequestObject()
+        {
+            // Snippet: GetNpmPackage(GetNpmPackageRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            GetNpmPackageRequest request = new GetNpmPackageRequest
+            {
+                NpmPackageName = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
+            };
+            // Make the request
+            NpmPackage response = artifactRegistryClient.GetNpmPackage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackageAsync</summary>
+        public async Task GetNpmPackageRequestObjectAsync()
+        {
+            // Snippet: GetNpmPackageAsync(GetNpmPackageRequest, CallSettings)
+            // Additional: GetNpmPackageAsync(GetNpmPackageRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNpmPackageRequest request = new GetNpmPackageRequest
+            {
+                NpmPackageName = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
+            };
+            // Make the request
+            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackage</summary>
+        public void GetNpmPackage()
+        {
+            // Snippet: GetNpmPackage(string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/npmPackages/[NPM_PACKAGE]";
+            // Make the request
+            NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackageAsync</summary>
+        public async Task GetNpmPackageAsync()
+        {
+            // Snippet: GetNpmPackageAsync(string, CallSettings)
+            // Additional: GetNpmPackageAsync(string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/npmPackages/[NPM_PACKAGE]";
+            // Make the request
+            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackage</summary>
+        public void GetNpmPackageResourceNames()
+        {
+            // Snippet: GetNpmPackage(NpmPackageName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            NpmPackageName name = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
+            // Make the request
+            NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNpmPackageAsync</summary>
+        public async Task GetNpmPackageResourceNamesAsync()
+        {
+            // Snippet: GetNpmPackageAsync(NpmPackageName, CallSettings)
+            // Additional: GetNpmPackageAsync(NpmPackageName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            NpmPackageName name = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
+            // Make the request
+            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackages</summary>
+        public void ListPythonPackagesRequestObject()
+        {
+            // Snippet: ListPythonPackages(ListPythonPackagesRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PythonPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackagesAsync</summary>
+        public async Task ListPythonPackagesRequestObjectAsync()
+        {
+            // Snippet: ListPythonPackagesAsync(ListPythonPackagesRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPythonPackagesRequest request = new ListPythonPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PythonPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackages</summary>
+        public void ListPythonPackages()
+        {
+            // Snippet: ListPythonPackages(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PythonPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackagesAsync</summary>
+        public async Task ListPythonPackagesAsync()
+        {
+            // Snippet: ListPythonPackagesAsync(string, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PythonPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackages</summary>
+        public void ListPythonPackagesResourceNames()
+        {
+            // Snippet: ListPythonPackages(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PythonPackage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPythonPackagesAsync</summary>
+        public async Task ListPythonPackagesResourceNamesAsync()
+        {
+            // Snippet: ListPythonPackagesAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PythonPackage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PythonPackage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PythonPackage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackage</summary>
+        public void GetPythonPackageRequestObject()
+        {
+            // Snippet: GetPythonPackage(GetPythonPackageRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            GetPythonPackageRequest request = new GetPythonPackageRequest
+            {
+                PythonPackageName = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
+            };
+            // Make the request
+            PythonPackage response = artifactRegistryClient.GetPythonPackage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackageAsync</summary>
+        public async Task GetPythonPackageRequestObjectAsync()
+        {
+            // Snippet: GetPythonPackageAsync(GetPythonPackageRequest, CallSettings)
+            // Additional: GetPythonPackageAsync(GetPythonPackageRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPythonPackageRequest request = new GetPythonPackageRequest
+            {
+                PythonPackageName = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
+            };
+            // Make the request
+            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackage</summary>
+        public void GetPythonPackage()
+        {
+            // Snippet: GetPythonPackage(string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/pythonPackages/[PYTHON_PACKAGE]";
+            // Make the request
+            PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackageAsync</summary>
+        public async Task GetPythonPackageAsync()
+        {
+            // Snippet: GetPythonPackageAsync(string, CallSettings)
+            // Additional: GetPythonPackageAsync(string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/pythonPackages/[PYTHON_PACKAGE]";
+            // Make the request
+            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackage</summary>
+        public void GetPythonPackageResourceNames()
+        {
+            // Snippet: GetPythonPackage(PythonPackageName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            PythonPackageName name = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
+            // Make the request
+            PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPythonPackageAsync</summary>
+        public async Task GetPythonPackageResourceNamesAsync()
+        {
+            // Snippet: GetPythonPackageAsync(PythonPackageName, CallSettings)
+            // Additional: GetPythonPackageAsync(PythonPackageName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            PythonPackageName name = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
+            // Make the request
+            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
             // End snippet
         }
 
@@ -1244,7 +2341,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListPackagesRequest request = new ListPackagesRequest { Parent = "", };
+            ListPackagesRequest request = new ListPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(request);
 
@@ -1289,7 +2389,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListPackagesRequest request = new ListPackagesRequest { Parent = "", };
+            ListPackagesRequest request = new ListPackagesRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(request);
 
@@ -1334,7 +2437,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
             PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(parent);
 
@@ -1379,7 +2482,97 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Package item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPackagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Package item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Package> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Package item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPackages</summary>
+        public void ListPackagesResourceNames()
+        {
+            // Snippet: ListPackages(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Package item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPackagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Package item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Package> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Package item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPackagesAsync</summary>
+        public async Task ListPackagesResourceNamesAsync()
+        {
+            // Snippet: ListPackagesAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(parent);
 
@@ -1424,7 +2617,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetPackageRequest request = new GetPackageRequest { Name = "", };
+            GetPackageRequest request = new GetPackageRequest
+            {
+                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+            };
             // Make the request
             Package response = artifactRegistryClient.GetPackage(request);
             // End snippet
@@ -1438,7 +2634,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetPackageRequest request = new GetPackageRequest { Name = "", };
+            GetPackageRequest request = new GetPackageRequest
+            {
+                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+            };
             // Make the request
             Package response = await artifactRegistryClient.GetPackageAsync(request);
             // End snippet
@@ -1451,7 +2650,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
             Package response = artifactRegistryClient.GetPackage(name);
             // End snippet
@@ -1465,7 +2664,34 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
+            // Make the request
+            Package response = await artifactRegistryClient.GetPackageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPackage</summary>
+        public void GetPackageResourceNames()
+        {
+            // Snippet: GetPackage(PackageName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            // Make the request
+            Package response = artifactRegistryClient.GetPackage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPackageAsync</summary>
+        public async Task GetPackageResourceNamesAsync()
+        {
+            // Snippet: GetPackageAsync(PackageName, CallSettings)
+            // Additional: GetPackageAsync(PackageName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
             Package response = await artifactRegistryClient.GetPackageAsync(name);
             // End snippet
@@ -1478,7 +2704,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeletePackageRequest request = new DeletePackageRequest { Name = "", };
+            DeletePackageRequest request = new DeletePackageRequest
+            {
+                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(request);
 
@@ -1508,7 +2737,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeletePackageRequest request = new DeletePackageRequest { Name = "", };
+            DeletePackageRequest request = new DeletePackageRequest
+            {
+                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(request);
 
@@ -1537,7 +2769,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
             Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
 
@@ -1567,7 +2799,66 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePackage</summary>
+        public void DeletePackageResourceNames()
+        {
+            // Snippet: DeletePackage(PackageName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePackageAsync</summary>
+        public async Task DeletePackageResourceNamesAsync()
+        {
+            // Snippet: DeletePackageAsync(PackageName, CallSettings)
+            // Additional: DeletePackageAsync(PackageName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
 
@@ -1976,7 +3267,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Initialize request argument(s)
             ListFilesRequest request = new ListFilesRequest
             {
-                Parent = "",
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -2026,7 +3317,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Initialize request argument(s)
             ListFilesRequest request = new ListFilesRequest
             {
-                Parent = "",
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -2074,7 +3365,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
             PagedEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFiles(parent);
 
@@ -2119,7 +3410,97 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((File item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (File item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<File> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (File item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFiles</summary>
+        public void ListFilesResourceNames()
+        {
+            // Snippet: ListFiles(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (File item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (File item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<File> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (File item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFilesAsync</summary>
+        public async Task ListFilesResourceNamesAsync()
+        {
+            // Snippet: ListFilesAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             PagedAsyncEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFilesAsync(parent);
 
@@ -2164,7 +3545,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetFileRequest request = new GetFileRequest { Name = "", };
+            GetFileRequest request = new GetFileRequest
+            {
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+            };
             // Make the request
             File response = artifactRegistryClient.GetFile(request);
             // End snippet
@@ -2178,7 +3562,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetFileRequest request = new GetFileRequest { Name = "", };
+            GetFileRequest request = new GetFileRequest
+            {
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+            };
             // Make the request
             File response = await artifactRegistryClient.GetFileAsync(request);
             // End snippet
@@ -2191,7 +3578,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
             // Make the request
             File response = artifactRegistryClient.GetFile(name);
             // End snippet
@@ -2205,7 +3592,34 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
+            // Make the request
+            File response = await artifactRegistryClient.GetFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFile</summary>
+        public void GetFileResourceNames()
+        {
+            // Snippet: GetFile(FileName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            FileName name = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
+            // Make the request
+            File response = artifactRegistryClient.GetFile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFileAsync</summary>
+        public async Task GetFileResourceNamesAsync()
+        {
+            // Snippet: GetFileAsync(FileName, CallSettings)
+            // Additional: GetFileAsync(FileName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            FileName name = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
             // Make the request
             File response = await artifactRegistryClient.GetFileAsync(name);
             // End snippet
@@ -2894,6 +4308,157 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(projectSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfig</summary>
+        public void GetVPCSCConfigRequestObject()
+        {
+            // Snippet: GetVPCSCConfig(GetVPCSCConfigRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            GetVPCSCConfigRequest request = new GetVPCSCConfigRequest
+            {
+                VpcscConfigName = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfigAsync</summary>
+        public async Task GetVPCSCConfigRequestObjectAsync()
+        {
+            // Snippet: GetVPCSCConfigAsync(GetVPCSCConfigRequest, CallSettings)
+            // Additional: GetVPCSCConfigAsync(GetVPCSCConfigRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVPCSCConfigRequest request = new GetVPCSCConfigRequest
+            {
+                VpcscConfigName = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfig</summary>
+        public void GetVPCSCConfig()
+        {
+            // Snippet: GetVPCSCConfig(string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vpcscConfig";
+            // Make the request
+            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfigAsync</summary>
+        public async Task GetVPCSCConfigAsync()
+        {
+            // Snippet: GetVPCSCConfigAsync(string, CallSettings)
+            // Additional: GetVPCSCConfigAsync(string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/vpcscConfig";
+            // Make the request
+            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfig</summary>
+        public void GetVPCSCConfigResourceNames()
+        {
+            // Snippet: GetVPCSCConfig(VpcscConfigName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            VpcscConfigName name = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVPCSCConfigAsync</summary>
+        public async Task GetVPCSCConfigResourceNamesAsync()
+        {
+            // Snippet: GetVPCSCConfigAsync(VpcscConfigName, CallSettings)
+            // Additional: GetVPCSCConfigAsync(VpcscConfigName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            VpcscConfigName name = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVPCSCConfig</summary>
+        public void UpdateVPCSCConfigRequestObject()
+        {
+            // Snippet: UpdateVPCSCConfig(UpdateVPCSCConfigRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            UpdateVPCSCConfigRequest request = new UpdateVPCSCConfigRequest
+            {
+                VpcscConfig = new VPCSCConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVPCSCConfigAsync</summary>
+        public async Task UpdateVPCSCConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest, CallSettings)
+            // Additional: UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateVPCSCConfigRequest request = new UpdateVPCSCConfigRequest
+            {
+                VpcscConfig = new VPCSCConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVPCSCConfig</summary>
+        public void UpdateVPCSCConfig()
+        {
+            // Snippet: UpdateVPCSCConfig(VPCSCConfig, FieldMask, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            VPCSCConfig vpcscConfig = new VPCSCConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(vpcscConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateVPCSCConfigAsync</summary>
+        public async Task UpdateVPCSCConfigAsync()
+        {
+            // Snippet: UpdateVPCSCConfigAsync(VPCSCConfig, FieldMask, CallSettings)
+            // Additional: UpdateVPCSCConfigAsync(VPCSCConfig, FieldMask, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            VPCSCConfig vpcscConfig = new VPCSCConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(vpcscConfig, updateMask);
             // End snippet
         }
     }

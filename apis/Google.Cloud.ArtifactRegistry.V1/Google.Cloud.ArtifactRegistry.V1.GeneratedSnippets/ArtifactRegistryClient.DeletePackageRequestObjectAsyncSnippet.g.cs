@@ -37,7 +37,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeletePackageRequest request = new DeletePackageRequest { Name = "", };
+            DeletePackageRequest request = new DeletePackageRequest
+            {
+                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(request);
 

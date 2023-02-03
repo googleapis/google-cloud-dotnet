@@ -40,7 +40,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Initialize request argument(s)
             ListFilesRequest request = new ListFilesRequest
             {
-                Parent = "",
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Filter = "",
                 OrderBy = "",
             };

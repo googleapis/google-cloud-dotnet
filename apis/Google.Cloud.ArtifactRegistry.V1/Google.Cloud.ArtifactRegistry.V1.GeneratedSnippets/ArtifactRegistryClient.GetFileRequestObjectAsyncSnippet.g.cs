@@ -35,7 +35,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetFileRequest request = new GetFileRequest { Name = "", };
+            GetFileRequest request = new GetFileRequest
+            {
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+            };
             // Make the request
             File response = await artifactRegistryClient.GetFileAsync(request);
         }

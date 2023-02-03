@@ -64,6 +64,18 @@
                 "GetIamPolicyAsync"
               ]
             },
+            "GetMavenArtifact": {
+              "methods": [
+                "GetMavenArtifact",
+                "GetMavenArtifactAsync"
+              ]
+            },
+            "GetNpmPackage": {
+              "methods": [
+                "GetNpmPackage",
+                "GetNpmPackageAsync"
+              ]
+            },
             "GetPackage": {
               "methods": [
                 "GetPackage",
@@ -76,6 +88,12 @@
                 "GetProjectSettingsAsync"
               ]
             },
+            "GetPythonPackage": {
+              "methods": [
+                "GetPythonPackage",
+                "GetPythonPackageAsync"
+              ]
+            },
             "GetRepository": {
               "methods": [
                 "GetRepository",
@@ -86,6 +104,12 @@
               "methods": [
                 "GetTag",
                 "GetTagAsync"
+              ]
+            },
+            "GetVPCSCConfig": {
+              "methods": [
+                "GetVPCSCConfig",
+                "GetVPCSCConfigAsync"
               ]
             },
             "GetVersion": {
@@ -118,10 +142,28 @@
                 "ListFilesAsync"
               ]
             },
+            "ListMavenArtifacts": {
+              "methods": [
+                "ListMavenArtifacts",
+                "ListMavenArtifactsAsync"
+              ]
+            },
+            "ListNpmPackages": {
+              "methods": [
+                "ListNpmPackages",
+                "ListNpmPackagesAsync"
+              ]
+            },
             "ListPackages": {
               "methods": [
                 "ListPackages",
                 "ListPackagesAsync"
+              ]
+            },
+            "ListPythonPackages": {
+              "methods": [
+                "ListPythonPackages",
+                "ListPythonPackagesAsync"
               ]
             },
             "ListRepositories": {
@@ -170,6 +212,12 @@
               "methods": [
                 "UpdateTag",
                 "UpdateTagAsync"
+              ]
+            },
+            "UpdateVPCSCConfig": {
+              "methods": [
+                "UpdateVPCSCConfig",
+                "UpdateVPCSCConfigAsync"
               ]
             }
           }

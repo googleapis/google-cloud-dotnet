@@ -48,14 +48,15 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "KAkiYQoRR2V0VmVyc2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCRI+CgR2aWV3",
             "GAIgASgOMjAuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEu",
             "VmVyc2lvblZpZXciMwoURGVsZXRlVmVyc2lvblJlcXVlc3QSDAoEbmFtZRgB",
-            "IAEoCRINCgVmb3JjZRgCIAEoCCpACgtWZXJzaW9uVmlldxIcChhWRVJTSU9O",
-            "X1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAkL6AQon",
-            "Y29tLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxQgxWZXJz",
-            "aW9uUHJvdG9QAVpTZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9kZXZ0b29scy9hcnRpZmFjdHJlZ2lzdHJ5L3YxO2FydGlmYWN0cmVn",
-            "aXN0cnmqAiBHb29nbGUuQ2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5WMcoCIEdv",
-            "b2dsZVxDbG91ZFxBcnRpZmFjdFJlZ2lzdHJ5XFYx6gIjR29vZ2xlOjpDbG91",
-            "ZDo6QXJ0aWZhY3RSZWdpc3RyeTo6VjFiBnByb3RvMw=="));
+            "IAEoCRINCgVmb3JjZRgCIAEoCCI2ChtCYXRjaERlbGV0ZVZlcnNpb25zTWV0",
+            "YWRhdGESFwoPZmFpbGVkX3ZlcnNpb25zGAIgAygJKkAKC1ZlcnNpb25WaWV3",
+            "EhwKGFZFUlNJT05fVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoE",
+            "RlVMTBACQvoBCidjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0",
+            "cnkudjFCDFZlcnNpb25Qcm90b1ABWlNnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2RldnRvb2xzL2FydGlmYWN0cmVnaXN0cnkvdjE7",
+            "YXJ0aWZhY3RyZWdpc3RyeaoCIEdvb2dsZS5DbG91ZC5BcnRpZmFjdFJlZ2lz",
+            "dHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjHqAiNH",
+            "b29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1.TagReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ArtifactRegistry.V1.VersionView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -63,7 +64,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest), global::Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse), global::Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse.Parser, new[]{ "Versions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetVersionRequest), global::Google.Cloud.ArtifactRegistry.V1.GetVersionRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest), global::Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest), global::Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata), global::Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata.Parser, new[]{ "FailedVersions" }, null, null, null, null)
           }));
     }
     #endregion
@@ -231,8 +233,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     /// <summary>
     /// Output only. Repository-specific Metadata stored against this version.
     /// The fields returned are defined by the underlying repository-specific
-    /// resource. Currently, the only resource in use is
+    /// resource. Currently, the resources could be:
     /// [DockerImage][google.devtools.artifactregistry.v1.DockerImage]
+    /// [MavenArtifact][google.devtools.artifactregistry.v1.MavenArtifact]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1555,6 +1558,190 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 16: {
             Force = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The metadata of an LRO from deleting multiple versions.
+  /// </summary>
+  public sealed partial class BatchDeleteVersionsMetadata : pb::IMessage<BatchDeleteVersionsMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeleteVersionsMetadata> _parser = new pb::MessageParser<BatchDeleteVersionsMetadata>(() => new BatchDeleteVersionsMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeleteVersionsMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ArtifactRegistry.V1.VersionReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteVersionsMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteVersionsMetadata(BatchDeleteVersionsMetadata other) : this() {
+      failedVersions_ = other.failedVersions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteVersionsMetadata Clone() {
+      return new BatchDeleteVersionsMetadata(this);
+    }
+
+    /// <summary>Field number for the "failed_versions" field.</summary>
+    public const int FailedVersionsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_failedVersions_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> failedVersions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The versions the operation failed to delete.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> FailedVersions {
+      get { return failedVersions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeleteVersionsMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeleteVersionsMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!failedVersions_.Equals(other.failedVersions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= failedVersions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      failedVersions_.WriteTo(output, _repeated_failedVersions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      failedVersions_.WriteTo(ref output, _repeated_failedVersions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += failedVersions_.CalculateSize(_repeated_failedVersions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeleteVersionsMetadata other) {
+      if (other == null) {
+        return;
+      }
+      failedVersions_.Add(other.failedVersions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            failedVersions_.AddEntriesFrom(input, _repeated_failedVersions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            failedVersions_.AddEntriesFrom(ref input, _repeated_failedVersions_codec);
             break;
           }
         }

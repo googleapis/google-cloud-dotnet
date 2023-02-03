@@ -38,12 +38,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 75,
+          "end": 79,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 73,
+          "end": 77,
           "type": "SHORT"
         }
       ]
@@ -77,12 +77,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 77,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 75,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -369,6 +369,1368 @@
         "method": {
           "shortName": "GetDockerImage",
           "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetDockerImage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_sync",
+      "title": "ListMavenArtifactsRequestObject",
+      "description": "Snippet for ListMavenArtifacts",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifacts",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_async",
+      "title": "ListMavenArtifactsRequestObjectAsync",
+      "description": "Snippet for ListMavenArtifactsAsync",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifactsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_sync_flattened",
+      "title": "ListMavenArtifacts",
+      "description": "Snippet for ListMavenArtifacts",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifacts",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_async_flattened",
+      "title": "ListMavenArtifactsAsync",
+      "description": "Snippet for ListMavenArtifactsAsync",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifactsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_sync_flattened_resourceNames",
+      "title": "ListMavenArtifactsResourceNames",
+      "description": "Snippet for ListMavenArtifacts",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifacts",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListMavenArtifacts_async_flattened_resourceNames",
+      "title": "ListMavenArtifactsResourceNamesAsync",
+      "description": "Snippet for ListMavenArtifactsAsync",
+      "file": "ArtifactRegistryClient.ListMavenArtifactsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMavenArtifactsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMavenArtifacts",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListMavenArtifacts",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_sync",
+      "title": "GetMavenArtifactRequestObject",
+      "description": "Snippet for GetMavenArtifact",
+      "file": "ArtifactRegistryClient.GetMavenArtifactRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifact",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_async",
+      "title": "GetMavenArtifactRequestObjectAsync",
+      "description": "Snippet for GetMavenArtifactAsync",
+      "file": "ArtifactRegistryClient.GetMavenArtifactRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifactAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_sync_flattened",
+      "title": "GetMavenArtifact",
+      "description": "Snippet for GetMavenArtifact",
+      "file": "ArtifactRegistryClient.GetMavenArtifactSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifact",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_async_flattened",
+      "title": "GetMavenArtifactAsync",
+      "description": "Snippet for GetMavenArtifactAsync",
+      "file": "ArtifactRegistryClient.GetMavenArtifactAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifactAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_sync_flattened_resourceNames",
+      "title": "GetMavenArtifactResourceNames",
+      "description": "Snippet for GetMavenArtifact",
+      "file": "ArtifactRegistryClient.GetMavenArtifactResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifact",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetMavenArtifact_async_flattened_resourceNames",
+      "title": "GetMavenArtifactResourceNamesAsync",
+      "description": "Snippet for GetMavenArtifactAsync",
+      "file": "ArtifactRegistryClient.GetMavenArtifactResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMavenArtifactAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMavenArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetMavenArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_sync",
+      "title": "ListNpmPackagesRequestObject",
+      "description": "Snippet for ListNpmPackages",
+      "file": "ArtifactRegistryClient.ListNpmPackagesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_async",
+      "title": "ListNpmPackagesRequestObjectAsync",
+      "description": "Snippet for ListNpmPackagesAsync",
+      "file": "ArtifactRegistryClient.ListNpmPackagesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_sync_flattened",
+      "title": "ListNpmPackages",
+      "description": "Snippet for ListNpmPackages",
+      "file": "ArtifactRegistryClient.ListNpmPackagesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_async_flattened",
+      "title": "ListNpmPackagesAsync",
+      "description": "Snippet for ListNpmPackagesAsync",
+      "file": "ArtifactRegistryClient.ListNpmPackagesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_sync_flattened_resourceNames",
+      "title": "ListNpmPackagesResourceNames",
+      "description": "Snippet for ListNpmPackages",
+      "file": "ArtifactRegistryClient.ListNpmPackagesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListNpmPackages_async_flattened_resourceNames",
+      "title": "ListNpmPackagesResourceNamesAsync",
+      "description": "Snippet for ListNpmPackagesAsync",
+      "file": "ArtifactRegistryClient.ListNpmPackagesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNpmPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListNpmPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListNpmPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_sync",
+      "title": "GetNpmPackageRequestObject",
+      "description": "Snippet for GetNpmPackage",
+      "file": "ArtifactRegistryClient.GetNpmPackageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_async",
+      "title": "GetNpmPackageRequestObjectAsync",
+      "description": "Snippet for GetNpmPackageAsync",
+      "file": "ArtifactRegistryClient.GetNpmPackageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_sync_flattened",
+      "title": "GetNpmPackage",
+      "description": "Snippet for GetNpmPackage",
+      "file": "ArtifactRegistryClient.GetNpmPackageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_async_flattened",
+      "title": "GetNpmPackageAsync",
+      "description": "Snippet for GetNpmPackageAsync",
+      "file": "ArtifactRegistryClient.GetNpmPackageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_sync_flattened_resourceNames",
+      "title": "GetNpmPackageResourceNames",
+      "description": "Snippet for GetNpmPackage",
+      "file": "ArtifactRegistryClient.GetNpmPackageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetNpmPackage_async_flattened_resourceNames",
+      "title": "GetNpmPackageResourceNamesAsync",
+      "description": "Snippet for GetNpmPackageAsync",
+      "file": "ArtifactRegistryClient.GetNpmPackageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNpmPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetNpmPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetNpmPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_sync",
+      "title": "ListPythonPackagesRequestObject",
+      "description": "Snippet for ListPythonPackages",
+      "file": "ArtifactRegistryClient.ListPythonPackagesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_async",
+      "title": "ListPythonPackagesRequestObjectAsync",
+      "description": "Snippet for ListPythonPackagesAsync",
+      "file": "ArtifactRegistryClient.ListPythonPackagesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_sync_flattened",
+      "title": "ListPythonPackages",
+      "description": "Snippet for ListPythonPackages",
+      "file": "ArtifactRegistryClient.ListPythonPackagesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_async_flattened",
+      "title": "ListPythonPackagesAsync",
+      "description": "Snippet for ListPythonPackagesAsync",
+      "file": "ArtifactRegistryClient.ListPythonPackagesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_sync_flattened_resourceNames",
+      "title": "ListPythonPackagesResourceNames",
+      "description": "Snippet for ListPythonPackages",
+      "file": "ArtifactRegistryClient.ListPythonPackagesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_async_flattened_resourceNames",
+      "title": "ListPythonPackagesResourceNamesAsync",
+      "description": "Snippet for ListPythonPackagesAsync",
+      "file": "ArtifactRegistryClient.ListPythonPackagesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPythonPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPythonPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPythonPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_sync",
+      "title": "GetPythonPackageRequestObject",
+      "description": "Snippet for GetPythonPackage",
+      "file": "ArtifactRegistryClient.GetPythonPackageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_async",
+      "title": "GetPythonPackageRequestObjectAsync",
+      "description": "Snippet for GetPythonPackageAsync",
+      "file": "ArtifactRegistryClient.GetPythonPackageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_sync_flattened",
+      "title": "GetPythonPackage",
+      "description": "Snippet for GetPythonPackage",
+      "file": "ArtifactRegistryClient.GetPythonPackageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_async_flattened",
+      "title": "GetPythonPackageAsync",
+      "description": "Snippet for GetPythonPackageAsync",
+      "file": "ArtifactRegistryClient.GetPythonPackageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_sync_flattened_resourceNames",
+      "title": "GetPythonPackageResourceNames",
+      "description": "Snippet for GetPythonPackage",
+      "file": "ArtifactRegistryClient.GetPythonPackageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPythonPackage_async_flattened_resourceNames",
+      "title": "GetPythonPackageResourceNamesAsync",
+      "description": "Snippet for GetPythonPackageAsync",
+      "file": "ArtifactRegistryClient.GetPythonPackageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPythonPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPythonPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPythonPackage",
           "service": {
             "shortName": "ArtifactRegistry",
             "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
@@ -1631,12 +2993,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 75,
+          "end": 78,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 73,
+          "end": 76,
           "type": "SHORT"
         }
       ]
@@ -1670,12 +3032,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 77,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 75,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -1756,6 +3118,81 @@
       ]
     },
     {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPackages_sync_flattened_resourceNames",
+      "title": "ListPackagesResourceNames",
+      "description": "Snippet for ListPackages",
+      "file": "ArtifactRegistryClient.ListPackagesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPackages",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackages",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListPackages_async_flattened_resourceNames",
+      "title": "ListPackagesResourceNamesAsync",
+      "description": "Snippet for ListPackagesAsync",
+      "file": "ArtifactRegistryClient.ListPackagesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPackagesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackagesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListPackages",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListPackages",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPackage_sync",
       "title": "GetPackageRequestObject",
       "description": "Snippet for GetPackage",
@@ -1783,12 +3220,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 44,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 39,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -1822,12 +3259,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 40,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -1908,6 +3345,81 @@
       ]
     },
     {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPackage_sync_flattened_resourceNames",
+      "title": "GetPackageResourceNames",
+      "description": "Snippet for GetPackage",
+      "file": "ArtifactRegistryClient.GetPackageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackage",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetPackage_async_flattened_resourceNames",
+      "title": "GetPackageResourceNamesAsync",
+      "description": "Snippet for GetPackageAsync",
+      "file": "ArtifactRegistryClient.GetPackageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetPackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetPackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeletePackage_sync",
       "title": "DeletePackageRequestObject",
       "description": "Snippet for DeletePackage",
@@ -1935,12 +3447,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 59,
+          "end": 62,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 57,
+          "end": 60,
           "type": "SHORT"
         }
       ]
@@ -1974,12 +3486,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 60,
+          "end": 63,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 58,
+          "end": 61,
           "type": "SHORT"
         }
       ]
@@ -2026,6 +3538,81 @@
       "title": "DeletePackageAsync",
       "description": "Snippet for DeletePackageAsync",
       "file": "ArtifactRegistryClient.DeletePackageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePackageAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackageAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeletePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeletePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeletePackage_sync_flattened_resourceNames",
+      "title": "DeletePackageResourceNames",
+      "description": "Snippet for DeletePackage",
+      "file": "ArtifactRegistryClient.DeletePackageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePackage",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackage",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "DeletePackage",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeletePackage",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_DeletePackage_async_flattened_resourceNames",
+      "title": "DeletePackageResourceNamesAsync",
+      "description": "Snippet for DeletePackageAsync",
+      "file": "ArtifactRegistryClient.DeletePackageResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "DeletePackageAsync",
@@ -2668,6 +4255,81 @@
       ]
     },
     {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListFiles_sync_flattened_resourceNames",
+      "title": "ListFilesResourceNames",
+      "description": "Snippet for ListFiles",
+      "file": "ArtifactRegistryClient.ListFilesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFiles",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFiles",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListFiles",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListFiles",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListFiles_async_flattened_resourceNames",
+      "title": "ListFilesResourceNamesAsync",
+      "description": "Snippet for ListFilesAsync",
+      "file": "ArtifactRegistryClient.ListFilesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFilesAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFilesAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ListFiles",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ListFiles",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetFile_sync",
       "title": "GetFileRequestObject",
       "description": "Snippet for GetFile",
@@ -2695,12 +4357,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 44,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 39,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -2734,12 +4396,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 40,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -2786,6 +4448,81 @@
       "title": "GetFileAsync",
       "description": "Snippet for GetFileAsync",
       "file": "ArtifactRegistryClient.GetFileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFileAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFileAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetFile_sync_flattened_resourceNames",
+      "title": "GetFileResourceNames",
+      "description": "Snippet for GetFile",
+      "file": "ArtifactRegistryClient.GetFileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFile",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFile",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetFile",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetFile",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetFile_async_flattened_resourceNames",
+      "title": "GetFileResourceNamesAsync",
+      "description": "Snippet for GetFileAsync",
+      "file": "ArtifactRegistryClient.GetFileResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetFileAsync",
@@ -4167,6 +5904,385 @@
         "method": {
           "shortName": "UpdateProjectSettings",
           "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateProjectSettings",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_sync",
+      "title": "GetVPCSCConfigRequestObject",
+      "description": "Snippet for GetVPCSCConfig",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfig",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_async",
+      "title": "GetVPCSCConfigRequestObjectAsync",
+      "description": "Snippet for GetVPCSCConfigAsync",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfigAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_sync_flattened",
+      "title": "GetVPCSCConfig",
+      "description": "Snippet for GetVPCSCConfig",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfig",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_async_flattened",
+      "title": "GetVPCSCConfigAsync",
+      "description": "Snippet for GetVPCSCConfigAsync",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfigAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_sync_flattened_resourceNames",
+      "title": "GetVPCSCConfigResourceNames",
+      "description": "Snippet for GetVPCSCConfig",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfig",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_GetVPCSCConfig_async_flattened_resourceNames",
+      "title": "GetVPCSCConfigResourceNamesAsync",
+      "description": "Snippet for GetVPCSCConfigAsync",
+      "file": "ArtifactRegistryClient.GetVPCSCConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVPCSCConfigAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "GetVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.GetVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVPCSCConfig_sync",
+      "title": "UpdateVPCSCConfigRequestObject",
+      "description": "Snippet for UpdateVPCSCConfig",
+      "file": "ArtifactRegistryClient.UpdateVPCSCConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVPCSCConfig",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfig",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVPCSCConfig_async",
+      "title": "UpdateVPCSCConfigRequestObjectAsync",
+      "description": "Snippet for UpdateVPCSCConfigAsync",
+      "file": "ArtifactRegistryClient.UpdateVPCSCConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVPCSCConfigAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVPCSCConfig_sync_flattened",
+      "title": "UpdateVPCSCConfig",
+      "description": "Snippet for UpdateVPCSCConfig",
+      "file": "ArtifactRegistryClient.UpdateVPCSCConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVPCSCConfig",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfig",
+        "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVPCSCConfig",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_UpdateVPCSCConfig_async_flattened",
+      "title": "UpdateVPCSCConfigAsync",
+      "description": "Snippet for UpdateVPCSCConfigAsync",
+      "file": "ArtifactRegistryClient.UpdateVPCSCConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVPCSCConfigAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfigAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateVPCSCConfig",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.UpdateVPCSCConfig",
           "service": {
             "shortName": "ArtifactRegistry",
             "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"

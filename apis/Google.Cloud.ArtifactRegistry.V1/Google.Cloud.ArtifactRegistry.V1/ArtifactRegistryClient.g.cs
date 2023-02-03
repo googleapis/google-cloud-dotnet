@@ -52,6 +52,12 @@ namespace Google.Cloud.ArtifactRegistry.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListDockerImagesSettings = existing.ListDockerImagesSettings;
             GetDockerImageSettings = existing.GetDockerImageSettings;
+            ListMavenArtifactsSettings = existing.ListMavenArtifactsSettings;
+            GetMavenArtifactSettings = existing.GetMavenArtifactSettings;
+            ListNpmPackagesSettings = existing.ListNpmPackagesSettings;
+            GetNpmPackageSettings = existing.GetNpmPackageSettings;
+            ListPythonPackagesSettings = existing.ListPythonPackagesSettings;
+            GetPythonPackageSettings = existing.GetPythonPackageSettings;
             ImportAptArtifactsSettings = existing.ImportAptArtifactsSettings;
             ImportAptArtifactsOperationsSettings = existing.ImportAptArtifactsOperationsSettings.Clone();
             ImportYumArtifactsSettings = existing.ImportYumArtifactsSettings;
@@ -83,6 +89,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             GetProjectSettingsSettings = existing.GetProjectSettingsSettings;
             UpdateProjectSettingsSettings = existing.UpdateProjectSettingsSettings;
+            GetVPCSCConfigSettings = existing.GetVPCSCConfigSettings;
+            UpdateVPCSCConfigSettings = existing.UpdateVPCSCConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -112,6 +120,78 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDockerImageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ListMavenArtifacts</c> and <c>ArtifactRegistryClient.ListMavenArtifactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMavenArtifactsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetMavenArtifact</c> and <c>ArtifactRegistryClient.GetMavenArtifactAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMavenArtifactSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ListNpmPackages</c> and <c>ArtifactRegistryClient.ListNpmPackagesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNpmPackagesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetNpmPackage</c> and <c>ArtifactRegistryClient.GetNpmPackageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNpmPackageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ListPythonPackages</c> and <c>ArtifactRegistryClient.ListPythonPackagesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPythonPackagesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetPythonPackage</c> and <c>ArtifactRegistryClient.GetPythonPackageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPythonPackageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -523,6 +603,30 @@ namespace Google.Cloud.ArtifactRegistry.V1
         public gaxgrpc::CallSettings UpdateProjectSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetVPCSCConfig</c> and <c>ArtifactRegistryClient.GetVPCSCConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetVPCSCConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdateVPCSCConfig</c> and <c>ArtifactRegistryClient.UpdateVPCSCConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateVPCSCConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -707,7 +811,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists docker images.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose docker images will be listed.
+        /// Required. The name of the parent resource whose docker images will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -731,7 +836,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists docker images.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose docker images will be listed.
+        /// Required. The name of the parent resource whose docker images will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -855,6 +961,675 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DockerImage> GetDockerImageAsync(DockerImageName name, st::CancellationToken cancellationToken) =>
             GetDockerImageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(ListMavenArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(ListMavenArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose maven artifacts will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMavenArtifacts(new ListMavenArtifactsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose maven artifacts will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose maven artifacts will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMavenArtifacts(new ListMavenArtifactsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose maven artifacts will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMavenArtifactsAsync(new ListMavenArtifactsRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MavenArtifact GetMavenArtifact(GetMavenArtifactRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(GetMavenArtifactRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(GetMavenArtifactRequest request, st::CancellationToken cancellationToken) =>
+            GetMavenArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MavenArtifact GetMavenArtifact(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMavenArtifact(new GetMavenArtifactRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMavenArtifactAsync(new GetMavenArtifactRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMavenArtifactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MavenArtifact GetMavenArtifact(MavenArtifactName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMavenArtifact(new GetMavenArtifactRequest
+            {
+                MavenArtifactName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(MavenArtifactName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMavenArtifactAsync(new GetMavenArtifactRequest
+            {
+                MavenArtifactName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the maven artifact.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MavenArtifact> GetMavenArtifactAsync(MavenArtifactName name, st::CancellationToken cancellationToken) =>
+            GetMavenArtifactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(ListNpmPackagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(ListNpmPackagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose npm packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNpmPackages(new ListNpmPackagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose npm packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNpmPackagesAsync(new ListNpmPackagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose npm packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNpmPackages(new ListNpmPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose npm packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListNpmPackagesAsync(new ListNpmPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NpmPackage GetNpmPackage(GetNpmPackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(GetNpmPackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(GetNpmPackageRequest request, st::CancellationToken cancellationToken) =>
+            GetNpmPackageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NpmPackage GetNpmPackage(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNpmPackage(new GetNpmPackageRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNpmPackageAsync(new GetNpmPackageRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNpmPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NpmPackage GetNpmPackage(NpmPackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNpmPackage(new GetNpmPackageRequest
+            {
+                NpmPackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(NpmPackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNpmPackageAsync(new GetNpmPackageRequest
+            {
+                NpmPackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the npm package.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NpmPackage> GetNpmPackageAsync(NpmPackageName name, st::CancellationToken cancellationToken) =>
+            GetNpmPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(ListPythonPackagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(ListPythonPackagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose python packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPythonPackages(new ListPythonPackagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose python packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPythonPackagesAsync(new ListPythonPackagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose python packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPythonPackages(new ListPythonPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose python packages will be
+        /// listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPythonPackagesAsync(new ListPythonPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PythonPackage GetPythonPackage(GetPythonPackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(GetPythonPackageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(GetPythonPackageRequest request, st::CancellationToken cancellationToken) =>
+            GetPythonPackageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PythonPackage GetPythonPackage(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPythonPackage(new GetPythonPackageRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPythonPackageAsync(new GetPythonPackageRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPythonPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PythonPackage GetPythonPackage(PythonPackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPythonPackage(new GetPythonPackageRequest
+            {
+                PythonPackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(PythonPackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPythonPackageAsync(new GetPythonPackageRequest
+            {
+                PythonPackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the python package.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PythonPackage> GetPythonPackageAsync(PythonPackageName name, st::CancellationToken cancellationToken) =>
+            GetPythonPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Imports Apt artifacts. The returned Operation will complete once the
@@ -1684,6 +2459,54 @@ namespace Google.Cloud.ArtifactRegistry.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose packages will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Package"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPackagesResponse, Package> ListPackages(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPackages(new ListPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists packages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose packages will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Package"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPackagesResponse, Package> ListPackagesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPackagesAsync(new ListPackagesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Gets a package.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1747,6 +2570,45 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Package> GetPackageAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Package GetPackage(PackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPackage(new GetPackageRequest
+            {
+                PackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> GetPackageAsync(PackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPackageAsync(new GetPackageRequest
+            {
+                PackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a package.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Package> GetPackageAsync(PackageName name, st::CancellationToken cancellationToken) =>
             GetPackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1845,6 +2707,48 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePackageAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a package and all of its versions and tags. The returned operation
+        /// will complete once the package has been deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePackage(PackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePackage(new DeletePackageRequest
+            {
+                PackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a package and all of its versions and tags. The returned operation
+        /// will complete once the package has been deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePackageAsync(PackageName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePackageAsync(new DeletePackageRequest
+            {
+                PackageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a package and all of its versions and tags. The returned operation
+        /// will complete once the package has been deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the package to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePackageAsync(PackageName name, st::CancellationToken cancellationToken) =>
             DeletePackageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2087,8 +2991,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists files.
         /// </summary>
         /// <param name="parent">
-        /// The name of the repository whose files will be listed. For example:
-        /// "projects/p1/locations/us-central1/repositories/repo1
+        /// Required. The name of the repository whose files will be listed. For
+        /// example: "projects/p1/locations/us-central1/repositories/repo1
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2103,7 +3007,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
         public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFiles(new ListFilesRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2112,8 +3016,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists files.
         /// </summary>
         /// <param name="parent">
-        /// The name of the repository whose files will be listed. For example:
-        /// "projects/p1/locations/us-central1/repositories/repo1
+        /// Required. The name of the repository whose files will be listed. For
+        /// example: "projects/p1/locations/us-central1/repositories/repo1
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2128,7 +3032,57 @@ namespace Google.Cloud.ArtifactRegistry.V1
         public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFilesAsync(new ListFilesRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists files.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the repository whose files will be listed. For
+        /// example: "projects/p1/locations/us-central1/repositories/repo1
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="File"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFilesResponse, File> ListFiles(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFiles(new ListFilesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists files.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the repository whose files will be listed. For
+        /// example: "projects/p1/locations/us-central1/repositories/repo1
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="File"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFilesResponse, File> ListFilesAsync(RepositoryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFilesAsync(new ListFilesRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -2164,33 +3118,78 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Gets a file.
         /// </summary>
         /// <param name="name">
-        /// The name of the file to retrieve.
+        /// Required. The name of the file to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual File GetFile(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetFile(new GetFileRequest { Name = name ?? "", }, callSettings);
+            GetFile(new GetFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Gets a file.
         /// </summary>
         /// <param name="name">
-        /// The name of the file to retrieve.
+        /// Required. The name of the file to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<File> GetFileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetFileAsync(new GetFileRequest { Name = name ?? "", }, callSettings);
+            GetFileAsync(new GetFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Gets a file.
         /// </summary>
         /// <param name="name">
-        /// The name of the file to retrieve.
+        /// Required. The name of the file to retrieve.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<File> GetFileAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual File GetFile(FileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFile(new GetFileRequest
+            {
+                FileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> GetFileAsync(FileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFileAsync(new GetFileRequest
+            {
+                FileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the file to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<File> GetFileAsync(FileName name, st::CancellationToken cancellationToken) =>
             GetFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2812,6 +3811,188 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ProjectSettings> UpdateProjectSettingsAsync(ProjectSettings projectSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateProjectSettingsAsync(projectSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VPCSCConfig GetVPCSCConfig(GetVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(GetVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(GetVPCSCConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetVPCSCConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VPCSCConfig GetVPCSCConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetVPCSCConfig(new GetVPCSCConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetVPCSCConfigAsync(new GetVPCSCConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetVPCSCConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VPCSCConfig GetVPCSCConfig(VpcscConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetVPCSCConfig(new GetVPCSCConfigRequest
+            {
+                VpcscConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(VpcscConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetVPCSCConfigAsync(new GetVPCSCConfigRequest
+            {
+                VpcscConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the VPCSCConfig resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> GetVPCSCConfigAsync(VpcscConfigName name, st::CancellationToken cancellationToken) =>
+            GetVPCSCConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VPCSCConfig UpdateVPCSCConfig(UpdateVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateVPCSCConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="vpcscConfig">
+        /// The project config.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VPCSCConfig UpdateVPCSCConfig(VPCSCConfig vpcscConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateVPCSCConfig(new UpdateVPCSCConfigRequest
+            {
+                VpcscConfig = vpcscConfig,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="vpcscConfig">
+        /// The project config.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(VPCSCConfig vpcscConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateVPCSCConfigAsync(new UpdateVPCSCConfigRequest
+            {
+                VpcscConfig = vpcscConfig,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="vpcscConfig">
+        /// The project config.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(VPCSCConfig vpcscConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateVPCSCConfigAsync(vpcscConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ArtifactRegistry client wrapper implementation, for convenient use.</summary>
@@ -2835,6 +4016,18 @@ namespace Google.Cloud.ArtifactRegistry.V1
         private readonly gaxgrpc::ApiCall<ListDockerImagesRequest, ListDockerImagesResponse> _callListDockerImages;
 
         private readonly gaxgrpc::ApiCall<GetDockerImageRequest, DockerImage> _callGetDockerImage;
+
+        private readonly gaxgrpc::ApiCall<ListMavenArtifactsRequest, ListMavenArtifactsResponse> _callListMavenArtifacts;
+
+        private readonly gaxgrpc::ApiCall<GetMavenArtifactRequest, MavenArtifact> _callGetMavenArtifact;
+
+        private readonly gaxgrpc::ApiCall<ListNpmPackagesRequest, ListNpmPackagesResponse> _callListNpmPackages;
+
+        private readonly gaxgrpc::ApiCall<GetNpmPackageRequest, NpmPackage> _callGetNpmPackage;
+
+        private readonly gaxgrpc::ApiCall<ListPythonPackagesRequest, ListPythonPackagesResponse> _callListPythonPackages;
+
+        private readonly gaxgrpc::ApiCall<GetPythonPackageRequest, PythonPackage> _callGetPythonPackage;
 
         private readonly gaxgrpc::ApiCall<ImportAptArtifactsRequest, lro::Operation> _callImportAptArtifacts;
 
@@ -2886,6 +4079,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         private readonly gaxgrpc::ApiCall<UpdateProjectSettingsRequest, ProjectSettings> _callUpdateProjectSettings;
 
+        private readonly gaxgrpc::ApiCall<GetVPCSCConfigRequest, VPCSCConfig> _callGetVPCSCConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateVPCSCConfigRequest, VPCSCConfig> _callUpdateVPCSCConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the ArtifactRegistry service, with the specified gRPC client and settings.
         /// </summary>
@@ -2910,6 +4107,24 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callGetDockerImage = clientHelper.BuildApiCall<GetDockerImageRequest, DockerImage>("GetDockerImage", grpcClient.GetDockerImageAsync, grpcClient.GetDockerImage, effectiveSettings.GetDockerImageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDockerImage);
             Modify_GetDockerImageApiCall(ref _callGetDockerImage);
+            _callListMavenArtifacts = clientHelper.BuildApiCall<ListMavenArtifactsRequest, ListMavenArtifactsResponse>("ListMavenArtifacts", grpcClient.ListMavenArtifactsAsync, grpcClient.ListMavenArtifacts, effectiveSettings.ListMavenArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMavenArtifacts);
+            Modify_ListMavenArtifactsApiCall(ref _callListMavenArtifacts);
+            _callGetMavenArtifact = clientHelper.BuildApiCall<GetMavenArtifactRequest, MavenArtifact>("GetMavenArtifact", grpcClient.GetMavenArtifactAsync, grpcClient.GetMavenArtifact, effectiveSettings.GetMavenArtifactSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMavenArtifact);
+            Modify_GetMavenArtifactApiCall(ref _callGetMavenArtifact);
+            _callListNpmPackages = clientHelper.BuildApiCall<ListNpmPackagesRequest, ListNpmPackagesResponse>("ListNpmPackages", grpcClient.ListNpmPackagesAsync, grpcClient.ListNpmPackages, effectiveSettings.ListNpmPackagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNpmPackages);
+            Modify_ListNpmPackagesApiCall(ref _callListNpmPackages);
+            _callGetNpmPackage = clientHelper.BuildApiCall<GetNpmPackageRequest, NpmPackage>("GetNpmPackage", grpcClient.GetNpmPackageAsync, grpcClient.GetNpmPackage, effectiveSettings.GetNpmPackageSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNpmPackage);
+            Modify_GetNpmPackageApiCall(ref _callGetNpmPackage);
+            _callListPythonPackages = clientHelper.BuildApiCall<ListPythonPackagesRequest, ListPythonPackagesResponse>("ListPythonPackages", grpcClient.ListPythonPackagesAsync, grpcClient.ListPythonPackages, effectiveSettings.ListPythonPackagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPythonPackages);
+            Modify_ListPythonPackagesApiCall(ref _callListPythonPackages);
+            _callGetPythonPackage = clientHelper.BuildApiCall<GetPythonPackageRequest, PythonPackage>("GetPythonPackage", grpcClient.GetPythonPackageAsync, grpcClient.GetPythonPackage, effectiveSettings.GetPythonPackageSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPythonPackage);
+            Modify_GetPythonPackageApiCall(ref _callGetPythonPackage);
             _callImportAptArtifacts = clientHelper.BuildApiCall<ImportAptArtifactsRequest, lro::Operation>("ImportAptArtifacts", grpcClient.ImportAptArtifactsAsync, grpcClient.ImportAptArtifacts, effectiveSettings.ImportAptArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportAptArtifacts);
             Modify_ImportAptArtifactsApiCall(ref _callImportAptArtifacts);
@@ -2985,6 +4200,12 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callUpdateProjectSettings = clientHelper.BuildApiCall<UpdateProjectSettingsRequest, ProjectSettings>("UpdateProjectSettings", grpcClient.UpdateProjectSettingsAsync, grpcClient.UpdateProjectSettings, effectiveSettings.UpdateProjectSettingsSettings).WithGoogleRequestParam("project_settings.name", request => request.ProjectSettings?.Name);
             Modify_ApiCall(ref _callUpdateProjectSettings);
             Modify_UpdateProjectSettingsApiCall(ref _callUpdateProjectSettings);
+            _callGetVPCSCConfig = clientHelper.BuildApiCall<GetVPCSCConfigRequest, VPCSCConfig>("GetVPCSCConfig", grpcClient.GetVPCSCConfigAsync, grpcClient.GetVPCSCConfig, effectiveSettings.GetVPCSCConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetVPCSCConfig);
+            Modify_GetVPCSCConfigApiCall(ref _callGetVPCSCConfig);
+            _callUpdateVPCSCConfig = clientHelper.BuildApiCall<UpdateVPCSCConfigRequest, VPCSCConfig>("UpdateVPCSCConfig", grpcClient.UpdateVPCSCConfigAsync, grpcClient.UpdateVPCSCConfig, effectiveSettings.UpdateVPCSCConfigSettings).WithGoogleRequestParam("vpcsc_config.name", request => request.VpcscConfig?.Name);
+            Modify_ApiCall(ref _callUpdateVPCSCConfig);
+            Modify_UpdateVPCSCConfigApiCall(ref _callUpdateVPCSCConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2993,6 +4214,18 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_ListDockerImagesApiCall(ref gaxgrpc::ApiCall<ListDockerImagesRequest, ListDockerImagesResponse> call);
 
         partial void Modify_GetDockerImageApiCall(ref gaxgrpc::ApiCall<GetDockerImageRequest, DockerImage> call);
+
+        partial void Modify_ListMavenArtifactsApiCall(ref gaxgrpc::ApiCall<ListMavenArtifactsRequest, ListMavenArtifactsResponse> call);
+
+        partial void Modify_GetMavenArtifactApiCall(ref gaxgrpc::ApiCall<GetMavenArtifactRequest, MavenArtifact> call);
+
+        partial void Modify_ListNpmPackagesApiCall(ref gaxgrpc::ApiCall<ListNpmPackagesRequest, ListNpmPackagesResponse> call);
+
+        partial void Modify_GetNpmPackageApiCall(ref gaxgrpc::ApiCall<GetNpmPackageRequest, NpmPackage> call);
+
+        partial void Modify_ListPythonPackagesApiCall(ref gaxgrpc::ApiCall<ListPythonPackagesRequest, ListPythonPackagesResponse> call);
+
+        partial void Modify_GetPythonPackageApiCall(ref gaxgrpc::ApiCall<GetPythonPackageRequest, PythonPackage> call);
 
         partial void Modify_ImportAptArtifactsApiCall(ref gaxgrpc::ApiCall<ImportAptArtifactsRequest, lro::Operation> call);
 
@@ -3044,6 +4277,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         partial void Modify_UpdateProjectSettingsApiCall(ref gaxgrpc::ApiCall<UpdateProjectSettingsRequest, ProjectSettings> call);
 
+        partial void Modify_GetVPCSCConfigApiCall(ref gaxgrpc::ApiCall<GetVPCSCConfigRequest, VPCSCConfig> call);
+
+        partial void Modify_UpdateVPCSCConfigApiCall(ref gaxgrpc::ApiCall<UpdateVPCSCConfigRequest, VPCSCConfig> call);
+
         partial void OnConstruction(ArtifactRegistry.ArtifactRegistryClient grpcClient, ArtifactRegistrySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ArtifactRegistry client</summary>
@@ -3055,6 +4292,18 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_ListDockerImagesRequest(ref ListDockerImagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDockerImageRequest(ref GetDockerImageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMavenArtifactsRequest(ref ListMavenArtifactsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMavenArtifactRequest(ref GetMavenArtifactRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNpmPackagesRequest(ref ListNpmPackagesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNpmPackageRequest(ref GetNpmPackageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPythonPackagesRequest(ref ListPythonPackagesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPythonPackageRequest(ref GetPythonPackageRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportAptArtifactsRequest(ref ImportAptArtifactsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3106,6 +4355,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         partial void Modify_UpdateProjectSettingsRequest(ref UpdateProjectSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetVPCSCConfigRequest(ref GetVPCSCConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateVPCSCConfigRequest(ref UpdateVPCSCConfigRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Lists docker images.
         /// </summary>
@@ -3152,6 +4405,150 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Modify_GetDockerImageRequest(ref request, ref callSettings);
             return _callGetDockerImage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifacts(ListMavenArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMavenArtifactsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMavenArtifactsRequest, ListMavenArtifactsResponse, MavenArtifact>(_callListMavenArtifacts, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists maven artifacts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MavenArtifact"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> ListMavenArtifactsAsync(ListMavenArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMavenArtifactsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMavenArtifactsRequest, ListMavenArtifactsResponse, MavenArtifact>(_callListMavenArtifacts, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MavenArtifact GetMavenArtifact(GetMavenArtifactRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMavenArtifactRequest(ref request, ref callSettings);
+            return _callGetMavenArtifact.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a maven artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MavenArtifact> GetMavenArtifactAsync(GetMavenArtifactRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMavenArtifactRequest(ref request, ref callSettings);
+            return _callGetMavenArtifact.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NpmPackage"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackages(ListNpmPackagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNpmPackagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNpmPackagesRequest, ListNpmPackagesResponse, NpmPackage>(_callListNpmPackages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists npm packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NpmPackage"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> ListNpmPackagesAsync(ListNpmPackagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNpmPackagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNpmPackagesRequest, ListNpmPackagesResponse, NpmPackage>(_callListNpmPackages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NpmPackage GetNpmPackage(GetNpmPackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNpmPackageRequest(ref request, ref callSettings);
+            return _callGetNpmPackage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a npm package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NpmPackage> GetNpmPackageAsync(GetNpmPackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNpmPackageRequest(ref request, ref callSettings);
+            return _callGetNpmPackage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PythonPackage"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackages(ListPythonPackagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPythonPackagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPythonPackagesRequest, ListPythonPackagesResponse, PythonPackage>(_callListPythonPackages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists python packages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PythonPackage"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> ListPythonPackagesAsync(ListPythonPackagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPythonPackagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPythonPackagesRequest, ListPythonPackagesResponse, PythonPackage>(_callListPythonPackages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PythonPackage GetPythonPackage(GetPythonPackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPythonPackageRequest(ref request, ref callSettings);
+            return _callGetPythonPackage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a python package.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PythonPackage> GetPythonPackageAsync(GetPythonPackageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPythonPackageRequest(ref request, ref callSettings);
+            return _callGetPythonPackage.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>ImportAptArtifacts</c>.</summary>
@@ -3793,9 +5190,69 @@ namespace Google.Cloud.ArtifactRegistry.V1
             Modify_UpdateProjectSettingsRequest(ref request, ref callSettings);
             return _callUpdateProjectSettings.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VPCSCConfig GetVPCSCConfig(GetVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVPCSCConfigRequest(ref request, ref callSettings);
+            return _callGetVPCSCConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VPCSCConfig> GetVPCSCConfigAsync(GetVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVPCSCConfigRequest(ref request, ref callSettings);
+            return _callGetVPCSCConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VPCSCConfig UpdateVPCSCConfig(UpdateVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateVPCSCConfigRequest(ref request, ref callSettings);
+            return _callUpdateVPCSCConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the VPCSC Config for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VPCSCConfig> UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateVPCSCConfigRequest(ref request, ref callSettings);
+            return _callUpdateVPCSCConfig.Async(request, callSettings);
+        }
     }
 
     public partial class ListDockerImagesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMavenArtifactsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListNpmPackagesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPythonPackagesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3823,6 +5280,30 @@ namespace Google.Cloud.ArtifactRegistry.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DockerImage> GetEnumerator() => DockerImages.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMavenArtifactsResponse : gaxgrpc::IPageResponse<MavenArtifact>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MavenArtifact> GetEnumerator() => MavenArtifacts.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNpmPackagesResponse : gaxgrpc::IPageResponse<NpmPackage>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NpmPackage> GetEnumerator() => NpmPackages.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPythonPackagesResponse : gaxgrpc::IPageResponse<PythonPackage>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PythonPackage> GetEnumerator() => PythonPackages.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
