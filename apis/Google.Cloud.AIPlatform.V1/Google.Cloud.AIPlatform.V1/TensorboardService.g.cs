@@ -362,12 +362,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aWVzOgEq2kEXdGVuc29yYm9hcmRfdGltZV9zZXJpZXMahgHKQRlhaXBsYXRm",
             "b3JtLmdvb2dsZWFwaXMuY29t0kFnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
             "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULbAQoeY29tLmdv",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULVAQoeY29tLmdv",
             "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhdUZW5zb3Jib2FyZFNlcnZpY2VQ",
-            "cm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91",
-            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
-            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
+            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardDataReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardExperimentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardRunReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeriesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -304,12 +304,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dGlvbnMvKn0vZmVhdHVyZXN0b3JlczpzZWFyY2hGZWF0dXJlc9pBCGxvY2F0",
             "aW9u2kEObG9jYXRpb24scXVlcnkaTcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBp",
             "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtQtwBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
-            "GEZlYXR1cmVzdG9yZVNlcnZpY2VQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlw",
-            "bGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
-            "b3JtOjpWMWIGcHJvdG8z"));
+            "LXBsYXRmb3JtQtYBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
+            "GEZlYXR1cmVzdG9yZVNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
+            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
+            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
+            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EntityTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureSelectorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

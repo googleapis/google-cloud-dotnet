@@ -59,13 +59,13 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "dW5yZWFjaGFibGUYAyADKAkijQEKFVVwZGF0ZU5mc1NoYXJlUmVxdWVzdBJD",
             "CgluZnNfc2hhcmUYASABKAsyKy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29s",
             "dXRpb24udjIuTmZzU2hhcmVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC+wEKJWNvbS5nb29nbGUuY2xv",
-            "dWQuYmFyZW1ldGFsc29sdXRpb24udjJCDU5mc1NoYXJlUHJvdG9QAVpSZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iYXJl",
-            "bWV0YWxzb2x1dGlvbi92MjtiYXJlbWV0YWxzb2x1dGlvbqoCIUdvb2dsZS5D",
-            "bG91ZC5CYXJlTWV0YWxTb2x1dGlvbi5WMsoCIUdvb2dsZVxDbG91ZFxCYXJl",
-            "TWV0YWxTb2x1dGlvblxWMuoCJEdvb2dsZTo6Q2xvdWQ6OkJhcmVNZXRhbFNv",
-            "bHV0aW9uOjpWMmIGcHJvdG8z"));
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC/AEKJWNvbS5nb29nbGUuY2xv",
+            "dWQuYmFyZW1ldGFsc29sdXRpb24udjJCDU5mc1NoYXJlUHJvdG9QAVpTY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJl",
+            "bWV0YWxzb2x1dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUu",
+            "Q2xvdWQuQmFyZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFy",
+            "ZU1ldGFsU29sdXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxT",
+            "b2x1dGlvbjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

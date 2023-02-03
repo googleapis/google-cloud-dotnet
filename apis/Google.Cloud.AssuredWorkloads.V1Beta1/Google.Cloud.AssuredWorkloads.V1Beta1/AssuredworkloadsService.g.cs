@@ -63,9 +63,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "bnNlIgnaQQZwYXJlbnQaU8pBH2Fzc3VyZWR3b3JrbG9hZHMuZ29vZ2xlYXBp",
             "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtQp0CCiljb20uZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9h",
-            "ZHMudjFiZXRhMUIcQXNzdXJlZHdvcmtsb2Fkc1NlcnZpY2VQcm90b1ABWlVn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fz",
-            "c3VyZWR3b3JrbG9hZHMvdjFiZXRhMTthc3N1cmVkd29ya2xvYWRzqgIlR29v",
+            "ZHMudjFiZXRhMUIcQXNzdXJlZHdvcmtsb2Fkc1NlcnZpY2VQcm90b1ABWlVj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2Fzc3VyZWR3b3JrbG9hZHMvYXBpdjFiZXRh",
+            "MS9hc3N1cmVkd29ya2xvYWRzcGI7YXNzdXJlZHdvcmtsb2Fkc3BiqgIlR29v",
             "Z2xlLkNsb3VkLkFzc3VyZWRXb3JrbG9hZHMuVjFCZXRhMcoCJUdvb2dsZVxD",
             "bG91ZFxBc3N1cmVkV29ya2xvYWRzXFYxYmV0YTHqAihHb29nbGU6OkNsb3Vk",
             "OjpBc3N1cmVkV29ya2xvYWRzOjpWMWJldGExYgZwcm90bzM="));

@@ -208,14 +208,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
             "ZXJtaXNzaW9uczoBKhp4ykEbYW5hbHl0aWNzaHViLmdvb2dsZWFwaXMuY29t",
             "0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWdxdWVyeSxo",
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "QtoCCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmFuYWx5dGljc2h1Yi52",
-            "MUIRQW5hbHl0aWNzSHViUHJvdG9QAVpRZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iaWdxdWVyeS9hbmFseXRpY3NodWIv",
-            "djE7YW5hbHl0aWNzaHViqgIlR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkFuYWx5",
-            "dGljc0h1Yi5WMcoCJUdvb2dsZVxDbG91ZFxCaWdRdWVyeVxBbmFseXRpY3NI",
-            "dWJcVjHqAilHb29nbGU6OkNsb3VkOjpCaWdxdWVyeTo6QW5hbHl0aWNzSHVi",
-            "OjpWMepBSAofYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20vRGF0YXNldBIlcHJv",
-            "amVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0fWIGcHJvdG8z"));
+            "QtYCCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmFuYWx5dGljc2h1Yi52",
+            "MUIRQW5hbHl0aWNzSHViUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "aWdxdWVyeS9hbmFseXRpY3NodWIvYXBpdjEvYW5hbHl0aWNzaHVicGI7YW5h",
+            "bHl0aWNzaHVicGKqAiVHb29nbGUuQ2xvdWQuQmlnUXVlcnkuQW5hbHl0aWNz",
+            "SHViLlYxygIlR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XEFuYWx5dGljc0h1YlxW",
+            "MeoCKUdvb2dsZTo6Q2xvdWQ6OkJpZ3F1ZXJ5OjpBbmFseXRpY3NIdWI6OlYx",
+            "6kFICh9iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EiVwcm9qZWN0",
+            "cy97cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

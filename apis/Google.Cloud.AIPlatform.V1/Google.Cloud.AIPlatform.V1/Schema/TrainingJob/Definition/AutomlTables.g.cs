@@ -86,15 +86,15 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             "bHVtbl9uYW1lGAEgASgJQhcKFXRyYW5zZm9ybWF0aW9uX2RldGFpbEIqCihh",
             "ZGRpdGlvbmFsX29wdGltaXphdGlvbl9vYmplY3RpdmVfY29uZmlnIjsKFEF1",
             "dG9NbFRhYmxlc01ldGFkYXRhEiMKG3RyYWluX2Nvc3RfbWlsbGlfbm9kZV9o",
-            "b3VycxgBIAEoA0LuAgo8Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "b3VycxgBIAEoA0LoAgo8Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LnNjaGVtYS50cmFpbmluZ2pvYi5kZWZpbml0aW9uQhFBdXRvTUxUYWJsZXNQ",
-            "cm90b1ABWmJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2NoZW1hL3RyYWluaW5nam9iL2RlZmlu",
-            "aXRpb247ZGVmaW5pdGlvbqoCOEdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "LlNjaGVtYS5UcmFpbmluZ0pvYi5EZWZpbml0aW9uygI4R29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjFcU2NoZW1hXFRyYWluaW5nSm9iXERlZmluaXRpb27q",
-            "Aj5Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMTo6U2NoZW1hOjpUcmFp",
-            "bmluZ0pvYjo6RGVmaW5pdGlvbmIGcHJvdG8z"));
+            "cm90b1ABWlxjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
+            "c2NoZW1hL3RyYWluaW5nam9iL2RlZmluaXRpb24vZGVmaW5pdGlvbnBiO2Rl",
+            "ZmluaXRpb25wYqoCOEdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxLlNjaGVt",
+            "YS5UcmFpbmluZ0pvYi5EZWZpbml0aW9uygI4R29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjFcU2NoZW1hXFRyYWluaW5nSm9iXERlZmluaXRpb27qAj5Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMTo6U2NoZW1hOjpUcmFpbmluZ0pv",
+            "Yjo6RGVmaW5pdGlvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

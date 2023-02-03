@@ -62,12 +62,12 @@ namespace Google.Cloud.ApigeeConnect.V1 {
             "YXBpZ2VlY29ubmVjdC52MS5FZ3Jlc3NSZXNwb25zZRosLmdvb2dsZS5jbG91",
             "ZC5hcGlnZWVjb25uZWN0LnYxLkVncmVzc1JlcXVlc3QiACgBMAEaUMpBHGFw",
             "aWdlZWNvbm5lY3QuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQuEBCiFjb20uZ29vZ2xl",
-            "LmNsb3VkLmFwaWdlZWNvbm5lY3QudjFCC1RldGhlclByb3RvUAFaSmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXBpZ2Vl",
-            "Y29ubmVjdC92MTthcGlnZWVjb25uZWN0qgIdR29vZ2xlLkNsb3VkLkFwaWdl",
-            "ZUNvbm5lY3QuVjHKAh1Hb29nbGVcQ2xvdWRcQXBpZ2VlQ29ubmVjdFxWMeoC",
-            "IEdvb2dsZTo6Q2xvdWQ6OkFwaWdlZUNvbm5lY3Q6OlYxYgZwcm90bzM="));
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQt4BCiFjb20uZ29vZ2xl",
+            "LmNsb3VkLmFwaWdlZWNvbm5lY3QudjFCC1RldGhlclByb3RvUAFaR2Nsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYXBpZ2VlY29ubmVjdC9hcGl2MS9hcGlnZWVjb25u",
+            "ZWN0cGI7YXBpZ2VlY29ubmVjdHBiqgIdR29vZ2xlLkNsb3VkLkFwaWdlZUNv",
+            "bm5lY3QuVjHKAh1Hb29nbGVcQ2xvdWRcQXBpZ2VlQ29ubmVjdFxWMeoCIEdv",
+            "b2dsZTo6Q2xvdWQ6OkFwaWdlZUNvbm5lY3Q6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ApigeeConnect.V1.Action), typeof(global::Google.Cloud.ApigeeConnect.V1.TetherEndpoint), typeof(global::Google.Cloud.ApigeeConnect.V1.Scheme), }, null, new pbr::GeneratedClrTypeInfo[] {
