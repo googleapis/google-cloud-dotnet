@@ -16306,6 +16306,1592 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_sync",
+      "title": "CreateNasJobRequestObject",
+      "description": "Snippet for CreateNasJob",
+      "file": "JobServiceClient.CreateNasJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_async",
+      "title": "CreateNasJobRequestObjectAsync",
+      "description": "Snippet for CreateNasJobAsync",
+      "file": "JobServiceClient.CreateNasJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_sync_flattened",
+      "title": "CreateNasJob",
+      "description": "Snippet for CreateNasJob",
+      "file": "JobServiceClient.CreateNasJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_async_flattened",
+      "title": "CreateNasJobAsync",
+      "description": "Snippet for CreateNasJobAsync",
+      "file": "JobServiceClient.CreateNasJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_sync_flattened_resourceNames",
+      "title": "CreateNasJobResourceNames",
+      "description": "Snippet for CreateNasJob",
+      "file": "JobServiceClient.CreateNasJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CreateNasJob_async_flattened_resourceNames",
+      "title": "CreateNasJobResourceNamesAsync",
+      "description": "Snippet for CreateNasJobAsync",
+      "file": "JobServiceClient.CreateNasJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CreateNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CreateNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_sync",
+      "title": "GetNasJobRequestObject",
+      "description": "Snippet for GetNasJob",
+      "file": "JobServiceClient.GetNasJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_async",
+      "title": "GetNasJobRequestObjectAsync",
+      "description": "Snippet for GetNasJobAsync",
+      "file": "JobServiceClient.GetNasJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_sync_flattened",
+      "title": "GetNasJob",
+      "description": "Snippet for GetNasJob",
+      "file": "JobServiceClient.GetNasJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_async_flattened",
+      "title": "GetNasJobAsync",
+      "description": "Snippet for GetNasJobAsync",
+      "file": "JobServiceClient.GetNasJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_sync_flattened_resourceNames",
+      "title": "GetNasJobResourceNames",
+      "description": "Snippet for GetNasJob",
+      "file": "JobServiceClient.GetNasJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJob",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasJob_async_flattened_resourceNames",
+      "title": "GetNasJobResourceNamesAsync",
+      "description": "Snippet for GetNasJobAsync",
+      "file": "JobServiceClient.GetNasJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_sync",
+      "title": "ListNasJobsRequestObject",
+      "description": "Snippet for ListNasJobs",
+      "file": "JobServiceClient.ListNasJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_async",
+      "title": "ListNasJobsRequestObjectAsync",
+      "description": "Snippet for ListNasJobsAsync",
+      "file": "JobServiceClient.ListNasJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_sync_flattened",
+      "title": "ListNasJobs",
+      "description": "Snippet for ListNasJobs",
+      "file": "JobServiceClient.ListNasJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_async_flattened",
+      "title": "ListNasJobsAsync",
+      "description": "Snippet for ListNasJobsAsync",
+      "file": "JobServiceClient.ListNasJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_sync_flattened_resourceNames",
+      "title": "ListNasJobsResourceNames",
+      "description": "Snippet for ListNasJobs",
+      "file": "JobServiceClient.ListNasJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobs",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasJobs_async_flattened_resourceNames",
+      "title": "ListNasJobsResourceNamesAsync",
+      "description": "Snippet for ListNasJobsAsync",
+      "file": "JobServiceClient.ListNasJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasJobsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasJobsResponse, Google.Cloud.AIPlatform.V1.NasJob>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasJobs",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasJobs",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_sync",
+      "title": "DeleteNasJobRequestObject",
+      "description": "Snippet for DeleteNasJob",
+      "file": "JobServiceClient.DeleteNasJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJob",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_async",
+      "title": "DeleteNasJobRequestObjectAsync",
+      "description": "Snippet for DeleteNasJobAsync",
+      "file": "JobServiceClient.DeleteNasJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_sync_flattened",
+      "title": "DeleteNasJob",
+      "description": "Snippet for DeleteNasJob",
+      "file": "JobServiceClient.DeleteNasJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJob",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_async_flattened",
+      "title": "DeleteNasJobAsync",
+      "description": "Snippet for DeleteNasJobAsync",
+      "file": "JobServiceClient.DeleteNasJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_sync_flattened_resourceNames",
+      "title": "DeleteNasJobResourceNames",
+      "description": "Snippet for DeleteNasJob",
+      "file": "JobServiceClient.DeleteNasJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJob",
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_DeleteNasJob_async_flattened_resourceNames",
+      "title": "DeleteNasJobResourceNamesAsync",
+      "description": "Snippet for DeleteNasJobAsync",
+      "file": "JobServiceClient.DeleteNasJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.DeleteNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.DeleteNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_sync",
+      "title": "CancelNasJobRequestObject",
+      "description": "Snippet for CancelNasJob",
+      "file": "JobServiceClient.CancelNasJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_async",
+      "title": "CancelNasJobRequestObjectAsync",
+      "description": "Snippet for CancelNasJobAsync",
+      "file": "JobServiceClient.CancelNasJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_sync_flattened",
+      "title": "CancelNasJob",
+      "description": "Snippet for CancelNasJob",
+      "file": "JobServiceClient.CancelNasJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_async_flattened",
+      "title": "CancelNasJobAsync",
+      "description": "Snippet for CancelNasJobAsync",
+      "file": "JobServiceClient.CancelNasJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_sync_flattened_resourceNames",
+      "title": "CancelNasJobResourceNames",
+      "description": "Snippet for CancelNasJob",
+      "file": "JobServiceClient.CancelNasJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJob",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_CancelNasJob_async_flattened_resourceNames",
+      "title": "CancelNasJobResourceNamesAsync",
+      "description": "Snippet for CancelNasJobAsync",
+      "file": "JobServiceClient.CancelNasJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelNasJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.CancelNasJobAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "CancelNasJob",
+          "fullName": "google.cloud.aiplatform.v1.JobService.CancelNasJob",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_sync",
+      "title": "GetNasTrialDetailRequestObject",
+      "description": "Snippet for GetNasTrialDetail",
+      "file": "JobServiceClient.GetNasTrialDetailRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetail",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetail",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasTrialDetail",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_async",
+      "title": "GetNasTrialDetailRequestObjectAsync",
+      "description": "Snippet for GetNasTrialDetailAsync",
+      "file": "JobServiceClient.GetNasTrialDetailRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetailAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetailAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_sync_flattened",
+      "title": "GetNasTrialDetail",
+      "description": "Snippet for GetNasTrialDetail",
+      "file": "JobServiceClient.GetNasTrialDetailSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetail",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetail",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasTrialDetail",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_async_flattened",
+      "title": "GetNasTrialDetailAsync",
+      "description": "Snippet for GetNasTrialDetailAsync",
+      "file": "JobServiceClient.GetNasTrialDetailAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetailAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetailAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_sync_flattened_resourceNames",
+      "title": "GetNasTrialDetailResourceNames",
+      "description": "Snippet for GetNasTrialDetail",
+      "file": "JobServiceClient.GetNasTrialDetailResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetail",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetail",
+        "resultType": "Google.Cloud.AIPlatform.V1.NasTrialDetail",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_GetNasTrialDetail_async_flattened_resourceNames",
+      "title": "GetNasTrialDetailResourceNamesAsync",
+      "description": "Snippet for GetNasTrialDetailAsync",
+      "file": "JobServiceClient.GetNasTrialDetailResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNasTrialDetailAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.GetNasTrialDetailAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "GetNasTrialDetail",
+          "fullName": "google.cloud.aiplatform.v1.JobService.GetNasTrialDetail",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_sync",
+      "title": "ListNasTrialDetailsRequestObject",
+      "description": "Snippet for ListNasTrialDetails",
+      "file": "JobServiceClient.ListNasTrialDetailsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetails",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetails",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_async",
+      "title": "ListNasTrialDetailsRequestObjectAsync",
+      "description": "Snippet for ListNasTrialDetailsAsync",
+      "file": "JobServiceClient.ListNasTrialDetailsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetailsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetailsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_sync_flattened",
+      "title": "ListNasTrialDetails",
+      "description": "Snippet for ListNasTrialDetails",
+      "file": "JobServiceClient.ListNasTrialDetailsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetails",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetails",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_async_flattened",
+      "title": "ListNasTrialDetailsAsync",
+      "description": "Snippet for ListNasTrialDetailsAsync",
+      "file": "JobServiceClient.ListNasTrialDetailsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetailsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetailsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_sync_flattened_resourceNames",
+      "title": "ListNasTrialDetailsResourceNames",
+      "description": "Snippet for ListNasTrialDetails",
+      "file": "JobServiceClient.ListNasTrialDetailsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetails",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetails",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_JobService_ListNasTrialDetails_async_flattened_resourceNames",
+      "title": "ListNasTrialDetailsResourceNamesAsync",
+      "description": "Snippet for ListNasTrialDetailsAsync",
+      "file": "JobServiceClient.ListNasTrialDetailsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNasTrialDetailsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient.ListNasTrialDetailsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse, Google.Cloud.AIPlatform.V1.NasTrialDetail>",
+        "client": {
+          "shortName": "JobServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.JobServiceClient"
+        },
+        "method": {
+          "shortName": "ListNasTrialDetails",
+          "fullName": "google.cloud.aiplatform.v1.JobService.ListNasTrialDetails",
+          "service": {
+            "shortName": "JobService",
+            "fullName": "google.cloud.aiplatform.v1.JobService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_JobService_CreateBatchPredictionJob_sync",
       "title": "CreateBatchPredictionJobRequestObject",
       "description": "Snippet for CreateBatchPredictionJob",
@@ -28629,6 +30215,233 @@
         {
           "start": 36,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_sync",
+      "title": "CopyModelRequestObject",
+      "description": "Snippet for CopyModel",
+      "file": "ModelServiceClient.CopyModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModel",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_async",
+      "title": "CopyModelRequestObjectAsync",
+      "description": "Snippet for CopyModelAsync",
+      "file": "ModelServiceClient.CopyModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModelAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_sync_flattened",
+      "title": "CopyModel",
+      "description": "Snippet for CopyModel",
+      "file": "ModelServiceClient.CopyModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModel",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_async_flattened",
+      "title": "CopyModelAsync",
+      "description": "Snippet for CopyModelAsync",
+      "file": "ModelServiceClient.CopyModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModelAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_sync_flattened_resourceNames",
+      "title": "CopyModelResourceNames",
+      "description": "Snippet for CopyModel",
+      "file": "ModelServiceClient.CopyModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModel",
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_CopyModel_async_flattened_resourceNames",
+      "title": "CopyModelResourceNamesAsync",
+      "description": "Snippet for CopyModelAsync",
+      "file": "ModelServiceClient.CopyModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.CopyModelAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.CopyModelResponse, Google.Cloud.AIPlatform.V1.CopyModelOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CopyModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.CopyModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]

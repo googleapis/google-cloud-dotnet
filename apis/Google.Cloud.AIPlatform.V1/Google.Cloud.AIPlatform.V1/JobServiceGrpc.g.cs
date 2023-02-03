@@ -110,6 +110,28 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CancelHyperparameterTuningJobRequest> __Marshaller_google_cloud_aiplatform_v1_CancelHyperparameterTuningJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CancelHyperparameterTuningJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest> __Marshaller_google_cloud_aiplatform_v1_CreateNasJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.NasJob> __Marshaller_google_cloud_aiplatform_v1_NasJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.NasJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetNasJobRequest> __Marshaller_google_cloud_aiplatform_v1_GetNasJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetNasJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest> __Marshaller_google_cloud_aiplatform_v1_ListNasJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse> __Marshaller_google_cloud_aiplatform_v1_ListNasJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteNasJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest> __Marshaller_google_cloud_aiplatform_v1_CancelNasJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest> __Marshaller_google_cloud_aiplatform_v1_GetNasTrialDetailRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.NasTrialDetail> __Marshaller_google_cloud_aiplatform_v1_NasTrialDetail = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.NasTrialDetail.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest> __Marshaller_google_cloud_aiplatform_v1_ListNasTrialDetailsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse> __Marshaller_google_cloud_aiplatform_v1_ListNasTrialDetailsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateBatchPredictionJobRequest> __Marshaller_google_cloud_aiplatform_v1_CreateBatchPredictionJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateBatchPredictionJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.BatchPredictionJob> __Marshaller_google_cloud_aiplatform_v1_BatchPredictionJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.BatchPredictionJob.Parser));
@@ -265,6 +287,62 @@ namespace Google.Cloud.AIPlatform.V1 {
         "CancelHyperparameterTuningJob",
         __Marshaller_google_cloud_aiplatform_v1_CancelHyperparameterTuningJobRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob> __Method_CreateNasJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNasJob",
+        __Marshaller_google_cloud_aiplatform_v1_CreateNasJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_NasJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob> __Method_GetNasJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNasJob",
+        __Marshaller_google_cloud_aiplatform_v1_GetNasJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_NasJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest, global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse> __Method_ListNasJobs = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest, global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListNasJobs",
+        __Marshaller_google_cloud_aiplatform_v1_ListNasJobsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListNasJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest, global::Google.LongRunning.Operation> __Method_DeleteNasJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteNasJob",
+        __Marshaller_google_cloud_aiplatform_v1_DeleteNasJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelNasJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelNasJob",
+        __Marshaller_google_cloud_aiplatform_v1_CancelNasJobRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest, global::Google.Cloud.AIPlatform.V1.NasTrialDetail> __Method_GetNasTrialDetail = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest, global::Google.Cloud.AIPlatform.V1.NasTrialDetail>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNasTrialDetail",
+        __Marshaller_google_cloud_aiplatform_v1_GetNasTrialDetailRequest,
+        __Marshaller_google_cloud_aiplatform_v1_NasTrialDetail);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest, global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse> __Method_ListNasTrialDetails = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest, global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListNasTrialDetails",
+        __Marshaller_google_cloud_aiplatform_v1_ListNasTrialDetailsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListNasTrialDetailsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateBatchPredictionJobRequest, global::Google.Cloud.AIPlatform.V1.BatchPredictionJob> __Method_CreateBatchPredictionJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateBatchPredictionJobRequest, global::Google.Cloud.AIPlatform.V1.BatchPredictionJob>(
@@ -582,6 +660,102 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelHyperparameterTuningJob(global::Google.Cloud.AIPlatform.V1.CancelHyperparameterTuningJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a NasJob
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.NasJob> CreateNasJob(global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a NasJob
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.NasJob> GetNasJob(global::Google.Cloud.AIPlatform.V1.GetNasJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists NasJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse> ListNasJobs(global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a NasJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNasJob(global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels a NasJob.
+      /// Starts asynchronous cancellation on the NasJob. The server
+      /// makes a best effort to cancel the job, but success is not
+      /// guaranteed. Clients can use
+      /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// job completed despite cancellation. On successful cancellation,
+      /// the NasJob is not deleted; instead it becomes a job with
+      /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+      /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelNasJob(global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a NasTrialDetail.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.NasTrialDetail> GetNasTrialDetail(global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List top NasTrialDetails of a NasJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse> ListNasTrialDetails(global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1615,6 +1789,390 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelHyperparameterTuningJob, null, options, request);
       }
       /// <summary>
+      /// Creates a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasJob CreateNasJob(global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNasJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasJob CreateNasJob(global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasJob> CreateNasJobAsync(global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNasJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasJob> CreateNasJobAsync(global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasJob GetNasJob(global::Google.Cloud.AIPlatform.V1.GetNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNasJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasJob GetNasJob(global::Google.Cloud.AIPlatform.V1.GetNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasJob> GetNasJobAsync(global::Google.Cloud.AIPlatform.V1.GetNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNasJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a NasJob
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasJob> GetNasJobAsync(global::Google.Cloud.AIPlatform.V1.GetNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Lists NasJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse ListNasJobs(global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNasJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists NasJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse ListNasJobs(global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListNasJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists NasJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse> ListNasJobsAsync(global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNasJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists NasJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse> ListNasJobsAsync(global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListNasJobs, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNasJob(global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNasJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNasJob(global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNasJobAsync(global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNasJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNasJobAsync(global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a NasJob.
+      /// Starts asynchronous cancellation on the NasJob. The server
+      /// makes a best effort to cancel the job, but success is not
+      /// guaranteed. Clients can use
+      /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// job completed despite cancellation. On successful cancellation,
+      /// the NasJob is not deleted; instead it becomes a job with
+      /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+      /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelNasJob(global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelNasJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a NasJob.
+      /// Starts asynchronous cancellation on the NasJob. The server
+      /// makes a best effort to cancel the job, but success is not
+      /// guaranteed. Clients can use
+      /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// job completed despite cancellation. On successful cancellation,
+      /// the NasJob is not deleted; instead it becomes a job with
+      /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+      /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelNasJob(global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a NasJob.
+      /// Starts asynchronous cancellation on the NasJob. The server
+      /// makes a best effort to cancel the job, but success is not
+      /// guaranteed. Clients can use
+      /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// job completed despite cancellation. On successful cancellation,
+      /// the NasJob is not deleted; instead it becomes a job with
+      /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+      /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelNasJobAsync(global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelNasJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a NasJob.
+      /// Starts asynchronous cancellation on the NasJob. The server
+      /// makes a best effort to cancel the job, but success is not
+      /// guaranteed. Clients can use
+      /// [JobService.GetNasJob][google.cloud.aiplatform.v1.JobService.GetNasJob] or
+      /// other methods to check whether the cancellation succeeded or whether the
+      /// job completed despite cancellation. On successful cancellation,
+      /// the NasJob is not deleted; instead it becomes a job with
+      /// a [NasJob.error][google.cloud.aiplatform.v1.NasJob.error] value with a
+      /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+      /// `Code.CANCELLED`, and
+      /// [NasJob.state][google.cloud.aiplatform.v1.NasJob.state] is set to
+      /// `CANCELLED`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelNasJobAsync(global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelNasJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a NasTrialDetail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasTrialDetail GetNasTrialDetail(global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNasTrialDetail(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a NasTrialDetail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.NasTrialDetail GetNasTrialDetail(global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNasTrialDetail, null, options, request);
+      }
+      /// <summary>
+      /// Gets a NasTrialDetail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasTrialDetail> GetNasTrialDetailAsync(global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNasTrialDetailAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a NasTrialDetail.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.NasTrialDetail> GetNasTrialDetailAsync(global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNasTrialDetail, null, options, request);
+      }
+      /// <summary>
+      /// List top NasTrialDetails of a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse ListNasTrialDetails(global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNasTrialDetails(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List top NasTrialDetails of a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse ListNasTrialDetails(global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListNasTrialDetails, null, options, request);
+      }
+      /// <summary>
+      /// List top NasTrialDetails of a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse> ListNasTrialDetailsAsync(global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNasTrialDetailsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List top NasTrialDetails of a NasJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse> ListNasTrialDetailsAsync(global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListNasTrialDetails, null, options, request);
+      }
+      /// <summary>
       /// Creates a BatchPredictionJob. A BatchPredictionJob once created will
       /// right away be attempted to start.
       /// </summary>
@@ -2343,6 +2901,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ListHyperparameterTuningJobs, serviceImpl.ListHyperparameterTuningJobs)
           .AddMethod(__Method_DeleteHyperparameterTuningJob, serviceImpl.DeleteHyperparameterTuningJob)
           .AddMethod(__Method_CancelHyperparameterTuningJob, serviceImpl.CancelHyperparameterTuningJob)
+          .AddMethod(__Method_CreateNasJob, serviceImpl.CreateNasJob)
+          .AddMethod(__Method_GetNasJob, serviceImpl.GetNasJob)
+          .AddMethod(__Method_ListNasJobs, serviceImpl.ListNasJobs)
+          .AddMethod(__Method_DeleteNasJob, serviceImpl.DeleteNasJob)
+          .AddMethod(__Method_CancelNasJob, serviceImpl.CancelNasJob)
+          .AddMethod(__Method_GetNasTrialDetail, serviceImpl.GetNasTrialDetail)
+          .AddMethod(__Method_ListNasTrialDetails, serviceImpl.ListNasTrialDetails)
           .AddMethod(__Method_CreateBatchPredictionJob, serviceImpl.CreateBatchPredictionJob)
           .AddMethod(__Method_GetBatchPredictionJob, serviceImpl.GetBatchPredictionJob)
           .AddMethod(__Method_ListBatchPredictionJobs, serviceImpl.ListBatchPredictionJobs)
@@ -2380,6 +2945,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListHyperparameterTuningJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListHyperparameterTuningJobsRequest, global::Google.Cloud.AIPlatform.V1.ListHyperparameterTuningJobsResponse>(serviceImpl.ListHyperparameterTuningJobs));
       serviceBinder.AddMethod(__Method_DeleteHyperparameterTuningJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteHyperparameterTuningJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteHyperparameterTuningJob));
       serviceBinder.AddMethod(__Method_CancelHyperparameterTuningJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CancelHyperparameterTuningJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelHyperparameterTuningJob));
+      serviceBinder.AddMethod(__Method_CreateNasJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob>(serviceImpl.CreateNasJob));
+      serviceBinder.AddMethod(__Method_GetNasJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetNasJobRequest, global::Google.Cloud.AIPlatform.V1.NasJob>(serviceImpl.GetNasJob));
+      serviceBinder.AddMethod(__Method_ListNasJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListNasJobsRequest, global::Google.Cloud.AIPlatform.V1.ListNasJobsResponse>(serviceImpl.ListNasJobs));
+      serviceBinder.AddMethod(__Method_DeleteNasJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteNasJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNasJob));
+      serviceBinder.AddMethod(__Method_CancelNasJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CancelNasJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelNasJob));
+      serviceBinder.AddMethod(__Method_GetNasTrialDetail, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetNasTrialDetailRequest, global::Google.Cloud.AIPlatform.V1.NasTrialDetail>(serviceImpl.GetNasTrialDetail));
+      serviceBinder.AddMethod(__Method_ListNasTrialDetails, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsRequest, global::Google.Cloud.AIPlatform.V1.ListNasTrialDetailsResponse>(serviceImpl.ListNasTrialDetails));
       serviceBinder.AddMethod(__Method_CreateBatchPredictionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateBatchPredictionJobRequest, global::Google.Cloud.AIPlatform.V1.BatchPredictionJob>(serviceImpl.CreateBatchPredictionJob));
       serviceBinder.AddMethod(__Method_GetBatchPredictionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetBatchPredictionJobRequest, global::Google.Cloud.AIPlatform.V1.BatchPredictionJob>(serviceImpl.GetBatchPredictionJob));
       serviceBinder.AddMethod(__Method_ListBatchPredictionJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsRequest, global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsResponse>(serviceImpl.ListBatchPredictionJobs));

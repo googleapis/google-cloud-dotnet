@@ -430,6 +430,12 @@
                 "CancelHyperparameterTuningJobAsync"
               ]
             },
+            "CancelNasJob": {
+              "methods": [
+                "CancelNasJob",
+                "CancelNasJobAsync"
+              ]
+            },
             "CreateBatchPredictionJob": {
               "methods": [
                 "CreateBatchPredictionJob",
@@ -458,6 +464,12 @@
               "methods": [
                 "CreateModelDeploymentMonitoringJob",
                 "CreateModelDeploymentMonitoringJobAsync"
+              ]
+            },
+            "CreateNasJob": {
+              "methods": [
+                "CreateNasJob",
+                "CreateNasJobAsync"
               ]
             },
             "DeleteBatchPredictionJob": {
@@ -490,6 +502,12 @@
                 "DeleteModelDeploymentMonitoringJobAsync"
               ]
             },
+            "DeleteNasJob": {
+              "methods": [
+                "DeleteNasJob",
+                "DeleteNasJobAsync"
+              ]
+            },
             "GetBatchPredictionJob": {
               "methods": [
                 "GetBatchPredictionJob",
@@ -520,6 +538,18 @@
                 "GetModelDeploymentMonitoringJobAsync"
               ]
             },
+            "GetNasJob": {
+              "methods": [
+                "GetNasJob",
+                "GetNasJobAsync"
+              ]
+            },
+            "GetNasTrialDetail": {
+              "methods": [
+                "GetNasTrialDetail",
+                "GetNasTrialDetailAsync"
+              ]
+            },
             "ListBatchPredictionJobs": {
               "methods": [
                 "ListBatchPredictionJobs",
@@ -548,6 +578,18 @@
               "methods": [
                 "ListModelDeploymentMonitoringJobs",
                 "ListModelDeploymentMonitoringJobsAsync"
+              ]
+            },
+            "ListNasJobs": {
+              "methods": [
+                "ListNasJobs",
+                "ListNasJobsAsync"
+              ]
+            },
+            "ListNasTrialDetails": {
+              "methods": [
+                "ListNasTrialDetails",
+                "ListNasTrialDetailsAsync"
               ]
             },
             "PauseModelDeploymentMonitoringJob": {
@@ -809,6 +851,12 @@
               "methods": [
                 "BatchImportModelEvaluationSlices",
                 "BatchImportModelEvaluationSlicesAsync"
+              ]
+            },
+            "CopyModel": {
+              "methods": [
+                "CopyModel",
+                "CopyModelAsync"
               ]
             },
             "DeleteModel": {

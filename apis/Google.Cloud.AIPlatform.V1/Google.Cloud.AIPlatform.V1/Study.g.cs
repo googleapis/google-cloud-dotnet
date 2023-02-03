@@ -60,7 +60,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "VE9QUElORxADEg0KCVNVQ0NFRURFRBAEEg4KCklORkVBU0lCTEUQBTps6kFp",
             "Ch9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyaWFsEkZwcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3R1ZGllcy97c3R1ZHl9",
-            "L3RyaWFscy97dHJpYWx9IoYbCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
+            "L3RyaWFscy97dHJpYWx9Iv4cCglTdHVkeVNwZWMSagoZZGVjYXlfY3VydmVf",
             "c3RvcHBpbmdfc3BlYxgEIAEoCzJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
             "LnYxLlN0dWR5U3BlYy5EZWNheUN1cnZlQXV0b21hdGVkU3RvcHBpbmdTcGVj",
             "SAASawoebWVkaWFuX2F1dG9tYXRlZF9zdG9wcGluZ19zcGVjGAUgASgLMkEu",
@@ -76,84 +76,90 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aW9uX25vaXNlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
             "U3R1ZHlTcGVjLk9ic2VydmF0aW9uTm9pc2USYgoabWVhc3VyZW1lbnRfc2Vs",
             "ZWN0aW9uX3R5cGUYByABKA4yPi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5TdHVkeVNwZWMuTWVhc3VyZW1lbnRTZWxlY3Rpb25UeXBlGrUBCgpNZXRy",
+            "MS5TdHVkeVNwZWMuTWVhc3VyZW1lbnRTZWxlY3Rpb25UeXBlGq0DCgpNZXRy",
             "aWNTcGVjEhYKCW1ldHJpY19pZBgBIAEoCUID4EECEkwKBGdvYWwYAiABKA4y",
             "OS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmlj",
-            "U3BlYy5Hb2FsVHlwZUID4EECIkEKCEdvYWxUeXBlEhkKFUdPQUxfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgwKCE1BWElNSVpFEAESDAoITUlOSU1JWkUQAhrNDgoN",
-            "UGFyYW1ldGVyU3BlYxJgChFkb3VibGVfdmFsdWVfc3BlYxgCIAEoCzJDLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJT",
-            "cGVjLkRvdWJsZVZhbHVlU3BlY0gAEmIKEmludGVnZXJfdmFsdWVfc3BlYxgD",
-            "IAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Q",
-            "YXJhbWV0ZXJTcGVjLkludGVnZXJWYWx1ZVNwZWNIABJqChZjYXRlZ29yaWNh",
-            "bF92YWx1ZV9zcGVjGAQgASgLMkguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ2F0ZWdvcmljYWxWYWx1ZVNw",
-            "ZWNIABJkChNkaXNjcmV0ZV92YWx1ZV9zcGVjGAUgASgLMkUuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRGlz",
-            "Y3JldGVWYWx1ZVNwZWNIABIZCgxwYXJhbWV0ZXJfaWQYASABKAlCA+BBAhJR",
-            "CgpzY2FsZV90eXBlGAYgASgOMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuU2NhbGVUeXBlEnEKG2NvbmRp",
-            "dGlvbmFsX3BhcmFtZXRlcl9zcGVjcxgKIAMoCzJMLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlv",
-            "bmFsUGFyYW1ldGVyU3BlYxpvCg9Eb3VibGVWYWx1ZVNwZWMSFgoJbWluX3Zh",
-            "bHVlGAEgASgBQgPgQQISFgoJbWF4X3ZhbHVlGAIgASgBQgPgQQISGgoNZGVm",
-            "YXVsdF92YWx1ZRgEIAEoAUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVlGnAKEElu",
-            "dGVnZXJWYWx1ZVNwZWMSFgoJbWluX3ZhbHVlGAEgASgDQgPgQQISFgoJbWF4",
-            "X3ZhbHVlGAIgASgDQgPgQQISGgoNZGVmYXVsdF92YWx1ZRgEIAEoA0gAiAEB",
-            "QhAKDl9kZWZhdWx0X3ZhbHVlGlkKFENhdGVnb3JpY2FsVmFsdWVTcGVjEhMK",
-            "BnZhbHVlcxgBIAMoCUID4EECEhoKDWRlZmF1bHRfdmFsdWUYAyABKAlIAIgB",
-            "AUIQCg5fZGVmYXVsdF92YWx1ZRpWChFEaXNjcmV0ZVZhbHVlU3BlYxITCgZ2",
-            "YWx1ZXMYASADKAFCA+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAMgASgBSACIAQFC",
-            "EAoOX2RlZmF1bHRfdmFsdWUapAUKGENvbmRpdGlvbmFsUGFyYW1ldGVyU3Bl",
-            "YxKFAQoWcGFyZW50X2Rpc2NyZXRlX3ZhbHVlcxgCIAEoCzJjLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNv",
-            "bmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVlQ29uZGl0aW9u",
-            "SAASewoRcGFyZW50X2ludF92YWx1ZXMYAyABKAsyXi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5Db25kaXRp",
-            "b25hbFBhcmFtZXRlclNwZWMuSW50VmFsdWVDb25kaXRpb25IABKLAQoZcGFy",
-            "ZW50X2NhdGVnb3JpY2FsX3ZhbHVlcxgEIAEoCzJmLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlv",
-            "bmFsUGFyYW1ldGVyU3BlYy5DYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9uSAAS",
-            "UAoOcGFyYW1ldGVyX3NwZWMYASABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlY0ID4EECGi0KFkRpc2Ny",
-            "ZXRlVmFsdWVDb25kaXRpb24SEwoGdmFsdWVzGAEgAygBQgPgQQIaKAoRSW50",
-            "VmFsdWVDb25kaXRpb24SEwoGdmFsdWVzGAEgAygDQgPgQQIaMAoZQ2F0ZWdv",
-            "cmljYWxWYWx1ZUNvbmRpdGlvbhITCgZ2YWx1ZXMYASADKAlCA+BBAkIYChZw",
-            "YXJlbnRfdmFsdWVfY29uZGl0aW9uIm4KCVNjYWxlVHlwZRIaChZTQ0FMRV9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASFQoRVU5JVF9MSU5FQVJfU0NBTEUQARISCg5V",
-            "TklUX0xPR19TQ0FMRRACEhoKFlVOSVRfUkVWRVJTRV9MT0dfU0NBTEUQA0IW",
-            "ChRwYXJhbWV0ZXJfdmFsdWVfc3BlYxo/Ch9EZWNheUN1cnZlQXV0b21hdGVk",
-            "U3RvcHBpbmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEgASgIGjsK",
-            "G01lZGlhbkF1dG9tYXRlZFN0b3BwaW5nU3BlYxIcChR1c2VfZWxhcHNlZF9k",
-            "dXJhdGlvbhgBIAEoCBr2AQobQ29udmV4QXV0b21hdGVkU3RvcHBpbmdTcGVj",
-            "EhYKDm1heF9zdGVwX2NvdW50GAEgASgDEhYKDm1pbl9zdGVwX2NvdW50GAIg",
-            "ASgDEh0KFW1pbl9tZWFzdXJlbWVudF9jb3VudBgDIAEoAxIkChxsZWFybmlu",
-            "Z19yYXRlX3BhcmFtZXRlcl9uYW1lGAQgASgJEhwKFHVzZV9lbGFwc2VkX2R1",
-            "cmF0aW9uGAUgASgIEiYKGXVwZGF0ZV9hbGxfc3RvcHBlZF90cmlhbHMYBiAB",
-            "KAhIAIgBAUIcChpfdXBkYXRlX2FsbF9zdG9wcGVkX3RyaWFscyJKCglBbGdv",
-            "cml0aG0SGQoVQUxHT1JJVEhNX1VOU1BFQ0lGSUVEEAASDwoLR1JJRF9TRUFS",
-            "Q0gQAhIRCg1SQU5ET01fU0VBUkNIEAMiSAoQT2JzZXJ2YXRpb25Ob2lzZRIh",
-            "Ch1PQlNFUlZBVElPTl9OT0lTRV9VTlNQRUNJRklFRBAAEgcKA0xPVxABEggK",
-            "BEhJR0gQAiJyChhNZWFzdXJlbWVudFNlbGVjdGlvblR5cGUSKgomTUVBU1VS",
-            "RU1FTlRfU0VMRUNUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIUChBMQVNUX01F",
-            "QVNVUkVNRU5UEAESFAoQQkVTVF9NRUFTVVJFTUVOVBACQhkKF2F1dG9tYXRl",
-            "ZF9zdG9wcGluZ19zcGVjItwBCgtNZWFzdXJlbWVudBI4ChBlbGFwc2VkX2R1",
-            "cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMS",
-            "FwoKc3RlcF9jb3VudBgCIAEoA0ID4EEDEkQKB21ldHJpY3MYAyADKAsyLi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NZWFzdXJlbWVudC5NZXRyaWNC",
-            "A+BBAxo0CgZNZXRyaWMSFgoJbWV0cmljX2lkGAEgASgJQgPgQQMSEgoFdmFs",
-            "dWUYAiABKAFCA+BBA0LIAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxQgpTdHVkeVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0",
-            "Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9y",
-            "bVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "U3BlYy5Hb2FsVHlwZUID4EECEl8KDXNhZmV0eV9jb25maWcYAyABKAsyQy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmljU3Bl",
+            "Yy5TYWZldHlNZXRyaWNDb25maWdIAIgBARqCAQoSU2FmZXR5TWV0cmljQ29u",
+            "ZmlnEhgKEHNhZmV0eV90aHJlc2hvbGQYASABKAESLQogZGVzaXJlZF9taW5f",
+            "c2FmZV90cmlhbHNfZnJhY3Rpb24YAiABKAFIAIgBAUIjCiFfZGVzaXJlZF9t",
+            "aW5fc2FmZV90cmlhbHNfZnJhY3Rpb24iQQoIR29hbFR5cGUSGQoVR09BTF9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASDAoITUFYSU1JWkUQARIMCghNSU5JTUlaRRAC",
+            "QhAKDl9zYWZldHlfY29uZmlnGs0OCg1QYXJhbWV0ZXJTcGVjEmAKEWRvdWJs",
+            "ZV92YWx1ZV9zcGVjGAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRG91YmxlVmFsdWVTcGVjSAAS",
+            "YgoSaW50ZWdlcl92YWx1ZV9zcGVjGAMgASgLMkQuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuSW50ZWdlclZh",
+            "bHVlU3BlY0gAEmoKFmNhdGVnb3JpY2FsX3ZhbHVlX3NwZWMYBCABKAsySC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVy",
+            "U3BlYy5DYXRlZ29yaWNhbFZhbHVlU3BlY0gAEmQKE2Rpc2NyZXRlX3ZhbHVl",
+            "X3NwZWMYBSABKAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVk",
+            "eVNwZWMuUGFyYW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVlU3BlY0gAEhkKDHBh",
+            "cmFtZXRlcl9pZBgBIAEoCUID4EECElEKCnNjYWxlX3R5cGUYBiABKA4yPS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVy",
+            "U3BlYy5TY2FsZVR5cGUScQobY29uZGl0aW9uYWxfcGFyYW1ldGVyX3NwZWNz",
+            "GAogAygLMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVj",
+            "LlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjGm8KD0Rv",
+            "dWJsZVZhbHVlU3BlYxIWCgltaW5fdmFsdWUYASABKAFCA+BBAhIWCgltYXhf",
+            "dmFsdWUYAiABKAFCA+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAQgASgBSACIAQFC",
+            "EAoOX2RlZmF1bHRfdmFsdWUacAoQSW50ZWdlclZhbHVlU3BlYxIWCgltaW5f",
+            "dmFsdWUYASABKANCA+BBAhIWCgltYXhfdmFsdWUYAiABKANCA+BBAhIaCg1k",
+            "ZWZhdWx0X3ZhbHVlGAQgASgDSACIAQFCEAoOX2RlZmF1bHRfdmFsdWUaWQoU",
+            "Q2F0ZWdvcmljYWxWYWx1ZVNwZWMSEwoGdmFsdWVzGAEgAygJQgPgQQISGgoN",
+            "ZGVmYXVsdF92YWx1ZRgDIAEoCUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVlGlYK",
+            "EURpc2NyZXRlVmFsdWVTcGVjEhMKBnZhbHVlcxgBIAMoAUID4EECEhoKDWRl",
+            "ZmF1bHRfdmFsdWUYAyABKAFIAIgBAUIQCg5fZGVmYXVsdF92YWx1ZRqkBQoY",
+            "Q29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjEoUBChZwYXJlbnRfZGlzY3JldGVf",
+            "dmFsdWVzGAIgASgLMmMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1",
+            "ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVj",
+            "LkRpc2NyZXRlVmFsdWVDb25kaXRpb25IABJ7ChFwYXJlbnRfaW50X3ZhbHVl",
+            "cxgDIAEoCzJeLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3Bl",
+            "Yy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5JbnRW",
+            "YWx1ZUNvbmRpdGlvbkgAEosBChlwYXJlbnRfY2F0ZWdvcmljYWxfdmFsdWVz",
+            "GAQgASgLMmYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVj",
+            "LlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjLkNhdGVn",
+            "b3JpY2FsVmFsdWVDb25kaXRpb25IABJQCg5wYXJhbWV0ZXJfc3BlYxgBIAEo",
+            "CzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJh",
+            "bWV0ZXJTcGVjQgPgQQIaLQoWRGlzY3JldGVWYWx1ZUNvbmRpdGlvbhITCgZ2",
+            "YWx1ZXMYASADKAFCA+BBAhooChFJbnRWYWx1ZUNvbmRpdGlvbhITCgZ2YWx1",
+            "ZXMYASADKANCA+BBAhowChlDYXRlZ29yaWNhbFZhbHVlQ29uZGl0aW9uEhMK",
+            "BnZhbHVlcxgBIAMoCUID4EECQhgKFnBhcmVudF92YWx1ZV9jb25kaXRpb24i",
+            "bgoJU2NhbGVUeXBlEhoKFlNDQUxFX1RZUEVfVU5TUEVDSUZJRUQQABIVChFV",
+            "TklUX0xJTkVBUl9TQ0FMRRABEhIKDlVOSVRfTE9HX1NDQUxFEAISGgoWVU5J",
+            "VF9SRVZFUlNFX0xPR19TQ0FMRRADQhYKFHBhcmFtZXRlcl92YWx1ZV9zcGVj",
+            "Gj8KH0RlY2F5Q3VydmVBdXRvbWF0ZWRTdG9wcGluZ1NwZWMSHAoUdXNlX2Vs",
+            "YXBzZWRfZHVyYXRpb24YASABKAgaOwobTWVkaWFuQXV0b21hdGVkU3RvcHBp",
+            "bmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEgASgIGvYBChtDb252",
+            "ZXhBdXRvbWF0ZWRTdG9wcGluZ1NwZWMSFgoObWF4X3N0ZXBfY291bnQYASAB",
+            "KAMSFgoObWluX3N0ZXBfY291bnQYAiABKAMSHQoVbWluX21lYXN1cmVtZW50",
+            "X2NvdW50GAMgASgDEiQKHGxlYXJuaW5nX3JhdGVfcGFyYW1ldGVyX25hbWUY",
+            "BCABKAkSHAoUdXNlX2VsYXBzZWRfZHVyYXRpb24YBSABKAgSJgoZdXBkYXRl",
+            "X2FsbF9zdG9wcGVkX3RyaWFscxgGIAEoCEgAiAEBQhwKGl91cGRhdGVfYWxs",
+            "X3N0b3BwZWRfdHJpYWxzIkoKCUFsZ29yaXRobRIZChVBTEdPUklUSE1fVU5T",
+            "UEVDSUZJRUQQABIPCgtHUklEX1NFQVJDSBACEhEKDVJBTkRPTV9TRUFSQ0gQ",
+            "AyJIChBPYnNlcnZhdGlvbk5vaXNlEiEKHU9CU0VSVkFUSU9OX05PSVNFX1VO",
+            "U1BFQ0lGSUVEEAASBwoDTE9XEAESCAoESElHSBACInIKGE1lYXN1cmVtZW50",
+            "U2VsZWN0aW9uVHlwZRIqCiZNRUFTVVJFTUVOVF9TRUxFQ1RJT05fVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhQKEExBU1RfTUVBU1VSRU1FTlQQARIUChBCRVNUX01F",
+            "QVNVUkVNRU5UEAJCGQoXYXV0b21hdGVkX3N0b3BwaW5nX3NwZWMi3AEKC01l",
+            "YXN1cmVtZW50EjgKEGVsYXBzZWRfZHVyYXRpb24YASABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25CA+BBAxIXCgpzdGVwX2NvdW50GAIgASgDQgPg",
+            "QQMSRAoHbWV0cmljcxgDIAMoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLk1lYXN1cmVtZW50Lk1ldHJpY0ID4EEDGjQKBk1ldHJpYxIWCgltZXRy",
+            "aWNfaWQYASABKAlCA+BBAxISCgV2YWx1ZRgCIAEoAUID4EEDQsgBCh5jb20u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClN0dWR5UHJvdG9QAVo+Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1w",
+            "YjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
+            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
+            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Study), global::Google.Cloud.AIPlatform.V1.Study.Parser, new[]{ "Name", "DisplayName", "StudySpec", "State", "CreateTime", "InactiveReason" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Study.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Name", "Id", "State", "Parameters", "FinalMeasurement", "Measurements", "StartTime", "EndTime", "ClientId", "InfeasibleReason", "CustomJob", "WebAccessUris" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "ConvexAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, new[]{ "AutomatedStoppingSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "ConvexAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, new[]{ "AutomatedStoppingSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal", "SafetyConfig" }, new[]{ "SafetyConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig.Parser, new[]{ "SafetyThreshold", "DesiredMinSafeTrialsFraction" }, new[]{ "DesiredMinSafeTrialsFraction" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Parser, new[]{ "DoubleValueSpec", "IntegerValueSpec", "CategoricalValueSpec", "DiscreteValueSpec", "ParameterId", "ScaleType", "ConditionalParameterSpecs" }, new[]{ "ParameterValueSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ScaleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec.Parser, new[]{ "Values", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
@@ -2212,6 +2218,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public MetricSpec(MetricSpec other) : this() {
           metricId_ = other.metricId_;
           goal_ = other.goal_;
+          safetyConfig_ = other.safetyConfig_ != null ? other.safetyConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2252,6 +2259,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "safety_config" field.</summary>
+        public const int SafetyConfigFieldNumber = 3;
+        private global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig safetyConfig_;
+        /// <summary>
+        /// Used for safe search. In the case, the metric will be a safety
+        /// metric. You must provide a separate metric for objective metric.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig SafetyConfig {
+          get { return safetyConfig_; }
+          set {
+            safetyConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2269,6 +2292,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (MetricId != other.MetricId) return false;
           if (Goal != other.Goal) return false;
+          if (!object.Equals(SafetyConfig, other.SafetyConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2278,6 +2302,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (MetricId.Length != 0) hash ^= MetricId.GetHashCode();
           if (Goal != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType.Unspecified) hash ^= Goal.GetHashCode();
+          if (safetyConfig_ != null) hash ^= SafetyConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2304,6 +2329,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteEnum((int) Goal);
           }
+          if (safetyConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SafetyConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2322,6 +2351,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteEnum((int) Goal);
           }
+          if (safetyConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SafetyConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2337,6 +2370,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (Goal != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Goal);
+          }
+          if (safetyConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SafetyConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2355,6 +2391,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.Goal != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType.Unspecified) {
             Goal = other.Goal;
+          }
+          if (other.safetyConfig_ != null) {
+            if (safetyConfig_ == null) {
+              SafetyConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig();
+            }
+            SafetyConfig.MergeFrom(other.SafetyConfig);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2379,6 +2421,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 Goal = (global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) input.ReadEnum();
                 break;
               }
+              case 26: {
+                if (safetyConfig_ == null) {
+                  SafetyConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig();
+                }
+                input.ReadMessage(SafetyConfig);
+                break;
+              }
             }
           }
         #endif
@@ -2400,6 +2449,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 16: {
                 Goal = (global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (safetyConfig_ == null) {
+                  SafetyConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig();
+                }
+                input.ReadMessage(SafetyConfig);
                 break;
               }
             }
@@ -2428,6 +2484,262 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// Minimize the goal metric.
             /// </summary>
             [pbr::OriginalName("MINIMIZE")] Minimize = 2,
+          }
+
+          /// <summary>
+          /// Used in safe optimization to specify threshold levels and risk tolerance.
+          /// </summary>
+          public sealed partial class SafetyMetricConfig : pb::IMessage<SafetyMetricConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SafetyMetricConfig> _parser = new pb::MessageParser<SafetyMetricConfig>(() => new SafetyMetricConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SafetyMetricConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SafetyMetricConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SafetyMetricConfig(SafetyMetricConfig other) : this() {
+              _hasBits0 = other._hasBits0;
+              safetyThreshold_ = other.safetyThreshold_;
+              desiredMinSafeTrialsFraction_ = other.desiredMinSafeTrialsFraction_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SafetyMetricConfig Clone() {
+              return new SafetyMetricConfig(this);
+            }
+
+            /// <summary>Field number for the "safety_threshold" field.</summary>
+            public const int SafetyThresholdFieldNumber = 1;
+            private double safetyThreshold_;
+            /// <summary>
+            /// Safety threshold (boundary value between safe and unsafe). NOTE that if
+            /// you leave SafetyMetricConfig unset, a default value of 0 will be used.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public double SafetyThreshold {
+              get { return safetyThreshold_; }
+              set {
+                safetyThreshold_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "desired_min_safe_trials_fraction" field.</summary>
+            public const int DesiredMinSafeTrialsFractionFieldNumber = 2;
+            private double desiredMinSafeTrialsFraction_;
+            /// <summary>
+            /// Desired minimum fraction of safe trials (over total number of trials)
+            /// that should be targeted by the algorithm at any time during the
+            /// study (best effort). This should be between 0.0 and 1.0 and a value of
+            /// 0.0 means that there is no minimum and an algorithm proceeds without
+            /// targeting any specific fraction. A value of 1.0 means that the
+            /// algorithm attempts to only Suggest safe Trials.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public double DesiredMinSafeTrialsFraction {
+              get { if ((_hasBits0 & 1) != 0) { return desiredMinSafeTrialsFraction_; } else { return 0D; } }
+              set {
+                _hasBits0 |= 1;
+                desiredMinSafeTrialsFraction_ = value;
+              }
+            }
+            /// <summary>Gets whether the "desired_min_safe_trials_fraction" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasDesiredMinSafeTrialsFraction {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "desired_min_safe_trials_fraction" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearDesiredMinSafeTrialsFraction() {
+              _hasBits0 &= ~1;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SafetyMetricConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SafetyMetricConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SafetyThreshold, other.SafetyThreshold)) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DesiredMinSafeTrialsFraction, other.DesiredMinSafeTrialsFraction)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SafetyThreshold != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SafetyThreshold);
+              if (HasDesiredMinSafeTrialsFraction) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DesiredMinSafeTrialsFraction);
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (SafetyThreshold != 0D) {
+                output.WriteRawTag(9);
+                output.WriteDouble(SafetyThreshold);
+              }
+              if (HasDesiredMinSafeTrialsFraction) {
+                output.WriteRawTag(17);
+                output.WriteDouble(DesiredMinSafeTrialsFraction);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SafetyThreshold != 0D) {
+                output.WriteRawTag(9);
+                output.WriteDouble(SafetyThreshold);
+              }
+              if (HasDesiredMinSafeTrialsFraction) {
+                output.WriteRawTag(17);
+                output.WriteDouble(DesiredMinSafeTrialsFraction);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (SafetyThreshold != 0D) {
+                size += 1 + 8;
+              }
+              if (HasDesiredMinSafeTrialsFraction) {
+                size += 1 + 8;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SafetyMetricConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SafetyThreshold != 0D) {
+                SafetyThreshold = other.SafetyThreshold;
+              }
+              if (other.HasDesiredMinSafeTrialsFraction) {
+                DesiredMinSafeTrialsFraction = other.DesiredMinSafeTrialsFraction;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 9: {
+                    SafetyThreshold = input.ReadDouble();
+                    break;
+                  }
+                  case 17: {
+                    DesiredMinSafeTrialsFraction = input.ReadDouble();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 9: {
+                    SafetyThreshold = input.ReadDouble();
+                    break;
+                  }
+                  case 17: {
+                    DesiredMinSafeTrialsFraction = input.ReadDouble();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
           }
 
         }

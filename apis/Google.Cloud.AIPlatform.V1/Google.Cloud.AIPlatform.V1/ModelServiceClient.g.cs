@@ -63,6 +63,8 @@ namespace Google.Cloud.AIPlatform.V1
             MergeVersionAliasesSettings = existing.MergeVersionAliasesSettings;
             ExportModelSettings = existing.ExportModelSettings;
             ExportModelOperationsSettings = existing.ExportModelOperationsSettings.Clone();
+            CopyModelSettings = existing.CopyModelSettings;
+            CopyModelOperationsSettings = existing.CopyModelOperationsSettings.Clone();
             ImportModelEvaluationSettings = existing.ImportModelEvaluationSettings;
             BatchImportModelEvaluationSlicesSettings = existing.BatchImportModelEvaluationSlicesSettings;
             GetModelEvaluationSettings = existing.GetModelEvaluationSettings;
@@ -252,6 +254,36 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ExportModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.CopyModel</c> and <c>ModelServiceClient.CopyModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CopyModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelServiceClient.CopyModel</c> and
+        /// <c>ModelServiceClient.CopyModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CopyModelOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1994,6 +2026,222 @@ namespace Google.Cloud.AIPlatform.V1
             ExportModelAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CopyModelResponse, CopyModelOperationMetadata> CopyModel(CopyModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(CopyModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(CopyModelRequest request, st::CancellationToken cancellationToken) =>
+            CopyModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CopyModel</c>.</summary>
+        public virtual lro::OperationsClient CopyModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CopyModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CopyModelResponse, CopyModelOperationMetadata> PollOnceCopyModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CopyModelResponse, CopyModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CopyModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> PollOnceCopyModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CopyModelResponse, CopyModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CopyModelResponse, CopyModelOperationMetadata> CopyModel(string parent, string sourceModel, gaxgrpc::CallSettings callSettings = null) =>
+            CopyModel(new CopyModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SourceModel = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceModel, nameof(sourceModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(string parent, string sourceModel, gaxgrpc::CallSettings callSettings = null) =>
+            CopyModelAsync(new CopyModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SourceModel = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceModel, nameof(sourceModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(string parent, string sourceModel, st::CancellationToken cancellationToken) =>
+            CopyModelAsync(parent, sourceModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CopyModelResponse, CopyModelOperationMetadata> CopyModel(gagr::LocationName parent, ModelName sourceModel, gaxgrpc::CallSettings callSettings = null) =>
+            CopyModel(new CopyModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SourceModelAsModelName = gax::GaxPreconditions.CheckNotNull(sourceModel, nameof(sourceModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(gagr::LocationName parent, ModelName sourceModel, gaxgrpc::CallSettings callSettings = null) =>
+            CopyModelAsync(new CopyModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SourceModelAsModelName = gax::GaxPreconditions.CheckNotNull(sourceModel, nameof(sourceModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location into which to copy the Model.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="sourceModel">
+        /// Required. The resource name of the Model to copy. That Model must be in the
+        /// same Project. Format:
+        /// `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(gagr::LocationName parent, ModelName sourceModel, st::CancellationToken cancellationToken) =>
+            CopyModelAsync(parent, sourceModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Imports an externally generated ModelEvaluation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2776,6 +3024,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> _callExportModel;
 
+        private readonly gaxgrpc::ApiCall<CopyModelRequest, lro::Operation> _callCopyModel;
+
         private readonly gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> _callImportModelEvaluation;
 
         private readonly gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> _callBatchImportModelEvaluationSlices;
@@ -2803,6 +3053,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings, logger);
             DeleteModelVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelVersionOperationsSettings, logger);
             ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings, logger);
+            CopyModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callUploadModel = clientHelper.BuildApiCall<UploadModelRequest, lro::Operation>("UploadModel", grpcClient.UploadModelAsync, grpcClient.UploadModel, effectiveSettings.UploadModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2832,6 +3083,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callExportModel = clientHelper.BuildApiCall<ExportModelRequest, lro::Operation>("ExportModel", grpcClient.ExportModelAsync, grpcClient.ExportModel, effectiveSettings.ExportModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportModel);
             Modify_ExportModelApiCall(ref _callExportModel);
+            _callCopyModel = clientHelper.BuildApiCall<CopyModelRequest, lro::Operation>("CopyModel", grpcClient.CopyModelAsync, grpcClient.CopyModel, effectiveSettings.CopyModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCopyModel);
+            Modify_CopyModelApiCall(ref _callCopyModel);
             _callImportModelEvaluation = clientHelper.BuildApiCall<ImportModelEvaluationRequest, ModelEvaluation>("ImportModelEvaluation", grpcClient.ImportModelEvaluationAsync, grpcClient.ImportModelEvaluation, effectiveSettings.ImportModelEvaluationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportModelEvaluation);
             Modify_ImportModelEvaluationApiCall(ref _callImportModelEvaluation);
@@ -2873,6 +3127,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ExportModelApiCall(ref gaxgrpc::ApiCall<ExportModelRequest, lro::Operation> call);
 
+        partial void Modify_CopyModelApiCall(ref gaxgrpc::ApiCall<CopyModelRequest, lro::Operation> call);
+
         partial void Modify_ImportModelEvaluationApiCall(ref gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> call);
 
         partial void Modify_BatchImportModelEvaluationSlicesApiCall(ref gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> call);
@@ -2913,6 +3169,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_MergeVersionAliasesRequest(ref MergeVersionAliasesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportModelRequest(ref ExportModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CopyModelRequest(ref CopyModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportModelEvaluationRequest(ref ImportModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3182,6 +3440,43 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ExportModelRequest(ref request, ref callSettings);
             return new lro::Operation<ExportModelResponse, ExportModelOperationMetadata>(await _callExportModel.Async(request, callSettings).ConfigureAwait(false), ExportModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CopyModel</c>.</summary>
+        public override lro::OperationsClient CopyModelOperationsClient { get; }
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CopyModelResponse, CopyModelOperationMetadata> CopyModel(CopyModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyModelRequest(ref request, ref callSettings);
+            return new lro::Operation<CopyModelResponse, CopyModelOperationMetadata>(_callCopyModel.Sync(request, callSettings), CopyModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Copies an already existing Vertex AI Model into the specified Location.
+        /// The source Model must exist in the same Project.
+        /// When copying custom Models, the users themselves are responsible for
+        /// [Model.metadata][google.cloud.aiplatform.v1.Model.metadata] content to be
+        /// region-agnostic, as well as making sure that any resources (e.g. files) it
+        /// depends on remain accessible.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CopyModelResponse, CopyModelOperationMetadata>> CopyModelAsync(CopyModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyModelRequest(ref request, ref callSettings);
+            return new lro::Operation<CopyModelResponse, CopyModelOperationMetadata>(await _callCopyModel.Async(request, callSettings).ConfigureAwait(false), CopyModelOperationsClient);
         }
 
         /// <summary>

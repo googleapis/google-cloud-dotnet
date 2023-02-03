@@ -1586,6 +1586,199 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CopyModel</summary>
+        public void CopyModelRequestObject()
+        {
+            // Snippet: CopyModel(CopyModelRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            CopyModelRequest request = new CopyModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SourceModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                EncryptionSpec = new EncryptionSpec(),
+                ModelId = "",
+            };
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = modelServiceClient.CopyModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = modelServiceClient.PollOnceCopyModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyModelAsync</summary>
+        public async Task CopyModelRequestObjectAsync()
+        {
+            // Snippet: CopyModelAsync(CopyModelRequest, CallSettings)
+            // Additional: CopyModelAsync(CopyModelRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CopyModelRequest request = new CopyModelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SourceModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                EncryptionSpec = new EncryptionSpec(),
+                ModelId = "",
+            };
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = await modelServiceClient.CopyModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceCopyModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyModel</summary>
+        public void CopyModel()
+        {
+            // Snippet: CopyModel(string, string, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string sourceModel = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = modelServiceClient.CopyModel(parent, sourceModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = modelServiceClient.PollOnceCopyModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyModelAsync</summary>
+        public async Task CopyModelAsync()
+        {
+            // Snippet: CopyModelAsync(string, string, CallSettings)
+            // Additional: CopyModelAsync(string, string, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string sourceModel = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = await modelServiceClient.CopyModelAsync(parent, sourceModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceCopyModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyModel</summary>
+        public void CopyModelResourceNames()
+        {
+            // Snippet: CopyModel(LocationName, ModelName, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ModelName sourceModel = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = modelServiceClient.CopyModel(parent, sourceModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = modelServiceClient.PollOnceCopyModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyModelAsync</summary>
+        public async Task CopyModelResourceNamesAsync()
+        {
+            // Snippet: CopyModelAsync(LocationName, ModelName, CallSettings)
+            // Additional: CopyModelAsync(LocationName, ModelName, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ModelName sourceModel = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<CopyModelResponse, CopyModelOperationMetadata> response = await modelServiceClient.CopyModelAsync(parent, sourceModel);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CopyModelResponse, CopyModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CopyModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CopyModelResponse, CopyModelOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceCopyModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CopyModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ImportModelEvaluation</summary>
         public void ImportModelEvaluationRequestObject()
         {
