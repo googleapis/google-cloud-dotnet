@@ -3979,10 +3979,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4000,10 +4000,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4021,10 +4021,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4038,10 +4038,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4059,10 +4059,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -4080,10 +4080,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;` or
-        /// `projects/&lt;Project Number&gt;/locations/&lt;Location ID&gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
