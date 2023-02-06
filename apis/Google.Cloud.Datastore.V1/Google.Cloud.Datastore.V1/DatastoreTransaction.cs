@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -112,6 +112,50 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
         public virtual Task<DatastoreQueryResults> RunQueryAsync(Query query, CallSettings callSettings = null) =>
             RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
+
+        /// <summary>
+        /// Runs the given <see cref="AggregationQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="AggregationQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The result of aggregation query.</returns>
+        public virtual AggregationQueryResults RunAggregationQuery(AggregationQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Runs the given <see cref="GqlQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="GqlQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The result of aggregation query.</returns>
+        public virtual AggregationQueryResults RunAggregationQuery(GqlQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Runs the given <see cref="AggregationQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="AggregationQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the result of the aggregation query.</returns>
+        public virtual Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Runs the given <see cref="GqlQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="GqlQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the result of the aggregation query.</returns>
+        public virtual Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Lazily executes the given structured query in this transaction.

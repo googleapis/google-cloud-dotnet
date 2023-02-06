@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -406,6 +406,46 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 Assert.Equal(sampleTimestamp, results[0]["ts"].ToDateTimeFromProjection());
                 Assert.Equal((DateTimeOffset)sampleTimestamp, results[0]["ts"].ToDateTimeOffsetFromProjection());
             });
+        }
+
+        [Fact]
+        public void Count_WithGqlQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("CountTestGQL");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "description for x" },
+                new Entity { Key = keyFactory.CreateKey("y"), ["description"] = "description for y" }
+            };
+
+            db.Insert(entities);
+            var gql = new GqlQuery { QueryString = "SELECT count(*)  as `count` FROM CountTestGQL" };
+            AggregationQueryResults results = db.RunAggregationQuery(gql);
+            long count = results["count"].IntegerValue;
+            Assert.Equal(2, count);
+        }
+
+        [Fact]
+        public void Count_WithStructuredQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("CountTestStQuery");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "description for x" },
+                new Entity { Key = keyFactory.CreateKey("y"), ["description"] = "description for y" }
+            };
+
+            db.Insert(entities);
+            var query = new Query("CountTestStQuery");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Aggregations.Count("count")}
+            };
+            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
+            long count = results["count"].IntegerValue;
+            Assert.Equal(2, count);
         }
     }
 }

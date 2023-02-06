@@ -84,6 +84,62 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
+        public override AggregationQueryResults RunAggregationQuery(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                AggregationQuery = query,
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var runAggregationQueryResponse = Client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override AggregationQueryResults RunAggregationQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                GqlQuery = query,
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var runAggregationQueryResponse = Client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                AggregationQuery = query,
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var runAggregationQueryResponse = await Client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                GqlQuery = query,
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var runAggregationQueryResponse = await Client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
         public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(
             Query query,
             ReadConsistency? readConsistency = null,
