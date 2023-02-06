@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -121,6 +121,62 @@ namespace Google.Cloud.Datastore.V1
             };
             var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
             return new AsyncLazyDatastoreQuery(streamer.Async());
+        }
+
+        /// <inheritdoc/>
+        public override AggregationQueryResults RunAggregationQuery(AggregationQuery query, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                AggregationQuery = query,
+                ProjectId = _projectId,
+                PartitionId = _partitionId,
+                ReadOptions = _readOptions
+            };
+            var runAggregationQueryResponse = _client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override AggregationQueryResults RunAggregationQuery(GqlQuery query, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                GqlQuery = query,
+                ProjectId = _projectId,
+                PartitionId = _partitionId,
+                ReadOptions = _readOptions
+            };
+            var runAggregationQueryResponse = _client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                AggregationQuery = query,
+                ProjectId = _projectId,
+                PartitionId = _partitionId,
+                ReadOptions = _readOptions
+            };
+            var runAggregationQueryResponse = await _client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, CallSettings callSettings = null)
+        {
+            var request = new RunAggregationQueryRequest
+            {
+                GqlQuery = query,
+                ProjectId = _projectId,
+                PartitionId = _partitionId,
+                ReadOptions = _readOptions
+            };
+            var runAggregationQueryResponse = await _client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
         }
 
         /// <inheritdoc />

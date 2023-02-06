@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -149,6 +149,30 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var entities = db.Lookup(insertedEntity.Key, upsertedEntity.Key, updatedEntity.Key);
             var descriptions = entities.Select(e => (string) e["description"]);
             Assert.Equal(new[] { "Inserted in transaction", "Upserted in transaction", "Updated in transaction" }, descriptions);
+        }
+
+        [Fact]
+        public void Transaction_WithCount()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("CountTestTransaction");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "description for x" },
+                new Entity { Key = keyFactory.CreateKey("y"), ["description"] = "description for y" }
+            };
+            db.Insert(entities);
+            using var transaction = db.BeginTransaction();
+            var gqlQuery = new GqlQuery { QueryString = "SELECT count(*)  as `count` FROM CountTestTransaction " };
+            var query = new Query("CountTestTransaction");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Aggregations.Count("count") }
+            };
+            AggregationQueryResults resultsForStructuredQuery = transaction.RunAggregationQuery(aggQuery);
+            AggregationQueryResults resultsForGqlQuery = transaction.RunAggregationQuery(gqlQuery);
+            Assert.Equal(2, resultsForStructuredQuery["count"].IntegerValue);
+            Assert.Equal(2, resultsForGqlQuery["count"].IntegerValue);
         }
     }
 }

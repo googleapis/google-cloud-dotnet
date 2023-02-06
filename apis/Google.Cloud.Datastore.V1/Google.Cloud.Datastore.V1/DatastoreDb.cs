@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -120,7 +120,55 @@ namespace Google.Cloud.Datastore.V1
         public virtual Task<DatastoreQueryResults> RunQueryAsync(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
             RunQueryLazilyAsync(query, readConsistency, callSettings).GetAllResultsAsync();
-        
+
+        /// <summary>
+        /// Executes the given structured query.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AggregationQueryResults"/> holds result of aggregations.</returns>
+        public virtual AggregationQueryResults RunAggregationQuery(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes the given GQL query.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AggregationQueryResults"/> holds result of aggregations.</returns>
+        public virtual AggregationQueryResults RunAggregationQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes the given structured query.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AggregationQueryResults"/> holds result of aggregations.</returns>
+        public virtual Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes the given GQL query.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AggregationQueryResults"/> holds result of aggregations.</returns>
+        public virtual Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Lazily executes the given structured query.
         /// </summary>
