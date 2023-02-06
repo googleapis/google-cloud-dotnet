@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -230,15 +230,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             string url = null;
 
-            Func<HttpRequestMessage> createRequest = () => new HttpRequestMessage()
+            Func<HttpRequestMessage> createRequest = () =>
             {
-                Method = HttpMethod.Get,
-                Headers =
-                {
-                    { "x-goog-foo", "xy\r\n z" },
-                    { "x-goog-bar", "  12345   " },
-                    { "x-goog-foo", new [] { "A B  C", "def" } }
-                }
+                var request = new HttpRequestMessage { Method = HttpMethod.Get };
+                Assert.True(request.Headers.TryAddWithoutValidation("x-goog-foo", "xy\r\n z"));
+                request.Headers.Add("x-goog-bar", "  12345   ");
+                request.Headers.Add("x-goog-foo", new[] { "A B  C", "def" });
+                return request;
             };
 
             fixture.RegisterDelayTest(
