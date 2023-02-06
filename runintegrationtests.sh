@@ -138,7 +138,12 @@ do
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
-    (cd $testdir; dotnet test -nologo -c Release || echo "$testdir" >> $FAILURE_TEMP_FILE)
+    if compgen -G "$testdir/*.cs" | grep -v '\.g\.cs' > /dev/null
+    then
+      (cd $testdir; dotnet test -nologo -c Release || echo "$testdir" >> $FAILURE_TEMP_FILE)
+    else
+      echo "Skipping $testdir; only generated code"
+    fi
   fi
 done
 log_build_action "(End) Integration tests"
