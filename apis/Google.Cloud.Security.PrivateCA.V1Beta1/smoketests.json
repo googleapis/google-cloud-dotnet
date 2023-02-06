@@ -2,6 +2,7 @@
   {
     "method": "ListReusableConfigs",
     "client": "CertificateAuthorityServiceClient",
+    "skip": "https://github.com/googleapis/google-cloud-dotnet/issues/9833",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }
@@ -9,6 +10,7 @@
   {
     "method": "ListCertificateAuthorities",
     "client": "CertificateAuthorityServiceClient",
+    "skip": "https://github.com/googleapis/google-cloud-dotnet/issues/9833",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }
