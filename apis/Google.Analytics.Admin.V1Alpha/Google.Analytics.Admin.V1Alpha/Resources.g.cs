@@ -25,304 +25,330 @@ namespace Google.Analytics.Admin.V1Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGEvcmVzb3VyY2VzLnBy",
-            "b3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2ds",
-            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKOAgoHQWNjb3VudBIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMZGlzcGxheV9uYW1l",
-            "GAQgASgJQgPgQQISEwoLcmVnaW9uX2NvZGUYBSABKAkSFAoHZGVsZXRlZBgG",
-            "IAEoCEID4EEDOj7qQTsKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
-            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSK5BQoIUHJvcGVydHkSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEkgKDXByb3BlcnR5X3R5cGUYDiABKA4yLC5nb29n",
-            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlUeXBlQgPgQQUS",
-            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSEwoGcGFyZW50GAIgASgJQgPgQQUSGQoMZGlz",
-            "cGxheV9uYW1lGAUgASgJQgPgQQISSwoRaW5kdXN0cnlfY2F0ZWdvcnkYBiAB",
-            "KA4yMC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuSW5kdXN0cnlD",
-            "YXRlZ29yeRIWCgl0aW1lX3pvbmUYByABKAlCA+BBAhIVCg1jdXJyZW5jeV9j",
-            "b2RlGAggASgJEkgKDXNlcnZpY2VfbGV2ZWwYCiABKA4yLC5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYWxwaGEuU2VydmljZUxldmVsQgPgQQMSNAoLZGVs",
-            "ZXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLZXhwaXJlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSPgoHYWNjb3VudBgNIAEoCUIt4EEF+kEnCiVhbmFseXRp",
-            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50OkLqQT8KJmFuYWx5dGlj",
-            "c2FkbWluLmdvb2dsZWFwaXMuY29tL1Byb3BlcnR5EhVwcm9wZXJ0aWVzL3tw",
-            "cm9wZXJ0eX0i+QcKCkRhdGFTdHJlYW0SUwoPd2ViX3N0cmVhbV9kYXRhGAYg",
-            "ASgLMjguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFTdHJl",
-            "YW0uV2ViU3RyZWFtRGF0YUgAEmIKF2FuZHJvaWRfYXBwX3N0cmVhbV9kYXRh",
-            "GAcgASgLMj8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFT",
-            "dHJlYW0uQW5kcm9pZEFwcFN0cmVhbURhdGFIABJaChNpb3NfYXBwX3N0cmVh",
-            "bV9kYXRhGAggASgLMjsuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkRhdGFTdHJlYW0uSW9zQXBwU3RyZWFtRGF0YUgAEhEKBG5hbWUYASABKAlC",
-            "A+BBAxJPCgR0eXBlGAIgASgOMjkuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhLkRhdGFTdHJlYW0uRGF0YVN0cmVhbVR5cGVCBuBBBeBBAhIUCgxk",
-            "aXNwbGF5X25hbWUYAyABKAkSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaZAoNV2ViU3Ry",
-            "ZWFtRGF0YRIbCg5tZWFzdXJlbWVudF9pZBgBIAEoCUID4EEDEhwKD2ZpcmVi",
-            "YXNlX2FwcF9pZBgCIAEoCUID4EEDEhgKC2RlZmF1bHRfdXJpGAMgASgJQgPg",
-            "QQUaTwoUQW5kcm9pZEFwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBwX2lk",
-            "GAEgASgJQgPgQQMSGQoMcGFja2FnZV9uYW1lGAIgASgJQgPgQQUaSwoQSW9z",
-            "QXBwU3RyZWFtRGF0YRIcCg9maXJlYmFzZV9hcHBfaWQYASABKAlCA+BBAxIZ",
-            "CglidW5kbGVfaWQYAiABKAlCBuBBBeBBAiJ9Cg5EYXRhU3RyZWFtVHlwZRIg",
-            "ChxEQVRBX1NUUkVBTV9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPV0VCX0RBVEFf",
-            "U1RSRUFNEAESGwoXQU5EUk9JRF9BUFBfREFUQV9TVFJFQU0QAhIXChNJT1Nf",
-            "QVBQX0RBVEFfU1RSRUFNEAM6XupBWwooYW5hbHl0aWNzYWRtaW4uZ29vZ2xl",
-            "YXBpcy5jb20vRGF0YVN0cmVhbRIvcHJvcGVydGllcy97cHJvcGVydHl9L2Rh",
-            "dGFTdHJlYW1zL3tkYXRhX3N0cmVhbX1CDQoLc3RyZWFtX2RhdGEi1AEKCFVz",
-            "ZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1lbWFpbF9hZGRyZXNzGAIg",
-            "ASgJQgPgQQUSFAoMZGlyZWN0X3JvbGVzGAMgAygJOoIB6kF/CiZhbmFseXRp",
-            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Vc2VyTGluaxIoYWNjb3VudHMve2Fj",
-            "Y291bnR9L3VzZXJMaW5rcy97dXNlcl9saW5rfRIrcHJvcGVydGllcy97cHJv",
-            "cGVydHl9L3VzZXJMaW5rcy97dXNlcl9saW5rfSJjCg1BdWRpdFVzZXJMaW5r",
-            "EgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRkcmVzcxgCIAEoCRIUCgxkaXJl",
-            "Y3Rfcm9sZXMYAyADKAkSFwoPZWZmZWN0aXZlX3JvbGVzGAQgAygJItMBCgxG",
-            "aXJlYmFzZUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3Byb2plY3QYAiAB",
-            "KAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAzpk6kFhCiphbmFseXRpY3NhZG1pbi5nb29nbGVh",
-            "cGlzLmNvbS9GaXJlYmFzZUxpbmsSM3Byb3BlcnRpZXMve3Byb3BlcnR5fS9m",
-            "aXJlYmFzZUxpbmtzL3tmaXJlYmFzZV9saW5rfSKpAQoNR2xvYmFsU2l0ZVRh",
-            "ZxIRCgRuYW1lGAEgASgJQgPgQQMSFAoHc25pcHBldBgCIAEoCUID4EEFOm/q",
-            "QWwKK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0dsb2JhbFNpdGVU",
-            "YWcSPXByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9z",
-            "dHJlYW19L2dsb2JhbFNpdGVUYWcimAMKDUdvb2dsZUFkc0xpbmsSEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEhgKC2N1c3RvbWVyX2lkGAMgASgJQgPgQQUSHwoSY2Fu",
-            "X21hbmFnZV9jbGllbnRzGAQgASgIQgPgQQMSPwobYWRzX3BlcnNvbmFsaXph",
-            "dGlvbl9lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1",
-            "ZRI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIiChVjcmVhdG9yX2VtYWlsX2FkZHJlc3MY",
-            "CSABKAlCA+BBAzpo6kFlCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
-            "bS9Hb29nbGVBZHNMaW5rEjZwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZ29vZ2xl",
-            "QWRzTGlua3Mve2dvb2dsZV9hZHNfbGlua30i6wIKE0RhdGFTaGFyaW5nU2V0",
-            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEisKI3NoYXJpbmdfd2l0aF9nb29n",
-            "bGVfc3VwcG9ydF9lbmFibGVkGAIgASgIEjIKKnNoYXJpbmdfd2l0aF9nb29n",
-            "bGVfYXNzaWduZWRfc2FsZXNfZW5hYmxlZBgDIAEoCBItCiVzaGFyaW5nX3dp",
-            "dGhfZ29vZ2xlX2FueV9zYWxlc19lbmFibGVkGAQgASgIEiwKJHNoYXJpbmdf",
-            "d2l0aF9nb29nbGVfcHJvZHVjdHNfZW5hYmxlZBgFIAEoCBIjChtzaGFyaW5n",
-            "X3dpdGhfb3RoZXJzX2VuYWJsZWQYBiABKAg6XupBWwoxYW5hbHl0aWNzYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vRGF0YVNoYXJpbmdTZXR0aW5ncxImYWNjb3Vu",
-            "dHMve2FjY291bnR9L2RhdGFTaGFyaW5nU2V0dGluZ3MilQIKDkFjY291bnRT",
-            "dW1tYXJ5EgwKBG5hbWUYASABKAkSOwoHYWNjb3VudBgCIAEoCUIq+kEnCiVh",
-            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhQKDGRpc3Bs",
-            "YXlfbmFtZRgDIAEoCRJLChJwcm9wZXJ0eV9zdW1tYXJpZXMYBCADKAsyLy5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlTdW1tYXJ5",
-            "OlXqQVIKLGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnRT",
-            "dW1tYXJ5EiJhY2NvdW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9IrsB",
-            "Cg9Qcm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkYASABKAlCK/pBKAomYW5h",
-            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFAoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJEkMKDXByb3BlcnR5X3R5cGUYAyABKA4yLC5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlUeXBlEg4KBnBhcmVu",
-            "dBgEIAEoCSKOAgoZTWVhc3VyZW1lbnRQcm90b2NvbFNlY3JldBIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGQoMc2Vj",
-            "cmV0X3ZhbHVlGAMgASgJQgPgQQM6pwHqQaMBCjdhbmFseXRpY3NhZG1pbi5n",
-            "b29nbGVhcGlzLmNvbS9NZWFzdXJlbWVudFByb3RvY29sU2VjcmV0Emhwcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3RyZWFtfS9t",
-            "ZWFzdXJlbWVudFByb3RvY29sU2VjcmV0cy97bWVhc3VyZW1lbnRfcHJvdG9j",
-            "b2xfc2VjcmV0fSKKAgoSQ2hhbmdlSGlzdG9yeUV2ZW50EgoKAmlkGAEgASgJ",
-            "Ei8KC2NoYW5nZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBI9CgphY3Rvcl90eXBlGAMgASgOMikuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLkFjdG9yVHlwZRIYChB1c2VyX2FjdG9yX2VtYWlsGAQg",
-            "ASgJEhgKEGNoYW5nZXNfZmlsdGVyZWQYBSABKAgSRAoHY2hhbmdlcxgGIAMo",
-            "CzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0",
-            "b3J5Q2hhbmdlIuELChNDaGFuZ2VIaXN0b3J5Q2hhbmdlEhAKCHJlc291cmNl",
-            "GAEgASgJEjoKBmFjdGlvbhgCIAEoDjIqLmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5BY3Rpb25UeXBlEmkKFnJlc291cmNlX2JlZm9yZV9jaGFu",
-            "Z2UYAyABKAsySS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hh",
-            "bmdlSGlzdG9yeUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3VyY2USaAoVcmVz",
-            "b3VyY2VfYWZ0ZXJfY2hhbmdlGAQgASgLMkkuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2UuQ2hhbmdlSGlzdG9y",
-            "eVJlc291cmNlGqYJChVDaGFuZ2VIaXN0b3J5UmVzb3VyY2USOgoHYWNjb3Vu",
-            "dBgBIAEoCzInLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nv",
-            "dW50SAASPAoIcHJvcGVydHkYAiABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmFk",
-            "bWluLnYxYWxwaGEuUHJvcGVydHlIABJFCg1maXJlYmFzZV9saW5rGAYgASgL",
-            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkZpcmViYXNlTGlu",
-            "a0gAEkgKD2dvb2dsZV9hZHNfbGluaxgHIAEoCzItLmdvb2dsZS5hbmFseXRp",
-            "Y3MuYWRtaW4udjFhbHBoYS5Hb29nbGVBZHNMaW5rSAASWAoXZ29vZ2xlX3Np",
-            "Z25hbHNfc2V0dGluZ3MYCCABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuR29vZ2xlU2lnbmFsc1NldHRpbmdzSAASagohZGlzcGxheV92",
-            "aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rGAkgASgLMj0uZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJM",
-            "aW5rSAASewoqZGlzcGxheV92aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rX3By",
-            "b3Bvc2FsGAogASgLMkUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxIABJLChBj",
-            "b252ZXJzaW9uX2V2ZW50GAsgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
-            "bi52MWFscGhhLkNvbnZlcnNpb25FdmVudEgAEmAKG21lYXN1cmVtZW50X3By",
-            "b3RvY29sX3NlY3JldBgMIAEoCzI5Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5NZWFzdXJlbWVudFByb3RvY29sU2VjcmV0SAASSwoQY3VzdG9t",
-            "X2RpbWVuc2lvbhgNIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
-            "bHBoYS5DdXN0b21EaW1lbnNpb25IABJFCg1jdXN0b21fbWV0cmljGA4gASgL",
-            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJp",
-            "Y0gAElgKF2RhdGFfcmV0ZW50aW9uX3NldHRpbmdzGA8gASgLMjUuZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFSZXRlbnRpb25TZXR0aW5n",
-            "c0gAEkEKC2RhdGFfc3RyZWFtGBIgASgLMiouZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLkRhdGFTdHJlYW1IABJTChRhdHRyaWJ1dGlvbl9zZXR0",
-            "aW5ncxgUIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5B",
-            "dHRyaWJ1dGlvblNldHRpbmdzSABCCgoIcmVzb3VyY2Ui3wMKHURpc3BsYXlW",
-            "aWRlbzM2MEFkdmVydGlzZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1h",
-            "ZHZlcnRpc2VyX2lkGAIgASgJQgPgQQUSJAoXYWR2ZXJ0aXNlcl9kaXNwbGF5",
-            "X25hbWUYAyABKAlCA+BBAxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJs",
-            "ZWQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEkYKHWNhbXBh",
-            "aWduX2RhdGFfc2hhcmluZ19lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "b3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEaNmdvb2dsZS9h",
+            "bmFseXRpY3MvYWRtaW4vdjFhbHBoYS9leHBhbmRlZF9kYXRhX3NldC5wcm90",
+            "bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
+            "aS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
+            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIo4CCgdBY2Nv",
+            "dW50EhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxk",
+            "aXNwbGF5X25hbWUYBCABKAlCA+BBAhITCgtyZWdpb25fY29kZRgFIAEoCRIU",
+            "CgdkZWxldGVkGAYgASgIQgPgQQM6PupBOwolYW5hbHl0aWNzYWRtaW4uZ29v",
+            "Z2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3VudHMve2FjY291bnR9IrkFCghQ",
+            "cm9wZXJ0eRIRCgRuYW1lGAEgASgJQgPgQQMSSAoNcHJvcGVydHlfdHlwZRgO",
+            "IAEoDjIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0",
+            "eVR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZwYXJlbnQYAiABKAlC",
+            "A+BBBRIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBAhJLChFpbmR1c3RyeV9j",
+            "YXRlZ29yeRgGIAEoDjIwLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5JbmR1c3RyeUNhdGVnb3J5EhYKCXRpbWVfem9uZRgHIAEoCUID4EECEhUK",
+            "DWN1cnJlbmN5X2NvZGUYCCABKAkSSAoNc2VydmljZV9sZXZlbBgKIAEoDjIs",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TZXJ2aWNlTGV2ZWxC",
+            "A+BBAxI0CgtkZWxldGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgMIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI+CgdhY2NvdW50GA0gASgJQi3gQQX6",
+            "QScKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnQ6QupB",
+            "PwomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFXBy",
+            "b3BlcnRpZXMve3Byb3BlcnR5fSL5BwoKRGF0YVN0cmVhbRJTCg93ZWJfc3Ry",
+            "ZWFtX2RhdGEYBiABKAsyOC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
+            "aGEuRGF0YVN0cmVhbS5XZWJTdHJlYW1EYXRhSAASYgoXYW5kcm9pZF9hcHBf",
+            "c3RyZWFtX2RhdGEYByABKAsyPy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
+            "YWxwaGEuRGF0YVN0cmVhbS5BbmRyb2lkQXBwU3RyZWFtRGF0YUgAEloKE2lv",
+            "c19hcHBfc3RyZWFtX2RhdGEYCCABKAsyOy5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuRGF0YVN0cmVhbS5Jb3NBcHBTdHJlYW1EYXRhSAASEQoE",
+            "bmFtZRgBIAEoCUID4EEDEk8KBHR5cGUYAiABKA4yOS5nb29nbGUuYW5hbHl0",
+            "aWNzLmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbS5EYXRhU3RyZWFtVHlwZUIG",
+            "4EEF4EECEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRI0CgtjcmVhdGVfdGltZRgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
+            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxpkCg1XZWJTdHJlYW1EYXRhEhsKDm1lYXN1cmVtZW50X2lkGAEgASgJQgPg",
+            "QQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJQgPgQQMSGAoLZGVmYXVsdF91",
+            "cmkYAyABKAlCA+BBBRpPChRBbmRyb2lkQXBwU3RyZWFtRGF0YRIcCg9maXJl",
+            "YmFzZV9hcHBfaWQYASABKAlCA+BBAxIZCgxwYWNrYWdlX25hbWUYAiABKAlC",
+            "A+BBBRpLChBJb3NBcHBTdHJlYW1EYXRhEhwKD2ZpcmViYXNlX2FwcF9pZBgB",
+            "IAEoCUID4EEDEhkKCWJ1bmRsZV9pZBgCIAEoCUIG4EEF4EECIn0KDkRhdGFT",
+            "dHJlYW1UeXBlEiAKHERBVEFfU1RSRUFNX1RZUEVfVU5TUEVDSUZJRUQQABIT",
+            "Cg9XRUJfREFUQV9TVFJFQU0QARIbChdBTkRST0lEX0FQUF9EQVRBX1NUUkVB",
+            "TRACEhcKE0lPU19BUFBfREFUQV9TVFJFQU0QAzpe6kFbCihhbmFseXRpY3Nh",
+            "ZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU3RyZWFtEi9wcm9wZXJ0aWVzL3tw",
+            "cm9wZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3RyZWFtfUINCgtzdHJlYW1f",
+            "ZGF0YSLUAQoIVXNlckxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhoKDWVtYWls",
+            "X2FkZHJlc3MYAiABKAlCA+BBBRIUCgxkaXJlY3Rfcm9sZXMYAyADKAk6ggHq",
+            "QX8KJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1VzZXJMaW5rEihh",
+            "Y2NvdW50cy97YWNjb3VudH0vdXNlckxpbmtzL3t1c2VyX2xpbmt9Eitwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vdXNlckxpbmtzL3t1c2VyX2xpbmt9ImMKDUF1",
+            "ZGl0VXNlckxpbmsSDAoEbmFtZRgBIAEoCRIVCg1lbWFpbF9hZGRyZXNzGAIg",
+            "ASgJEhQKDGRpcmVjdF9yb2xlcxgDIAMoCRIXCg9lZmZlY3RpdmVfcm9sZXMY",
+            "BCADKAki0wEKDEZpcmViYXNlTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoH",
+            "cHJvamVjdBgCIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOmTqQWEKKmFuYWx5dGljc2Fk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0ZpcmViYXNlTGluaxIzcHJvcGVydGllcy97",
+            "cHJvcGVydHl9L2ZpcmViYXNlTGlua3Mve2ZpcmViYXNlX2xpbmt9IqkBCg1H",
+            "bG9iYWxTaXRlVGFnEhEKBG5hbWUYASABKAlCA+BBAxIUCgdzbmlwcGV0GAIg",
+            "ASgJQgPgQQU6b+pBbAorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "R2xvYmFsU2l0ZVRhZxI9cHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJl",
+            "YW1zL3tkYXRhX3N0cmVhbX0vZ2xvYmFsU2l0ZVRhZyKYAwoNR29vZ2xlQWRz",
+            "TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGAoLY3VzdG9tZXJfaWQYAyABKAlC",
+            "A+BBBRIfChJjYW5fbWFuYWdlX2NsaWVudHMYBCABKAhCA+BBAxI/ChthZHNf",
+            "cGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuQm9vbFZhbHVlEjQKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAggASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiIKFWNyZWF0b3JfZW1h",
+            "aWxfYWRkcmVzcxgJIAEoCUID4EEDOmjqQWUKK2FuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL0dvb2dsZUFkc0xpbmsSNnByb3BlcnRpZXMve3Byb3Bl",
+            "cnR5fS9nb29nbGVBZHNMaW5rcy97Z29vZ2xlX2Fkc19saW5rfSLrAgoTRGF0",
+            "YVNoYXJpbmdTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMSKwojc2hhcmlu",
+            "Z193aXRoX2dvb2dsZV9zdXBwb3J0X2VuYWJsZWQYAiABKAgSMgoqc2hhcmlu",
+            "Z193aXRoX2dvb2dsZV9hc3NpZ25lZF9zYWxlc19lbmFibGVkGAMgASgIEi0K",
+            "JXNoYXJpbmdfd2l0aF9nb29nbGVfYW55X3NhbGVzX2VuYWJsZWQYBCABKAgS",
+            "LAokc2hhcmluZ193aXRoX2dvb2dsZV9wcm9kdWN0c19lbmFibGVkGAUgASgI",
+            "EiMKG3NoYXJpbmdfd2l0aF9vdGhlcnNfZW5hYmxlZBgGIAEoCDpe6kFbCjFh",
+            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU2hhcmluZ1NldHRp",
+            "bmdzEiZhY2NvdW50cy97YWNjb3VudH0vZGF0YVNoYXJpbmdTZXR0aW5ncyKV",
+            "AgoOQWNjb3VudFN1bW1hcnkSDAoEbmFtZRgBIAEoCRI7CgdhY2NvdW50GAIg",
+            "ASgJQir6QScKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291",
+            "bnQSFAoMZGlzcGxheV9uYW1lGAMgASgJEksKEnByb3BlcnR5X3N1bW1hcmll",
+            "cxgEIAMoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9w",
+            "ZXJ0eVN1bW1hcnk6VepBUgosYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5j",
+            "b20vQWNjb3VudFN1bW1hcnkSImFjY291bnRTdW1tYXJpZXMve2FjY291bnRf",
+            "c3VtbWFyeX0iuwEKD1Byb3BlcnR5U3VtbWFyeRI9Cghwcm9wZXJ0eRgBIAEo",
+            "CUIr+kEoCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0",
+            "eRIUCgxkaXNwbGF5X25hbWUYAiABKAkSQwoNcHJvcGVydHlfdHlwZRgDIAEo",
+            "DjIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eVR5",
+            "cGUSDgoGcGFyZW50GAQgASgJIo4CChlNZWFzdXJlbWVudFByb3RvY29sU2Vj",
+            "cmV0EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
+            "A+BBAhIZCgxzZWNyZXRfdmFsdWUYAyABKAlCA+BBAzqnAepBowEKN2FuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL01lYXN1cmVtZW50UHJvdG9jb2xT",
+            "ZWNyZXQSaHByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0",
+            "YV9zdHJlYW19L21lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRzL3ttZWFzdXJl",
+            "bWVudF9wcm90b2NvbF9zZWNyZXR9IooCChJDaGFuZ2VIaXN0b3J5RXZlbnQS",
+            "CgoCaWQYASABKAkSLwoLY2hhbmdlX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEj0KCmFjdG9yX3R5cGUYAyABKA4yKS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0b3JUeXBlEhgKEHVzZXJfYWN0",
+            "b3JfZW1haWwYBCABKAkSGAoQY2hhbmdlc19maWx0ZXJlZBgFIAEoCBJECgdj",
+            "aGFuZ2VzGAYgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkNoYW5nZUhpc3RvcnlDaGFuZ2Uixw0KE0NoYW5nZUhpc3RvcnlDaGFuZ2US",
+            "EAoIcmVzb3VyY2UYASABKAkSOgoGYWN0aW9uGAIgASgOMiouZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkFjdGlvblR5cGUSaQoWcmVzb3VyY2Vf",
+            "YmVmb3JlX2NoYW5nZRgDIAEoCzJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNv",
+            "dXJjZRJoChVyZXNvdXJjZV9hZnRlcl9jaGFuZ2UYBCABKAsySS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZS5D",
+            "aGFuZ2VIaXN0b3J5UmVzb3VyY2UajAsKFUNoYW5nZUhpc3RvcnlSZXNvdXJj",
+            "ZRI6CgdhY2NvdW50GAEgASgLMicuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkFjY291bnRIABI8Cghwcm9wZXJ0eRgCIAEoCzIoLmdvb2dsZS5h",
+            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eUgAEkUKDWZpcmViYXNl",
+            "X2xpbmsYBiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "RmlyZWJhc2VMaW5rSAASSAoPZ29vZ2xlX2Fkc19saW5rGAcgASgLMi0uZ29v",
+            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkdvb2dsZUFkc0xpbmtIABJY",
+            "Chdnb29nbGVfc2lnbmFsc19zZXR0aW5ncxgIIAEoCzI1Lmdvb2dsZS5hbmFs",
+            "eXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU2V0dGluZ3NIABJq",
+            "CiFkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmsYCSABKAsyPS5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYw",
+            "QWR2ZXJ0aXNlckxpbmtIABJ7CipkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRp",
+            "c2VyX2xpbmtfcHJvcG9zYWwYCiABKAsyRS5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtQcm9w",
+            "b3NhbEgAEksKEGNvbnZlcnNpb25fZXZlbnQYCyABKAsyLy5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGEuQ29udmVyc2lvbkV2ZW50SAASYAobbWVh",
+            "c3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjkuZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLk1lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRI",
+            "ABJLChBjdXN0b21fZGltZW5zaW9uGA0gASgLMi8uZ29vZ2xlLmFuYWx5dGlj",
+            "cy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbkgAEkUKDWN1c3RvbV9t",
+            "ZXRyaWMYDiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "Q3VzdG9tTWV0cmljSAASWAoXZGF0YV9yZXRlbnRpb25fc2V0dGluZ3MYDyAB",
+            "KAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVu",
+            "dGlvblNldHRpbmdzSAASTwoTc2VhcmNoX2Fkc18zNjBfbGluaxgQIAEoCzIw",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TZWFyY2hBZHMzNjBM",
+            "aW5rSAASQQoLZGF0YV9zdHJlYW0YEiABKAsyKi5nb29nbGUuYW5hbHl0aWNz",
+            "LmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbUgAElMKFGF0dHJpYnV0aW9uX3Nl",
+            "dHRpbmdzGBQgASgLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkF0dHJpYnV0aW9uU2V0dGluZ3NIABJMChFleHBhbmRlZF9kYXRhX3NldBgV",
+            "IAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBhbmRl",
+            "ZERhdGFTZXRIABJFCg1iaWdxdWVyeV9saW5rGBcgASgLMiwuZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkJpZ1F1ZXJ5TGlua0gAQgoKCHJlc291",
+            "cmNlIt8DCh1EaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2VyTGluaxIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEoCUID4EEFEiQKF2Fk",
+            "dmVydGlzZXJfZGlzcGxheV9uYW1lGAMgASgJQgPgQQMSPwobYWRzX3BlcnNv",
+            "bmFsaXphdGlvbl9lbmFibGVkGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJv",
+            "b2xWYWx1ZRJGCh1jYW1wYWlnbl9kYXRhX3NoYXJpbmdfZW5hYmxlZBgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJCChljb3N0X2Rh",
+            "dGFfc2hhcmluZ19lbmFibGVkGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJv",
+            "b2xWYWx1ZUID4EEFOpsB6kGXAQo7YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb20vRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmsSWHByb3BlcnRp",
+            "ZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2VyTGlua3Mv",
+            "e2Rpc3BsYXlfdmlkZW9fMzYwX2FkdmVydGlzZXJfbGlua30iigUKJURpc3Bs",
+            "YXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWwSEQoEbmFtZRgBIAEo",
+            "CUID4EEDEhoKDWFkdmVydGlzZXJfaWQYAiABKAlCA+BBBRJkChxsaW5rX3By",
+            "b3Bvc2FsX3N0YXR1c19kZXRhaWxzGAMgASgLMjkuZ29vZ2xlLmFuYWx5dGlj",
+            "cy5hZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbFN0YXR1c0RldGFpbHNCA+BB",
+            "AxIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFtZRgEIAEoCUID4EEDEh0KEHZh",
+            "bGlkYXRpb25fZW1haWwYBSABKAlCA+BBBBJEChthZHNfcGVyc29uYWxpemF0",
+            "aW9uX2VuYWJsZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVl",
+            "QgPgQQUSRgodY2FtcGFpZ25fZGF0YV9zaGFyaW5nX2VuYWJsZWQYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUSQgoZY29zdF9kYXRh",
+            "X3NoYXJpbmdfZW5hYmxlZBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29s",
+            "VmFsdWVCA+BBBTq0AepBsAEKQ2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
+            "Y29tL0Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWwSaXBy",
+            "b3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2Vy",
+            "TGlua1Byb3Bvc2Fscy97ZGlzcGxheV92aWRlb18zNjBfYWR2ZXJ0aXNlcl9s",
+            "aW5rX3Byb3Bvc2FsfSLoAwoQU2VhcmNoQWRzMzYwTGluaxIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEoCUID4EEFEkYKHWNhbXBh",
+            "aWduX2RhdGFfc2hhcmluZ19lbmFibGVkGAMgASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLkJvb2xWYWx1ZUID4EEFEkIKGWNvc3RfZGF0YV9zaGFyaW5nX2VuYWJs",
-            "ZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQU6mwHq",
-            "QZcBCjthbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EaXNwbGF5Vmlk",
-            "ZW8zNjBBZHZlcnRpc2VyTGluaxJYcHJvcGVydGllcy97cHJvcGVydHl9L2Rp",
-            "c3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rcy97ZGlzcGxheV92aWRlb18z",
-            "NjBfYWR2ZXJ0aXNlcl9saW5rfSKKBQolRGlzcGxheVZpZGVvMzYwQWR2ZXJ0",
-            "aXNlckxpbmtQcm9wb3NhbBIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0",
-            "aXNlcl9pZBgCIAEoCUID4EEFEmQKHGxpbmtfcHJvcG9zYWxfc3RhdHVzX2Rl",
-            "dGFpbHMYAyABKAsyOS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
-            "TGlua1Byb3Bvc2FsU3RhdHVzRGV0YWlsc0ID4EEDEiQKF2FkdmVydGlzZXJf",
-            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSHQoQdmFsaWRhdGlvbl9lbWFpbBgF",
-            "IAEoCUID4EEEEkQKG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgGIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJGCh1jYW1wYWln",
-            "bl9kYXRhX3NoYXJpbmdfZW5hYmxlZBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5Cb29sVmFsdWVCA+BBBRJCChljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVk",
-            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFOrQB6kGw",
-            "AQpDYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVv",
-            "MzYwQWR2ZXJ0aXNlckxpbmtQcm9wb3NhbBJpcHJvcGVydGllcy97cHJvcGVy",
-            "dHl9L2Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxzL3tk",
-            "aXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWx9IvwB",
-            "ChlMaW5rUHJvcG9zYWxTdGF0dXNEZXRhaWxzEmwKIGxpbmtfcHJvcG9zYWxf",
-            "aW5pdGlhdGluZ19wcm9kdWN0GAEgASgOMj0uZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbEluaXRpYXRpbmdQcm9kdWN0QgPg",
-            "QQMSHAoPcmVxdWVzdG9yX2VtYWlsGAIgASgJQgPgQQMSUwoTbGlua19wcm9w",
-            "b3NhbF9zdGF0ZRgDIAEoDjIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
-            "bHBoYS5MaW5rUHJvcG9zYWxTdGF0ZUID4EEDIo8CCg9Db252ZXJzaW9uRXZl",
-            "bnQSEQoEbmFtZRgBIAEoCUID4EEDEhcKCmV2ZW50X25hbWUYAiABKAlCA+BB",
-            "BRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxIWCglkZWxldGFibGUYBCABKAhCA+BBAxITCgZjdXN0b20Y",
-            "BSABKAhCA+BBAzpt6kFqCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
-            "bS9Db252ZXJzaW9uRXZlbnQSOXByb3BlcnRpZXMve3Byb3BlcnR5fS9jb252",
-            "ZXJzaW9uRXZlbnRzL3tjb252ZXJzaW9uX2V2ZW50fSKgAgoVR29vZ2xlU2ln",
-            "bmFsc1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxJBCgVzdGF0ZRgDIAEo",
-            "DjIyLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWdu",
-            "YWxzU3RhdGUSSgoHY29uc2VudBgEIAEoDjI0Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "YWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzQ29uc2VudEID4EEDOmXqQWIK",
-            "M2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0dvb2dsZVNpZ25hbHNT",
-            "ZXR0aW5ncxIrcHJvcGVydGllcy97cHJvcGVydHl9L2dvb2dsZVNpZ25hbHNT",
-            "ZXR0aW5ncyKyAwoPQ3VzdG9tRGltZW5zaW9uEhEKBG5hbWUYASABKAlCA+BB",
-            "AxIeCg5wYXJhbWV0ZXJfbmFtZRgCIAEoCUIG4EEC4EEFEhkKDGRpc3BsYXlf",
-            "bmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQESVQoF",
-            "c2NvcGUYBSABKA4yPi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
-            "Q3VzdG9tRGltZW5zaW9uLkRpbWVuc2lvblNjb3BlQgbgQQLgQQUSKQocZGlz",
-            "YWxsb3dfYWRzX3BlcnNvbmFsaXphdGlvbhgGIAEoCEID4EEBIkYKDkRpbWVu",
-            "c2lvblNjb3BlEh8KG0RJTUVOU0lPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgkK",
-            "BUVWRU5UEAESCAoEVVNFUhACOm3qQWoKLWFuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL0N1c3RvbURpbWVuc2lvbhI5cHJvcGVydGllcy97cHJvcGVy",
-            "dHl9L2N1c3RvbURpbWVuc2lvbnMve2N1c3RvbV9kaW1lbnNpb259IsUGCgxD",
-            "dXN0b21NZXRyaWMSEQoEbmFtZRgBIAEoCUID4EEDEh4KDnBhcmFtZXRlcl9u",
-            "YW1lGAIgASgJQgbgQQLgQQUSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQIS",
-            "GAoLZGVzY3JpcHRpb24YBCABKAlCA+BBARJbChBtZWFzdXJlbWVudF91bml0",
-            "GAUgASgOMjwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3Rv",
-            "bU1ldHJpYy5NZWFzdXJlbWVudFVuaXRCA+BBAhJPCgVzY29wZRgGIAEoDjI4",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DdXN0b21NZXRyaWMu",
-            "TWV0cmljU2NvcGVCBuBBAuBBBRJmChZyZXN0cmljdGVkX21ldHJpY190eXBl",
-            "GAggAygOMkEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3Rv",
-            "bU1ldHJpYy5SZXN0cmljdGVkTWV0cmljVHlwZUID4EEBIrcBCg9NZWFzdXJl",
-            "bWVudFVuaXQSIAocTUVBU1VSRU1FTlRfVU5JVF9VTlNQRUNJRklFRBAAEgwK",
-            "CFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQAhIICgRGRUVUEAMSCgoGTUVURVJT",
-            "EAQSDgoKS0lMT01FVEVSUxAFEgkKBU1JTEVTEAYSEAoMTUlMTElTRUNPTkRT",
-            "EAcSCwoHU0VDT05EUxAIEgsKB01JTlVURVMQCRIJCgVIT1VSUxAKIjYKC01l",
-            "dHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09QRV9VTlNQRUNJRklFRBAAEgkKBUVW",
-            "RU5UEAEiXwoUUmVzdHJpY3RlZE1ldHJpY1R5cGUSJgoiUkVTVFJJQ1RFRF9N",
-            "RVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPU1RfREFUQRABEhAKDFJF",
-            "VkVOVUVfREFUQRACOmTqQWEKKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
-            "Y29tL0N1c3RvbU1ldHJpYxIzcHJvcGVydGllcy97cHJvcGVydHl9L2N1c3Rv",
-            "bU1ldHJpY3Mve2N1c3RvbV9tZXRyaWN9IsIDChVEYXRhUmV0ZW50aW9uU2V0",
-            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEmUKFGV2ZW50X2RhdGFfcmV0ZW50",
-            "aW9uGAIgASgOMkcuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRh",
-            "dGFSZXRlbnRpb25TZXR0aW5ncy5SZXRlbnRpb25EdXJhdGlvbhInCh9yZXNl",
-            "dF91c2VyX2RhdGFfb25fbmV3X2FjdGl2aXR5GAMgASgIIp4BChFSZXRlbnRp",
-            "b25EdXJhdGlvbhIiCh5SRVRFTlRJT05fRFVSQVRJT05fVU5TUEVDSUZJRUQQ",
-            "ABIOCgpUV09fTU9OVEhTEAESEwoPRk9VUlRFRU5fTU9OVEhTEAMSFQoRVFdF",
-            "TlRZX1NJWF9NT05USFMQBBIXChNUSElSVFlfRUlHSFRfTU9OVEhTEAUSEAoM",
-            "RklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBp",
-            "cy5jb20vRGF0YVJldGVudGlvblNldHRpbmdzEitwcm9wZXJ0aWVzL3twcm9w",
-            "ZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdzIqQKChNBdHRyaWJ1dGlvblNl",
-            "dHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKXAQosYWNxdWlzaXRpb25fY29u",
-            "dmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAiABKA4yXC5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25TZXR0aW5ncy5B",
-            "Y3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2luZG93QgPgQQIS",
-            "iwEKJm90aGVyX2NvbnZlcnNpb25fZXZlbnRfbG9va2JhY2tfd2luZG93GAMg",
-            "ASgOMlYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF0dHJpYnV0",
-            "aW9uU2V0dGluZ3MuT3RoZXJDb252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRv",
-            "d0ID4EECEncKG3JlcG9ydGluZ19hdHRyaWJ1dGlvbl9tb2RlbBgEIAEoDjJN",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRyaWJ1dGlvblNl",
-            "dHRpbmdzLlJlcG9ydGluZ0F0dHJpYnV0aW9uTW9kZWxCA+BBAiLbAQooQWNx",
-            "dWlzaXRpb25Db252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvdxI8CjhBQ1FV",
-            "SVNJVElPTl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQ",
-            "RUNJRklFRBAAEjcKM0FDUVVJU0lUSU9OX0NPTlZFUlNJT05fRVZFTlRfTE9P",
-            "S0JBQ0tfV0lORE9XXzdfREFZUxABEjgKNEFDUVVJU0lUSU9OX0NPTlZFUlNJ",
-            "T05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQAiL4AQoiT3RoZXJD",
-            "b252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvdxI2CjJPVEhFUl9DT05WRVJT",
-            "SU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQRUNJRklFRBAAEjIKLk9U",
-            "SEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQ",
-            "ARIyCi5PVEhFUl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV182",
-            "MF9EQVlTEAISMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19X",
-            "SU5ET1dfOTBfREFZUxADIpwCChlSZXBvcnRpbmdBdHRyaWJ1dGlvbk1vZGVs",
-            "EisKJ1JFUE9SVElOR19BVFRSSUJVVElPTl9NT0RFTF9VTlNQRUNJRklFRBAA",
-            "Eh0KGUNST1NTX0NIQU5ORUxfREFUQV9EUklWRU4QARIcChhDUk9TU19DSEFO",
-            "TkVMX0xBU1RfQ0xJQ0sQAhIdChlDUk9TU19DSEFOTkVMX0ZJUlNUX0NMSUNL",
-            "EAMSGAoUQ1JPU1NfQ0hBTk5FTF9MSU5FQVIQBBIgChxDUk9TU19DSEFOTkVM",
-            "X1BPU0lUSU9OX0JBU0VEEAUSHAoYQ1JPU1NfQ0hBTk5FTF9USU1FX0RFQ0FZ",
-            "EAYSHAoYQURTX1BSRUZFUlJFRF9MQVNUX0NMSUNLEAc6YepBXgoxYW5hbHl0",
-            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXR0cmlidXRpb25TZXR0aW5ncxIp",
-            "cHJvcGVydGllcy97cHJvcGVydHl9L2F0dHJpYnV0aW9uU2V0dGluZ3MqqgQK",
-            "EEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5EVVNUUllfQ0FURUdPUllfVU5TUEVD",
-            "SUZJRUQQABIOCgpBVVRPTU9USVZFEAESIwofQlVTSU5FU1NfQU5EX0lORFVT",
-            "VFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQS",
-            "DgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZFTBAGEgkKBU9USEVSEAcSGgoWQVJU",
-            "U19BTkRfRU5URVJUQUlOTUVOVBAIEhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJ",
-            "EhgKFEJPT0tTX0FORF9MSVRFUkFUVVJFEAoSEgoORk9PRF9BTkRfRFJJTksQ",
-            "CxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNfQU5EX0xFSVNVUkUQDRITCg9IT01F",
-            "X0FORF9HQVJERU4QDhIYChRJTlRFUk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxB",
-            "V19BTkRfR09WRVJOTUVOVBAQEggKBE5FV1MQERIWChJPTkxJTkVfQ09NTVVO",
-            "SVRJRVMQEhIWChJQRU9QTEVfQU5EX1NPQ0lFVFkQExIUChBQRVRTX0FORF9B",
-            "TklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQFRINCglSRUZFUkVOQ0UQFhILCgdT",
-            "Q0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoSSk9CU19BTkRfRURVQ0FUSU9OEBkS",
-            "DAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZF",
-            "TF9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQ",
-            "ARIYChRHT09HTEVfQU5BTFlUSUNTXzM2MBACKkoKCUFjdG9yVHlwZRIaChZB",
-            "Q1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEgoKBlNZU1RFTRAC",
-            "EgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsKF0FDVElPTl9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQREFURUQQAhILCgdERUxF",
-            "VEVEEAMqwQMKGUNoYW5nZUhpc3RvcnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdF",
-            "X0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgsKB0FDQ09V",
-            "TlQQARIMCghQUk9QRVJUWRACEhEKDUZJUkVCQVNFX0xJTksQBhITCg9HT09H",
-            "TEVfQURTX0xJTksQBxIbChdHT09HTEVfU0lHTkFMU19TRVRUSU5HUxAIEhQK",
-            "EENPTlZFUlNJT05fRVZFTlQQCRIfChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9T",
-            "RUNSRVQQChIUChBDVVNUT01fRElNRU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJ",
-            "QxAMEhsKF0RBVEFfUkVURU5USU9OX1NFVFRJTkdTEA0SJQohRElTUExBWV9W",
-            "SURFT18zNjBfQURWRVJUSVNFUl9MSU5LEA4SLgoqRElTUExBWV9WSURFT18z",
-            "NjBfQURWRVJUSVNFUl9MSU5LX1BST1BPU0FMEA8SFwoTU0VBUkNIX0FEU18z",
-            "NjBfTElOSxAQEg8KC0RBVEFfU1RSRUFNEBISGAoUQVRUUklCVVRJT05fU0VU",
-            "VElOR1MQFCpzChJHb29nbGVTaWduYWxzU3RhdGUSJAogR09PR0xFX1NJR05B",
-            "TFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09HTEVfU0lHTkFMU19FTkFC",
-            "TEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJMRUQQAiqOAQoUR29vZ2xl",
-            "U2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05BTFNfQ09OU0VOVF9VTlNQ",
-            "RUNJRklFRBAAEiQKIEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfQ09OU0VOVEVE",
-            "EAISKAokR09PR0xFX1NJR05BTFNfQ09OU0VOVF9OT1RfQ09OU0VOVEVEEAEq",
-            "ewodTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3QSMAosTElOS19QUk9Q",
-            "T1NBTF9JTklUSUFUSU5HX1BST0RVQ1RfVU5TUEVDSUZJRUQQABIUChBHT09H",
-            "TEVfQU5BTFlUSUNTEAESEgoOTElOS0VEX1BST0RVQ1QQAirEAQoRTGlua1By",
-            "b3Bvc2FsU3RhdGUSIwofTElOS19QUk9QT1NBTF9TVEFURV9VTlNQRUNJRklF",
-            "RBAAEikKJUFXQUlUSU5HX1JFVklFV19GUk9NX0dPT0dMRV9BTkFMWVRJQ1MQ",
-            "ARInCiNBV0FJVElOR19SRVZJRVdfRlJPTV9MSU5LRURfUFJPRFVDVBACEg0K",
-            "CVdJVEhEUkFXThADEgwKCERFQ0xJTkVEEAQSCwoHRVhQSVJFRBAFEgwKCE9C",
-            "U09MRVRFEAYqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEh0KGVBS",
-            "T1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9UWVBFX1JP",
-            "TExVUBADQnsKImNvbS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGFC",
-            "DlJlc291cmNlc1Byb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGE7YWRtaW5iBnBy",
-            "b3RvMw=="));
+            "ZWQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUSJAoX",
+            "YWR2ZXJ0aXNlcl9kaXNwbGF5X25hbWUYBSABKAlCA+BBAxI/ChthZHNfcGVy",
+            "c29uYWxpemF0aW9uX2VuYWJsZWQYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "Qm9vbFZhbHVlEj4KGnNpdGVfc3RhdHNfc2hhcmluZ19lbmFibGVkGAcgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZTpy6kFvCi5hbmFseXRpY3Nh",
+            "ZG1pbi5nb29nbGVhcGlzLmNvbS9TZWFyY2hBZHMzNjBMaW5rEj1wcm9wZXJ0",
+            "aWVzL3twcm9wZXJ0eX0vc2VhcmNoQWRzMzYwTGlua3Mve3NlYXJjaF9hZHNf",
+            "MzYwX2xpbmt9IvwBChlMaW5rUHJvcG9zYWxTdGF0dXNEZXRhaWxzEmwKIGxp",
+            "bmtfcHJvcG9zYWxfaW5pdGlhdGluZ19wcm9kdWN0GAEgASgOMj0uZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbEluaXRpYXRp",
+            "bmdQcm9kdWN0QgPgQQMSHAoPcmVxdWVzdG9yX2VtYWlsGAIgASgJQgPgQQMS",
+            "UwoTbGlua19wcm9wb3NhbF9zdGF0ZRgDIAEoDjIxLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5MaW5rUHJvcG9zYWxTdGF0ZUID4EEDIo8CCg9D",
+            "b252ZXJzaW9uRXZlbnQSEQoEbmFtZRgBIAEoCUID4EEDEhcKCmV2ZW50X25h",
+            "bWUYAiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCglkZWxldGFibGUYBCABKAhCA+BB",
+            "AxITCgZjdXN0b20YBSABKAhCA+BBAzpt6kFqCi1hbmFseXRpY3NhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9Db252ZXJzaW9uRXZlbnQSOXByb3BlcnRpZXMve3By",
+            "b3BlcnR5fS9jb252ZXJzaW9uRXZlbnRzL3tjb252ZXJzaW9uX2V2ZW50fSKg",
+            "AgoVR29vZ2xlU2lnbmFsc1NldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxJB",
+            "CgVzdGF0ZRgDIAEoDjIyLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5Hb29nbGVTaWduYWxzU3RhdGUSSgoHY29uc2VudBgEIAEoDjI0Lmdvb2ds",
+            "ZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzQ29uc2Vu",
+            "dEID4EEDOmXqQWIKM2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0dv",
+            "b2dsZVNpZ25hbHNTZXR0aW5ncxIrcHJvcGVydGllcy97cHJvcGVydHl9L2dv",
+            "b2dsZVNpZ25hbHNTZXR0aW5ncyKyAwoPQ3VzdG9tRGltZW5zaW9uEhEKBG5h",
+            "bWUYASABKAlCA+BBAxIeCg5wYXJhbWV0ZXJfbmFtZRgCIAEoCUIG4EEC4EEF",
+            "EhkKDGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAQg",
+            "ASgJQgPgQQESVQoFc2NvcGUYBSABKA4yPi5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuQ3VzdG9tRGltZW5zaW9uLkRpbWVuc2lvblNjb3BlQgbg",
+            "QQLgQQUSKQocZGlzYWxsb3dfYWRzX3BlcnNvbmFsaXphdGlvbhgGIAEoCEID",
+            "4EEBIkYKDkRpbWVuc2lvblNjb3BlEh8KG0RJTUVOU0lPTl9TQ09QRV9VTlNQ",
+            "RUNJRklFRBAAEgkKBUVWRU5UEAESCAoEVVNFUhACOm3qQWoKLWFuYWx5dGlj",
+            "c2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbURpbWVuc2lvbhI5cHJvcGVy",
+            "dGllcy97cHJvcGVydHl9L2N1c3RvbURpbWVuc2lvbnMve2N1c3RvbV9kaW1l",
+            "bnNpb259IsUGCgxDdXN0b21NZXRyaWMSEQoEbmFtZRgBIAEoCUID4EEDEh4K",
+            "DnBhcmFtZXRlcl9uYW1lGAIgASgJQgbgQQLgQQUSGQoMZGlzcGxheV9uYW1l",
+            "GAMgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBCABKAlCA+BBARJbChBtZWFz",
+            "dXJlbWVudF91bml0GAUgASgOMjwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkN1c3RvbU1ldHJpYy5NZWFzdXJlbWVudFVuaXRCA+BBAhJPCgVz",
+            "Y29wZRgGIAEoDjI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5D",
+            "dXN0b21NZXRyaWMuTWV0cmljU2NvcGVCBuBBAuBBBRJmChZyZXN0cmljdGVk",
+            "X21ldHJpY190eXBlGAggAygOMkEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkN1c3RvbU1ldHJpYy5SZXN0cmljdGVkTWV0cmljVHlwZUID4EEB",
+            "IrcBCg9NZWFzdXJlbWVudFVuaXQSIAocTUVBU1VSRU1FTlRfVU5JVF9VTlNQ",
+            "RUNJRklFRBAAEgwKCFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQAhIICgRGRUVU",
+            "EAMSCgoGTUVURVJTEAQSDgoKS0lMT01FVEVSUxAFEgkKBU1JTEVTEAYSEAoM",
+            "TUlMTElTRUNPTkRTEAcSCwoHU0VDT05EUxAIEgsKB01JTlVURVMQCRIJCgVI",
+            "T1VSUxAKIjYKC01ldHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09QRV9VTlNQRUNJ",
+            "RklFRBAAEgkKBUVWRU5UEAEiXwoUUmVzdHJpY3RlZE1ldHJpY1R5cGUSJgoi",
+            "UkVTVFJJQ1RFRF9NRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPU1Rf",
+            "REFUQRABEhAKDFJFVkVOVUVfREFUQRACOmTqQWEKKmFuYWx5dGljc2FkbWlu",
+            "Lmdvb2dsZWFwaXMuY29tL0N1c3RvbU1ldHJpYxIzcHJvcGVydGllcy97cHJv",
+            "cGVydHl9L2N1c3RvbU1ldHJpY3Mve2N1c3RvbV9tZXRyaWN9IsIDChVEYXRh",
+            "UmV0ZW50aW9uU2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEmUKFGV2ZW50",
+            "X2RhdGFfcmV0ZW50aW9uGAIgASgOMkcuZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWFscGhhLkRhdGFSZXRlbnRpb25TZXR0aW5ncy5SZXRlbnRpb25EdXJh",
+            "dGlvbhInCh9yZXNldF91c2VyX2RhdGFfb25fbmV3X2FjdGl2aXR5GAMgASgI",
+            "Ip4BChFSZXRlbnRpb25EdXJhdGlvbhIiCh5SRVRFTlRJT05fRFVSQVRJT05f",
+            "VU5TUEVDSUZJRUQQABIOCgpUV09fTU9OVEhTEAESEwoPRk9VUlRFRU5fTU9O",
+            "VEhTEAMSFQoRVFdFTlRZX1NJWF9NT05USFMQBBIXChNUSElSVFlfRUlHSFRf",
+            "TU9OVEhTEAUSEAoMRklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0aWNzYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vRGF0YVJldGVudGlvblNldHRpbmdzEitwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdzIqQKChNB",
+            "dHRyaWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKXAQosYWNx",
+            "dWlzaXRpb25fY29udmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAiAB",
+            "KA4yXC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRp",
+            "b25TZXR0aW5ncy5BY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNr",
+            "V2luZG93QgPgQQISiwEKJm90aGVyX2NvbnZlcnNpb25fZXZlbnRfbG9va2Jh",
+            "Y2tfd2luZG93GAMgASgOMlYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFs",
+            "cGhhLkF0dHJpYnV0aW9uU2V0dGluZ3MuT3RoZXJDb252ZXJzaW9uRXZlbnRM",
+            "b29rYmFja1dpbmRvd0ID4EECEncKG3JlcG9ydGluZ19hdHRyaWJ1dGlvbl9t",
+            "b2RlbBgEIAEoDjJNLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5B",
+            "dHRyaWJ1dGlvblNldHRpbmdzLlJlcG9ydGluZ0F0dHJpYnV0aW9uTW9kZWxC",
+            "A+BBAiLbAQooQWNxdWlzaXRpb25Db252ZXJzaW9uRXZlbnRMb29rYmFja1dp",
+            "bmRvdxI8CjhBQ1FVSVNJVElPTl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNL",
+            "X1dJTkRPV19VTlNQRUNJRklFRBAAEjcKM0FDUVVJU0lUSU9OX0NPTlZFUlNJ",
+            "T05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzdfREFZUxABEjgKNEFDUVVJU0lU",
+            "SU9OX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQ",
+            "AiL4AQoiT3RoZXJDb252ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvdxI2CjJP",
+            "VEhFUl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQRUNJ",
+            "RklFRBAAEjIKLk9USEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lO",
+            "RE9XXzMwX0RBWVMQARIyCi5PVEhFUl9DT05WRVJTSU9OX0VWRU5UX0xPT0tC",
+            "QUNLX1dJTkRPV182MF9EQVlTEAISMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVO",
+            "VF9MT09LQkFDS19XSU5ET1dfOTBfREFZUxADIpwCChlSZXBvcnRpbmdBdHRy",
+            "aWJ1dGlvbk1vZGVsEisKJ1JFUE9SVElOR19BVFRSSUJVVElPTl9NT0RFTF9V",
+            "TlNQRUNJRklFRBAAEh0KGUNST1NTX0NIQU5ORUxfREFUQV9EUklWRU4QARIc",
+            "ChhDUk9TU19DSEFOTkVMX0xBU1RfQ0xJQ0sQAhIdChlDUk9TU19DSEFOTkVM",
+            "X0ZJUlNUX0NMSUNLEAMSGAoUQ1JPU1NfQ0hBTk5FTF9MSU5FQVIQBBIgChxD",
+            "Uk9TU19DSEFOTkVMX1BPU0lUSU9OX0JBU0VEEAUSHAoYQ1JPU1NfQ0hBTk5F",
+            "TF9USU1FX0RFQ0FZEAYSHAoYQURTX1BSRUZFUlJFRF9MQVNUX0NMSUNLEAc6",
+            "YepBXgoxYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXR0cmlidXRp",
+            "b25TZXR0aW5ncxIpcHJvcGVydGllcy97cHJvcGVydHl9L2F0dHJpYnV0aW9u",
+            "U2V0dGluZ3Mi5AIKDEJpZ1F1ZXJ5TGluaxIRCgRuYW1lGAEgASgJQgPgQQMS",
+            "FAoHcHJvamVjdBgCIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhwKFGRhaWx5X2V4cG9y",
+            "dF9lbmFibGVkGAQgASgIEiAKGHN0cmVhbWluZ19leHBvcnRfZW5hYmxlZBgF",
+            "IAEoCBIeChZpbmNsdWRlX2FkdmVydGlzaW5nX2lkGAYgASgIEhYKDmV4cG9y",
+            "dF9zdHJlYW1zGAcgAygJEhcKD2V4Y2x1ZGVkX2V2ZW50cxgIIAMoCTpk6kFh",
+            "CiphbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9CaWdRdWVyeUxpbmsS",
+            "M3Byb3BlcnRpZXMve3Byb3BlcnR5fS9iaWdRdWVyeUxpbmtzL3tiaWdxdWVy",
+            "eV9saW5rfSqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRF",
+            "R09SWV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVT",
+            "U19BTkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhF",
+            "QUxUSENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RI",
+            "RVIQBxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FO",
+            "RF9GSVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09E",
+            "X0FORF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VS",
+            "RRANEhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxF",
+            "Q09NEA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9O",
+            "TElORV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQK",
+            "EFBFVFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVS",
+            "RU5DRRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9F",
+            "RFVDQVRJT04QGRIMCghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZlbBIdChlT",
+            "RVJWSUNFX0xFVkVMX1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FOQUxZVElD",
+            "U19TVEFOREFSRBABEhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIqSgoJQWN0",
+            "b3JUeXBlEhoKFkFDVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAES",
+            "CgoGU1lTVEVNEAISCwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUSGwoXQUNU",
+            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHVVBEQVRF",
+            "RBACEgsKB0RFTEVURUQQAyrrAwoZQ2hhbmdlSGlzdG9yeVJlc291cmNlVHlw",
+            "ZRIsCihDSEFOR0VfSElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCwoHQUNDT1VOVBABEgwKCFBST1BFUlRZEAISEQoNRklSRUJBU0VfTElO",
+            "SxAGEhMKD0dPT0dMRV9BRFNfTElOSxAHEhsKF0dPT0dMRV9TSUdOQUxTX1NF",
+            "VFRJTkdTEAgSFAoQQ09OVkVSU0lPTl9FVkVOVBAJEh8KG01FQVNVUkVNRU5U",
+            "X1BST1RPQ09MX1NFQ1JFVBAKEhQKEENVU1RPTV9ESU1FTlNJT04QCxIRCg1D",
+            "VVNUT01fTUVUUklDEAwSGwoXREFUQV9SRVRFTlRJT05fU0VUVElOR1MQDRIl",
+            "CiFESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTksQDhIuCipESVNQ",
+            "TEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTktfUFJPUE9TQUwQDxIXChNT",
+            "RUFSQ0hfQURTXzM2MF9MSU5LEBASDwoLREFUQV9TVFJFQU0QEhIYChRBVFRS",
+            "SUJVVElPTl9TRVRUSU5HUxAUEhUKEUVYUEFOREVEX0RBVEFfU0VUEBUSEQoN",
+            "Q0hBTk5FTF9HUk9VUBAWKnMKEkdvb2dsZVNpZ25hbHNTdGF0ZRIkCiBHT09H",
+            "TEVfU0lHTkFMU19TVEFURV9VTlNQRUNJRklFRBAAEhoKFkdPT0dMRV9TSUdO",
+            "QUxTX0VOQUJMRUQQARIbChdHT09HTEVfU0lHTkFMU19ESVNBQkxFRBACKo4B",
+            "ChRHb29nbGVTaWduYWxzQ29uc2VudBImCiJHT09HTEVfU0lHTkFMU19DT05T",
+            "RU5UX1VOU1BFQ0lGSUVEEAASJAogR09PR0xFX1NJR05BTFNfQ09OU0VOVF9D",
+            "T05TRU5URUQQAhIoCiRHT09HTEVfU0lHTkFMU19DT05TRU5UX05PVF9DT05T",
+            "RU5URUQQASp7Ch1MaW5rUHJvcG9zYWxJbml0aWF0aW5nUHJvZHVjdBIwCixM",
+            "SU5LX1BST1BPU0FMX0lOSVRJQVRJTkdfUFJPRFVDVF9VTlNQRUNJRklFRBAA",
+            "EhQKEEdPT0dMRV9BTkFMWVRJQ1MQARISCg5MSU5LRURfUFJPRFVDVBACKsQB",
+            "ChFMaW5rUHJvcG9zYWxTdGF0ZRIjCh9MSU5LX1BST1BPU0FMX1NUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASKQolQVdBSVRJTkdfUkVWSUVXX0ZST01fR09PR0xFX0FO",
+            "QUxZVElDUxABEicKI0FXQUlUSU5HX1JFVklFV19GUk9NX0xJTktFRF9QUk9E",
+            "VUNUEAISDQoJV0lUSERSQVdOEAMSDAoIREVDTElORUQQBBILCgdFWFBJUkVE",
+            "EAUSDAoIT0JTT0xFVEUQBiqCAQoMUHJvcGVydHlUeXBlEh0KGVBST1BFUlRZ",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIaChZQUk9QRVJUWV9UWVBFX09SRElOQVJZ",
+            "EAESHQoZUFJPUEVSVFlfVFlQRV9TVUJQUk9QRVJUWRACEhgKFFBST1BFUlRZ",
+            "X1RZUEVfUk9MTFVQEANCewoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYUIOUmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTth",
+            "ZG1pbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "PropertyType", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
@@ -339,16 +365,18 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName", "PropertyType", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret), global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret.Parser, new[]{ "Name", "DisplayName", "SecretValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "DataStream", "AttributionSettings" }, new[]{ "Resource" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "SearchAds360Link", "DataStream", "AttributionSettings", "ExpandedDataSet", "BigqueryLink" }, new[]{ "Resource" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser, new[]{ "Name", "AdvertiserId", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser, new[]{ "Name", "AdvertiserId", "LinkProposalStatusDetails", "AdvertiserDisplayName", "ValidationEmail", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.SearchAds360Link), global::Google.Analytics.Admin.V1Alpha.SearchAds360Link.Parser, new[]{ "Name", "AdvertiserId", "CampaignDataSharingEnabled", "CostDataSharingEnabled", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "SiteStatsSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails), global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails.Parser, new[]{ "LinkProposalInitiatingProduct", "RequestorEmail", "LinkProposalState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent), global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings), global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings.Parser, new[]{ "Name", "State", "Consent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension), global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.BigQueryLink), global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser, new[]{ "Name", "Project", "CreateTime", "DailyExportEnabled", "StreamingExportEnabled", "IncludeAdvertisingId", "ExportStreams", "ExcludedEvents" }, null, null, null, null)
           }));
     }
     #endregion
@@ -600,6 +628,14 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// AttributionSettings resource
     /// </summary>
     [pbr::OriginalName("ATTRIBUTION_SETTINGS")] AttributionSettings = 20,
+    /// <summary>
+    /// ExpandedDataSet resource
+    /// </summary>
+    [pbr::OriginalName("EXPANDED_DATA_SET")] ExpandedDataSet = 21,
+    /// <summary>
+    /// ChannelGroup resource
+    /// </summary>
+    [pbr::OriginalName("CHANNEL_GROUP")] ChannelGroup = 22,
   }
 
   /// <summary>
@@ -1225,10 +1261,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int PropertyTypeFieldNumber = 14;
     private global::Google.Analytics.Admin.V1Alpha.PropertyType propertyType_ = global::Google.Analytics.Admin.V1Alpha.PropertyType.Unspecified;
     /// <summary>
-    /// Immutable. The property type for this Property resource. When creating a property, if
-    /// the type is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be
-    /// implied. "SUBPROPERTY" and "ROLLUP_PROPERTY" types cannot yet be created
-    /// via Google Analytics Admin API.
+    /// Immutable. The property type for this Property resource. When creating a
+    /// property, if the type is "PROPERTY_TYPE_UNSPECIFIED", then
+    /// "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and "ROLLUP_PROPERTY"
+    /// types cannot yet be created via Google Analytics Admin API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1325,9 +1361,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int TimeZoneFieldNumber = 7;
     private string timeZone_ = "";
     /// <summary>
-    /// Required. Reporting Time Zone, used as the day boundary for reports, regardless of
-    /// where the data originates. If the time zone honors DST, Analytics will
-    /// automatically adjust for the changes.
+    /// Required. Reporting Time Zone, used as the day boundary for reports,
+    /// regardless of where the data originates. If the time zone honors DST,
+    /// Analytics will automatically adjust for the changes.
     ///
     /// NOTE: Changing the time zone only affects data going forward, and is not
     /// applied retroactively.
@@ -1366,7 +1402,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ServiceLevelFieldNumber = 10;
     private global::Google.Analytics.Admin.V1Alpha.ServiceLevel serviceLevel_ = global::Google.Analytics.Admin.V1Alpha.ServiceLevel.Unspecified;
     /// <summary>
-    /// Output only. The Google Analytics service level that applies to this property.
+    /// Output only. The Google Analytics service level that applies to this
+    /// property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1381,8 +1418,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DeleteTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. If set, the time at which this property was trashed. If not set, then this
-    /// property is not currently in the trash can.
+    /// Output only. If set, the time at which this property was trashed. If not
+    /// set, then this property is not currently in the trash can.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1397,9 +1434,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ExpireTimeFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. If set, the time at which this trashed property will be permanently
-    /// deleted. If not set, then this property is not currently in the trash can
-    /// and is not slated to be deleted.
+    /// Output only. If set, the time at which this trashed property will be
+    /// permanently deleted. If not set, then this property is not currently in the
+    /// trash can and is not slated to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3891,9 +3928,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// Immutable. Firebase project resource name. When creating a FirebaseLink, you may
-    /// provide this resource name using either a project number or project ID.
-    /// Once this resource has been created, returned FirebaseLinks will always
+    /// Immutable. Firebase project resource name. When creating a FirebaseLink,
+    /// you may provide this resource name using either a project number or project
+    /// ID. Once this resource has been created, returned FirebaseLinks will always
     /// have a project_name that contains a project number.
     ///
     /// Format: 'projects/{project number}'
@@ -4183,8 +4220,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int SnippetFieldNumber = 2;
     private string snippet_ = "";
     /// <summary>
-    /// Immutable. JavaScript code snippet to be pasted as the first item into the head tag of
-    /// every webpage to measure.
+    /// Immutable. JavaScript code snippet to be pasted as the first item into the
+    /// head tag of every webpage to measure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4409,7 +4446,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
+    /// Output only. Format:
+    /// properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
     ///
     /// Note: googleAdsLinkId is not the Google Ads customer ID.
     /// </summary>
@@ -5904,9 +5942,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this secret. This secret may be a child of any type of
-    /// stream.
-    /// Format:
+    /// Output only. Resource name of this secret. This secret may be a child of
+    /// any type of stream. Format:
     /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5937,8 +5974,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int SecretValueFieldNumber = 3;
     private string secretValue_ = "";
     /// <summary>
-    /// Output only. The measurement protocol secret value. Pass this value to the api_secret
-    /// field of the Measurement Protocol API when sending hits to this
+    /// Output only. The measurement protocol secret value. Pass this value to the
+    /// api_secret field of the Measurement Protocol API when sending hits to this
     /// secret's parent property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6944,11 +6981,20 @@ namespace Google.Analytics.Admin.V1Alpha {
             case ResourceOneofCase.DataRetentionSettings:
               DataRetentionSettings = other.DataRetentionSettings.Clone();
               break;
+            case ResourceOneofCase.SearchAds360Link:
+              SearchAds360Link = other.SearchAds360Link.Clone();
+              break;
             case ResourceOneofCase.DataStream:
               DataStream = other.DataStream.Clone();
               break;
             case ResourceOneofCase.AttributionSettings:
               AttributionSettings = other.AttributionSettings.Clone();
+              break;
+            case ResourceOneofCase.ExpandedDataSet:
+              ExpandedDataSet = other.ExpandedDataSet.Clone();
+              break;
+            case ResourceOneofCase.BigqueryLink:
+              BigqueryLink = other.BigqueryLink.Clone();
               break;
           }
 
@@ -7143,6 +7189,21 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "search_ads_360_link" field.</summary>
+        public const int SearchAds360LinkFieldNumber = 16;
+        /// <summary>
+        /// A snapshot of a SearchAds360Link resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.SearchAds360Link SearchAds360Link {
+          get { return resourceCase_ == ResourceOneofCase.SearchAds360Link ? (global::Google.Analytics.Admin.V1Alpha.SearchAds360Link) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.SearchAds360Link;
+          }
+        }
+
         /// <summary>Field number for the "data_stream" field.</summary>
         public const int DataStreamFieldNumber = 18;
         /// <summary>
@@ -7173,6 +7234,36 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "expanded_data_set" field.</summary>
+        public const int ExpandedDataSetFieldNumber = 21;
+        /// <summary>
+        /// A snapshot of an ExpandedDataSet resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet ExpandedDataSet {
+          get { return resourceCase_ == ResourceOneofCase.ExpandedDataSet ? (global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.ExpandedDataSet;
+          }
+        }
+
+        /// <summary>Field number for the "bigquery_link" field.</summary>
+        public const int BigqueryLinkFieldNumber = 23;
+        /// <summary>
+        /// A snapshot of a BigQuery link resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.BigQueryLink BigqueryLink {
+          get { return resourceCase_ == ResourceOneofCase.BigqueryLink ? (global::Google.Analytics.Admin.V1Alpha.BigQueryLink) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.BigqueryLink;
+          }
+        }
+
         private object resource_;
         /// <summary>Enum of possible cases for the "resource" oneof.</summary>
         public enum ResourceOneofCase {
@@ -7189,8 +7280,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           CustomDimension = 13,
           CustomMetric = 14,
           DataRetentionSettings = 15,
+          SearchAds360Link = 16,
           DataStream = 18,
           AttributionSettings = 20,
+          ExpandedDataSet = 21,
+          BigqueryLink = 23,
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7233,8 +7327,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (!object.Equals(CustomDimension, other.CustomDimension)) return false;
           if (!object.Equals(CustomMetric, other.CustomMetric)) return false;
           if (!object.Equals(DataRetentionSettings, other.DataRetentionSettings)) return false;
+          if (!object.Equals(SearchAds360Link, other.SearchAds360Link)) return false;
           if (!object.Equals(DataStream, other.DataStream)) return false;
           if (!object.Equals(AttributionSettings, other.AttributionSettings)) return false;
+          if (!object.Equals(ExpandedDataSet, other.ExpandedDataSet)) return false;
+          if (!object.Equals(BigqueryLink, other.BigqueryLink)) return false;
           if (ResourceCase != other.ResourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -7255,8 +7352,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.CustomDimension) hash ^= CustomDimension.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.CustomMetric) hash ^= CustomMetric.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) hash ^= DataRetentionSettings.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.SearchAds360Link) hash ^= SearchAds360Link.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.DataStream) hash ^= DataStream.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.AttributionSettings) hash ^= AttributionSettings.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) hash ^= ExpandedDataSet.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.BigqueryLink) hash ^= BigqueryLink.GetHashCode();
           hash ^= (int) resourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7324,6 +7424,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(122);
             output.WriteMessage(DataRetentionSettings);
           }
+          if (resourceCase_ == ResourceOneofCase.SearchAds360Link) {
+            output.WriteRawTag(130, 1);
+            output.WriteMessage(SearchAds360Link);
+          }
           if (resourceCase_ == ResourceOneofCase.DataStream) {
             output.WriteRawTag(146, 1);
             output.WriteMessage(DataStream);
@@ -7331,6 +7435,14 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
             output.WriteRawTag(162, 1);
             output.WriteMessage(AttributionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(ExpandedDataSet);
+          }
+          if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
+            output.WriteRawTag(186, 1);
+            output.WriteMessage(BigqueryLink);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -7390,6 +7502,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(122);
             output.WriteMessage(DataRetentionSettings);
           }
+          if (resourceCase_ == ResourceOneofCase.SearchAds360Link) {
+            output.WriteRawTag(130, 1);
+            output.WriteMessage(SearchAds360Link);
+          }
           if (resourceCase_ == ResourceOneofCase.DataStream) {
             output.WriteRawTag(146, 1);
             output.WriteMessage(DataStream);
@@ -7397,6 +7513,14 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
             output.WriteRawTag(162, 1);
             output.WriteMessage(AttributionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(ExpandedDataSet);
+          }
+          if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
+            output.WriteRawTag(186, 1);
+            output.WriteMessage(BigqueryLink);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -7444,11 +7568,20 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.DataRetentionSettings) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataRetentionSettings);
           }
+          if (resourceCase_ == ResourceOneofCase.SearchAds360Link) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(SearchAds360Link);
+          }
           if (resourceCase_ == ResourceOneofCase.DataStream) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataStream);
           }
           if (resourceCase_ == ResourceOneofCase.AttributionSettings) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(AttributionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpandedDataSet);
+          }
+          if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(BigqueryLink);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7535,6 +7668,12 @@ namespace Google.Analytics.Admin.V1Alpha {
               }
               DataRetentionSettings.MergeFrom(other.DataRetentionSettings);
               break;
+            case ResourceOneofCase.SearchAds360Link:
+              if (SearchAds360Link == null) {
+                SearchAds360Link = new global::Google.Analytics.Admin.V1Alpha.SearchAds360Link();
+              }
+              SearchAds360Link.MergeFrom(other.SearchAds360Link);
+              break;
             case ResourceOneofCase.DataStream:
               if (DataStream == null) {
                 DataStream = new global::Google.Analytics.Admin.V1Alpha.DataStream();
@@ -7546,6 +7685,18 @@ namespace Google.Analytics.Admin.V1Alpha {
                 AttributionSettings = new global::Google.Analytics.Admin.V1Alpha.AttributionSettings();
               }
               AttributionSettings.MergeFrom(other.AttributionSettings);
+              break;
+            case ResourceOneofCase.ExpandedDataSet:
+              if (ExpandedDataSet == null) {
+                ExpandedDataSet = new global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet();
+              }
+              ExpandedDataSet.MergeFrom(other.ExpandedDataSet);
+              break;
+            case ResourceOneofCase.BigqueryLink:
+              if (BigqueryLink == null) {
+                BigqueryLink = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
+              }
+              BigqueryLink.MergeFrom(other.BigqueryLink);
               break;
           }
 
@@ -7672,6 +7823,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 DataRetentionSettings = subBuilder;
                 break;
               }
+              case 130: {
+                global::Google.Analytics.Admin.V1Alpha.SearchAds360Link subBuilder = new global::Google.Analytics.Admin.V1Alpha.SearchAds360Link();
+                if (resourceCase_ == ResourceOneofCase.SearchAds360Link) {
+                  subBuilder.MergeFrom(SearchAds360Link);
+                }
+                input.ReadMessage(subBuilder);
+                SearchAds360Link = subBuilder;
+                break;
+              }
               case 146: {
                 global::Google.Analytics.Admin.V1Alpha.DataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataStream();
                 if (resourceCase_ == ResourceOneofCase.DataStream) {
@@ -7688,6 +7848,24 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 AttributionSettings = subBuilder;
+                break;
+              }
+              case 170: {
+                global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet subBuilder = new global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet();
+                if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
+                  subBuilder.MergeFrom(ExpandedDataSet);
+                }
+                input.ReadMessage(subBuilder);
+                ExpandedDataSet = subBuilder;
+                break;
+              }
+              case 186: {
+                global::Google.Analytics.Admin.V1Alpha.BigQueryLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
+                if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
+                  subBuilder.MergeFrom(BigqueryLink);
+                }
+                input.ReadMessage(subBuilder);
+                BigqueryLink = subBuilder;
                 break;
               }
             }
@@ -7813,6 +7991,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 DataRetentionSettings = subBuilder;
                 break;
               }
+              case 130: {
+                global::Google.Analytics.Admin.V1Alpha.SearchAds360Link subBuilder = new global::Google.Analytics.Admin.V1Alpha.SearchAds360Link();
+                if (resourceCase_ == ResourceOneofCase.SearchAds360Link) {
+                  subBuilder.MergeFrom(SearchAds360Link);
+                }
+                input.ReadMessage(subBuilder);
+                SearchAds360Link = subBuilder;
+                break;
+              }
               case 146: {
                 global::Google.Analytics.Admin.V1Alpha.DataStream subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataStream();
                 if (resourceCase_ == ResourceOneofCase.DataStream) {
@@ -7829,6 +8016,24 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 AttributionSettings = subBuilder;
+                break;
+              }
+              case 170: {
+                global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet subBuilder = new global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet();
+                if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
+                  subBuilder.MergeFrom(ExpandedDataSet);
+                }
+                input.ReadMessage(subBuilder);
+                ExpandedDataSet = subBuilder;
+                break;
+              }
+              case 186: {
+                global::Google.Analytics.Admin.V1Alpha.BigQueryLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
+                if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
+                  subBuilder.MergeFrom(BigqueryLink);
+                }
+                input.ReadMessage(subBuilder);
+                BigqueryLink = subBuilder;
                 break;
               }
             }
@@ -7899,8 +8104,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this DisplayVideo360AdvertiserLink resource.
-    /// Format: properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId}
+    /// Output only. The resource name for this DisplayVideo360AdvertiserLink
+    /// resource. Format:
+    /// properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId}
     ///
     /// Note: linkId is not the Display &amp; Video 360 Advertiser ID
     /// </summary>
@@ -7966,10 +8172,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::FieldCodec<bool?> _single_campaignDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(42);
     private bool? campaignDataSharingEnabled_;
     /// <summary>
-    /// Immutable. Enables the import of campaign data from Display &amp; Video 360 into the GA4
-    /// property. After link creation, this can only be updated from the Display &amp;
-    /// Video 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Immutable. Enables the import of campaign data from Display &amp; Video 360
+    /// into the GA4 property. After link creation, this can only be updated from
+    /// the Display &amp; Video 360 product. If this field is not set on create, it
+    /// will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7986,11 +8192,11 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::FieldCodec<bool?> _single_costDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(50);
     private bool? costDataSharingEnabled_;
     /// <summary>
-    /// Immutable. Enables the import of cost data from Display &amp; Video 360 into the GA4
-    /// property. This can only be enabled if campaign_data_sharing_enabled is
-    /// enabled. After link creation, this can only be updated from the Display &amp;
-    /// Video 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Immutable. Enables the import of cost data from Display &amp; Video 360 into
+    /// the GA4 property. This can only be enabled if campaign_data_sharing_enabled
+    /// is enabled. After link creation, this can only be updated from the Display
+    /// &amp; Video 360 product. If this field is not set on create, it will be
+    /// defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8336,8 +8542,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this DisplayVideo360AdvertiserLinkProposal resource.
-    /// Format:
+    /// Output only. The resource name for this
+    /// DisplayVideo360AdvertiserLinkProposal resource. Format:
     /// properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId}
     ///
     /// Note: proposalId is not the Display &amp; Video 360 Advertiser ID
@@ -8401,12 +8607,12 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ValidationEmailFieldNumber = 5;
     private string validationEmail_ = "";
     /// <summary>
-    /// Input only. On a proposal being sent to Display &amp; Video 360, this field must be set to
-    /// the email address of an admin on the target advertiser. This is used to
-    /// verify that the Google Analytics admin is aware of at least one admin on
-    /// the Display &amp; Video 360 Advertiser. This does not restrict approval of the
-    /// proposal to a single user. Any admin on the Display &amp; Video 360 Advertiser
-    /// may approve the proposal.
+    /// Input only. On a proposal being sent to Display &amp; Video 360, this field
+    /// must be set to the email address of an admin on the target advertiser. This
+    /// is used to verify that the Google Analytics admin is aware of at least one
+    /// admin on the Display &amp; Video 360 Advertiser. This does not restrict
+    /// approval of the proposal to a single user. Any admin on the Display &amp; Video
+    /// 360 Advertiser may approve the proposal.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8801,6 +9007,487 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
+  /// A link between a GA4 property and a Search Ads 360 entity.
+  /// </summary>
+  public sealed partial class SearchAds360Link : pb::IMessage<SearchAds360Link>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchAds360Link> _parser = new pb::MessageParser<SearchAds360Link>(() => new SearchAds360Link());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchAds360Link> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchAds360Link() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchAds360Link(SearchAds360Link other) : this() {
+      name_ = other.name_;
+      advertiserId_ = other.advertiserId_;
+      CampaignDataSharingEnabled = other.CampaignDataSharingEnabled;
+      CostDataSharingEnabled = other.CostDataSharingEnabled;
+      advertiserDisplayName_ = other.advertiserDisplayName_;
+      AdsPersonalizationEnabled = other.AdsPersonalizationEnabled;
+      SiteStatsSharingEnabled = other.SiteStatsSharingEnabled;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchAds360Link Clone() {
+      return new SearchAds360Link(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name for this SearchAds360Link resource.
+    /// Format: properties/{propertyId}/searchAds360Links/{linkId}
+    ///
+    /// Note: linkId is not the Search Ads 360 advertiser ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "advertiser_id" field.</summary>
+    public const int AdvertiserIdFieldNumber = 2;
+    private string advertiserId_ = "";
+    /// <summary>
+    /// Immutable. This field represents the Advertiser ID of the Search Ads 360
+    /// Advertiser. that has been linked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdvertiserId {
+      get { return advertiserId_; }
+      set {
+        advertiserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "campaign_data_sharing_enabled" field.</summary>
+    public const int CampaignDataSharingEnabledFieldNumber = 3;
+    private static readonly pb::FieldCodec<bool?> _single_campaignDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(26);
+    private bool? campaignDataSharingEnabled_;
+    /// <summary>
+    /// Immutable. Enables the import of campaign data from Search Ads 360 into the
+    /// GA4 property. After link creation, this can only be updated from the Search
+    /// Ads 360 product.
+    /// If this field is not set on create, it will be defaulted to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool? CampaignDataSharingEnabled {
+      get { return campaignDataSharingEnabled_; }
+      set {
+        campaignDataSharingEnabled_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "cost_data_sharing_enabled" field.</summary>
+    public const int CostDataSharingEnabledFieldNumber = 4;
+    private static readonly pb::FieldCodec<bool?> _single_costDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
+    private bool? costDataSharingEnabled_;
+    /// <summary>
+    /// Immutable. Enables the import of cost data from Search Ads 360 to the GA4
+    /// property. This can only be enabled if campaign_data_sharing_enabled is
+    /// enabled. After link creation, this can only be updated from
+    /// the Search Ads 360 product.
+    /// If this field is not set on create, it will be defaulted to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool? CostDataSharingEnabled {
+      get { return costDataSharingEnabled_; }
+      set {
+        costDataSharingEnabled_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "advertiser_display_name" field.</summary>
+    public const int AdvertiserDisplayNameFieldNumber = 5;
+    private string advertiserDisplayName_ = "";
+    /// <summary>
+    /// Output only. The display name of the Search Ads 360 Advertiser.
+    /// Allows users to easily identify the linked resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdvertiserDisplayName {
+      get { return advertiserDisplayName_; }
+      set {
+        advertiserDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ads_personalization_enabled" field.</summary>
+    public const int AdsPersonalizationEnabledFieldNumber = 6;
+    private static readonly pb::FieldCodec<bool?> _single_adsPersonalizationEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(50);
+    private bool? adsPersonalizationEnabled_;
+    /// <summary>
+    /// Enables personalized advertising features with this integration.
+    /// If this field is not set on create, it will be defaulted to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool? AdsPersonalizationEnabled {
+      get { return adsPersonalizationEnabled_; }
+      set {
+        adsPersonalizationEnabled_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "site_stats_sharing_enabled" field.</summary>
+    public const int SiteStatsSharingEnabledFieldNumber = 7;
+    private static readonly pb::FieldCodec<bool?> _single_siteStatsSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(58);
+    private bool? siteStatsSharingEnabled_;
+    /// <summary>
+    /// Enables export of site stats with this integration.
+    /// If this field is not set on create, it will be defaulted to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool? SiteStatsSharingEnabled {
+      get { return siteStatsSharingEnabled_; }
+      set {
+        siteStatsSharingEnabled_ = value;
+      }
+    }
+
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchAds360Link);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchAds360Link other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (AdvertiserId != other.AdvertiserId) return false;
+      if (CampaignDataSharingEnabled != other.CampaignDataSharingEnabled) return false;
+      if (CostDataSharingEnabled != other.CostDataSharingEnabled) return false;
+      if (AdvertiserDisplayName != other.AdvertiserDisplayName) return false;
+      if (AdsPersonalizationEnabled != other.AdsPersonalizationEnabled) return false;
+      if (SiteStatsSharingEnabled != other.SiteStatsSharingEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AdvertiserId.Length != 0) hash ^= AdvertiserId.GetHashCode();
+      if (campaignDataSharingEnabled_ != null) hash ^= CampaignDataSharingEnabled.GetHashCode();
+      if (costDataSharingEnabled_ != null) hash ^= CostDataSharingEnabled.GetHashCode();
+      if (AdvertiserDisplayName.Length != 0) hash ^= AdvertiserDisplayName.GetHashCode();
+      if (adsPersonalizationEnabled_ != null) hash ^= AdsPersonalizationEnabled.GetHashCode();
+      if (siteStatsSharingEnabled_ != null) hash ^= SiteStatsSharingEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AdvertiserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AdvertiserId);
+      }
+      if (campaignDataSharingEnabled_ != null) {
+        _single_campaignDataSharingEnabled_codec.WriteTagAndValue(output, CampaignDataSharingEnabled);
+      }
+      if (costDataSharingEnabled_ != null) {
+        _single_costDataSharingEnabled_codec.WriteTagAndValue(output, CostDataSharingEnabled);
+      }
+      if (AdvertiserDisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AdvertiserDisplayName);
+      }
+      if (adsPersonalizationEnabled_ != null) {
+        _single_adsPersonalizationEnabled_codec.WriteTagAndValue(output, AdsPersonalizationEnabled);
+      }
+      if (siteStatsSharingEnabled_ != null) {
+        _single_siteStatsSharingEnabled_codec.WriteTagAndValue(output, SiteStatsSharingEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AdvertiserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AdvertiserId);
+      }
+      if (campaignDataSharingEnabled_ != null) {
+        _single_campaignDataSharingEnabled_codec.WriteTagAndValue(ref output, CampaignDataSharingEnabled);
+      }
+      if (costDataSharingEnabled_ != null) {
+        _single_costDataSharingEnabled_codec.WriteTagAndValue(ref output, CostDataSharingEnabled);
+      }
+      if (AdvertiserDisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AdvertiserDisplayName);
+      }
+      if (adsPersonalizationEnabled_ != null) {
+        _single_adsPersonalizationEnabled_codec.WriteTagAndValue(ref output, AdsPersonalizationEnabled);
+      }
+      if (siteStatsSharingEnabled_ != null) {
+        _single_siteStatsSharingEnabled_codec.WriteTagAndValue(ref output, SiteStatsSharingEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AdvertiserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdvertiserId);
+      }
+      if (campaignDataSharingEnabled_ != null) {
+        size += _single_campaignDataSharingEnabled_codec.CalculateSizeWithTag(CampaignDataSharingEnabled);
+      }
+      if (costDataSharingEnabled_ != null) {
+        size += _single_costDataSharingEnabled_codec.CalculateSizeWithTag(CostDataSharingEnabled);
+      }
+      if (AdvertiserDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdvertiserDisplayName);
+      }
+      if (adsPersonalizationEnabled_ != null) {
+        size += _single_adsPersonalizationEnabled_codec.CalculateSizeWithTag(AdsPersonalizationEnabled);
+      }
+      if (siteStatsSharingEnabled_ != null) {
+        size += _single_siteStatsSharingEnabled_codec.CalculateSizeWithTag(SiteStatsSharingEnabled);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchAds360Link other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.AdvertiserId.Length != 0) {
+        AdvertiserId = other.AdvertiserId;
+      }
+      if (other.campaignDataSharingEnabled_ != null) {
+        if (campaignDataSharingEnabled_ == null || other.CampaignDataSharingEnabled != false) {
+          CampaignDataSharingEnabled = other.CampaignDataSharingEnabled;
+        }
+      }
+      if (other.costDataSharingEnabled_ != null) {
+        if (costDataSharingEnabled_ == null || other.CostDataSharingEnabled != false) {
+          CostDataSharingEnabled = other.CostDataSharingEnabled;
+        }
+      }
+      if (other.AdvertiserDisplayName.Length != 0) {
+        AdvertiserDisplayName = other.AdvertiserDisplayName;
+      }
+      if (other.adsPersonalizationEnabled_ != null) {
+        if (adsPersonalizationEnabled_ == null || other.AdsPersonalizationEnabled != false) {
+          AdsPersonalizationEnabled = other.AdsPersonalizationEnabled;
+        }
+      }
+      if (other.siteStatsSharingEnabled_ != null) {
+        if (siteStatsSharingEnabled_ == null || other.SiteStatsSharingEnabled != false) {
+          SiteStatsSharingEnabled = other.SiteStatsSharingEnabled;
+        }
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AdvertiserId = input.ReadString();
+            break;
+          }
+          case 26: {
+            bool? value = _single_campaignDataSharingEnabled_codec.Read(input);
+            if (campaignDataSharingEnabled_ == null || value != false) {
+              CampaignDataSharingEnabled = value;
+            }
+            break;
+          }
+          case 34: {
+            bool? value = _single_costDataSharingEnabled_codec.Read(input);
+            if (costDataSharingEnabled_ == null || value != false) {
+              CostDataSharingEnabled = value;
+            }
+            break;
+          }
+          case 42: {
+            AdvertiserDisplayName = input.ReadString();
+            break;
+          }
+          case 50: {
+            bool? value = _single_adsPersonalizationEnabled_codec.Read(input);
+            if (adsPersonalizationEnabled_ == null || value != false) {
+              AdsPersonalizationEnabled = value;
+            }
+            break;
+          }
+          case 58: {
+            bool? value = _single_siteStatsSharingEnabled_codec.Read(input);
+            if (siteStatsSharingEnabled_ == null || value != false) {
+              SiteStatsSharingEnabled = value;
+            }
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AdvertiserId = input.ReadString();
+            break;
+          }
+          case 26: {
+            bool? value = _single_campaignDataSharingEnabled_codec.Read(ref input);
+            if (campaignDataSharingEnabled_ == null || value != false) {
+              CampaignDataSharingEnabled = value;
+            }
+            break;
+          }
+          case 34: {
+            bool? value = _single_costDataSharingEnabled_codec.Read(ref input);
+            if (costDataSharingEnabled_ == null || value != false) {
+              CostDataSharingEnabled = value;
+            }
+            break;
+          }
+          case 42: {
+            AdvertiserDisplayName = input.ReadString();
+            break;
+          }
+          case 50: {
+            bool? value = _single_adsPersonalizationEnabled_codec.Read(ref input);
+            if (adsPersonalizationEnabled_ == null || value != false) {
+              AdsPersonalizationEnabled = value;
+            }
+            break;
+          }
+          case 58: {
+            bool? value = _single_siteStatsSharingEnabled_codec.Read(ref input);
+            if (siteStatsSharingEnabled_ == null || value != false) {
+              SiteStatsSharingEnabled = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Status information for a link proposal.
   /// </summary>
   public sealed partial class LinkProposalStatusDetails : pb::IMessage<LinkProposalStatusDetails>
@@ -8817,7 +9504,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9092,7 +9779,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9177,7 +9864,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DeletableFieldNumber = 4;
     private bool deletable_;
     /// <summary>
-    /// Output only. If set, this event can currently be deleted via DeleteConversionEvent.
+    /// Output only. If set, this event can currently be deleted via
+    /// DeleteConversionEvent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9192,11 +9880,11 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int CustomFieldNumber = 5;
     private bool custom_;
     /// <summary>
-    /// Output only. If set to true, this conversion event refers to a custom event.  If set to
-    /// false, this conversion event refers to a default event in GA. Default
-    /// events typically have special meaning in GA. Default events are usually
-    /// created for you by the GA system, but in some cases can be created by
-    /// property admins. Custom events count towards the maximum number of
+    /// Output only. If set to true, this conversion event refers to a custom
+    /// event.  If set to false, this conversion event refers to a default event in
+    /// GA. Default events typically have special meaning in GA. Default events are
+    /// usually created for you by the GA system, but in some cases can be created
+    /// by property admins. Custom events count towards the maximum number of
     /// custom conversion events that may be created per property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9463,7 +10151,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9740,7 +10428,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9818,8 +10506,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Required. Display name for this custom dimension as shown in the Analytics UI.
-    /// Max length of 82 characters, alphanumeric plus space and underscore
+    /// Required. Display name for this custom dimension as shown in the Analytics
+    /// UI. Max length of 82 characters, alphanumeric plus space and underscore
     /// starting with a letter. Legacy system-generated display names may contain
     /// square brackets, but updates to this field will never permit square
     /// brackets.
@@ -9837,7 +10525,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DescriptionFieldNumber = 4;
     private string description_ = "";
     /// <summary>
-    /// Optional. Description for this custom dimension. Max length of 150 characters.
+    /// Optional. Description for this custom dimension. Max length of 150
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9867,8 +10556,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DisallowAdsPersonalizationFieldNumber = 6;
     private bool disallowAdsPersonalization_;
     /// <summary>
-    /// Optional. If set to true, sets this dimension as NPA and excludes it from ads
-    /// personalization.
+    /// Optional. If set to true, sets this dimension as NPA and excludes it from
+    /// ads personalization.
     ///
     /// This is currently only supported by user-scoped custom dimensions.
     /// </summary>
@@ -10177,7 +10866,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10321,9 +11010,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) x);
     private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType> restrictedMetricType_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType>();
     /// <summary>
-    /// Optional. Types of restricted data that this metric may contain. Required for metrics
-    /// with CURRENCY measurement unit. Must be empty for metrics with a
-    /// non-CURRENCY measurement unit.
+    /// Optional. Types of restricted data that this metric may contain. Required
+    /// for metrics with CURRENCY measurement unit. Must be empty for metrics with
+    /// a non-CURRENCY measurement unit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10711,7 +11400,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11030,7 +11719,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11084,8 +11773,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int AcquisitionConversionEventLookbackWindowFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow acquisitionConversionEventLookbackWindow_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified;
     /// <summary>
-    /// Required. The lookback window configuration for acquisition conversion events.
-    /// The default window size is 30 days.
+    /// Required. The lookback window configuration for acquisition conversion
+    /// events. The default window size is 30 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11100,8 +11789,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int OtherConversionEventLookbackWindowFieldNumber = 3;
     private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow otherConversionEventLookbackWindow_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified;
     /// <summary>
-    /// Required. The lookback window for all other, non-acquisition conversion events.
-    /// The default window size is 90 days.
+    /// Required. The lookback window for all other, non-acquisition conversion
+    /// events. The default window size is 90 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11116,8 +11805,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ReportingAttributionModelFieldNumber = 4;
     private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel reportingAttributionModel_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified;
     /// <summary>
-    /// Required. The reporting attribution model used to calculate conversion credit in this
-    /// property's reports.
+    /// Required. The reporting attribution model used to calculate conversion
+    /// credit in this property's reports.
     ///
     /// Changing the attribution model will apply to both historical and future
     /// data. These changes will be reflected in reports with conversion and
@@ -11435,6 +12124,479 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// A link between a GA4 Property and BigQuery project.
+  /// </summary>
+  public sealed partial class BigQueryLink : pb::IMessage<BigQueryLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BigQueryLink> _parser = new pb::MessageParser<BigQueryLink>(() => new BigQueryLink());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BigQueryLink> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigQueryLink() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigQueryLink(BigQueryLink other) : this() {
+      name_ = other.name_;
+      project_ = other.project_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      dailyExportEnabled_ = other.dailyExportEnabled_;
+      streamingExportEnabled_ = other.streamingExportEnabled_;
+      includeAdvertisingId_ = other.includeAdvertisingId_;
+      exportStreams_ = other.exportStreams_.Clone();
+      excludedEvents_ = other.excludedEvents_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigQueryLink Clone() {
+      return new BigQueryLink(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of this BigQuery link.
+    /// Format: 'properties/{property_id}/bigQueryLinks/{bigquery_link_id}'
+    /// Format: 'properties/1234/bigQueryLinks/abc567'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 2;
+    private string project_ = "";
+    /// <summary>
+    /// Immutable. The linked Google Cloud project. When creating a BigQueryLink,
+    /// you may provide this resource name using either a project number or project
+    /// ID. Once this resource has been created, the returned project will always
+    /// have a project that contains a project number.
+    /// Format: 'projects/{project number}'
+    /// Example: 'projects/1234'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Project {
+      get { return project_; }
+      set {
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Time when the link was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "daily_export_enabled" field.</summary>
+    public const int DailyExportEnabledFieldNumber = 4;
+    private bool dailyExportEnabled_;
+    /// <summary>
+    /// If set true, enables daily data export to the linked Google Cloud project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DailyExportEnabled {
+      get { return dailyExportEnabled_; }
+      set {
+        dailyExportEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "streaming_export_enabled" field.</summary>
+    public const int StreamingExportEnabledFieldNumber = 5;
+    private bool streamingExportEnabled_;
+    /// <summary>
+    /// If set true, enables streaming export to the linked Google Cloud project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StreamingExportEnabled {
+      get { return streamingExportEnabled_; }
+      set {
+        streamingExportEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_advertising_id" field.</summary>
+    public const int IncludeAdvertisingIdFieldNumber = 6;
+    private bool includeAdvertisingId_;
+    /// <summary>
+    /// If set true, exported data will include advertising identifiers for mobile
+    /// app streams.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeAdvertisingId {
+      get { return includeAdvertisingId_; }
+      set {
+        includeAdvertisingId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "export_streams" field.</summary>
+    public const int ExportStreamsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_exportStreams_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> exportStreams_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of streams under the parent property for which data will be
+    /// exported.
+    /// Format: properties/{property_id}/dataStreams/{stream_id}
+    /// Example: ['properties/1000/dataStreams/2000']
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExportStreams {
+      get { return exportStreams_; }
+    }
+
+    /// <summary>Field number for the "excluded_events" field.</summary>
+    public const int ExcludedEventsFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_excludedEvents_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> excludedEvents_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The list of event names that will be excluded from exports.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedEvents {
+      get { return excludedEvents_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BigQueryLink);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BigQueryLink other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Project != other.Project) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (DailyExportEnabled != other.DailyExportEnabled) return false;
+      if (StreamingExportEnabled != other.StreamingExportEnabled) return false;
+      if (IncludeAdvertisingId != other.IncludeAdvertisingId) return false;
+      if(!exportStreams_.Equals(other.exportStreams_)) return false;
+      if(!excludedEvents_.Equals(other.excludedEvents_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (DailyExportEnabled != false) hash ^= DailyExportEnabled.GetHashCode();
+      if (StreamingExportEnabled != false) hash ^= StreamingExportEnabled.GetHashCode();
+      if (IncludeAdvertisingId != false) hash ^= IncludeAdvertisingId.GetHashCode();
+      hash ^= exportStreams_.GetHashCode();
+      hash ^= excludedEvents_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (DailyExportEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(DailyExportEnabled);
+      }
+      if (StreamingExportEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(StreamingExportEnabled);
+      }
+      if (IncludeAdvertisingId != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IncludeAdvertisingId);
+      }
+      exportStreams_.WriteTo(output, _repeated_exportStreams_codec);
+      excludedEvents_.WriteTo(output, _repeated_excludedEvents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (DailyExportEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(DailyExportEnabled);
+      }
+      if (StreamingExportEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(StreamingExportEnabled);
+      }
+      if (IncludeAdvertisingId != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IncludeAdvertisingId);
+      }
+      exportStreams_.WriteTo(ref output, _repeated_exportStreams_codec);
+      excludedEvents_.WriteTo(ref output, _repeated_excludedEvents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (DailyExportEnabled != false) {
+        size += 1 + 1;
+      }
+      if (StreamingExportEnabled != false) {
+        size += 1 + 1;
+      }
+      if (IncludeAdvertisingId != false) {
+        size += 1 + 1;
+      }
+      size += exportStreams_.CalculateSize(_repeated_exportStreams_codec);
+      size += excludedEvents_.CalculateSize(_repeated_excludedEvents_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BigQueryLink other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Project.Length != 0) {
+        Project = other.Project;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.DailyExportEnabled != false) {
+        DailyExportEnabled = other.DailyExportEnabled;
+      }
+      if (other.StreamingExportEnabled != false) {
+        StreamingExportEnabled = other.StreamingExportEnabled;
+      }
+      if (other.IncludeAdvertisingId != false) {
+        IncludeAdvertisingId = other.IncludeAdvertisingId;
+      }
+      exportStreams_.Add(other.exportStreams_);
+      excludedEvents_.Add(other.excludedEvents_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            DailyExportEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            StreamingExportEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            IncludeAdvertisingId = input.ReadBool();
+            break;
+          }
+          case 58: {
+            exportStreams_.AddEntriesFrom(input, _repeated_exportStreams_codec);
+            break;
+          }
+          case 66: {
+            excludedEvents_.AddEntriesFrom(input, _repeated_excludedEvents_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            DailyExportEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            StreamingExportEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            IncludeAdvertisingId = input.ReadBool();
+            break;
+          }
+          case 58: {
+            exportStreams_.AddEntriesFrom(ref input, _repeated_exportStreams_codec);
+            break;
+          }
+          case 66: {
+            excludedEvents_.AddEntriesFrom(ref input, _repeated_excludedEvents_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

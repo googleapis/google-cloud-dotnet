@@ -85,19 +85,21 @@ namespace Google.Analytics.Admin.V1Alpha {
             "Cg1tZXRyaWNfdmFsdWVzGAIgAygLMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
             "bi52MWFscGhhLkFjY2Vzc01ldHJpY1ZhbHVlIiUKFEFjY2Vzc0RpbWVuc2lv",
             "blZhbHVlEg0KBXZhbHVlGAEgASgJIiIKEUFjY2Vzc01ldHJpY1ZhbHVlEg0K",
-            "BXZhbHVlGAEgASgJItMCCgtBY2Nlc3NRdW90YRJJCg50b2tlbnNfcGVyX2Rh",
+            "BXZhbHVlGAEgASgJIqsDCgtBY2Nlc3NRdW90YRJJCg50b2tlbnNfcGVyX2Rh",
             "eRgBIAEoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nl",
             "c3NRdW90YVN0YXR1cxJKCg90b2tlbnNfcGVyX2hvdXIYAiABKAsyMS5nb29n",
             "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjZXNzUXVvdGFTdGF0dXMS",
             "TgoTY29uY3VycmVudF9yZXF1ZXN0cxgDIAEoCzIxLmdvb2dsZS5hbmFseXRp",
             "Y3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1cxJdCiJzZXJ2ZXJf",
             "ZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgLMjEuZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc1F1b3RhU3RhdHVzIjgKEUFj",
-            "Y2Vzc1F1b3RhU3RhdHVzEhAKCGNvbnN1bWVkGAEgASgFEhEKCXJlbWFpbmlu",
-            "ZxgCIAEoBUJ+CiJjb20uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "QhFBY2Nlc3NSZXBvcnRQcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9hZG1pbi92MWFscGhhO2FkbWlu",
-            "YgZwcm90bzM="));
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkFjY2Vzc1F1b3RhU3RhdHVzElYKG3Rv",
+            "a2Vuc19wZXJfcHJvamVjdF9wZXJfaG91chgFIAEoCzIxLmdvb2dsZS5hbmFs",
+            "eXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1cyI4ChFBY2Nl",
+            "c3NRdW90YVN0YXR1cxIQCghjb25zdW1lZBgBIAEoBRIRCglyZW1haW5pbmcY",
+            "AiABKAVCfgoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIR",
+            "QWNjZXNzUmVwb3J0UHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTthZG1pbmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,7 +121,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessRow), global::Google.Analytics.Admin.V1Alpha.AccessRow.Parser, new[]{ "DimensionValues", "MetricValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessDimensionValue), global::Google.Analytics.Admin.V1Alpha.AccessDimensionValue.Parser, new[]{ "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessMetricValue), global::Google.Analytics.Admin.V1Alpha.AccessMetricValue.Parser, new[]{ "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessQuota), global::Google.Analytics.Admin.V1Alpha.AccessQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessQuota), global::Google.Analytics.Admin.V1Alpha.AccessQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "TokensPerProjectPerHour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus), global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null)
           }));
     }
@@ -5006,6 +5008,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       tokensPerHour_ = other.tokensPerHour_ != null ? other.tokensPerHour_.Clone() : null;
       concurrentRequests_ = other.concurrentRequests_ != null ? other.concurrentRequests_.Clone() : null;
       serverErrorsPerProjectPerHour_ = other.serverErrorsPerProjectPerHour_ != null ? other.serverErrorsPerProjectPerHour_.Clone() : null;
+      tokensPerProjectPerHour_ = other.tokensPerProjectPerHour_ != null ? other.tokensPerProjectPerHour_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5036,8 +5039,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     private global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus tokensPerHour_;
     /// <summary>
     /// Properties can use 50,000 tokens per hour. An API request consumes a single
-    /// number of tokens, and that number is deducted from both the hourly and
-    /// daily quotas.
+    /// number of tokens, and that number is deducted from all of the hourly,
+    /// daily, and per project hourly quotas.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5079,6 +5082,24 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "tokens_per_project_per_hour" field.</summary>
+    public const int TokensPerProjectPerHourFieldNumber = 5;
+    private global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus tokensPerProjectPerHour_;
+    /// <summary>
+    /// Properties can use up to 25% of their tokens per project per hour. This
+    /// amounts to Analytics 360 Properties can use 12,500 tokens per project per
+    /// hour. An API request consumes a single number of tokens, and that number is
+    /// deducted from all of the hourly, daily, and per project hourly quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus TokensPerProjectPerHour {
+      get { return tokensPerProjectPerHour_; }
+      set {
+        tokensPerProjectPerHour_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5098,6 +5119,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (!object.Equals(TokensPerHour, other.TokensPerHour)) return false;
       if (!object.Equals(ConcurrentRequests, other.ConcurrentRequests)) return false;
       if (!object.Equals(ServerErrorsPerProjectPerHour, other.ServerErrorsPerProjectPerHour)) return false;
+      if (!object.Equals(TokensPerProjectPerHour, other.TokensPerProjectPerHour)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5109,6 +5131,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (tokensPerHour_ != null) hash ^= TokensPerHour.GetHashCode();
       if (concurrentRequests_ != null) hash ^= ConcurrentRequests.GetHashCode();
       if (serverErrorsPerProjectPerHour_ != null) hash ^= ServerErrorsPerProjectPerHour.GetHashCode();
+      if (tokensPerProjectPerHour_ != null) hash ^= TokensPerProjectPerHour.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5143,6 +5166,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(34);
         output.WriteMessage(ServerErrorsPerProjectPerHour);
       }
+      if (tokensPerProjectPerHour_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TokensPerProjectPerHour);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5169,6 +5196,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(34);
         output.WriteMessage(ServerErrorsPerProjectPerHour);
       }
+      if (tokensPerProjectPerHour_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TokensPerProjectPerHour);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5190,6 +5221,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (serverErrorsPerProjectPerHour_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServerErrorsPerProjectPerHour);
+      }
+      if (tokensPerProjectPerHour_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokensPerProjectPerHour);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5226,6 +5260,12 @@ namespace Google.Analytics.Admin.V1Alpha {
           ServerErrorsPerProjectPerHour = new global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus();
         }
         ServerErrorsPerProjectPerHour.MergeFrom(other.ServerErrorsPerProjectPerHour);
+      }
+      if (other.tokensPerProjectPerHour_ != null) {
+        if (tokensPerProjectPerHour_ == null) {
+          TokensPerProjectPerHour = new global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus();
+        }
+        TokensPerProjectPerHour.MergeFrom(other.TokensPerProjectPerHour);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5270,6 +5310,13 @@ namespace Google.Analytics.Admin.V1Alpha {
             input.ReadMessage(ServerErrorsPerProjectPerHour);
             break;
           }
+          case 42: {
+            if (tokensPerProjectPerHour_ == null) {
+              TokensPerProjectPerHour = new global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus();
+            }
+            input.ReadMessage(TokensPerProjectPerHour);
+            break;
+          }
         }
       }
     #endif
@@ -5311,6 +5358,13 @@ namespace Google.Analytics.Admin.V1Alpha {
               ServerErrorsPerProjectPerHour = new global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus();
             }
             input.ReadMessage(ServerErrorsPerProjectPerHour);
+            break;
+          }
+          case 42: {
+            if (tokensPerProjectPerHour_ == null) {
+              TokensPerProjectPerHour = new global::Google.Analytics.Admin.V1Alpha.AccessQuotaStatus();
+            }
+            input.ReadMessage(TokensPerProjectPerHour);
             break;
           }
         }

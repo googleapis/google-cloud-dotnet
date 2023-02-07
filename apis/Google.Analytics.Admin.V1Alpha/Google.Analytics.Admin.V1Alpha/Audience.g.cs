@@ -27,7 +27,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             "Ci1nb29nbGUvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGEvYXVkaWVuY2UucHJv",
             "dG8SHmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIsUMCh9BdWRp",
+            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIvwLCh9BdWRp",
             "ZW5jZURpbWVuc2lvbk9yTWV0cmljRmlsdGVyEmUKDXN0cmluZ19maWx0ZXIY",
             "AiABKAsyTC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVu",
             "Y2VEaW1lbnNpb25Pck1ldHJpY0ZpbHRlci5TdHJpbmdGaWx0ZXJIABJmCg5p",
@@ -40,100 +40,98 @@ namespace Google.Analytics.Admin.V1Alpha {
             "RGltZW5zaW9uT3JNZXRyaWNGaWx0ZXIuQmV0d2VlbkZpbHRlckgAEhoKCmZp",
             "ZWxkX25hbWUYASABKAlCBuBBAuBBBRIhChRhdF9hbnlfcG9pbnRfaW5fdGlt",
             "ZRgGIAEoCEID4EEBEiAKE2luX2FueV9uX2RheV9wZXJpb2QYByABKAVCA+BB",
-            "ARq4AgoMU3RyaW5nRmlsdGVyEm8KCm1hdGNoX3R5cGUYASABKA4yVi5nb29n",
+            "ARqjAgoMU3RyaW5nRmlsdGVyEm8KCm1hdGNoX3R5cGUYASABKA4yVi5nb29n",
             "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VEaW1lbnNpb25P",
             "ck1ldHJpY0ZpbHRlci5TdHJpbmdGaWx0ZXIuTWF0Y2hUeXBlQgPgQQISEgoF",
             "dmFsdWUYAiABKAlCA+BBAhIbCg5jYXNlX3NlbnNpdGl2ZRgDIAEoCEID4EEB",
-            "IoUBCglNYXRjaFR5cGUSGgoWTUFUQ0hfVFlQRV9VTlNQRUNJRklFRBAAEgkK",
-            "BUVYQUNUEAESDwoLQkVHSU5TX1dJVEgQAhINCglFTkRTX1dJVEgQAxIMCghD",
-            "T05UQUlOUxAEEg8KC0ZVTExfUkVHRVhQEAUSEgoOUEFSVElBTF9SRUdFWFAQ",
-            "BhpACgxJbkxpc3RGaWx0ZXISEwoGdmFsdWVzGAEgAygJQgPgQQISGwoOY2Fz",
-            "ZV9zZW5zaXRpdmUYAiABKAhCA+BBARpKCgxOdW1lcmljVmFsdWUSFQoLaW50",
-            "NjRfdmFsdWUYASABKANIABIWCgxkb3VibGVfdmFsdWUYAiABKAFIAEILCglv",
-            "bmVfdmFsdWUa6gIKDU51bWVyaWNGaWx0ZXISbwoJb3BlcmF0aW9uGAEgASgO",
-            "MlcuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRGlt",
-            "ZW5zaW9uT3JNZXRyaWNGaWx0ZXIuTnVtZXJpY0ZpbHRlci5PcGVyYXRpb25C",
-            "A+BBAhJgCgV2YWx1ZRgCIAEoCzJMLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5BdWRpZW5jZURpbWVuc2lvbk9yTWV0cmljRmlsdGVyLk51bWVy",
-            "aWNWYWx1ZUID4EECIoUBCglPcGVyYXRpb24SGQoVT1BFUkFUSU9OX1VOU1BF",
-            "Q0lGSUVEEAASCQoFRVFVQUwQARINCglMRVNTX1RIQU4QAhIWChJMRVNTX1RI",
-            "QU5fT1JfRVFVQUwQAxIQCgxHUkVBVEVSX1RIQU4QBBIZChVHUkVBVEVSX1RI",
-            "QU5fT1JfRVFVQUwQBRrbAQoNQmV0d2VlbkZpbHRlchJlCgpmcm9tX3ZhbHVl",
-            "GAEgASgLMkwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGll",
-            "bmNlRGltZW5zaW9uT3JNZXRyaWNGaWx0ZXIuTnVtZXJpY1ZhbHVlQgPgQQIS",
-            "YwoIdG9fdmFsdWUYAiABKAsyTC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
-            "YWxwaGEuQXVkaWVuY2VEaW1lbnNpb25Pck1ldHJpY0ZpbHRlci5OdW1lcmlj",
-            "VmFsdWVCA+BBAkIMCgpvbmVfZmlsdGVyIpsBChNBdWRpZW5jZUV2ZW50Rmls",
-            "dGVyEhoKCmV2ZW50X25hbWUYASABKAlCBuBBAuBBBRJoCiFldmVudF9wYXJh",
-            "bWV0ZXJfZmlsdGVyX2V4cHJlc3Npb24YAiABKAsyOC5nb29nbGUuYW5hbHl0",
-            "aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VGaWx0ZXJFeHByZXNzaW9uQgPg",
-            "QQEizwMKGEF1ZGllbmNlRmlsdGVyRXhwcmVzc2lvbhJRCglhbmRfZ3JvdXAY",
-            "ASABKAsyPC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVu",
-            "Y2VGaWx0ZXJFeHByZXNzaW9uTGlzdEgAElAKCG9yX2dyb3VwGAIgASgLMjwu",
-            "Z29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRmlsdGVy",
-            "RXhwcmVzc2lvbkxpc3RIABJSCg5ub3RfZXhwcmVzc2lvbhgDIAEoCzI4Lmdv",
-            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZUZpbHRlckV4",
-            "cHJlc3Npb25IABJlChpkaW1lbnNpb25fb3JfbWV0cmljX2ZpbHRlchgEIAEo",
-            "CzI/Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZURp",
-            "bWVuc2lvbk9yTWV0cmljRmlsdGVySAASSwoMZXZlbnRfZmlsdGVyGAUgASgL",
-            "MjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRXZl",
-            "bnRGaWx0ZXJIAEIGCgRleHByInQKHEF1ZGllbmNlRmlsdGVyRXhwcmVzc2lv",
-            "bkxpc3QSVAoSZmlsdGVyX2V4cHJlc3Npb25zGAEgAygLMjguZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRmlsdGVyRXhwcmVzc2lv",
-            "biK/AQoUQXVkaWVuY2VTaW1wbGVGaWx0ZXISSgoFc2NvcGUYASABKA4yMy5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VGaWx0ZXJT",
-            "Y29wZUIG4EEC4EEFElsKEWZpbHRlcl9leHByZXNzaW9uGAIgASgLMjguZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRmlsdGVyRXhw",
-            "cmVzc2lvbkIG4EEC4EEFIrIEChZBdWRpZW5jZVNlcXVlbmNlRmlsdGVyEkoK",
-            "BXNjb3BlGAEgASgOMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkF1ZGllbmNlRmlsdGVyU2NvcGVCBuBBAuBBBRJBChlzZXF1ZW5jZV9tYXhp",
-            "bXVtX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "QgPgQQESaAoOc2VxdWVuY2Vfc3RlcHMYAyADKAsySy5nb29nbGUuYW5hbHl0",
-            "aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VTZXF1ZW5jZUZpbHRlci5BdWRp",
-            "ZW5jZVNlcXVlbmNlU3RlcEID4EECGp4CChRBdWRpZW5jZVNlcXVlbmNlU3Rl",
-            "cBJKCgVzY29wZRgBIAEoDjIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
-            "bHBoYS5BdWRpZW5jZUZpbHRlclNjb3BlQgbgQQLgQQUSIAoTaW1tZWRpYXRl",
-            "bHlfZm9sbG93cxgCIAEoCEID4EEBEjsKE2NvbnN0cmFpbnRfZHVyYXRpb24Y",
-            "AyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARJbChFmaWx0",
-            "ZXJfZXhwcmVzc2lvbhgEIAEoCzI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5BdWRpZW5jZUZpbHRlckV4cHJlc3Npb25CBuBBAuBBBSL7AgoU",
-            "QXVkaWVuY2VGaWx0ZXJDbGF1c2USTQoNc2ltcGxlX2ZpbHRlchgCIAEoCzI0",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZVNpbXBs",
-            "ZUZpbHRlckgAElEKD3NlcXVlbmNlX2ZpbHRlchgDIAEoCzI2Lmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZVNlcXVlbmNlRmlsdGVy",
-            "SAASYQoLY2xhdXNlX3R5cGUYASABKA4yRy5nb29nbGUuYW5hbHl0aWNzLmFk",
-            "bWluLnYxYWxwaGEuQXVkaWVuY2VGaWx0ZXJDbGF1c2UuQXVkaWVuY2VDbGF1",
-            "c2VUeXBlQgPgQQIiVAoSQXVkaWVuY2VDbGF1c2VUeXBlEiQKIEFVRElFTkNF",
-            "X0NMQVVTRV9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHSU5DTFVERRABEgsKB0VY",
-            "Q0xVREUQAkIICgZmaWx0ZXIi8wEKFEF1ZGllbmNlRXZlbnRUcmlnZ2VyEhcK",
-            "CmV2ZW50X25hbWUYASABKAlCA+BBAhJdCg1sb2dfY29uZGl0aW9uGAIgASgO",
-            "MkEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRXZl",
-            "bnRUcmlnZ2VyLkxvZ0NvbmRpdGlvbkID4EECImMKDExvZ0NvbmRpdGlvbhId",
-            "ChlMT0dfQ09ORElUSU9OX1VOU1BFQ0lGSUVEEAASEwoPQVVESUVOQ0VfSk9J",
-            "TkVEEAESHwobQVVESUVOQ0VfTUVNQkVSU0hJUF9SRU5FV0VEEAIingUKCEF1",
-            "ZGllbmNlEhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiAB",
-            "KAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EECEigKGG1lbWJlcnNo",
-            "aXBfZHVyYXRpb25fZGF5cxgEIAEoBUIG4EEC4EEFEigKG2Fkc19wZXJzb25h",
-            "bGl6YXRpb25fZW5hYmxlZBgFIAEoCEID4EEDElAKDWV2ZW50X3RyaWdnZXIY",
-            "BiABKAsyNC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVu",
-            "Y2VFdmVudFRyaWdnZXJCA+BBARJsChdleGNsdXNpb25fZHVyYXRpb25fbW9k",
-            "ZRgHIAEoDjJGLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRp",
-            "ZW5jZS5BdWRpZW5jZUV4Y2x1c2lvbkR1cmF0aW9uTW9kZUID4EEFElcKDmZp",
-            "bHRlcl9jbGF1c2VzGAggAygLMjQuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhLkF1ZGllbmNlRmlsdGVyQ2xhdXNlQgngQQXgQQLgQQYigwEKHUF1",
-            "ZGllbmNlRXhjbHVzaW9uRHVyYXRpb25Nb2RlEjAKLEFVRElFTkNFX0VYQ0xV",
-            "U0lPTl9EVVJBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASFwoTRVhDTFVERV9U",
-            "RU1QT1JBUklMWRABEhcKE0VYQ0xVREVfUEVSTUFORU5UTFkQAjpX6kFUCiZh",
-            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BdWRpZW5jZRIqcHJvcGVy",
-            "dGllcy97cHJvcGVydHl9L2F1ZGllbmNlcy97YXVkaWVuY2V9KscBChNBdWRp",
-            "ZW5jZUZpbHRlclNjb3BlEiUKIUFVRElFTkNFX0ZJTFRFUl9TQ09QRV9VTlNQ",
-            "RUNJRklFRBAAEisKJ0FVRElFTkNFX0ZJTFRFUl9TQ09QRV9XSVRISU5fU0FN",
-            "RV9FVkVOVBABEi0KKUFVRElFTkNFX0ZJTFRFUl9TQ09QRV9XSVRISU5fU0FN",
-            "RV9TRVNTSU9OEAISLQopQVVESUVOQ0VfRklMVEVSX1NDT1BFX0FDUk9TU19B",
-            "TExfU0VTU0lPTlMQA0J6CiJjb20uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhQg1BdWRpZW5jZVByb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGE7YWRt",
-            "aW5iBnByb3RvMw=="));
+            "InEKCU1hdGNoVHlwZRIaChZNQVRDSF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoF",
+            "RVhBQ1QQARIPCgtCRUdJTlNfV0lUSBACEg0KCUVORFNfV0lUSBADEgwKCENP",
+            "TlRBSU5TEAQSDwoLRlVMTF9SRUdFWFAQBRpACgxJbkxpc3RGaWx0ZXISEwoG",
+            "dmFsdWVzGAEgAygJQgPgQQISGwoOY2FzZV9zZW5zaXRpdmUYAiABKAhCA+BB",
+            "ARpKCgxOdW1lcmljVmFsdWUSFQoLaW50NjRfdmFsdWUYASABKANIABIWCgxk",
+            "b3VibGVfdmFsdWUYAiABKAFIAEILCglvbmVfdmFsdWUatgIKDU51bWVyaWNG",
+            "aWx0ZXISbwoJb3BlcmF0aW9uGAEgASgOMlcuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkF1ZGllbmNlRGltZW5zaW9uT3JNZXRyaWNGaWx0ZXIu",
+            "TnVtZXJpY0ZpbHRlci5PcGVyYXRpb25CA+BBAhJgCgV2YWx1ZRgCIAEoCzJM",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZURpbWVu",
+            "c2lvbk9yTWV0cmljRmlsdGVyLk51bWVyaWNWYWx1ZUID4EECIlIKCU9wZXJh",
+            "dGlvbhIZChVPUEVSQVRJT05fVU5TUEVDSUZJRUQQABIJCgVFUVVBTBABEg0K",
+            "CUxFU1NfVEhBThACEhAKDEdSRUFURVJfVEhBThAEGtsBCg1CZXR3ZWVuRmls",
+            "dGVyEmUKCmZyb21fdmFsdWUYASABKAsyTC5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuQXVkaWVuY2VEaW1lbnNpb25Pck1ldHJpY0ZpbHRlci5O",
+            "dW1lcmljVmFsdWVCA+BBAhJjCgh0b192YWx1ZRgCIAEoCzJMLmdvb2dsZS5h",
+            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZURpbWVuc2lvbk9yTWV0",
+            "cmljRmlsdGVyLk51bWVyaWNWYWx1ZUID4EECQgwKCm9uZV9maWx0ZXIimwEK",
+            "E0F1ZGllbmNlRXZlbnRGaWx0ZXISGgoKZXZlbnRfbmFtZRgBIAEoCUIG4EEC",
+            "4EEFEmgKIWV2ZW50X3BhcmFtZXRlcl9maWx0ZXJfZXhwcmVzc2lvbhgCIAEo",
+            "CzI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZUZp",
+            "bHRlckV4cHJlc3Npb25CA+BBASLPAwoYQXVkaWVuY2VGaWx0ZXJFeHByZXNz",
+            "aW9uElEKCWFuZF9ncm91cBgBIAEoCzI8Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5BdWRpZW5jZUZpbHRlckV4cHJlc3Npb25MaXN0SAASUAoI",
+            "b3JfZ3JvdXAYAiABKAsyPC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
+            "aGEuQXVkaWVuY2VGaWx0ZXJFeHByZXNzaW9uTGlzdEgAElIKDm5vdF9leHBy",
+            "ZXNzaW9uGAMgASgLMjguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkF1ZGllbmNlRmlsdGVyRXhwcmVzc2lvbkgAEmUKGmRpbWVuc2lvbl9vcl9t",
+            "ZXRyaWNfZmlsdGVyGAQgASgLMj8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkF1ZGllbmNlRGltZW5zaW9uT3JNZXRyaWNGaWx0ZXJIABJLCgxl",
+            "dmVudF9maWx0ZXIYBSABKAsyMy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
+            "YWxwaGEuQXVkaWVuY2VFdmVudEZpbHRlckgAQgYKBGV4cHIidAocQXVkaWVu",
+            "Y2VGaWx0ZXJFeHByZXNzaW9uTGlzdBJUChJmaWx0ZXJfZXhwcmVzc2lvbnMY",
+            "ASADKAsyOC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVu",
+            "Y2VGaWx0ZXJFeHByZXNzaW9uIr8BChRBdWRpZW5jZVNpbXBsZUZpbHRlchJK",
+            "CgVzY29wZRgBIAEoDjIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5BdWRpZW5jZUZpbHRlclNjb3BlQgbgQQLgQQUSWwoRZmlsdGVyX2V4cHJl",
+            "c3Npb24YAiABKAsyOC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "QXVkaWVuY2VGaWx0ZXJFeHByZXNzaW9uQgbgQQLgQQUisgQKFkF1ZGllbmNl",
+            "U2VxdWVuY2VGaWx0ZXISSgoFc2NvcGUYASABKA4yMy5nb29nbGUuYW5hbHl0",
+            "aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VGaWx0ZXJTY29wZUIG4EEC4EEF",
+            "EkEKGXNlcXVlbmNlX21heGltdW1fZHVyYXRpb24YAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25CA+BBARJoCg5zZXF1ZW5jZV9zdGVwcxgDIAMo",
+            "CzJLLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZVNl",
+            "cXVlbmNlRmlsdGVyLkF1ZGllbmNlU2VxdWVuY2VTdGVwQgPgQQIangIKFEF1",
+            "ZGllbmNlU2VxdWVuY2VTdGVwEkoKBXNjb3BlGAEgASgOMjMuZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRmlsdGVyU2NvcGVCBuBB",
+            "AuBBBRIgChNpbW1lZGlhdGVseV9mb2xsb3dzGAIgASgIQgPgQQESOwoTY29u",
+            "c3RyYWludF9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbkID4EEBElsKEWZpbHRlcl9leHByZXNzaW9uGAQgASgLMjguZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGllbmNlRmlsdGVyRXhwcmVz",
+            "c2lvbkIG4EEC4EEFIvsCChRBdWRpZW5jZUZpbHRlckNsYXVzZRJNCg1zaW1w",
+            "bGVfZmlsdGVyGAIgASgLMjQuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFs",
+            "cGhhLkF1ZGllbmNlU2ltcGxlRmlsdGVySAASUQoPc2VxdWVuY2VfZmlsdGVy",
+            "GAMgASgLMjYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF1ZGll",
+            "bmNlU2VxdWVuY2VGaWx0ZXJIABJhCgtjbGF1c2VfdHlwZRgBIAEoDjJHLmdv",
+            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdWRpZW5jZUZpbHRlckNs",
+            "YXVzZS5BdWRpZW5jZUNsYXVzZVR5cGVCA+BBAiJUChJBdWRpZW5jZUNsYXVz",
+            "ZVR5cGUSJAogQVVESUVOQ0VfQ0xBVVNFX1RZUEVfVU5TUEVDSUZJRUQQABIL",
+            "CgdJTkNMVURFEAESCwoHRVhDTFVERRACQggKBmZpbHRlciLzAQoUQXVkaWVu",
+            "Y2VFdmVudFRyaWdnZXISFwoKZXZlbnRfbmFtZRgBIAEoCUID4EECEl0KDWxv",
+            "Z19jb25kaXRpb24YAiABKA4yQS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
+            "YWxwaGEuQXVkaWVuY2VFdmVudFRyaWdnZXIuTG9nQ29uZGl0aW9uQgPgQQIi",
+            "YwoMTG9nQ29uZGl0aW9uEh0KGUxPR19DT05ESVRJT05fVU5TUEVDSUZJRUQQ",
+            "ABITCg9BVURJRU5DRV9KT0lORUQQARIfChtBVURJRU5DRV9NRU1CRVJTSElQ",
+            "X1JFTkVXRUQQAiKeBQoIQXVkaWVuY2USEQoEbmFtZRgBIAEoCUID4EEDEhkK",
+            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAMgASgJ",
+            "QgPgQQISKAoYbWVtYmVyc2hpcF9kdXJhdGlvbl9kYXlzGAQgASgFQgbgQQLg",
+            "QQUSKAobYWRzX3BlcnNvbmFsaXphdGlvbl9lbmFibGVkGAUgASgIQgPgQQMS",
+            "UAoNZXZlbnRfdHJpZ2dlchgGIAEoCzI0Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5BdWRpZW5jZUV2ZW50VHJpZ2dlckID4EEBEmwKF2V4Y2x1",
+            "c2lvbl9kdXJhdGlvbl9tb2RlGAcgASgOMkYuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkF1ZGllbmNlLkF1ZGllbmNlRXhjbHVzaW9uRHVyYXRp",
+            "b25Nb2RlQgPgQQUSVwoOZmlsdGVyX2NsYXVzZXMYCCADKAsyNC5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VGaWx0ZXJDbGF1c2VC",
+            "CeBBBeBBAuBBBiKDAQodQXVkaWVuY2VFeGNsdXNpb25EdXJhdGlvbk1vZGUS",
+            "MAosQVVESUVOQ0VfRVhDTFVTSU9OX0RVUkFUSU9OX01PREVfVU5TUEVDSUZJ",
+            "RUQQABIXChNFWENMVURFX1RFTVBPUkFSSUxZEAESFwoTRVhDTFVERV9QRVJN",
+            "QU5FTlRMWRACOlfqQVQKJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
+            "L0F1ZGllbmNlEipwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vYXVkaWVuY2VzL3th",
+            "dWRpZW5jZX0qxwEKE0F1ZGllbmNlRmlsdGVyU2NvcGUSJQohQVVESUVOQ0Vf",
+            "RklMVEVSX1NDT1BFX1VOU1BFQ0lGSUVEEAASKwonQVVESUVOQ0VfRklMVEVS",
+            "X1NDT1BFX1dJVEhJTl9TQU1FX0VWRU5UEAESLQopQVVESUVOQ0VfRklMVEVS",
+            "X1NDT1BFX1dJVEhJTl9TQU1FX1NFU1NJT04QAhItCilBVURJRU5DRV9GSUxU",
+            "RVJfU0NPUEVfQUNST1NTX0FMTF9TRVNTSU9OUxADQnoKImNvbS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCDUF1ZGllbmNlUHJvdG9QAVpDZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3Mv",
+            "YWRtaW4vdjFhbHBoYTthZG1pbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.AudienceFilterScope), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -329,8 +327,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int AtAnyPointInTimeFieldNumber = 6;
     private bool atAnyPointInTime_;
     /// <summary>
-    /// Optional. Indicates whether this filter needs dynamic evaluation or not. If set to
-    /// true, users join the Audience if they ever met the condition (static
+    /// Optional. Indicates whether this filter needs dynamic evaluation or not. If
+    /// set to true, users join the Audience if they ever met the condition (static
     /// evaluation). If unset or set to false, user evaluation for an Audience is
     /// dynamic; users are added to an Audience when they meet the conditions and
     /// then removed when they no longer meet them.
@@ -350,9 +348,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int InAnyNDayPeriodFieldNumber = 7;
     private int inAnyNDayPeriod_;
     /// <summary>
-    /// Optional. If set, specifies the time window for which to evaluate data in number of
-    /// days. If not set, then audience data is evaluated against lifetime data
-    /// (i.e., infinite time window).
+    /// Optional. If set, specifies the time window for which to evaluate data in
+    /// number of days. If not set, then audience data is evaluated against
+    /// lifetime data (i.e., infinite time window).
     ///
     /// For example, if set to 1 day, only the current day's data is evaluated. The
     /// reference point is the current day when at_any_point_in_time is unset or
@@ -1037,10 +1035,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             /// Full regular expression matches with the string value.
             /// </summary>
             [pbr::OriginalName("FULL_REGEXP")] FullRegexp = 5,
-            /// <summary>
-            /// Partial regular expression matches with the string value.
-            /// </summary>
-            [pbr::OriginalName("PARTIAL_REGEXP")] PartialRegexp = 6,
           }
 
         }
@@ -1102,7 +1096,8 @@ namespace Google.Analytics.Admin.V1Alpha {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Required. The list of possible string values to match against. Must be non-empty.
+        /// Required. The list of possible string values to match against. Must be
+        /// non-empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1805,17 +1800,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             /// </summary>
             [pbr::OriginalName("LESS_THAN")] LessThan = 2,
             /// <summary>
-            /// Less than or equal.
-            /// </summary>
-            [pbr::OriginalName("LESS_THAN_OR_EQUAL")] LessThanOrEqual = 3,
-            /// <summary>
             /// Greater than.
             /// </summary>
             [pbr::OriginalName("GREATER_THAN")] GreaterThan = 4,
-            /// <summary>
-            /// Greater than or equal.
-            /// </summary>
-            [pbr::OriginalName("GREATER_THAN_OR_EQUAL")] GreaterThanOrEqual = 5,
           }
 
         }
@@ -2151,8 +2138,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int EventParameterFilterExpressionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Alpha.AudienceFilterExpression eventParameterFilterExpression_;
     /// <summary>
-    /// Optional. If specified, this filter matches events that match both the single
-    /// event name and the parameter filter expressions. AudienceEventFilter
+    /// Optional. If specified, this filter matches events that match both the
+    /// single event name and the parameter filter expressions. AudienceEventFilter
     /// inside the parameter filter expression cannot be set (i.e., nested
     /// event filters are not supported). This should be a single and_group of
     /// dimension_or_metric_filter or not_expression; ANDs of ORs are not
@@ -3055,7 +3042,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int FilterExpressionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Alpha.AudienceFilterExpression filterExpression_;
     /// <summary>
-    /// Required. Immutable. A logical expression of Audience dimension, metric, or event filters.
+    /// Required. Immutable. A logical expression of Audience dimension, metric, or
+    /// event filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3318,8 +3306,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         = pb::FieldCodec.ForMessage(26, global::Google.Analytics.Admin.V1Alpha.AudienceSequenceFilter.Types.AudienceSequenceStep.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.AudienceSequenceFilter.Types.AudienceSequenceStep> sequenceSteps_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.AudienceSequenceFilter.Types.AudienceSequenceStep>();
     /// <summary>
-    /// Required. An ordered sequence of steps. A user must complete each step in order to
-    /// join the sequence filter.
+    /// Required. An ordered sequence of steps. A user must complete each step in
+    /// order to join the sequence filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3580,8 +3568,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         public const int ImmediatelyFollowsFieldNumber = 2;
         private bool immediatelyFollows_;
         /// <summary>
-        /// Optional. If true, the event satisfying this step must be the very next event
-        /// after the event satisfying the last step. If unset or false, this
+        /// Optional. If true, the event satisfying this step must be the very next
+        /// event after the event satisfying the last step. If unset or false, this
         /// step indirectly follows the prior step; for example, there may be
         /// events between the prior step and this step. It is ignored for the
         /// first step.
@@ -3599,10 +3587,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         public const int ConstraintDurationFieldNumber = 3;
         private global::Google.Protobuf.WellKnownTypes.Duration constraintDuration_;
         /// <summary>
-        /// Optional. When set, this step must be satisfied within the constraint_duration of
-        /// the previous step (i.e., t[i] - t[i-1] &lt;= constraint_duration). If not
-        /// set, there is no duration requirement (the duration is effectively
-        /// unlimited). It is ignored for the first step.
+        /// Optional. When set, this step must be satisfied within the
+        /// constraint_duration of the previous step (i.e., t[i] - t[i-1] &lt;=
+        /// constraint_duration). If not set, there is no duration requirement (the
+        /// duration is effectively unlimited). It is ignored for the first step.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3617,8 +3605,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         public const int FilterExpressionFieldNumber = 4;
         private global::Google.Analytics.Admin.V1Alpha.AudienceFilterExpression filterExpression_;
         /// <summary>
-        /// Required. Immutable. A logical expression of Audience dimension, metric, or event filters in
-        /// each step.
+        /// Required. Immutable. A logical expression of Audience dimension, metric,
+        /// or event filters in each step.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4587,8 +4575,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int MembershipDurationDaysFieldNumber = 4;
     private int membershipDurationDays_;
     /// <summary>
-    /// Required. Immutable. The duration a user should stay in an Audience. It cannot be set to more
-    /// than 540 days.
+    /// Required. Immutable. The duration a user should stay in an Audience. It
+    /// cannot be set to more than 540 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4603,8 +4591,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int AdsPersonalizationEnabledFieldNumber = 5;
     private bool adsPersonalizationEnabled_;
     /// <summary>
-    /// Output only. It is automatically set by GA to false if this is an NPA Audience and is
-    /// excluded from ads personalization.
+    /// Output only. It is automatically set by GA to false if this is an NPA
+    /// Audience and is excluded from ads personalization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4619,8 +4607,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int EventTriggerFieldNumber = 6;
     private global::Google.Analytics.Admin.V1Alpha.AudienceEventTrigger eventTrigger_;
     /// <summary>
-    /// Optional. Specifies an event to log when a user joins the Audience. If not set, no
-    /// event is logged when a user joins the Audience.
+    /// Optional. Specifies an event to log when a user joins the Audience. If not
+    /// set, no event is logged when a user joins the Audience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4635,9 +4623,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ExclusionDurationModeFieldNumber = 7;
     private global::Google.Analytics.Admin.V1Alpha.Audience.Types.AudienceExclusionDurationMode exclusionDurationMode_ = global::Google.Analytics.Admin.V1Alpha.Audience.Types.AudienceExclusionDurationMode.Unspecified;
     /// <summary>
-    /// Immutable. Specifies how long an exclusion lasts for users that meet the exclusion
-    /// filter. It is applied to all EXCLUDE filter clauses and is ignored when
-    /// there is no EXCLUDE filter clause in the Audience.
+    /// Immutable. Specifies how long an exclusion lasts for users that meet the
+    /// exclusion filter. It is applied to all EXCLUDE filter clauses and is
+    /// ignored when there is no EXCLUDE filter clause in the Audience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4654,8 +4642,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         = pb::FieldCodec.ForMessage(66, global::Google.Analytics.Admin.V1Alpha.AudienceFilterClause.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.AudienceFilterClause> filterClauses_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.AudienceFilterClause>();
     /// <summary>
-    /// Required. Immutable. null Filter clauses that define the Audience. All clauses will be AND’ed
-    /// together.
+    /// Required. Immutable. Unordered list. Filter clauses that define the
+    /// Audience. All clauses will be AND’ed together.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

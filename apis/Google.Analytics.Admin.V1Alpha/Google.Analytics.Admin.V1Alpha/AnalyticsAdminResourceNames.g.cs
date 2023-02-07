@@ -780,6 +780,54 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class GetSearchAds360LinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SearchAds360LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::SearchAds360LinkName SearchAds360LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SearchAds360LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSearchAds360LinksRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateSearchAds360LinkRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSearchAds360LinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SearchAds360LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::SearchAds360LinkName SearchAds360LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SearchAds360LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateCustomDimensionRequest
     {
         /// <summary>
@@ -993,6 +1041,30 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::AttributionSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBigQueryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::BigQueryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::BigQueryLinkName BigQueryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::BigQueryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBigQueryLinksRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

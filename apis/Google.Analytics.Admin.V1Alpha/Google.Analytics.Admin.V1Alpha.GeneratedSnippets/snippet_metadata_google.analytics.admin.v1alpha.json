@@ -14303,6 +14303,1063 @@
       ]
     },
     {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_sync",
+      "title": "GetSearchAds360LinkRequestObject",
+      "description": "Snippet for GetSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_async",
+      "title": "GetSearchAds360LinkRequestObjectAsync",
+      "description": "Snippet for GetSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_sync_flattened",
+      "title": "GetSearchAds360Link",
+      "description": "Snippet for GetSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_async_flattened",
+      "title": "GetSearchAds360LinkAsync",
+      "description": "Snippet for GetSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_sync_flattened_resourceNames",
+      "title": "GetSearchAds360LinkResourceNames",
+      "description": "Snippet for GetSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSearchAds360Link_async_flattened_resourceNames",
+      "title": "GetSearchAds360LinkResourceNamesAsync",
+      "description": "Snippet for GetSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetSearchAds360LinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_sync",
+      "title": "ListSearchAds360LinksRequestObject",
+      "description": "Snippet for ListSearchAds360Links",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360Links",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360Links",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_async",
+      "title": "ListSearchAds360LinksRequestObjectAsync",
+      "description": "Snippet for ListSearchAds360LinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360LinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360LinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_sync_flattened",
+      "title": "ListSearchAds360Links",
+      "description": "Snippet for ListSearchAds360Links",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360Links",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360Links",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_async_flattened",
+      "title": "ListSearchAds360LinksAsync",
+      "description": "Snippet for ListSearchAds360LinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360LinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360LinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_sync_flattened_resourceNames",
+      "title": "ListSearchAds360LinksResourceNames",
+      "description": "Snippet for ListSearchAds360Links",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360Links",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360Links",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSearchAds360Links_async_flattened_resourceNames",
+      "title": "ListSearchAds360LinksResourceNamesAsync",
+      "description": "Snippet for ListSearchAds360LinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListSearchAds360LinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSearchAds360LinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSearchAds360LinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse, Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSearchAds360Links",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSearchAds360Links",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_sync",
+      "title": "CreateSearchAds360LinkRequestObject",
+      "description": "Snippet for CreateSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_async",
+      "title": "CreateSearchAds360LinkRequestObjectAsync",
+      "description": "Snippet for CreateSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_sync_flattened",
+      "title": "CreateSearchAds360Link",
+      "description": "Snippet for CreateSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_async_flattened",
+      "title": "CreateSearchAds360LinkAsync",
+      "description": "Snippet for CreateSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_sync_flattened_resourceNames",
+      "title": "CreateSearchAds360LinkResourceNames",
+      "description": "Snippet for CreateSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSearchAds360Link_async_flattened_resourceNames",
+      "title": "CreateSearchAds360LinkResourceNamesAsync",
+      "description": "Snippet for CreateSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSearchAds360LinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_sync",
+      "title": "DeleteSearchAds360LinkRequestObject",
+      "description": "Snippet for DeleteSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_async",
+      "title": "DeleteSearchAds360LinkRequestObjectAsync",
+      "description": "Snippet for DeleteSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_sync_flattened",
+      "title": "DeleteSearchAds360Link",
+      "description": "Snippet for DeleteSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_async_flattened",
+      "title": "DeleteSearchAds360LinkAsync",
+      "description": "Snippet for DeleteSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_sync_flattened_resourceNames",
+      "title": "DeleteSearchAds360LinkResourceNames",
+      "description": "Snippet for DeleteSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSearchAds360Link_async_flattened_resourceNames",
+      "title": "DeleteSearchAds360LinkResourceNamesAsync",
+      "description": "Snippet for DeleteSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSearchAds360LinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSearchAds360Link_sync",
+      "title": "UpdateSearchAds360LinkRequestObject",
+      "description": "Snippet for UpdateSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.UpdateSearchAds360LinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSearchAds360Link_async",
+      "title": "UpdateSearchAds360LinkRequestObjectAsync",
+      "description": "Snippet for UpdateSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSearchAds360LinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSearchAds360Link_sync_flattened",
+      "title": "UpdateSearchAds360Link",
+      "description": "Snippet for UpdateSearchAds360Link",
+      "file": "AnalyticsAdminServiceClient.UpdateSearchAds360LinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSearchAds360Link",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSearchAds360Link",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SearchAds360Link",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSearchAds360Link_async_flattened",
+      "title": "UpdateSearchAds360LinkAsync",
+      "description": "Snippet for UpdateSearchAds360LinkAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSearchAds360LinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSearchAds360LinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSearchAds360LinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SearchAds360Link>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSearchAds360Link",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSearchAds360Link",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAttributionSettings_sync",
       "title": "GetAttributionSettingsRequestObject",
       "description": "Snippet for GetAttributionSettings",
@@ -14754,6 +15811,614 @@
         {
           "start": 35,
           "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_sync",
+      "title": "SetAutomatedGa4ConfigurationOptOutRequestObject",
+      "description": "Snippet for SetAutomatedGa4ConfigurationOptOut",
+      "file": "AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAutomatedGa4ConfigurationOptOut",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut",
+        "resultType": "Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "SetAutomatedGa4ConfigurationOptOut",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.SetAutomatedGa4ConfigurationOptOut",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_async",
+      "title": "SetAutomatedGa4ConfigurationOptOutRequestObjectAsync",
+      "description": "Snippet for SetAutomatedGa4ConfigurationOptOutAsync",
+      "file": "AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAutomatedGa4ConfigurationOptOutAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "SetAutomatedGa4ConfigurationOptOut",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.SetAutomatedGa4ConfigurationOptOut",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_sync",
+      "title": "FetchAutomatedGa4ConfigurationOptOutRequestObject",
+      "description": "Snippet for FetchAutomatedGa4ConfigurationOptOut",
+      "file": "AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAutomatedGa4ConfigurationOptOut",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut",
+        "resultType": "Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FetchAutomatedGa4ConfigurationOptOut",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchAutomatedGa4ConfigurationOptOut",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_async",
+      "title": "FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync",
+      "description": "Snippet for FetchAutomatedGa4ConfigurationOptOutAsync",
+      "file": "AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAutomatedGa4ConfigurationOptOutAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FetchAutomatedGa4ConfigurationOptOut",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchAutomatedGa4ConfigurationOptOut",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_sync",
+      "title": "GetBigQueryLinkRequestObject",
+      "description": "Snippet for GetBigQueryLink",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLink",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BigQueryLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_async",
+      "title": "GetBigQueryLinkRequestObjectAsync",
+      "description": "Snippet for GetBigQueryLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_sync_flattened",
+      "title": "GetBigQueryLink",
+      "description": "Snippet for GetBigQueryLink",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLink",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BigQueryLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_async_flattened",
+      "title": "GetBigQueryLinkAsync",
+      "description": "Snippet for GetBigQueryLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_sync_flattened_resourceNames",
+      "title": "GetBigQueryLinkResourceNames",
+      "description": "Snippet for GetBigQueryLink",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLink",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BigQueryLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetBigQueryLink_async_flattened_resourceNames",
+      "title": "GetBigQueryLinkResourceNamesAsync",
+      "description": "Snippet for GetBigQueryLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetBigQueryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetBigQueryLinkAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetBigQueryLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_sync",
+      "title": "ListBigQueryLinksRequestObject",
+      "description": "Snippet for ListBigQueryLinks",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_async",
+      "title": "ListBigQueryLinksRequestObjectAsync",
+      "description": "Snippet for ListBigQueryLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_sync_flattened",
+      "title": "ListBigQueryLinks",
+      "description": "Snippet for ListBigQueryLinks",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_async_flattened",
+      "title": "ListBigQueryLinksAsync",
+      "description": "Snippet for ListBigQueryLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_sync_flattened_resourceNames",
+      "title": "ListBigQueryLinksResourceNames",
+      "description": "Snippet for ListBigQueryLinks",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinks",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListBigQueryLinks_async_flattened_resourceNames",
+      "title": "ListBigQueryLinksResourceNamesAsync",
+      "description": "Snippet for ListBigQueryLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListBigQueryLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBigQueryLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListBigQueryLinksAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse, Google.Analytics.Admin.V1Alpha.BigQueryLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListBigQueryLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListBigQueryLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
