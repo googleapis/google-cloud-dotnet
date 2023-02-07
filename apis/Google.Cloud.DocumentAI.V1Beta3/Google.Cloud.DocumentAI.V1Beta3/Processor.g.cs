@@ -28,49 +28,52 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "cm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMxofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxo1Z29vZ2xlL2Nsb3VkL2RvY3VtZW50YWkvdjFiZXRhMy9kb2N1",
-            "bWVudF9zY2hlbWEucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8i5AYKEFByb2Nlc3NvclZlcnNpb24SDAoEbmFtZRgBIAEoCRIUCgxk",
-            "aXNwbGF5X25hbWUYAiABKAkSSAoPZG9jdW1lbnRfc2NoZW1hGAwgASgLMi8u",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudFNjaGVt",
-            "YRJGCgVzdGF0ZRgGIAEoDjI3Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuUHJvY2Vzc29yVmVyc2lvbi5TdGF0ZRIvCgtjcmVhdGVfdGltZRgH",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMa21zX2tleV9u",
-            "YW1lGAkgASgJEhwKFGttc19rZXlfdmVyc2lvbl9uYW1lGAogASgJEhYKDmdv",
-            "b2dsZV9tYW5hZ2VkGAsgASgIElsKEGRlcHJlY2F0aW9uX2luZm8YDSABKAsy",
-            "QS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLlByb2Nlc3NvclZl",
-            "cnNpb24uRGVwcmVjYXRpb25JbmZvGp8BCg9EZXByZWNhdGlvbkluZm8SNAoQ",
-            "ZGVwcmVjYXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASVgodcmVwbGFjZW1lbnRfcHJvY2Vzc29yX3ZlcnNpb24YAiABKAlC",
-            "L/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JWZXJz",
-            "aW9uIoQBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCERFUExP",
-            "WUVEEAESDQoJREVQTE9ZSU5HEAISDgoKVU5ERVBMT1lFRBADEg8KC1VOREVQ",
-            "TE9ZSU5HEAQSDAoIQ1JFQVRJTkcQBRIMCghERUxFVElORxAGEgoKBkZBSUxF",
-            "RBAHOpYB6kGSAQoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNz",
-            "b3JWZXJzaW9uEmRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9wcm9jZXNzb3JWZXJzaW9u",
-            "cy97cHJvY2Vzc29yX3ZlcnNpb259IrIECglQcm9jZXNzb3ISFAoEbmFtZRgB",
-            "IAEoCUIG4EEF4EEDEgwKBHR5cGUYAiABKAkSFAoMZGlzcGxheV9uYW1lGAMg",
-            "ASgJEkQKBXN0YXRlGAQgASgOMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
-            "djFiZXRhMy5Qcm9jZXNzb3IuU3RhdGVCA+BBAxJSChlkZWZhdWx0X3Byb2Nl",
-            "c3Nvcl92ZXJzaW9uGAkgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBp",
-            "cy5jb20vUHJvY2Vzc29yVmVyc2lvbhIgChBwcm9jZXNzX2VuZHBvaW50GAYg",
-            "ASgJQgbgQQPgQQUSLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEhQKDGttc19rZXlfbmFtZRgIIAEoCSJ+CgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNB",
-            "QkxFRBACEgwKCEVOQUJMSU5HEAMSDQoJRElTQUJMSU5HEAQSDAoIQ1JFQVRJ",
-            "TkcQBRIKCgZGQUlMRUQQBhIMCghERUxFVElORxAHOmjqQWUKI2RvY3VtZW50",
-            "YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yEj5wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29y",
-            "fULqAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCE0Rv",
-            "Y3VtZW50QWlQcm9jZXNzb3JQAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1",
-            "bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoC",
-            "H0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xv",
-            "dWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1l",
-            "bnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "bWVudF9zY2hlbWEucHJvdG8aMGdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3Yx",
+            "YmV0YTMvZXZhbHVhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
+            "dGFtcC5wcm90byK1BwoQUHJvY2Vzc29yVmVyc2lvbhIMCgRuYW1lGAEgASgJ",
+            "EhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJICg9kb2N1bWVudF9zY2hlbWEYDCAB",
+            "KAsyLy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
+            "U2NoZW1hEkYKBXN0YXRlGAYgASgOMjcuZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5Qcm9jZXNzb3JWZXJzaW9uLlN0YXRlEi8KC2NyZWF0ZV90",
+            "aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJPChFsYXRl",
+            "c3RfZXZhbHVhdGlvbhgIIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRXZhbHVhdGlvblJlZmVyZW5jZRIUCgxrbXNfa2V5X25hbWUY",
+            "CSABKAkSHAoUa21zX2tleV92ZXJzaW9uX25hbWUYCiABKAkSFgoOZ29vZ2xl",
+            "X21hbmFnZWQYCyABKAgSWwoQZGVwcmVjYXRpb25faW5mbxgNIAEoCzJBLmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUHJvY2Vzc29yVmVyc2lv",
+            "bi5EZXByZWNhdGlvbkluZm8anwEKD0RlcHJlY2F0aW9uSW5mbxI0ChBkZXBy",
+            "ZWNhdGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBJWCh1yZXBsYWNlbWVudF9wcm9jZXNzb3JfdmVyc2lvbhgCIAEoCUIv+kEs",
+            "Cipkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclZlcnNpb24i",
+            "hAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIREVQTE9ZRUQQ",
+            "ARINCglERVBMT1lJTkcQAhIOCgpVTkRFUExPWUVEEAMSDwoLVU5ERVBMT1lJ",
+            "TkcQBBIMCghDUkVBVElORxAFEgwKCERFTEVUSU5HEAYSCgoGRkFJTEVEEAc6",
+            "lgHqQZIBCipkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclZl",
+            "cnNpb24SZHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L3Byb2Nlc3NvclZlcnNpb25zL3tw",
+            "cm9jZXNzb3JfdmVyc2lvbn0isgQKCVByb2Nlc3NvchIUCgRuYW1lGAEgASgJ",
+            "QgbgQQXgQQMSDAoEdHlwZRgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyABKAkS",
+            "RAoFc3RhdGUYBCABKA4yMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLlByb2Nlc3Nvci5TdGF0ZUID4EEDElIKGWRlZmF1bHRfcHJvY2Vzc29y",
+            "X3ZlcnNpb24YCSABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNv",
+            "bS9Qcm9jZXNzb3JWZXJzaW9uEiAKEHByb2Nlc3NfZW5kcG9pbnQYBiABKAlC",
+            "BuBBA+BBBRIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASFAoMa21zX2tleV9uYW1lGAggASgJIn4KBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVE",
+            "EAISDAoIRU5BQkxJTkcQAxINCglESVNBQkxJTkcQBBIMCghDUkVBVElORxAF",
+            "EgoKBkZBSUxFRBAGEgwKCERFTEVUSU5HEAc6aOpBZQojZG9jdW1lbnRhaS5n",
+            "b29nbGVhcGlzLmNvbS9Qcm9jZXNzb3ISPnByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9QuoB",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0ITRG9jdW1l",
+            "bnRBaVByb2Nlc3NvclABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50",
+            "YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29v",
+            "Z2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxE",
+            "b2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJ",
+            "OjpWMWJldGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Parser, new[]{ "Name", "DisplayName", "DocumentSchema", "State", "CreateTime", "KmsKeyName", "KmsKeyVersionName", "GoogleManaged", "DeprecationInfo" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo.Parser, new[]{ "DeprecationTime", "ReplacementProcessorVersion" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Parser, new[]{ "Name", "DisplayName", "DocumentSchema", "State", "CreateTime", "LatestEvaluation", "KmsKeyName", "KmsKeyVersionName", "GoogleManaged", "DeprecationInfo" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo), global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.DeprecationInfo.Parser, new[]{ "DeprecationTime", "ReplacementProcessorVersion" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Processor), global::Google.Cloud.DocumentAI.V1Beta3.Processor.Parser, new[]{ "Name", "Type", "DisplayName", "State", "DefaultProcessorVersion", "ProcessEndpoint", "CreateTime", "KmsKeyName" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Processor.Types.State) }, null, null)
           }));
     }
@@ -124,6 +127,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       documentSchema_ = other.documentSchema_ != null ? other.documentSchema_.Clone() : null;
       state_ = other.state_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      latestEvaluation_ = other.latestEvaluation_ != null ? other.latestEvaluation_.Clone() : null;
       kmsKeyName_ = other.kmsKeyName_;
       kmsKeyVersionName_ = other.kmsKeyVersionName_;
       googleManaged_ = other.googleManaged_;
@@ -214,6 +218,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "latest_evaluation" field.</summary>
+    public const int LatestEvaluationFieldNumber = 8;
+    private global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference latestEvaluation_;
+    /// <summary>
+    /// The most recently invoked evaluation for the processor version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference LatestEvaluation {
+      get { return latestEvaluation_; }
+      set {
+        latestEvaluation_ = value;
+      }
+    }
+
     /// <summary>Field number for the "kms_key_name" field.</summary>
     public const int KmsKeyNameFieldNumber = 9;
     private string kmsKeyName_ = "";
@@ -294,6 +313,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (!object.Equals(DocumentSchema, other.DocumentSchema)) return false;
       if (State != other.State) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(LatestEvaluation, other.LatestEvaluation)) return false;
       if (KmsKeyName != other.KmsKeyName) return false;
       if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
       if (GoogleManaged != other.GoogleManaged) return false;
@@ -310,6 +330,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (documentSchema_ != null) hash ^= DocumentSchema.GetHashCode();
       if (State != global::Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (latestEvaluation_ != null) hash ^= LatestEvaluation.GetHashCode();
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
       if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
       if (GoogleManaged != false) hash ^= GoogleManaged.GetHashCode();
@@ -347,6 +368,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (createTime_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(CreateTime);
+      }
+      if (latestEvaluation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LatestEvaluation);
       }
       if (KmsKeyName.Length != 0) {
         output.WriteRawTag(74);
@@ -394,6 +419,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(58);
         output.WriteMessage(CreateTime);
       }
+      if (latestEvaluation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LatestEvaluation);
+      }
       if (KmsKeyName.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(KmsKeyName);
@@ -439,6 +468,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
+      if (latestEvaluation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LatestEvaluation);
+      }
       if (KmsKeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
       }
@@ -483,6 +515,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.latestEvaluation_ != null) {
+        if (latestEvaluation_ == null) {
+          LatestEvaluation = new global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference();
+        }
+        LatestEvaluation.MergeFrom(other.LatestEvaluation);
       }
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
@@ -531,6 +569,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (latestEvaluation_ == null) {
+              LatestEvaluation = new global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference();
+            }
+            input.ReadMessage(LatestEvaluation);
             break;
           }
           case 74: {
@@ -591,6 +636,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (latestEvaluation_ == null) {
+              LatestEvaluation = new global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReference();
+            }
+            input.ReadMessage(LatestEvaluation);
             break;
           }
           case 74: {

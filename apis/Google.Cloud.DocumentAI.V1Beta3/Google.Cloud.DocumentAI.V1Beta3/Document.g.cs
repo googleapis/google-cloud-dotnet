@@ -32,7 +32,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhdn",
             "b29nbGUvdHlwZS9jb2xvci5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
             "bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aF2dvb2dsZS90eXBlL21v",
-            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byKv",
+            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byLP",
             "RAoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
             "ASgMQgPgQQFIABIRCgltaW1lX3R5cGUYAyABKAkSEQoEdGV4dBgEIAEoCUID",
             "4EEBEkgKC3RleHRfc3R5bGVzGAUgAygLMi8uZ29vZ2xlLmNsb3VkLmRvY3Vt",
@@ -207,32 +207,33 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "IAEoAkID4EEBIocBCgpMYXlvdXRUeXBlEhsKF0xBWU9VVF9UWVBFX1VOU1BF",
             "Q0lGSUVEEAASCQoFQkxPQ0sQARINCglQQVJBR1JBUEgQAhIICgRMSU5FEAMS",
             "CQoFVE9LRU4QBBISCg5WSVNVQUxfRUxFTUVOVBAFEgkKBVRBQkxFEAYSDgoK",
-            "Rk9STV9GSUVMRBAHGpYDCgpQcm92ZW5hbmNlEhAKCHJldmlzaW9uGAEgASgF",
-            "Eg4KAmlkGAIgASgFQgIYARJMCgdwYXJlbnRzGAMgAygLMjsuZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlLlBh",
-            "cmVudBJQCgR0eXBlGAQgASgOMkIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
-            "djFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNlLk9wZXJhdGlvblR5cGUaOQoG",
-            "UGFyZW50EhAKCHJldmlzaW9uGAEgASgFEg0KBWluZGV4GAMgASgFEg4KAmlk",
-            "GAIgASgFQgIYASKKAQoNT3BlcmF0aW9uVHlwZRIeChpPUEVSQVRJT05fVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBlJFTU9WRRACEgsKB1JFUExB",
-            "Q0UQAxISCg5FVkFMX1JFUVVFU1RFRBAEEhEKDUVWQUxfQVBQUk9WRUQQBRIQ",
-            "CgxFVkFMX1NLSVBQRUQQBhqqAgoIUmV2aXNpb24SDwoFYWdlbnQYBCABKAlI",
-            "ABITCglwcm9jZXNzb3IYBSABKAlIABIKCgJpZBgBIAEoCRISCgZwYXJlbnQY",
-            "AiADKAVCAhgBEhIKCnBhcmVudF9pZHMYByADKAkSLwoLY3JlYXRlX3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElQKDGh1bWFuX3Jl",
-            "dmlldxgGIAEoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuUmV2aXNpb24uSHVtYW5SZXZpZXcaMwoLSHVtYW5SZXZpZXcS",
-            "DQoFc3RhdGUYASABKAkSFQoNc3RhdGVfbWVzc2FnZRgCIAEoCUIICgZzb3Vy",
-            "Y2UauwEKClRleHRDaGFuZ2USSQoLdGV4dF9hbmNob3IYASABKAsyNC5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlRleHRBbmNo",
-            "b3ISFAoMY2hhbmdlZF90ZXh0GAIgASgJEkwKCnByb3ZlbmFuY2UYAyADKAsy",
-            "NC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBy",
-            "b3ZlbmFuY2VCAhgBQggKBnNvdXJjZULkAQojY29tLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpDY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBi",
-            "O2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0",
-            "YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xl",
-            "OjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "Rk9STV9GSUVMRBAHGrYDCgpQcm92ZW5hbmNlEhQKCHJldmlzaW9uGAEgASgF",
+            "QgIYARIOCgJpZBgCIAEoBUICGAESTAoHcGFyZW50cxgDIAMoCzI7Lmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5j",
+            "ZS5QYXJlbnQSUAoEdHlwZRgEIAEoDjJCLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZS5PcGVyYXRpb25UeXBl",
+            "GjkKBlBhcmVudBIQCghyZXZpc2lvbhgBIAEoBRINCgVpbmRleBgDIAEoBRIO",
+            "CgJpZBgCIAEoBUICGAEipgEKDU9wZXJhdGlvblR5cGUSHgoaT1BFUkFUSU9O",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZSRU1PVkUQAhIKCgZV",
+            "UERBVEUQBxIPCgdSRVBMQUNFEAMaAggBEhYKDkVWQUxfUkVRVUVTVEVEEAQa",
+            "AggBEhUKDUVWQUxfQVBQUk9WRUQQBRoCCAESFAoMRVZBTF9TS0lQUEVEEAYa",
+            "AggBGqoCCghSZXZpc2lvbhIPCgVhZ2VudBgEIAEoCUgAEhMKCXByb2Nlc3Nv",
+            "chgFIAEoCUgAEgoKAmlkGAEgASgJEhIKBnBhcmVudBgCIAMoBUICGAESEgoK",
+            "cGFyZW50X2lkcxgHIAMoCRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoMaHVtYW5fcmV2aWV3GAYgASgLMj4u",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5SZXZp",
+            "c2lvbi5IdW1hblJldmlldxozCgtIdW1hblJldmlldxINCgVzdGF0ZRgBIAEo",
+            "CRIVCg1zdGF0ZV9tZXNzYWdlGAIgASgJQggKBnNvdXJjZRq7AQoKVGV4dENo",
+            "YW5nZRJJCgt0ZXh0X2FuY2hvchgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchIUCgxjaGFuZ2Vk",
+            "X3RleHQYAiABKAkSTAoKcHJvdmVuYW5jZRgDIAMoCzI0Lmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAFC",
+            "CAoGc291cmNlQuQBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhM0INRG9jdW1lbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2Rv",
+            "Y3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBi",
+            "qgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxD",
+            "bG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1",
+            "bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -10931,6 +10932,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         /// <summary>
         /// The index of the revision that produced this element.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Revision {
@@ -11202,20 +11204,28 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             /// </summary>
             [pbr::OriginalName("REMOVE")] Remove = 2,
             /// <summary>
-            /// Replace an element identified by `parent`.
+            /// Updates any fields within the given provenance scope of the message. It
+            /// 'overwrites'  the fields rather than replacing them.  This is
+            /// especially relevant when we just want to update a field value of an
+            /// entity without also affecting all the child properties.
+            /// </summary>
+            [pbr::OriginalName("UPDATE")] Update = 7,
+            /// <summary>
+            /// Currently unused. Replace an element identified by `parent`.
             /// </summary>
             [pbr::OriginalName("REPLACE")] Replace = 3,
             /// <summary>
-            /// Request human review for the element identified by `parent`.
+            /// Deprecated. Request human review for the element identified by
+            /// `parent`.
             /// </summary>
             [pbr::OriginalName("EVAL_REQUESTED")] EvalRequested = 4,
             /// <summary>
-            /// Element is reviewed and approved at human review, confidence will be
-            /// set to 1.0.
+            /// Deprecated. Element is reviewed and approved at human review,
+            /// confidence will be set to 1.0.
             /// </summary>
             [pbr::OriginalName("EVAL_APPROVED")] EvalApproved = 5,
             /// <summary>
-            /// Element is skipped in the validation process.
+            /// Deprecated. Element is skipped in the validation process.
             /// </summary>
             [pbr::OriginalName("EVAL_SKIPPED")] EvalSkipped = 6,
           }
@@ -11599,7 +11609,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int IdFieldNumber = 1;
         private string id_ = "";
         /// <summary>
-        /// Id of the revision.  Unique within the context of the document.
+        /// Id of the revision, internally generated by doc proto storage.
+        /// Unique within the context of the document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11647,7 +11658,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int CreateTimeFieldNumber = 3;
         private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
         /// <summary>
-        /// The time that the revision was created.
+        /// The time that the revision was created, internally generated by
+        /// doc proto storage at the time of create.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

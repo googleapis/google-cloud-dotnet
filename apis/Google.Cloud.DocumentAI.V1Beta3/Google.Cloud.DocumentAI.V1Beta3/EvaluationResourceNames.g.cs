@@ -307,6 +307,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         public static bool operator !=(EvaluationName a, EvaluationName b) => !(a == b);
     }
 
+    public partial class EvaluationReference
+    {
+        /// <summary>
+        /// <see cref="EvaluationName"/>-typed view over the <see cref="Evaluation"/> resource name property.
+        /// </summary>
+        public EvaluationName EvaluationAsEvaluationName
+        {
+            get => string.IsNullOrEmpty(Evaluation) ? null : EvaluationName.Parse(Evaluation, allowUnparsed: true);
+            set => Evaluation = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Evaluation
     {
         /// <summary>
