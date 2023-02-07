@@ -260,3 +260,56 @@ catch (RpcException ex)
     }
 }
 ```
+
+## How can I diagnose proxy issues?
+
+Proxies can be configured in multiple places in .NET:
+
+- In code (e.g. with `HttpClientHandler.Proxy` or `WebRequest.DefaultWebProxy`)
+- In environment variables
+- In system settings
+
+Additionally, the client libraries make multiple requests:
+
+- Auth can sometimes require requests (e.g. to obtain OAuth access tokens, or
+  to access the Compute metadata server); these always use `HttpClient`
+- Individual RPCs may be made with different technologies:
+  - In gRPC based libraries, three different [transports](transports.md) may
+    be used: `HttpClient` via Grpc.Net.Client, `HttpClient` using the REST transport,
+    or the native library used by Grpc.Core
+  - In the handwritten layers over HTTP/1.1 + REST libraries, `HttpClient` is always used
+
+The combination of options here can make proxy issues hard to troubleshoot. The symptoms may include
+RPC failures such as `DeadlineExceeded`, or `Unavailable` with a detail message of
+"failed to connect to all addresses".
+
+If you are configuring a system-wide proxy, it can be useful to check that it's working with `HttpClient`
+by just making a simple request and logging the results. For example:
+
+```csharp
+var httpClient = new System.Net.Http.HttpClient();
+var text = await httpClient.GetStringAsync("https://www.google.com");
+Console.WriteLine(text.Substring(0, 80));
+```
+
+If that shows the start of an HTML page, then that's a good sign of the configuration working.
+
+For gRPC-based libraries (which covers the majority of cases), we recommend creating a
+console app using the Translation API, as shown in the [Getting Started guide](getting-started.md).
+(You'll need to enable the Translation API in order to make any successful calls, but if you get as
+far as a "permission denied" error, that's usually enough to prove you've successfully made a network
+connection.) You can adapt that example to match your real environment as closely as possible:
+
+- Use the same target framework
+- Use the same credentials, if possible, or at least the same form of credentials
+- If you're customizing the client, e.g. by specifying a different transport, then do the same
+  in the console app
+
+Follow the gRPC tracing steps [described earlier](#how-can-i-trace-grpc-issues) to obtain more detail
+on the requests being made.
+
+### Proxy settings for Grpc.Core
+
+One common way of configuring the proxy in Grpc.Core is to set one environment variable out of
+`grpc_proxy`, `http_proxy` and `https_proxy`. It is important to note that these environment
+values should include a URI scheme, e.g. `http://myproxyaddress:12345` instead of just `myproxyaddress:12345`.
