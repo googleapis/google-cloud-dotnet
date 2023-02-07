@@ -2814,6 +2814,238 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(DisplayVideo360AdvertiserLinkProposalName a, DisplayVideo360AdvertiserLinkProposalName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>SearchAds360Link</c> resource.</summary>
+    public sealed partial class SearchAds360LinkName : gax::IResourceName, sys::IEquatable<SearchAds360LinkName>
+    {
+        /// <summary>The possible contents of <see cref="SearchAds360LinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+            /// </summary>
+            PropertySearchAds360Link = 1,
+        }
+
+        private static gax::PathTemplate s_propertySearchAds360Link = new gax::PathTemplate("properties/{property}/searchAds360Links/{search_ads_360_link}");
+
+        /// <summary>Creates a <see cref="SearchAds360LinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SearchAds360LinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SearchAds360LinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SearchAds360LinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SearchAds360LinkName"/> with the pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="searchAds360LinkId">The <c>SearchAds360Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SearchAds360LinkName"/> constructed from the provided ids.</returns>
+        public static SearchAds360LinkName FromPropertySearchAds360Link(string propertyId, string searchAds360LinkId) =>
+            new SearchAds360LinkName(ResourceNameType.PropertySearchAds360Link, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), searchAds360LinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(searchAds360LinkId, nameof(searchAds360LinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SearchAds360LinkName"/> with pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="searchAds360LinkId">The <c>SearchAds360Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SearchAds360LinkName"/> with pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string searchAds360LinkId) =>
+            FormatPropertySearchAds360Link(propertyId, searchAds360LinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SearchAds360LinkName"/> with pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="searchAds360LinkId">The <c>SearchAds360Link</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SearchAds360LinkName"/> with pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>.
+        /// </returns>
+        public static string FormatPropertySearchAds360Link(string propertyId, string searchAds360LinkId) =>
+            s_propertySearchAds360Link.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(searchAds360LinkId, nameof(searchAds360LinkId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SearchAds360LinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>properties/{property}/searchAds360Links/{search_ads_360_link}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="searchAds360LinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SearchAds360LinkName"/> if successful.</returns>
+        public static SearchAds360LinkName Parse(string searchAds360LinkName) => Parse(searchAds360LinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SearchAds360LinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>properties/{property}/searchAds360Links/{search_ads_360_link}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="searchAds360LinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SearchAds360LinkName"/> if successful.</returns>
+        public static SearchAds360LinkName Parse(string searchAds360LinkName, bool allowUnparsed) =>
+            TryParse(searchAds360LinkName, allowUnparsed, out SearchAds360LinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SearchAds360LinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>properties/{property}/searchAds360Links/{search_ads_360_link}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="searchAds360LinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SearchAds360LinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string searchAds360LinkName, out SearchAds360LinkName result) =>
+            TryParse(searchAds360LinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SearchAds360LinkName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>properties/{property}/searchAds360Links/{search_ads_360_link}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="searchAds360LinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SearchAds360LinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string searchAds360LinkName, bool allowUnparsed, out SearchAds360LinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(searchAds360LinkName, nameof(searchAds360LinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertySearchAds360Link.TryParseName(searchAds360LinkName, out resourceName))
+            {
+                result = FromPropertySearchAds360Link(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(searchAds360LinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SearchAds360LinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string propertyId = null, string searchAds360LinkId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            PropertyId = propertyId;
+            SearchAds360LinkId = searchAds360LinkId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SearchAds360LinkName"/> class from the component parts of pattern
+        /// <c>properties/{property}/searchAds360Links/{search_ads_360_link}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="searchAds360LinkId">The <c>SearchAds360Link</c> ID. Must not be <c>null</c> or empty.</param>
+        public SearchAds360LinkName(string propertyId, string searchAds360LinkId) : this(ResourceNameType.PropertySearchAds360Link, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), searchAds360LinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(searchAds360LinkId, nameof(searchAds360LinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>
+        /// The <c>SearchAds360Link</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string SearchAds360LinkId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertySearchAds360Link: return s_propertySearchAds360Link.Expand(PropertyId, SearchAds360LinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SearchAds360LinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(SearchAds360LinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(SearchAds360LinkName a, SearchAds360LinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(SearchAds360LinkName a, SearchAds360LinkName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ConversionEvent</c> resource.</summary>
     public sealed partial class ConversionEventName : gax::IResourceName, sys::IEquatable<ConversionEventName>
     {
@@ -4128,6 +4360,228 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(AttributionSettingsName a, AttributionSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>BigQueryLink</c> resource.</summary>
+    public sealed partial class BigQueryLinkName : gax::IResourceName, sys::IEquatable<BigQueryLinkName>
+    {
+        /// <summary>The possible contents of <see cref="BigQueryLinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+            /// </summary>
+            PropertyBigqueryLink = 1,
+        }
+
+        private static gax::PathTemplate s_propertyBigqueryLink = new gax::PathTemplate("properties/{property}/bigQueryLinks/{bigquery_link}");
+
+        /// <summary>Creates a <see cref="BigQueryLinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="BigQueryLinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static BigQueryLinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new BigQueryLinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="BigQueryLinkName"/> with the pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bigqueryLinkId">The <c>BigqueryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="BigQueryLinkName"/> constructed from the provided ids.</returns>
+        public static BigQueryLinkName FromPropertyBigqueryLink(string propertyId, string bigqueryLinkId) =>
+            new BigQueryLinkName(ResourceNameType.PropertyBigqueryLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), bigqueryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(bigqueryLinkId, nameof(bigqueryLinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BigQueryLinkName"/> with pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bigqueryLinkId">The <c>BigqueryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BigQueryLinkName"/> with pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string bigqueryLinkId) =>
+            FormatPropertyBigqueryLink(propertyId, bigqueryLinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BigQueryLinkName"/> with pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bigqueryLinkId">The <c>BigqueryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BigQueryLinkName"/> with pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>.
+        /// </returns>
+        public static string FormatPropertyBigqueryLink(string propertyId, string bigqueryLinkId) =>
+            s_propertyBigqueryLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bigqueryLinkId, nameof(bigqueryLinkId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="BigQueryLinkName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/bigQueryLinks/{bigquery_link}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="bigQueryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="BigQueryLinkName"/> if successful.</returns>
+        public static BigQueryLinkName Parse(string bigQueryLinkName) => Parse(bigQueryLinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="BigQueryLinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/bigQueryLinks/{bigquery_link}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="bigQueryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="BigQueryLinkName"/> if successful.</returns>
+        public static BigQueryLinkName Parse(string bigQueryLinkName, bool allowUnparsed) =>
+            TryParse(bigQueryLinkName, allowUnparsed, out BigQueryLinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BigQueryLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/bigQueryLinks/{bigquery_link}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="bigQueryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BigQueryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string bigQueryLinkName, out BigQueryLinkName result) =>
+            TryParse(bigQueryLinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BigQueryLinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/bigQueryLinks/{bigquery_link}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="bigQueryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BigQueryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string bigQueryLinkName, bool allowUnparsed, out BigQueryLinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(bigQueryLinkName, nameof(bigQueryLinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyBigqueryLink.TryParseName(bigQueryLinkName, out resourceName))
+            {
+                result = FromPropertyBigqueryLink(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(bigQueryLinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private BigQueryLinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string bigqueryLinkId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BigqueryLinkId = bigqueryLinkId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="BigQueryLinkName"/> class from the component parts of pattern
+        /// <c>properties/{property}/bigQueryLinks/{bigquery_link}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bigqueryLinkId">The <c>BigqueryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        public BigQueryLinkName(string propertyId, string bigqueryLinkId) : this(ResourceNameType.PropertyBigqueryLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), bigqueryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(bigqueryLinkId, nameof(bigqueryLinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>BigqueryLink</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string BigqueryLinkId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyBigqueryLink: return s_propertyBigqueryLink.Expand(PropertyId, BigqueryLinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as BigQueryLinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(BigQueryLinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(BigQueryLinkName a, BigQueryLinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(BigQueryLinkName a, BigQueryLinkName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -4305,6 +4759,18 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class SearchAds360Link
+    {
+        /// <summary>
+        /// <see cref="gaav::SearchAds360LinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::SearchAds360LinkName SearchAds360LinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SearchAds360LinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ConversionEvent
     {
         /// <summary>
@@ -4373,6 +4839,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::AttributionSettingsName AttributionSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::AttributionSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BigQueryLink
+    {
+        /// <summary>
+        /// <see cref="gaav::BigQueryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::BigQueryLinkName BigQueryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::BigQueryLinkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -8207,6 +8207,613 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSearchAds360Link</summary>
+        public void GetSearchAds360LinkRequestObject()
+        {
+            // Snippet: GetSearchAds360Link(GetSearchAds360LinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetSearchAds360LinkRequest request = new GetSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]"),
+            };
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.GetSearchAds360Link(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSearchAds360LinkAsync</summary>
+        public async Task GetSearchAds360LinkRequestObjectAsync()
+        {
+            // Snippet: GetSearchAds360LinkAsync(GetSearchAds360LinkRequest, CallSettings)
+            // Additional: GetSearchAds360LinkAsync(GetSearchAds360LinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSearchAds360LinkRequest request = new GetSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]"),
+            };
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.GetSearchAds360LinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSearchAds360Link</summary>
+        public void GetSearchAds360Link()
+        {
+            // Snippet: GetSearchAds360Link(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/searchAds360Links/[SEARCH_ADS_360_LINK]";
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.GetSearchAds360Link(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSearchAds360LinkAsync</summary>
+        public async Task GetSearchAds360LinkAsync()
+        {
+            // Snippet: GetSearchAds360LinkAsync(string, CallSettings)
+            // Additional: GetSearchAds360LinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/searchAds360Links/[SEARCH_ADS_360_LINK]";
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.GetSearchAds360LinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSearchAds360Link</summary>
+        public void GetSearchAds360LinkResourceNames()
+        {
+            // Snippet: GetSearchAds360Link(SearchAds360LinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SearchAds360LinkName name = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]");
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.GetSearchAds360Link(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSearchAds360LinkAsync</summary>
+        public async Task GetSearchAds360LinkResourceNamesAsync()
+        {
+            // Snippet: GetSearchAds360LinkAsync(SearchAds360LinkName, CallSettings)
+            // Additional: GetSearchAds360LinkAsync(SearchAds360LinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchAds360LinkName name = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]");
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.GetSearchAds360LinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360Links</summary>
+        public void ListSearchAds360LinksRequestObject()
+        {
+            // Snippet: ListSearchAds360Links(ListSearchAds360LinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360Links(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchAds360Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSearchAds360LinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360LinksAsync</summary>
+        public async Task ListSearchAds360LinksRequestObjectAsync()
+        {
+            // Snippet: ListSearchAds360LinksAsync(ListSearchAds360LinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSearchAds360LinksRequest request = new ListSearchAds360LinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360LinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SearchAds360Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSearchAds360LinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360Links</summary>
+        public void ListSearchAds360Links()
+        {
+            // Snippet: ListSearchAds360Links(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360Links(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchAds360Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSearchAds360LinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360LinksAsync</summary>
+        public async Task ListSearchAds360LinksAsync()
+        {
+            // Snippet: ListSearchAds360LinksAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360LinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SearchAds360Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSearchAds360LinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360Links</summary>
+        public void ListSearchAds360LinksResourceNames()
+        {
+            // Snippet: ListSearchAds360Links(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360Links(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchAds360Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSearchAds360LinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSearchAds360LinksAsync</summary>
+        public async Task ListSearchAds360LinksResourceNamesAsync()
+        {
+            // Snippet: ListSearchAds360LinksAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> response = analyticsAdminServiceClient.ListSearchAds360LinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SearchAds360Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSearchAds360LinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchAds360Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchAds360Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchAds360Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360Link</summary>
+        public void CreateSearchAds360LinkRequestObject()
+        {
+            // Snippet: CreateSearchAds360Link(CreateSearchAds360LinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSearchAds360LinkRequest request = new CreateSearchAds360LinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                SearchAds360Link = new SearchAds360Link(),
+            };
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.CreateSearchAds360Link(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360LinkAsync</summary>
+        public async Task CreateSearchAds360LinkRequestObjectAsync()
+        {
+            // Snippet: CreateSearchAds360LinkAsync(CreateSearchAds360LinkRequest, CallSettings)
+            // Additional: CreateSearchAds360LinkAsync(CreateSearchAds360LinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSearchAds360LinkRequest request = new CreateSearchAds360LinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                SearchAds360Link = new SearchAds360Link(),
+            };
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.CreateSearchAds360LinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360Link</summary>
+        public void CreateSearchAds360Link()
+        {
+            // Snippet: CreateSearchAds360Link(string, SearchAds360Link, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.CreateSearchAds360Link(parent, searchAds360Link);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360LinkAsync</summary>
+        public async Task CreateSearchAds360LinkAsync()
+        {
+            // Snippet: CreateSearchAds360LinkAsync(string, SearchAds360Link, CallSettings)
+            // Additional: CreateSearchAds360LinkAsync(string, SearchAds360Link, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.CreateSearchAds360LinkAsync(parent, searchAds360Link);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360Link</summary>
+        public void CreateSearchAds360LinkResourceNames()
+        {
+            // Snippet: CreateSearchAds360Link(PropertyName, SearchAds360Link, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.CreateSearchAds360Link(parent, searchAds360Link);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSearchAds360LinkAsync</summary>
+        public async Task CreateSearchAds360LinkResourceNamesAsync()
+        {
+            // Snippet: CreateSearchAds360LinkAsync(PropertyName, SearchAds360Link, CallSettings)
+            // Additional: CreateSearchAds360LinkAsync(PropertyName, SearchAds360Link, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.CreateSearchAds360LinkAsync(parent, searchAds360Link);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360Link</summary>
+        public void DeleteSearchAds360LinkRequestObject()
+        {
+            // Snippet: DeleteSearchAds360Link(DeleteSearchAds360LinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSearchAds360LinkRequest request = new DeleteSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteSearchAds360Link(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360LinkAsync</summary>
+        public async Task DeleteSearchAds360LinkRequestObjectAsync()
+        {
+            // Snippet: DeleteSearchAds360LinkAsync(DeleteSearchAds360LinkRequest, CallSettings)
+            // Additional: DeleteSearchAds360LinkAsync(DeleteSearchAds360LinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSearchAds360LinkRequest request = new DeleteSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSearchAds360LinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360Link</summary>
+        public void DeleteSearchAds360Link()
+        {
+            // Snippet: DeleteSearchAds360Link(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/searchAds360Links/[SEARCH_ADS_360_LINK]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteSearchAds360Link(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360LinkAsync</summary>
+        public async Task DeleteSearchAds360LinkAsync()
+        {
+            // Snippet: DeleteSearchAds360LinkAsync(string, CallSettings)
+            // Additional: DeleteSearchAds360LinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/searchAds360Links/[SEARCH_ADS_360_LINK]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSearchAds360LinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360Link</summary>
+        public void DeleteSearchAds360LinkResourceNames()
+        {
+            // Snippet: DeleteSearchAds360Link(SearchAds360LinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SearchAds360LinkName name = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteSearchAds360Link(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSearchAds360LinkAsync</summary>
+        public async Task DeleteSearchAds360LinkResourceNamesAsync()
+        {
+            // Snippet: DeleteSearchAds360LinkAsync(SearchAds360LinkName, CallSettings)
+            // Additional: DeleteSearchAds360LinkAsync(SearchAds360LinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchAds360LinkName name = SearchAds360LinkName.FromPropertySearchAds360Link("[PROPERTY]", "[SEARCH_ADS_360_LINK]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSearchAds360LinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSearchAds360Link</summary>
+        public void UpdateSearchAds360LinkRequestObject()
+        {
+            // Snippet: UpdateSearchAds360Link(UpdateSearchAds360LinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSearchAds360LinkRequest request = new UpdateSearchAds360LinkRequest
+            {
+                SearchAds360Link = new SearchAds360Link(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.UpdateSearchAds360Link(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSearchAds360LinkAsync</summary>
+        public async Task UpdateSearchAds360LinkRequestObjectAsync()
+        {
+            // Snippet: UpdateSearchAds360LinkAsync(UpdateSearchAds360LinkRequest, CallSettings)
+            // Additional: UpdateSearchAds360LinkAsync(UpdateSearchAds360LinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSearchAds360LinkRequest request = new UpdateSearchAds360LinkRequest
+            {
+                SearchAds360Link = new SearchAds360Link(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.UpdateSearchAds360LinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSearchAds360Link</summary>
+        public void UpdateSearchAds360Link()
+        {
+            // Snippet: UpdateSearchAds360Link(SearchAds360Link, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SearchAds360Link response = analyticsAdminServiceClient.UpdateSearchAds360Link(searchAds360Link, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSearchAds360LinkAsync</summary>
+        public async Task UpdateSearchAds360LinkAsync()
+        {
+            // Snippet: UpdateSearchAds360LinkAsync(SearchAds360Link, FieldMask, CallSettings)
+            // Additional: UpdateSearchAds360LinkAsync(SearchAds360Link, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchAds360Link searchAds360Link = new SearchAds360Link();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SearchAds360Link response = await analyticsAdminServiceClient.UpdateSearchAds360LinkAsync(searchAds360Link, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetAttributionSettings</summary>
         public void GetAttributionSettingsRequestObject()
         {
@@ -8426,6 +9033,431 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             };
             // Make the request
             RunAccessReportResponse response = await analyticsAdminServiceClient.RunAccessReportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOut</summary>
+        public void SetAutomatedGa4ConfigurationOptOutRequestObject()
+        {
+            // Snippet: SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
+            {
+                Property = "",
+                OptOut = false,
+            };
+            // Make the request
+            SetAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOutAsync</summary>
+        public async Task SetAutomatedGa4ConfigurationOptOutRequestObjectAsync()
+        {
+            // Snippet: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
+            // Additional: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
+            {
+                Property = "",
+                OptOut = false,
+            };
+            // Make the request
+            SetAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOut</summary>
+        public void FetchAutomatedGa4ConfigurationOptOutRequestObject()
+        {
+            // Snippet: FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
+            // Make the request
+            FetchAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOutAsync</summary>
+        public async Task FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync()
+        {
+            // Snippet: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
+            // Additional: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
+            // Make the request
+            FetchAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLink</summary>
+        public void GetBigQueryLinkRequestObject()
+        {
+            // Snippet: GetBigQueryLink(GetBigQueryLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetBigQueryLinkRequest request = new GetBigQueryLinkRequest
+            {
+                BigQueryLinkName = BigQueryLinkName.FromPropertyBigqueryLink("[PROPERTY]", "[BIGQUERY_LINK]"),
+            };
+            // Make the request
+            BigQueryLink response = analyticsAdminServiceClient.GetBigQueryLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLinkAsync</summary>
+        public async Task GetBigQueryLinkRequestObjectAsync()
+        {
+            // Snippet: GetBigQueryLinkAsync(GetBigQueryLinkRequest, CallSettings)
+            // Additional: GetBigQueryLinkAsync(GetBigQueryLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBigQueryLinkRequest request = new GetBigQueryLinkRequest
+            {
+                BigQueryLinkName = BigQueryLinkName.FromPropertyBigqueryLink("[PROPERTY]", "[BIGQUERY_LINK]"),
+            };
+            // Make the request
+            BigQueryLink response = await analyticsAdminServiceClient.GetBigQueryLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLink</summary>
+        public void GetBigQueryLink()
+        {
+            // Snippet: GetBigQueryLink(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/bigQueryLinks/[BIGQUERY_LINK]";
+            // Make the request
+            BigQueryLink response = analyticsAdminServiceClient.GetBigQueryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLinkAsync</summary>
+        public async Task GetBigQueryLinkAsync()
+        {
+            // Snippet: GetBigQueryLinkAsync(string, CallSettings)
+            // Additional: GetBigQueryLinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/bigQueryLinks/[BIGQUERY_LINK]";
+            // Make the request
+            BigQueryLink response = await analyticsAdminServiceClient.GetBigQueryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLink</summary>
+        public void GetBigQueryLinkResourceNames()
+        {
+            // Snippet: GetBigQueryLink(BigQueryLinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            BigQueryLinkName name = BigQueryLinkName.FromPropertyBigqueryLink("[PROPERTY]", "[BIGQUERY_LINK]");
+            // Make the request
+            BigQueryLink response = analyticsAdminServiceClient.GetBigQueryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBigQueryLinkAsync</summary>
+        public async Task GetBigQueryLinkResourceNamesAsync()
+        {
+            // Snippet: GetBigQueryLinkAsync(BigQueryLinkName, CallSettings)
+            // Additional: GetBigQueryLinkAsync(BigQueryLinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BigQueryLinkName name = BigQueryLinkName.FromPropertyBigqueryLink("[PROPERTY]", "[BIGQUERY_LINK]");
+            // Make the request
+            BigQueryLink response = await analyticsAdminServiceClient.GetBigQueryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinks</summary>
+        public void ListBigQueryLinksRequestObject()
+        {
+            // Snippet: ListBigQueryLinks(ListBigQueryLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinksAsync</summary>
+        public async Task ListBigQueryLinksRequestObjectAsync()
+        {
+            // Snippet: ListBigQueryLinksAsync(ListBigQueryLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBigQueryLinksRequest request = new ListBigQueryLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinks</summary>
+        public void ListBigQueryLinks()
+        {
+            // Snippet: ListBigQueryLinks(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinksAsync</summary>
+        public async Task ListBigQueryLinksAsync()
+        {
+            // Snippet: ListBigQueryLinksAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinks</summary>
+        public void ListBigQueryLinksResourceNames()
+        {
+            // Snippet: ListBigQueryLinks(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BigQueryLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBigQueryLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBigQueryLinksAsync</summary>
+        public async Task ListBigQueryLinksResourceNamesAsync()
+        {
+            // Snippet: ListBigQueryLinksAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> response = analyticsAdminServiceClient.ListBigQueryLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BigQueryLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBigQueryLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BigQueryLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BigQueryLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BigQueryLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

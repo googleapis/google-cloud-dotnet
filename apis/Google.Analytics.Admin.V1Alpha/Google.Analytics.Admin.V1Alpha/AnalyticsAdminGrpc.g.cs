@@ -296,6 +296,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest> __Marshaller_google_analytics_admin_v1alpha_ArchiveAudienceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetSearchAds360LinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> __Marshaller_google_analytics_admin_v1alpha_SearchAds360Link = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListSearchAds360LinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListSearchAds360LinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateSearchAds360LinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSearchAds360LinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSearchAds360LinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetAttributionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AttributionSettings> __Marshaller_google_analytics_admin_v1alpha_AttributionSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser));
@@ -305,6 +319,22 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest> __Marshaller_google_analytics_admin_v1alpha_RunAccessReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest> __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Marshaller_google_analytics_admin_v1alpha_BigQueryLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -915,6 +945,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> __Method_GetSearchAds360Link = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSearchAds360Link",
+        __Marshaller_google_analytics_admin_v1alpha_GetSearchAds360LinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SearchAds360Link);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest, global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse> __Method_ListSearchAds360Links = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest, global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSearchAds360Links",
+        __Marshaller_google_analytics_admin_v1alpha_ListSearchAds360LinksRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSearchAds360LinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> __Method_CreateSearchAds360Link = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSearchAds360Link",
+        __Marshaller_google_analytics_admin_v1alpha_CreateSearchAds360LinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SearchAds360Link);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSearchAds360Link = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSearchAds360Link",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteSearchAds360LinkRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> __Method_UpdateSearchAds360Link = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSearchAds360Link",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSearchAds360LinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SearchAds360Link);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings> __Method_GetAttributionSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -937,6 +1007,38 @@ namespace Google.Analytics.Admin.V1Alpha {
         "RunAccessReport",
         __Marshaller_google_analytics_admin_v1alpha_RunAccessReportRequest,
         __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Method_SetAutomatedGa4ConfigurationOptOut = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetAutomatedGa4ConfigurationOptOut",
+        __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> __Method_FetchAutomatedGa4ConfigurationOptOut = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchAutomatedGa4ConfigurationOptOut",
+        __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutRequest,
+        __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Method_GetBigQueryLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBigQueryLink",
+        __Marshaller_google_analytics_admin_v1alpha_GetBigQueryLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BigQueryLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> __Method_ListBigQueryLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBigQueryLinks",
+        __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1086,7 +1188,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an GA4 Property.
+      /// Returns an error if the target is not found, or is not a GA4 Property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1870,6 +1972,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lookup for a single Audience.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1883,6 +1986,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lists Audiences on a property.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1925,6 +2029,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveAudience(global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Look up a single SearchAds360Link
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> GetSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all SearchAds360Links on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse> ListSearchAds360Links(global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a SearchAds360Link.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> CreateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> UpdateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1973,6 +2137,58 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> RunAccessReport(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Sets the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single BigQuery Link.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> GetBigQueryLink(global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BigQuery Links on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinks(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2525,7 +2741,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an GA4 Property.
+      /// Returns an error if the target is not found, or is not a GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2548,7 +2764,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an GA4 Property.
+      /// Returns an error if the target is not found, or is not a GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2569,7 +2785,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an GA4 Property.
+      /// Returns an error if the target is not found, or is not a GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2592,7 +2808,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an GA4 Property.
+      /// Returns an error if the target is not found, or is not a GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5685,6 +5901,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lookup for a single Audience.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5699,6 +5916,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lookup for a single Audience.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5711,6 +5929,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lookup for a single Audience.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5725,6 +5944,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lookup for a single Audience.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5737,6 +5957,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lists Audiences on a property.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5751,6 +5972,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lists Audiences on a property.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5763,6 +5985,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lists Audiences on a property.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5777,6 +6000,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Lists Audiences on a property.
       /// Audiences created before 2020 may not be supported.
+      /// Default audiences will not show filter definitions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5929,6 +6153,246 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ArchiveAudienceAsync(global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ArchiveAudience, null, options, request);
+      }
+      /// <summary>
+      /// Look up a single SearchAds360Link
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link GetSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSearchAds360Link(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Look up a single SearchAds360Link
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link GetSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Look up a single SearchAds360Link
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> GetSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSearchAds360LinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Look up a single SearchAds360Link
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> GetSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Lists all SearchAds360Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse ListSearchAds360Links(global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSearchAds360Links(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all SearchAds360Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse ListSearchAds360Links(global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSearchAds360Links, null, options, request);
+      }
+      /// <summary>
+      /// Lists all SearchAds360Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse> ListSearchAds360LinksAsync(global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSearchAds360LinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all SearchAds360Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse> ListSearchAds360LinksAsync(global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSearchAds360Links, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SearchAds360Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link CreateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSearchAds360Link(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SearchAds360Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link CreateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SearchAds360Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> CreateSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSearchAds360LinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SearchAds360Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> CreateSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSearchAds360Link(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSearchAds360LinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link UpdateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSearchAds360Link(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SearchAds360Link UpdateSearchAds360Link(global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSearchAds360Link, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> UpdateSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSearchAds360LinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SearchAds360Link on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SearchAds360Link> UpdateSearchAds360LinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSearchAds360Link, null, options, request);
       }
       /// <summary>
       /// Lookup for a AttributionSettings singleton.
@@ -6122,6 +6586,214 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunAccessReport, null, options, request);
       }
+      /// <summary>
+      /// Sets the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAutomatedGa4ConfigurationOptOut(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetAutomatedGa4ConfigurationOptOut, null, options, request);
+      }
+      /// <summary>
+      /// Sets the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAutomatedGa4ConfigurationOptOutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetAutomatedGa4ConfigurationOptOut, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAutomatedGa4ConfigurationOptOut(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchAutomatedGa4ConfigurationOptOut, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAutomatedGa4ConfigurationOptOutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the opt out status for the automated GA4 setup process for a UA
+      /// property.
+      /// Note: this has no effect on GA4 property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchAutomatedGa4ConfigurationOptOut, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single BigQuery Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink GetBigQueryLink(global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBigQueryLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single BigQuery Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink GetBigQueryLink(global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single BigQuery Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> GetBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBigQueryLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single BigQuery Link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> GetBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Lists BigQuery Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse ListBigQueryLinks(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBigQueryLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BigQuery Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse ListBigQueryLinks(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBigQueryLinks, null, options, request);
+      }
+      /// <summary>
+      /// Lists BigQuery Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBigQueryLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BigQuery Links on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBigQueryLinks, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -6212,9 +6884,18 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateAudience, serviceImpl.CreateAudience)
           .AddMethod(__Method_UpdateAudience, serviceImpl.UpdateAudience)
           .AddMethod(__Method_ArchiveAudience, serviceImpl.ArchiveAudience)
+          .AddMethod(__Method_GetSearchAds360Link, serviceImpl.GetSearchAds360Link)
+          .AddMethod(__Method_ListSearchAds360Links, serviceImpl.ListSearchAds360Links)
+          .AddMethod(__Method_CreateSearchAds360Link, serviceImpl.CreateSearchAds360Link)
+          .AddMethod(__Method_DeleteSearchAds360Link, serviceImpl.DeleteSearchAds360Link)
+          .AddMethod(__Method_UpdateSearchAds360Link, serviceImpl.UpdateSearchAds360Link)
           .AddMethod(__Method_GetAttributionSettings, serviceImpl.GetAttributionSettings)
           .AddMethod(__Method_UpdateAttributionSettings, serviceImpl.UpdateAttributionSettings)
-          .AddMethod(__Method_RunAccessReport, serviceImpl.RunAccessReport).Build();
+          .AddMethod(__Method_RunAccessReport, serviceImpl.RunAccessReport)
+          .AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl.SetAutomatedGa4ConfigurationOptOut)
+          .AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl.FetchAutomatedGa4ConfigurationOptOut)
+          .AddMethod(__Method_GetBigQueryLink, serviceImpl.GetBigQueryLink)
+          .AddMethod(__Method_ListBigQueryLinks, serviceImpl.ListBigQueryLinks).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -6300,9 +6981,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateAudience, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateAudienceRequest, global::Google.Analytics.Admin.V1Alpha.Audience>(serviceImpl.CreateAudience));
       serviceBinder.AddMethod(__Method_UpdateAudience, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAudienceRequest, global::Google.Analytics.Admin.V1Alpha.Audience>(serviceImpl.UpdateAudience));
       serviceBinder.AddMethod(__Method_ArchiveAudience, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ArchiveAudienceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ArchiveAudience));
+      serviceBinder.AddMethod(__Method_GetSearchAds360Link, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(serviceImpl.GetSearchAds360Link));
+      serviceBinder.AddMethod(__Method_ListSearchAds360Links, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksRequest, global::Google.Analytics.Admin.V1Alpha.ListSearchAds360LinksResponse>(serviceImpl.ListSearchAds360Links));
+      serviceBinder.AddMethod(__Method_CreateSearchAds360Link, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(serviceImpl.CreateSearchAds360Link));
+      serviceBinder.AddMethod(__Method_DeleteSearchAds360Link, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSearchAds360LinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSearchAds360Link));
+      serviceBinder.AddMethod(__Method_UpdateSearchAds360Link, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSearchAds360LinkRequest, global::Google.Analytics.Admin.V1Alpha.SearchAds360Link>(serviceImpl.UpdateSearchAds360Link));
       serviceBinder.AddMethod(__Method_GetAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.GetAttributionSettings));
       serviceBinder.AddMethod(__Method_UpdateAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.UpdateAttributionSettings));
       serviceBinder.AddMethod(__Method_RunAccessReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse>(serviceImpl.RunAccessReport));
+      serviceBinder.AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.SetAutomatedGa4ConfigurationOptOut));
+      serviceBinder.AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.FetchAutomatedGa4ConfigurationOptOut));
+      serviceBinder.AddMethod(__Method_GetBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.GetBigQueryLink));
+      serviceBinder.AddMethod(__Method_ListBigQueryLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse>(serviceImpl.ListBigQueryLinks));
     }
 
   }

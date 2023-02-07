@@ -142,6 +142,12 @@
                 "CreatePropertyAsync"
               ]
             },
+            "CreateSearchAds360Link": {
+              "methods": [
+                "CreateSearchAds360Link",
+                "CreateSearchAds360LinkAsync"
+              ]
+            },
             "CreateUserLink": {
               "methods": [
                 "CreateUserLink",
@@ -202,10 +208,22 @@
                 "DeletePropertyAsync"
               ]
             },
+            "DeleteSearchAds360Link": {
+              "methods": [
+                "DeleteSearchAds360Link",
+                "DeleteSearchAds360LinkAsync"
+              ]
+            },
             "DeleteUserLink": {
               "methods": [
                 "DeleteUserLink",
                 "DeleteUserLinkAsync"
+              ]
+            },
+            "FetchAutomatedGa4ConfigurationOptOut": {
+              "methods": [
+                "FetchAutomatedGa4ConfigurationOptOut",
+                "FetchAutomatedGa4ConfigurationOptOutAsync"
               ]
             },
             "GetAccount": {
@@ -224,6 +242,12 @@
               "methods": [
                 "GetAudience",
                 "GetAudienceAsync"
+              ]
+            },
+            "GetBigQueryLink": {
+              "methods": [
+                "GetBigQueryLink",
+                "GetBigQueryLinkAsync"
               ]
             },
             "GetConversionEvent": {
@@ -298,6 +322,12 @@
                 "GetPropertyAsync"
               ]
             },
+            "GetSearchAds360Link": {
+              "methods": [
+                "GetSearchAds360Link",
+                "GetSearchAds360LinkAsync"
+              ]
+            },
             "GetUserLink": {
               "methods": [
                 "GetUserLink",
@@ -320,6 +350,12 @@
               "methods": [
                 "ListAudiences",
                 "ListAudiencesAsync"
+              ]
+            },
+            "ListBigQueryLinks": {
+              "methods": [
+                "ListBigQueryLinks",
+                "ListBigQueryLinksAsync"
               ]
             },
             "ListConversionEvents": {
@@ -382,6 +418,12 @@
                 "ListPropertiesAsync"
               ]
             },
+            "ListSearchAds360Links": {
+              "methods": [
+                "ListSearchAds360Links",
+                "ListSearchAds360LinksAsync"
+              ]
+            },
             "ListUserLinks": {
               "methods": [
                 "ListUserLinks",
@@ -404,6 +446,12 @@
               "methods": [
                 "SearchChangeHistoryEvents",
                 "SearchChangeHistoryEventsAsync"
+              ]
+            },
+            "SetAutomatedGa4ConfigurationOptOut": {
+              "methods": [
+                "SetAutomatedGa4ConfigurationOptOut",
+                "SetAutomatedGa4ConfigurationOptOutAsync"
               ]
             },
             "UpdateAccount": {
@@ -476,6 +524,12 @@
               "methods": [
                 "UpdateProperty",
                 "UpdatePropertyAsync"
+              ]
+            },
+            "UpdateSearchAds360Link": {
+              "methods": [
+                "UpdateSearchAds360Link",
+                "UpdateSearchAds360LinkAsync"
               ]
             },
             "UpdateUserLink": {

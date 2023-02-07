@@ -124,9 +124,18 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateAudienceSettings = existing.CreateAudienceSettings;
             UpdateAudienceSettings = existing.UpdateAudienceSettings;
             ArchiveAudienceSettings = existing.ArchiveAudienceSettings;
+            GetSearchAds360LinkSettings = existing.GetSearchAds360LinkSettings;
+            ListSearchAds360LinksSettings = existing.ListSearchAds360LinksSettings;
+            CreateSearchAds360LinkSettings = existing.CreateSearchAds360LinkSettings;
+            DeleteSearchAds360LinkSettings = existing.DeleteSearchAds360LinkSettings;
+            UpdateSearchAds360LinkSettings = existing.UpdateSearchAds360LinkSettings;
             GetAttributionSettingsSettings = existing.GetAttributionSettingsSettings;
             UpdateAttributionSettingsSettings = existing.UpdateAttributionSettingsSettings;
             RunAccessReportSettings = existing.RunAccessReportSettings;
+            SetAutomatedGa4ConfigurationOptOutSettings = existing.SetAutomatedGa4ConfigurationOptOutSettings;
+            FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
+            GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
+            ListBigQueryLinksSettings = existing.ListBigQueryLinksSettings;
             OnCopy(existing);
         }
 
@@ -138,20 +147,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -159,20 +159,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAccountsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListAccountsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -180,20 +171,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeleteAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -201,20 +183,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -223,20 +196,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ProvisionAccountTicketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ProvisionAccountTicketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -266,20 +230,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetPropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetPropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -288,20 +243,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListPropertiesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListPropertiesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -310,20 +256,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreatePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreatePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -332,20 +269,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeletePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeletePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -354,20 +282,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdatePropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdatePropertySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -375,20 +294,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -397,20 +307,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchGetUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings BatchGetUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -418,20 +319,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -440,20 +332,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings AuditUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings AuditUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -462,20 +345,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreateUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -484,20 +358,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchCreateUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings BatchCreateUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -506,20 +371,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -528,20 +384,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchUpdateUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings BatchUpdateUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -550,20 +397,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteUserLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeleteUserLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -572,20 +410,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchDeleteUserLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings BatchDeleteUserLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -594,20 +423,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreateFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -616,20 +436,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeleteFirebaseLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -638,20 +449,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListFirebaseLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListFirebaseLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -660,20 +462,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGlobalSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetGlobalSiteTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -682,20 +475,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -704,20 +488,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -726,20 +501,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeleteGoogleAdsLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -748,20 +514,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
+        /// <item><description>This call will not be retried.</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListGoogleAdsLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListGoogleAdsLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1796,6 +1553,116 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetSearchAds360Link</c> and
+        /// <c>AnalyticsAdminServiceClient.GetSearchAds360LinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSearchAds360LinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListSearchAds360Links</c> and
+        /// <c>AnalyticsAdminServiceClient.ListSearchAds360LinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSearchAds360LinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateSearchAds360Link</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateSearchAds360LinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSearchAds360LinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteSearchAds360Link</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteSearchAds360LinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSearchAds360LinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateSearchAds360Link</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateSearchAds360LinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSearchAds360LinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.GetAttributionSettings</c> and
         /// <c>AnalyticsAdminServiceClient.GetAttributionSettingsAsync</c>.
         /// </summary>
@@ -1859,6 +1726,94 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunAccessReportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut</c> and
+        /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetAutomatedGa4ConfigurationOptOutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut</c> and
+        /// <c>AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchAutomatedGa4ConfigurationOptOutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetBigQueryLink</c> and <c>AnalyticsAdminServiceClient.GetBigQueryLinkAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBigQueryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListBigQueryLinks</c> and
+        /// <c>AnalyticsAdminServiceClient.ListBigQueryLinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBigQueryLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -2395,9 +2350,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2416,9 +2372,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2437,9 +2394,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2716,7 +2674,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2735,7 +2693,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2754,7 +2712,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2773,7 +2731,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2799,7 +2757,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2825,7 +2783,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2848,7 +2806,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2874,7 +2832,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2900,7 +2858,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2948,9 +2906,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2970,9 +2929,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2992,9 +2952,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4494,9 +4455,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4514,9 +4476,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4534,9 +4497,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5662,9 +5626,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5683,9 +5648,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5704,9 +5670,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5744,8 +5711,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -5763,8 +5730,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -5782,8 +5749,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -5797,8 +5764,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -5816,8 +5783,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -5835,8 +5802,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Creates a conversion event with the specified attributes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the parent property where this conversion event will
-        /// be created. Format: properties/123
+        /// Required. The resource name of the parent property where this conversion
+        /// event will be created. Format: properties/123
         /// </param>
         /// <param name="conversionEvent">
         /// Required. The conversion event to create.
@@ -6749,9 +6716,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DisplayVideo360AdvertiserLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6769,9 +6736,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DisplayVideo360AdvertiserLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6789,9 +6756,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DisplayVideo360AdvertiserLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7509,9 +7476,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomDimension to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7529,9 +7496,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomDimension to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7549,9 +7516,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomDimension to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8055,9 +8022,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomMetric to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8075,9 +8042,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomMetric to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8095,9 +8062,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The CustomMetric to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8598,9 +8565,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8619,9 +8587,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8640,9 +8609,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8921,9 +8891,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DataStream to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8941,9 +8911,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DataStream to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8961,9 +8931,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The DataStream to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9198,6 +9168,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9208,6 +9179,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9218,6 +9190,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -9228,6 +9201,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9244,6 +9218,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9260,6 +9235,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9273,6 +9249,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9289,6 +9266,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9305,6 +9283,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Audience to get.
@@ -9318,6 +9297,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9328,6 +9308,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9338,6 +9319,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="parent">
         /// Required. Example format: properties/1234
@@ -9363,6 +9345,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="parent">
         /// Required. Example format: properties/1234
@@ -9388,6 +9371,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="parent">
         /// Required. Example format: properties/1234
@@ -9413,6 +9397,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="parent">
         /// Required. Example format: properties/1234
@@ -9597,9 +9582,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The audience's `name` field is used to identify the audience to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -9618,9 +9604,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The audience's `name` field is used to identify the audience to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9639,9 +9626,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The audience's `name` field is used to identify the audience to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9674,6 +9662,552 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task ArchiveAudienceAsync(ArchiveAudienceRequest request, st::CancellationToken cancellationToken) =>
             ArchiveAudienceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link GetSearchAds360Link(GetSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(GetSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(GetSearchAds360LinkRequest request, st::CancellationToken cancellationToken) =>
+            GetSearchAds360LinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link GetSearchAds360Link(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSearchAds360Link(new GetSearchAds360LinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSearchAds360LinkAsync(new GetSearchAds360LinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSearchAds360LinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link GetSearchAds360Link(SearchAds360LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSearchAds360Link(new GetSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(SearchAds360LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSearchAds360LinkAsync(new GetSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to get.
+        /// Example format: properties/1234/SearchAds360Link/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(SearchAds360LinkName name, st::CancellationToken cancellationToken) =>
+            GetSearchAds360LinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(ListSearchAds360LinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(ListSearchAds360LinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSearchAds360Links(new ListSearchAds360LinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSearchAds360LinksAsync(new ListSearchAds360LinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSearchAds360Links(new ListSearchAds360LinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSearchAds360LinksAsync(new ListSearchAds360LinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link CreateSearchAds360Link(CreateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(CreateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(CreateSearchAds360LinkRequest request, st::CancellationToken cancellationToken) =>
+            CreateSearchAds360LinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link CreateSearchAds360Link(string parent, SearchAds360Link searchAds360Link, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSearchAds360Link(new CreateSearchAds360LinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SearchAds360Link = gax::GaxPreconditions.CheckNotNull(searchAds360Link, nameof(searchAds360Link)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(string parent, SearchAds360Link searchAds360Link, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSearchAds360LinkAsync(new CreateSearchAds360LinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SearchAds360Link = gax::GaxPreconditions.CheckNotNull(searchAds360Link, nameof(searchAds360Link)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(string parent, SearchAds360Link searchAds360Link, st::CancellationToken cancellationToken) =>
+            CreateSearchAds360LinkAsync(parent, searchAds360Link, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link CreateSearchAds360Link(PropertyName parent, SearchAds360Link searchAds360Link, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSearchAds360Link(new CreateSearchAds360LinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SearchAds360Link = gax::GaxPreconditions.CheckNotNull(searchAds360Link, nameof(searchAds360Link)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(PropertyName parent, SearchAds360Link searchAds360Link, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSearchAds360LinkAsync(new CreateSearchAds360LinkRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SearchAds360Link = gax::GaxPreconditions.CheckNotNull(searchAds360Link, nameof(searchAds360Link)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="searchAds360Link">
+        /// Required. The SearchAds360Link to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(PropertyName parent, SearchAds360Link searchAds360Link, st::CancellationToken cancellationToken) =>
+            CreateSearchAds360LinkAsync(parent, searchAds360Link, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSearchAds360Link(DeleteSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(DeleteSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(DeleteSearchAds360LinkRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSearchAds360LinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSearchAds360Link(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSearchAds360Link(new DeleteSearchAds360LinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSearchAds360LinkAsync(new DeleteSearchAds360LinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSearchAds360LinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSearchAds360Link(SearchAds360LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSearchAds360Link(new DeleteSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(SearchAds360LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSearchAds360LinkAsync(new DeleteSearchAds360LinkRequest
+            {
+                SearchAds360LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SearchAds360Link to delete.
+        /// Example format: properties/1234/SearchAds360Links/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSearchAds360LinkAsync(SearchAds360LinkName name, st::CancellationToken cancellationToken) =>
+            DeleteSearchAds360LinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link UpdateSearchAds360Link(UpdateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> UpdateSearchAds360LinkAsync(UpdateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> UpdateSearchAds360LinkAsync(UpdateSearchAds360LinkRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSearchAds360LinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="searchAds360Link">
+        /// The SearchAds360Link to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchAds360Link UpdateSearchAds360Link(SearchAds360Link searchAds360Link, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSearchAds360Link(new UpdateSearchAds360LinkRequest
+            {
+                SearchAds360Link = searchAds360Link,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="searchAds360Link">
+        /// The SearchAds360Link to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> UpdateSearchAds360LinkAsync(SearchAds360Link searchAds360Link, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSearchAds360LinkAsync(new UpdateSearchAds360LinkRequest
+            {
+                SearchAds360Link = searchAds360Link,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="searchAds360Link">
+        /// The SearchAds360Link to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchAds360Link> UpdateSearchAds360LinkAsync(SearchAds360Link searchAds360Link, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSearchAds360LinkAsync(searchAds360Link, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lookup for a AttributionSettings singleton.
@@ -9821,9 +10355,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -9842,9 +10377,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9863,9 +10399,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Field names must be in snake case
-        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
-        /// the entire entity, use one path with the string "*" to match all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9934,6 +10471,311 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RunAccessReportResponse> RunAccessReportAsync(RunAccessReportRequest request, st::CancellationToken cancellationToken) =>
             RunAccessReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, st::CancellationToken cancellationToken) =>
+            SetAutomatedGa4ConfigurationOptOutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, st::CancellationToken cancellationToken) =>
+            FetchAutomatedGa4ConfigurationOptOutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink GetBigQueryLink(GetBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(GetBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(GetBigQueryLinkRequest request, st::CancellationToken cancellationToken) =>
+            GetBigQueryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink GetBigQueryLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryLink(new GetBigQueryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryLinkAsync(new GetBigQueryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBigQueryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BigQueryLink GetBigQueryLink(BigQueryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryLink(new GetBigQueryLinkRequest
+            {
+                BigQueryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(BigQueryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBigQueryLinkAsync(new GetBigQueryLinkRequest
+            {
+                BigQueryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the BigQuery link to lookup.
+        /// Format: properties/{property_id}/bigQueryLinks/{bigquery_link_id}
+        /// Example: properties/123/bigQueryLinks/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BigQueryLink> GetBigQueryLinkAsync(BigQueryLinkName name, st::CancellationToken cancellationToken) =>
+            GetBigQueryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(ListBigQueryLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(ListBigQueryLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the property to list BigQuery links under.
+        /// Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryLinks(new ListBigQueryLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the property to list BigQuery links under.
+        /// Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryLinksAsync(new ListBigQueryLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the property to list BigQuery links under.
+        /// Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryLinks(new ListBigQueryLinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the property to list BigQuery links under.
+        /// Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBigQueryLinksAsync(new ListBigQueryLinksRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -10094,11 +10936,29 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<ArchiveAudienceRequest, wkt::Empty> _callArchiveAudience;
 
+        private readonly gaxgrpc::ApiCall<GetSearchAds360LinkRequest, SearchAds360Link> _callGetSearchAds360Link;
+
+        private readonly gaxgrpc::ApiCall<ListSearchAds360LinksRequest, ListSearchAds360LinksResponse> _callListSearchAds360Links;
+
+        private readonly gaxgrpc::ApiCall<CreateSearchAds360LinkRequest, SearchAds360Link> _callCreateSearchAds360Link;
+
+        private readonly gaxgrpc::ApiCall<DeleteSearchAds360LinkRequest, wkt::Empty> _callDeleteSearchAds360Link;
+
+        private readonly gaxgrpc::ApiCall<UpdateSearchAds360LinkRequest, SearchAds360Link> _callUpdateSearchAds360Link;
+
         private readonly gaxgrpc::ApiCall<GetAttributionSettingsRequest, AttributionSettings> _callGetAttributionSettings;
 
         private readonly gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> _callUpdateAttributionSettings;
 
         private readonly gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> _callRunAccessReport;
+
+        private readonly gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> _callSetAutomatedGa4ConfigurationOptOut;
+
+        private readonly gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> _callFetchAutomatedGa4ConfigurationOptOut;
+
+        private readonly gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> _callGetBigQueryLink;
+
+        private readonly gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> _callListBigQueryLinks;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -10340,6 +11200,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callArchiveAudience = clientHelper.BuildApiCall<ArchiveAudienceRequest, wkt::Empty>("ArchiveAudience", grpcClient.ArchiveAudienceAsync, grpcClient.ArchiveAudience, effectiveSettings.ArchiveAudienceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callArchiveAudience);
             Modify_ArchiveAudienceApiCall(ref _callArchiveAudience);
+            _callGetSearchAds360Link = clientHelper.BuildApiCall<GetSearchAds360LinkRequest, SearchAds360Link>("GetSearchAds360Link", grpcClient.GetSearchAds360LinkAsync, grpcClient.GetSearchAds360Link, effectiveSettings.GetSearchAds360LinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSearchAds360Link);
+            Modify_GetSearchAds360LinkApiCall(ref _callGetSearchAds360Link);
+            _callListSearchAds360Links = clientHelper.BuildApiCall<ListSearchAds360LinksRequest, ListSearchAds360LinksResponse>("ListSearchAds360Links", grpcClient.ListSearchAds360LinksAsync, grpcClient.ListSearchAds360Links, effectiveSettings.ListSearchAds360LinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSearchAds360Links);
+            Modify_ListSearchAds360LinksApiCall(ref _callListSearchAds360Links);
+            _callCreateSearchAds360Link = clientHelper.BuildApiCall<CreateSearchAds360LinkRequest, SearchAds360Link>("CreateSearchAds360Link", grpcClient.CreateSearchAds360LinkAsync, grpcClient.CreateSearchAds360Link, effectiveSettings.CreateSearchAds360LinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSearchAds360Link);
+            Modify_CreateSearchAds360LinkApiCall(ref _callCreateSearchAds360Link);
+            _callDeleteSearchAds360Link = clientHelper.BuildApiCall<DeleteSearchAds360LinkRequest, wkt::Empty>("DeleteSearchAds360Link", grpcClient.DeleteSearchAds360LinkAsync, grpcClient.DeleteSearchAds360Link, effectiveSettings.DeleteSearchAds360LinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSearchAds360Link);
+            Modify_DeleteSearchAds360LinkApiCall(ref _callDeleteSearchAds360Link);
+            _callUpdateSearchAds360Link = clientHelper.BuildApiCall<UpdateSearchAds360LinkRequest, SearchAds360Link>("UpdateSearchAds360Link", grpcClient.UpdateSearchAds360LinkAsync, grpcClient.UpdateSearchAds360Link, effectiveSettings.UpdateSearchAds360LinkSettings).WithGoogleRequestParam("search_ads_360_link.name", request => request.SearchAds360Link?.Name);
+            Modify_ApiCall(ref _callUpdateSearchAds360Link);
+            Modify_UpdateSearchAds360LinkApiCall(ref _callUpdateSearchAds360Link);
             _callGetAttributionSettings = clientHelper.BuildApiCall<GetAttributionSettingsRequest, AttributionSettings>("GetAttributionSettings", grpcClient.GetAttributionSettingsAsync, grpcClient.GetAttributionSettings, effectiveSettings.GetAttributionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAttributionSettings);
             Modify_GetAttributionSettingsApiCall(ref _callGetAttributionSettings);
@@ -10349,6 +11224,18 @@ namespace Google.Analytics.Admin.V1Alpha
             _callRunAccessReport = clientHelper.BuildApiCall<RunAccessReportRequest, RunAccessReportResponse>("RunAccessReport", grpcClient.RunAccessReportAsync, grpcClient.RunAccessReport, effectiveSettings.RunAccessReportSettings).WithGoogleRequestParam("entity", request => request.Entity);
             Modify_ApiCall(ref _callRunAccessReport);
             Modify_RunAccessReportApiCall(ref _callRunAccessReport);
+            _callSetAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>("SetAutomatedGa4ConfigurationOptOut", grpcClient.SetAutomatedGa4ConfigurationOptOutAsync, grpcClient.SetAutomatedGa4ConfigurationOptOut, effectiveSettings.SetAutomatedGa4ConfigurationOptOutSettings);
+            Modify_ApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
+            Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
+            _callFetchAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse>("FetchAutomatedGa4ConfigurationOptOut", grpcClient.FetchAutomatedGa4ConfigurationOptOutAsync, grpcClient.FetchAutomatedGa4ConfigurationOptOut, effectiveSettings.FetchAutomatedGa4ConfigurationOptOutSettings);
+            Modify_ApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
+            Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
+            _callGetBigQueryLink = clientHelper.BuildApiCall<GetBigQueryLinkRequest, BigQueryLink>("GetBigQueryLink", grpcClient.GetBigQueryLinkAsync, grpcClient.GetBigQueryLink, effectiveSettings.GetBigQueryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBigQueryLink);
+            Modify_GetBigQueryLinkApiCall(ref _callGetBigQueryLink);
+            _callListBigQueryLinks = clientHelper.BuildApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse>("ListBigQueryLinks", grpcClient.ListBigQueryLinksAsync, grpcClient.ListBigQueryLinks, effectiveSettings.ListBigQueryLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBigQueryLinks);
+            Modify_ListBigQueryLinksApiCall(ref _callListBigQueryLinks);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -10506,11 +11393,29 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ArchiveAudienceApiCall(ref gaxgrpc::ApiCall<ArchiveAudienceRequest, wkt::Empty> call);
 
+        partial void Modify_GetSearchAds360LinkApiCall(ref gaxgrpc::ApiCall<GetSearchAds360LinkRequest, SearchAds360Link> call);
+
+        partial void Modify_ListSearchAds360LinksApiCall(ref gaxgrpc::ApiCall<ListSearchAds360LinksRequest, ListSearchAds360LinksResponse> call);
+
+        partial void Modify_CreateSearchAds360LinkApiCall(ref gaxgrpc::ApiCall<CreateSearchAds360LinkRequest, SearchAds360Link> call);
+
+        partial void Modify_DeleteSearchAds360LinkApiCall(ref gaxgrpc::ApiCall<DeleteSearchAds360LinkRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateSearchAds360LinkApiCall(ref gaxgrpc::ApiCall<UpdateSearchAds360LinkRequest, SearchAds360Link> call);
+
         partial void Modify_GetAttributionSettingsApiCall(ref gaxgrpc::ApiCall<GetAttributionSettingsRequest, AttributionSettings> call);
 
         partial void Modify_UpdateAttributionSettingsApiCall(ref gaxgrpc::ApiCall<UpdateAttributionSettingsRequest, AttributionSettings> call);
 
         partial void Modify_RunAccessReportApiCall(ref gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> call);
+
+        partial void Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> call);
+
+        partial void Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> call);
+
+        partial void Modify_GetBigQueryLinkApiCall(ref gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> call);
+
+        partial void Modify_ListBigQueryLinksApiCall(ref gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -10669,11 +11574,29 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ArchiveAudienceRequest(ref ArchiveAudienceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetSearchAds360LinkRequest(ref GetSearchAds360LinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSearchAds360LinksRequest(ref ListSearchAds360LinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSearchAds360LinkRequest(ref CreateSearchAds360LinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSearchAds360LinkRequest(ref DeleteSearchAds360LinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSearchAds360LinkRequest(ref UpdateSearchAds360LinkRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetAttributionSettingsRequest(ref GetAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAttributionSettingsRequest(ref UpdateAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunAccessReportRequest(ref RunAccessReportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref SetAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref FetchAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBigQueryLinkRequest(ref GetBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBigQueryLinksRequest(ref ListBigQueryLinksRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -10940,7 +11863,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10962,7 +11885,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not an GA4 Property.
+        /// Returns an error if the target is not found, or is not a GA4 Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12520,6 +13443,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12533,6 +13457,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lookup for a single Audience.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12546,6 +13471,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12559,6 +13485,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <summary>
         /// Lists Audiences on a property.
         /// Audiences created before 2020 may not be supported.
+        /// Default audiences will not show filter definitions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12639,6 +13566,126 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_ArchiveAudienceRequest(ref request, ref callSettings);
             return _callArchiveAudience.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchAds360Link GetSearchAds360Link(GetSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callGetSearchAds360Link.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Look up a single SearchAds360Link
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchAds360Link> GetSearchAds360LinkAsync(GetSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callGetSearchAds360Link.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360Links(ListSearchAds360LinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSearchAds360LinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSearchAds360LinksRequest, ListSearchAds360LinksResponse, SearchAds360Link>(_callListSearchAds360Links, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all SearchAds360Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchAds360Link"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSearchAds360LinksResponse, SearchAds360Link> ListSearchAds360LinksAsync(ListSearchAds360LinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSearchAds360LinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSearchAds360LinksRequest, ListSearchAds360LinksResponse, SearchAds360Link>(_callListSearchAds360Links, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchAds360Link CreateSearchAds360Link(CreateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callCreateSearchAds360Link.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a SearchAds360Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchAds360Link> CreateSearchAds360LinkAsync(CreateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callCreateSearchAds360Link.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSearchAds360Link(DeleteSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSearchAds360LinkRequest(ref request, ref callSettings);
+            _callDeleteSearchAds360Link.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSearchAds360LinkAsync(DeleteSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callDeleteSearchAds360Link.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchAds360Link UpdateSearchAds360Link(UpdateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callUpdateSearchAds360Link.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a SearchAds360Link on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchAds360Link> UpdateSearchAds360LinkAsync(UpdateSearchAds360LinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSearchAds360LinkRequest(ref request, ref callSettings);
+            return _callUpdateSearchAds360Link.Async(request, callSettings);
         }
 
         /// <summary>
@@ -12736,6 +13783,110 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_RunAccessReportRequest(ref request, ref callSettings);
             return _callRunAccessReport.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Sets the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
+            return _callSetAutomatedGa4ConfigurationOptOut.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
+            return _callSetAutomatedGa4ConfigurationOptOut.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
+            return _callFetchAutomatedGa4ConfigurationOptOut.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches the opt out status for the automated GA4 setup process for a UA
+        /// property.
+        /// Note: this has no effect on GA4 property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
+            return _callFetchAutomatedGa4ConfigurationOptOut.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BigQueryLink GetBigQueryLink(GetBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBigQueryLinkRequest(ref request, ref callSettings);
+            return _callGetBigQueryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single BigQuery Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BigQueryLink> GetBigQueryLinkAsync(GetBigQueryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBigQueryLinkRequest(ref request, ref callSettings);
+            return _callGetBigQueryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinks(ListBigQueryLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBigQueryLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBigQueryLinksRequest, ListBigQueryLinksResponse, BigQueryLink>(_callListBigQueryLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BigQuery Links on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BigQueryLink"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBigQueryLinksResponse, BigQueryLink> ListBigQueryLinksAsync(ListBigQueryLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBigQueryLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBigQueryLinksRequest, ListBigQueryLinksResponse, BigQueryLink>(_callListBigQueryLinks, request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -12799,6 +13950,14 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListAudiencesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSearchAds360LinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBigQueryLinksRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -12928,6 +14087,22 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Audience> GetEnumerator() => Audiences.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSearchAds360LinksResponse : gaxgrpc::IPageResponse<SearchAds360Link>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SearchAds360Link> GetEnumerator() => SearchAds360Links.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBigQueryLinksResponse : gaxgrpc::IPageResponse<BigQueryLink>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BigQueryLink> GetEnumerator() => BigqueryLinks.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
