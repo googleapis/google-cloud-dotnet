@@ -526,7 +526,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 using (var md5 = MD5.Create())
                 {
-                    return new HttpRequestMessage()
+                    var request = new HttpRequestMessage
                     {
                         Content = new ByteArrayContent(content)
                         {
@@ -539,14 +539,12 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                                 { "x-goog-foo", new [] { "val3", "val4" } }
                             }
                         },
-                        Method = HttpMethod.Put,
-                        Headers =
-                        {
-                            { "x-goog-foo2", "xy\r\n z" },
-                            { "x-goog-bar", "  12345   " },
-                            { "x-goog-foo2", new [] { "A B  C", "def" } }
-                        }
+                        Method = HttpMethod.Put
                     };
+                    Assert.True(request.Headers.TryAddWithoutValidation("x-goog-foo2", "xy\r\n z"));
+                    request.Headers.Add("x-goog-bar", "  12345   ");
+                    request.Headers.Add("x-goog-foo2", new[] { "A B  C", "def" });
+                    return request;
                 }
             };
 
