@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.1.0, released 2023-02-08
+
+### New features
+
+- Allow handling of timer thread exceptions in timed buffers. ([commit 957f4b4](https://github.com/googleapis/google-cloud-dotnet/commit/957f4b43914a8063a8af1fa6013f3533f1712da1))
+- Adds a ProviderAlias attribute to GoogleLoggerProvider ([commit a6f9e7c](https://github.com/googleapis/google-cloud-dotnet/commit/a6f9e7c5e76813874a07f449f0333beeebe89aa7))
+
 ## Version 5.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
