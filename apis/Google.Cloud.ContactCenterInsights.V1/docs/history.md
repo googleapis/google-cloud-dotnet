@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2023-02-08
+
+### New features
+
+- Add IngestConversationsStats ([commit 467ac8e](https://github.com/googleapis/google-cloud-dotnet/commit/467ac8e5ec448df06ad7e4f9a749e2f3ef925929))
+
+### Documentation improvements
+
+- Reformat some lines of code ([commit 467ac8e](https://github.com/googleapis/google-cloud-dotnet/commit/467ac8e5ec448df06ad7e4f9a749e2f3ef925929))
+
 ## Version 2.3.0, released 2023-01-18
 
 ### New features
