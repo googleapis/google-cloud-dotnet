@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-alpha08, released 2023-02-08
+
+### New features
+
+- Support custom scopes for service account in v1 ([commit 7e2eb5a](https://github.com/googleapis/google-cloud-dotnet/commit/7e2eb5adbec7505d9f4fd5c7cd1b3a458436bd8e))
+- Add boot disk field in InstanceStatus ([commit 7e2eb5a](https://github.com/googleapis/google-cloud-dotnet/commit/7e2eb5adbec7505d9f4fd5c7cd1b3a458436bd8e))
+- Add boot disk and image source fields to v1 InstancePolicy ([commit 7e2eb5a](https://github.com/googleapis/google-cloud-dotnet/commit/7e2eb5adbec7505d9f4fd5c7cd1b3a458436bd8e))
+
 ## Version 1.0.0-alpha07, released 2023-01-18
 
 ### New features
