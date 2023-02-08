@@ -4,6 +4,16 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.1.0, released 2023-02-08
+
+### New features
+
+- Add Firestore aggregation query apis ([commit a93b264](https://github.com/googleapis/google-cloud-dotnet/commit/a93b264d6acbdcee46d61d22271187884709e04a))
+
+### Documentation improvements
+
+- Update query ordering documentation ([commit 16f4f35](https://github.com/googleapis/google-cloud-dotnet/commit/16f4f354a7713b193d95ce1937c9a17257cf524f))
+
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.

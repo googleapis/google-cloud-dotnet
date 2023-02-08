@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.1.0, released 2023-02-08
+
+### New features
+
+- Add support for count(*) aggregation query firestore ([commit 1df2774](https://github.com/googleapis/google-cloud-dotnet/commit/1df2774c6aa684012c9b53af287d6510f89bb968))
+
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
