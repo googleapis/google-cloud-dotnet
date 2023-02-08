@@ -1193,21 +1193,21 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Schema DeleteSchemaRevision(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSchemaRevision(new DeleteSchemaRevisionRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+                RevisionId = revisionId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -1217,21 +1217,21 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(string name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSchemaRevisionAsync(new DeleteSchemaRevisionRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+                RevisionId = revisionId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -1241,16 +1241,16 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(string name, string revisionId, st::CancellationToken cancellationToken) =>
             DeleteSchemaRevisionAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1261,21 +1261,21 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Schema DeleteSchemaRevision(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSchemaRevision(new DeleteSchemaRevisionRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+                RevisionId = revisionId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -1285,21 +1285,21 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(SchemaName name, string revisionId, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSchemaRevisionAsync(new DeleteSchemaRevisionRequest
             {
                 SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                RevisionId = gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)),
+                RevisionId = revisionId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -1309,16 +1309,16 @@ namespace Google.Cloud.PubSub.V1
         /// Required. The name of the schema revision to be deleted, with a revision ID
         /// explicitly included.
         /// 
-        /// Example: projects/123/schemas/my-schema@c7cfa2a8
+        /// Example: `projects/123/schemas/my-schema@c7cfa2a8`
         /// </param>
         /// <param name="revisionId">
-        /// Required. The revision ID to roll back to.
-        /// It must be a revision of the same schema.
-        /// 
-        /// Example: c7cfa2a8
+        /// Optional. This field is deprecated and should not be used for specifying
+        /// the revision ID. The revision ID should be specified via the `name`
+        /// parameter.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Schema> DeleteSchemaRevisionAsync(SchemaName name, string revisionId, st::CancellationToken cancellationToken) =>
             DeleteSchemaRevisionAsync(name, revisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 

@@ -38,7 +38,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             DeleteSchemaRevisionRequest request = new DeleteSchemaRevisionRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                RevisionId = "",
             };
             // Make the request
             Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(request);
