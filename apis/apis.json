@@ -1999,7 +1999,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.1;net462",
@@ -2011,14 +2011,14 @@
       ],
       "dependencies": {
         "Google.Cloud.Firestore.V1": "project",
-        "Grpc.Core": "2.46.3",
+        "Grpc.Core": "2.46.5",
         "System.Collections.Immutable": "6.0.0",
         "System.Linq.Async": "6.0.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.2.0",
-        "Google.Api.Gax.Testing": "4.2.0",
-        "Grpc.Core.Testing": "2.46.3",
+        "Google.Api.Gax.Grpc.Testing": "4.3.1",
+        "Google.Api.Gax.Testing": "4.3.1",
+        "Grpc.Core.Testing": "2.46.5",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.4.1"
       },
@@ -2031,7 +2031,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "net6.0;net462",
@@ -2041,10 +2041,10 @@
         "firebase"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "shortName": "firestore",
       "serviceConfigFile": "firestore_v1.yaml",
