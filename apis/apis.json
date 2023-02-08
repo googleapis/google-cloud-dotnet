@@ -2282,7 +2282,7 @@
     },
     {
       "id": "Google.Cloud.GkeMultiCloud.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Anthos Multi-Cloud",
       "productUrl": "https://cloud.google.com/anthos/clusters/docs/multi-cloud",
@@ -2295,7 +2295,7 @@
         "azure"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
       },
