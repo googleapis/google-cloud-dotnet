@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2023-02-08
+
+### New features
+
+- Added EvaluationReference to evaluation.proto ([commit a51e02c](https://github.com/googleapis/google-cloud-dotnet/commit/a51e02c698fe38b2c2f273af42f020532e14380e))
+- Added latest_evaluation to processor.proto ([commit a51e02c](https://github.com/googleapis/google-cloud-dotnet/commit/a51e02c698fe38b2c2f273af42f020532e14380e))
+- Added advanced_ocr_options field in OcrConfig ([commit e4901eb](https://github.com/googleapis/google-cloud-dotnet/commit/e4901eb6b5e35cebe1ca1b453da6901f17ec1e46))
+
+### Breaking changes
+
+- The TrainProcessorVersion parent was incorrectly annotated. ([commit a51e02c](https://github.com/googleapis/google-cloud-dotnet/commit/a51e02c698fe38b2c2f273af42f020532e14380e))
+
 ## Version 2.0.0-beta07, released 2023-01-20
 
 ### New features
