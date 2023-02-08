@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.3.0, released 2023-02-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove HTTP bindings for serviceConnectionMaps, serviceConnectionPolicies, serviceClasses ([commit 42415ac](https://github.com/googleapis/google-cloud-dotnet/commit/42415ac34613365778af5f8ec2cd68208e6b171f))
+- **BREAKING CHANGE** Remove policy based routing API ([commit 7ed1508](https://github.com/googleapis/google-cloud-dotnet/commit/7ed15089ab0972c8b267f3249df1d0502ecdb335))
+
+Note that these features would not have worked for customers anyway
+(as they were behind an allow-list), so we are not increasing the
+major version.
+
+### New features
+
+- Update Hub API ([commit 49cf881](https://github.com/googleapis/google-cloud-dotnet/commit/49cf881c481b0519656aaae9f9d85016d61d30bb))
+
 ## Version 2.2.0, released 2023-01-25
 
 BREAKING CHANGE: This release removes some API aspects that were
