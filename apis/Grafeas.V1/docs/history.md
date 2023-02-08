@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.1.0, released 2023-02-08
+
+### New features
+
+- Make GrafeasClient simpler to work with ([commit a589ac8](https://github.com/googleapis/google-cloud-dotnet/commit/a589ac8d745c6c487ff2667382b4c222caf95ff3))
+- Add new analysis status and cvss version fields ([commit 14cf35b](https://github.com/googleapis/google-cloud-dotnet/commit/14cf35be7b9a64817cd00b20ae05a28d8931d5b5))
+
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
