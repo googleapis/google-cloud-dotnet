@@ -165,7 +165,6 @@
     "apis/Google.Cloud.SecretManager.V1/Google.Cloud.SecretManager.V1/**",
     "apis/Google.Cloud.SecretManager.V1Beta1/Google.Cloud.SecretManager.V1Beta1/**",
     "apis/Google.Cloud.Security.PrivateCA.V1/Google.Cloud.Security.PrivateCA.V1/**",
-    "apis/Google.Cloud.Security.PrivateCA.V1Beta1/Google.Cloud.Security.PrivateCA.V1Beta1/**",
     "apis/Google.Cloud.Security.PublicCA.V1Beta1/Google.Cloud.Security.PublicCA.V1Beta1/**",
     "apis/Google.Cloud.SecurityCenter.Settings.V1Beta1/Google.Cloud.SecurityCenter.Settings.V1Beta1/**",
     "apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1/**",
