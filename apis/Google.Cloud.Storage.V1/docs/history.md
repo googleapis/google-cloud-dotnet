@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.3.0, released 2023-02-08
+
+### New features
+
+- Retry Bucket.SetIamPolicy only conditionally. ([commit 3c70dd2](https://github.com/googleapis/google-cloud-dotnet/commit/3c70dd2ee07c453252dffdae8b8b21cafd222fd7))
+
 ## Version 4.2.0, released 2023-01-23
 
 ### New features
