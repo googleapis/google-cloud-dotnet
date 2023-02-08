@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.0.0-alpha05, released 2023-02-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove `LESS_THAN_OR_EQUAL`, `GREATER_THAN_OR_EQUAL` values from NumericFilter.Operation enum ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- **BREAKING CHANGE** Remove `PARTIAL_REGEXP` value from StringFilter.MatchType enum ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+
+### New features
+
+- Add `GetSearchAds360Link`, `ListSearchAds360Links`, `CreateSearchAds360Link`, `DeleteSearchAds360Link`, `UpdateSearchAds360Link` methods to the Admin API v1alpha ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `SetAutomatedGa4ConfigurationOptOut`, `FetchAutomatedGa4ConfigurationOptOut` methods to the Admin API v1alpha ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `GetBigQueryLink`, `ListBigQueryLinks` methods to the Admin API v1alpha ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `tokens_per_project_per_hour` field to `AccessQuota` type ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `EXPANDED_DATA_SET`, `CHANNEL_GROUP` values to `ChangeHistoryResourceType` enum ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `search_ads_360_link`, `expanded_data_set`, `bigquery_link` values to ChangeHistoryResource.resource oneof field ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+- Add `BigQueryLink`, `SearchAds360Link` resource types to the Admin API v1alpha ([commit 8f3fc34](https://github.com/googleapis/google-cloud-dotnet/commit/8f3fc3433185ee3f9b0f79f4c295b923e6796c1c))
+
 ## Version 2.0.0-alpha04, released 2023-01-19
 
 ### New features
