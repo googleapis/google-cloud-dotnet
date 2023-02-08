@@ -966,7 +966,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             DeleteSchemaRevisionRequest request = new DeleteSchemaRevisionRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                RevisionId = "",
             };
             // Make the request
             Schema response = schemaServiceClient.DeleteSchemaRevision(request);
@@ -984,7 +983,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             DeleteSchemaRevisionRequest request = new DeleteSchemaRevisionRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                RevisionId = "",
             };
             // Make the request
             Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(request);
@@ -1001,7 +999,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string name = "projects/[PROJECT]/schemas/[SCHEMA]";
             string revisionId = "";
             // Make the request
+#pragma warning disable CS0612
             Schema response = schemaServiceClient.DeleteSchemaRevision(name, revisionId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1016,7 +1016,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string name = "projects/[PROJECT]/schemas/[SCHEMA]";
             string revisionId = "";
             // Make the request
+#pragma warning disable CS0612
             Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(name, revisionId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1030,7 +1032,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
             string revisionId = "";
             // Make the request
+#pragma warning disable CS0612
             Schema response = schemaServiceClient.DeleteSchemaRevision(name, revisionId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1045,7 +1049,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SchemaName name = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]");
             string revisionId = "";
             // Make the request
+#pragma warning disable CS0612
             Schema response = await schemaServiceClient.DeleteSchemaRevisionAsync(name, revisionId);
+#pragma warning restore CS0612
             // End snippet
         }
 
