@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.3.0, released 2023-02-08
+
+### New features
+
+- Enable REST transport in C# ([commit 44c6d16](https://github.com/googleapis/google-cloud-dotnet/commit/44c6d16ce10fbea5debaae0eb22ea2f2dbda1b59))
+- DataScans service ([commit 300ee9a](https://github.com/googleapis/google-cloud-dotnet/commit/300ee9a5046e902fa445ddd2e102249ef3b80b80))
+- Added StorageFormat.iceberg ([commit 300ee9a](https://github.com/googleapis/google-cloud-dotnet/commit/300ee9a5046e902fa445ddd2e102249ef3b80b80))
+
+### Documentation improvements
+
+- Improvements to DataScan API documentation ([commit f4c2568](https://github.com/googleapis/google-cloud-dotnet/commit/f4c2568c5fb6fe0f674e298b5b332a04ed1ef51b))
+- Fix minor docstring formatting ([commit 0117520](https://github.com/googleapis/google-cloud-dotnet/commit/01175207962b27b34e86db961ab2cd93039e9c90))
+- Fix minor docstring formatting ([commit 66e3386](https://github.com/googleapis/google-cloud-dotnet/commit/66e338638742deadf1f2495e87a478b5e484d8d3))
+
 ## Version 2.2.0, released 2022-10-17
 
 ### New features
