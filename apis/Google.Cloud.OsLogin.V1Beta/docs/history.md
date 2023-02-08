@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.0.0-beta02, released 2023-02-08
+
+### New features
+
+- Enable REST transport ([commit 46d4fe8](https://github.com/googleapis/google-cloud-dotnet/commit/46d4fe8461ac30e7666600e44e7bd16228768621))
+- Added CreateSshPublicKey RPC ([commit ea76949](https://github.com/googleapis/google-cloud-dotnet/commit/ea76949ef04bdb3444666b5d79532f06cdc3d8c0))
+
 ## Version 3.0.0-beta01, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.

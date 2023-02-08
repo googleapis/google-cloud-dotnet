@@ -3130,7 +3130,7 @@
       "id": "Google.Cloud.OsLogin.Common",
       "generator": "micro",
       "protoPath": "google/cloud/oslogin/common",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "description": "Version-agnostic types for the Google OS Login API.",
@@ -3139,8 +3139,8 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.6.0",
-        "Google.Api.Gax": "4.2.0"
+        "Google.Api.CommonProtos": "2.7.0",
+        "Google.Api.Gax": "4.3.1"
       },
       "noVersionHistory": true,
       "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place.",
@@ -3152,7 +3152,7 @@
       "protoPath": "google/cloud/oslogin/v1",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to manage OS login configuration for Google account users.",
       "tags": [
@@ -3160,9 +3160,9 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.OsLogin.Common": "project",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
@@ -3176,7 +3176,7 @@
       "protoPath": "google/cloud/oslogin/v1beta",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "3.0.0-beta01",
+      "version": "3.0.0-beta02",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to manages OS login configuration for Google account users.",
@@ -3185,9 +3185,9 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.OsLogin.Common": "project",
-        "Grpc.Core": "2.46.3"
+        "Grpc.Core": "2.46.5"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
