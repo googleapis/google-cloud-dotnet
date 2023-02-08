@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.3.0, released 2023-02-08
+
+### New features
+
+- Enable REST transport in C# ([commit f6a1c3e](https://github.com/googleapis/google-cloud-dotnet/commit/f6a1c3e8930f0e8209a079352765be3bb9039be2))
+- Exposed RpcException property to SpannerException ([issue 9527](https://github.com/googleapis/google-cloud-dotnet/issues/9527)) ([commit 4c96a04](https://github.com/googleapis/google-cloud-dotnet/commit/4c96a040d4fb77e66368c5cb3fb786e4d97f8570))
+
 ## Version 4.2.0, released 2022-11-03
 
 ### Bug fixes
