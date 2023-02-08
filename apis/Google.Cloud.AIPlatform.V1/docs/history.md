@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.10.0, released 2023-02-08
+
+### New features
+
+- Add service_networking.proto to aiplatform v1 ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add private_service_connect_config to IndexEndpoint in aiplatform v1 index_endpoint.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add nas_job.proto to aiplatform v1 ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add CreateNasJob, GetNasJob, ListNasJobs, DeleteNasJob, CancelNasJob, GetNasTrialDetail, ListNasTrialDetails RPCs to aiplatform v1 job_service.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add original_model_info to Model in aiplatform v1 model.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add CopyModel RPC to aiplatform v1 model_service.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add failed_jobs to CustomJobDetail to aiplatform v1 pipeline_job.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+- Add safety_config to StudySpec in aiplatform v1 study.proto ([commit 189dffe](https://github.com/googleapis/google-cloud-dotnet/commit/189dffeda7937d84a4397f89621157711b7b2b03))
+
 ## Version 2.9.0, released 2023-01-18
 
 ### New features
