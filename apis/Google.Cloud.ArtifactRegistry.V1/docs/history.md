@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.2.0, released 2023-02-08
+
+### Bug fixes
+
+- Make `GetFileRequest.name` and `ListFilesRequest.parent` required ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+- Make `Package` a resource ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+- Deprecate `REDIRECTION_FROM_GCR_IO_FINALIZED` ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+
+### New features
+
+- Add format-specific resources `MavenArtifact`, `NpmPackage`, `KfpArtifact` and `PythonPackage` ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+- Add `order_by` to `ListDockerImages` ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+- Add an API to get and update VPCSC config ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+- Add `BatchDeleteVersionMetadata` to return version that failed to delete ([commit fdab706](https://github.com/googleapis/google-cloud-dotnet/commit/fdab7068c60f640d21113616cc77978578a3cf36))
+
 ## Version 2.1.0, released 2023-01-16
 
 ### New features
