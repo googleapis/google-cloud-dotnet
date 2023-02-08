@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.1.0, released 2023-02-08
+
+### Bug fixes
+
+- Fix package API metadata for ContainerAnalysis ([commit db7de2a](https://github.com/googleapis/google-cloud-dotnet/commit/db7de2a0379d0530ef86b42383d39ae03e130ec3))
+
+### New features
+
+- Enable REST transport in C# ([commit 31e55cd](https://github.com/googleapis/google-cloud-dotnet/commit/31e55cdbafe12bfae68e28a75a1b75ceb445684f))
+
 ## Version 3.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
