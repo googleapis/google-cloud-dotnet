@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.2.0, released 2023-02-08
+
+### New features
+
+- Added support for Azure workload identity federation ([commit 7286a94](https://github.com/googleapis/google-cloud-dotnet/commit/7286a9405ef61e850ee6d6c9efcc22decee49ee3))
+- Added `reconciling` and `update_time` output fields to Azure Client resource. ([commit 7286a94](https://github.com/googleapis/google-cloud-dotnet/commit/7286a9405ef61e850ee6d6c9efcc22decee49ee3))
+
 ## Version 2.1.0, released 2023-01-16
 
 ### New features
