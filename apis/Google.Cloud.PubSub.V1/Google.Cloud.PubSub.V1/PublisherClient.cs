@@ -14,10 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Protobuf;
-using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -38,12 +36,6 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public abstract class PublisherClient
     {
-        private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
-            .WithMaxReceiveMessageSize(int.MaxValue)
-            .WithMaxSendMessageSize(int.MaxValue)
-            // Set max metadata size to 4 MB i.e., 4194304 bytes.
-            .WithCustomOption("grpc.max_metadata_size", 4194304);
-
         // TODO: Logging
 
         /// <summary>
@@ -476,7 +468,7 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        private struct ReadyBatch
+        private readonly struct ReadyBatch
         {
             public ReadyBatch(KeyState state, Batch batch)
             {
