@@ -34,7 +34,12 @@ namespace Google.Cloud.PubSub.V1
     /// <summary>
     /// A PubSub publisher that is associated with a specific <see cref="TopicName"/>.
     /// </summary>
-    public abstract class PublisherClient
+    /// <remarks>
+    /// This class implements the <see cref="IAsyncDisposable"/> interface. However, it is recommended to create a single <c>PublisherClient</c> instance and use it throughout
+    /// the lifetime of the application. If the <c>PublisherClient</c> is registered in a dependency injection container, its
+    /// <c>DisposeAsync</c> method will be called automatically.
+    /// </remarks>
+    public abstract class PublisherClient : IAsyncDisposable
     {
         // TODO: Logging
 
@@ -53,6 +58,7 @@ namespace Google.Cloud.PubSub.V1
                 BatchingSettings = other.BatchingSettings;
                 Scheduler = other.Scheduler;
                 EnableMessageOrdering = other.EnableMessageOrdering;
+                DisposeTimeout = other.DisposeTimeout;
             }
 
             /// <summary>
@@ -72,6 +78,14 @@ namespace Google.Cloud.PubSub.V1
             /// if this has not been set to <c>true</c>.
             /// </summary>
             public bool EnableMessageOrdering { get; set; }
+
+            /// <summary>
+            /// Represents a time interval to wait for the <see cref="PublisherClient"/> to send any pending messages
+            /// after the <see cref="DisposeAsync"/> method has been called. If this time interval expires, the
+            /// clean shutdown process will be aborted, and there may be locally queued messages that remain unsent.
+            /// If <c>null</c>, defaults to <see cref="DefaultDisposeTimeout"/>.
+            /// </summary>
+            public TimeSpan? DisposeTimeout { get; set; }
 
             internal void Validate()
             {
@@ -200,6 +214,11 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000,000;
         /// </summary>
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
+
+        /// <summary>
+        /// The default <see cref="Settings.DisposeTimeout"/> of 5 seconds for the <see cref="PublisherClient"/>.
+        /// </summary>
+        public static TimeSpan DefaultDisposeTimeout { get; } = TimeSpan.FromSeconds(5);
 
         /// <summary>
         /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>, using default settings.
@@ -399,6 +418,17 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if
         /// <paramref name="timeout"/> expires.</returns>
         public virtual Task ShutdownAsync(TimeSpan timeout) => ShutdownAsync(new CancellationTokenSource(timeout).Token);
+
+        /// <summary>
+        /// Disposes this <see cref="PublisherClient"/> asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// This method asynchronously waits for the time interval as specified in the <see cref="Settings.DisposeTimeout"/>
+        /// for the <see cref="PublisherClient"/> to send any pending messages. If the clean shutdown is not
+        /// complete after this time, it is aborted; this may leave some locally queued messages unsent.
+        /// The time interval can be customized by setting the <see cref="Settings.DisposeTimeout"/>.
+        /// </remarks>
+        public virtual ValueTask DisposeAsync() => throw new NotImplementedException();
     }
 
     /// <summary>
@@ -503,6 +533,7 @@ namespace Google.Cloud.PubSub.V1
             _shutdown = shutdown;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _enableMessageOrdering = settings.EnableMessageOrdering;
+            _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
 
             // Initialise batching settings. Use ApiMax settings for components not given.
             var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
@@ -525,6 +556,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly TaskHelper _taskHelper;
         private readonly Func<Task> _shutdown;
         private readonly bool _enableMessageOrdering;
+        private readonly TimeSpan _disposeTimeout;
 
         // Batching settings
         private readonly long _batchElementCountThreshold;
@@ -626,12 +658,22 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
+        /// <inheritdoc/>        
+        public override ValueTask DisposeAsync() => new ValueTask(ShutdownAsync(_disposeTimeout));
+
         /// <inheritdoc/>
         public override Task ShutdownAsync(CancellationToken hardStopToken)
         {
             lock (_lock)
             {
-                CheckShutdown();
+                // If we come here for a second or subsequent time, this condition would always be true.
+                // Note: If multiple shutdown requests are made, only the first cancellation token is observed. 
+                if (_softStopCts.IsCancellationRequested)
+                {
+                    // No-op. We don't want to throw exceptions if DisposeAsync or ShutdownAsync is called a second time.
+                    return _shutdownTcs.Task;
+                }
+                
                 _softStopCts.Cancel();
                 foreach (var state in _keyedState.Values)
                 {

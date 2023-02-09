@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -93,13 +93,14 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         private PublisherClient.Settings MakeSettings(IScheduler scheduler,
-            int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1, bool enableMessageOrdering = false)
+            int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1, bool enableMessageOrdering = false, TimeSpan? disposeTimeout = null)
         {
             return new PublisherClient.Settings
             {
                 Scheduler = scheduler,
                 BatchingSettings = new BatchingSettings(batchElementCountThreshold, batchRequestByteThreshold, TimeSpan.FromSeconds(10)),
-                EnableMessageOrdering = enableMessageOrdering
+                EnableMessageOrdering = enableMessageOrdering,
+                DisposeTimeout = disposeTimeout
             };
 
         }
@@ -187,6 +188,42 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Equal(hardStop, isCancelled);
                 Assert.Equal(hardStop ? null : "1", pubResult);
                 Assert.Equal(hardStop ? 0 : 1, client.HandledMessages.Count);
+                Assert.Equal(1, shutdownCount);
+            });
+        }
+
+        // The test is similar to Shutdown but checks that calling DisposeAsync() instead of ShutdownAsync() works.
+        // It also tests that DisposeAsync() or ShutdownAsync() can be called multiple times, without throwing exception.
+        [Fact]
+        public void Dispose()
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, delays: new[] { TimeSpan.FromSeconds(1) });
+            var settings = MakeSettings(scheduler, batchElementCountThreshold: 2, batchRequestByteThreshold: 1000);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                // Publish a message.
+                var pubTask = pub.PublishAsync("1");
+                // Dispose the publisher. 
+                await taskHelper.ConfigureAwaitHideCancellation(
+                   () => pub.DisposeAsync().AsTask());
+                // Call DisposeAsync again. It shouldn't throw an exception.
+                await taskHelper.ConfigureAwaitHideCancellation(
+                   () => pub.DisposeAsync().AsTask());
+                // Call ShutdownAsync. It shouldn't throw an exception.
+                await taskHelper.ConfigureAwaitHideCancellation(
+                  () => pub.ShutdownAsync(CancellationToken.None));
+                // Get the result of the publish task.
+                var pubResult = await taskHelper.ConfigureAwaitHideCancellation(() => pubTask, null);
+                Assert.Equal("1", pubResult);
                 Assert.Equal(1, shutdownCount);
             });
         }
