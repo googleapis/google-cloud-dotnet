@@ -448,7 +448,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
-                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false)
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false, TimeSpan? disposeTimeout = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
@@ -463,6 +463,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     AckDeadline = ackDeadline,
                     AckExtensionWindow = ackExtendWindow,
                     FlowControlSettings = new FlowControlSettings(flowMaxElements, flowMaxBytes),
+                    DisposeTimeout = disposeTimeout
                 };
                 Task Shutdown()
                 {
@@ -542,7 +543,41 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
+        // The test is similar to ImmediateStop but checks that calling DisposeAsync() instead of StopAsync() works.
+        // It also tests that DisposeAsync() or StopAsync() can be called multiple times, without throwing exception.
+        [Fact]
+        public void Dispose()
+        {
+            using (var fake = Fake.Create(new[] { new[] { ServerAction.Inf() } }))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        throw new Exception("Should never get here");
+                    });
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                    // Dispose the subscriber. 
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.DisposeAsync().AsTask());
+                    // Call DisposeAsync again. It shouldn't throw an exception.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                       () => fake.Subscriber.DisposeAsync().AsTask());
+                    // Call StopAsync. It shouldn't throw an exception.
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                       () => fake.Subscriber.StopAsync(CancellationToken.None));
+
+                    Assert.Equal(1, fake.Subscribers.Count);
+                    Assert.Empty(fake.Subscribers[0].Acks);
+                    Assert.Empty(fake.Subscribers[0].Nacks);
+                    Assert.Empty(fake.Subscribers[0].Extends);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
+                });
+            }
+        }
+
         [Theory, PairwiseData]
         public void RecvManyMsgsNoErrors(
             [CombinatorialValues(false, true)] bool hardStop,
