@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8iUQoLVGFibGVTY2hlbWESQgoGZmll",
             "bGRzGAEgAygLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
-            "VGFibGVGaWVsZFNjaGVtYSKFBQoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
+            "VGFibGVGaWVsZFNjaGVtYSKsBQoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
             "GAEgASgJQgPgQQISSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRTY2hlbWEuVHlwZUID4EECEkoK",
             "BG1vZGUYAyABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
@@ -36,23 +36,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "Mi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxk",
             "U2NoZW1hQgPgQQESGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBARIXCgptYXhf",
             "bGVuZ3RoGAcgASgDQgPgQQESFgoJcHJlY2lzaW9uGAggASgDQgPgQQESEgoF",
-            "c2NhbGUYCSABKANCA+BBASLVAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVE",
-            "EAASCgoGU1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VCTEUQAxIKCgZTVFJV",
-            "Q1QQBBIJCgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1FU1RBTVAQBxIICgRE",
-            "QVRFEAgSCAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJR0VPR1JBUEhZEAsS",
-            "CwoHTlVNRVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJTlRFUlZBTBAOEggK",
-            "BEpTT04QDyJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghOVUxM",
-            "QUJMRRABEgwKCFJFUVVJUkVEEAISDAoIUkVQRUFURUQQA0K6AQokY29tLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpUYWJsZVByb3RvUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2MS9z",
-            "dG9yYWdlcGI7c3RvcmFnZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0",
-            "b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIG",
-            "cHJvdG8z"));
+            "c2NhbGUYCSABKANCA+BBARIlChhkZWZhdWx0X3ZhbHVlX2V4cHJlc3Npb24Y",
+            "CiABKAlCA+BBASLVAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "U1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VCTEUQAxIKCgZTVFJVQ1QQBBIJ",
+            "CgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1FU1RBTVAQBxIICgREQVRFEAgS",
+            "CAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJR0VPR1JBUEhZEAsSCwoHTlVN",
+            "RVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJTlRFUlZBTBAOEggKBEpTT04Q",
+            "DyJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghOVUxMQUJMRRAB",
+            "EgwKCFJFUVVJUkVEEAISDAoIUkVQRUFURUQQA0K6AQokY29tLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpUYWJsZVByb3RvUAFaPmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdl",
+            "cGI7c3RvcmFnZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2Uu",
+            "VjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableSchema), global::Google.Cloud.BigQuery.Storage.V1.TableSchema.Parser, new[]{ "Fields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale", "DefaultValueExpression" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, null)
           }));
     }
     #endregion
@@ -290,6 +290,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       maxLength_ = other.maxLength_;
       precision_ = other.precision_;
       scale_ = other.scale_;
+      defaultValueExpression_ = other.defaultValueExpression_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -463,6 +464,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "default_value_expression" field.</summary>
+    public const int DefaultValueExpressionFieldNumber = 10;
+    private string defaultValueExpression_ = "";
+    /// <summary>
+    /// Optional. A SQL expression to specify the [default value]
+    /// (https://cloud.google.com/bigquery/docs/default-values) for this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DefaultValueExpression {
+      get { return defaultValueExpression_; }
+      set {
+        defaultValueExpression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -486,6 +503,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (MaxLength != other.MaxLength) return false;
       if (Precision != other.Precision) return false;
       if (Scale != other.Scale) return false;
+      if (DefaultValueExpression != other.DefaultValueExpression) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -501,6 +519,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (MaxLength != 0L) hash ^= MaxLength.GetHashCode();
       if (Precision != 0L) hash ^= Precision.GetHashCode();
       if (Scale != 0L) hash ^= Scale.GetHashCode();
+      if (DefaultValueExpression.Length != 0) hash ^= DefaultValueExpression.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -548,6 +567,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(72);
         output.WriteInt64(Scale);
       }
+      if (DefaultValueExpression.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DefaultValueExpression);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -587,6 +610,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(72);
         output.WriteInt64(Scale);
       }
+      if (DefaultValueExpression.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DefaultValueExpression);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -618,6 +645,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (Scale != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Scale);
+      }
+      if (DefaultValueExpression.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValueExpression);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -652,6 +682,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.Scale != 0L) {
         Scale = other.Scale;
+      }
+      if (other.DefaultValueExpression.Length != 0) {
+        DefaultValueExpression = other.DefaultValueExpression;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -700,6 +733,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             Scale = input.ReadInt64();
             break;
           }
+          case 82: {
+            DefaultValueExpression = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -745,6 +782,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 72: {
             Scale = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            DefaultValueExpression = input.ReadString();
             break;
           }
         }
