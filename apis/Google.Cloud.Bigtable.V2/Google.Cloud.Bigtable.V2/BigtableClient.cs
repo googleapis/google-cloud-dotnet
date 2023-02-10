@@ -267,8 +267,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -283,8 +284,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -299,8 +301,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -312,8 +315,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -328,8 +332,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -344,8 +349,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -357,8 +363,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -378,8 +385,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -399,8 +407,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -416,8 +425,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -437,8 +447,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -458,8 +469,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -508,6 +520,214 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, st::CancellationToken cancellationToken) =>
             ReadModifyWriteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="GenerateInitialChangeStreamPartitionsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(string tableName, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadChangeStreamRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(string tableName, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
@@ -551,5 +771,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRowAsync(request, callSettings);
+
+        /// <inheritdoc/>
+        public override BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest request, gaxgrpc::CallSettings callSettings = null) => _client.GenerateInitialChangeStreamPartitions(request, callSettings);
+
+        /// <inheritdoc/>
+        public override BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadChangeStream(request, callSettings);
     }
 }

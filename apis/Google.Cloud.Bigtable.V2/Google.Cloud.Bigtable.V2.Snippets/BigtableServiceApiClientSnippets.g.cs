@@ -19,6 +19,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -1107,6 +1108,252 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             string appProfileId = "";
             // Make the request
             ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInitialChangeStreamPartitions</summary>
+        public async Task GenerateInitialChangeStreamPartitionsRequestObject()
+        {
+            // Snippet: GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            GenerateInitialChangeStreamPartitionsRequest request = new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                AppProfileId = "",
+            };
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInitialChangeStreamPartitions</summary>
+        public async Task GenerateInitialChangeStreamPartitions1()
+        {
+            // Snippet: GenerateInitialChangeStreamPartitions(string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInitialChangeStreamPartitions</summary>
+        public async Task GenerateInitialChangeStreamPartitions1ResourceNames()
+        {
+            // Snippet: GenerateInitialChangeStreamPartitions(TableName, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInitialChangeStreamPartitions</summary>
+        public async Task GenerateInitialChangeStreamPartitions2()
+        {
+            // Snippet: GenerateInitialChangeStreamPartitions(string, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateInitialChangeStreamPartitions</summary>
+        public async Task GenerateInitialChangeStreamPartitions2ResourceNames()
+        {
+            // Snippet: GenerateInitialChangeStreamPartitions(TableName, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<GenerateInitialChangeStreamPartitionsResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                GenerateInitialChangeStreamPartitionsResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadChangeStream</summary>
+        public async Task ReadChangeStreamRequestObject()
+        {
+            // Snippet: ReadChangeStream(ReadChangeStreamRequest, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            ReadChangeStreamRequest request = new ReadChangeStreamRequest
+            {
+                TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                AppProfileId = "",
+                Partition = new StreamPartition(),
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+                HeartbeatDuration = new Duration(),
+            };
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadChangeStream</summary>
+        public async Task ReadChangeStream1()
+        {
+            // Snippet: ReadChangeStream(string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadChangeStream</summary>
+        public async Task ReadChangeStream1ResourceNames()
+        {
+            // Snippet: ReadChangeStream(TableName, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadChangeStream</summary>
+        public async Task ReadChangeStream2()
+        {
+            // Snippet: ReadChangeStream(string, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadChangeStream</summary>
+        public async Task ReadChangeStream2ResourceNames()
+        {
+            // Snippet: ReadChangeStream(TableName, string, CallSettings)
+            // Create client
+            BigtableServiceApiClient bigtableServiceApiClient = BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            string appProfileId = "";
+            // Make the request, returning a streaming response
+            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ReadChangeStreamResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ReadChangeStreamResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
     }

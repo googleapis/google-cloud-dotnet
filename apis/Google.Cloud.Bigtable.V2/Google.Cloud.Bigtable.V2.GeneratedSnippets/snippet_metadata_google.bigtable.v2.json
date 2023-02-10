@@ -2075,6 +2075,378 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync",
+      "title": "GenerateInitialChangeStreamPartitionsRequestObject",
+      "description": "Snippet for GenerateInitialChangeStreamPartitions",
+      "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInitialChangeStreamPartitions",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened1",
+      "title": "GenerateInitialChangeStreamPartitions1",
+      "description": "Snippet for GenerateInitialChangeStreamPartitions",
+      "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInitialChangeStreamPartitions",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened1_resourceNames",
+      "title": "GenerateInitialChangeStreamPartitions1ResourceNames",
+      "description": "Snippet for GenerateInitialChangeStreamPartitions",
+      "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInitialChangeStreamPartitions",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened2",
+      "title": "GenerateInitialChangeStreamPartitions2",
+      "description": "Snippet for GenerateInitialChangeStreamPartitions",
+      "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInitialChangeStreamPartitions",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened2_resourceNames",
+      "title": "GenerateInitialChangeStreamPartitions2ResourceNames",
+      "description": "Snippet for GenerateInitialChangeStreamPartitions",
+      "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateInitialChangeStreamPartitions",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync",
+      "title": "ReadChangeStreamRequestObject",
+      "description": "Snippet for ReadChangeStream",
+      "file": "BigtableServiceApiClient.ReadChangeStreamRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadChangeStream",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadChangeStream",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened1",
+      "title": "ReadChangeStream1",
+      "description": "Snippet for ReadChangeStream",
+      "file": "BigtableServiceApiClient.ReadChangeStream1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadChangeStream",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadChangeStream",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened1_resourceNames",
+      "title": "ReadChangeStream1ResourceNames",
+      "description": "Snippet for ReadChangeStream",
+      "file": "BigtableServiceApiClient.ReadChangeStream1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadChangeStream",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadChangeStream",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2",
+      "title": "ReadChangeStream2",
+      "description": "Snippet for ReadChangeStream",
+      "file": "BigtableServiceApiClient.ReadChangeStream2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadChangeStream",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadChangeStream",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2_resourceNames",
+      "title": "ReadChangeStream2ResourceNames",
+      "description": "Snippet for ReadChangeStream",
+      "file": "BigtableServiceApiClient.ReadChangeStream2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadChangeStream",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "ReadChangeStream",
+          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "service": {
+            "shortName": "BigtableServiceApi",
+            "fullName": "google.bigtable.v2.BigtableServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

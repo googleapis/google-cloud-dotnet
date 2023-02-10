@@ -102,4 +102,28 @@ namespace Google.Cloud.Bigtable.V2
             set => TableName = value?.ToString() ?? "";
         }
     }
+
+    public partial class GenerateInitialChangeStreamPartitionsRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableNameAsTableName
+        {
+            get => string.IsNullOrEmpty(TableName) ? null : gcbcv::TableName.Parse(TableName, allowUnparsed: true);
+            set => TableName = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReadChangeStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName TableNameAsTableName
+        {
+            get => string.IsNullOrEmpty(TableName) ? null : gcbcv::TableName.Parse(TableName, allowUnparsed: true);
+            set => TableName = value?.ToString() ?? "";
+        }
+    }
 }

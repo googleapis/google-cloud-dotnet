@@ -16,6 +16,12 @@
                 "CheckAndMutateRowAsync"
               ]
             },
+            "GenerateInitialChangeStreamPartitions": {
+              "methods": [
+                "GenerateInitialChangeStreamPartitions",
+                "GenerateInitialChangeStreamPartitionsAsync"
+              ]
+            },
             "MutateRow": {
               "methods": [
                 "MutateRow",
@@ -32,6 +38,12 @@
               "methods": [
                 "PingAndWarm",
                 "PingAndWarmAsync"
+              ]
+            },
+            "ReadChangeStream": {
+              "methods": [
+                "ReadChangeStream",
+                "ReadChangeStreamAsync"
               ]
             },
             "ReadModifyWriteRow": {

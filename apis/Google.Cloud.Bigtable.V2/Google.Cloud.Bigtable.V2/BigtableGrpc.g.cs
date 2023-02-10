@@ -91,6 +91,14 @@ namespace Google.Cloud.Bigtable.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest> __Marshaller_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse> __Marshaller_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest> __Marshaller_google_bigtable_v2_ReadChangeStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> __Marshaller_google_bigtable_v2_ReadChangeStreamResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Method_ReadRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse>(
@@ -147,6 +155,22 @@ namespace Google.Cloud.Bigtable.V2 {
         "ReadModifyWriteRow",
         __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest,
         __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse> __Method_GenerateInitialChangeStreamPartitions = new grpc::Method<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GenerateInitialChangeStreamPartitions",
+        __Marshaller_google_bigtable_v2_GenerateInitialChangeStreamPartitionsRequest,
+        __Marshaller_google_bigtable_v2_GenerateInitialChangeStreamPartitionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> __Method_ReadChangeStream = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ReadChangeStream",
+        __Marshaller_google_bigtable_v2_ReadChangeStreamRequest,
+        __Marshaller_google_bigtable_v2_ReadChangeStreamResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -256,6 +280,38 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Returns the current list of partitions that make up the table's
+      /// change stream. The union of partitions will cover the entire keyspace.
+      /// Partitions can be read with `ReadChangeStream`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task GenerateInitialChangeStreamPartitions(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Reads changes from a table's change stream. Changes will
+      /// reflect both user-initiated mutations and mutations that are caused by
+      /// garbage collection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ReadChangeStream(global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -595,6 +651,66 @@ namespace Google.Cloud.Bigtable.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
       }
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Returns the current list of partitions that make up the table's
+      /// change stream. The union of partitions will cover the entire keyspace.
+      /// Partitions can be read with `ReadChangeStream`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse> GenerateInitialChangeStreamPartitions(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateInitialChangeStreamPartitions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Returns the current list of partitions that make up the table's
+      /// change stream. The union of partitions will cover the entire keyspace.
+      /// Partitions can be read with `ReadChangeStream`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse> GenerateInitialChangeStreamPartitions(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_GenerateInitialChangeStreamPartitions, null, options, request);
+      }
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Reads changes from a table's change stream. Changes will
+      /// reflect both user-initiated mutations and mutations that are caused by
+      /// garbage collection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> ReadChangeStream(global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReadChangeStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+      /// Reads changes from a table's change stream. Changes will
+      /// reflect both user-initiated mutations and mutations that are caused by
+      /// garbage collection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> ReadChangeStream(global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ReadChangeStream, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BigtableClient NewInstance(ClientBaseConfiguration configuration)
@@ -615,7 +731,9 @@ namespace Google.Cloud.Bigtable.V2 {
           .AddMethod(__Method_MutateRows, serviceImpl.MutateRows)
           .AddMethod(__Method_CheckAndMutateRow, serviceImpl.CheckAndMutateRow)
           .AddMethod(__Method_PingAndWarm, serviceImpl.PingAndWarm)
-          .AddMethod(__Method_ReadModifyWriteRow, serviceImpl.ReadModifyWriteRow).Build();
+          .AddMethod(__Method_ReadModifyWriteRow, serviceImpl.ReadModifyWriteRow)
+          .AddMethod(__Method_GenerateInitialChangeStreamPartitions, serviceImpl.GenerateInitialChangeStreamPartitions)
+          .AddMethod(__Method_ReadChangeStream, serviceImpl.ReadChangeStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -632,6 +750,8 @@ namespace Google.Cloud.Bigtable.V2 {
       serviceBinder.AddMethod(__Method_CheckAndMutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>(serviceImpl.CheckAndMutateRow));
       serviceBinder.AddMethod(__Method_PingAndWarm, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.PingAndWarmRequest, global::Google.Cloud.Bigtable.V2.PingAndWarmResponse>(serviceImpl.PingAndWarm));
       serviceBinder.AddMethod(__Method_ReadModifyWriteRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>(serviceImpl.ReadModifyWriteRow));
+      serviceBinder.AddMethod(__Method_GenerateInitialChangeStreamPartitions, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse>(serviceImpl.GenerateInitialChangeStreamPartitions));
+      serviceBinder.AddMethod(__Method_ReadChangeStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse>(serviceImpl.ReadChangeStream));
     }
 
   }
