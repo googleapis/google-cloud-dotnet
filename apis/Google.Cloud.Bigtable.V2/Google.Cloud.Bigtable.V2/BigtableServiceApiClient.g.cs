@@ -53,6 +53,8 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowSettings = existing.CheckAndMutateRowSettings;
             PingAndWarmSettings = existing.PingAndWarmSettings;
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
+            GenerateInitialChangeStreamPartitionsSettings = existing.GenerateInitialChangeStreamPartitionsSettings;
+            ReadChangeStreamSettings = existing.ReadChangeStreamSettings;
             OnCopy(existing);
         }
 
@@ -152,6 +154,31 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ReadModifyWriteRowSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.GenerateInitialChangeStreamPartitions</c> and
+        /// <c>BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateInitialChangeStreamPartitionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableServiceApiClient.ReadChangeStream</c> and <c>BigtableServiceApiClient.ReadChangeStreamAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 43200 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadChangeStreamSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(43200000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableServiceApiSettings"/> object.</returns>
@@ -557,17 +584,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -587,17 +614,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -617,17 +644,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -639,17 +666,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -669,17 +696,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -699,17 +726,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -721,17 +748,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -756,17 +783,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -791,17 +818,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -817,17 +844,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -852,17 +879,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -887,17 +914,17 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the mutation should be
+        /// applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
         /// Required. The key of the row to which the mutation should be applied.
         /// </param>
         /// <param name="mutations">
-        /// Required. Changes to be atomically applied to the specified row. Entries are applied
-        /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Required. Changes to be atomically applied to the specified row. Entries
+        /// are applied in order, meaning that earlier mutations can be masked by later
+        /// ones. Must contain at least one entry and at most 100000.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -932,7 +959,8 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be
+        /// applied.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -959,7 +987,8 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be
+        /// applied.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -986,7 +1015,8 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be
+        /// applied.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -1018,7 +1048,8 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be applied.
+        /// Required. The unique name of the table to which the mutations should be
+        /// applied.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -1075,13 +1106,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1125,13 +1156,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1175,13 +1206,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1212,13 +1243,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1262,13 +1293,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1312,13 +1343,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1349,13 +1380,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1404,13 +1435,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1459,13 +1490,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1500,13 +1531,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1555,13 +1586,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1610,13 +1641,13 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the conditional mutation
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the conditional mutation should be applied.
+        /// Required. The key of the row to which the conditional mutation should be
+        /// applied.
         /// </param>
         /// <param name="predicateFilter">
         /// The filter to be applied to the contents of the specified row. Depending
@@ -1682,8 +1713,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1698,8 +1730,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1714,8 +1747,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1727,8 +1761,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1743,8 +1778,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1759,8 +1795,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1772,8 +1809,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1793,8 +1831,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1814,8 +1853,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1831,8 +1871,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1852,8 +1893,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1873,8 +1915,9 @@ namespace Google.Cloud.Bigtable.V2
         /// This call is not required but may be useful for connection keep-alive.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the instance to check permissions for as well as
-        /// respond. Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The unique name of the instance to check permissions for as well
+        /// as respond. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -1932,18 +1975,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1966,18 +2009,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2000,18 +2043,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2026,18 +2069,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2060,18 +2103,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2094,18 +2137,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2120,18 +2163,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2159,18 +2202,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2198,18 +2241,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2228,18 +2271,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2267,18 +2310,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2306,18 +2349,18 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules should be
-        /// applied.
-        /// Values are of the form
+        /// Required. The unique name of the table to which the read/modify/write rules
+        /// should be applied. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
-        /// Required. The key of the row to which the read/modify/write rules should be applied.
+        /// Required. The key of the row to which the read/modify/write rules should be
+        /// applied.
         /// </param>
         /// <param name="rules">
-        /// Required. Rules specifying how the specified row's contents are to be transformed
-        /// into writes. Entries are applied in order, meaning that earlier rules will
-        /// affect the results of later ones.
+        /// Required. Rules specifying how the specified row's contents are to be
+        /// transformed into writes. Entries are applied in order, meaning that earlier
+        /// rules will affect the results of later ones.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2327,6 +2370,230 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, st::CancellationToken cancellationToken) =>
             ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Server streaming methods for
+        /// <see cref="GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest,gaxgrpc::CallSettings)"/>
+        /// .
+        /// </summary>
+        public abstract partial class GenerateInitialChangeStreamPartitionsStream : gaxgrpc::ServerStreamingBase<GenerateInitialChangeStreamPartitionsResponse>
+        {
+        }
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(string tableName, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to get change stream
+        /// partitions. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateInitialChangeStreamPartitions(new GenerateInitialChangeStreamPartitionsRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Server streaming methods for <see cref="ReadChangeStream(ReadChangeStreamRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class ReadChangeStreamStream : gaxgrpc::ServerStreamingBase<ReadChangeStreamResponse>
+        {
+        }
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadChangeStreamStream ReadChangeStream(string tableName, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadChangeStreamStream ReadChangeStream(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadChangeStreamStream ReadChangeStream(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="tableName">
+        /// Required. The unique name of the table from which to read a change stream.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// Change streaming must be enabled on the table.
+        /// </param>
+        /// <param name="appProfileId">
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// Single cluster routing must be configured on the profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ReadChangeStreamStream ReadChangeStream(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            ReadChangeStream(new ReadChangeStreamRequest
+            {
+                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                AppProfileId = appProfileId ?? "",
+            }, callSettings);
     }
 
     /// <summary>BigtableServiceApi client wrapper implementation, for convenient use.</summary>
@@ -2348,6 +2615,10 @@ namespace Google.Cloud.Bigtable.V2
         private readonly gaxgrpc::ApiCall<PingAndWarmRequest, PingAndWarmResponse> _callPingAndWarm;
 
         private readonly gaxgrpc::ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> _callReadModifyWriteRow;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<GenerateInitialChangeStreamPartitionsRequest, GenerateInitialChangeStreamPartitionsResponse> _callGenerateInitialChangeStreamPartitions;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<ReadChangeStreamRequest, ReadChangeStreamResponse> _callReadChangeStream;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableServiceApi service, with the specified gRPC client and settings.
@@ -2381,6 +2652,12 @@ namespace Google.Cloud.Bigtable.V2
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>("ReadModifyWriteRow", grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callReadModifyWriteRow);
             Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
+            _callGenerateInitialChangeStreamPartitions = clientHelper.BuildApiCall<GenerateInitialChangeStreamPartitionsRequest, GenerateInitialChangeStreamPartitionsResponse>("GenerateInitialChangeStreamPartitions", grpcClient.GenerateInitialChangeStreamPartitions, effectiveSettings.GenerateInitialChangeStreamPartitionsSettings).WithGoogleRequestParam("table_name", request => request.TableName);
+            Modify_ApiCall(ref _callGenerateInitialChangeStreamPartitions);
+            Modify_GenerateInitialChangeStreamPartitionsApiCall(ref _callGenerateInitialChangeStreamPartitions);
+            _callReadChangeStream = clientHelper.BuildApiCall<ReadChangeStreamRequest, ReadChangeStreamResponse>("ReadChangeStream", grpcClient.ReadChangeStream, effectiveSettings.ReadChangeStreamSettings).WithGoogleRequestParam("table_name", request => request.TableName);
+            Modify_ApiCall(ref _callReadChangeStream);
+            Modify_ReadChangeStreamApiCall(ref _callReadChangeStream);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2402,6 +2679,10 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void Modify_ReadModifyWriteRowApiCall(ref gaxgrpc::ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> call);
 
+        partial void Modify_GenerateInitialChangeStreamPartitionsApiCall(ref gaxgrpc::ApiServerStreamingCall<GenerateInitialChangeStreamPartitionsRequest, GenerateInitialChangeStreamPartitionsResponse> call);
+
+        partial void Modify_ReadChangeStreamApiCall(ref gaxgrpc::ApiServerStreamingCall<ReadChangeStreamRequest, ReadChangeStreamResponse> call);
+
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BigtableServiceApi client</summary>
@@ -2420,6 +2701,10 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_PingAndWarmRequest(ref PingAndWarmRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateInitialChangeStreamPartitionsRequest(ref GenerateInitialChangeStreamPartitionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadChangeStreamRequest(ref ReadChangeStreamRequest request, ref gaxgrpc::CallSettings settings);
 
         internal sealed partial class ReadRowsStreamImpl : ReadRowsStream
         {
@@ -2599,6 +2884,56 @@ namespace Google.Cloud.Bigtable.V2
         {
             Modify_ReadModifyWriteRowRequest(ref request, ref callSettings);
             return _callReadModifyWriteRow.Async(request, callSettings);
+        }
+
+        internal sealed partial class GenerateInitialChangeStreamPartitionsStreamImpl : GenerateInitialChangeStreamPartitionsStream
+        {
+            /// <summary>
+            /// Construct the server streaming method for <c>GenerateInitialChangeStreamPartitions</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public GenerateInitialChangeStreamPartitionsStreamImpl(grpccore::AsyncServerStreamingCall<GenerateInitialChangeStreamPartitionsResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<GenerateInitialChangeStreamPartitionsResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Returns the current list of partitions that make up the table's
+        /// change stream. The union of partitions will cover the entire keyspace.
+        /// Partitions can be read with `ReadChangeStream`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream GenerateInitialChangeStreamPartitions(GenerateInitialChangeStreamPartitionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateInitialChangeStreamPartitionsRequest(ref request, ref callSettings);
+            return new GenerateInitialChangeStreamPartitionsStreamImpl(_callGenerateInitialChangeStreamPartitions.Call(request, callSettings));
+        }
+
+        internal sealed partial class ReadChangeStreamStreamImpl : ReadChangeStreamStream
+        {
+            /// <summary>Construct the server streaming method for <c>ReadChangeStream</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public ReadChangeStreamStreamImpl(grpccore::AsyncServerStreamingCall<ReadChangeStreamResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<ReadChangeStreamResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+        /// Reads changes from a table's change stream. Changes will
+        /// reflect both user-initiated mutations and mutations that are caused by
+        /// garbage collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadChangeStreamRequest(ref request, ref callSettings);
+            return new ReadChangeStreamStreamImpl(_callReadChangeStream.Call(request, callSettings));
         }
     }
 }

@@ -30,129 +30,185 @@ namespace Google.Cloud.Bigtable.V2 {
             "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGGdvb2dsZS9h",
             "cGkvcm91dGluZy5wcm90bxodZ29vZ2xlL2JpZ3RhYmxlL3YyL2RhdGEucHJv",
             "dG8aJmdvb2dsZS9iaWd0YWJsZS92Mi9yZXF1ZXN0X3N0YXRzLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aF2dvb2dsZS9ycGMvc3Rh",
-            "dHVzLnByb3RvIpADCg9SZWFkUm93c1JlcXVlc3QSPgoKdGFibGVfbmFtZRgB",
-            "IAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1Rh",
-            "YmxlEhYKDmFwcF9wcm9maWxlX2lkGAUgASgJEigKBHJvd3MYAiABKAsyGi5n",
-            "b29nbGUuYmlndGFibGUudjIuUm93U2V0Ei0KBmZpbHRlchgDIAEoCzIdLmdv",
-            "b2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISEgoKcm93c19saW1pdBgEIAEo",
-            "AxJQChJyZXF1ZXN0X3N0YXRzX3ZpZXcYBiABKA4yNC5nb29nbGUuYmlndGFi",
-            "bGUudjIuUmVhZFJvd3NSZXF1ZXN0LlJlcXVlc3RTdGF0c1ZpZXciZgoQUmVx",
-            "dWVzdFN0YXRzVmlldxIiCh5SRVFVRVNUX1NUQVRTX1ZJRVdfVU5TUEVDSUZJ",
-            "RUQQABIWChJSRVFVRVNUX1NUQVRTX05PTkUQARIWChJSRVFVRVNUX1NUQVRT",
-            "X0ZVTEwQAiKxAwoQUmVhZFJvd3NSZXNwb25zZRI+CgZjaHVua3MYASADKAsy",
-            "Li5nb29nbGUuYmlndGFibGUudjIuUmVhZFJvd3NSZXNwb25zZS5DZWxsQ2h1",
-            "bmsSHAoUbGFzdF9zY2FubmVkX3Jvd19rZXkYAiABKAwSNwoNcmVxdWVzdF9z",
-            "dGF0cxgDIAEoCzIgLmdvb2dsZS5iaWd0YWJsZS52Mi5SZXF1ZXN0U3RhdHMa",
-            "hQIKCUNlbGxDaHVuaxIPCgdyb3dfa2V5GAEgASgMEjEKC2ZhbWlseV9uYW1l",
-            "GAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi4KCXF1YWxp",
-            "ZmllchgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5CeXRlc1ZhbHVlEhgKEHRp",
-            "bWVzdGFtcF9taWNyb3MYBCABKAMSDgoGbGFiZWxzGAUgAygJEg0KBXZhbHVl",
-            "GAYgASgMEhIKCnZhbHVlX3NpemUYByABKAUSEwoJcmVzZXRfcm93GAggASgI",
-            "SAASFAoKY29tbWl0X3JvdxgJIAEoCEgAQgwKCnJvd19zdGF0dXMibgoUU2Ft",
-            "cGxlUm93S2V5c1JlcXVlc3QSPgoKdGFibGVfbmFtZRgBIAEoCUIq4EEC+kEk",
-            "CiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEhYKDmFwcF9w",
-            "cm9maWxlX2lkGAIgASgJIj4KFVNhbXBsZVJvd0tleXNSZXNwb25zZRIPCgdy",
-            "b3dfa2V5GAEgASgMEhQKDG9mZnNldF9ieXRlcxgCIAEoAyK2AQoQTXV0YXRl",
-            "Um93UmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQKImJpZ3Rh",
-            "YmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVf",
-            "aWQYBCABKAkSFAoHcm93X2tleRgCIAEoDEID4EECEjQKCW11dGF0aW9ucxgD",
-            "IAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbkID4EECIhMKEU11",
-            "dGF0ZVJvd1Jlc3BvbnNlIv4BChFNdXRhdGVSb3dzUmVxdWVzdBI+Cgp0YWJs",
+            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
+            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ikAMKD1JlYWRSb3dzUmVx",
+            "dWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYBSAB",
+            "KAkSKAoEcm93cxgCIAEoCzIaLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dTZXQS",
+            "LQoGZmlsdGVyGAMgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRl",
+            "chISCgpyb3dzX2xpbWl0GAQgASgDElAKEnJlcXVlc3Rfc3RhdHNfdmlldxgG",
+            "IAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QuUmVx",
+            "dWVzdFN0YXRzVmlldyJmChBSZXF1ZXN0U3RhdHNWaWV3EiIKHlJFUVVFU1Rf",
+            "U1RBVFNfVklFV19VTlNQRUNJRklFRBAAEhYKElJFUVVFU1RfU1RBVFNfTk9O",
+            "RRABEhYKElJFUVVFU1RfU1RBVFNfRlVMTBACIrEDChBSZWFkUm93c1Jlc3Bv",
+            "bnNlEj4KBmNodW5rcxgBIAMoCzIuLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFk",
+            "Um93c1Jlc3BvbnNlLkNlbGxDaHVuaxIcChRsYXN0X3NjYW5uZWRfcm93X2tl",
+            "eRgCIAEoDBI3Cg1yZXF1ZXN0X3N0YXRzGAMgASgLMiAuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlJlcXVlc3RTdGF0cxqFAgoJQ2VsbENodW5rEg8KB3Jvd19rZXkY",
+            "ASABKAwSMQoLZmFtaWx5X25hbWUYAiABKAsyHC5nb29nbGUucHJvdG9idWYu",
+            "U3RyaW5nVmFsdWUSLgoJcXVhbGlmaWVyGAMgASgLMhsuZ29vZ2xlLnByb3Rv",
+            "YnVmLkJ5dGVzVmFsdWUSGAoQdGltZXN0YW1wX21pY3JvcxgEIAEoAxIOCgZs",
+            "YWJlbHMYBSADKAkSDQoFdmFsdWUYBiABKAwSEgoKdmFsdWVfc2l6ZRgHIAEo",
+            "BRITCglyZXNldF9yb3cYCCABKAhIABIUCgpjb21taXRfcm93GAkgASgISABC",
+            "DAoKcm93X3N0YXR1cyJuChRTYW1wbGVSb3dLZXlzUmVxdWVzdBI+Cgp0YWJs",
             "ZV9uYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBp",
-            "cy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYAyABKAkSQQoHZW50cmll",
-            "cxgCIAMoCzIrLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVxdWVz",
-            "dC5FbnRyeUID4EECGk4KBUVudHJ5Eg8KB3Jvd19rZXkYASABKAwSNAoJbXV0",
-            "YXRpb25zGAIgAygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uQgPg",
-            "QQIijwEKEk11dGF0ZVJvd3NSZXNwb25zZRI9CgdlbnRyaWVzGAEgAygLMiwu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd3NSZXNwb25zZS5FbnRyeRo6",
-            "CgVFbnRyeRINCgVpbmRleBgBIAEoAxIiCgZzdGF0dXMYAiABKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1cyKuAgoYQ2hlY2tBbmRNdXRhdGVSb3dSZXF1ZXN0Ej4K",
-            "CnRhYmxlX25hbWUYASABKAlCKuBBAvpBJAoiYmlndGFibGVhZG1pbi5nb29n",
-            "bGVhcGlzLmNvbS9UYWJsZRIWCg5hcHBfcHJvZmlsZV9pZBgHIAEoCRIUCgdy",
-            "b3dfa2V5GAIgASgMQgPgQQISNwoQcHJlZGljYXRlX2ZpbHRlchgGIAEoCzId",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISNAoOdHJ1ZV9tdXRhdGlv",
-            "bnMYBCADKAsyHC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24SNQoPZmFs",
-            "c2VfbXV0YXRpb25zGAUgAygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0",
-            "aW9uIjYKGUNoZWNrQW5kTXV0YXRlUm93UmVzcG9uc2USGQoRcHJlZGljYXRl",
-            "X21hdGNoZWQYASABKAgiaQoSUGluZ0FuZFdhcm1SZXF1ZXN0EjsKBG5hbWUY",
-            "ASABKAlCLeBBAvpBJwolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9J",
-            "bnN0YW5jZRIWCg5hcHBfcHJvZmlsZV9pZBgCIAEoCSIVChNQaW5nQW5kV2Fy",
-            "bVJlc3BvbnNlIsYBChlSZWFkTW9kaWZ5V3JpdGVSb3dSZXF1ZXN0Ej4KCnRh",
-            "YmxlX25hbWUYASABKAlCKuBBAvpBJAoiYmlndGFibGVhZG1pbi5nb29nbGVh",
-            "cGlzLmNvbS9UYWJsZRIWCg5hcHBfcHJvZmlsZV9pZBgEIAEoCRIUCgdyb3df",
-            "a2V5GAIgASgMQgPgQQISOwoFcnVsZXMYAyADKAsyJy5nb29nbGUuYmlndGFi",
-            "bGUudjIuUmVhZE1vZGlmeVdyaXRlUnVsZUID4EECIkIKGlJlYWRNb2RpZnlX",
-            "cml0ZVJvd1Jlc3BvbnNlEiQKA3JvdxgBIAEoCzIXLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5Sb3cysBQKCEJpZ3RhYmxlEpsCCghSZWFkUm93cxIjLmdvb2dsZS5i",
-            "aWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QaJC5nb29nbGUuYmlndGFibGUu",
-            "djIuUmVhZFJvd3NSZXNwb25zZSLBAYLT5JMCPiI5L3YyL3t0YWJsZV9uYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRSb3dzOgEq",
-            "itPkkwJOEjoKCnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3RzLyov",
-            "aW5zdGFuY2VzLyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEKdGFi",
-            "bGVfbmFtZdpBGXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARKsAgoNU2Ft",
-            "cGxlUm93S2V5cxIoLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlz",
-            "UmVxdWVzdBopLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlzUmVz",
-            "cG9uc2UiwwGC0+STAkASPi92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2lu",
-            "c3RhbmNlcy8qL3RhYmxlcy8qfTpzYW1wbGVSb3dLZXlzitPkkwJOEjoKCnRh",
-            "YmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
-            "dGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEKdGFibGVfbmFtZdpBGXRh",
-            "YmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARLBAgoJTXV0YXRlUm93EiQuZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd1JlcXVlc3QaJS5nb29nbGUuYmln",
-            "dGFibGUudjIuTXV0YXRlUm93UmVzcG9uc2Ui5gGC0+STAj8iOi92Mi97dGFi",
-            "bGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTptdXRh",
-            "dGVSb3c6ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJv",
-            "amVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVf",
-            "aWTaQRx0YWJsZV9uYW1lLHJvd19rZXksbXV0YXRpb25z2kErdGFibGVfbmFt",
-            "ZSxyb3dfa2V5LG11dGF0aW9ucyxhcHBfcHJvZmlsZV9pZBKzAgoKTXV0YXRl",
-            "Um93cxIlLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVxdWVzdBom",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVzcG9uc2Ui0wGC0+ST",
-            "AkAiOy92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3Rh",
-            "Ymxlcy8qfTptdXRhdGVSb3dzOgEqitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0",
-            "YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAK",
-            "DmFwcF9wcm9maWxlX2lk2kESdGFibGVfbmFtZSxlbnRyaWVz2kEhdGFibGVf",
-            "bmFtZSxlbnRyaWVzLGFwcF9wcm9maWxlX2lkMAESrQMKEUNoZWNrQW5kTXV0",
-            "YXRlUm93EiwuZ29vZ2xlLmJpZ3RhYmxlLnYyLkNoZWNrQW5kTXV0YXRlUm93",
-            "UmVxdWVzdBotLmdvb2dsZS5iaWd0YWJsZS52Mi5DaGVja0FuZE11dGF0ZVJv",
-            "d1Jlc3BvbnNlIroCgtPkkwJHIkIvdjIve3RhYmxlX25hbWU9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKi90YWJsZXMvKn06Y2hlY2tBbmRNdXRhdGVSb3c6ASqK",
-            "0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJvamVjdHMvKi9p",
-            "bnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVfaWTaQUJ0YWJs",
-            "ZV9uYW1lLHJvd19rZXkscHJlZGljYXRlX2ZpbHRlcix0cnVlX211dGF0aW9u",
-            "cyxmYWxzZV9tdXRhdGlvbnPaQVF0YWJsZV9uYW1lLHJvd19rZXkscHJlZGlj",
-            "YXRlX2ZpbHRlcix0cnVlX211dGF0aW9ucyxmYWxzZV9tdXRhdGlvbnMsYXBw",
-            "X3Byb2ZpbGVfaWQS7gEKC1BpbmdBbmRXYXJtEiYuZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyLlBpbmdBbmRXYXJtUmVxdWVzdBonLmdvb2dsZS5iaWd0YWJsZS52Mi5Q",
-            "aW5nQW5kV2FybVJlc3BvbnNlIo0BgtPkkwIrIiYvdjIve25hbWU9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKn06cGluZzoBKorT5JMCORIlCgRuYW1lEh17bmFt",
-            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZNpB",
-            "BG5hbWXaQRNuYW1lLGFwcF9wcm9maWxlX2lkEt0CChJSZWFkTW9kaWZ5V3Jp",
-            "dGVSb3cSLS5nb29nbGUuYmlndGFibGUudjIuUmVhZE1vZGlmeVdyaXRlUm93",
-            "UmVxdWVzdBouLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3JpdGVS",
-            "b3dSZXNwb25zZSLnAYLT5JMCSCJDL3YyL3t0YWJsZV9uYW1lPXByb2plY3Rz",
-            "LyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRNb2RpZnlXcml0ZVJvdzoB",
-            "KorT5JMCThI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9qZWN0cy8q",
-            "L2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZNpBGHRh",
-            "YmxlX25hbWUscm93X2tleSxydWxlc9pBJ3RhYmxlX25hbWUscm93X2tleSxy",
-            "dWxlcyxhcHBfcHJvZmlsZV9pZBrbAspBF2JpZ3RhYmxlLmdvb2dsZWFwaXMu",
-            "Y29t0kG9Amh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlndGFi",
-            "bGUuZGF0YSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3Rh",
-            "YmxlLmRhdGEucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1iaWd0YWJsZS5kYXRhLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtYmlndGFibGUuZGF0YS5yZWFkb25seSxodHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0u",
-            "cmVhZC1vbmx5QusCChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQg1CaWd0YWJs",
-            "ZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvYmlndGFibGUvdjI7YmlndGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFi",
-            "bGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNs",
-            "b3VkOjpCaWd0YWJsZTo6VjLqQVAKJWJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBp",
-            "cy5jb20vSW5zdGFuY2USJ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMv",
-            "e2luc3RhbmNlfepBXAoiYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9U",
-            "YWJsZRI2cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9",
-            "L3RhYmxlcy97dGFibGV9YgZwcm90bzM="));
+            "cy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkiPgoVU2FtcGxl",
+            "Um93S2V5c1Jlc3BvbnNlEg8KB3Jvd19rZXkYASABKAwSFAoMb2Zmc2V0X2J5",
+            "dGVzGAIgASgDIrYBChBNdXRhdGVSb3dSZXF1ZXN0Ej4KCnRhYmxlX25hbWUY",
+            "ASABKAlCKuBBAvpBJAoiYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9U",
+            "YWJsZRIWCg5hcHBfcHJvZmlsZV9pZBgEIAEoCRIUCgdyb3dfa2V5GAIgASgM",
+            "QgPgQQISNAoJbXV0YXRpb25zGAMgAygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYy",
+            "Lk11dGF0aW9uQgPgQQIiEwoRTXV0YXRlUm93UmVzcG9uc2Ui/gEKEU11dGF0",
+            "ZVJvd3NSZXF1ZXN0Ej4KCnRhYmxlX25hbWUYASABKAlCKuBBAvpBJAoiYmln",
+            "dGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIWCg5hcHBfcHJvZmls",
+            "ZV9pZBgDIAEoCRJBCgdlbnRyaWVzGAIgAygLMisuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLk11dGF0ZVJvd3NSZXF1ZXN0LkVudHJ5QgPgQQIaTgoFRW50cnkSDwoH",
+            "cm93X2tleRgBIAEoDBI0CgltdXRhdGlvbnMYAiADKAsyHC5nb29nbGUuYmln",
+            "dGFibGUudjIuTXV0YXRpb25CA+BBAiKPAQoSTXV0YXRlUm93c1Jlc3BvbnNl",
+            "Ej0KB2VudHJpZXMYASADKAsyLC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRl",
+            "Um93c1Jlc3BvbnNlLkVudHJ5GjoKBUVudHJ5Eg0KBWluZGV4GAEgASgDEiIK",
+            "BnN0YXR1cxgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzIq4CChhDaGVja0Fu",
+            "ZE11dGF0ZVJvd1JlcXVlc3QSPgoKdGFibGVfbmFtZRgBIAEoCUIq4EEC+kEk",
+            "CiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEhYKDmFwcF9w",
+            "cm9maWxlX2lkGAcgASgJEhQKB3Jvd19rZXkYAiABKAxCA+BBAhI3ChBwcmVk",
+            "aWNhdGVfZmlsdGVyGAYgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0Zp",
+            "bHRlchI0Cg50cnVlX211dGF0aW9ucxgEIAMoCzIcLmdvb2dsZS5iaWd0YWJs",
+            "ZS52Mi5NdXRhdGlvbhI1Cg9mYWxzZV9tdXRhdGlvbnMYBSADKAsyHC5nb29n",
+            "bGUuYmlndGFibGUudjIuTXV0YXRpb24iNgoZQ2hlY2tBbmRNdXRhdGVSb3dS",
+            "ZXNwb25zZRIZChFwcmVkaWNhdGVfbWF0Y2hlZBgBIAEoCCJpChJQaW5nQW5k",
+            "V2FybVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiViaWd0YWJsZWFk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhYKDmFwcF9wcm9maWxlX2lk",
+            "GAIgASgJIhUKE1BpbmdBbmRXYXJtUmVzcG9uc2UixgEKGVJlYWRNb2RpZnlX",
+            "cml0ZVJvd1JlcXVlc3QSPgoKdGFibGVfbmFtZRgBIAEoCUIq4EEC+kEkCiJi",
+            "aWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEhYKDmFwcF9wcm9m",
+            "aWxlX2lkGAQgASgJEhQKB3Jvd19rZXkYAiABKAxCA+BBAhI7CgVydWxlcxgD",
+            "IAMoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3JpdGVSdWxl",
+            "QgPgQQIiQgoaUmVhZE1vZGlmeVdyaXRlUm93UmVzcG9uc2USJAoDcm93GAEg",
+            "ASgLMhcuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvdyKGAQosR2VuZXJhdGVJbml0",
+            "aWFsQ2hhbmdlU3RyZWFtUGFydGl0aW9uc1JlcXVlc3QSPgoKdGFibGVfbmFt",
+            "ZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29t",
+            "L1RhYmxlEhYKDmFwcF9wcm9maWxlX2lkGAIgASgJImcKLUdlbmVyYXRlSW5p",
+            "dGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnNSZXNwb25zZRI2CglwYXJ0aXRp",
+            "b24YASABKAsyIy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0aW9u",
+            "IpsDChdSZWFkQ2hhbmdlU3RyZWFtUmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEg",
+            "ASgJQirgQQL6QSQKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFi",
+            "bGUSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkSNgoJcGFydGl0aW9uGAMgASgL",
+            "MiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVhbVBhcnRpdGlvbhIwCgpzdGFy",
+            "dF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEksK",
+            "E2NvbnRpbnVhdGlvbl90b2tlbnMYBiABKAsyLC5nb29nbGUuYmlndGFibGUu",
+            "djIuU3RyZWFtQ29udGludWF0aW9uVG9rZW5zSAASLAoIZW5kX3RpbWUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEmhlYXJ0YmVhdF9k",
+            "dXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkIMCgpz",
+            "dGFydF9mcm9tIusJChhSZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2USTgoLZGF0",
+            "YV9jaGFuZ2UYASABKAsyNy5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5n",
+            "ZVN0cmVhbVJlc3BvbnNlLkRhdGFDaGFuZ2VIABJLCgloZWFydGJlYXQYAiAB",
+            "KAsyNi5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5nZVN0cmVhbVJlc3Bv",
+            "bnNlLkhlYXJ0YmVhdEgAElAKDGNsb3NlX3N0cmVhbRgDIAEoCzI4Lmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2UuQ2xvc2VT",
+            "dHJlYW1IABr0AQoNTXV0YXRpb25DaHVuaxJYCgpjaHVua19pbmZvGAEgASgL",
+            "MkQuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRDaGFuZ2VTdHJlYW1SZXNwb25z",
+            "ZS5NdXRhdGlvbkNodW5rLkNodW5rSW5mbxIuCghtdXRhdGlvbhgCIAEoCzIc",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbhpZCglDaHVua0luZm8SGgoS",
+            "Y2h1bmtlZF92YWx1ZV9zaXplGAEgASgFEhwKFGNodW5rZWRfdmFsdWVfb2Zm",
+            "c2V0GAIgASgFEhIKCmxhc3RfY2h1bmsYAyABKAgaxgMKCkRhdGFDaGFuZ2US",
+            "SgoEdHlwZRgBIAEoDjI8Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdl",
+            "U3RyZWFtUmVzcG9uc2UuRGF0YUNoYW5nZS5UeXBlEhkKEXNvdXJjZV9jbHVz",
+            "dGVyX2lkGAIgASgJEg8KB3Jvd19rZXkYAyABKAwSNAoQY29tbWl0X3RpbWVz",
+            "dGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoKdGll",
+            "YnJlYWtlchgFIAEoBRJKCgZjaHVua3MYBiADKAsyOi5nb29nbGUuYmlndGFi",
+            "bGUudjIuUmVhZENoYW5nZVN0cmVhbVJlc3BvbnNlLk11dGF0aW9uQ2h1bmsS",
+            "DAoEZG9uZRgIIAEoCBINCgV0b2tlbhgJIAEoCRI7Chdlc3RpbWF0ZWRfbG93",
+            "X3dhdGVybWFyaxgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "UAoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEhYKEkdB",
+            "UkJBR0VfQ09MTEVDVElPThACEhAKDENPTlRJTlVBVElPThADGpEBCglIZWFy",
+            "dGJlYXQSRwoSY29udGludWF0aW9uX3Rva2VuGAEgASgLMisuZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuEjsKF2VzdGltYXRl",
+            "ZF9sb3dfd2F0ZXJtYXJrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBp7CgtDbG9zZVN0cmVhbRIiCgZzdGF0dXMYASABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1cxJIChNjb250aW51YXRpb25fdG9rZW5zGAIgAygLMisuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuQg8KDXN0",
+            "cmVhbV9yZWNvcmQy1xgKCEJpZ3RhYmxlEpsCCghSZWFkUm93cxIjLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QaJC5nb29nbGUuYmlndGFi",
+            "bGUudjIuUmVhZFJvd3NSZXNwb25zZSLBAYLT5JMCPiI5L3YyL3t0YWJsZV9u",
+            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRSb3dz",
+            "OgEqitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEK",
+            "dGFibGVfbmFtZdpBGXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARKsAgoN",
+            "U2FtcGxlUm93S2V5cxIoLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dL",
+            "ZXlzUmVxdWVzdBopLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlz",
+            "UmVzcG9uc2UiwwGC0+STAkASPi92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8q",
+            "L2luc3RhbmNlcy8qL3RhYmxlcy8qfTpzYW1wbGVSb3dLZXlzitPkkwJOEjoK",
+            "CnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2Vz",
+            "LyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEKdGFibGVfbmFtZdpB",
+            "GXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARLBAgoJTXV0YXRlUm93EiQu",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd1JlcXVlc3QaJS5nb29nbGUu",
+            "YmlndGFibGUudjIuTXV0YXRlUm93UmVzcG9uc2Ui5gGC0+STAj8iOi92Mi97",
+            "dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpt",
+            "dXRhdGVSb3c6ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2Zp",
+            "bGVfaWTaQRx0YWJsZV9uYW1lLHJvd19rZXksbXV0YXRpb25z2kErdGFibGVf",
+            "bmFtZSxyb3dfa2V5LG11dGF0aW9ucyxhcHBfcHJvZmlsZV9pZBKzAgoKTXV0",
+            "YXRlUm93cxIlLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVxdWVz",
+            "dBomLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVzcG9uc2Ui0wGC",
+            "0+STAkAiOy92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L3RhYmxlcy8qfTptdXRhdGVSb3dzOgEqitPkkwJOEjoKCnRhYmxlX25hbWUS",
+            "LHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9",
+            "EhAKDmFwcF9wcm9maWxlX2lk2kESdGFibGVfbmFtZSxlbnRyaWVz2kEhdGFi",
+            "bGVfbmFtZSxlbnRyaWVzLGFwcF9wcm9maWxlX2lkMAESrQMKEUNoZWNrQW5k",
+            "TXV0YXRlUm93EiwuZ29vZ2xlLmJpZ3RhYmxlLnYyLkNoZWNrQW5kTXV0YXRl",
+            "Um93UmVxdWVzdBotLmdvb2dsZS5iaWd0YWJsZS52Mi5DaGVja0FuZE11dGF0",
+            "ZVJvd1Jlc3BvbnNlIroCgtPkkwJHIkIvdjIve3RhYmxlX25hbWU9cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06Y2hlY2tBbmRNdXRhdGVSb3c6",
+            "ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVfaWTaQUJ0",
+            "YWJsZV9uYW1lLHJvd19rZXkscHJlZGljYXRlX2ZpbHRlcix0cnVlX211dGF0",
+            "aW9ucyxmYWxzZV9tdXRhdGlvbnPaQVF0YWJsZV9uYW1lLHJvd19rZXkscHJl",
+            "ZGljYXRlX2ZpbHRlcix0cnVlX211dGF0aW9ucyxmYWxzZV9tdXRhdGlvbnMs",
+            "YXBwX3Byb2ZpbGVfaWQS7gEKC1BpbmdBbmRXYXJtEiYuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlBpbmdBbmRXYXJtUmVxdWVzdBonLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5QaW5nQW5kV2FybVJlc3BvbnNlIo0BgtPkkwIrIiYvdjIve25hbWU9cHJv",
+            "amVjdHMvKi9pbnN0YW5jZXMvKn06cGluZzoBKorT5JMCORIlCgRuYW1lEh17",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRIQCg5hcHBfcHJvZmlsZV9p",
+            "ZNpBBG5hbWXaQRNuYW1lLGFwcF9wcm9maWxlX2lkEt0CChJSZWFkTW9kaWZ5",
+            "V3JpdGVSb3cSLS5nb29nbGUuYmlndGFibGUudjIuUmVhZE1vZGlmeVdyaXRl",
+            "Um93UmVxdWVzdBouLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3Jp",
+            "dGVSb3dSZXNwb25zZSLnAYLT5JMCSCJDL3YyL3t0YWJsZV9uYW1lPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRNb2RpZnlXcml0ZVJv",
+            "dzoBKorT5JMCThI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZNpB",
+            "GHRhYmxlX25hbWUscm93X2tleSxydWxlc9pBJ3RhYmxlX25hbWUscm93X2tl",
+            "eSxydWxlcyxhcHBfcHJvZmlsZV9pZBK7AgolR2VuZXJhdGVJbml0aWFsQ2hh",
+            "bmdlU3RyZWFtUGFydGl0aW9ucxJALmdvb2dsZS5iaWd0YWJsZS52Mi5HZW5l",
+            "cmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zUmVxdWVzdBpBLmdv",
+            "b2dsZS5iaWd0YWJsZS52Mi5HZW5lcmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1Q",
+            "YXJ0aXRpb25zUmVzcG9uc2UiigGC0+STAlsiVi92Mi97dGFibGVfbmFtZT1w",
+            "cm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpnZW5lcmF0ZUluaXRp",
+            "YWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zOgEq2kEKdGFibGVfbmFtZdpBGXRh",
+            "YmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARLmAQoQUmVhZENoYW5nZVN0cmVh",
+            "bRIrLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVxdWVz",
+            "dBosLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9u",
+            "c2UidYLT5JMCRiJBL3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyovdGFibGVzLyp9OnJlYWRDaGFuZ2VTdHJlYW06ASraQQp0YWJsZV9u",
+            "YW1l2kEZdGFibGVfbmFtZSxhcHBfcHJvZmlsZV9pZDABGtsCykEXYmlndGFi",
+            "bGUuZ29vZ2xlYXBpcy5jb23SQb0CaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9iaWd0YWJsZS5kYXRhLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvYmlndGFibGUuZGF0YS5yZWFkb25seSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLWJpZ3RhYmxlLmRhdGEsaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1iaWd0YWJsZS5kYXRh",
+            "LnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
+            "bG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHlC6wIKFmNvbS5nb29nbGUuYmlndGFi",
+            "bGUudjJCDUJpZ3RhYmxlUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS92MjtiaWd0YWJsZaoCGEdvb2ds",
+            "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
+            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMupBUAolYmlndGFibGVh",
+            "ZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2pl",
+            "Y3R9L2luc3RhbmNlcy97aW5zdGFuY2V96kFcCiJiaWd0YWJsZWFkbWluLmdv",
+            "b2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJsZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser, new[]{ "TableName", "AppProfileId", "Rows", "Filter", "RowsLimit", "RequestStatsView" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Types.RequestStatsView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser, new[]{ "Chunks", "LastScannedRowKey", "RequestStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk.Parser, new[]{ "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Labels", "Value", "ValueSize", "ResetRow", "CommitRow" }, new[]{ "RowStatus" }, null, null, null)}),
@@ -167,7 +223,14 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest), global::Google.Cloud.Bigtable.V2.PingAndWarmRequest.Parser, new[]{ "Name", "AppProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PingAndWarmResponse), global::Google.Cloud.Bigtable.V2.PingAndWarmResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "Rules" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser, new[]{ "Row" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser, new[]{ "Row" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest), global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest.Parser, new[]{ "TableName", "AppProfileId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse), global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse.Parser, new[]{ "Partition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest), global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest.Parser, new[]{ "TableName", "AppProfileId", "Partition", "StartTime", "ContinuationTokens", "EndTime", "HeartbeatDuration" }, new[]{ "StartFrom" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Parser, new[]{ "DataChange", "Heartbeat", "CloseStream" }, new[]{ "StreamRecord" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Parser, new[]{ "ChunkInfo", "Mutation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo.Parser, new[]{ "ChunkedValueSize", "ChunkedValueOffset", "LastChunk" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Parser, new[]{ "Type", "SourceClusterId", "RowKey", "CommitTimestamp", "Tiebreaker", "Chunks", "Done", "Token", "EstimatedLowWatermark" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat.Parser, new[]{ "ContinuationToken", "EstimatedLowWatermark" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream.Parser, new[]{ "Status", "ContinuationTokens" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -2050,8 +2113,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the mutation should be applied.
-    /// Values are of the form
+    /// Required. The unique name of the table to which the mutation should be
+    /// applied. Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2100,9 +2163,9 @@ namespace Google.Cloud.Bigtable.V2 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Bigtable.V2.Mutation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation>();
     /// <summary>
-    /// Required. Changes to be atomically applied to the specified row. Entries are applied
-    /// in order, meaning that earlier mutations can be masked by later ones.
-    /// Must contain at least one entry and at most 100000.
+    /// Required. Changes to be atomically applied to the specified row. Entries
+    /// are applied in order, meaning that earlier mutations can be masked by later
+    /// ones. Must contain at least one entry and at most 100000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2513,7 +2576,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the mutations should be applied.
+    /// Required. The unique name of the table to which the mutations should be
+    /// applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2801,10 +2865,9 @@ namespace Google.Cloud.Bigtable.V2 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.Mutation.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation>();
         /// <summary>
-        /// Required. Changes to be atomically applied to the specified row. Mutations are
-        /// applied in order, meaning that earlier mutations can be masked by
-        /// later ones.
-        /// You must specify at least one mutation.
+        /// Required. Changes to be atomically applied to the specified row.
+        /// Mutations are applied in order, meaning that earlier mutations can be
+        /// masked by later ones. You must specify at least one mutation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3460,9 +3523,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the conditional mutation should be
-    /// applied.
-    /// Values are of the form
+    /// Required. The unique name of the table to which the conditional mutation
+    /// should be applied. Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3494,7 +3556,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int RowKeyFieldNumber = 2;
     private pb::ByteString rowKey_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The key of the row to which the conditional mutation should be applied.
+    /// Required. The key of the row to which the conditional mutation should be
+    /// applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4049,8 +4112,9 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The unique name of the instance to check permissions for as well as
-    /// respond. Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// Required. The unique name of the instance to check permissions for as well
+    /// as respond. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4443,9 +4507,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the read/modify/write rules should be
-    /// applied.
-    /// Values are of the form
+    /// Required. The unique name of the table to which the read/modify/write rules
+    /// should be applied. Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4477,7 +4540,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int RowKeyFieldNumber = 2;
     private pb::ByteString rowKey_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The key of the row to which the read/modify/write rules should be applied.
+    /// Required. The key of the row to which the read/modify/write rules should be
+    /// applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4494,9 +4558,9 @@ namespace Google.Cloud.Bigtable.V2 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule> rules_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule>();
     /// <summary>
-    /// Required. Rules specifying how the specified row's contents are to be transformed
-    /// into writes. Entries are applied in order, meaning that earlier rules will
-    /// affect the results of later ones.
+    /// Required. Rules specifying how the specified row's contents are to be
+    /// transformed into writes. Entries are applied in order, meaning that earlier
+    /// rules will affect the results of later ones.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4900,6 +4964,2969 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+  /// Request message for Bigtable.GenerateInitialChangeStreamPartitions.
+  /// </summary>
+  public sealed partial class GenerateInitialChangeStreamPartitionsRequest : pb::IMessage<GenerateInitialChangeStreamPartitionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GenerateInitialChangeStreamPartitionsRequest> _parser = new pb::MessageParser<GenerateInitialChangeStreamPartitionsRequest>(() => new GenerateInitialChangeStreamPartitionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GenerateInitialChangeStreamPartitionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.BigtableReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsRequest(GenerateInitialChangeStreamPartitionsRequest other) : this() {
+      tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsRequest Clone() {
+      return new GenerateInitialChangeStreamPartitionsRequest(this);
+    }
+
+    /// <summary>Field number for the "table_name" field.</summary>
+    public const int TableNameFieldNumber = 1;
+    private string tableName_ = "";
+    /// <summary>
+    /// Required. The unique name of the table from which to get change stream
+    /// partitions. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
+    /// Change streaming must be enabled on the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TableName {
+      get { return tableName_; }
+      set {
+        tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 2;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// Single cluster routing must be configured on the profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GenerateInitialChangeStreamPartitionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GenerateInitialChangeStreamPartitionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TableName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TableName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TableName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GenerateInitialChangeStreamPartitionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TableName.Length != 0) {
+        TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+  /// Response message for Bigtable.GenerateInitialChangeStreamPartitions.
+  /// </summary>
+  public sealed partial class GenerateInitialChangeStreamPartitionsResponse : pb::IMessage<GenerateInitialChangeStreamPartitionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GenerateInitialChangeStreamPartitionsResponse> _parser = new pb::MessageParser<GenerateInitialChangeStreamPartitionsResponse>(() => new GenerateInitialChangeStreamPartitionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GenerateInitialChangeStreamPartitionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.BigtableReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsResponse(GenerateInitialChangeStreamPartitionsResponse other) : this() {
+      partition_ = other.partition_ != null ? other.partition_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenerateInitialChangeStreamPartitionsResponse Clone() {
+      return new GenerateInitialChangeStreamPartitionsResponse(this);
+    }
+
+    /// <summary>Field number for the "partition" field.</summary>
+    public const int PartitionFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.V2.StreamPartition partition_;
+    /// <summary>
+    /// A partition of the change stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.StreamPartition Partition {
+      get { return partition_; }
+      set {
+        partition_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GenerateInitialChangeStreamPartitionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GenerateInitialChangeStreamPartitionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Partition, other.Partition)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (partition_ != null) hash ^= Partition.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (partition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Partition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (partition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Partition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (partition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Partition);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GenerateInitialChangeStreamPartitionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.partition_ != null) {
+        if (partition_ == null) {
+          Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+        }
+        Partition.MergeFrom(other.Partition);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+  /// Request message for Bigtable.ReadChangeStream.
+  /// </summary>
+  public sealed partial class ReadChangeStreamRequest : pb::IMessage<ReadChangeStreamRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReadChangeStreamRequest> _parser = new pb::MessageParser<ReadChangeStreamRequest>(() => new ReadChangeStreamRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReadChangeStreamRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.BigtableReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamRequest(ReadChangeStreamRequest other) : this() {
+      tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
+      partition_ = other.partition_ != null ? other.partition_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      heartbeatDuration_ = other.heartbeatDuration_ != null ? other.heartbeatDuration_.Clone() : null;
+      switch (other.StartFromCase) {
+        case StartFromOneofCase.StartTime:
+          StartTime = other.StartTime.Clone();
+          break;
+        case StartFromOneofCase.ContinuationTokens:
+          ContinuationTokens = other.ContinuationTokens.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamRequest Clone() {
+      return new ReadChangeStreamRequest(this);
+    }
+
+    /// <summary>Field number for the "table_name" field.</summary>
+    public const int TableNameFieldNumber = 1;
+    private string tableName_ = "";
+    /// <summary>
+    /// Required. The unique name of the table from which to read a change stream.
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
+    /// Change streaming must be enabled on the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TableName {
+      get { return tableName_; }
+      set {
+        tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 2;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// Single cluster routing must be configured on the profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "partition" field.</summary>
+    public const int PartitionFieldNumber = 3;
+    private global::Google.Cloud.Bigtable.V2.StreamPartition partition_;
+    /// <summary>
+    /// The partition to read changes from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.StreamPartition Partition {
+      get { return partition_; }
+      set {
+        partition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 4;
+    /// <summary>
+    /// Start reading the stream at the specified timestamp. This timestamp must
+    /// be within the change stream retention period, less than or equal to the
+    /// current time, and after change stream creation, whichever is greater.
+    /// This value is inclusive and will be truncated to microsecond granularity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startFromCase_ == StartFromOneofCase.StartTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) startFrom_ : null; }
+      set {
+        startFrom_ = value;
+        startFromCase_ = value == null ? StartFromOneofCase.None : StartFromOneofCase.StartTime;
+      }
+    }
+
+    /// <summary>Field number for the "continuation_tokens" field.</summary>
+    public const int ContinuationTokensFieldNumber = 6;
+    /// <summary>
+    /// Tokens that describe how to resume reading a stream where reading
+    /// previously left off. If specified, changes will be read starting at the
+    /// the position. Tokens are delivered on the stream as part of `Heartbeat`
+    /// and `CloseStream` messages.
+    ///
+    /// If a single token is provided, the token’s partition must exactly match
+    /// the request’s partition. If multiple tokens are provided, as in the case
+    /// of a partition merge, the union of the token partitions must exactly
+    /// cover the request’s partition. Otherwise, INVALID_ARGUMENT will be
+    /// returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.StreamContinuationTokens ContinuationTokens {
+      get { return startFromCase_ == StartFromOneofCase.ContinuationTokens ? (global::Google.Cloud.Bigtable.V2.StreamContinuationTokens) startFrom_ : null; }
+      set {
+        startFrom_ = value;
+        startFromCase_ = value == null ? StartFromOneofCase.None : StartFromOneofCase.ContinuationTokens;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// If specified, OK will be returned when the stream advances beyond
+    /// this time. Otherwise, changes will be continuously delivered on the stream.
+    /// This value is inclusive and will be truncated to microsecond granularity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "heartbeat_duration" field.</summary>
+    public const int HeartbeatDurationFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Duration heartbeatDuration_;
+    /// <summary>
+    /// If specified, the duration between `Heartbeat` messages on the stream.
+    /// Otherwise, defaults to 5 seconds.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration HeartbeatDuration {
+      get { return heartbeatDuration_; }
+      set {
+        heartbeatDuration_ = value;
+      }
+    }
+
+    private object startFrom_;
+    /// <summary>Enum of possible cases for the "start_from" oneof.</summary>
+    public enum StartFromOneofCase {
+      None = 0,
+      StartTime = 4,
+      ContinuationTokens = 6,
+    }
+    private StartFromOneofCase startFromCase_ = StartFromOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartFromOneofCase StartFromCase {
+      get { return startFromCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartFrom() {
+      startFromCase_ = StartFromOneofCase.None;
+      startFrom_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReadChangeStreamRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReadChangeStreamRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
+      if (!object.Equals(Partition, other.Partition)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(ContinuationTokens, other.ContinuationTokens)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(HeartbeatDuration, other.HeartbeatDuration)) return false;
+      if (StartFromCase != other.StartFromCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
+      if (partition_ != null) hash ^= Partition.GetHashCode();
+      if (startFromCase_ == StartFromOneofCase.StartTime) hash ^= StartTime.GetHashCode();
+      if (startFromCase_ == StartFromOneofCase.ContinuationTokens) hash ^= ContinuationTokens.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (heartbeatDuration_ != null) hash ^= HeartbeatDuration.GetHashCode();
+      hash ^= (int) startFromCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TableName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
+      if (partition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Partition);
+      }
+      if (startFromCase_ == StartFromOneofCase.StartTime) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
+      }
+      if (startFromCase_ == StartFromOneofCase.ContinuationTokens) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ContinuationTokens);
+      }
+      if (heartbeatDuration_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(HeartbeatDuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TableName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
+      if (partition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Partition);
+      }
+      if (startFromCase_ == StartFromOneofCase.StartTime) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
+      }
+      if (startFromCase_ == StartFromOneofCase.ContinuationTokens) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ContinuationTokens);
+      }
+      if (heartbeatDuration_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(HeartbeatDuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TableName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
+      }
+      if (partition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Partition);
+      }
+      if (startFromCase_ == StartFromOneofCase.StartTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (startFromCase_ == StartFromOneofCase.ContinuationTokens) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContinuationTokens);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (heartbeatDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HeartbeatDuration);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReadChangeStreamRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TableName.Length != 0) {
+        TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
+      }
+      if (other.partition_ != null) {
+        if (partition_ == null) {
+          Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+        }
+        Partition.MergeFrom(other.Partition);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.heartbeatDuration_ != null) {
+        if (heartbeatDuration_ == null) {
+          HeartbeatDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        HeartbeatDuration.MergeFrom(other.HeartbeatDuration);
+      }
+      switch (other.StartFromCase) {
+        case StartFromOneofCase.StartTime:
+          if (StartTime == null) {
+            StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          StartTime.MergeFrom(other.StartTime);
+          break;
+        case StartFromOneofCase.ContinuationTokens:
+          if (ContinuationTokens == null) {
+            ContinuationTokens = new global::Google.Cloud.Bigtable.V2.StreamContinuationTokens();
+          }
+          ContinuationTokens.MergeFrom(other.ContinuationTokens);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (startFromCase_ == StartFromOneofCase.StartTime) {
+              subBuilder.MergeFrom(StartTime);
+            }
+            input.ReadMessage(subBuilder);
+            StartTime = subBuilder;
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.StreamContinuationTokens subBuilder = new global::Google.Cloud.Bigtable.V2.StreamContinuationTokens();
+            if (startFromCase_ == StartFromOneofCase.ContinuationTokens) {
+              subBuilder.MergeFrom(ContinuationTokens);
+            }
+            input.ReadMessage(subBuilder);
+            ContinuationTokens = subBuilder;
+            break;
+          }
+          case 58: {
+            if (heartbeatDuration_ == null) {
+              HeartbeatDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(HeartbeatDuration);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TableName = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (partition_ == null) {
+              Partition = new global::Google.Cloud.Bigtable.V2.StreamPartition();
+            }
+            input.ReadMessage(Partition);
+            break;
+          }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (startFromCase_ == StartFromOneofCase.StartTime) {
+              subBuilder.MergeFrom(StartTime);
+            }
+            input.ReadMessage(subBuilder);
+            StartTime = subBuilder;
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.StreamContinuationTokens subBuilder = new global::Google.Cloud.Bigtable.V2.StreamContinuationTokens();
+            if (startFromCase_ == StartFromOneofCase.ContinuationTokens) {
+              subBuilder.MergeFrom(ContinuationTokens);
+            }
+            input.ReadMessage(subBuilder);
+            ContinuationTokens = subBuilder;
+            break;
+          }
+          case 58: {
+            if (heartbeatDuration_ == null) {
+              HeartbeatDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(HeartbeatDuration);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
+  /// Response message for Bigtable.ReadChangeStream.
+  /// </summary>
+  public sealed partial class ReadChangeStreamResponse : pb::IMessage<ReadChangeStreamResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReadChangeStreamResponse> _parser = new pb::MessageParser<ReadChangeStreamResponse>(() => new ReadChangeStreamResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReadChangeStreamResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.BigtableReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamResponse(ReadChangeStreamResponse other) : this() {
+      switch (other.StreamRecordCase) {
+        case StreamRecordOneofCase.DataChange:
+          DataChange = other.DataChange.Clone();
+          break;
+        case StreamRecordOneofCase.Heartbeat:
+          Heartbeat = other.Heartbeat.Clone();
+          break;
+        case StreamRecordOneofCase.CloseStream:
+          CloseStream = other.CloseStream.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReadChangeStreamResponse Clone() {
+      return new ReadChangeStreamResponse(this);
+    }
+
+    /// <summary>Field number for the "data_change" field.</summary>
+    public const int DataChangeFieldNumber = 1;
+    /// <summary>
+    /// A mutation to the partition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange DataChange {
+      get { return streamRecordCase_ == StreamRecordOneofCase.DataChange ? (global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange) streamRecord_ : null; }
+      set {
+        streamRecord_ = value;
+        streamRecordCase_ = value == null ? StreamRecordOneofCase.None : StreamRecordOneofCase.DataChange;
+      }
+    }
+
+    /// <summary>Field number for the "heartbeat" field.</summary>
+    public const int HeartbeatFieldNumber = 2;
+    /// <summary>
+    /// A periodic heartbeat message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat Heartbeat {
+      get { return streamRecordCase_ == StreamRecordOneofCase.Heartbeat ? (global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat) streamRecord_ : null; }
+      set {
+        streamRecord_ = value;
+        streamRecordCase_ = value == null ? StreamRecordOneofCase.None : StreamRecordOneofCase.Heartbeat;
+      }
+    }
+
+    /// <summary>Field number for the "close_stream" field.</summary>
+    public const int CloseStreamFieldNumber = 3;
+    /// <summary>
+    /// An indication that the stream should be closed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream CloseStream {
+      get { return streamRecordCase_ == StreamRecordOneofCase.CloseStream ? (global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream) streamRecord_ : null; }
+      set {
+        streamRecord_ = value;
+        streamRecordCase_ = value == null ? StreamRecordOneofCase.None : StreamRecordOneofCase.CloseStream;
+      }
+    }
+
+    private object streamRecord_;
+    /// <summary>Enum of possible cases for the "stream_record" oneof.</summary>
+    public enum StreamRecordOneofCase {
+      None = 0,
+      DataChange = 1,
+      Heartbeat = 2,
+      CloseStream = 3,
+    }
+    private StreamRecordOneofCase streamRecordCase_ = StreamRecordOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamRecordOneofCase StreamRecordCase {
+      get { return streamRecordCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStreamRecord() {
+      streamRecordCase_ = StreamRecordOneofCase.None;
+      streamRecord_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReadChangeStreamResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReadChangeStreamResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DataChange, other.DataChange)) return false;
+      if (!object.Equals(Heartbeat, other.Heartbeat)) return false;
+      if (!object.Equals(CloseStream, other.CloseStream)) return false;
+      if (StreamRecordCase != other.StreamRecordCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (streamRecordCase_ == StreamRecordOneofCase.DataChange) hash ^= DataChange.GetHashCode();
+      if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) hash ^= Heartbeat.GetHashCode();
+      if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) hash ^= CloseStream.GetHashCode();
+      hash ^= (int) streamRecordCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (streamRecordCase_ == StreamRecordOneofCase.DataChange) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataChange);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Heartbeat);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CloseStream);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (streamRecordCase_ == StreamRecordOneofCase.DataChange) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataChange);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Heartbeat);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CloseStream);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (streamRecordCase_ == StreamRecordOneofCase.DataChange) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataChange);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Heartbeat);
+      }
+      if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloseStream);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReadChangeStreamResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.StreamRecordCase) {
+        case StreamRecordOneofCase.DataChange:
+          if (DataChange == null) {
+            DataChange = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange();
+          }
+          DataChange.MergeFrom(other.DataChange);
+          break;
+        case StreamRecordOneofCase.Heartbeat:
+          if (Heartbeat == null) {
+            Heartbeat = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat();
+          }
+          Heartbeat.MergeFrom(other.Heartbeat);
+          break;
+        case StreamRecordOneofCase.CloseStream:
+          if (CloseStream == null) {
+            CloseStream = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream();
+          }
+          CloseStream.MergeFrom(other.CloseStream);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange();
+            if (streamRecordCase_ == StreamRecordOneofCase.DataChange) {
+              subBuilder.MergeFrom(DataChange);
+            }
+            input.ReadMessage(subBuilder);
+            DataChange = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat();
+            if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) {
+              subBuilder.MergeFrom(Heartbeat);
+            }
+            input.ReadMessage(subBuilder);
+            Heartbeat = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream();
+            if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) {
+              subBuilder.MergeFrom(CloseStream);
+            }
+            input.ReadMessage(subBuilder);
+            CloseStream = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange();
+            if (streamRecordCase_ == StreamRecordOneofCase.DataChange) {
+              subBuilder.MergeFrom(DataChange);
+            }
+            input.ReadMessage(subBuilder);
+            DataChange = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat();
+            if (streamRecordCase_ == StreamRecordOneofCase.Heartbeat) {
+              subBuilder.MergeFrom(Heartbeat);
+            }
+            input.ReadMessage(subBuilder);
+            Heartbeat = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream subBuilder = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream();
+            if (streamRecordCase_ == StreamRecordOneofCase.CloseStream) {
+              subBuilder.MergeFrom(CloseStream);
+            }
+            input.ReadMessage(subBuilder);
+            CloseStream = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReadChangeStreamResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A partial or complete mutation.
+      /// </summary>
+      public sealed partial class MutationChunk : pb::IMessage<MutationChunk>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MutationChunk> _parser = new pb::MessageParser<MutationChunk>(() => new MutationChunk());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MutationChunk> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MutationChunk() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MutationChunk(MutationChunk other) : this() {
+          chunkInfo_ = other.chunkInfo_ != null ? other.chunkInfo_.Clone() : null;
+          mutation_ = other.mutation_ != null ? other.mutation_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MutationChunk Clone() {
+          return new MutationChunk(this);
+        }
+
+        /// <summary>Field number for the "chunk_info" field.</summary>
+        public const int ChunkInfoFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo chunkInfo_;
+        /// <summary>
+        /// If set, then the mutation is a `SetCell` with a chunked value across
+        /// multiple messages.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo ChunkInfo {
+          get { return chunkInfo_; }
+          set {
+            chunkInfo_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "mutation" field.</summary>
+        public const int MutationFieldNumber = 2;
+        private global::Google.Cloud.Bigtable.V2.Mutation mutation_;
+        /// <summary>
+        /// If this is a continuation of a chunked message (`chunked_value_offset` >
+        /// 0), ignore all fields except the `SetCell`'s value and merge it with
+        /// the previous message by concatenating the value fields.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Mutation Mutation {
+          get { return mutation_; }
+          set {
+            mutation_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MutationChunk);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MutationChunk other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ChunkInfo, other.ChunkInfo)) return false;
+          if (!object.Equals(Mutation, other.Mutation)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (chunkInfo_ != null) hash ^= ChunkInfo.GetHashCode();
+          if (mutation_ != null) hash ^= Mutation.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (chunkInfo_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ChunkInfo);
+          }
+          if (mutation_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Mutation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (chunkInfo_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ChunkInfo);
+          }
+          if (mutation_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Mutation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (chunkInfo_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChunkInfo);
+          }
+          if (mutation_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mutation);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MutationChunk other) {
+          if (other == null) {
+            return;
+          }
+          if (other.chunkInfo_ != null) {
+            if (chunkInfo_ == null) {
+              ChunkInfo = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo();
+            }
+            ChunkInfo.MergeFrom(other.ChunkInfo);
+          }
+          if (other.mutation_ != null) {
+            if (mutation_ == null) {
+              Mutation = new global::Google.Cloud.Bigtable.V2.Mutation();
+            }
+            Mutation.MergeFrom(other.Mutation);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (chunkInfo_ == null) {
+                  ChunkInfo = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo();
+                }
+                input.ReadMessage(ChunkInfo);
+                break;
+              }
+              case 18: {
+                if (mutation_ == null) {
+                  Mutation = new global::Google.Cloud.Bigtable.V2.Mutation();
+                }
+                input.ReadMessage(Mutation);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (chunkInfo_ == null) {
+                  ChunkInfo = new global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo();
+                }
+                input.ReadMessage(ChunkInfo);
+                break;
+              }
+              case 18: {
+                if (mutation_ == null) {
+                  Mutation = new global::Google.Cloud.Bigtable.V2.Mutation();
+                }
+                input.ReadMessage(Mutation);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MutationChunk message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Information about the chunking of this mutation.
+          /// Only `SetCell` mutations can be chunked, and all chunks for a `SetCell`
+          /// will be delivered contiguously with no other mutation types interleaved.
+          /// </summary>
+          public sealed partial class ChunkInfo : pb::IMessage<ChunkInfo>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ChunkInfo> _parser = new pb::MessageParser<ChunkInfo>(() => new ChunkInfo());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ChunkInfo> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkInfo() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkInfo(ChunkInfo other) : this() {
+              chunkedValueSize_ = other.chunkedValueSize_;
+              chunkedValueOffset_ = other.chunkedValueOffset_;
+              lastChunk_ = other.lastChunk_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ChunkInfo Clone() {
+              return new ChunkInfo(this);
+            }
+
+            /// <summary>Field number for the "chunked_value_size" field.</summary>
+            public const int ChunkedValueSizeFieldNumber = 1;
+            private int chunkedValueSize_;
+            /// <summary>
+            /// The total value size of all the chunks that make up the `SetCell`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int ChunkedValueSize {
+              get { return chunkedValueSize_; }
+              set {
+                chunkedValueSize_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "chunked_value_offset" field.</summary>
+            public const int ChunkedValueOffsetFieldNumber = 2;
+            private int chunkedValueOffset_;
+            /// <summary>
+            /// The byte offset of this chunk into the total value size of the
+            /// mutation.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int ChunkedValueOffset {
+              get { return chunkedValueOffset_; }
+              set {
+                chunkedValueOffset_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "last_chunk" field.</summary>
+            public const int LastChunkFieldNumber = 3;
+            private bool lastChunk_;
+            /// <summary>
+            /// When true, this is the last chunk of a chunked `SetCell`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool LastChunk {
+              get { return lastChunk_; }
+              set {
+                lastChunk_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ChunkInfo);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ChunkInfo other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ChunkedValueSize != other.ChunkedValueSize) return false;
+              if (ChunkedValueOffset != other.ChunkedValueOffset) return false;
+              if (LastChunk != other.LastChunk) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ChunkedValueSize != 0) hash ^= ChunkedValueSize.GetHashCode();
+              if (ChunkedValueOffset != 0) hash ^= ChunkedValueOffset.GetHashCode();
+              if (LastChunk != false) hash ^= LastChunk.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ChunkedValueSize != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(ChunkedValueSize);
+              }
+              if (ChunkedValueOffset != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(ChunkedValueOffset);
+              }
+              if (LastChunk != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(LastChunk);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ChunkedValueSize != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(ChunkedValueSize);
+              }
+              if (ChunkedValueOffset != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(ChunkedValueOffset);
+              }
+              if (LastChunk != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(LastChunk);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ChunkedValueSize != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChunkedValueSize);
+              }
+              if (ChunkedValueOffset != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChunkedValueOffset);
+              }
+              if (LastChunk != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ChunkInfo other) {
+              if (other == null) {
+                return;
+              }
+              if (other.ChunkedValueSize != 0) {
+                ChunkedValueSize = other.ChunkedValueSize;
+              }
+              if (other.ChunkedValueOffset != 0) {
+                ChunkedValueOffset = other.ChunkedValueOffset;
+              }
+              if (other.LastChunk != false) {
+                LastChunk = other.LastChunk;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    ChunkedValueSize = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    ChunkedValueOffset = input.ReadInt32();
+                    break;
+                  }
+                  case 24: {
+                    LastChunk = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    ChunkedValueSize = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    ChunkedValueOffset = input.ReadInt32();
+                    break;
+                  }
+                  case 24: {
+                    LastChunk = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// A message corresponding to one or more mutations to the partition
+      /// being streamed. A single logical `DataChange` message may also be split
+      /// across a sequence of multiple individual messages. Messages other than
+      /// the first in a sequence will only have the `type` and `chunks` fields
+      /// populated, with the final message in the sequence also containing `done`
+      /// set to true.
+      /// </summary>
+      public sealed partial class DataChange : pb::IMessage<DataChange>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataChange> _parser = new pb::MessageParser<DataChange>(() => new DataChange());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataChange> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataChange() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataChange(DataChange other) : this() {
+          type_ = other.type_;
+          sourceClusterId_ = other.sourceClusterId_;
+          rowKey_ = other.rowKey_;
+          commitTimestamp_ = other.commitTimestamp_ != null ? other.commitTimestamp_.Clone() : null;
+          tiebreaker_ = other.tiebreaker_;
+          chunks_ = other.chunks_.Clone();
+          done_ = other.done_;
+          token_ = other.token_;
+          estimatedLowWatermark_ = other.estimatedLowWatermark_ != null ? other.estimatedLowWatermark_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataChange Clone() {
+          return new DataChange(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type type_ = global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified;
+        /// <summary>
+        /// The type of the mutation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "source_cluster_id" field.</summary>
+        public const int SourceClusterIdFieldNumber = 2;
+        private string sourceClusterId_ = "";
+        /// <summary>
+        /// The cluster where the mutation was applied.
+        /// Not set when `type` is `GARBAGE_COLLECTION`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SourceClusterId {
+          get { return sourceClusterId_; }
+          set {
+            sourceClusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "row_key" field.</summary>
+        public const int RowKeyFieldNumber = 3;
+        private pb::ByteString rowKey_ = pb::ByteString.Empty;
+        /// <summary>
+        /// The row key for all mutations that are part of this `DataChange`.
+        /// If the `DataChange` is chunked across multiple messages, then this field
+        /// will only be set for the first message.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString RowKey {
+          get { return rowKey_; }
+          set {
+            rowKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "commit_timestamp" field.</summary>
+        public const int CommitTimestampFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp commitTimestamp_;
+        /// <summary>
+        /// The timestamp at which the mutation was applied on the Bigtable server.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTimestamp {
+          get { return commitTimestamp_; }
+          set {
+            commitTimestamp_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "tiebreaker" field.</summary>
+        public const int TiebreakerFieldNumber = 5;
+        private int tiebreaker_;
+        /// <summary>
+        /// A value that lets stream consumers reconstruct Bigtable's
+        /// conflict resolution semantics.
+        /// https://cloud.google.com/bigtable/docs/writes#conflict-resolution
+        /// In the event that the same row key, column family, column qualifier,
+        /// timestamp are modified on different clusters at the same
+        /// `commit_timestamp`, the mutation with the larger `tiebreaker` will be the
+        /// one chosen for the eventually consistent state of the system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Tiebreaker {
+          get { return tiebreaker_; }
+          set {
+            tiebreaker_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "chunks" field.</summary>
+        public const int ChunksFieldNumber = 6;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk> _repeated_chunks_codec
+            = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk> chunks_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk>();
+        /// <summary>
+        /// The mutations associated with this change to the partition.
+        /// May contain complete mutations or chunks of a multi-message chunked
+        /// `DataChange` record.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk> Chunks {
+          get { return chunks_; }
+        }
+
+        /// <summary>Field number for the "done" field.</summary>
+        public const int DoneFieldNumber = 8;
+        private bool done_;
+        /// <summary>
+        /// When true, indicates that the entire `DataChange` has been read
+        /// and the client can safely process the message.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Done {
+          get { return done_; }
+          set {
+            done_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "token" field.</summary>
+        public const int TokenFieldNumber = 9;
+        private string token_ = "";
+        /// <summary>
+        /// An encoded position for this stream's partition to restart reading from.
+        /// This token is for the StreamPartition from the request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Token {
+          get { return token_; }
+          set {
+            token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "estimated_low_watermark" field.</summary>
+        public const int EstimatedLowWatermarkFieldNumber = 10;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp estimatedLowWatermark_;
+        /// <summary>
+        /// An estimate of the commit timestamp that is usually lower than or equal
+        /// to any timestamp for a record that will be delivered in the future on the
+        /// stream. It is possible that, under particular circumstances that a future
+        /// record has a timestamp is is lower than a previously seen timestamp. For
+        /// an example usage see
+        /// https://beam.apache.org/documentation/basics/#watermarks
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp EstimatedLowWatermark {
+          get { return estimatedLowWatermark_; }
+          set {
+            estimatedLowWatermark_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataChange);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataChange other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (SourceClusterId != other.SourceClusterId) return false;
+          if (RowKey != other.RowKey) return false;
+          if (!object.Equals(CommitTimestamp, other.CommitTimestamp)) return false;
+          if (Tiebreaker != other.Tiebreaker) return false;
+          if(!chunks_.Equals(other.chunks_)) return false;
+          if (Done != other.Done) return false;
+          if (Token != other.Token) return false;
+          if (!object.Equals(EstimatedLowWatermark, other.EstimatedLowWatermark)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (SourceClusterId.Length != 0) hash ^= SourceClusterId.GetHashCode();
+          if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
+          if (commitTimestamp_ != null) hash ^= CommitTimestamp.GetHashCode();
+          if (Tiebreaker != 0) hash ^= Tiebreaker.GetHashCode();
+          hash ^= chunks_.GetHashCode();
+          if (Done != false) hash ^= Done.GetHashCode();
+          if (Token.Length != 0) hash ^= Token.GetHashCode();
+          if (estimatedLowWatermark_ != null) hash ^= EstimatedLowWatermark.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (SourceClusterId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SourceClusterId);
+          }
+          if (RowKey.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteBytes(RowKey);
+          }
+          if (commitTimestamp_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(CommitTimestamp);
+          }
+          if (Tiebreaker != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(Tiebreaker);
+          }
+          chunks_.WriteTo(output, _repeated_chunks_codec);
+          if (Done != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(Done);
+          }
+          if (Token.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(Token);
+          }
+          if (estimatedLowWatermark_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (SourceClusterId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SourceClusterId);
+          }
+          if (RowKey.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteBytes(RowKey);
+          }
+          if (commitTimestamp_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(CommitTimestamp);
+          }
+          if (Tiebreaker != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(Tiebreaker);
+          }
+          chunks_.WriteTo(ref output, _repeated_chunks_codec);
+          if (Done != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(Done);
+          }
+          if (Token.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(Token);
+          }
+          if (estimatedLowWatermark_ != null) {
+            output.WriteRawTag(82);
+            output.WriteMessage(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (SourceClusterId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceClusterId);
+          }
+          if (RowKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKey);
+          }
+          if (commitTimestamp_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommitTimestamp);
+          }
+          if (Tiebreaker != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Tiebreaker);
+          }
+          size += chunks_.CalculateSize(_repeated_chunks_codec);
+          if (Done != false) {
+            size += 1 + 1;
+          }
+          if (Token.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
+          }
+          if (estimatedLowWatermark_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataChange other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          if (other.SourceClusterId.Length != 0) {
+            SourceClusterId = other.SourceClusterId;
+          }
+          if (other.RowKey.Length != 0) {
+            RowKey = other.RowKey;
+          }
+          if (other.commitTimestamp_ != null) {
+            if (commitTimestamp_ == null) {
+              CommitTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            CommitTimestamp.MergeFrom(other.CommitTimestamp);
+          }
+          if (other.Tiebreaker != 0) {
+            Tiebreaker = other.Tiebreaker;
+          }
+          chunks_.Add(other.chunks_);
+          if (other.Done != false) {
+            Done = other.Done;
+          }
+          if (other.Token.Length != 0) {
+            Token = other.Token;
+          }
+          if (other.estimatedLowWatermark_ != null) {
+            if (estimatedLowWatermark_ == null) {
+              EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            EstimatedLowWatermark.MergeFrom(other.EstimatedLowWatermark);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                SourceClusterId = input.ReadString();
+                break;
+              }
+              case 26: {
+                RowKey = input.ReadBytes();
+                break;
+              }
+              case 34: {
+                if (commitTimestamp_ == null) {
+                  CommitTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CommitTimestamp);
+                break;
+              }
+              case 40: {
+                Tiebreaker = input.ReadInt32();
+                break;
+              }
+              case 50: {
+                chunks_.AddEntriesFrom(input, _repeated_chunks_codec);
+                break;
+              }
+              case 64: {
+                Done = input.ReadBool();
+                break;
+              }
+              case 74: {
+                Token = input.ReadString();
+                break;
+              }
+              case 82: {
+                if (estimatedLowWatermark_ == null) {
+                  EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EstimatedLowWatermark);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                SourceClusterId = input.ReadString();
+                break;
+              }
+              case 26: {
+                RowKey = input.ReadBytes();
+                break;
+              }
+              case 34: {
+                if (commitTimestamp_ == null) {
+                  CommitTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CommitTimestamp);
+                break;
+              }
+              case 40: {
+                Tiebreaker = input.ReadInt32();
+                break;
+              }
+              case 50: {
+                chunks_.AddEntriesFrom(ref input, _repeated_chunks_codec);
+                break;
+              }
+              case 64: {
+                Done = input.ReadBool();
+                break;
+              }
+              case 74: {
+                Token = input.ReadString();
+                break;
+              }
+              case 82: {
+                if (estimatedLowWatermark_ == null) {
+                  EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EstimatedLowWatermark);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DataChange message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The type of mutation.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// The type is unspecified.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// A user-initiated mutation.
+            /// </summary>
+            [pbr::OriginalName("USER")] User = 1,
+            /// <summary>
+            /// A system-initiated mutation as part of garbage collection.
+            /// https://cloud.google.com/bigtable/docs/garbage-collection
+            /// </summary>
+            [pbr::OriginalName("GARBAGE_COLLECTION")] GarbageCollection = 2,
+            /// <summary>
+            /// This is a continuation of a multi-message change.
+            /// </summary>
+            [pbr::OriginalName("CONTINUATION")] Continuation = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// A periodic message with information that can be used to checkpoint
+      /// the state of a stream.
+      /// </summary>
+      public sealed partial class Heartbeat : pb::IMessage<Heartbeat>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Heartbeat> _parser = new pb::MessageParser<Heartbeat>(() => new Heartbeat());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Heartbeat> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Heartbeat() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Heartbeat(Heartbeat other) : this() {
+          continuationToken_ = other.continuationToken_ != null ? other.continuationToken_.Clone() : null;
+          estimatedLowWatermark_ = other.estimatedLowWatermark_ != null ? other.estimatedLowWatermark_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Heartbeat Clone() {
+          return new Heartbeat(this);
+        }
+
+        /// <summary>Field number for the "continuation_token" field.</summary>
+        public const int ContinuationTokenFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.V2.StreamContinuationToken continuationToken_;
+        /// <summary>
+        /// A token that can be provided to a subsequent `ReadChangeStream` call
+        /// to pick up reading at the current stream position.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.StreamContinuationToken ContinuationToken {
+          get { return continuationToken_; }
+          set {
+            continuationToken_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "estimated_low_watermark" field.</summary>
+        public const int EstimatedLowWatermarkFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp estimatedLowWatermark_;
+        /// <summary>
+        /// An estimate of the commit timestamp that is usually lower than or equal
+        /// to any timestamp for a record that will be delivered in the future on the
+        /// stream. It is possible that, under particular circumstances that a future
+        /// record has a timestamp is is lower than a previously seen timestamp. For
+        /// an example usage see
+        /// https://beam.apache.org/documentation/basics/#watermarks
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp EstimatedLowWatermark {
+          get { return estimatedLowWatermark_; }
+          set {
+            estimatedLowWatermark_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Heartbeat);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Heartbeat other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ContinuationToken, other.ContinuationToken)) return false;
+          if (!object.Equals(EstimatedLowWatermark, other.EstimatedLowWatermark)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (continuationToken_ != null) hash ^= ContinuationToken.GetHashCode();
+          if (estimatedLowWatermark_ != null) hash ^= EstimatedLowWatermark.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (continuationToken_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ContinuationToken);
+          }
+          if (estimatedLowWatermark_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (continuationToken_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ContinuationToken);
+          }
+          if (estimatedLowWatermark_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (continuationToken_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContinuationToken);
+          }
+          if (estimatedLowWatermark_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EstimatedLowWatermark);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Heartbeat other) {
+          if (other == null) {
+            return;
+          }
+          if (other.continuationToken_ != null) {
+            if (continuationToken_ == null) {
+              ContinuationToken = new global::Google.Cloud.Bigtable.V2.StreamContinuationToken();
+            }
+            ContinuationToken.MergeFrom(other.ContinuationToken);
+          }
+          if (other.estimatedLowWatermark_ != null) {
+            if (estimatedLowWatermark_ == null) {
+              EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            EstimatedLowWatermark.MergeFrom(other.EstimatedLowWatermark);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (continuationToken_ == null) {
+                  ContinuationToken = new global::Google.Cloud.Bigtable.V2.StreamContinuationToken();
+                }
+                input.ReadMessage(ContinuationToken);
+                break;
+              }
+              case 18: {
+                if (estimatedLowWatermark_ == null) {
+                  EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EstimatedLowWatermark);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (continuationToken_ == null) {
+                  ContinuationToken = new global::Google.Cloud.Bigtable.V2.StreamContinuationToken();
+                }
+                input.ReadMessage(ContinuationToken);
+                break;
+              }
+              case 18: {
+                if (estimatedLowWatermark_ == null) {
+                  EstimatedLowWatermark = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EstimatedLowWatermark);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A message indicating that the client should stop reading from the stream.
+      /// If status is OK and `continuation_tokens` is empty, the stream has finished
+      /// (for example if there was an `end_time` specified).
+      /// If `continuation_tokens` is present, then a change in partitioning requires
+      /// the client to open a new stream for each token to resume reading.
+      /// </summary>
+      public sealed partial class CloseStream : pb::IMessage<CloseStream>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CloseStream> _parser = new pb::MessageParser<CloseStream>(() => new CloseStream());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CloseStream> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloseStream() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloseStream(CloseStream other) : this() {
+          status_ = other.status_ != null ? other.status_.Clone() : null;
+          continuationTokens_ = other.continuationTokens_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloseStream Clone() {
+          return new CloseStream(this);
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 1;
+        private global::Google.Rpc.Status status_;
+        /// <summary>
+        /// The status of the stream.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Rpc.Status Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "continuation_tokens" field.</summary>
+        public const int ContinuationTokensFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.StreamContinuationToken> _repeated_continuationTokens_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.StreamContinuationToken.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken> continuationTokens_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken>();
+        /// <summary>
+        /// If non-empty, contains the information needed to start reading the new
+        /// partition(s) that contain segments of this partition's row range.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken> ContinuationTokens {
+          get { return continuationTokens_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CloseStream);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CloseStream other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Status, other.Status)) return false;
+          if(!continuationTokens_.Equals(other.continuationTokens_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (status_ != null) hash ^= Status.GetHashCode();
+          hash ^= continuationTokens_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (status_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Status);
+          }
+          continuationTokens_.WriteTo(output, _repeated_continuationTokens_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (status_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Status);
+          }
+          continuationTokens_.WriteTo(ref output, _repeated_continuationTokens_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (status_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+          }
+          size += continuationTokens_.CalculateSize(_repeated_continuationTokens_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CloseStream other) {
+          if (other == null) {
+            return;
+          }
+          if (other.status_ != null) {
+            if (status_ == null) {
+              Status = new global::Google.Rpc.Status();
+            }
+            Status.MergeFrom(other.Status);
+          }
+          continuationTokens_.Add(other.continuationTokens_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (status_ == null) {
+                  Status = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+              case 18: {
+                continuationTokens_.AddEntriesFrom(input, _repeated_continuationTokens_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (status_ == null) {
+                  Status = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+              case 18: {
+                continuationTokens_.AddEntriesFrom(ref input, _repeated_continuationTokens_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
