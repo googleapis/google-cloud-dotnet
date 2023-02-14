@@ -1065,8 +1065,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
 
     /// <summary>CertificateAuthorityService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// [Certificate Authority Service][google.cloud.security.privateca.v1.CertificateAuthorityService] manages private
-    /// certificate authorities and issued certificates.
+    /// [Certificate Authority
+    /// Service][google.cloud.security.privateca.v1.CertificateAuthorityService]
+    /// manages private certificate authorities and issued certificates.
     /// </remarks>
     public abstract partial class CertificateAuthorityServiceClient
     {
@@ -1158,7 +1159,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1168,7 +1170,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1178,7 +1181,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1188,21 +1192,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1215,21 +1224,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1242,21 +1256,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1264,21 +1283,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateAsync(parent, certificate, certificateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1291,21 +1315,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1318,21 +1347,26 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
-        /// in the format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificate">
-        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
+        /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
-        /// but is optional and its value is ignored otherwise.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
+        /// value is ignored otherwise.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1370,7 +1404,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1384,7 +1420,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1398,7 +1436,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1409,7 +1449,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1423,7 +1465,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1437,7 +1481,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
+        /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
+        /// get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1467,8 +1513,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1493,8 +1539,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1519,8 +1565,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1545,8 +1591,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the
+        /// format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1597,8 +1643,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1613,8 +1659,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1629,8 +1675,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1642,8 +1688,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1658,8 +1704,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1674,8 +1720,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
-        /// format
+        /// Required. The resource name for this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
         /// `projects/*/locations/*/caPools/*/certificates/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1684,7 +1730,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             RevokeCertificateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1694,7 +1741,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1704,7 +1752,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1714,11 +1763,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             UpdateCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
-        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate] with updated values.
+        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -1733,11 +1784,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
-        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate] with updated values.
+        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -1752,11 +1805,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
-        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate] with updated values.
+        /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -1767,12 +1822,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             UpdateCertificateAsync(certificate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1781,12 +1840,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1795,12 +1858,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1836,16 +1903,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ActivateCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1856,16 +1928,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1876,16 +1953,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1893,16 +1975,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             ActivateCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1913,16 +2000,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1933,16 +2025,21 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1950,7 +2047,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             ActivateCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1959,7 +2058,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1968,7 +2069,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2004,15 +2107,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2029,15 +2137,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2054,15 +2167,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2074,15 +2192,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateAuthorityAsync(parent, certificateAuthority, certificateAuthorityId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2099,15 +2222,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2124,15 +2252,20 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="certificateAuthority">
-        /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
+        /// Required. A
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
@@ -2144,7 +2277,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateAuthorityAsync(parent, certificateAuthority, certificateAuthorityId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2153,7 +2287,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2162,7 +2297,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2198,11 +2334,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2213,11 +2351,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2228,11 +2368,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2240,11 +2382,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DisableCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2255,11 +2399,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2270,11 +2416,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2282,7 +2430,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DisableCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2291,7 +2440,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2300,7 +2450,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2336,11 +2487,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2351,11 +2504,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2366,11 +2521,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2378,11 +2535,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             EnableCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2393,11 +2552,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2408,11 +2569,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2420,13 +2583,17 @@ namespace Google.Cloud.Security.PrivateCA.V1
             EnableCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2435,13 +2602,17 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2450,13 +2621,17 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2465,17 +2640,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCertificateAuthorityCsrAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2486,17 +2666,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2507,17 +2692,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2525,17 +2715,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCertificateAuthorityCsrAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2546,17 +2741,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2567,17 +2767,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2585,7 +2790,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCertificateAuthorityCsrAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2594,7 +2800,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2603,7 +2810,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2612,11 +2820,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateAuthorityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2627,11 +2838,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2642,11 +2856,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2654,11 +2871,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2669,11 +2889,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2684,11 +2907,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2696,7 +2922,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2705,7 +2932,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2714,12 +2942,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2740,12 +2970,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2766,12 +2998,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2792,12 +3026,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
-        /// `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
+        /// in the format `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2818,7 +3054,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2827,7 +3065,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2836,7 +3076,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2872,11 +3114,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UndeleteCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2887,11 +3132,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2902,11 +3150,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2914,11 +3165,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             UndeleteCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2929,11 +3183,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2944,11 +3201,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2956,7 +3216,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             UndeleteCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2965,7 +3226,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2974,7 +3236,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3010,11 +3273,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3025,11 +3290,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3040,11 +3307,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3052,11 +3321,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DeleteCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3067,11 +3338,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3082,11 +3355,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-        /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// Required. The resource name for this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3094,7 +3369,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DeleteCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3103,7 +3379,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3112,7 +3389,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3148,10 +3426,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateAuthority, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCertificateAuthorityOperationsClient, callSettings);
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="certificateAuthority">
-        /// Required. [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with updated values.
+        /// Required.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3166,10 +3447,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="certificateAuthority">
-        /// Required. [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with updated values.
+        /// Required.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3184,10 +3468,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="certificateAuthority">
-        /// Required. [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with updated values.
+        /// Required.
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3255,10 +3542,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3279,10 +3568,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3303,10 +3594,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3322,10 +3615,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3346,10 +3641,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3370,10 +3667,12 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
+        /// `projects/*/locations/*`.
         /// </param>
         /// <param name="caPool">
-        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
+        /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
+        /// initial field values.
         /// </param>
         /// <param name="caPoolId">
         /// Required. It must be unique within a location and match the regular
@@ -3441,7 +3740,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Update a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated values.
+        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3459,7 +3759,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Update a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated values.
+        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3477,7 +3778,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Update a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated values.
+        /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -3518,7 +3820,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3532,7 +3835,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3546,7 +3850,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3557,7 +3862,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3571,7 +3877,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3585,7 +3892,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Returns a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+        /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3771,8 +4079,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3786,8 +4095,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3801,8 +4111,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3813,8 +4124,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3828,8 +4140,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3843,8 +4156,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3852,8 +4166,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DeleteCaPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3863,8 +4179,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3874,8 +4192,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3885,13 +4205,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCaCertsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3902,13 +4225,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3919,13 +4245,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3933,13 +4262,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCaCertsAsync(caPool, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3950,13 +4282,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3967,13 +4302,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="caPool">
-        /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-        /// format `projects/*/locations/*/caPools/*`.
+        /// Required. The resource name for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+        /// `projects/*/locations/*/caPools/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3981,7 +4319,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             FetchCaCertsAsync(caPool, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3990,7 +4329,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3999,7 +4339,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4008,11 +4349,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateRevocationListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4023,11 +4368,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4038,11 +4387,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4050,11 +4403,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateRevocationListAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4065,11 +4422,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4080,11 +4441,15 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
-        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
+        /// of the
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4092,7 +4457,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateRevocationListAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4101,7 +4467,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4110,12 +4477,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList],
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4136,12 +4504,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList],
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4162,12 +4531,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList],
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4188,12 +4558,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList],
+        /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4214,7 +4585,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4223,7 +4595,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4232,7 +4605,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4268,10 +4642,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateRevocationList, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCertificateRevocationListOperationsClient, callSettings);
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="certificateRevocationList">
-        /// Required. [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] with updated values.
+        /// Required.
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4286,10 +4663,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="certificateRevocationList">
-        /// Required. [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] with updated values.
+        /// Required.
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4304,10 +4684,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="certificateRevocationList">
-        /// Required. [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] with updated values.
+        /// Required.
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4318,7 +4701,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             UpdateCertificateRevocationListAsync(certificateRevocationList, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4327,7 +4712,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4336,7 +4723,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4372,15 +4761,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateTemplate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateTemplateOperationsClient, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4397,15 +4790,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4422,15 +4819,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4442,15 +4843,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateTemplateAsync(parent, certificateTemplate, certificateTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4467,15 +4872,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4492,15 +4901,19 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="certificateTemplate">
-        /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
+        /// Required. A
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with initial field values.
         /// </param>
         /// <param name="certificateTemplateId">
         /// Required. It must be unique within a location and match the regular
@@ -4512,7 +4925,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             CreateCertificateTemplateAsync(parent, certificateTemplate, certificateTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4521,7 +4935,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4530,7 +4945,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4566,11 +4982,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCertificateTemplateOperationsClient, callSettings);
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4581,11 +4999,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4596,11 +5016,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4608,11 +5030,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DeleteCertificateTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4623,11 +5047,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4638,11 +5064,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-        /// `projects/*/locations/*/certificateTemplates/*`.
+        /// Required. The resource name for this
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in the format `projects/*/locations/*/certificateTemplates/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4650,7 +5078,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             DeleteCertificateTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4659,7 +5088,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4668,7 +5098,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4677,11 +5108,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4692,11 +5126,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4707,11 +5144,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4719,11 +5159,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4734,11 +5177,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4749,11 +5195,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="name">
-        /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
-        /// get.
+        /// Required. The
+        /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// to get.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4761,7 +5210,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             GetCertificateTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4770,7 +5220,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4779,12 +5230,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4805,12 +5257,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4831,12 +5284,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4857,12 +5311,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location associated with the
-        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate], in the format
-        /// `projects/*/locations/*`.
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate],
+        /// in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4883,7 +5338,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4892,7 +5348,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4901,7 +5358,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4937,10 +5395,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             lro::Operation<CertificateTemplate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCertificateTemplateOperationsClient, callSettings);
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="certificateTemplate">
-        /// Required. [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with updated values.
+        /// Required.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4955,10 +5416,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="certificateTemplate">
-        /// Required. [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with updated values.
+        /// Required.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4973,10 +5437,13 @@ namespace Google.Cloud.Security.PrivateCA.V1
             }, callSettings);
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="certificateTemplate">
-        /// Required. [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with updated values.
+        /// Required.
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with updated values.
         /// </param>
         /// <param name="updateMask">
         /// Required. A list of fields to be updated in this request.
@@ -4989,8 +5456,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
 
     /// <summary>CertificateAuthorityService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// [Certificate Authority Service][google.cloud.security.privateca.v1.CertificateAuthorityService] manages private
-    /// certificate authorities and issued certificates.
+    /// [Certificate Authority
+    /// Service][google.cloud.security.privateca.v1.CertificateAuthorityService]
+    /// manages private certificate authorities and issued certificates.
     /// </remarks>
     public sealed partial class CertificateAuthorityServiceClientImpl : CertificateAuthorityServiceClient
     {
@@ -5302,7 +5770,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         partial void Modify_UpdateCertificateTemplateRequest(ref UpdateCertificateTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5315,7 +5784,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate] in a given Project, Location from a particular
+        /// Create a new [Certificate][google.cloud.security.privateca.v1.Certificate]
+        /// in a given Project, Location from a particular
         /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5400,7 +5870,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5413,7 +5884,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate]. Currently, the only field you can update is the
+        /// Update a [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// Currently, the only field you can update is the
         /// [labels][google.cloud.security.privateca.v1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5429,12 +5901,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient ActivateCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5446,12 +5922,16 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Activate a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that is in state
+        /// Activate a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. After
-        /// the parent Certificate Authority signs a certificate signing request from
-        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr], this method can complete the activation
-        /// process.
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// After the parent Certificate Authority signs a certificate signing request
+        /// from
+        /// [FetchCertificateAuthorityCsr][google.cloud.security.privateca.v1.CertificateAuthorityService.FetchCertificateAuthorityCsr],
+        /// this method can complete the activation process.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5466,7 +5946,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient CreateCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5478,7 +5960,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Create a new [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in a given Project and Location.
+        /// Create a new
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5493,7 +5977,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient DisableCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5505,7 +5990,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Disable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Disable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5520,7 +6006,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient EnableCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5532,7 +6019,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Enable a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Enable a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5544,13 +6032,17 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5562,13 +6054,17 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Fetch a certificate signing request (CSR) from a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Fetch a certificate signing request (CSR) from a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// that is in state
         /// [AWAITING_USER_ACTIVATION][google.cloud.security.privateca.v1.CertificateAuthority.State.AWAITING_USER_ACTIVATION]
-        /// and is of type [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE]. The
-        /// CSR must then be signed by the desired parent Certificate Authority, which
-        /// could be another [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resource, or could be an on-prem
-        /// certificate authority. See also [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
+        /// and is of type
+        /// [SUBORDINATE][google.cloud.security.privateca.v1.CertificateAuthority.Type.SUBORDINATE].
+        /// The CSR must then be signed by the desired parent Certificate Authority,
+        /// which could be another
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// resource, or could be an on-prem certificate authority. See also
+        /// [ActivateCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.ActivateCertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5580,7 +6076,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5592,7 +6089,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Returns a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5604,7 +6102,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5616,7 +6115,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Lists
+        /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5631,7 +6131,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient UndeleteCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5643,7 +6145,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Undelete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that has been deleted.
+        /// Undelete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// that has been deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5658,7 +6162,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient DeleteCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5670,7 +6175,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Delete a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Delete a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5685,7 +6191,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient UpdateCertificateAuthorityOperationsClient { get; }
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5697,7 +6204,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Update a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+        /// Update a
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5838,8 +6346,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5852,8 +6362,10 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// FetchCaCerts returns the current trust anchor for the [CaPool][google.cloud.security.privateca.v1.CaPool]. This will
-        /// include CA certificate chains for all ACTIVE [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// FetchCaCerts returns the current trust anchor for the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
+        /// certificate chains for all ACTIVE
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5866,7 +6378,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5878,7 +6391,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Returns a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5890,7 +6404,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5902,7 +6417,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Lists
+        /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5917,7 +6433,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient UpdateCertificateRevocationListOperationsClient { get; }
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5929,7 +6446,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Update a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+        /// Update a
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5944,7 +6462,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient CreateCertificateTemplateOperationsClient { get; }
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5956,7 +6476,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Create a new [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in a given Project and Location.
+        /// Create a new
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// in a given Project and Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5971,7 +6493,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient DeleteCertificateTemplateOperationsClient { get; }
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5983,7 +6506,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// DeleteCertificateTemplate deletes a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// DeleteCertificateTemplate deletes a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5995,7 +6519,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6007,7 +6532,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Returns a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Returns a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6019,7 +6545,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6031,7 +6558,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Lists [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Lists
+        /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6046,7 +6574,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         public override lro::OperationsClient UpdateCertificateTemplateOperationsClient { get; }
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6058,7 +6587,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         }
 
         /// <summary>
-        /// Update a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+        /// Update a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
