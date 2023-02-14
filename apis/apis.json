@@ -109,6 +109,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.AdvisoryNotifications.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Advisory Notifications",
+      "productUrl": "https://cloud.google.com/advisory-notifications/docs/overview",
+      "description": "An API for accessing Advisory Notifications in Google Cloud",
+      "tags": [
+        "notifications",
+        "advisories",
+        "security",
+        "privacy"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/advisorynotifications/v1",
+      "shortName": "advisorynotifications",
+      "serviceConfigFile": "advisorynotifications_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ApiGateway.V1",
       "version": "2.1.0",
       "type": "grpc",
