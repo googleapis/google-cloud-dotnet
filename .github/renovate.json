@@ -10,6 +10,7 @@
     "apis/Google.Apps.Script.Type/Google.Apps.Script.Type/**",
     "apis/Google.Area120.Tables.V1Alpha1/Google.Area120.Tables.V1Alpha1/**",
     "apis/Google.Cloud.AccessApproval.V1/Google.Cloud.AccessApproval.V1/**",
+    "apis/Google.Cloud.AdvisoryNotifications.V1/Google.Cloud.AdvisoryNotifications.V1/**",
     "apis/Google.Cloud.ApiGateway.V1/Google.Cloud.ApiGateway.V1/**",
     "apis/Google.Cloud.AIPlatform.V1/Google.Cloud.AIPlatform.V1/**",
     "apis/Google.Cloud.ApiKeys.V2/Google.Cloud.ApiKeys.V2/**",
