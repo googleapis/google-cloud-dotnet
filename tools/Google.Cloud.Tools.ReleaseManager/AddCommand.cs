@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
+using Google.Protobuf;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -22,6 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using YamlDotNet.Serialization;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -59,11 +61,14 @@ namespace Google.Cloud.Tools.ReleaseManager
                     $"No service found for '{id}'.{Environment.NewLine}Similar possibilities (check options?): {string.Join(", ", possibilities)}");
             }
 
+            var serviceConfig = ParseServiceConfigYaml(Path.Combine(googleapis, targetApi.Directory, targetApi.ConfigFile));
+
             var api = new ApiMetadata
             {
                 Id = id,
                 ProtoPath = targetApi.Directory,
                 ProductName = targetApi.Title.EndsWith(" API") ? targetApi.Title[..^4] : targetApi.Title,
+                ProductUrl = serviceConfig.Publishing?.DocumentationUri,
                 Description = targetApi.Description,
                 Version = "1.0.0-beta00",
                 Type = ApiType.Grpc,
@@ -122,6 +127,30 @@ namespace Google.Cloud.Tools.ReleaseManager
             File.WriteAllText(ApiCatalog.CatalogPath, catalog.FormatJson());
             Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
             Console.WriteLine(api.Json.ToString(Formatting.Indented));
+        }
+
+        private static Api.Service ParseServiceConfigYaml(string path)
+        {
+            if (path is null)
+            {
+                return null;
+            }
+
+            var deserializer = new Deserializer();
+            using (var reader = File.OpenText(path))
+            {
+                var yamlObject = deserializer.Deserialize(reader);
+                var serializer = new SerializerBuilder().JsonCompatible().Build();
+                var writer = new StringWriter();
+                serializer.Serialize(writer, yamlObject);
+                string json = writer.ToString();
+                // Hack to avoid proto parse failures with the serialized JSON: YamlDotNet serializes
+                // values as strings (because it doesn't know that they're Boolean). Ideally, we should
+                // deserialize straight from YAML to a Service...
+                json = json.Replace("\"true\"", "true").Replace("\"false\"", "false");
+                var parser = new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
+                return parser.Parse<Api.Service>(json);
+            }
         }
     }
 }
