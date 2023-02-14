@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore.V1 {
             "Ch9nb29nbGUvZmlyZXN0b3JlL3YxL3F1ZXJ5LnByb3RvEhNnb29nbGUuZmly",
             "ZXN0b3JlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiJn",
             "b29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvGh5nb29nbGUvcHJv",
-            "dG9idWYvd3JhcHBlcnMucHJvdG8itg8KD1N0cnVjdHVyZWRRdWVyeRI/CgZz",
+            "dG9idWYvd3JhcHBlcnMucHJvdG8ivg8KD1N0cnVjdHVyZWRRdWVyeRI/CgZz",
             "ZWxlY3QYASABKAsyLy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRR",
             "dWVyeS5Qcm9qZWN0aW9uEkUKBGZyb20YAiADKAsyNy5nb29nbGUuZmlyZXN0",
             "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5Db2xsZWN0aW9uU2VsZWN0b3ISOgoF",
@@ -44,49 +44,49 @@ namespace Google.Cloud.Firestore.V1 {
             "AiABKAsyMC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5G",
             "aWVsZEZpbHRlckgAEkgKDHVuYXJ5X2ZpbHRlchgDIAEoCzIwLmdvb2dsZS5m",
             "aXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LlVuYXJ5RmlsdGVySABCDQoL",
-            "ZmlsdGVyX3R5cGUayQEKD0NvbXBvc2l0ZUZpbHRlchJJCgJvcBgBIAEoDjI9",
+            "ZmlsdGVyX3R5cGUa0QEKD0NvbXBvc2l0ZUZpbHRlchJJCgJvcBgBIAEoDjI9",
             "Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkNvbXBvc2l0",
             "ZUZpbHRlci5PcGVyYXRvchI8CgdmaWx0ZXJzGAIgAygLMisuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmlsdGVyIi0KCE9wZXJhdG9y",
-            "EhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAEamAMKC0ZpZWxk",
-            "RmlsdGVyEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5T",
-            "dHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2USRQoCb3AYAiABKA4yOS5n",
-            "b29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5GaWVsZEZpbHRl",
-            "ci5PcGVyYXRvchIpCgV2YWx1ZRgDIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuVmFsdWUi0gEKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVE",
-            "EAASDQoJTEVTU19USEFOEAESFgoSTEVTU19USEFOX09SX0VRVUFMEAISEAoM",
-            "R1JFQVRFUl9USEFOEAMSGQoVR1JFQVRFUl9USEFOX09SX0VRVUFMEAQSCQoF",
-            "RVFVQUwQBRINCglOT1RfRVFVQUwQBhISCg5BUlJBWV9DT05UQUlOUxAHEgYK",
-            "AklOEAgSFgoSQVJSQVlfQ09OVEFJTlNfQU5ZEAkSCgoGTk9UX0lOEAoaigIK",
-            "C1VuYXJ5RmlsdGVyEkUKAm9wGAEgASgOMjkuZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MS5TdHJ1Y3R1cmVkUXVlcnkuVW5hcnlGaWx0ZXIuT3BlcmF0b3ISRAoFZmll",
-            "bGQYAiABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVy",
-            "eS5GaWVsZFJlZmVyZW5jZUgAIl4KCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VO",
-            "U1BFQ0lGSUVEEAASCgoGSVNfTkFOEAISCwoHSVNfTlVMTBADEg4KCklTX05P",
-            "VF9OQU4QBBIPCgtJU19OT1RfTlVMTBAFQg4KDG9wZXJhbmRfdHlwZRqOAQoF",
-            "T3JkZXISQgoFZmllbGQYASABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0",
-            "cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZRJBCglkaXJlY3Rpb24YAiAB",
-            "KA4yLi5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5EaXJl",
-            "Y3Rpb24aJAoORmllbGRSZWZlcmVuY2USEgoKZmllbGRfcGF0aBgCIAEoCRpR",
-            "CgpQcm9qZWN0aW9uEkMKBmZpZWxkcxgCIAMoCzIzLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlIkUKCURpcmVj",
-            "dGlvbhIZChVESVJFQ1RJT05fVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQ",
-            "ARIOCgpERVNDRU5ESU5HEAIiggMKGlN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1",
-            "ZXJ5EkAKEHN0cnVjdHVyZWRfcXVlcnkYASABKAsyJC5nb29nbGUuZmlyZXN0",
-            "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeUgAElYKDGFnZ3JlZ2F0aW9ucxgDIAMo",
-            "CzI7Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9u",
-            "UXVlcnkuQWdncmVnYXRpb25CA+BBARq7AQoLQWdncmVnYXRpb24SUgoFY291",
-            "bnQYASABKAsyQS5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dy",
-            "ZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLkNvdW50SAASEgoFYWxpYXMYByAB",
-            "KAlCA+BBARo4CgVDb3VudBIvCgV1cF90bxgBIAEoCzIbLmdvb2dsZS5wcm90",
-            "b2J1Zi5JbnQ2NFZhbHVlQgPgQQFCCgoIb3BlcmF0b3JCDAoKcXVlcnlfdHlw",
-            "ZSJECgZDdXJzb3ISKgoGdmFsdWVzGAEgAygLMhouZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5WYWx1ZRIOCgZiZWZvcmUYAiABKAhCwwEKF2NvbS5nb29nbGUuZmly",
-            "ZXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvZmlyZXN0b3JlL3YxO2ZpcmVzdG9yZaICBEdD",
-            "RlOqAhlHb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxygIZR29vZ2xlXENsb3Vk",
-            "XEZpcmVzdG9yZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6VjFi",
-            "BnByb3RvMw=="));
+            "cmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmlsdGVyIjUKCE9wZXJhdG9y",
+            "EhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAhqY",
+            "AwoLRmllbGRGaWx0ZXISQgoFZmllbGQYASABKAsyMy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZRJFCgJvcBgC",
+            "IAEoDjI5Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZp",
+            "ZWxkRmlsdGVyLk9wZXJhdG9yEikKBXZhbHVlGAMgASgLMhouZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5WYWx1ZSLSAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5T",
+            "UEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFV",
+            "QUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFV",
+            "QUwQBBIJCgVFUVVBTBAFEg0KCU5PVF9FUVVBTBAGEhIKDkFSUkFZX0NPTlRB",
+            "SU5TEAcSBgoCSU4QCBIWChJBUlJBWV9DT05UQUlOU19BTlkQCRIKCgZOT1Rf",
+            "SU4QChqKAgoLVW5hcnlGaWx0ZXISRQoCb3AYASABKA4yOS5nb29nbGUuZmly",
+            "ZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5VbmFyeUZpbHRlci5PcGVyYXRv",
+            "chJECgVmaWVsZBgCIAEoCzIzLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
+            "dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlSAAiXgoIT3BlcmF0b3ISGAoUT1BF",
+            "UkFUT1JfVU5TUEVDSUZJRUQQABIKCgZJU19OQU4QAhILCgdJU19OVUxMEAMS",
+            "DgoKSVNfTk9UX05BThAEEg8KC0lTX05PVF9OVUxMEAVCDgoMb3BlcmFuZF90",
+            "eXBlGo4BCgVPcmRlchJCCgVmaWVsZBgBIAEoCzIzLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlEkEKCWRpcmVj",
+            "dGlvbhgCIAEoDjIuLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1",
+            "ZXJ5LkRpcmVjdGlvbhokCg5GaWVsZFJlZmVyZW5jZRISCgpmaWVsZF9wYXRo",
+            "GAIgASgJGlEKClByb2plY3Rpb24SQwoGZmllbGRzGAIgAygLMjMuZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2Ui",
+            "RQoJRGlyZWN0aW9uEhkKFURJUkVDVElPTl9VTlNQRUNJRklFRBAAEg0KCUFT",
+            "Q0VORElORxABEg4KCkRFU0NFTkRJTkcQAiKCAwoaU3RydWN0dXJlZEFnZ3Jl",
+            "Z2F0aW9uUXVlcnkSQAoQc3RydWN0dXJlZF9xdWVyeRgBIAEoCzIkLmdvb2ds",
+            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SAASVgoMYWdncmVnYXRp",
+            "b25zGAMgAygLMjsuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkQWdn",
+            "cmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbkID4EEBGrsBCgtBZ2dyZWdhdGlv",
+            "bhJSCgVjb3VudBgBIAEoCzJBLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
+            "dXJlZEFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQ291bnRIABISCgVh",
+            "bGlhcxgHIAEoCUID4EEBGjgKBUNvdW50Ei8KBXVwX3RvGAEgASgLMhsuZ29v",
+            "Z2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBAUIKCghvcGVyYXRvckIMCgpx",
+            "dWVyeV90eXBlIkQKBkN1cnNvchIqCgZ2YWx1ZXMYASADKAsyGi5nb29nbGUu",
+            "ZmlyZXN0b3JlLnYxLlZhbHVlEg4KBmJlZm9yZRgCIAEoCELDAQoXY29tLmdv",
+            "b2dsZS5maXJlc3RvcmUudjFCClF1ZXJ5UHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9maXJlc3RvcmUvdjE7ZmlyZXN0",
+            "b3JlogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29n",
+            "bGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0",
+            "b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1525,6 +1525,10 @@ namespace Google.Cloud.Firestore.V1 {
             /// Documents are required to satisfy all of the combined filters.
             /// </summary>
             [pbr::OriginalName("AND")] And = 1,
+            /// <summary>
+            /// Documents are required to satisfy at least one of the combined filters.
+            /// </summary>
+            [pbr::OriginalName("OR")] Or = 2,
           }
 
         }
@@ -2543,7 +2547,8 @@ namespace Google.Cloud.Firestore.V1 {
         ///
         /// Requires:
         ///
-        /// * Conform to [document field name][google.firestore.v1.Document.fields] limitations.
+        /// * Conform to [document field name][google.firestore.v1.Document.fields]
+        /// limitations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2880,7 +2885,8 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// Firestore query for running an aggregation over a [StructuredQuery][google.firestore.v1.StructuredQuery].
+  /// Firestore query for running an aggregation over a
+  /// [StructuredQuery][google.firestore.v1.StructuredQuery].
   /// </summary>
   public sealed partial class StructuredAggregationQuery : pb::IMessage<StructuredAggregationQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2953,7 +2959,8 @@ namespace Google.Cloud.Firestore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation> aggregations_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation>();
     /// <summary>
-    /// Optional. Series of aggregations to apply over the results of the `structured_query`.
+    /// Optional. Series of aggregations to apply over the results of the
+    /// `structured_query`.
     ///
     /// Requires:
     ///
@@ -3225,7 +3232,8 @@ namespace Google.Cloud.Firestore.V1 {
         public const int AliasFieldNumber = 7;
         private string alias_ = "";
         /// <summary>
-        /// Optional. Optional name of the field to store the result of the aggregation into.
+        /// Optional. Optional name of the field to store the result of the
+        /// aggregation into.
         ///
         /// If not provided, Firestore will pick a default name following the format
         /// `field_&lt;incremental_id++>`. For example:
@@ -3257,7 +3265,8 @@ namespace Google.Cloud.Firestore.V1 {
         /// Requires:
         ///
         /// * Must be unique across all aggregation aliases.
-        /// * Conform to [document field name][google.firestore.v1.Document.fields] limitations.
+        /// * Conform to [document field name][google.firestore.v1.Document.fields]
+        /// limitations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3521,7 +3530,8 @@ namespace Google.Cloud.Firestore.V1 {
             private static readonly pb::FieldCodec<long?> _single_upTo_codec = pb::FieldCodec.ForStructWrapper<long>(10);
             private long? upTo_;
             /// <summary>
-            /// Optional. Optional constraint on the maximum number of documents to count.
+            /// Optional. Optional constraint on the maximum number of documents to
+            /// count.
             ///
             /// This provides a way to set an upper bound on the number of documents
             /// to scan, limiting latency and cost.

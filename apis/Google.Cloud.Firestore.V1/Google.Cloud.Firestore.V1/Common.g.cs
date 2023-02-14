@@ -59,7 +59,8 @@ namespace Google.Cloud.Firestore.V1 {
   /// Used to restrict a get or update operation on a document to a subset of its
   /// fields.
   /// This is different from standard field masks, as this is always scoped to a
-  /// [Document][google.firestore.v1.Document], and takes in account the dynamic nature of [Value][google.firestore.v1.Value].
+  /// [Document][google.firestore.v1.Document], and takes in account the dynamic
+  /// nature of [Value][google.firestore.v1.Value].
   /// </summary>
   public sealed partial class DocumentMask : pb::IMessage<DocumentMask>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -111,8 +112,9 @@ namespace Google.Cloud.Firestore.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> fieldPaths_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The list of field paths in the mask. See [Document.fields][google.firestore.v1.Document.fields] for a field
-    /// path syntax reference.
+    /// The list of field paths in the mask. See
+    /// [Document.fields][google.firestore.v1.Document.fields] for a field path
+    /// syntax reference.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

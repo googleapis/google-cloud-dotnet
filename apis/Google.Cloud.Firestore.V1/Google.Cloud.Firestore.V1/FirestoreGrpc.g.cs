@@ -30,8 +30,8 @@ namespace Google.Cloud.Firestore.V1 {
   /// document database that simplifies storing, syncing, and querying data for
   /// your mobile, web, and IoT apps at global scale. Its client libraries provide
   /// live synchronization and offline support, while its security features and
-  /// integrations with Firebase and Google Cloud Platform (GCP) accelerate
-  /// building truly serverless apps.
+  /// integrations with Firebase and Google Cloud Platform accelerate building
+  /// truly serverless apps.
   /// </summary>
   public static partial class Firestore
   {
@@ -383,8 +383,9 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// Runs an aggregation query.
       ///
-      /// Rather than producing [Document][google.firestore.v1.Document] results like [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery],
-      /// this API allows running an aggregation to produce a series of
+      /// Rather than producing [Document][google.firestore.v1.Document] results like
+      /// [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery], this API
+      /// allows running an aggregation to produce a series of
       /// [AggregationResult][google.firestore.v1.AggregationResult] server-side.
       ///
       /// High-Level Example:
@@ -419,7 +420,8 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// Streams batches of document updates and deletes, in order.
+      /// Streams batches of document updates and deletes, in order. This method is
+      /// only available via the gRPC API (not REST).
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -432,7 +434,8 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// Listens to changes.
+      /// Listens to changes. This method is only available via the gRPC API (not
+      /// REST).
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -462,7 +465,8 @@ namespace Google.Cloud.Firestore.V1 {
       /// The BatchWrite method does not apply the write operations atomically
       /// and can apply them out of order. Method does not allow more than one write
       /// per document. Each write succeeds or fails independently. See the
-      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the
+      /// success status of each write.
       ///
       /// If you require an atomically applied set of writes, use
       /// [Commit][google.firestore.v1.Firestore.Commit] instead.
@@ -910,8 +914,9 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// Runs an aggregation query.
       ///
-      /// Rather than producing [Document][google.firestore.v1.Document] results like [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery],
-      /// this API allows running an aggregation to produce a series of
+      /// Rather than producing [Document][google.firestore.v1.Document] results like
+      /// [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery], this API
+      /// allows running an aggregation to produce a series of
       /// [AggregationResult][google.firestore.v1.AggregationResult] server-side.
       ///
       /// High-Level Example:
@@ -934,8 +939,9 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// Runs an aggregation query.
       ///
-      /// Rather than producing [Document][google.firestore.v1.Document] results like [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery],
-      /// this API allows running an aggregation to produce a series of
+      /// Rather than producing [Document][google.firestore.v1.Document] results like
+      /// [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery], this API
+      /// allows running an aggregation to produce a series of
       /// [AggregationResult][google.firestore.v1.AggregationResult] server-side.
       ///
       /// High-Level Example:
@@ -1010,7 +1016,8 @@ namespace Google.Cloud.Firestore.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_PartitionQuery, null, options, request);
       }
       /// <summary>
-      /// Streams batches of document updates and deletes, in order.
+      /// Streams batches of document updates and deletes, in order. This method is
+      /// only available via the gRPC API (not REST).
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -1022,7 +1029,8 @@ namespace Google.Cloud.Firestore.V1 {
         return Write(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Streams batches of document updates and deletes, in order.
+      /// Streams batches of document updates and deletes, in order. This method is
+      /// only available via the gRPC API (not REST).
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
@@ -1032,7 +1040,8 @@ namespace Google.Cloud.Firestore.V1 {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_Write, null, options);
       }
       /// <summary>
-      /// Listens to changes.
+      /// Listens to changes. This method is only available via the gRPC API (not
+      /// REST).
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -1044,7 +1053,8 @@ namespace Google.Cloud.Firestore.V1 {
         return Listen(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Listens to changes.
+      /// Listens to changes. This method is only available via the gRPC API (not
+      /// REST).
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
@@ -1107,7 +1117,8 @@ namespace Google.Cloud.Firestore.V1 {
       /// The BatchWrite method does not apply the write operations atomically
       /// and can apply them out of order. Method does not allow more than one write
       /// per document. Each write succeeds or fails independently. See the
-      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the
+      /// success status of each write.
       ///
       /// If you require an atomically applied set of writes, use
       /// [Commit][google.firestore.v1.Firestore.Commit] instead.
@@ -1128,7 +1139,8 @@ namespace Google.Cloud.Firestore.V1 {
       /// The BatchWrite method does not apply the write operations atomically
       /// and can apply them out of order. Method does not allow more than one write
       /// per document. Each write succeeds or fails independently. See the
-      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the
+      /// success status of each write.
       ///
       /// If you require an atomically applied set of writes, use
       /// [Commit][google.firestore.v1.Firestore.Commit] instead.
@@ -1147,7 +1159,8 @@ namespace Google.Cloud.Firestore.V1 {
       /// The BatchWrite method does not apply the write operations atomically
       /// and can apply them out of order. Method does not allow more than one write
       /// per document. Each write succeeds or fails independently. See the
-      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the
+      /// success status of each write.
       ///
       /// If you require an atomically applied set of writes, use
       /// [Commit][google.firestore.v1.Firestore.Commit] instead.
@@ -1168,7 +1181,8 @@ namespace Google.Cloud.Firestore.V1 {
       /// The BatchWrite method does not apply the write operations atomically
       /// and can apply them out of order. Method does not allow more than one write
       /// per document. Each write succeeds or fails independently. See the
-      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+      /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the
+      /// success status of each write.
       ///
       /// If you require an atomically applied set of writes, use
       /// [Commit][google.firestore.v1.Firestore.Commit] instead.

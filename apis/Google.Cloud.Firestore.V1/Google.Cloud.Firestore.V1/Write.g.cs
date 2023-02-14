@@ -862,8 +862,9 @@ namespace Google.Cloud.Firestore.V1 {
         public const int FieldPathFieldNumber = 1;
         private string fieldPath_ = "";
         /// <summary>
-        /// The path of the field. See [Document.fields][google.firestore.v1.Document.fields] for the field path syntax
-        /// reference.
+        /// The path of the field. See
+        /// [Document.fields][google.firestore.v1.Document.fields] for the field path
+        /// syntax reference.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1491,8 +1492,9 @@ namespace Google.Cloud.Firestore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> transformResults_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value>();
     /// <summary>
-    /// The results of applying each [DocumentTransform.FieldTransform][google.firestore.v1.DocumentTransform.FieldTransform], in the
-    /// same order.
+    /// The results of applying each
+    /// [DocumentTransform.FieldTransform][google.firestore.v1.DocumentTransform.FieldTransform],
+    /// in the same order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1659,11 +1661,12 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A [Document][google.firestore.v1.Document] has changed.
   ///
-  /// May be the result of multiple [writes][google.firestore.v1.Write], including deletes, that
-  /// ultimately resulted in a new value for the [Document][google.firestore.v1.Document].
+  /// May be the result of multiple [writes][google.firestore.v1.Write], including
+  /// deletes, that ultimately resulted in a new value for the
+  /// [Document][google.firestore.v1.Document].
   ///
-  /// Multiple [DocumentChange][google.firestore.v1.DocumentChange] messages may be returned for the same logical
-  /// change, if multiple targets are affected.
+  /// Multiple [DocumentChange][google.firestore.v1.DocumentChange] messages may be
+  /// returned for the same logical change, if multiple targets are affected.
   /// </summary>
   public sealed partial class DocumentChange : pb::IMessage<DocumentChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1933,11 +1936,12 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A [Document][google.firestore.v1.Document] has been deleted.
   ///
-  /// May be the result of multiple [writes][google.firestore.v1.Write], including updates, the
-  /// last of which deleted the [Document][google.firestore.v1.Document].
+  /// May be the result of multiple [writes][google.firestore.v1.Write], including
+  /// updates, the last of which deleted the
+  /// [Document][google.firestore.v1.Document].
   ///
-  /// Multiple [DocumentDelete][google.firestore.v1.DocumentDelete] messages may be returned for the same logical
-  /// delete, if multiple targets are affected.
+  /// Multiple [DocumentDelete][google.firestore.v1.DocumentDelete] messages may be
+  /// returned for the same logical delete, if multiple targets are affected.
   /// </summary>
   public sealed partial class DocumentDelete : pb::IMessage<DocumentDelete>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1989,7 +1993,8 @@ namespace Google.Cloud.Firestore.V1 {
     public const int DocumentFieldNumber = 1;
     private string document_ = "";
     /// <summary>
-    /// The resource name of the [Document][google.firestore.v1.Document] that was deleted.
+    /// The resource name of the [Document][google.firestore.v1.Document] that was
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2214,14 +2219,16 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// A [Document][google.firestore.v1.Document] has been removed from the view of the targets.
+  /// A [Document][google.firestore.v1.Document] has been removed from the view of
+  /// the targets.
   ///
   /// Sent if the document is no longer relevant to a target and is out of view.
   /// Can be sent instead of a DocumentDelete or a DocumentChange if the server
   /// can not send the new value of the document.
   ///
-  /// Multiple [DocumentRemove][google.firestore.v1.DocumentRemove] messages may be returned for the same logical
-  /// write or delete, if multiple targets are affected.
+  /// Multiple [DocumentRemove][google.firestore.v1.DocumentRemove] messages may be
+  /// returned for the same logical write or delete, if multiple targets are
+  /// affected.
   /// </summary>
   public sealed partial class DocumentRemove : pb::IMessage<DocumentRemove>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2273,7 +2280,8 @@ namespace Google.Cloud.Firestore.V1 {
     public const int DocumentFieldNumber = 1;
     private string document_ = "";
     /// <summary>
-    /// The resource name of the [Document][google.firestore.v1.Document] that has gone out of view.
+    /// The resource name of the [Document][google.firestore.v1.Document] that has
+    /// gone out of view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2564,7 +2572,8 @@ namespace Google.Cloud.Firestore.V1 {
     public const int CountFieldNumber = 2;
     private int count_;
     /// <summary>
-    /// The total count of documents that match [target_id][google.firestore.v1.ExistenceFilter.target_id].
+    /// The total count of documents that match
+    /// [target_id][google.firestore.v1.ExistenceFilter.target_id].
     ///
     /// If different from the count of documents in the client that match, the
     /// client must manually determine which documents no longer match the target.
