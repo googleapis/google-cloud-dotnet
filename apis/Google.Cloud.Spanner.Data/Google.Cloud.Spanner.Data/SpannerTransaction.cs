@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -287,7 +287,7 @@ namespace Google.Cloud.Spanner.Data
             }, "SpannerTransaction.ExecuteMutations", SpannerConnection.Logger);
         }
 
-        Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
+        async Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
             ReadOrQueryRequest request,
             CancellationToken cancellationToken,
             int timeoutSeconds) // Ignored
@@ -299,7 +299,12 @@ namespace Google.Cloud.Spanner.Data
             var callSettings = SpannerConnection.CreateCallSettings(
                 request.GetCallSettings,
                 cancellationToken);
-            return Task.FromResult(request.ExecuteReadOrQueryStreamReader(_session, callSettings));
+            var reader = request.ExecuteReadOrQueryStreamReader(_session, callSettings);
+            if (true /* FIXME: just for DML */)
+            {
+                await reader.EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+            }
+            return reader;
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
