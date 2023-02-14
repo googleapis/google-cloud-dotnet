@@ -88,13 +88,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             return Assembly.LoadFrom(assemblyFile);
         }
 
-        private List<Type> FindClients(Assembly assembly) => assembly.GetTypes()
+        private List<System.Type> FindClients(Assembly assembly) => assembly.GetTypes()
             .Where(t => t.Name.EndsWith("Client"))
             // Check that FooClient has FooSettings
             .Where(t => assembly.GetType(t.FullName[..^6] + "Settings") is object)
             .ToList();
 
-        private IEnumerable<SmokeTest> SuggestSmokeTests(Type client) =>
+        private IEnumerable<SmokeTest> SuggestSmokeTests(System.Type client) =>
             client.GetMethods(BindingFlags.Public | BindingFlags.Instance)
                 // All RPC methods have a final CallSettings parameter
                 .Where(method => method.GetParameters().LastOrDefault()?.ParameterType.FullName == "Google.Api.Gax.Grpc.CallSettings")
@@ -161,7 +161,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             public static Overload FromMethod(MethodInfo method) =>
                 new Overload(method.GetParameters().Where(p => !p.IsOptional).ToList());
 
-            public bool HasSingleParameterOfType(Type expectedType) =>
+            public bool HasSingleParameterOfType(System.Type expectedType) =>
                 HasSingleParameterOfType(expectedType.FullName);
 
             public bool HasSingleParameterOfType(string expectedTypeName) =>

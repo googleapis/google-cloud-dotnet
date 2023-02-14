@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using System;
 using System.IO;
@@ -38,7 +37,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private static void ReportAnomalies(Api api)
+        private static void ReportAnomalies(ApiIndex.V1.Api api)
         {
             var titleWords = GetTitleWords(api);
 
@@ -96,7 +95,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             return null;
         }
 
-        private static string[] GetTitleWords(Api api)
+        private static string[] GetTitleWords(ApiIndex.V1.Api api)
         {
             string title = api.Title;
             if (title.EndsWith(" API"))
