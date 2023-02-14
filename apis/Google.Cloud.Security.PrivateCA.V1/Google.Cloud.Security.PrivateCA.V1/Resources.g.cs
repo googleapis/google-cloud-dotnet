@@ -187,117 +187,126 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqHAepBgwEKLHByaXZhdGVjYS5n",
             "b29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZVRlbXBsYXRlElNwcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2VydGlmaWNhdGVUZW1w",
-            "bGF0ZXMve2NlcnRpZmljYXRlX3RlbXBsYXRlfSLfAwoOWDUwOVBhcmFtZXRl",
+            "bGF0ZXMve2NlcnRpZmljYXRlX3RlbXBsYXRlfSLOBgoOWDUwOVBhcmFtZXRl",
             "cnMSRAoJa2V5X3VzYWdlGAEgASgLMiwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
             "LnByaXZhdGVjYS52MS5LZXlVc2FnZUID4EEBElUKCmNhX29wdGlvbnMYAiAB",
             "KAsyPC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLlg1MDlQ",
             "YXJhbWV0ZXJzLkNhT3B0aW9uc0ID4EEBEkUKCnBvbGljeV9pZHMYAyADKAsy",
             "LC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLk9iamVjdElk",
-            "QgPgQQESHQoQYWlhX29jc3Bfc2VydmVycxgEIAMoCUID4EEBElUKFWFkZGl0",
-            "aW9uYWxfZXh0ZW5zaW9ucxgFIAMoCzIxLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eS5wcml2YXRlY2EudjEuWDUwOUV4dGVuc2lvbkID4EEBGnMKCUNhT3B0aW9u",
-            "cxIXCgVpc19jYRgBIAEoCEID4EEBSACIAQESKAoWbWF4X2lzc3Vlcl9wYXRo",
-            "X2xlbmd0aBgCIAEoBUID4EEBSAGIAQFCCAoGX2lzX2NhQhkKF19tYXhfaXNz",
-            "dWVyX3BhdGhfbGVuZ3RoIqkCChFTdWJvcmRpbmF0ZUNvbmZpZxJWChVjZXJ0",
-            "aWZpY2F0ZV9hdXRob3JpdHkYASABKAlCNeBBAvpBLwotcHJpdmF0ZWNhLmdv",
-            "b2dsZWFwaXMuY29tL0NlcnRpZmljYXRlQXV0aG9yaXR5SAASbQoQcGVtX2lz",
-            "c3Vlcl9jaGFpbhgCIAEoCzJMLmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2",
-            "YXRlY2EudjEuU3Vib3JkaW5hdGVDb25maWcuU3Vib3JkaW5hdGVDb25maWdD",
-            "aGFpbkID4EECSAAaNwoWU3Vib3JkaW5hdGVDb25maWdDaGFpbhIdChBwZW1f",
-            "Y2VydGlmaWNhdGVzGAEgAygJQgPgQQJCFAoSc3Vib3JkaW5hdGVfY29uZmln",
-            "Ip0BCglQdWJsaWNLZXkSEAoDa2V5GAEgASgMQgPgQQISTAoGZm9ybWF0GAIg",
-            "ASgOMjcuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5QdWJs",
-            "aWNLZXkuS2V5Rm9ybWF0QgPgQQIiMAoJS2V5Rm9ybWF0EhoKFktFWV9GT1JN",
-            "QVRfVU5TUEVDSUZJRUQQABIHCgNQRU0QASK0AwoRQ2VydGlmaWNhdGVDb25m",
-            "aWcSYAoOc3ViamVjdF9jb25maWcYASABKAsyQy5nb29nbGUuY2xvdWQuc2Vj",
-            "dXJpdHkucHJpdmF0ZWNhLnYxLkNlcnRpZmljYXRlQ29uZmlnLlN1YmplY3RD",
-            "b25maWdCA+BBAhJMCgt4NTA5X2NvbmZpZxgCIAEoCzIyLmdvb2dsZS5jbG91",
-            "ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuWDUwOVBhcmFtZXRlcnNCA+BBAhJG",
-            "CgpwdWJsaWNfa2V5GAMgASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnBy",
-            "aXZhdGVjYS52MS5QdWJsaWNLZXlCA+BBARqmAQoNU3ViamVjdENvbmZpZxJB",
-            "CgdzdWJqZWN0GAEgASgLMisuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZh",
-            "dGVjYS52MS5TdWJqZWN0QgPgQQISUgoQc3ViamVjdF9hbHRfbmFtZRgCIAEo",
-            "CzIzLmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuU3ViamVj",
-            "dEFsdE5hbWVzQgPgQQEioQgKFkNlcnRpZmljYXRlRGVzY3JpcHRpb24SagoT",
-            "c3ViamVjdF9kZXNjcmlwdGlvbhgBIAEoCzJNLmdvb2dsZS5jbG91ZC5zZWN1",
-            "cml0eS5wcml2YXRlY2EudjEuQ2VydGlmaWNhdGVEZXNjcmlwdGlvbi5TdWJq",
-            "ZWN0RGVzY3JpcHRpb24STAoQeDUwOV9kZXNjcmlwdGlvbhgCIAEoCzIyLmdv",
-            "b2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuWDUwOVBhcmFtZXRl",
-            "cnMSQQoKcHVibGljX2tleRgDIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eS5wcml2YXRlY2EudjEuUHVibGljS2V5ElgKDnN1YmplY3Rfa2V5X2lkGAQg",
-            "ASgLMkAuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5DZXJ0",
-            "aWZpY2F0ZURlc2NyaXB0aW9uLktleUlkEloKEGF1dGhvcml0eV9rZXlfaWQY",
-            "BSABKAsyQC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLkNl",
-            "cnRpZmljYXRlRGVzY3JpcHRpb24uS2V5SWQSHwoXY3JsX2Rpc3RyaWJ1dGlv",
-            "bl9wb2ludHMYBiADKAkSJAocYWlhX2lzc3VpbmdfY2VydGlmaWNhdGVfdXJs",
-            "cxgHIAMoCRJrChBjZXJ0X2ZpbmdlcnByaW50GAggASgLMlEuZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5DZXJ0aWZpY2F0ZURlc2NyaXB0",
-            "aW9uLkNlcnRpZmljYXRlRmluZ2VycHJpbnQa0gIKElN1YmplY3REZXNjcmlw",
-            "dGlvbhI8CgdzdWJqZWN0GAEgASgLMisuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
-            "LnByaXZhdGVjYS52MS5TdWJqZWN0Ek0KEHN1YmplY3RfYWx0X25hbWUYAiAB",
-            "KAsyMy5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLlN1Ympl",
-            "Y3RBbHROYW1lcxIZChFoZXhfc2VyaWFsX251bWJlchgDIAEoCRIrCghsaWZl",
-            "dGltZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIzCg9ub3Rf",
-            "YmVmb3JlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjIKDm5vdF9hZnRlcl90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBocCgVLZXlJZBITCgZrZXlfaWQYASABKAlCA+BBARotChZDZXJ0",
-            "aWZpY2F0ZUZpbmdlcnByaW50EhMKC3NoYTI1Nl9oYXNoGAEgASgJIicKCE9i",
-            "amVjdElkEhsKDm9iamVjdF9pZF9wYXRoGAEgAygFQgPgQQIigAEKDVg1MDlF",
-            "eHRlbnNpb24SRAoJb2JqZWN0X2lkGAEgASgLMiwuZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5LnByaXZhdGVjYS52MS5PYmplY3RJZEID4EECEhUKCGNyaXRpY2Fs",
-            "GAIgASgIQgPgQQESEgoFdmFsdWUYAyABKAxCA+BBAiKiBQoIS2V5VXNhZ2US",
-            "VAoOYmFzZV9rZXlfdXNhZ2UYASABKAsyPC5nb29nbGUuY2xvdWQuc2VjdXJp",
-            "dHkucHJpdmF0ZWNhLnYxLktleVVzYWdlLktleVVzYWdlT3B0aW9ucxJgChJl",
-            "eHRlbmRlZF9rZXlfdXNhZ2UYAiABKAsyRC5nb29nbGUuY2xvdWQuc2VjdXJp",
-            "dHkucHJpdmF0ZWNhLnYxLktleVVzYWdlLkV4dGVuZGVkS2V5VXNhZ2VPcHRp",
-            "b25zElEKG3Vua25vd25fZXh0ZW5kZWRfa2V5X3VzYWdlcxgDIAMoCzIsLmdv",
-            "b2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuT2JqZWN0SWQa5wEK",
-            "D0tleVVzYWdlT3B0aW9ucxIZChFkaWdpdGFsX3NpZ25hdHVyZRgBIAEoCBIa",
-            "ChJjb250ZW50X2NvbW1pdG1lbnQYAiABKAgSGAoQa2V5X2VuY2lwaGVybWVu",
-            "dBgDIAEoCBIZChFkYXRhX2VuY2lwaGVybWVudBgEIAEoCBIVCg1rZXlfYWdy",
-            "ZWVtZW50GAUgASgIEhEKCWNlcnRfc2lnbhgGIAEoCBIQCghjcmxfc2lnbhgH",
-            "IAEoCBIVCg1lbmNpcGhlcl9vbmx5GAggASgIEhUKDWRlY2lwaGVyX29ubHkY",
-            "CSABKAgaoAEKF0V4dGVuZGVkS2V5VXNhZ2VPcHRpb25zEhMKC3NlcnZlcl9h",
-            "dXRoGAEgASgIEhMKC2NsaWVudF9hdXRoGAIgASgIEhQKDGNvZGVfc2lnbmlu",
-            "ZxgDIAEoCBIYChBlbWFpbF9wcm90ZWN0aW9uGAQgASgIEhUKDXRpbWVfc3Rh",
-            "bXBpbmcYBSABKAgSFAoMb2NzcF9zaWduaW5nGAYgASgIIrgBCgdTdWJqZWN0",
-            "EhMKC2NvbW1vbl9uYW1lGAEgASgJEhQKDGNvdW50cnlfY29kZRgCIAEoCRIU",
-            "Cgxvcmdhbml6YXRpb24YAyABKAkSGwoTb3JnYW5pemF0aW9uYWxfdW5pdBgE",
-            "IAEoCRIQCghsb2NhbGl0eRgFIAEoCRIQCghwcm92aW5jZRgGIAEoCRIWCg5z",
-            "dHJlZXRfYWRkcmVzcxgHIAEoCRITCgtwb3N0YWxfY29kZRgIIAEoCSKpAQoP",
-            "U3ViamVjdEFsdE5hbWVzEhEKCWRuc19uYW1lcxgBIAMoCRIMCgR1cmlzGAIg",
-            "AygJEhcKD2VtYWlsX2FkZHJlc3NlcxgDIAMoCRIUCgxpcF9hZGRyZXNzZXMY",
-            "BCADKAkSRgoLY3VzdG9tX3NhbnMYBSADKAsyMS5nb29nbGUuY2xvdWQuc2Vj",
-            "dXJpdHkucHJpdmF0ZWNhLnYxLlg1MDlFeHRlbnNpb24i+gEKHkNlcnRpZmlj",
-            "YXRlSWRlbnRpdHlDb25zdHJhaW50cxIuCg5jZWxfZXhwcmVzc2lvbhgBIAEo",
-            "CzIRLmdvb2dsZS50eXBlLkV4cHJCA+BBARIrChlhbGxvd19zdWJqZWN0X3Bh",
-            "c3N0aHJvdWdoGAIgASgIQgPgQQJIAIgBARI1CiNhbGxvd19zdWJqZWN0X2Fs",
-            "dF9uYW1lc19wYXNzdGhyb3VnaBgDIAEoCEID4EECSAGIAQFCHAoaX2FsbG93",
-            "X3N1YmplY3RfcGFzc3Rocm91Z2hCJgokX2FsbG93X3N1YmplY3RfYWx0X25h",
-            "bWVzX3Bhc3N0aHJvdWdoIp4DCh9DZXJ0aWZpY2F0ZUV4dGVuc2lvbkNvbnN0",
-            "cmFpbnRzEnwKEGtub3duX2V4dGVuc2lvbnMYASADKA4yXS5nb29nbGUuY2xv",
-            "dWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLkNlcnRpZmljYXRlRXh0ZW5zaW9u",
-            "Q29uc3RyYWludHMuS25vd25DZXJ0aWZpY2F0ZUV4dGVuc2lvbkID4EEBElAK",
-            "FWFkZGl0aW9uYWxfZXh0ZW5zaW9ucxgCIAMoCzIsLmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eS5wcml2YXRlY2EudjEuT2JqZWN0SWRCA+BBASKqAQoZS25vd25D",
-            "ZXJ0aWZpY2F0ZUV4dGVuc2lvbhIrCidLTk9XTl9DRVJUSUZJQ0FURV9FWFRF",
-            "TlNJT05fVU5TUEVDSUZJRUQQABISCg5CQVNFX0tFWV9VU0FHRRABEhYKEkVY",
-            "VEVOREVEX0tFWV9VU0FHRRACEg4KCkNBX09QVElPTlMQAxIOCgpQT0xJQ1lf",
-            "SURTEAQSFAoQQUlBX09DU1BfU0VSVkVSUxAFKocCChBSZXZvY2F0aW9uUmVh",
-            "c29uEiEKHVJFVk9DQVRJT05fUkVBU09OX1VOU1BFQ0lGSUVEEAASEgoOS0VZ",
-            "X0NPTVBST01JU0UQARIkCiBDRVJUSUZJQ0FURV9BVVRIT1JJVFlfQ09NUFJP",
-            "TUlTRRACEhcKE0FGRklMSUFUSU9OX0NIQU5HRUQQAxIOCgpTVVBFUlNFREVE",
-            "EAQSGgoWQ0VTU0FUSU9OX09GX09QRVJBVElPThAFEhQKEENFUlRJRklDQVRF",
-            "X0hPTEQQBhIXChNQUklWSUxFR0VfV0lUSERSQVdOEAcSIgoeQVRUUklCVVRF",
-            "X0FVVEhPUklUWV9DT01QUk9NSVNFEAgqXQoSU3ViamVjdFJlcXVlc3RNb2Rl",
-            "EiQKIFNVQkpFQ1RfUkVRVUVTVF9NT0RFX1VOU1BFQ0lGSUVEEAASCwoHREVG",
-            "QVVMVBABEhQKEFJFRkxFQ1RFRF9TUElGRkUQAkL/AQomY29tLmdvb2dsZS5j",
-            "bG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjFCF1ByaXZhdGVDYVJlc291cmNl",
-            "c1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHkvcHJpdmF0",
-            "ZWNhL2FwaXYxL3ByaXZhdGVjYXBiO3ByaXZhdGVjYXBi+AEBqgIiR29vZ2xl",
-            "LkNsb3VkLlNlY3VyaXR5LlByaXZhdGVDQS5WMcoCIkdvb2dsZVxDbG91ZFxT",
-            "ZWN1cml0eVxQcml2YXRlQ0FcVjHqAiZHb29nbGU6OkNsb3VkOjpTZWN1cml0",
-            "eTo6UHJpdmF0ZUNBOjpWMWIGcHJvdG8z"));
+            "QgPgQQESHQoQYWlhX29jc3Bfc2VydmVycxgEIAMoCUID4EEBEmEKEG5hbWVf",
+            "Y29uc3RyYWludHMYBiABKAsyQi5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJp",
+            "dmF0ZWNhLnYxLlg1MDlQYXJhbWV0ZXJzLk5hbWVDb25zdHJhaW50c0ID4EEB",
+            "ElUKFWFkZGl0aW9uYWxfZXh0ZW5zaW9ucxgFIAMoCzIxLmdvb2dsZS5jbG91",
+            "ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuWDUwOUV4dGVuc2lvbkID4EEBGnMK",
+            "CUNhT3B0aW9ucxIXCgVpc19jYRgBIAEoCEID4EEBSACIAQESKAoWbWF4X2lz",
+            "c3Vlcl9wYXRoX2xlbmd0aBgCIAEoBUID4EEBSAGIAQFCCAoGX2lzX2NhQhkK",
+            "F19tYXhfaXNzdWVyX3BhdGhfbGVuZ3RoGokCCg9OYW1lQ29uc3RyYWludHMS",
+            "EAoIY3JpdGljYWwYASABKAgSGwoTcGVybWl0dGVkX2Ruc19uYW1lcxgCIAMo",
+            "CRIaChJleGNsdWRlZF9kbnNfbmFtZXMYAyADKAkSGwoTcGVybWl0dGVkX2lw",
+            "X3JhbmdlcxgEIAMoCRIaChJleGNsdWRlZF9pcF9yYW5nZXMYBSADKAkSIQoZ",
+            "cGVybWl0dGVkX2VtYWlsX2FkZHJlc3NlcxgGIAMoCRIgChhleGNsdWRlZF9l",
+            "bWFpbF9hZGRyZXNzZXMYByADKAkSFgoOcGVybWl0dGVkX3VyaXMYCCADKAkS",
+            "FQoNZXhjbHVkZWRfdXJpcxgJIAMoCSKpAgoRU3Vib3JkaW5hdGVDb25maWcS",
+            "VgoVY2VydGlmaWNhdGVfYXV0aG9yaXR5GAEgASgJQjXgQQL6QS8KLXByaXZh",
+            "dGVjYS5nb29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZUF1dGhvcml0eUgAEm0K",
+            "EHBlbV9pc3N1ZXJfY2hhaW4YAiABKAsyTC5nb29nbGUuY2xvdWQuc2VjdXJp",
+            "dHkucHJpdmF0ZWNhLnYxLlN1Ym9yZGluYXRlQ29uZmlnLlN1Ym9yZGluYXRl",
+            "Q29uZmlnQ2hhaW5CA+BBAkgAGjcKFlN1Ym9yZGluYXRlQ29uZmlnQ2hhaW4S",
+            "HQoQcGVtX2NlcnRpZmljYXRlcxgBIAMoCUID4EECQhQKEnN1Ym9yZGluYXRl",
+            "X2NvbmZpZyKdAQoJUHVibGljS2V5EhAKA2tleRgBIAEoDEID4EECEkwKBmZv",
+            "cm1hdBgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2Eu",
+            "djEuUHVibGljS2V5LktleUZvcm1hdEID4EECIjAKCUtleUZvcm1hdBIaChZL",
+            "RVlfRk9STUFUX1VOU1BFQ0lGSUVEEAASBwoDUEVNEAEitAMKEUNlcnRpZmlj",
+            "YXRlQ29uZmlnEmAKDnN1YmplY3RfY29uZmlnGAEgASgLMkMuZ29vZ2xlLmNs",
+            "b3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5DZXJ0aWZpY2F0ZUNvbmZpZy5T",
+            "dWJqZWN0Q29uZmlnQgPgQQISTAoLeDUwOV9jb25maWcYAiABKAsyMi5nb29n",
+            "bGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLlg1MDlQYXJhbWV0ZXJz",
+            "QgPgQQISRgoKcHVibGljX2tleRgDIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1",
+            "cml0eS5wcml2YXRlY2EudjEuUHVibGljS2V5QgPgQQEapgEKDVN1YmplY3RD",
+            "b25maWcSQQoHc3ViamVjdBgBIAEoCzIrLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eS5wcml2YXRlY2EudjEuU3ViamVjdEID4EECElIKEHN1YmplY3RfYWx0X25h",
+            "bWUYAiABKAsyMy5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYx",
+            "LlN1YmplY3RBbHROYW1lc0ID4EEBIqEIChZDZXJ0aWZpY2F0ZURlc2NyaXB0",
+            "aW9uEmoKE3N1YmplY3RfZGVzY3JpcHRpb24YASABKAsyTS5nb29nbGUuY2xv",
+            "dWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLkNlcnRpZmljYXRlRGVzY3JpcHRp",
+            "b24uU3ViamVjdERlc2NyaXB0aW9uEkwKEHg1MDlfZGVzY3JpcHRpb24YAiAB",
+            "KAsyMi5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLlg1MDlQ",
+            "YXJhbWV0ZXJzEkEKCnB1YmxpY19rZXkYAyABKAsyLS5nb29nbGUuY2xvdWQu",
+            "c2VjdXJpdHkucHJpdmF0ZWNhLnYxLlB1YmxpY0tleRJYCg5zdWJqZWN0X2tl",
+            "eV9pZBgEIAEoCzJALmdvb2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2Eu",
+            "djEuQ2VydGlmaWNhdGVEZXNjcmlwdGlvbi5LZXlJZBJaChBhdXRob3JpdHlf",
+            "a2V5X2lkGAUgASgLMkAuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVj",
+            "YS52MS5DZXJ0aWZpY2F0ZURlc2NyaXB0aW9uLktleUlkEh8KF2NybF9kaXN0",
+            "cmlidXRpb25fcG9pbnRzGAYgAygJEiQKHGFpYV9pc3N1aW5nX2NlcnRpZmlj",
+            "YXRlX3VybHMYByADKAkSawoQY2VydF9maW5nZXJwcmludBgIIAEoCzJRLmdv",
+            "b2dsZS5jbG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuQ2VydGlmaWNhdGVE",
+            "ZXNjcmlwdGlvbi5DZXJ0aWZpY2F0ZUZpbmdlcnByaW50GtICChJTdWJqZWN0",
+            "RGVzY3JpcHRpb24SPAoHc3ViamVjdBgBIAEoCzIrLmdvb2dsZS5jbG91ZC5z",
+            "ZWN1cml0eS5wcml2YXRlY2EudjEuU3ViamVjdBJNChBzdWJqZWN0X2FsdF9u",
+            "YW1lGAIgASgLMjMuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVjYS52",
+            "MS5TdWJqZWN0QWx0TmFtZXMSGQoRaGV4X3NlcmlhbF9udW1iZXIYAyABKAkS",
+            "KwoIbGlmZXRpbWUYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
+            "MwoPbm90X2JlZm9yZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIyCg5ub3RfYWZ0ZXJfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXAaHAoFS2V5SWQSEwoGa2V5X2lkGAEgASgJQgPgQQEa",
+            "LQoWQ2VydGlmaWNhdGVGaW5nZXJwcmludBITCgtzaGEyNTZfaGFzaBgBIAEo",
+            "CSInCghPYmplY3RJZBIbCg5vYmplY3RfaWRfcGF0aBgBIAMoBUID4EECIoAB",
+            "Cg1YNTA5RXh0ZW5zaW9uEkQKCW9iamVjdF9pZBgBIAEoCzIsLmdvb2dsZS5j",
+            "bG91ZC5zZWN1cml0eS5wcml2YXRlY2EudjEuT2JqZWN0SWRCA+BBAhIVCghj",
+            "cml0aWNhbBgCIAEoCEID4EEBEhIKBXZhbHVlGAMgASgMQgPgQQIiogUKCEtl",
+            "eVVzYWdlElQKDmJhc2Vfa2V5X3VzYWdlGAEgASgLMjwuZ29vZ2xlLmNsb3Vk",
+            "LnNlY3VyaXR5LnByaXZhdGVjYS52MS5LZXlVc2FnZS5LZXlVc2FnZU9wdGlv",
+            "bnMSYAoSZXh0ZW5kZWRfa2V5X3VzYWdlGAIgASgLMkQuZ29vZ2xlLmNsb3Vk",
+            "LnNlY3VyaXR5LnByaXZhdGVjYS52MS5LZXlVc2FnZS5FeHRlbmRlZEtleVVz",
+            "YWdlT3B0aW9ucxJRCht1bmtub3duX2V4dGVuZGVkX2tleV91c2FnZXMYAyAD",
+            "KAsyLC5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLk9iamVj",
+            "dElkGucBCg9LZXlVc2FnZU9wdGlvbnMSGQoRZGlnaXRhbF9zaWduYXR1cmUY",
+            "ASABKAgSGgoSY29udGVudF9jb21taXRtZW50GAIgASgIEhgKEGtleV9lbmNp",
+            "cGhlcm1lbnQYAyABKAgSGQoRZGF0YV9lbmNpcGhlcm1lbnQYBCABKAgSFQoN",
+            "a2V5X2FncmVlbWVudBgFIAEoCBIRCgljZXJ0X3NpZ24YBiABKAgSEAoIY3Js",
+            "X3NpZ24YByABKAgSFQoNZW5jaXBoZXJfb25seRgIIAEoCBIVCg1kZWNpcGhl",
+            "cl9vbmx5GAkgASgIGqABChdFeHRlbmRlZEtleVVzYWdlT3B0aW9ucxITCgtz",
+            "ZXJ2ZXJfYXV0aBgBIAEoCBITCgtjbGllbnRfYXV0aBgCIAEoCBIUCgxjb2Rl",
+            "X3NpZ25pbmcYAyABKAgSGAoQZW1haWxfcHJvdGVjdGlvbhgEIAEoCBIVCg10",
+            "aW1lX3N0YW1waW5nGAUgASgIEhQKDG9jc3Bfc2lnbmluZxgGIAEoCCK4AQoH",
+            "U3ViamVjdBITCgtjb21tb25fbmFtZRgBIAEoCRIUCgxjb3VudHJ5X2NvZGUY",
+            "AiABKAkSFAoMb3JnYW5pemF0aW9uGAMgASgJEhsKE29yZ2FuaXphdGlvbmFs",
+            "X3VuaXQYBCABKAkSEAoIbG9jYWxpdHkYBSABKAkSEAoIcHJvdmluY2UYBiAB",
+            "KAkSFgoOc3RyZWV0X2FkZHJlc3MYByABKAkSEwoLcG9zdGFsX2NvZGUYCCAB",
+            "KAkiqQEKD1N1YmplY3RBbHROYW1lcxIRCglkbnNfbmFtZXMYASADKAkSDAoE",
+            "dXJpcxgCIAMoCRIXCg9lbWFpbF9hZGRyZXNzZXMYAyADKAkSFAoMaXBfYWRk",
+            "cmVzc2VzGAQgAygJEkYKC2N1c3RvbV9zYW5zGAUgAygLMjEuZ29vZ2xlLmNs",
+            "b3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5YNTA5RXh0ZW5zaW9uIvoBCh5D",
+            "ZXJ0aWZpY2F0ZUlkZW50aXR5Q29uc3RyYWludHMSLgoOY2VsX2V4cHJlc3Np",
+            "b24YASABKAsyES5nb29nbGUudHlwZS5FeHByQgPgQQESKwoZYWxsb3dfc3Vi",
+            "amVjdF9wYXNzdGhyb3VnaBgCIAEoCEID4EECSACIAQESNQojYWxsb3dfc3Vi",
+            "amVjdF9hbHRfbmFtZXNfcGFzc3Rocm91Z2gYAyABKAhCA+BBAkgBiAEBQhwK",
+            "Gl9hbGxvd19zdWJqZWN0X3Bhc3N0aHJvdWdoQiYKJF9hbGxvd19zdWJqZWN0",
+            "X2FsdF9uYW1lc19wYXNzdGhyb3VnaCK0AwofQ2VydGlmaWNhdGVFeHRlbnNp",
+            "b25Db25zdHJhaW50cxJ8ChBrbm93bl9leHRlbnNpb25zGAEgAygOMl0uZ29v",
+            "Z2xlLmNsb3VkLnNlY3VyaXR5LnByaXZhdGVjYS52MS5DZXJ0aWZpY2F0ZUV4",
+            "dGVuc2lvbkNvbnN0cmFpbnRzLktub3duQ2VydGlmaWNhdGVFeHRlbnNpb25C",
+            "A+BBARJQChVhZGRpdGlvbmFsX2V4dGVuc2lvbnMYAiADKAsyLC5nb29nbGUu",
+            "Y2xvdWQuc2VjdXJpdHkucHJpdmF0ZWNhLnYxLk9iamVjdElkQgPgQQEiwAEK",
+            "GUtub3duQ2VydGlmaWNhdGVFeHRlbnNpb24SKwonS05PV05fQ0VSVElGSUNB",
+            "VEVfRVhURU5TSU9OX1VOU1BFQ0lGSUVEEAASEgoOQkFTRV9LRVlfVVNBR0UQ",
+            "ARIWChJFWFRFTkRFRF9LRVlfVVNBR0UQAhIOCgpDQV9PUFRJT05TEAMSDgoK",
+            "UE9MSUNZX0lEUxAEEhQKEEFJQV9PQ1NQX1NFUlZFUlMQBRIUChBOQU1FX0NP",
+            "TlNUUkFJTlRTEAYqhwIKEFJldm9jYXRpb25SZWFzb24SIQodUkVWT0NBVElP",
+            "Tl9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5LRVlfQ09NUFJPTUlTRRABEiQK",
+            "IENFUlRJRklDQVRFX0FVVEhPUklUWV9DT01QUk9NSVNFEAISFwoTQUZGSUxJ",
+            "QVRJT05fQ0hBTkdFRBADEg4KClNVUEVSU0VERUQQBBIaChZDRVNTQVRJT05f",
+            "T0ZfT1BFUkFUSU9OEAUSFAoQQ0VSVElGSUNBVEVfSE9MRBAGEhcKE1BSSVZJ",
+            "TEVHRV9XSVRIRFJBV04QBxIiCh5BVFRSSUJVVEVfQVVUSE9SSVRZX0NPTVBS",
+            "T01JU0UQCCpdChJTdWJqZWN0UmVxdWVzdE1vZGUSJAogU1VCSkVDVF9SRVFV",
+            "RVNUX01PREVfVU5TUEVDSUZJRUQQABILCgdERUZBVUxUEAESFAoQUkVGTEVD",
+            "VEVEX1NQSUZGRRACQv8BCiZjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5LnBy",
+            "aXZhdGVjYS52MUIXUHJpdmF0ZUNhUmVzb3VyY2VzUHJvdG9QAVpEY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9zZWN1cml0eS9wcml2YXRlY2EvYXBpdjEvcHJpdmF0",
+            "ZWNhcGI7cHJpdmF0ZWNhcGL4AQGqAiJHb29nbGUuQ2xvdWQuU2VjdXJpdHku",
+            "UHJpdmF0ZUNBLlYxygIiR29vZ2xlXENsb3VkXFNlY3VyaXR5XFByaXZhdGVD",
+            "QVxWMeoCJkdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5OjpQcml2YXRlQ0E6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Security.PrivateCA.V1.RevocationReason), typeof(global::Google.Cloud.Security.PrivateCA.V1.SubjectRequestMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -314,7 +323,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.Certificate), global::Google.Cloud.Security.PrivateCA.V1.Certificate.Parser, new[]{ "Name", "PemCsr", "Config", "IssuerCertificateAuthority", "Lifetime", "CertificateTemplate", "SubjectMode", "RevocationDetails", "PemCertificate", "CertificateDescription", "PemCertificateChain", "CreateTime", "UpdateTime", "Labels" }, new[]{ "CertificateConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.Certificate.Types.RevocationDetails), global::Google.Cloud.Security.PrivateCA.V1.Certificate.Types.RevocationDetails.Parser, new[]{ "RevocationState", "RevocationTime" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate), global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate.Parser, new[]{ "Name", "PredefinedValues", "IdentityConstraints", "PassthroughExtensions", "Description", "CreateTime", "UpdateTime", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.X509Parameters), global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Parser, new[]{ "KeyUsage", "CaOptions", "PolicyIds", "AiaOcspServers", "AdditionalExtensions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.CaOptions), global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.CaOptions.Parser, new[]{ "IsCa", "MaxIssuerPathLength" }, new[]{ "IsCa", "MaxIssuerPathLength" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.X509Parameters), global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Parser, new[]{ "KeyUsage", "CaOptions", "PolicyIds", "AiaOcspServers", "NameConstraints", "AdditionalExtensions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.CaOptions), global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.CaOptions.Parser, new[]{ "IsCa", "MaxIssuerPathLength" }, new[]{ "IsCa", "MaxIssuerPathLength" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints), global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints.Parser, new[]{ "Critical", "PermittedDnsNames", "ExcludedDnsNames", "PermittedIpRanges", "ExcludedIpRanges", "PermittedEmailAddresses", "ExcludedEmailAddresses", "PermittedUris", "ExcludedUris" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig), global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig.Parser, new[]{ "CertificateAuthority", "PemIssuerChain" }, new[]{ "SubordinateConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig.Types.SubordinateConfigChain), global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig.Types.SubordinateConfigChain.Parser, new[]{ "PemCertificates" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.PublicKey), global::Google.Cloud.Security.PrivateCA.V1.PublicKey.Parser, new[]{ "Key", "Format" }, null, new[]{ typeof(global::Google.Cloud.Security.PrivateCA.V1.PublicKey.Types.KeyFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig), global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig.Parser, new[]{ "SubjectConfig", "X509Config", "PublicKey" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig.Types.SubjectConfig), global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig.Types.SubjectConfig.Parser, new[]{ "Subject", "SubjectAltName" }, null, null, null, null)}),
@@ -336,20 +346,25 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
   #region Enums
   /// <summary>
-  /// A [RevocationReason][google.cloud.security.privateca.v1.RevocationReason] indicates whether a [Certificate][google.cloud.security.privateca.v1.Certificate] has been revoked,
-  /// and the reason for revocation. These correspond to standard revocation
-  /// reasons from RFC 5280. Note that the enum labels and values in this
-  /// definition are not the same ASN.1 values defined in RFC 5280. These values
-  /// will be translated to the correct ASN.1 values when a CRL is created.
+  /// A [RevocationReason][google.cloud.security.privateca.v1.RevocationReason]
+  /// indicates whether a
+  /// [Certificate][google.cloud.security.privateca.v1.Certificate] has been
+  /// revoked, and the reason for revocation. These correspond to standard
+  /// revocation reasons from RFC 5280. Note that the enum labels and values in
+  /// this definition are not the same ASN.1 values defined in RFC 5280. These
+  /// values will be translated to the correct ASN.1 values when a CRL is created.
   /// </summary>
   public enum RevocationReason {
     /// <summary>
-    /// Default unspecified value. This value does indicate that a [Certificate][google.cloud.security.privateca.v1.Certificate]
-    /// has been revoked, but that a reason has not been recorded.
+    /// Default unspecified value. This value does indicate that a
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] has been
+    /// revoked, but that a reason has not been recorded.
     /// </summary>
     [pbr::OriginalName("REVOCATION_REASON_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Key material for this [Certificate][google.cloud.security.privateca.v1.Certificate] may have leaked.
+    /// Key material for this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] may have
+    /// leaked.
     /// </summary>
     [pbr::OriginalName("KEY_COMPROMISE")] KeyCompromise = 1,
     /// <summary>
@@ -358,38 +373,45 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// </summary>
     [pbr::OriginalName("CERTIFICATE_AUTHORITY_COMPROMISE")] CertificateAuthorityCompromise = 2,
     /// <summary>
-    /// The subject or other attributes in this [Certificate][google.cloud.security.privateca.v1.Certificate] have changed.
+    /// The subject or other attributes in this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] have changed.
     /// </summary>
     [pbr::OriginalName("AFFILIATION_CHANGED")] AffiliationChanged = 3,
     /// <summary>
-    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] has been superseded.
+    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] has been
+    /// superseded.
     /// </summary>
     [pbr::OriginalName("SUPERSEDED")] Superseded = 4,
     /// <summary>
-    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] or entities in the issuing path have ceased to
-    /// operate.
+    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] or
+    /// entities in the issuing path have ceased to operate.
     /// </summary>
     [pbr::OriginalName("CESSATION_OF_OPERATION")] CessationOfOperation = 5,
     /// <summary>
-    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] should not be considered valid, it is expected that it
-    /// may become valid in the future.
+    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] should
+    /// not be considered valid, it is expected that it may become valid in the
+    /// future.
     /// </summary>
     [pbr::OriginalName("CERTIFICATE_HOLD")] CertificateHold = 6,
     /// <summary>
-    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] no longer has permission to assert the listed
-    /// attributes.
+    /// This [Certificate][google.cloud.security.privateca.v1.Certificate] no
+    /// longer has permission to assert the listed attributes.
     /// </summary>
     [pbr::OriginalName("PRIVILEGE_WITHDRAWN")] PrivilegeWithdrawn = 7,
     /// <summary>
-    /// The authority which determines appropriate attributes for a [Certificate][google.cloud.security.privateca.v1.Certificate]
-    /// may have been compromised.
+    /// The authority which determines appropriate attributes for a
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] may have been
+    /// compromised.
     /// </summary>
     [pbr::OriginalName("ATTRIBUTE_AUTHORITY_COMPROMISE")] AttributeAuthorityCompromise = 8,
   }
 
   /// <summary>
-  /// Describes the way in which a [Certificate][google.cloud.security.privateca.v1.Certificate]'s [Subject][google.cloud.security.privateca.v1.Subject] and/or
-  /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will be resolved.
+  /// Describes the way in which a
+  /// [Certificate][google.cloud.security.privateca.v1.Certificate]'s
+  /// [Subject][google.cloud.security.privateca.v1.Subject] and/or
+  /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will be
+  /// resolved.
   /// </summary>
   public enum SubjectRequestMode {
     /// <summary>
@@ -398,17 +420,21 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [pbr::OriginalName("SUBJECT_REQUEST_MODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// The default mode used in most cases. Indicates that the certificate's
-    /// [Subject][google.cloud.security.privateca.v1.Subject] and/or [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] are specified in the certificate
-    /// request. This mode requires the caller to have the
-    /// `privateca.certificates.create` permission.
+    /// [Subject][google.cloud.security.privateca.v1.Subject] and/or
+    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] are
+    /// specified in the certificate request. This mode requires the caller to have
+    /// the `privateca.certificates.create` permission.
     /// </summary>
     [pbr::OriginalName("DEFAULT")] Default = 1,
     /// <summary>
     /// A mode reserved for special cases. Indicates that the certificate should
-    /// have one or more SPIFFE [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] set by the service based
-    /// on the caller's identity. This mode will ignore any explicitly specified
-    /// [Subject][google.cloud.security.privateca.v1.Subject] and/or [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] in the certificate request.
-    /// This mode requires the caller to have the
+    /// have one or more SPIFFE
+    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] set
+    /// by the service based on the caller's identity. This mode will ignore any
+    /// explicitly specified [Subject][google.cloud.security.privateca.v1.Subject]
+    /// and/or
+    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] in
+    /// the certificate request. This mode requires the caller to have the
     /// `privateca.certificates.createForSelf` permission.
     /// </summary>
     [pbr::OriginalName("REFLECTED_SPIFFE")] ReflectedSpiffe = 2,
@@ -418,8 +444,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
   #region Messages
   /// <summary>
-  /// A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] represents an individual Certificate Authority.
-  /// A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] can be used to create [Certificates][google.cloud.security.privateca.v1.Certificate].
+  /// A
+  /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+  /// represents an individual Certificate Authority. A
+  /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+  /// can be used to create
+  /// [Certificates][google.cloud.security.privateca.v1.Certificate].
   /// </summary>
   public sealed partial class CertificateAuthority : pb::IMessage<CertificateAuthority>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -485,8 +515,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
-    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Output only. The resource name for this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -501,7 +532,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int TypeFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.Type type_ = global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.Type.Unspecified;
     /// <summary>
-    /// Required. Immutable. The [Type][google.cloud.security.privateca.v1.CertificateAuthority.Type] of this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+    /// Required. Immutable. The
+    /// [Type][google.cloud.security.privateca.v1.CertificateAuthority.Type] of
+    /// this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -516,7 +550,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ConfigFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig config_;
     /// <summary>
-    /// Required. Immutable. The config used to create a self-signed X.509 certificate or CSR.
+    /// Required. Immutable. The config used to create a self-signed X.509
+    /// certificate or CSR.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -531,8 +566,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int LifetimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration lifetime_;
     /// <summary>
-    /// Required. Immutable. The desired lifetime of the CA certificate. Used to create the
-    /// "not_before_time" and "not_after_time" fields inside an X.509
+    /// Required. Immutable. The desired lifetime of the CA certificate. Used to
+    /// create the "not_before_time" and "not_after_time" fields inside an X.509
     /// certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -548,10 +583,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int KeySpecFieldNumber = 5;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.KeyVersionSpec keySpec_;
     /// <summary>
-    /// Required. Immutable. Used when issuing certificates for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]. If this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] is a self-signed CertificateAuthority, this key
-    /// is also used to sign the self-signed CA certificate. Otherwise, it
-    /// is used to sign a CSR.
+    /// Required. Immutable. Used when issuing certificates for this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+    /// If this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// is a self-signed CertificateAuthority, this key is also used to sign the
+    /// self-signed CA certificate. Otherwise, it is used to sign a CSR.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -566,9 +603,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int SubordinateConfigFieldNumber = 6;
     private global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig subordinateConfig_;
     /// <summary>
-    /// Optional. If this is a subordinate [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority], this field will be set
-    /// with the subordinate configuration, which describes its issuers. This may
-    /// be updated, but this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] must continue to validate.
+    /// Optional. If this is a subordinate
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority],
+    /// this field will be set with the subordinate configuration, which describes
+    /// its issuers. This may be updated, but this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// must continue to validate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -583,7 +623,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int TierFieldNumber = 7;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.Tier tier_ = global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.Tier.Unspecified;
     /// <summary>
-    /// Output only. The [CaPool.Tier][google.cloud.security.privateca.v1.CaPool.Tier] of the [CaPool][google.cloud.security.privateca.v1.CaPool] that includes this
+    /// Output only. The
+    /// [CaPool.Tier][google.cloud.security.privateca.v1.CaPool.Tier] of the
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool] that includes this
     /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -599,7 +641,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int StateFieldNumber = 8;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.State state_ = global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The [State][google.cloud.security.privateca.v1.CertificateAuthority.State] for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+    /// Output only. The
+    /// [State][google.cloud.security.privateca.v1.CertificateAuthority.State] for
+    /// this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -616,10 +661,15 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForString(74);
     private readonly pbc::RepeatedField<string> pemCaCertificates_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. This [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s certificate chain, including the current
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s certificate. Ordered such that the root issuer
-    /// is the final element (consistent with RFC 5246). For a self-signed CA, this
-    /// will only list the current [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s certificate.
+    /// Output only. This
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+    /// certificate chain, including the current
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+    /// certificate. Ordered such that the root issuer is the final element
+    /// (consistent with RFC 5246). For a self-signed CA, this will only list the
+    /// current
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+    /// certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -633,8 +683,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Security.PrivateCA.V1.CertificateDescription.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateDescription> caCertificateDescriptions_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateDescription>();
     /// <summary>
-    /// Output only. A structured description of this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA certificate
-    /// and its issuers. Ordered as self-to-root.
+    /// Output only. A structured description of this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+    /// CA certificate and its issuers. Ordered as self-to-root.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -646,9 +697,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int GcsBucketFieldNumber = 11;
     private string gcsBucket_ = "";
     /// <summary>
-    /// Immutable. The name of a Cloud Storage bucket where this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] will
-    /// publish content, such as the CA certificate and CRLs. This must be a bucket
-    /// name, without any prefixes (such as `gs://`) or suffixes (such as
+    /// Immutable. The name of a Cloud Storage bucket where this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// will publish content, such as the CA certificate and CRLs. This must be a
+    /// bucket name, without any prefixes (such as `gs://`) or suffixes (such as
     /// `.googleapis.com`). For example, to use a bucket named `my-bucket`, you
     /// would simply specify `my-bucket`. If not specified, a managed bucket will
     /// be created.
@@ -666,8 +718,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int AccessUrlsFieldNumber = 12;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.AccessUrls accessUrls_;
     /// <summary>
-    /// Output only. URLs for accessing content published by this CA, such as the CA certificate
-    /// and CRLs.
+    /// Output only. URLs for accessing content published by this CA, such as the
+    /// CA certificate and CRLs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -682,7 +734,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CreateTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] was created.
+    /// Output only. The time at which this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -697,7 +751,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int UpdateTimeFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] was last updated.
+    /// Output only. The time at which this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -712,8 +768,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int DeleteTimeFieldNumber = 15;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] was soft deleted, if
-    /// it is in the [DELETED][google.cloud.security.privateca.v1.CertificateAuthority.State.DELETED] state.
+    /// Output only. The time at which this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// was soft deleted, if it is in the
+    /// [DELETED][google.cloud.security.privateca.v1.CertificateAuthority.State.DELETED]
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -728,8 +787,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ExpireTimeFieldNumber = 16;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] will be permanently purged,
-    /// if it is in the [DELETED][google.cloud.security.privateca.v1.CertificateAuthority.State.DELETED] state.
+    /// Output only. The time at which this
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// will be permanently purged, if it is in the
+    /// [DELETED][google.cloud.security.privateca.v1.CertificateAuthority.State.DELETED]
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1326,7 +1388,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The type of a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority], indicating its issuing chain.
+      /// The type of a
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority],
+      /// indicating its issuing chain.
       /// </summary>
       public enum Type {
         /// <summary>
@@ -1338,14 +1402,17 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         /// </summary>
         [pbr::OriginalName("SELF_SIGNED")] SelfSigned = 1,
         /// <summary>
-        /// Subordinate CA. Could be issued by a Private CA [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// Subordinate CA. Could be issued by a Private CA
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
         /// or an unmanaged CA.
         /// </summary>
         [pbr::OriginalName("SUBORDINATE")] Subordinate = 2,
       }
 
       /// <summary>
-      /// The state of a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority], indicating if it can be used.
+      /// The state of a
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority],
+      /// indicating if it can be used.
       /// </summary>
       public enum State {
         /// <summary>
@@ -1354,35 +1421,46 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Certificates can be issued from this CA. CRLs will be generated for this
-        /// CA. The CA will be part of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and will be
-        /// used to issue certificates from the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// CA. The CA will be part of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and
+        /// will be used to issue certificates from the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
         /// Certificates cannot be issued from this CA. CRLs will still be generated.
-        /// The CA will be part of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, but will not be
-        /// used to issue certificates from the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// The CA will be part of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, but
+        /// will not be used to issue certificates from the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
         /// Certificates can be issued from this CA. CRLs will be generated for this
-        /// CA. The CA will be part of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, but will not
-        /// be used to issue certificates from the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// CA. The CA will be part of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, but
+        /// will not be used to issue certificates from the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         [pbr::OriginalName("STAGED")] Staged = 3,
         /// <summary>
         /// Certificates cannot be issued from this CA. CRLs will not be generated.
-        /// The CA will not be part of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and will not be
-        /// used to issue certificates from the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// The CA will not be part of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and
+        /// will not be used to issue certificates from the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         [pbr::OriginalName("AWAITING_USER_ACTIVATION")] AwaitingUserActivation = 4,
         /// <summary>
         /// Certificates cannot be issued from this CA. CRLs will not be generated.
         /// The CA may still be recovered by calling
-        /// [CertificateAuthorityService.UndeleteCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.UndeleteCertificateAuthority] before
+        /// [CertificateAuthorityService.UndeleteCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.UndeleteCertificateAuthority]
+        /// before
         /// [expire_time][google.cloud.security.privateca.v1.CertificateAuthority.expire_time].
-        /// The CA will not be part of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and will not be
-        /// used to issue certificates from the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// The CA will not be part of the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s trust anchor, and
+        /// will not be used to issue certificates from the
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool].
         /// </summary>
         [pbr::OriginalName("DELETED")] Deleted = 5,
       }
@@ -1438,7 +1516,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
 
       /// <summary>
-      /// URLs where a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] will publish content.
+      /// URLs where a
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+      /// will publish content.
       /// </summary>
       public sealed partial class AccessUrls : pb::IMessage<AccessUrls>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1489,8 +1569,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int CaCertificateAccessUrlFieldNumber = 1;
         private string caCertificateAccessUrl_ = "";
         /// <summary>
-        /// The URL where this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA certificate is
-        /// published. This will only be set for CAs that have been activated.
+        /// The URL where this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+        /// CA certificate is published. This will only be set for CAs that have been
+        /// activated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1507,8 +1589,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> crlAccessUrls_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The URLs where this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CRLs are published. This
-        /// will only be set for CAs that have been activated.
+        /// The URLs where this
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+        /// CRLs are published. This will only be set for CAs that have been
+        /// activated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1664,7 +1748,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
 
       /// <summary>
-      /// A Cloud KMS key configuration that a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] will use.
+      /// A Cloud KMS key configuration that a
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+      /// will use.
       /// </summary>
       public sealed partial class KeyVersionSpec : pb::IMessage<KeyVersionSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1946,10 +2032,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
   /// <summary>
   /// A [CaPool][google.cloud.security.privateca.v1.CaPool] represents a group of
-  /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority] that form a trust anchor. A
-  /// [CaPool][google.cloud.security.privateca.v1.CaPool] can be used to manage issuance policies for one or more
-  /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] resources and to rotate CA certificates in and out
-  /// of the trust anchor.
+  /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority]
+  /// that form a trust anchor. A
+  /// [CaPool][google.cloud.security.privateca.v1.CaPool] can be used to manage
+  /// issuance policies for one or more
+  /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+  /// resources and to rotate CA certificates in and out of the trust anchor.
   /// </summary>
   public sealed partial class CaPool : pb::IMessage<CaPool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2003,8 +2091,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
-    /// format `projects/*/locations/*/caPools/*`.
+    /// Output only. The resource name for this
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
+    /// `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2019,7 +2108,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int TierFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.Tier tier_ = global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.Tier.Unspecified;
     /// <summary>
-    /// Required. Immutable. The [Tier][google.cloud.security.privateca.v1.CaPool.Tier] of this [CaPool][google.cloud.security.privateca.v1.CaPool].
+    /// Required. Immutable. The
+    /// [Tier][google.cloud.security.privateca.v1.CaPool.Tier] of this
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2034,8 +2125,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int IssuancePolicyFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy issuancePolicy_;
     /// <summary>
-    /// Optional. The [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy] to control how [Certificates][google.cloud.security.privateca.v1.Certificate]
-    /// will be issued from this [CaPool][google.cloud.security.privateca.v1.CaPool].
+    /// Optional. The
+    /// [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy]
+    /// to control how
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate] will be
+    /// issued from this [CaPool][google.cloud.security.privateca.v1.CaPool].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2050,9 +2144,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PublishingOptionsFieldNumber = 4;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.PublishingOptions publishingOptions_;
     /// <summary>
-    /// Optional. The [PublishingOptions][google.cloud.security.privateca.v1.CaPool.PublishingOptions] to follow when issuing
-    /// [Certificates][google.cloud.security.privateca.v1.Certificate] from any [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in this
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool].
+    /// Optional. The
+    /// [PublishingOptions][google.cloud.security.privateca.v1.CaPool.PublishingOptions]
+    /// to follow when issuing
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate] from any
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// in this [CaPool][google.cloud.security.privateca.v1.CaPool].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2318,8 +2415,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The tier of a [CaPool][google.cloud.security.privateca.v1.CaPool], indicating its supported functionality and/or
-      /// billing SKU.
+      /// The tier of a [CaPool][google.cloud.security.privateca.v1.CaPool],
+      /// indicating its supported functionality and/or billing SKU.
       /// </summary>
       public enum Tier {
         /// <summary>
@@ -2337,10 +2434,13 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
 
       /// <summary>
-      /// Options relating to the publication of each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA
-      /// certificate and CRLs and their inclusion as extensions in issued
-      /// [Certificates][google.cloud.security.privateca.v1.Certificate]. The options set here apply to certificates
-      /// issued by any [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// Options relating to the publication of each
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+      /// CA certificate and CRLs and their inclusion as extensions in issued
+      /// [Certificates][google.cloud.security.privateca.v1.Certificate]. The options
+      /// set here apply to certificates issued by any
+      /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+      /// in the [CaPool][google.cloud.security.privateca.v1.CaPool].
       /// </summary>
       public sealed partial class PublishingOptions : pb::IMessage<PublishingOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2391,11 +2491,13 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int PublishCaCertFieldNumber = 1;
         private bool publishCaCert_;
         /// <summary>
-        /// Optional. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CA certificate and
-        /// includes its URL in the "Authority Information Access" X.509 extension
-        /// in all issued [Certificates][google.cloud.security.privateca.v1.Certificate]. If this is false, the CA
-        /// certificate will not be published and the corresponding X.509 extension
-        /// will not be written in issued certificates.
+        /// Optional. When true, publishes each
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+        /// CA certificate and includes its URL in the "Authority Information Access"
+        /// X.509 extension in all issued
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate]. If this
+        /// is false, the CA certificate will not be published and the corresponding
+        /// X.509 extension will not be written in issued certificates.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2410,13 +2512,15 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int PublishCrlFieldNumber = 2;
         private bool publishCrl_;
         /// <summary>
-        /// Optional. When true, publishes each [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s CRL and includes its
-        /// URL in the "CRL Distribution Points" X.509 extension in all issued
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate]. If this is false, CRLs will not be published
-        /// and the corresponding X.509 extension will not be written in issued
-        /// certificates.
-        /// CRLs will expire 7 days from their creation. However, we will rebuild
-        /// daily. CRLs are also rebuilt shortly after a certificate is revoked.
+        /// Optional. When true, publishes each
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]'s
+        /// CRL and includes its URL in the "CRL Distribution Points" X.509 extension
+        /// in all issued
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate]. If this
+        /// is false, CRLs will not be published and the corresponding X.509
+        /// extension will not be written in issued certificates. CRLs will expire 7
+        /// days from their creation. However, we will rebuild daily. CRLs are also
+        /// rebuilt shortly after a certificate is revoked.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2585,7 +2689,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
 
       /// <summary>
-      /// Defines controls over all certificate issuance within a [CaPool][google.cloud.security.privateca.v1.CaPool].
+      /// Defines controls over all certificate issuance within a
+      /// [CaPool][google.cloud.security.privateca.v1.CaPool].
       /// </summary>
       public sealed partial class IssuancePolicy : pb::IMessage<IssuancePolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2642,9 +2747,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.AllowedKeyType.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.AllowedKeyType> allowedKeyTypes_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.AllowedKeyType>();
         /// <summary>
-        /// Optional. If any [AllowedKeyType][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.AllowedKeyType] is specified, then the certificate request's
-        /// public key must match one of the key types listed here. Otherwise,
-        /// any key may be used.
+        /// Optional. If any
+        /// [AllowedKeyType][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.AllowedKeyType]
+        /// is specified, then the certificate request's public key must match one of
+        /// the key types listed here. Otherwise, any key may be used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2656,10 +2762,14 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int MaximumLifetimeFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Duration maximumLifetime_;
         /// <summary>
-        /// Optional. The maximum lifetime allowed for issued [Certificates][google.cloud.security.privateca.v1.Certificate]. Note
-        /// that if the issuing [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] expires before a
-        /// [Certificate][google.cloud.security.privateca.v1.Certificate]'s requested maximum_lifetime, the effective lifetime will
-        /// be explicitly truncated to match it.
+        /// Optional. The maximum lifetime allowed for issued
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate]. Note that
+        /// if the issuing
+        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+        /// expires before a
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate]'s requested
+        /// maximum_lifetime, the effective lifetime will be explicitly truncated to
+        /// match it.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2674,8 +2784,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int AllowedIssuanceModesFieldNumber = 3;
         private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.IssuanceModes allowedIssuanceModes_;
         /// <summary>
-        /// Optional. If specified, then only methods allowed in the [IssuanceModes][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.IssuanceModes] may be
-        /// used to issue [Certificates][google.cloud.security.privateca.v1.Certificate].
+        /// Optional. If specified, then only methods allowed in the
+        /// [IssuanceModes][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.IssuanceModes]
+        /// may be used to issue
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2690,13 +2802,15 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int BaselineValuesFieldNumber = 4;
         private global::Google.Cloud.Security.PrivateCA.V1.X509Parameters baselineValues_;
         /// <summary>
-        /// Optional. A set of X.509 values that will be applied to all certificates issued
-        /// through this [CaPool][google.cloud.security.privateca.v1.CaPool]. If a certificate request includes conflicting
-        /// values for the same properties, they will be overwritten by the values
-        /// defined here. If a certificate request uses a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// Optional. A set of X.509 values that will be applied to all certificates
+        /// issued through this [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// If a certificate request includes conflicting values for the same
+        /// properties, they will be overwritten by the values defined here. If a
+        /// certificate request uses a
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
         /// that defines conflicting
-        /// [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values] for the same
-        /// properties, the certificate issuance request will fail.
+        /// [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values]
+        /// for the same properties, the certificate issuance request will fail.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2712,9 +2826,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         private global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints identityConstraints_;
         /// <summary>
         /// Optional. Describes constraints on identities that may appear in
-        /// [Certificates][google.cloud.security.privateca.v1.Certificate] issued through this [CaPool][google.cloud.security.privateca.v1.CaPool].
-        /// If this is omitted, then this [CaPool][google.cloud.security.privateca.v1.CaPool] will not add restrictions on a
-        /// certificate's identity.
+        /// [Certificates][google.cloud.security.privateca.v1.Certificate] issued
+        /// through this [CaPool][google.cloud.security.privateca.v1.CaPool]. If this
+        /// is omitted, then this [CaPool][google.cloud.security.privateca.v1.CaPool]
+        /// will not add restrictions on a certificate's identity.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2730,15 +2845,21 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         private global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints passthroughExtensions_;
         /// <summary>
         /// Optional. Describes the set of X.509 extensions that may appear in a
-        /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued through this [CaPool][google.cloud.security.privateca.v1.CaPool]. If a certificate request
-        /// sets extensions that don't appear in the [passthrough_extensions][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.passthrough_extensions],
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued
+        /// through this [CaPool][google.cloud.security.privateca.v1.CaPool]. If a
+        /// certificate request sets extensions that don't appear in the
+        /// [passthrough_extensions][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.passthrough_extensions],
         /// those extensions will be dropped. If a certificate request uses a
-        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with
-        /// [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values] that don't
-        /// appear here, the certificate issuance request will fail. If this is
-        /// omitted, then this [CaPool][google.cloud.security.privateca.v1.CaPool] will not add restrictions on a
-        /// certificate's X.509 extensions. These constraints do not apply to X.509
-        /// extensions set in this [CaPool][google.cloud.security.privateca.v1.CaPool]'s [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values].
+        /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+        /// with
+        /// [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values]
+        /// that don't appear here, the certificate issuance request will fail. If
+        /// this is omitted, then this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool] will not add
+        /// restrictions on a certificate's X.509 extensions. These constraints do
+        /// not apply to X.509 extensions set in this
+        /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s
+        /// [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3041,11 +3162,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Describes a "type" of key that may be used in a [Certificate][google.cloud.security.privateca.v1.Certificate] issued
-          /// from a [CaPool][google.cloud.security.privateca.v1.CaPool].
-          /// Note that a single [AllowedKeyType][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.AllowedKeyType] may refer to either a
-          /// fully-qualified key algorithm, such as RSA 4096, or a family of key
-          /// algorithms, such as any RSA key.
+          /// Describes a "type" of key that may be used in a
+          /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued from
+          /// a [CaPool][google.cloud.security.privateca.v1.CaPool]. Note that a single
+          /// [AllowedKeyType][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.AllowedKeyType]
+          /// may refer to either a fully-qualified key algorithm, such as RSA 4096, or
+          /// a family of key algorithms, such as any RSA key.
           /// </summary>
           public sealed partial class AllowedKeyType : pb::IMessage<AllowedKeyType>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3342,8 +3464,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Describes an RSA key that may be used in a [Certificate][google.cloud.security.privateca.v1.Certificate] issued from
-              /// a [CaPool][google.cloud.security.privateca.v1.CaPool].
+              /// Describes an RSA key that may be used in a
+              /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued
+              /// from a [CaPool][google.cloud.security.privateca.v1.CaPool].
               /// </summary>
               public sealed partial class RsaKeyType : pb::IMessage<RsaKeyType>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3394,9 +3517,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
                 public const int MinModulusSizeFieldNumber = 1;
                 private long minModulusSize_;
                 /// <summary>
-                /// Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is
-                /// not set, or if set to zero, the service-level min RSA modulus size
-                /// will continue to apply.
+                /// Optional. The minimum allowed RSA modulus size (inclusive), in bits.
+                /// If this is not set, or if set to zero, the service-level min RSA
+                /// modulus size will continue to apply.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3411,9 +3534,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
                 public const int MaxModulusSizeFieldNumber = 2;
                 private long maxModulusSize_;
                 /// <summary>
-                /// Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is
-                /// not set, or if set to zero, the service will not enforce an explicit
-                /// upper bound on RSA modulus sizes.
+                /// Optional. The maximum allowed RSA modulus size (inclusive), in bits.
+                /// If this is not set, or if set to zero, the service will not enforce
+                /// an explicit upper bound on RSA modulus sizes.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3582,8 +3705,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
               }
 
               /// <summary>
-              /// Describes an Elliptic Curve key that may be used in a [Certificate][google.cloud.security.privateca.v1.Certificate]
-              /// issued from a [CaPool][google.cloud.security.privateca.v1.CaPool].
+              /// Describes an Elliptic Curve key that may be used in a
+              /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued
+              /// from a [CaPool][google.cloud.security.privateca.v1.CaPool].
               /// </summary>
               public sealed partial class EcKeyType : pb::IMessage<EcKeyType>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3633,8 +3757,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
                 public const int SignatureAlgorithmFieldNumber = 1;
                 private global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.AllowedKeyType.Types.EcKeyType.Types.EcSignatureAlgorithm signatureAlgorithm_ = global::Google.Cloud.Security.PrivateCA.V1.CaPool.Types.IssuancePolicy.Types.AllowedKeyType.Types.EcKeyType.Types.EcSignatureAlgorithm.Unspecified;
                 /// <summary>
-                /// Optional. A signature algorithm that must be used. If this is omitted, any
-                /// EC-based signature algorithm will be allowed.
+                /// Optional. A signature algorithm that must be used. If this is
+                /// omitted, any EC-based signature algorithm will be allowed.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3783,7 +3907,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
                 public static partial class Types {
                   /// <summary>
                   /// Describes an elliptic curve-based signature algorithm that may be
-                  /// used in a [Certificate][google.cloud.security.privateca.v1.Certificate] issued from a [CaPool][google.cloud.security.privateca.v1.CaPool].
+                  /// used in a
+                  /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued
+                  /// from a [CaPool][google.cloud.security.privateca.v1.CaPool].
                   /// </summary>
                   public enum EcSignatureAlgorithm {
                     /// <summary>
@@ -3818,9 +3944,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
           }
 
           /// <summary>
-          /// [IssuanceModes][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.IssuanceModes] specifies the allowed ways in which
-          /// [Certificates][google.cloud.security.privateca.v1.Certificate] may be requested from this
-          /// [CaPool][google.cloud.security.privateca.v1.CaPool].
+          /// [IssuanceModes][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.IssuanceModes]
+          /// specifies the allowed ways in which
+          /// [Certificates][google.cloud.security.privateca.v1.Certificate] may be
+          /// requested from this [CaPool][google.cloud.security.privateca.v1.CaPool].
           /// </summary>
           public sealed partial class IssuanceModes : pb::IMessage<IssuanceModes>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3871,7 +3998,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             public const int AllowCsrBasedIssuanceFieldNumber = 1;
             private bool allowCsrBasedIssuance_;
             /// <summary>
-            /// Optional. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
+            /// Optional. When true, allows callers to create
+            /// [Certificates][google.cloud.security.privateca.v1.Certificate] by
             /// specifying a CSR.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3887,8 +4015,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             public const int AllowConfigBasedIssuanceFieldNumber = 2;
             private bool allowConfigBasedIssuance_;
             /// <summary>
-            /// Optional. When true, allows callers to create [Certificates][google.cloud.security.privateca.v1.Certificate] by
-            /// specifying a [CertificateConfig][google.cloud.security.privateca.v1.CertificateConfig].
+            /// Optional. When true, allows callers to create
+            /// [Certificates][google.cloud.security.privateca.v1.Certificate] by
+            /// specifying a
+            /// [CertificateConfig][google.cloud.security.privateca.v1.CertificateConfig].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4067,9 +4197,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] corresponds to a signed X.509 certificate
-  /// Revocation List (CRL). A CRL contains the serial numbers of certificates that
-  /// should no longer be trusted.
+  /// A
+  /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+  /// corresponds to a signed X.509 certificate Revocation List (CRL). A CRL
+  /// contains the serial numbers of certificates that should no longer be trusted.
   /// </summary>
   public sealed partial class CertificateRevocationList : pb::IMessage<CertificateRevocationList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4128,9 +4259,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] in
-    /// the format
-    /// `projects/*/locations/*/caPools/*certificateAuthorities/*/
+    /// Output only. The resource name for this
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+    /// in the format `projects/*/locations/*/caPools/*certificateAuthorities/*/
     ///    certificateRevocationLists/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4205,7 +4336,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int StateFieldNumber = 6;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList.Types.State state_ = global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The [State][google.cloud.security.privateca.v1.CertificateRevocationList.State] for this [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+    /// Output only. The
+    /// [State][google.cloud.security.privateca.v1.CertificateRevocationList.State]
+    /// for this
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4220,7 +4354,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] was created.
+    /// Output only. The time at which this
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+    /// was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4235,7 +4371,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int UpdateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] was updated.
+    /// Output only. The time at which this
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+    /// was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4250,9 +4388,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RevisionIdFieldNumber = 9;
     private string revisionId_ = "";
     /// <summary>
-    /// Output only. The revision ID of this [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]. A new revision is
-    /// committed whenever a new CRL is published. The format is an 8-character
-    /// hexadecimal string.
+    /// Output only. The revision ID of this
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList].
+    /// A new revision is committed whenever a new CRL is published. The format is
+    /// an 8-character hexadecimal string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4628,7 +4767,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The state of a [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList], indicating if it is current.
+      /// The state of a
+      /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList],
+      /// indicating if it is current.
       /// </summary>
       public enum State {
         /// <summary>
@@ -4636,17 +4777,22 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] is up to date.
+        /// The
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// is up to date.
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 1,
         /// <summary>
-        /// The [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] is no longer current.
+        /// The
+        /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
+        /// is no longer current.
         /// </summary>
         [pbr::OriginalName("SUPERSEDED")] Superseded = 2,
       }
 
       /// <summary>
-      /// Describes a revoked [Certificate][google.cloud.security.privateca.v1.Certificate].
+      /// Describes a revoked
+      /// [Certificate][google.cloud.security.privateca.v1.Certificate].
       /// </summary>
       public sealed partial class RevokedCertificate : pb::IMessage<RevokedCertificate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4698,8 +4844,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int CertificateFieldNumber = 1;
         private string certificate_ = "";
         /// <summary>
-        /// The resource name for the [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
-        /// `projects/*/locations/*/caPools/*/certificates/*`.
+        /// The resource name for the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the
+        /// format `projects/*/locations/*/caPools/*/certificates/*`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4714,7 +4861,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int HexSerialNumberFieldNumber = 2;
         private string hexSerialNumber_ = "";
         /// <summary>
-        /// The serial number of the [Certificate][google.cloud.security.privateca.v1.Certificate].
+        /// The serial number of the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4729,7 +4877,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int RevocationReasonFieldNumber = 3;
         private global::Google.Cloud.Security.PrivateCA.V1.RevocationReason revocationReason_ = global::Google.Cloud.Security.PrivateCA.V1.RevocationReason.Unspecified;
         /// <summary>
-        /// The reason the [Certificate][google.cloud.security.privateca.v1.Certificate] was revoked.
+        /// The reason the
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] was
+        /// revoked.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4927,7 +5077,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [Certificate][google.cloud.security.privateca.v1.Certificate] corresponds to a signed X.509 certificate issued by a
+  /// A [Certificate][google.cloud.security.privateca.v1.Certificate] corresponds
+  /// to a signed X.509 certificate issued by a
   /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
   /// </summary>
   public sealed partial class Certificate : pb::IMessage<Certificate>
@@ -4998,7 +5149,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
+    /// Output only. The resource name for this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
     /// `projects/*/locations/*/caPools/*/certificates/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5028,8 +5180,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>Field number for the "config" field.</summary>
     public const int ConfigFieldNumber = 3;
     /// <summary>
-    /// Immutable. A description of the certificate and key that does not require X.509 or
-    /// ASN.1.
+    /// Immutable. A description of the certificate and key that does not require
+    /// X.509 or ASN.1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5045,8 +5197,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int IssuerCertificateAuthorityFieldNumber = 4;
     private string issuerCertificateAuthority_ = "";
     /// <summary>
-    /// Output only. The resource name of the issuing [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the format
-    /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Output only. The resource name of the issuing
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5061,8 +5214,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int LifetimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Duration lifetime_;
     /// <summary>
-    /// Required. Immutable. The desired lifetime of a certificate. Used to create the
-    /// "not_before_time" and "not_after_time" fields inside an X.509
+    /// Required. Immutable. The desired lifetime of a certificate. Used to create
+    /// the "not_before_time" and "not_after_time" fields inside an X.509
     /// certificate. Note that the lifetime may be truncated if it would extend
     /// past the life of any certificate authority in the issuing chain.
     /// </summary>
@@ -5079,12 +5232,14 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateTemplateFieldNumber = 6;
     private string certificateTemplate_ = "";
     /// <summary>
-    /// Immutable. The resource name for a [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] used to issue this
-    /// certificate, in the format
+    /// Immutable. The resource name for a
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+    /// used to issue this certificate, in the format
     /// `projects/*/locations/*/certificateTemplates/*`.
     /// If this is specified, the caller must have the necessary permission to
     /// use this template. If this is omitted, no template will be used.
-    /// This template must be in the same location as the [Certificate][google.cloud.security.privateca.v1.Certificate].
+    /// This template must be in the same location as the
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5099,8 +5254,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int SubjectModeFieldNumber = 7;
     private global::Google.Cloud.Security.PrivateCA.V1.SubjectRequestMode subjectMode_ = global::Google.Cloud.Security.PrivateCA.V1.SubjectRequestMode.Unspecified;
     /// <summary>
-    /// Immutable. Specifies how the [Certificate][google.cloud.security.privateca.v1.Certificate]'s identity fields are to be decided.
-    /// If this is omitted, the `DEFAULT` subject mode will be used.
+    /// Immutable. Specifies how the
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate]'s identity
+    /// fields are to be decided. If this is omitted, the `DEFAULT` subject mode
+    /// will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5115,8 +5272,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RevocationDetailsFieldNumber = 8;
     private global::Google.Cloud.Security.PrivateCA.V1.Certificate.Types.RevocationDetails revocationDetails_;
     /// <summary>
-    /// Output only. Details regarding the revocation of this [Certificate][google.cloud.security.privateca.v1.Certificate]. This
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] is considered revoked if and only if this field is present.
+    /// Output only. Details regarding the revocation of this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate]. This
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] is considered
+    /// revoked if and only if this field is present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5163,8 +5322,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> pemCertificateChain_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. The chain that may be used to verify the X.509 certificate. Expected to be
-    /// in issuer-to-root order according to RFC 5246.
+    /// Output only. The chain that may be used to verify the X.509 certificate.
+    /// Expected to be in issuer-to-root order according to RFC 5246.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5176,7 +5335,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CreateTimeFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [Certificate][google.cloud.security.privateca.v1.Certificate] was created.
+    /// Output only. The time at which this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5191,7 +5351,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int UpdateTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which this [Certificate][google.cloud.security.privateca.v1.Certificate] was updated.
+    /// Output only. The time at which this
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5729,7 +5890,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Describes fields that are relavent to the revocation of a [Certificate][google.cloud.security.privateca.v1.Certificate].
+      /// Describes fields that are relavent to the revocation of a
+      /// [Certificate][google.cloud.security.privateca.v1.Certificate].
       /// </summary>
       public sealed partial class RevocationDetails : pb::IMessage<RevocationDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5780,7 +5942,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int RevocationStateFieldNumber = 1;
         private global::Google.Cloud.Security.PrivateCA.V1.RevocationReason revocationState_ = global::Google.Cloud.Security.PrivateCA.V1.RevocationReason.Unspecified;
         /// <summary>
-        /// Indicates why a [Certificate][google.cloud.security.privateca.v1.Certificate] was revoked.
+        /// Indicates why a
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] was
+        /// revoked.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5795,7 +5959,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int RevocationTimeFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Timestamp revocationTime_;
         /// <summary>
-        /// The time at which this [Certificate][google.cloud.security.privateca.v1.Certificate] was revoked.
+        /// The time at which this
+        /// [Certificate][google.cloud.security.privateca.v1.Certificate] was
+        /// revoked.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5978,8 +6144,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] refers to a managed template for certificate
-  /// issuance.
+  /// A
+  /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+  /// refers to a managed template for certificate issuance.
   /// </summary>
   public sealed partial class CertificateTemplate : pb::IMessage<CertificateTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6036,8 +6203,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
-    /// `projects/*/locations/*/certificateTemplates/*`.
+    /// Output only. The resource name for this
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+    /// in the format `projects/*/locations/*/certificateTemplates/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6052,13 +6220,15 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PredefinedValuesFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.X509Parameters predefinedValues_;
     /// <summary>
-    /// Optional. A set of X.509 values that will be applied to all issued certificates that
-    /// use this template. If the certificate request includes conflicting values
-    /// for the same properties, they will be overwritten by the values defined
-    /// here. If the issuing [CaPool][google.cloud.security.privateca.v1.CaPool]'s [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy]
+    /// Optional. A set of X.509 values that will be applied to all issued
+    /// certificates that use this template. If the certificate request includes
+    /// conflicting values for the same properties, they will be overwritten by the
+    /// values defined here. If the issuing
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s
+    /// [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy]
     /// defines conflicting
-    /// [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values] for the same
-    /// properties, the certificate issuance request will fail.
+    /// [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values]
+    /// for the same properties, the certificate issuance request will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6074,8 +6244,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateIdentityConstraints identityConstraints_;
     /// <summary>
     /// Optional. Describes constraints on identities that may be appear in
-    /// [Certificates][google.cloud.security.privateca.v1.Certificate] issued using this template. If this is omitted,
-    /// then this template will not add restrictions on a certificate's identity.
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate] issued using
+    /// this template. If this is omitted, then this template will not add
+    /// restrictions on a certificate's identity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6091,15 +6262,22 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints passthroughExtensions_;
     /// <summary>
     /// Optional. Describes the set of X.509 extensions that may appear in a
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued using this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]. If a certificate
-    /// request sets extensions that don't appear in the
-    /// [passthrough_extensions][google.cloud.security.privateca.v1.CertificateTemplate.passthrough_extensions], those extensions will be dropped. If the
-    /// issuing [CaPool][google.cloud.security.privateca.v1.CaPool]'s [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy] defines
-    /// [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values] that don't appear
-    /// here, the certificate issuance request will fail. If this is omitted, then
-    /// this template will not add restrictions on a certificate's X.509
-    /// extensions. These constraints do not apply to X.509 extensions set in this
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]'s [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values].
+    /// [Certificate][google.cloud.security.privateca.v1.Certificate] issued using
+    /// this
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate].
+    /// If a certificate request sets extensions that don't appear in the
+    /// [passthrough_extensions][google.cloud.security.privateca.v1.CertificateTemplate.passthrough_extensions],
+    /// those extensions will be dropped. If the issuing
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s
+    /// [IssuancePolicy][google.cloud.security.privateca.v1.CaPool.IssuancePolicy]
+    /// defines
+    /// [baseline_values][google.cloud.security.privateca.v1.CaPool.IssuancePolicy.baseline_values]
+    /// that don't appear here, the certificate issuance request will fail. If this
+    /// is omitted, then this template will not add restrictions on a certificate's
+    /// X.509 extensions. These constraints do not apply to X.509 extensions set in
+    /// this
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]'s
+    /// [predefined_values][google.cloud.security.privateca.v1.CertificateTemplate.predefined_values].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6114,7 +6292,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. A human-readable description of scenarios this template is intended for.
+    /// Optional. A human-readable description of scenarios this template is
+    /// intended for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6129,7 +6308,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] was created.
+    /// Output only. The time at which this
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+    /// was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6144,7 +6325,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int UpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] was updated.
+    /// Output only. The time at which this
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
+    /// was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6506,9 +6689,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// An [X509Parameters][google.cloud.security.privateca.v1.X509Parameters] is used to describe certain fields of an
-  /// X.509 certificate, such as the key usage fields, fields specific to CA
-  /// certificates, certificate policy extensions and custom extensions.
+  /// An [X509Parameters][google.cloud.security.privateca.v1.X509Parameters] is
+  /// used to describe certain fields of an X.509 certificate, such as the key
+  /// usage fields, fields specific to CA certificates, certificate policy
+  /// extensions and custom extensions.
   /// </summary>
   public sealed partial class X509Parameters : pb::IMessage<X509Parameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6548,6 +6732,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       caOptions_ = other.caOptions_ != null ? other.caOptions_.Clone() : null;
       policyIds_ = other.policyIds_.Clone();
       aiaOcspServers_ = other.aiaOcspServers_.Clone();
+      nameConstraints_ = other.nameConstraints_ != null ? other.nameConstraints_.Clone() : null;
       additionalExtensions_ = other.additionalExtensions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -6562,7 +6747,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int KeyUsageFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.KeyUsage keyUsage_;
     /// <summary>
-    /// Optional. Indicates the intended use for keys that correspond to a certificate.
+    /// Optional. Indicates the intended use for keys that correspond to a
+    /// certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6577,8 +6763,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CaOptionsFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.CaOptions caOptions_;
     /// <summary>
-    /// Optional. Describes options in this [X509Parameters][google.cloud.security.privateca.v1.X509Parameters] that are relevant in a CA
-    /// certificate.
+    /// Optional. Describes options in this
+    /// [X509Parameters][google.cloud.security.privateca.v1.X509Parameters] that
+    /// are relevant in a CA certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6610,14 +6797,29 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> aiaOcspServers_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses
-    /// that appear in the "Authority Information Access" extension in the
-    /// certificate.
+    /// Optional. Describes Online Certificate Status Protocol (OCSP) endpoint
+    /// addresses that appear in the "Authority Information Access" extension in
+    /// the certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AiaOcspServers {
       get { return aiaOcspServers_; }
+    }
+
+    /// <summary>Field number for the "name_constraints" field.</summary>
+    public const int NameConstraintsFieldNumber = 6;
+    private global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints nameConstraints_;
+    /// <summary>
+    /// Optional. Describes the X.509 name constraints extension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints NameConstraints {
+      get { return nameConstraints_; }
+      set {
+        nameConstraints_ = value;
+      }
     }
 
     /// <summary>Field number for the "additional_extensions" field.</summary>
@@ -6653,6 +6855,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       if (!object.Equals(CaOptions, other.CaOptions)) return false;
       if(!policyIds_.Equals(other.policyIds_)) return false;
       if(!aiaOcspServers_.Equals(other.aiaOcspServers_)) return false;
+      if (!object.Equals(NameConstraints, other.NameConstraints)) return false;
       if(!additionalExtensions_.Equals(other.additionalExtensions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6665,6 +6868,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       if (caOptions_ != null) hash ^= CaOptions.GetHashCode();
       hash ^= policyIds_.GetHashCode();
       hash ^= aiaOcspServers_.GetHashCode();
+      if (nameConstraints_ != null) hash ^= NameConstraints.GetHashCode();
       hash ^= additionalExtensions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6695,6 +6899,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       policyIds_.WriteTo(output, _repeated_policyIds_codec);
       aiaOcspServers_.WriteTo(output, _repeated_aiaOcspServers_codec);
       additionalExtensions_.WriteTo(output, _repeated_additionalExtensions_codec);
+      if (nameConstraints_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(NameConstraints);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6716,6 +6924,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       policyIds_.WriteTo(ref output, _repeated_policyIds_codec);
       aiaOcspServers_.WriteTo(ref output, _repeated_aiaOcspServers_codec);
       additionalExtensions_.WriteTo(ref output, _repeated_additionalExtensions_codec);
+      if (nameConstraints_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(NameConstraints);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6734,6 +6946,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
       size += policyIds_.CalculateSize(_repeated_policyIds_codec);
       size += aiaOcspServers_.CalculateSize(_repeated_aiaOcspServers_codec);
+      if (nameConstraints_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NameConstraints);
+      }
       size += additionalExtensions_.CalculateSize(_repeated_additionalExtensions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6761,6 +6976,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
       policyIds_.Add(other.policyIds_);
       aiaOcspServers_.Add(other.aiaOcspServers_);
+      if (other.nameConstraints_ != null) {
+        if (nameConstraints_ == null) {
+          NameConstraints = new global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints();
+        }
+        NameConstraints.MergeFrom(other.NameConstraints);
+      }
       additionalExtensions_.Add(other.additionalExtensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6803,6 +7024,13 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
             additionalExtensions_.AddEntriesFrom(input, _repeated_additionalExtensions_codec);
             break;
           }
+          case 50: {
+            if (nameConstraints_ == null) {
+              NameConstraints = new global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints();
+            }
+            input.ReadMessage(NameConstraints);
+            break;
+          }
         }
       }
     #endif
@@ -6842,6 +7070,13 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
           }
           case 42: {
             additionalExtensions_.AddEntriesFrom(ref input, _repeated_additionalExtensions_codec);
+            break;
+          }
+          case 50: {
+            if (nameConstraints_ == null) {
+              NameConstraints = new global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Types.NameConstraints();
+            }
+            input.ReadMessage(NameConstraints);
             break;
           }
         }
@@ -6908,8 +7143,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int IsCaFieldNumber = 1;
         private bool isCa_;
         /// <summary>
-        /// Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this
-        /// value is missing, the extension will be omitted from the CA certificate.
+        /// Optional. Refers to the "CA" X.509 extension, which is a boolean value.
+        /// When this value is missing, the extension will be omitted from the CA
+        /// certificate.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7123,6 +7359,458 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
       }
 
+      /// <summary>
+      /// Describes the X.509 name constraints extension, per
+      /// https://tools.ietf.org/html/rfc5280#section-4.2.1.10
+      /// </summary>
+      public sealed partial class NameConstraints : pb::IMessage<NameConstraints>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NameConstraints> _parser = new pb::MessageParser<NameConstraints>(() => new NameConstraints());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NameConstraints> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Security.PrivateCA.V1.X509Parameters.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NameConstraints() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NameConstraints(NameConstraints other) : this() {
+          critical_ = other.critical_;
+          permittedDnsNames_ = other.permittedDnsNames_.Clone();
+          excludedDnsNames_ = other.excludedDnsNames_.Clone();
+          permittedIpRanges_ = other.permittedIpRanges_.Clone();
+          excludedIpRanges_ = other.excludedIpRanges_.Clone();
+          permittedEmailAddresses_ = other.permittedEmailAddresses_.Clone();
+          excludedEmailAddresses_ = other.excludedEmailAddresses_.Clone();
+          permittedUris_ = other.permittedUris_.Clone();
+          excludedUris_ = other.excludedUris_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NameConstraints Clone() {
+          return new NameConstraints(this);
+        }
+
+        /// <summary>Field number for the "critical" field.</summary>
+        public const int CriticalFieldNumber = 1;
+        private bool critical_;
+        /// <summary>
+        /// Indicates whether or not the name constraints are marked critical.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Critical {
+          get { return critical_; }
+          set {
+            critical_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "permitted_dns_names" field.</summary>
+        public const int PermittedDnsNamesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_permittedDnsNames_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> permittedDnsNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains permitted DNS names. Any DNS name that can be
+        /// constructed by simply adding zero or more labels to
+        /// the left-hand side of the name satisfies the name constraint.
+        /// For example, `example.com`, `www.example.com`, `www.sub.example.com`
+        /// would satisfy `example.com` while `example1.com` does not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PermittedDnsNames {
+          get { return permittedDnsNames_; }
+        }
+
+        /// <summary>Field number for the "excluded_dns_names" field.</summary>
+        public const int ExcludedDnsNamesFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_excludedDnsNames_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> excludedDnsNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains excluded DNS names. Any DNS name that can be
+        /// constructed by simply adding zero or more labels to
+        /// the left-hand side of the name satisfies the name constraint.
+        /// For example, `example.com`, `www.example.com`, `www.sub.example.com`
+        /// would satisfy `example.com` while `example1.com` does not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExcludedDnsNames {
+          get { return excludedDnsNames_; }
+        }
+
+        /// <summary>Field number for the "permitted_ip_ranges" field.</summary>
+        public const int PermittedIpRangesFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_permittedIpRanges_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> permittedIpRanges_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the permitted IP ranges. For IPv4 addresses, the ranges
+        /// are expressed using CIDR notation as specified in RFC 4632.
+        /// For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+        /// addresses.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PermittedIpRanges {
+          get { return permittedIpRanges_; }
+        }
+
+        /// <summary>Field number for the "excluded_ip_ranges" field.</summary>
+        public const int ExcludedIpRangesFieldNumber = 5;
+        private static readonly pb::FieldCodec<string> _repeated_excludedIpRanges_codec
+            = pb::FieldCodec.ForString(42);
+        private readonly pbc::RepeatedField<string> excludedIpRanges_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the excluded IP ranges. For IPv4 addresses, the ranges
+        /// are expressed using CIDR notation as specified in RFC 4632.
+        /// For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+        /// addresses.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExcludedIpRanges {
+          get { return excludedIpRanges_; }
+        }
+
+        /// <summary>Field number for the "permitted_email_addresses" field.</summary>
+        public const int PermittedEmailAddressesFieldNumber = 6;
+        private static readonly pb::FieldCodec<string> _repeated_permittedEmailAddresses_codec
+            = pb::FieldCodec.ForString(50);
+        private readonly pbc::RepeatedField<string> permittedEmailAddresses_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the permitted email addresses. The value can be a particular
+        /// email address, a hostname to indicate all email addresses on that host or
+        /// a domain with a leading period (e.g. `.example.com`) to indicate
+        /// all email addresses in that domain.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PermittedEmailAddresses {
+          get { return permittedEmailAddresses_; }
+        }
+
+        /// <summary>Field number for the "excluded_email_addresses" field.</summary>
+        public const int ExcludedEmailAddressesFieldNumber = 7;
+        private static readonly pb::FieldCodec<string> _repeated_excludedEmailAddresses_codec
+            = pb::FieldCodec.ForString(58);
+        private readonly pbc::RepeatedField<string> excludedEmailAddresses_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the excluded email addresses. The value can be a particular
+        /// email address, a hostname to indicate all email addresses on that host or
+        /// a domain with a leading period (e.g. `.example.com`) to indicate
+        /// all email addresses in that domain.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExcludedEmailAddresses {
+          get { return excludedEmailAddresses_; }
+        }
+
+        /// <summary>Field number for the "permitted_uris" field.</summary>
+        public const int PermittedUrisFieldNumber = 8;
+        private static readonly pb::FieldCodec<string> _repeated_permittedUris_codec
+            = pb::FieldCodec.ForString(66);
+        private readonly pbc::RepeatedField<string> permittedUris_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the permitted URIs that apply to the host part of the name.
+        /// The value can be a hostname or a domain with a
+        /// leading period (like `.example.com`)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PermittedUris {
+          get { return permittedUris_; }
+        }
+
+        /// <summary>Field number for the "excluded_uris" field.</summary>
+        public const int ExcludedUrisFieldNumber = 9;
+        private static readonly pb::FieldCodec<string> _repeated_excludedUris_codec
+            = pb::FieldCodec.ForString(74);
+        private readonly pbc::RepeatedField<string> excludedUris_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Contains the excluded URIs that apply to the host part of the name.
+        /// The value can be a hostname or a domain with a
+        /// leading period (like `.example.com`)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExcludedUris {
+          get { return excludedUris_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NameConstraints);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NameConstraints other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Critical != other.Critical) return false;
+          if(!permittedDnsNames_.Equals(other.permittedDnsNames_)) return false;
+          if(!excludedDnsNames_.Equals(other.excludedDnsNames_)) return false;
+          if(!permittedIpRanges_.Equals(other.permittedIpRanges_)) return false;
+          if(!excludedIpRanges_.Equals(other.excludedIpRanges_)) return false;
+          if(!permittedEmailAddresses_.Equals(other.permittedEmailAddresses_)) return false;
+          if(!excludedEmailAddresses_.Equals(other.excludedEmailAddresses_)) return false;
+          if(!permittedUris_.Equals(other.permittedUris_)) return false;
+          if(!excludedUris_.Equals(other.excludedUris_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Critical != false) hash ^= Critical.GetHashCode();
+          hash ^= permittedDnsNames_.GetHashCode();
+          hash ^= excludedDnsNames_.GetHashCode();
+          hash ^= permittedIpRanges_.GetHashCode();
+          hash ^= excludedIpRanges_.GetHashCode();
+          hash ^= permittedEmailAddresses_.GetHashCode();
+          hash ^= excludedEmailAddresses_.GetHashCode();
+          hash ^= permittedUris_.GetHashCode();
+          hash ^= excludedUris_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Critical != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Critical);
+          }
+          permittedDnsNames_.WriteTo(output, _repeated_permittedDnsNames_codec);
+          excludedDnsNames_.WriteTo(output, _repeated_excludedDnsNames_codec);
+          permittedIpRanges_.WriteTo(output, _repeated_permittedIpRanges_codec);
+          excludedIpRanges_.WriteTo(output, _repeated_excludedIpRanges_codec);
+          permittedEmailAddresses_.WriteTo(output, _repeated_permittedEmailAddresses_codec);
+          excludedEmailAddresses_.WriteTo(output, _repeated_excludedEmailAddresses_codec);
+          permittedUris_.WriteTo(output, _repeated_permittedUris_codec);
+          excludedUris_.WriteTo(output, _repeated_excludedUris_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Critical != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Critical);
+          }
+          permittedDnsNames_.WriteTo(ref output, _repeated_permittedDnsNames_codec);
+          excludedDnsNames_.WriteTo(ref output, _repeated_excludedDnsNames_codec);
+          permittedIpRanges_.WriteTo(ref output, _repeated_permittedIpRanges_codec);
+          excludedIpRanges_.WriteTo(ref output, _repeated_excludedIpRanges_codec);
+          permittedEmailAddresses_.WriteTo(ref output, _repeated_permittedEmailAddresses_codec);
+          excludedEmailAddresses_.WriteTo(ref output, _repeated_excludedEmailAddresses_codec);
+          permittedUris_.WriteTo(ref output, _repeated_permittedUris_codec);
+          excludedUris_.WriteTo(ref output, _repeated_excludedUris_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Critical != false) {
+            size += 1 + 1;
+          }
+          size += permittedDnsNames_.CalculateSize(_repeated_permittedDnsNames_codec);
+          size += excludedDnsNames_.CalculateSize(_repeated_excludedDnsNames_codec);
+          size += permittedIpRanges_.CalculateSize(_repeated_permittedIpRanges_codec);
+          size += excludedIpRanges_.CalculateSize(_repeated_excludedIpRanges_codec);
+          size += permittedEmailAddresses_.CalculateSize(_repeated_permittedEmailAddresses_codec);
+          size += excludedEmailAddresses_.CalculateSize(_repeated_excludedEmailAddresses_codec);
+          size += permittedUris_.CalculateSize(_repeated_permittedUris_codec);
+          size += excludedUris_.CalculateSize(_repeated_excludedUris_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NameConstraints other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Critical != false) {
+            Critical = other.Critical;
+          }
+          permittedDnsNames_.Add(other.permittedDnsNames_);
+          excludedDnsNames_.Add(other.excludedDnsNames_);
+          permittedIpRanges_.Add(other.permittedIpRanges_);
+          excludedIpRanges_.Add(other.excludedIpRanges_);
+          permittedEmailAddresses_.Add(other.permittedEmailAddresses_);
+          excludedEmailAddresses_.Add(other.excludedEmailAddresses_);
+          permittedUris_.Add(other.permittedUris_);
+          excludedUris_.Add(other.excludedUris_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Critical = input.ReadBool();
+                break;
+              }
+              case 18: {
+                permittedDnsNames_.AddEntriesFrom(input, _repeated_permittedDnsNames_codec);
+                break;
+              }
+              case 26: {
+                excludedDnsNames_.AddEntriesFrom(input, _repeated_excludedDnsNames_codec);
+                break;
+              }
+              case 34: {
+                permittedIpRanges_.AddEntriesFrom(input, _repeated_permittedIpRanges_codec);
+                break;
+              }
+              case 42: {
+                excludedIpRanges_.AddEntriesFrom(input, _repeated_excludedIpRanges_codec);
+                break;
+              }
+              case 50: {
+                permittedEmailAddresses_.AddEntriesFrom(input, _repeated_permittedEmailAddresses_codec);
+                break;
+              }
+              case 58: {
+                excludedEmailAddresses_.AddEntriesFrom(input, _repeated_excludedEmailAddresses_codec);
+                break;
+              }
+              case 66: {
+                permittedUris_.AddEntriesFrom(input, _repeated_permittedUris_codec);
+                break;
+              }
+              case 74: {
+                excludedUris_.AddEntriesFrom(input, _repeated_excludedUris_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Critical = input.ReadBool();
+                break;
+              }
+              case 18: {
+                permittedDnsNames_.AddEntriesFrom(ref input, _repeated_permittedDnsNames_codec);
+                break;
+              }
+              case 26: {
+                excludedDnsNames_.AddEntriesFrom(ref input, _repeated_excludedDnsNames_codec);
+                break;
+              }
+              case 34: {
+                permittedIpRanges_.AddEntriesFrom(ref input, _repeated_permittedIpRanges_codec);
+                break;
+              }
+              case 42: {
+                excludedIpRanges_.AddEntriesFrom(ref input, _repeated_excludedIpRanges_codec);
+                break;
+              }
+              case 50: {
+                permittedEmailAddresses_.AddEntriesFrom(ref input, _repeated_permittedEmailAddresses_codec);
+                break;
+              }
+              case 58: {
+                excludedEmailAddresses_.AddEntriesFrom(ref input, _repeated_excludedEmailAddresses_codec);
+                break;
+              }
+              case 66: {
+                permittedUris_.AddEntriesFrom(ref input, _repeated_permittedUris_codec);
+                break;
+              }
+              case 74: {
+                excludedUris_.AddEntriesFrom(ref input, _repeated_excludedUris_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -7130,7 +7818,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
   /// <summary>
   /// Describes a subordinate CA's issuers. This is either a resource name to a
-  /// known issuing [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority], or a PEM issuer certificate chain.
+  /// known issuing
+  /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority],
+  /// or a PEM issuer certificate chain.
   /// </summary>
   public sealed partial class SubordinateConfig : pb::IMessage<SubordinateConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7187,9 +7877,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>Field number for the "certificate_authority" field.</summary>
     public const int CertificateAuthorityFieldNumber = 1;
     /// <summary>
-    /// Required. This can refer to a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that was used to create a
-    /// subordinate [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]. This field is used for information
-    /// and usability purposes only. The resource name is in the format
+    /// Required. This can refer to a
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// that was used to create a subordinate
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority].
+    /// This field is used for information and usability purposes only. The
+    /// resource name is in the format
     /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7206,7 +7899,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PemIssuerChainFieldNumber = 2;
     /// <summary>
     /// Required. Contains the PEM certificate chain for the issuers of this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority], but not pem certificate for this CA itself.
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority],
+    /// but not pem certificate for this CA itself.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7608,7 +8302,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [PublicKey][google.cloud.security.privateca.v1.PublicKey] describes a public key.
+  /// A [PublicKey][google.cloud.security.privateca.v1.PublicKey] describes a
+  /// public key.
   /// </summary>
   public sealed partial class PublicKey : pb::IMessage<PublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7879,8 +8574,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [CertificateConfig][google.cloud.security.privateca.v1.CertificateConfig] describes an X.509 certificate or CSR that is to be
-  /// created, as an alternative to using ASN.1.
+  /// A [CertificateConfig][google.cloud.security.privateca.v1.CertificateConfig]
+  /// describes an X.509 certificate or CSR that is to be created, as an
+  /// alternative to using ASN.1.
   /// </summary>
   public sealed partial class CertificateConfig : pb::IMessage<CertificateConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7932,8 +8628,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int SubjectConfigFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateConfig.Types.SubjectConfig subjectConfig_;
     /// <summary>
-    /// Required. Specifies some of the values in a certificate that are related to the
-    /// subject.
+    /// Required. Specifies some of the values in a certificate that are related to
+    /// the subject.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7948,8 +8644,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int X509ConfigFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.X509Parameters x509Config_;
     /// <summary>
-    /// Required. Describes how some of the technical X.509 fields in a certificate should be
-    /// populated.
+    /// Required. Describes how some of the technical X.509 fields in a certificate
+    /// should be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7964,9 +8660,14 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PublicKeyFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.PublicKey publicKey_;
     /// <summary>
-    /// Optional. The public key that corresponds to this config. This is, for example, used
-    /// when issuing [Certificates][google.cloud.security.privateca.v1.Certificate], but not when creating a
-    /// self-signed [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] or [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] CSR.
+    /// Optional. The public key that corresponds to this config. This is, for
+    /// example, used when issuing
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate], but not
+    /// when creating a self-signed
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// or
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// CSR.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8241,8 +8942,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int SubjectFieldNumber = 1;
         private global::Google.Cloud.Security.PrivateCA.V1.Subject subject_;
         /// <summary>
-        /// Required. Contains distinguished name fields such as the common name, location and
-        /// organization.
+        /// Required. Contains distinguished name fields such as the common name,
+        /// location and organization.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8449,8 +9150,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [CertificateDescription][google.cloud.security.privateca.v1.CertificateDescription] describes an X.509 certificate or CSR that has
-  /// been issued, as an alternative to using ASN.1 / X.509.
+  /// A
+  /// [CertificateDescription][google.cloud.security.privateca.v1.CertificateDescription]
+  /// describes an X.509 certificate or CSR that has been issued, as an alternative
+  /// to using ASN.1 / X.509.
   /// </summary>
   public sealed partial class CertificateDescription : pb::IMessage<CertificateDescription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9462,8 +10165,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         public const int KeyId_FieldNumber = 1;
         private string keyId_ = "";
         /// <summary>
-        /// Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most
-        /// likely the 160 bit SHA-1 hash of the public key.
+        /// Optional. The value of this KeyId encoded in lowercase hexadecimal. This
+        /// is most likely the 160 bit SHA-1 hash of the public key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9808,8 +10511,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// An [ObjectId][google.cloud.security.privateca.v1.ObjectId] specifies an object identifier (OID). These provide context
-  /// and describe types in ASN.1 messages.
+  /// An [ObjectId][google.cloud.security.privateca.v1.ObjectId] specifies an
+  /// object identifier (OID). These provide context and describe types in ASN.1
+  /// messages.
   /// </summary>
   public sealed partial class ObjectId : pb::IMessage<ObjectId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9861,8 +10565,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForInt32(10);
     private readonly pbc::RepeatedField<int> objectIdPath_ = new pbc::RepeatedField<int>();
     /// <summary>
-    /// Required. The parts of an OID path. The most significant parts of the path come
-    /// first.
+    /// Required. The parts of an OID path. The most significant parts of the path
+    /// come first.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9996,8 +10700,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// An [X509Extension][google.cloud.security.privateca.v1.X509Extension] specifies an X.509 extension, which may be used in
-  /// different parts of X.509 objects like certificates, CSRs, and CRLs.
+  /// An [X509Extension][google.cloud.security.privateca.v1.X509Extension]
+  /// specifies an X.509 extension, which may be used in different parts of X.509
+  /// objects like certificates, CSRs, and CRLs.
   /// </summary>
   public sealed partial class X509Extension : pb::IMessage<X509Extension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10064,9 +10769,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CriticalFieldNumber = 2;
     private bool critical_;
     /// <summary>
-    /// Optional. Indicates whether or not this extension is critical (i.e., if the client
-    /// does not know how to handle this extension, the client should consider this
-    /// to be an error).
+    /// Optional. Indicates whether or not this extension is critical (i.e., if the
+    /// client does not know how to handle this extension, the client should
+    /// consider this to be an error).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10283,8 +10988,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// A [KeyUsage][google.cloud.security.privateca.v1.KeyUsage] describes key usage values that may appear in an X.509
-  /// certificate.
+  /// A [KeyUsage][google.cloud.security.privateca.v1.KeyUsage] describes key usage
+  /// values that may appear in an X.509 certificate.
   /// </summary>
   public sealed partial class KeyUsage : pb::IMessage<KeyUsage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10369,7 +11074,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.ObjectId> unknownExtendedKeyUsages_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.ObjectId>();
     /// <summary>
     /// Used to describe extended key usages that are not listed in the
-    /// [KeyUsage.ExtendedKeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.ExtendedKeyUsageOptions] message.
+    /// [KeyUsage.ExtendedKeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.ExtendedKeyUsageOptions]
+    /// message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10570,8 +11276,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// [KeyUsage.KeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.KeyUsageOptions] corresponds to the key usage values
-      /// described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
+      /// [KeyUsage.KeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.KeyUsageOptions]
+      /// corresponds to the key usage values described in
+      /// https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
       /// </summary>
       public sealed partial class KeyUsageOptions : pb::IMessage<KeyUsageOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11087,8 +11794,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       }
 
       /// <summary>
-      /// [KeyUsage.ExtendedKeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.ExtendedKeyUsageOptions] has fields that correspond to
-      /// certain common OIDs that could be specified as an extended key usage value.
+      /// [KeyUsage.ExtendedKeyUsageOptions][google.cloud.security.privateca.v1.KeyUsage.ExtendedKeyUsageOptions]
+      /// has fields that correspond to certain common OIDs that could be specified
+      /// as an extended key usage value.
       /// </summary>
       public sealed partial class ExtendedKeyUsageOptions : pb::IMessage<ExtendedKeyUsageOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11494,8 +12202,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// [Subject][google.cloud.security.privateca.v1.Subject] describes parts of a distinguished name that, in turn,
-  /// describes the subject of the certificate.
+  /// [Subject][google.cloud.security.privateca.v1.Subject] describes parts of a
+  /// distinguished name that, in turn, describes the subject of the certificate.
   /// </summary>
   public sealed partial class Subject : pb::IMessage<Subject>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11970,9 +12678,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] corresponds to a more modern way of listing what
-  /// the asserted identity is in a certificate (i.e., compared to the "common
-  /// name" in the distinguished name).
+  /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames]
+  /// corresponds to a more modern way of listing what the asserted identity is in
+  /// a certificate (i.e., compared to the "common name" in the distinguished
+  /// name).
   /// </summary>
   public sealed partial class SubjectAltNames : pb::IMessage<SubjectAltNames>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12274,7 +12983,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Describes constraints on a [Certificate][google.cloud.security.privateca.v1.Certificate]'s [Subject][google.cloud.security.privateca.v1.Subject] and
+  /// Describes constraints on a
+  /// [Certificate][google.cloud.security.privateca.v1.Certificate]'s
+  /// [Subject][google.cloud.security.privateca.v1.Subject] and
   /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames].
   /// </summary>
   public sealed partial class CertificateIdentityConstraints : pb::IMessage<CertificateIdentityConstraints>
@@ -12329,9 +13040,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CelExpressionFieldNumber = 1;
     private global::Google.Type.Expr celExpression_;
     /// <summary>
-    /// Optional. A CEL expression that may be used to validate the resolved X.509 Subject
-    /// and/or Subject Alternative Name before a certificate is signed.
-    /// To see the full allowed syntax and some examples, see
+    /// Optional. A CEL expression that may be used to validate the resolved X.509
+    /// Subject and/or Subject Alternative Name before a certificate is signed. To
+    /// see the full allowed syntax and some examples, see
     /// https://cloud.google.com/certificate-authority-service/docs/using-cel
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12347,9 +13058,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int AllowSubjectPassthroughFieldNumber = 2;
     private bool allowSubjectPassthrough_;
     /// <summary>
-    /// Required. If this is true, the [Subject][google.cloud.security.privateca.v1.Subject] field may be copied from a certificate
-    /// request into the signed certificate. Otherwise, the requested [Subject][google.cloud.security.privateca.v1.Subject]
-    /// will be discarded.
+    /// Required. If this is true, the
+    /// [Subject][google.cloud.security.privateca.v1.Subject] field may be copied
+    /// from a certificate request into the signed certificate. Otherwise, the
+    /// requested [Subject][google.cloud.security.privateca.v1.Subject] will be
+    /// discarded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12377,9 +13090,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int AllowSubjectAltNamesPassthroughFieldNumber = 3;
     private bool allowSubjectAltNamesPassthrough_;
     /// <summary>
-    /// Required. If this is true, the [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] extension may be copied from a
-    /// certificate request into the signed certificate. Otherwise, the requested
-    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will be discarded.
+    /// Required. If this is true, the
+    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames]
+    /// extension may be copied from a certificate request into the signed
+    /// certificate. Otherwise, the requested
+    /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] will
+    /// be discarded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12649,7 +13365,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints.Types.KnownCertificateExtension> knownExtensions_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateExtensionConstraints.Types.KnownCertificateExtension>();
     /// <summary>
     /// Optional. A set of named X.509 extensions. Will be combined with
-    /// [additional_extensions][google.cloud.security.privateca.v1.CertificateExtensionConstraints.additional_extensions] to determine the full set of X.509 extensions.
+    /// [additional_extensions][google.cloud.security.privateca.v1.CertificateExtensionConstraints.additional_extensions]
+    /// to determine the full set of X.509 extensions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12663,9 +13380,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Security.PrivateCA.V1.ObjectId.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.ObjectId> additionalExtensions_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.ObjectId>();
     /// <summary>
-    /// Optional. A set of [ObjectIds][google.cloud.security.privateca.v1.ObjectId] identifying custom X.509 extensions.
-    /// Will be combined with [known_extensions][google.cloud.security.privateca.v1.CertificateExtensionConstraints.known_extensions] to determine the full set of
-    /// X.509 extensions.
+    /// Optional. A set of [ObjectIds][google.cloud.security.privateca.v1.ObjectId]
+    /// identifying custom X.509 extensions. Will be combined with
+    /// [known_extensions][google.cloud.security.privateca.v1.CertificateExtensionConstraints.known_extensions]
+    /// to determine the full set of X.509 extensions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12816,8 +13534,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Describes well-known X.509 extensions that can appear in a [Certificate][google.cloud.security.privateca.v1.Certificate],
-      /// not including the [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames] extension.
+      /// Describes well-known X.509 extensions that can appear in a
+      /// [Certificate][google.cloud.security.privateca.v1.Certificate], not
+      /// including the
+      /// [SubjectAltNames][google.cloud.security.privateca.v1.SubjectAltNames]
+      /// extension.
       /// </summary>
       public enum KnownCertificateExtension {
         /// <summary>
@@ -12827,28 +13548,36 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         /// <summary>
         /// Refers to a certificate's Key Usage extension, as described in [RFC 5280
         /// section 4.2.1.3](https://tools.ietf.org/html/rfc5280#section-4.2.1.3).
-        /// This corresponds to the [KeyUsage.base_key_usage][google.cloud.security.privateca.v1.KeyUsage.base_key_usage] field.
+        /// This corresponds to the
+        /// [KeyUsage.base_key_usage][google.cloud.security.privateca.v1.KeyUsage.base_key_usage]
+        /// field.
         /// </summary>
         [pbr::OriginalName("BASE_KEY_USAGE")] BaseKeyUsage = 1,
         /// <summary>
         /// Refers to a certificate's Extended Key Usage extension, as described in
         /// [RFC 5280
         /// section 4.2.1.12](https://tools.ietf.org/html/rfc5280#section-4.2.1.12).
-        /// This corresponds to the [KeyUsage.extended_key_usage][google.cloud.security.privateca.v1.KeyUsage.extended_key_usage] message.
+        /// This corresponds to the
+        /// [KeyUsage.extended_key_usage][google.cloud.security.privateca.v1.KeyUsage.extended_key_usage]
+        /// message.
         /// </summary>
         [pbr::OriginalName("EXTENDED_KEY_USAGE")] ExtendedKeyUsage = 2,
         /// <summary>
         /// Refers to a certificate's Basic Constraints extension, as described in
         /// [RFC 5280
         /// section 4.2.1.9](https://tools.ietf.org/html/rfc5280#section-4.2.1.9).
-        /// This corresponds to the [X509Parameters.ca_options][google.cloud.security.privateca.v1.X509Parameters.ca_options] field.
+        /// This corresponds to the
+        /// [X509Parameters.ca_options][google.cloud.security.privateca.v1.X509Parameters.ca_options]
+        /// field.
         /// </summary>
         [pbr::OriginalName("CA_OPTIONS")] CaOptions = 3,
         /// <summary>
         /// Refers to a certificate's Policy object identifiers, as described in
         /// [RFC 5280
         /// section 4.2.1.4](https://tools.ietf.org/html/rfc5280#section-4.2.1.4).
-        /// This corresponds to the [X509Parameters.policy_ids][google.cloud.security.privateca.v1.X509Parameters.policy_ids] field.
+        /// This corresponds to the
+        /// [X509Parameters.policy_ids][google.cloud.security.privateca.v1.X509Parameters.policy_ids]
+        /// field.
         /// </summary>
         [pbr::OriginalName("POLICY_IDS")] PolicyIds = 4,
         /// <summary>
@@ -12856,9 +13585,17 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         /// extension, as described in
         /// [RFC 5280
         /// section 4.2.2.1](https://tools.ietf.org/html/rfc5280#section-4.2.2.1),
-        /// This corresponds to the [X509Parameters.aia_ocsp_servers][google.cloud.security.privateca.v1.X509Parameters.aia_ocsp_servers] field.
+        /// This corresponds to the
+        /// [X509Parameters.aia_ocsp_servers][google.cloud.security.privateca.v1.X509Parameters.aia_ocsp_servers]
+        /// field.
         /// </summary>
         [pbr::OriginalName("AIA_OCSP_SERVERS")] AiaOcspServers = 5,
+        /// <summary>
+        /// Refers to Name Constraints extension as described in
+        /// [RFC 5280
+        /// section 4.2.1.10](https://tools.ietf.org/html/rfc5280#section-4.2.1.10)
+        /// </summary>
+        [pbr::OriginalName("NAME_CONSTRAINTS")] NameConstraints = 6,
       }
 
     }
