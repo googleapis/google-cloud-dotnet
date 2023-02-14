@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Spanner.Admin.Instance.V1
 {
     // Partial class to support emulators
-    partial class InstanceAdminClientBuilder
+    public partial class InstanceAdminClientBuilder
     {
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables.

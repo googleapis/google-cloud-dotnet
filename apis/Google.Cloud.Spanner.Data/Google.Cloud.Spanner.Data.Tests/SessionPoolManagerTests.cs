@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,9 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
+#pragma warning disable IDE0065 // Misplaced using directive
     using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>>;
+#pragma warning restore IDE0065 // Misplaced using directive
 
     public class SessionPoolManagerTests
     {

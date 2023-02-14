@@ -21,7 +21,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -32,8 +31,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private static int s_rowCounter = 1;
         private static readonly string s_guid = IdGenerator.FromGuid();
-        private static ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
-        private SpannerStressTestTableFixture _fixture;
+        private static readonly ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
+        private readonly SpannerStressTestTableFixture _fixture;
 
         public SpannerStressTests(SpannerStressTestTableFixture fixture) =>
             _fixture = fixture;

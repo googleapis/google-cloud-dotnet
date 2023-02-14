@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -332,7 +332,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         // SqlResultStream doesn't use the metadata anyway, so it's just simpler to just return the result sets as they are.
         private sealed class FakeSpannerClient : SpannerClient
         {
-            private IEnumerable<PartialResultSet> _results;
+            private readonly IEnumerable<PartialResultSet> _results;
             public int Calls { get; private set; }
             private readonly Func<PartialResultSet, PartialResultSet> _filter;
 
