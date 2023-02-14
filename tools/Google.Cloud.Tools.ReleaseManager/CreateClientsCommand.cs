@@ -69,7 +69,7 @@ public class CreateClientsCommand : CommandBase
             .Where(t => t.Name.EndsWith("Client"))
             // Skip clients such as BigtableClient which don't have their own service metadata.
             .Where(t => t.GetProperty("ServiceMetadata", BindingFlags.Public | BindingFlags.Static) is not null)
-            .Where(t => assembly.GetType(t.FullName + "Builder") is Type builderType
+            .Where(t => assembly.GetType(t.FullName + "Builder") is System.Type builderType
                         && builderType.BaseType.Name == "ClientBuilderBase`1")
             .ToList();
 
@@ -98,7 +98,7 @@ public class CreateClientsCommand : CommandBase
         Console.WriteLine($"Successfully created clients ({clientTypes.Count}) for {id}");
     }
 
-    private object CreateClient(Type clientType, string transport)
+    private object CreateClient(System.Type clientType, string transport)
     {
         var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
         dynamic builder = Activator.CreateInstance(builderType);

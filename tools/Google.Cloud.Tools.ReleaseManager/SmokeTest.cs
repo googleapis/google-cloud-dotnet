@@ -105,7 +105,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private Type FindClient(Assembly assembly)
+        private System.Type FindClient(Assembly assembly)
         {
             if (Client is null)
             {
@@ -118,13 +118,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             return type ?? throw new UserErrorException($"No such client type {typeName} in assembly");
         }
 
-        private string FindTransports(Type clientType)
+        private string FindTransports(System.Type clientType)
         {
             dynamic metadata = clientType.GetProperty("ServiceMetadata", BindingFlags.Public | BindingFlags.Static).GetValue(null);
             return metadata.Transports.ToString();
         }
 
-        private object CreateClient(Type clientType, string transport)
+        private object CreateClient(System.Type clientType, string transport)
         {
             var builderType = clientType.Assembly.GetType(clientType.FullName + "Builder");
             var builder = Activator.CreateInstance(builderType);
@@ -148,10 +148,10 @@ namespace Google.Cloud.Tools.ReleaseManager
                     throw new UserErrorException($"Unknown transport '{transport}'");
             }
             builderType.GetProperty("Endpoint").SetValue(builder, Endpoint);
-            return builderType.GetMethod("Build", Type.EmptyTypes, null).Invoke(builder, new object[0]);
+            return builderType.GetMethod("Build", System.Type.EmptyTypes, null).Invoke(builder, new object[0]);
         }
 
-        private MethodInfo FindMethod(Type client)
+        private MethodInfo FindMethod(System.Type client)
         {
             var methods = client.GetMethods().Where(method => method.Name == Method);
             var matchingMethods = methods.Where(method => MethodMatches(method, Arguments)).ToList();
@@ -264,7 +264,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     : argValue.ToObject(parameterType);
             }
 
-            object MaybeGetMessageParser(Type type)
+            object MaybeGetMessageParser(System.Type type)
             {
                 // Note that we don't want to take a dependency on Google.Protobuf directly in this tool,
                 // as it could cause versioning problems when we try to load the API.
