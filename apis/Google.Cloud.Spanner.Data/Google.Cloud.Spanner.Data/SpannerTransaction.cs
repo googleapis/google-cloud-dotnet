@@ -257,14 +257,13 @@ namespace Google.Cloud.Spanner.Data
 
             var partitionRequest = request.ToPartitionReadOrQueryRequest(partitionSizeBytes, maxPartitions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-                {
-                    var callSettings = SpannerConnection.CreateCallSettings(
-                        partitionRequest.GetCallSettings,
-                        timeoutSeconds, cancellationToken);
-                    var response = await partitionRequest.PartitionReadOrQueryAsync(_session, callSettings).ConfigureAwait(false);
-                    return response.Partitions.Select(x => x.PartitionToken);
-                },
-                "SpannerTransaction.GetPartitionTokensAsync", SpannerConnection.Logger);
+            {
+                var callSettings = SpannerConnection.CreateCallSettings(
+                    partitionRequest.GetCallSettings,
+                    timeoutSeconds, cancellationToken);
+                var response = await partitionRequest.PartitionReadOrQueryAsync(_session, callSettings).ConfigureAwait(false);
+                return response.Partitions.Select(x => x.PartitionToken);
+            }, "SpannerTransaction.GetPartitionTokensAsync", SpannerConnection.Logger);
         }
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
@@ -469,7 +468,9 @@ namespace Google.Cloud.Spanner.Data
                     }
                     _session.ReleaseToPool(forceDelete: false);
                     break;
-                // Default for detach or unknown DisposeBehavior is to do nothing.
+                default:
+                    // Default for detach or unknown DisposeBehavior is to do nothing.
+                    break;
             }
         }
 
@@ -478,18 +479,14 @@ namespace Google.Cloud.Spanner.Data
             switch (mode)
             {
                 case TransactionMode.ReadOnly:
-                {
                     GaxPreconditions.CheckState(
                         Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
                         "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
-                }
                     break;
                 case TransactionMode.ReadWrite:
-                {
                     GaxPreconditions.CheckState(
                         Mode == TransactionMode.ReadWrite,
                         "You can only execute read/write commands on a ReadWrite Transaction!");
-                }
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
