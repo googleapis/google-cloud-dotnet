@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Spanner.Admin.Database.V1
 {
     // Partial class to support emulators
-    partial class DatabaseAdminClientBuilder
+    public partial class DatabaseAdminClientBuilder
     {
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables.
