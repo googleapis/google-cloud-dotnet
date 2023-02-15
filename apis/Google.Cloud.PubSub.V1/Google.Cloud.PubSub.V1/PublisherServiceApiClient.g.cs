@@ -575,6 +575,71 @@ namespace Google.Cloud.PubSub.V1
             UpdateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The updated topic object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided topic to update. Must be
+        /// specified and non-empty. Note that if `update_mask` contains
+        /// "message_storage_policy" but the `message_storage_policy` is not set in
+        /// the `topic` provided above, then the updated value is determined by the
+        /// policy configured at the project or organization level.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Topic UpdateTopic(Topic topic, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTopic(new UpdateTopicRequest
+            {
+                Topic = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The updated topic object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided topic to update. Must be
+        /// specified and non-empty. Note that if `update_mask` contains
+        /// "message_storage_policy" but the `message_storage_policy` is not set in
+        /// the `topic` provided above, then the updated value is determined by the
+        /// policy configured at the project or organization level.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Topic> UpdateTopicAsync(Topic topic, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTopicAsync(new UpdateTopicRequest
+            {
+                Topic = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a
+        /// topic are not modifiable.
+        /// </summary>
+        /// <param name="topic">
+        /// Required. The updated topic object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided topic to update. Must be
+        /// specified and non-empty. Note that if `update_mask` contains
+        /// "message_storage_policy" but the `message_storage_policy` is not set in
+        /// the `topic` provided above, then the updated value is determined by the
+        /// policy configured at the project or organization level.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Topic> UpdateTopicAsync(Topic topic, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTopicAsync(topic, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist.
         /// </summary>

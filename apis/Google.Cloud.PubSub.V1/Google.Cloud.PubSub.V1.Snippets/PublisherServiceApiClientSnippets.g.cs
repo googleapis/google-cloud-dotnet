@@ -161,6 +161,35 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateTopic</summary>
+        public void UpdateTopic()
+        {
+            // Snippet: UpdateTopic(Topic, FieldMask, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            Topic topic = new Topic();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Topic response = publisherServiceApiClient.UpdateTopic(topic, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTopicAsync</summary>
+        public async Task UpdateTopicAsync()
+        {
+            // Snippet: UpdateTopicAsync(Topic, FieldMask, CallSettings)
+            // Additional: UpdateTopicAsync(Topic, FieldMask, CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            Topic topic = new Topic();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Topic response = await publisherServiceApiClient.UpdateTopicAsync(topic, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for Publish</summary>
         public void PublishRequestObject()
         {

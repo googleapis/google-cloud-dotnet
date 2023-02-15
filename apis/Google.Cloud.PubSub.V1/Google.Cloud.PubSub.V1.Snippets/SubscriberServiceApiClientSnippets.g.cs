@@ -281,6 +281,35 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSubscription</summary>
+        public void UpdateSubscription()
+        {
+            // Snippet: UpdateSubscription(Subscription, FieldMask, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Subscription response = subscriberServiceApiClient.UpdateSubscription(subscription, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriptionAsync</summary>
+        public async Task UpdateSubscriptionAsync()
+        {
+            // Snippet: UpdateSubscriptionAsync(Subscription, FieldMask, CallSettings)
+            // Additional: UpdateSubscriptionAsync(Subscription, FieldMask, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Subscription response = await subscriberServiceApiClient.UpdateSubscriptionAsync(subscription, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSubscriptions</summary>
         public void ListSubscriptionsRequestObject()
         {
@@ -1636,6 +1665,35 @@ namespace Google.Cloud.PubSub.V1.Snippets
             };
             // Make the request
             Snapshot response = await subscriberServiceApiClient.UpdateSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshot</summary>
+        public void UpdateSnapshot()
+        {
+            // Snippet: UpdateSnapshot(Snapshot, FieldMask, CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            Snapshot snapshot = new Snapshot();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Snapshot response = subscriberServiceApiClient.UpdateSnapshot(snapshot, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshotAsync</summary>
+        public async Task UpdateSnapshotAsync()
+        {
+            // Snippet: UpdateSnapshotAsync(Snapshot, FieldMask, CallSettings)
+            // Additional: UpdateSnapshotAsync(Snapshot, FieldMask, CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            Snapshot snapshot = new Snapshot();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Snapshot response = await subscriberServiceApiClient.UpdateSnapshotAsync(snapshot, updateMask);
             // End snippet
         }
 

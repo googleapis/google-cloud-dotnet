@@ -1116,6 +1116,62 @@ namespace Google.Cloud.PubSub.V1
             UpdateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an existing subscription. Note that certain properties of a
+        /// subscription, such as its topic, are not modifiable.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The updated subscription object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided subscription to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription UpdateSubscription(Subscription subscription, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubscription(new UpdateSubscriptionRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing subscription. Note that certain properties of a
+        /// subscription, such as its topic, are not modifiable.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The updated subscription object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided subscription to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(Subscription subscription, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubscriptionAsync(new UpdateSubscriptionRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing subscription. Note that certain properties of a
+        /// subscription, such as its topic, are not modifiable.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The updated subscription object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided subscription to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(Subscription subscription, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubscriptionAsync(subscription, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3094,6 +3150,74 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Snapshot> UpdateSnapshotAsync(UpdateSnapshotRequest request, st::CancellationToken cancellationToken) =>
             UpdateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing snapshot. Snapshots are used in
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&gt;Seek&lt;/a&gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. The updated snapshot object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided snapshot to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Snapshot UpdateSnapshot(Snapshot snapshot, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSnapshot(new UpdateSnapshotRequest
+            {
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing snapshot. Snapshots are used in
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&gt;Seek&lt;/a&gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. The updated snapshot object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided snapshot to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> UpdateSnapshotAsync(Snapshot snapshot, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSnapshotAsync(new UpdateSnapshotRequest
+            {
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing snapshot. Snapshots are used in
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview"&gt;Seek&lt;/a&gt;
+        /// operations, which allow
+        /// you to manage message acknowledgments in bulk. That is, you can set the
+        /// acknowledgment state of messages in an existing subscription to the state
+        /// captured by a snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. The updated snapshot object.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Indicates which fields in the provided snapshot to update.
+        /// Must be specified and non-empty.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> UpdateSnapshotAsync(Snapshot snapshot, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSnapshotAsync(snapshot, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Removes an existing snapshot. Snapshots are used in [Seek]
