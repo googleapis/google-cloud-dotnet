@@ -105,11 +105,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "ZXJfcmVjb3Jk2kEZYW5zd2VyX3JlY29yZCx1cGRhdGVfbWFzaxp4ykEZZGlh",
             "bG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
             "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrABCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjJiZXRhMUISQW5zd2VyUmVjb3Jkc1Byb3RvUAFaSWdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlh",
-            "bG9nZmxvdy92MmJldGExO2RpYWxvZ2Zsb3f4AQGiAgJERqoCH0dvb2dsZS5D",
-            "bG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
+            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QqoBCiNjb20uZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjJiZXRhMUISQW5zd2VyUmVjb3Jkc1Byb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxv",
+            "Z2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCH0dvb2dsZS5DbG91ZC5E",
+            "aWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,9 +149,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// A typical workflow for customers provide feedback to an answer is:
   ///
   /// 1. For human agent assistant, customers get suggestion via ListSuggestions
-  ///    API. Together with the answers, [AnswerRecord.name][google.cloud.dialogflow.v2beta1.AnswerRecord.name] are returned to the
-  ///    customers.
-  /// 2. The customer uses the [AnswerRecord.name][google.cloud.dialogflow.v2beta1.AnswerRecord.name] to call the
+  ///    API. Together with the answers,
+  ///    [AnswerRecord.name][google.cloud.dialogflow.v2beta1.AnswerRecord.name] are
+  ///    returned to the customers.
+  /// 2. The customer uses the
+  /// [AnswerRecord.name][google.cloud.dialogflow.v2beta1.AnswerRecord.name] to
+  /// call the
   ///    [UpdateAnswerRecord][] method to send feedback about a specific answer
   ///    that they believe is wrong.
   /// </summary>
@@ -211,8 +214,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of this answer record.
-    /// Required for [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord] method.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Required for
+    /// [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord]
+    /// method. Format: `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/answerRecords/&lt;Answer Record ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,8 +233,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private global::Google.Cloud.Dialogflow.V2Beta1.AnswerFeedback answerFeedback_;
     /// <summary>
     /// Optional. The AnswerFeedback for this record. You can set this with
-    /// [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord] in order to give us feedback about
-    /// this answer.
+    /// [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord]
+    /// in order to give us feedback about this answer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1368,7 +1372,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Optional. Whether or not the suggested document is efficient. For example,
     /// if the document is poorly written, hard to understand, hard to use or
-    /// too long to find useful information, [document_efficiency][google.cloud.dialogflow.v2beta1.AgentAssistantFeedback.document_efficiency] is
+    /// too long to find useful information,
+    /// [document_efficiency][google.cloud.dialogflow.v2beta1.AgentAssistantFeedback.document_efficiency]
+    /// is
     /// [DocumentEfficiency.INEFFICIENT][google.cloud.dialogflow.v2beta1.AgentAssistantFeedback.DocumentEfficiency.INEFFICIENT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1965,7 +1971,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [AnswerRecords.GetAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.GetAnswerRecord].
+  /// Request message for
+  /// [AnswerRecords.GetAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.GetAnswerRecord].
   /// </summary>
   public sealed partial class GetAnswerRecordRequest : pb::IMessage<GetAnswerRecordRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2162,7 +2169,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [AnswerRecords.ListAnswerRecords][google.cloud.dialogflow.v2beta1.AnswerRecords.ListAnswerRecords].
+  /// Request message for
+  /// [AnswerRecords.ListAnswerRecords][google.cloud.dialogflow.v2beta1.AnswerRecords.ListAnswerRecords].
   /// </summary>
   public sealed partial class ListAnswerRecordsRequest : pb::IMessage<ListAnswerRecordsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2488,7 +2496,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Response message for [AnswerRecords.ListAnswerRecords][google.cloud.dialogflow.v2beta1.AnswerRecords.ListAnswerRecords].
+  /// Response message for
+  /// [AnswerRecords.ListAnswerRecords][google.cloud.dialogflow.v2beta1.AnswerRecords.ListAnswerRecords].
   /// </summary>
   public sealed partial class ListAnswerRecordsResponse : pb::IMessage<ListAnswerRecordsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2717,7 +2726,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord].
+  /// Request message for
+  /// [AnswerRecords.UpdateAnswerRecord][google.cloud.dialogflow.v2beta1.AnswerRecords.UpdateAnswerRecord].
   /// </summary>
   public sealed partial class UpdateAnswerRecordRequest : pb::IMessage<UpdateAnswerRecordRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

@@ -342,11 +342,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "bnRzLyp9L3N1Z2dlc3Rpb25zOmNvbXBpbGU6ASoaeMpBGWRpYWxvZ2Zsb3cu",
             "Z29vZ2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvZGlhbG9nZmxvd0KuAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LnYyYmV0YTFCEFBhcnRpY2lwYW50UHJvdG9QAVpJZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dmbG93L3Yy",
-            "YmV0YTE7ZGlhbG9nZmxvd/gBAaICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxv",
-            "Z2Zsb3cuVjJCZXRhMWIGcHJvdG8z"));
+            "L2F1dGgvZGlhbG9nZmxvd0KoAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyYmV0YTFCEFBhcnRpY2lwYW50UHJvdG9QAVpDY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9kaWFsb2dmbG93L2FwaXYyYmV0YTEvZGlhbG9nZmxvd3BiO2Rp",
+            "YWxvZ2Zsb3dwYvgBAaICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
+            "VjJCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.SessionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -468,8 +468,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int RoleFieldNumber = 2;
     private global::Google.Cloud.Dialogflow.V2Beta1.Participant.Types.Role role_ = global::Google.Cloud.Dialogflow.V2Beta1.Participant.Types.Role.Unspecified;
     /// <summary>
-    /// Immutable. The role this participant plays in the conversation. This field must be set
-    /// during participant creation and is then immutable.
+    /// Immutable. The role this participant plays in the conversation. This field
+    /// must be set during participant creation and is then immutable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -484,19 +484,23 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int ObfuscatedExternalUserIdFieldNumber = 7;
     private string obfuscatedExternalUserId_ = "";
     /// <summary>
-    /// Optional. Obfuscated user id that should be associated with the created participant.
+    /// Optional. Obfuscated user id that should be associated with the created
+    /// participant.
     ///
     /// You can specify a user id as follows:
     ///
     /// 1. If you set this field in
-    ///    [CreateParticipantRequest][google.cloud.dialogflow.v2beta1.CreateParticipantRequest.participant] or
+    ///    [CreateParticipantRequest][google.cloud.dialogflow.v2beta1.CreateParticipantRequest.participant]
+    ///    or
     ///    [UpdateParticipantRequest][google.cloud.dialogflow.v2beta1.UpdateParticipantRequest.participant],
     ///    Dialogflow adds the obfuscated user id with the participant.
     ///
     /// 2. If you set this field in
-    ///    [AnalyzeContent][google.cloud.dialogflow.v2beta1.AnalyzeContentRequest.obfuscated_external_user_id] or
+    ///    [AnalyzeContent][google.cloud.dialogflow.v2beta1.AnalyzeContentRequest.obfuscated_external_user_id]
+    ///    or
     ///    [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.obfuscated_external_user_id],
-    ///    Dialogflow will update [Participant.obfuscated_external_user_id][google.cloud.dialogflow.v2beta1.Participant.obfuscated_external_user_id].
+    ///    Dialogflow will update
+    ///    [Participant.obfuscated_external_user_id][google.cloud.dialogflow.v2beta1.Participant.obfuscated_external_user_id].
     ///
     /// Dialogflow uses this user id for following purposes:
     /// 1) Billing and measurement. If user with the same
@@ -528,12 +532,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> documentsMetadataFilters_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Key-value filters on the metadata of documents returned by article
-    /// suggestion. If specified, article suggestion only returns suggested
-    /// documents that match all filters in their [Document.metadata][google.cloud.dialogflow.v2beta1.Document.metadata]. Multiple
-    /// values for a metadata key should be concatenated by comma. For example,
-    /// filters to match all documents that have 'US' or 'CA' in their market
-    /// metadata values and 'agent' in their user metadata values will be
+    /// Optional. Key-value filters on the metadata of documents returned by
+    /// article suggestion. If specified, article suggestion only returns suggested
+    /// documents that match all filters in their
+    /// [Document.metadata][google.cloud.dialogflow.v2beta1.Document.metadata].
+    /// Multiple values for a metadata key should be concatenated by comma. For
+    /// example, filters to match all documents that have 'US' or 'CA' in their
+    /// market metadata values and 'agent' in their user metadata values will be
     /// ```
     /// documents_metadata_filters {
     ///   key: "market"
@@ -1333,7 +1338,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.CreateParticipant][google.cloud.dialogflow.v2beta1.Participants.CreateParticipant].
+  /// The request message for
+  /// [Participants.CreateParticipant][google.cloud.dialogflow.v2beta1.Participants.CreateParticipant].
   /// </summary>
   public sealed partial class CreateParticipantRequest : pb::IMessage<CreateParticipantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1579,7 +1585,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.GetParticipant][google.cloud.dialogflow.v2beta1.Participants.GetParticipant].
+  /// The request message for
+  /// [Participants.GetParticipant][google.cloud.dialogflow.v2beta1.Participants.GetParticipant].
   /// </summary>
   public sealed partial class GetParticipantRequest : pb::IMessage<GetParticipantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1776,7 +1783,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.ListParticipants][google.cloud.dialogflow.v2beta1.Participants.ListParticipants].
+  /// The request message for
+  /// [Participants.ListParticipants][google.cloud.dialogflow.v2beta1.Participants.ListParticipants].
   /// </summary>
   public sealed partial class ListParticipantsRequest : pb::IMessage<ListParticipantsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2054,7 +2062,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.ListParticipants][google.cloud.dialogflow.v2beta1.Participants.ListParticipants].
+  /// The response message for
+  /// [Participants.ListParticipants][google.cloud.dialogflow.v2beta1.Participants.ListParticipants].
   /// </summary>
   public sealed partial class ListParticipantsResponse : pb::IMessage<ListParticipantsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2280,7 +2289,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.UpdateParticipant][google.cloud.dialogflow.v2beta1.Participants.UpdateParticipant].
+  /// The request message for
+  /// [Participants.UpdateParticipant][google.cloud.dialogflow.v2beta1.Participants.UpdateParticipant].
   /// </summary>
   public sealed partial class UpdateParticipantRequest : pb::IMessage<UpdateParticipantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3095,7 +3105,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>Field number for the "detect_intent_response" field.</summary>
     public const int DetectIntentResponseFieldNumber = 1;
     /// <summary>
-    /// Response of the Dialogflow [Sessions.DetectIntent][google.cloud.dialogflow.v2beta1.Sessions.DetectIntent] call.
+    /// Response of the Dialogflow
+    /// [Sessions.DetectIntent][google.cloud.dialogflow.v2beta1.Sessions.DetectIntent]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3992,10 +4004,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Key-value filters on the metadata of documents returned by article
     /// suggestion. If specified, article suggestion only returns suggested
-    /// documents that match all filters in their [Document.metadata][google.cloud.dialogflow.v2beta1.Document.metadata]. Multiple
-    /// values for a metadata key should be concatenated by comma. For example,
-    /// filters to match all documents that have 'US' or 'CA' in their market
-    /// metadata values and 'agent' in their user metadata values will be
+    /// documents that match all filters in their
+    /// [Document.metadata][google.cloud.dialogflow.v2beta1.Document.metadata].
+    /// Multiple values for a metadata key should be concatenated by comma. For
+    /// example, filters to match all documents that have 'US' or 'CA' in their
+    /// market metadata values and 'agent' in their user metadata values will be
     /// ```
     /// documents_metadata_filters {
     ///   key: "market"
@@ -4137,7 +4150,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent].
+  /// The request message for
+  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent].
   /// </summary>
   public sealed partial class AnalyzeContentRequest : pb::IMessage<AnalyzeContentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5086,7 +5100,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent].
+  /// The response message for
+  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent].
   /// </summary>
   public sealed partial class AnalyzeContentResponse : pb::IMessage<AnalyzeContentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5187,7 +5202,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Optional. Only set if a Dialogflow automated agent has responded.
     /// Note that: [AutomatedAgentReply.detect_intent_response.output_audio][]
     /// and [AutomatedAgentReply.detect_intent_response.output_audio_config][]
-    /// are always empty, use [reply_audio][google.cloud.dialogflow.v2beta1.AnalyzeContentResponse.reply_audio] instead.
+    /// are always empty, use
+    /// [reply_audio][google.cloud.dialogflow.v2beta1.AnalyzeContentResponse.reply_audio]
+    /// instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5220,7 +5237,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult> humanAgentSuggestionResults_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult>();
     /// <summary>
     /// The suggestions for most recent human agent. The order is the same as
-    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs] of
+    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs]
+    /// of
     /// [HumanAgentAssistantConfig.human_agent_suggestion_config][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.human_agent_suggestion_config].
     ///
     /// Note that any failure of Agent Assist features will not lead to the overall
@@ -5241,7 +5259,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult> endUserSuggestionResults_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult>();
     /// <summary>
     /// The suggestions for end user. The order is the same as
-    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs] of
+    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs]
+    /// of
     /// [HumanAgentAssistantConfig.end_user_suggestion_config][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.end_user_suggestion_config].
     ///
     /// Same as human_agent_suggestion_results, any failure of Agent Assist
@@ -5762,26 +5781,31 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
   /// <summary>
   /// The top-level message sent by the client to the
-  /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent] method.
+  /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent]
+  /// method.
   ///
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain
   ///     [participant][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.participant],
-  ///     [config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config] and optionally
-  ///     [query_params][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.query_params]. If you want
-  ///     to receive an audio response, it should also contain
+  ///     [config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config]
+  ///     and optionally
+  ///     [query_params][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.query_params].
+  ///     If you want to receive an audio response, it should also contain
   ///     [reply_audio_config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.reply_audio_config].
   ///     The message must not contain
   ///     [input][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input].
   ///
-  /// 2.  If [config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config] in the first message
-  ///     was set to [audio_config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.audio_config],
+  /// 2.  If
+  /// [config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config]
+  /// in the first message
+  ///     was set to
+  ///     [audio_config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.audio_config],
   ///     all subsequent messages must contain
-  ///     [input_audio][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input_audio] to continue
-  ///     with Speech recognition.
-  ///     If you decide to rather analyze text input after you already started
-  ///     Speech recognition, please send a message with
+  ///     [input_audio][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input_audio]
+  ///     to continue with Speech recognition. If you decide to rather analyze text
+  ///     input after you already started Speech recognition, please send a message
+  ///     with
   ///     [StreamingAnalyzeContentRequest.input_text][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input_text].
   ///
   ///     However, note that:
@@ -5790,9 +5814,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   ///     * Dialogflow discards all Speech recognition results in favor of the
   ///       text input.
   ///
-  ///  3. If [StreamingAnalyzeContentRequest.config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config] in the first message was set
-  ///    to [StreamingAnalyzeContentRequest.text_config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.text_config], then the second message
-  ///    must contain only [input_text][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input_text].
+  ///  3. If
+  ///  [StreamingAnalyzeContentRequest.config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.config]
+  ///  in the first message was set
+  ///    to
+  ///    [StreamingAnalyzeContentRequest.text_config][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.text_config],
+  ///    then the second message must contain only
+  ///    [input_text][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentRequest.input_text].
   ///    Moreover, you must not send more than two messages.
   ///
   ///  After you sent all input, you must half-close or abort the request stream.
@@ -6746,7 +6774,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Optional. Only set if a Dialogflow automated agent has responded.
     /// Note that: [AutomatedAgentReply.detect_intent_response.output_audio][]
     /// and [AutomatedAgentReply.detect_intent_response.output_audio_config][]
-    /// are always empty, use [reply_audio][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentResponse.reply_audio] instead.
+    /// are always empty, use
+    /// [reply_audio][google.cloud.dialogflow.v2beta1.StreamingAnalyzeContentResponse.reply_audio]
+    /// instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6779,7 +6809,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult> humanAgentSuggestionResults_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult>();
     /// <summary>
     /// The suggestions for most recent human agent. The order is the same as
-    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs] of
+    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs]
+    /// of
     /// [HumanAgentAssistantConfig.human_agent_suggestion_config][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.human_agent_suggestion_config].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6795,7 +6826,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult> endUserSuggestionResults_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SuggestionResult>();
     /// <summary>
     /// The suggestions for end user. The order is the same as
-    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs] of
+    /// [HumanAgentAssistantConfig.SuggestionConfig.feature_configs][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.SuggestionConfig.feature_configs]
+    /// of
     /// [HumanAgentAssistantConfig.end_user_suggestion_config][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.end_user_suggestion_config].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8679,8 +8711,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
   /// <summary>
   /// One response of different type of suggestion response which is used in
-  /// the response of [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent] and
-  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent], as well as [HumanAgentAssistantEvent][google.cloud.dialogflow.v2beta1.HumanAgentAssistantEvent].
+  /// the response of
+  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent]
+  /// and
+  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent],
+  /// as well as
+  /// [HumanAgentAssistantEvent][google.cloud.dialogflow.v2beta1.HumanAgentAssistantEvent].
   /// </summary>
   public sealed partial class SuggestionResult : pb::IMessage<SuggestionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9086,7 +9122,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.SuggestArticles][google.cloud.dialogflow.v2beta1.Participants.SuggestArticles].
+  /// The request message for
+  /// [Participants.SuggestArticles][google.cloud.dialogflow.v2beta1.Participants.SuggestArticles].
   /// </summary>
   public sealed partial class SuggestArticlesRequest : pb::IMessage<SuggestArticlesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9176,8 +9213,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private int contextSize_;
     /// <summary>
     /// Optional. Max number of messages prior to and including
-    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestArticlesRequest.latest_message] to use as context
-    /// when compiling the suggestion. By default 20 and at most 50.
+    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestArticlesRequest.latest_message]
+    /// to use as context when compiling the suggestion. By default 20 and at
+    /// most 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9418,7 +9456,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.SuggestArticles][google.cloud.dialogflow.v2beta1.Participants.SuggestArticles].
+  /// The response message for
+  /// [Participants.SuggestArticles][google.cloud.dialogflow.v2beta1.Participants.SuggestArticles].
   /// </summary>
   public sealed partial class SuggestArticlesResponse : pb::IMessage<SuggestArticlesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9504,10 +9543,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private int contextSize_;
     /// <summary>
     /// Number of messages prior to and including
-    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestArticlesResponse.latest_message] to compile the
-    /// suggestion. It may be smaller than the
-    /// [SuggestArticlesResponse.context_size][google.cloud.dialogflow.v2beta1.SuggestArticlesResponse.context_size] field in the request if there
-    /// aren't that many messages in the conversation.
+    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestArticlesResponse.latest_message]
+    /// to compile the suggestion. It may be smaller than the
+    /// [SuggestArticlesResponse.context_size][google.cloud.dialogflow.v2beta1.SuggestArticlesResponse.context_size]
+    /// field in the request if there aren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9690,7 +9730,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.SuggestFaqAnswers][google.cloud.dialogflow.v2beta1.Participants.SuggestFaqAnswers].
+  /// The request message for
+  /// [Participants.SuggestFaqAnswers][google.cloud.dialogflow.v2beta1.Participants.SuggestFaqAnswers].
   /// </summary>
   public sealed partial class SuggestFaqAnswersRequest : pb::IMessage<SuggestFaqAnswersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10022,7 +10063,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.SuggestFaqAnswers][google.cloud.dialogflow.v2beta1.Participants.SuggestFaqAnswers].
+  /// The request message for
+  /// [Participants.SuggestFaqAnswers][google.cloud.dialogflow.v2beta1.Participants.SuggestFaqAnswers].
   /// </summary>
   public sealed partial class SuggestFaqAnswersResponse : pb::IMessage<SuggestFaqAnswersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10108,10 +10150,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private int contextSize_;
     /// <summary>
     /// Number of messages prior to and including
-    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestFaqAnswersResponse.latest_message] to compile the
-    /// suggestion. It may be smaller than the
-    /// [SuggestFaqAnswersRequest.context_size][google.cloud.dialogflow.v2beta1.SuggestFaqAnswersRequest.context_size] field in the request if there
-    /// aren't that many messages in the conversation.
+    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestFaqAnswersResponse.latest_message]
+    /// to compile the suggestion. It may be smaller than the
+    /// [SuggestFaqAnswersRequest.context_size][google.cloud.dialogflow.v2beta1.SuggestFaqAnswersRequest.context_size]
+    /// field in the request if there aren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10294,7 +10337,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.SuggestSmartReplies][google.cloud.dialogflow.v2beta1.Participants.SuggestSmartReplies].
+  /// The request message for
+  /// [Participants.SuggestSmartReplies][google.cloud.dialogflow.v2beta1.Participants.SuggestSmartReplies].
   /// </summary>
   public sealed partial class SuggestSmartRepliesRequest : pb::IMessage<SuggestSmartRepliesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10628,7 +10672,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.SuggestSmartReplies][google.cloud.dialogflow.v2beta1.Participants.SuggestSmartReplies].
+  /// The response message for
+  /// [Participants.SuggestSmartReplies][google.cloud.dialogflow.v2beta1.Participants.SuggestSmartReplies].
   /// </summary>
   public sealed partial class SuggestSmartRepliesResponse : pb::IMessage<SuggestSmartRepliesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10716,10 +10761,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private int contextSize_;
     /// <summary>
     /// Number of messages prior to and including
-    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestSmartRepliesResponse.latest_message] to compile the
-    /// suggestion. It may be smaller than the
-    /// [SuggestSmartRepliesRequest.context_size][google.cloud.dialogflow.v2beta1.SuggestSmartRepliesRequest.context_size] field in the request if there
-    /// aren't that many messages in the conversation.
+    /// [latest_message][google.cloud.dialogflow.v2beta1.SuggestSmartRepliesResponse.latest_message]
+    /// to compile the suggestion. It may be smaller than the
+    /// [SuggestSmartRepliesRequest.context_size][google.cloud.dialogflow.v2beta1.SuggestSmartRepliesRequest.context_size]
+    /// field in the request if there aren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11987,7 +12033,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions].
+  /// The request message for
+  /// [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions].
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class ListSuggestionsRequest : pb::IMessage<ListSuggestionsRequest>
@@ -12313,7 +12360,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions].
+  /// The response message for
+  /// [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions].
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class ListSuggestionsResponse : pb::IMessage<ListSuggestionsResponse>
@@ -12542,7 +12590,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Participants.CompileSuggestion][google.cloud.dialogflow.v2beta1.Participants.CompileSuggestion].
+  /// The request message for
+  /// [Participants.CompileSuggestion][google.cloud.dialogflow.v2beta1.Participants.CompileSuggestion].
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class CompileSuggestionRequest : pb::IMessage<CompileSuggestionRequest>
@@ -12826,7 +12875,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Participants.CompileSuggestion][google.cloud.dialogflow.v2beta1.Participants.CompileSuggestion].
+  /// The response message for
+  /// [Participants.CompileSuggestion][google.cloud.dialogflow.v2beta1.Participants.CompileSuggestion].
   /// </summary>
   [global::System.ObsoleteAttribute]
   public sealed partial class CompileSuggestionResponse : pb::IMessage<CompileSuggestionResponse>
@@ -12917,8 +12967,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Number of messages prior to and including
     /// [latest_message][google.cloud.dialogflow.v2beta1.CompileSuggestionResponse.latest_message]
     /// to compile the suggestion. It may be smaller than the
-    /// [CompileSuggestionRequest.context_size][google.cloud.dialogflow.v2beta1.CompileSuggestionRequest.context_size] field in the request if
-    /// there aren't that many messages in the conversation.
+    /// [CompileSuggestionRequest.context_size][google.cloud.dialogflow.v2beta1.CompileSuggestionRequest.context_size]
+    /// field in the request if there aren't that many messages in the
+    /// conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

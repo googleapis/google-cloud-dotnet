@@ -131,11 +131,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "fS9hZ2VudC92YWxpZGF0aW9uUmVzdWx0GnjKQRlkaWFsb2dmbG93Lmdvb2ds",
             "ZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
             "bG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2RpYWxvZ2Zsb3dCqAEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MmJldGExQgpBZ2VudFByb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExO2RpYWxv",
-            "Z2Zsb3f4AQGiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0",
-            "YTFiBnByb3RvMw=="));
+            "L2RpYWxvZ2Zsb3dCogEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "MmJldGExQgpBZ2VudFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlh",
+            "bG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGL4",
+            "AQGiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.ValidationResultReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -888,7 +888,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.GetAgent][google.cloud.dialogflow.v2beta1.Agents.GetAgent].
+  /// The request message for
+  /// [Agents.GetAgent][google.cloud.dialogflow.v2beta1.Agents.GetAgent].
   /// </summary>
   public sealed partial class GetAgentRequest : pb::IMessage<GetAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1085,7 +1086,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.SetAgent][google.cloud.dialogflow.v2beta1.Agents.SetAgent].
+  /// The request message for
+  /// [Agents.SetAgent][google.cloud.dialogflow.v2beta1.Agents.SetAgent].
   /// </summary>
   public sealed partial class SetAgentRequest : pb::IMessage<SetAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1338,7 +1340,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.DeleteAgent][google.cloud.dialogflow.v2beta1.Agents.DeleteAgent].
+  /// The request message for
+  /// [Agents.DeleteAgent][google.cloud.dialogflow.v2beta1.Agents.DeleteAgent].
   /// </summary>
   public sealed partial class DeleteAgentRequest : pb::IMessage<DeleteAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1774,7 +1777,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
+  /// The request message for
+  /// [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsRequest : pb::IMessage<SearchAgentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2052,7 +2056,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
+  /// The response message for
+  /// [Agents.SearchAgents][google.cloud.dialogflow.v2beta1.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsResponse : pb::IMessage<SearchAgentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2278,7 +2283,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.TrainAgent][google.cloud.dialogflow.v2beta1.Agents.TrainAgent].
+  /// The request message for
+  /// [Agents.TrainAgent][google.cloud.dialogflow.v2beta1.Agents.TrainAgent].
   /// </summary>
   public sealed partial class TrainAgentRequest : pb::IMessage<TrainAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2475,7 +2481,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
+  /// The request message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentRequest : pb::IMessage<ExportAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2722,7 +2729,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
+  /// The response message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.v2beta1.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentResponse : pb::IMessage<ExportAgentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2991,7 +2999,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ImportAgent][google.cloud.dialogflow.v2beta1.Agents.ImportAgent].
+  /// The request message for
+  /// [Agents.ImportAgent][google.cloud.dialogflow.v2beta1.Agents.ImportAgent].
   /// </summary>
   public sealed partial class ImportAgentRequest : pb::IMessage<ImportAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3308,7 +3317,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.RestoreAgent][google.cloud.dialogflow.v2beta1.Agents.RestoreAgent].
+  /// The request message for
+  /// [Agents.RestoreAgent][google.cloud.dialogflow.v2beta1.Agents.RestoreAgent].
   /// </summary>
   public sealed partial class RestoreAgentRequest : pb::IMessage<RestoreAgentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3625,7 +3635,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Agents.GetValidationResult][google.cloud.dialogflow.v2beta1.Agents.GetValidationResult].
+  /// The request message for
+  /// [Agents.GetValidationResult][google.cloud.dialogflow.v2beta1.Agents.GetValidationResult].
   /// </summary>
   public sealed partial class GetValidationResultRequest : pb::IMessage<GetValidationResultRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

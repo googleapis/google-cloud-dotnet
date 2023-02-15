@@ -230,7 +230,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>Environments client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Environments][google.cloud.dialogflow.v2beta1.Environment].
+    /// Service for managing
+    /// [Environments][google.cloud.dialogflow.v2beta1.Environment].
     /// </remarks>
     public abstract partial class EnvironmentsClient
     {
@@ -607,7 +608,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Environments][google.cloud.dialogflow.v2beta1.Environment].
+    /// Service for managing
+    /// [Environments][google.cloud.dialogflow.v2beta1.Environment].
     /// </remarks>
     public sealed partial class EnvironmentsClientImpl : EnvironmentsClient
     {
