@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -220,7 +220,7 @@ namespace Google.Cloud.Spanner.Data
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
-                return checked((int)count);
+                return checked((int) count);
             }
 
             private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
@@ -389,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private RequestOptions BuildRequestOptions() =>
-                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) , RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority), RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
