@@ -7006,7 +7006,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string table_ = "";
     /// <summary>
     /// The name of the table to which to write data, of the form
-    /// {projectId}:{datasetId}.{tableId}
+    /// {projectId}.{datasetId}.{tableId}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7333,6 +7333,11 @@ namespace Google.Cloud.PubSub.V1 {
         [pbr::OriginalName("ACTIVE")] Active = 1,
         /// <summary>
         /// Cannot write to the BigQuery table because of permission denied errors.
+        /// This can happen if
+        /// - Pub/Sub SA has not been granted the [appropriate BigQuery IAM
+        /// permissions](https://cloud.google.com/pubsub/docs/create-subscription#assign_bigquery_service_account)
+        /// - bigquery.googleapis.com API is not enabled for the project
+        /// ([instructions](https://cloud.google.com/service-usage/docs/enable-disable))
         /// </summary>
         [pbr::OriginalName("PERMISSION_DENIED")] PermissionDenied = 2,
         /// <summary>
