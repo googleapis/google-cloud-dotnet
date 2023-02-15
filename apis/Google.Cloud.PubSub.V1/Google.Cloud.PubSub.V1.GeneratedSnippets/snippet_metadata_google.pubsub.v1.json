@@ -315,6 +315,81 @@
       ]
     },
     {
+      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_sync_flattened",
+      "title": "UpdateTopic",
+      "description": "Snippet for UpdateTopic",
+      "file": "PublisherServiceApiClient.UpdateTopicSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTopic",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopic",
+        "resultType": "Google.Cloud.PubSub.V1.Topic",
+        "client": {
+          "shortName": "PublisherServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateTopic",
+          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "service": {
+            "shortName": "PublisherServiceApi",
+            "fullName": "google.pubsub.v1.PublisherServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_async_flattened",
+      "title": "UpdateTopicAsync",
+      "description": "Snippet for UpdateTopicAsync",
+      "file": "PublisherServiceApiClient.UpdateTopicAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTopicAsync",
+        "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopicAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
+        "client": {
+          "shortName": "PublisherServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateTopic",
+          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "service": {
+            "shortName": "PublisherServiceApi",
+            "fullName": "google.pubsub.v1.PublisherServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_sync",
       "title": "PublishRequestObject",
       "description": "Snippet for Publish",
@@ -4399,6 +4474,81 @@
       ]
     },
     {
+      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_sync_flattened",
+      "title": "UpdateSubscription",
+      "description": "Snippet for UpdateSubscription",
+      "file": "SubscriberServiceApiClient.UpdateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscription",
+        "resultType": "Google.Cloud.PubSub.V1.Subscription",
+        "client": {
+          "shortName": "SubscriberServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriberServiceApi",
+            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_async_flattened",
+      "title": "UpdateSubscriptionAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "SubscriberServiceApiClient.UpdateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscriptionAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
+        "client": {
+          "shortName": "SubscriberServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriberServiceApi",
+            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_sync",
       "title": "ListSubscriptionsRequestObject",
       "description": "Snippet for ListSubscriptions",
@@ -6690,6 +6840,81 @@
         {
           "start": 36,
           "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_sync_flattened",
+      "title": "UpdateSnapshot",
+      "description": "Snippet for UpdateSnapshot",
+      "file": "SubscriberServiceApiClient.UpdateSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshot",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshot",
+        "resultType": "Google.Cloud.PubSub.V1.Snapshot",
+        "client": {
+          "shortName": "SubscriberServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "service": {
+            "shortName": "SubscriberServiceApi",
+            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_async_flattened",
+      "title": "UpdateSnapshotAsync",
+      "description": "Snippet for UpdateSnapshotAsync",
+      "file": "SubscriberServiceApiClient.UpdateSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshotAsync",
+        "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshotAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
+        "client": {
+          "shortName": "SubscriberServiceApiClient",
+          "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "service": {
+            "shortName": "SubscriberServiceApi",
+            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
