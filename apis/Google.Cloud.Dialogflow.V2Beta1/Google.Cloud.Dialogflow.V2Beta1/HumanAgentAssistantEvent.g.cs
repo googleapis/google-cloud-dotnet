@@ -30,12 +30,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "YXJ0aWNpcGFudC5wcm90byKUAQoYSHVtYW5BZ2VudEFzc2lzdGFudEV2ZW50",
             "EhQKDGNvbnZlcnNhdGlvbhgBIAEoCRITCgtwYXJ0aWNpcGFudBgDIAEoCRJN",
             "ChJzdWdnZXN0aW9uX3Jlc3VsdHMYBSADKAsyMS5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52MmJldGExLlN1Z2dlc3Rpb25SZXN1bHRCuwEKI2NvbS5nb29n",
+            "bG9nZmxvdy52MmJldGExLlN1Z2dlc3Rpb25SZXN1bHRCtQEKI2NvbS5nb29n",
             "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQh1IdW1hbkFnZW50QXNzaXN0",
-            "YW50RXZlbnRQcm90b1ABWklnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMTtkaWFsb2dmbG93",
-            "+AEBogICREaqAh9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJldGExYgZw",
-            "cm90bzM="));
+            "YW50RXZlbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zs",
+            "b3cvYXBpdjJiZXRhMS9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEBogIC",
+            "REaqAh9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,12 +116,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private string participant_ = "";
     /// <summary>
     /// The participant that the suggestion is compiled for. And This field is used
-    /// to call [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions] API. Format:
-    /// `projects/&lt;Project ID>/conversations/&lt;Conversation
+    /// to call
+    /// [Participants.ListSuggestions][google.cloud.dialogflow.v2beta1.Participants.ListSuggestions]
+    /// API. Format: `projects/&lt;Project ID>/conversations/&lt;Conversation
     /// ID>/participants/&lt;Participant ID>`.
     /// It will not be set in legacy workflow.
-    /// [HumanAgentAssistantConfig.name][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.name] for more
-    /// information.
+    /// [HumanAgentAssistantConfig.name][google.cloud.dialogflow.v2beta1.HumanAgentAssistantConfig.name]
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

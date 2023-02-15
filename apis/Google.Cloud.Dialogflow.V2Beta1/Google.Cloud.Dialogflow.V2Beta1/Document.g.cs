@@ -162,11 +162,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "QSYKCERvY3VtZW50EhpLbm93bGVkZ2VPcGVyYXRpb25NZXRhZGF0YRp4ykEZ",
             "ZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2ds",
             "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QqsBCiNjb20uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUINRG9jdW1lbnRQcm90b1ABWklnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxv",
-            "Z2Zsb3cvdjJiZXRhMTtkaWFsb2dmbG93+AEBogICREaqAh9Hb29nbGUuQ2xv",
-            "dWQuRGlhbG9nZmxvdy5WMkJldGExYgZwcm90bzM="));
+            "Z2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QqUBCiNjb20uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUINRG9jdW1lbnRQcm90b1ABWkNjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjJiZXRhMS9kaWFsb2dm",
+            "bG93cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAh9Hb29nbGUuQ2xvdWQuRGlh",
+            "bG9nZmxvdy5WMkJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.GcsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -191,7 +191,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
   #region Messages
   /// <summary>
-  /// A knowledge document to be used by a [KnowledgeBase][google.cloud.dialogflow.v2beta1.KnowledgeBase].
+  /// A knowledge document to be used by a
+  /// [KnowledgeBase][google.cloud.dialogflow.v2beta1.KnowledgeBase].
   ///
   /// For more information, see the [knowledge base
   /// guide](https://cloud.google.com/dialogflow/docs/how/knowledge-bases).
@@ -1185,7 +1186,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.GetDocument][google.cloud.dialogflow.v2beta1.Documents.GetDocument].
+  /// Request message for
+  /// [Documents.GetDocument][google.cloud.dialogflow.v2beta1.Documents.GetDocument].
   /// </summary>
   public sealed partial class GetDocumentRequest : pb::IMessage<GetDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1382,7 +1384,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.ListDocuments][google.cloud.dialogflow.v2beta1.Documents.ListDocuments].
+  /// Request message for
+  /// [Documents.ListDocuments][google.cloud.dialogflow.v2beta1.Documents.ListDocuments].
   /// </summary>
   public sealed partial class ListDocumentsRequest : pb::IMessage<ListDocumentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1720,7 +1723,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Response message for [Documents.ListDocuments][google.cloud.dialogflow.v2beta1.Documents.ListDocuments].
+  /// Response message for
+  /// [Documents.ListDocuments][google.cloud.dialogflow.v2beta1.Documents.ListDocuments].
   /// </summary>
   public sealed partial class ListDocumentsResponse : pb::IMessage<ListDocumentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1945,7 +1949,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.CreateDocument][google.cloud.dialogflow.v2beta1.Documents.CreateDocument].
+  /// Request message for
+  /// [Documents.CreateDocument][google.cloud.dialogflow.v2beta1.Documents.CreateDocument].
   /// </summary>
   public sealed partial class CreateDocumentRequest : pb::IMessage<CreateDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2232,7 +2237,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.ImportDocuments][google.cloud.dialogflow.v2beta1.Documents.ImportDocuments].
+  /// Request message for
+  /// [Documents.ImportDocuments][google.cloud.dialogflow.v2beta1.Documents.ImportDocuments].
   /// </summary>
   public sealed partial class ImportDocumentsRequest : pb::IMessage<ImportDocumentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2865,7 +2871,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Response message for [Documents.ImportDocuments][google.cloud.dialogflow.v2beta1.Documents.ImportDocuments].
+  /// Response message for
+  /// [Documents.ImportDocuments][google.cloud.dialogflow.v2beta1.Documents.ImportDocuments].
   /// </summary>
   public sealed partial class ImportDocumentsResponse : pb::IMessage<ImportDocumentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3049,7 +3056,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.DeleteDocument][google.cloud.dialogflow.v2beta1.Documents.DeleteDocument].
+  /// Request message for
+  /// [Documents.DeleteDocument][google.cloud.dialogflow.v2beta1.Documents.DeleteDocument].
   /// </summary>
   public sealed partial class DeleteDocumentRequest : pb::IMessage<DeleteDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3246,7 +3254,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.UpdateDocument][google.cloud.dialogflow.v2beta1.Documents.UpdateDocument].
+  /// Request message for
+  /// [Documents.UpdateDocument][google.cloud.dialogflow.v2beta1.Documents.UpdateDocument].
   /// </summary>
   public sealed partial class UpdateDocumentRequest : pb::IMessage<UpdateDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4053,7 +4062,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// Request message for [Documents.ReloadDocument][google.cloud.dialogflow.v2beta1.Documents.ReloadDocument].
+  /// Request message for
+  /// [Documents.ReloadDocument][google.cloud.dialogflow.v2beta1.Documents.ReloadDocument].
   /// </summary>
   public sealed partial class ReloadDocumentRequest : pb::IMessage<ReloadDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

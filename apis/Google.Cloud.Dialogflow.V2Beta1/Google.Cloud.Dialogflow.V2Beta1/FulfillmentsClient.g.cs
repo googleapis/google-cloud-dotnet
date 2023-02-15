@@ -153,7 +153,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>Fulfillments client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Fulfillments][google.cloud.dialogflow.v2beta1.Fulfillment].
+    /// Service for managing
+    /// [Fulfillments][google.cloud.dialogflow.v2beta1.Fulfillment].
     /// </remarks>
     public abstract partial class FulfillmentsClient
     {
@@ -452,7 +453,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>Fulfillments client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [Fulfillments][google.cloud.dialogflow.v2beta1.Fulfillment].
+    /// Service for managing
+    /// [Fulfillments][google.cloud.dialogflow.v2beta1.Fulfillment].
     /// </remarks>
     public sealed partial class FulfillmentsClientImpl : FulfillmentsClient
     {

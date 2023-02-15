@@ -158,19 +158,19 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "djJiZXRhMS5TdHJlYW1pbmdEZXRlY3RJbnRlbnRSZXNwb25zZSIAKAEwARp4",
             "ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93Qv8DCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUIMU2Vzc2lvblByb3RvUAFaSWdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlh",
-            "bG9nZmxvdy92MmJldGExO2RpYWxvZ2Zsb3f4AQGiAgJERqoCH0dvb2dsZS5D",
-            "bG91ZC5EaWFsb2dmbG93LlYyQmV0YTHqQdECCiFkaWFsb2dmbG93Lmdvb2ds",
-            "ZWFwaXMuY29tL1Nlc3Npb24SK3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9z",
-            "ZXNzaW9ucy97c2Vzc2lvbn0SU3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9l",
-            "bnZpcm9ubWVudHMve2Vudmlyb25tZW50fS91c2Vycy97dXNlcn0vc2Vzc2lv",
-            "bnMve3Nlc3Npb259EkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vYWdlbnQvc2Vzc2lvbnMve3Nlc3Npb259Emhwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnQvZW52aXJvbm1l",
-            "bnRzL3tlbnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25zL3tzZXNz",
-            "aW9ufWIGcHJvdG8z"));
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QvkDCiNjb20uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUIMU2Vzc2lvblByb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxv",
+            "Z2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCH0dvb2dsZS5DbG91ZC5E",
+            "aWFsb2dmbG93LlYyQmV0YTHqQdECCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
+            "Y29tL1Nlc3Npb24SK3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9zZXNzaW9u",
+            "cy97c2Vzc2lvbn0SU3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9lbnZpcm9u",
+            "bWVudHMve2Vudmlyb25tZW50fS91c2Vycy97dXNlcn0vc2Vzc2lvbnMve3Nl",
+            "c3Npb259EkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vYWdlbnQvc2Vzc2lvbnMve3Nlc3Npb259Emhwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnQvZW52aXJvbm1lbnRzL3tl",
+            "bnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25zL3tzZXNzaW9ufWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.AgentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -341,12 +341,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int OutputAudioConfigMaskFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.FieldMask outputAudioConfigMask_;
     /// <summary>
-    /// Mask for [output_audio_config][google.cloud.dialogflow.v2beta1.DetectIntentRequest.output_audio_config] indicating which settings in this
-    /// request-level config should override speech synthesizer settings defined at
-    /// agent-level.
+    /// Mask for
+    /// [output_audio_config][google.cloud.dialogflow.v2beta1.DetectIntentRequest.output_audio_config]
+    /// indicating which settings in this request-level config should override
+    /// speech synthesizer settings defined at agent-level.
     ///
-    /// If unspecified or empty, [output_audio_config][google.cloud.dialogflow.v2beta1.DetectIntentRequest.output_audio_config] replaces the agent-level
-    /// config in its entirety.
+    /// If unspecified or empty,
+    /// [output_audio_config][google.cloud.dialogflow.v2beta1.DetectIntentRequest.output_audio_config]
+    /// replaces the agent-level config in its entirety.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3585,25 +3587,29 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
   /// <summary>
   /// The top-level message sent by the client to the
-  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.v2beta1.Sessions.StreamingDetectIntent] method.
+  /// [Sessions.StreamingDetectIntent][google.cloud.dialogflow.v2beta1.Sessions.StreamingDetectIntent]
+  /// method.
   ///
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain
   /// [session][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.session],
-  ///     [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input] plus optionally
-  ///     [query_params][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_params]. If the client
-  ///     wants to receive an audio response, it should also contain
+  ///     [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input]
+  ///     plus optionally
+  ///     [query_params][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_params].
+  ///     If the client wants to receive an audio response, it should also contain
   ///     [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config].
   ///     The message must not contain
   ///     [input_audio][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.input_audio].
-  /// 2.  If [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input] was set to
-  ///     [query_input.audio_config][google.cloud.dialogflow.v2beta1.InputAudioConfig], all subsequent
-  ///     messages must contain
-  ///     [input_audio][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.input_audio] to continue with
-  ///     Speech recognition.
-  ///     If you decide to rather detect an intent from text input after you
-  ///     already started Speech recognition, please send a message with
+  /// 2.  If
+  /// [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input]
+  /// was set to
+  ///     [query_input.audio_config][google.cloud.dialogflow.v2beta1.InputAudioConfig],
+  ///     all subsequent messages must contain
+  ///     [input_audio][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.input_audio]
+  ///     to continue with Speech recognition. If you decide to rather detect an
+  ///     intent from text input after you already started Speech recognition,
+  ///     please send a message with
   ///     [query_input.text][google.cloud.dialogflow.v2beta1.QueryInput.text].
   ///
   ///     However, note that:
@@ -3744,15 +3750,15 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int SingleUtteranceFieldNumber = 4;
     private bool singleUtterance_;
     /// <summary>
-    /// DEPRECATED. Please use [InputAudioConfig.single_utterance][google.cloud.dialogflow.v2beta1.InputAudioConfig.single_utterance] instead.
-    /// If `false` (default), recognition does not cease until the
-    /// client closes the stream.
-    /// If `true`, the recognizer will detect a single spoken utterance in input
-    /// audio. Recognition ceases when it detects the audio's voice has
-    /// stopped or paused. In this case, once a detected intent is received, the
-    /// client should close the stream and start a new request with a new stream as
-    /// needed.
-    /// This setting is ignored when `query_input` is a piece of text or an event.
+    /// DEPRECATED. Please use
+    /// [InputAudioConfig.single_utterance][google.cloud.dialogflow.v2beta1.InputAudioConfig.single_utterance]
+    /// instead. If `false` (default), recognition does not cease until the client
+    /// closes the stream. If `true`, the recognizer will detect a single spoken
+    /// utterance in input audio. Recognition ceases when it detects the audio's
+    /// voice has stopped or paused. In this case, once a detected intent is
+    /// received, the client should close the stream and start a new request with a
+    /// new stream as needed. This setting is ignored when `query_input` is a piece
+    /// of text or an event.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3785,12 +3791,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int OutputAudioConfigMaskFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.FieldMask outputAudioConfigMask_;
     /// <summary>
-    /// Mask for [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config] indicating which settings in this
-    /// request-level config should override speech synthesizer settings defined at
-    /// agent-level.
+    /// Mask for
+    /// [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
+    /// indicating which settings in this request-level config should override
+    /// speech synthesizer settings defined at agent-level.
     ///
-    /// If unspecified or empty, [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config] replaces the agent-level
-    /// config in its entirety.
+    /// If unspecified or empty,
+    /// [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
+    /// replaces the agent-level config in its entirety.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4140,8 +4148,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// 1.  If the `StreamingDetectIntentRequest.input_audio` field was
   ///     set, the `recognition_result` field is populated for one
   ///     or more messages.
-  ///     See the [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult] message for details
-  ///     about the result message sequence.
+  ///     See the
+  ///     [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult]
+  ///     message for details about the result message sequence.
   ///
   /// 2.  The next message contains `response_id`, `query_result`,
   ///     `alternative_query_results` and optionally `webhook_status` if a WebHook
@@ -4816,7 +4825,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo> speechWordInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo>();
     /// <summary>
     /// Word-specific information for the words recognized by Speech in
-    /// [transcript][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult.transcript]. Populated if and only if `message_type` = `TRANSCRIPT` and
+    /// [transcript][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult.transcript].
+    /// Populated if and only if `message_type` = `TRANSCRIPT` and
     /// [InputAudioConfig.enable_word_info] is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5596,8 +5606,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// the same session do not necessarily need to specify the same language.
     ///
     /// This field is ignored when used in the context of a
-    /// [WebhookResponse.followup_event_input][google.cloud.dialogflow.v2beta1.WebhookResponse.followup_event_input] field,
-    /// because the language was already defined in the originating detect
+    /// [WebhookResponse.followup_event_input][google.cloud.dialogflow.v2beta1.WebhookResponse.followup_event_input]
+    /// field, because the language was already defined in the originating detect
     /// intent request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6001,11 +6011,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// and identifies the prevailing subjective opinion, especially to determine a
   /// user's attitude as positive, negative, or neutral.
   /// For [Participants.DetectIntent][], it needs to be configured in
-  /// [DetectIntentRequest.query_params][google.cloud.dialogflow.v2beta1.DetectIntentRequest.query_params]. For
-  /// [Participants.StreamingDetectIntent][], it needs to be configured in
+  /// [DetectIntentRequest.query_params][google.cloud.dialogflow.v2beta1.DetectIntentRequest.query_params].
+  /// For [Participants.StreamingDetectIntent][], it needs to be configured in
   /// [StreamingDetectIntentRequest.query_params][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_params].
-  /// And for [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent] and
-  /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent], it needs to be configured in
+  /// And for
+  /// [Participants.AnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.AnalyzeContent]
+  /// and
+  /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent],
+  /// it needs to be configured in
   /// [ConversationProfile.human_agent_assistant_config][google.cloud.dialogflow.v2beta1.ConversationProfile.human_agent_assistant_config]
   /// </summary>
   public sealed partial class SentimentAnalysisResult : pb::IMessage<SentimentAnalysisResult>

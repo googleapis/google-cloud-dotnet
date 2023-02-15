@@ -402,7 +402,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>EntityTypes client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
+    /// Service for managing
+    /// [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
     /// </remarks>
     public abstract partial class EntityTypesClient
     {
@@ -1824,7 +1825,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+        /// - `response`:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1845,7 +1847,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+        /// - `response`:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1866,7 +1869,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+        /// - `response`:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -3970,7 +3974,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>EntityTypes client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
+    /// Service for managing
+    /// [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
     /// </remarks>
     public sealed partial class EntityTypesClientImpl : EntityTypesClient
     {
@@ -4250,7 +4255,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+        /// - `response`:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -4274,7 +4280,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+        /// - `response`:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
