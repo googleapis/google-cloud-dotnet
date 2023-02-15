@@ -112,9 +112,10 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>
     /// The result of the aggregation functions, ex: `COUNT(*) AS total_entities`.
     ///
-    /// The key is the [alias][google.datastore.v1.AggregationQuery.Aggregation.alias]
-    /// assigned to the aggregation function on input and the size of this map
-    /// equals the number of aggregation functions in the query.
+    /// The key is the
+    /// [alias][google.datastore.v1.AggregationQuery.Aggregation.alias] assigned to
+    /// the aggregation function on input and the size of this map equals the
+    /// number of aggregation functions in the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
