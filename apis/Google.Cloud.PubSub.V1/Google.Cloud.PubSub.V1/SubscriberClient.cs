@@ -1727,39 +1727,12 @@ namespace Google.Cloud.PubSub.V1
                 _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
                 if (writeTask.IsFaulted)
                 {
-                    if (writeTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
+                    // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later. 
+                    // Other non-gRPC unrecoverable errors will continue to be thrown.
+                    if (writeTask.Exception.As<RpcException>() is null)
                     {
-                        // Recoverable write error, requeue data and continue.
-                        // ackIds and nackIds are never both set in the same call, so no need to share a lock.
-                        if (hasAckIds)
-                        {
-                            lock (_lock)
-                            {
-                                _ackQueue.Requeue(ackIds);
-                            }
-                        }
-                        if (hasNackIds)
-                        {
-                            lock (_lock)
-                            {
-                                _nackQueue.Requeue(nackIds);
-                            }
-                        }
-                        if (extendIds != null && extendIds.Count > 0)
-                        {
-                            _extendQueue.Requeue(extendIds);
-                        }
-                        // TODO: Backoff
-                    }
-                    else
-                    {
-                        // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later. 
-                        // Other non-gRPC unrecoverable errors will continue to be thrown.
-                        if (writeTask.Exception.As<RpcException>() is null)
-                        {
-                            // It is a non-gRPC unrecoverable error; throw exception.
-                            throw writeTask.Exception.FlattenIfPossible();
-                        }
+                        // It is a non-gRPC unrecoverable error; throw exception.
+                        throw writeTask.Exception.FlattenIfPossible();
                     }
                 }
                 // Immediately send more data if there is any to send.
