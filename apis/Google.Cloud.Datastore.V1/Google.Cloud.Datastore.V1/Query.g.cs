@@ -28,80 +28,81 @@ namespace Google.Cloud.Datastore.V1 {
             "YXN0b3JlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiBn",
             "b29nbGUvZGF0YXN0b3JlL3YxL2VudGl0eS5wcm90bxofZ29vZ2xlL3Byb3Rv",
             "YnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJz",
-            "LnByb3RvIuABCgxFbnRpdHlSZXN1bHQSKwoGZW50aXR5GAEgASgLMhsuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5FbnRpdHkSDwoHdmVyc2lvbhgEIAEoAxIvCgt1",
-            "cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "DgoGY3Vyc29yGAMgASgMIlEKClJlc3VsdFR5cGUSGwoXUkVTVUxUX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIICgRGVUxMEAESDgoKUFJPSkVDVElPThACEgwKCEtF",
-            "WV9PTkxZEAMi8gIKBVF1ZXJ5EjMKCnByb2plY3Rpb24YAiADKAsyHy5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLlByb2plY3Rpb24SMQoEa2luZBgDIAMoCzIjLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuS2luZEV4cHJlc3Npb24SKwoGZmlsdGVyGAQg",
-            "ASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5GaWx0ZXISMQoFb3JkZXIYBSAD",
-            "KAsyIi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5T3JkZXISOwoLZGlz",
-            "dGluY3Rfb24YBiADKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5",
-            "UmVmZXJlbmNlEhQKDHN0YXJ0X2N1cnNvchgHIAEoDBISCgplbmRfY3Vyc29y",
-            "GAggASgMEg4KBm9mZnNldBgKIAEoBRIqCgVsaW1pdBgMIAEoCzIbLmdvb2ds",
-            "ZS5wcm90b2J1Zi5JbnQzMlZhbHVlItYCChBBZ2dyZWdhdGlvblF1ZXJ5EjIK",
-            "DG5lc3RlZF9xdWVyeRgBIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuUXVl",
-            "cnlIABJMCgxhZ2dyZWdhdGlvbnMYAyADKAsyMS5nb29nbGUuZGF0YXN0b3Jl",
-            "LnYxLkFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb25CA+BBARqxAQoLQWdn",
-            "cmVnYXRpb24SSAoFY291bnQYASABKAsyNy5nb29nbGUuZGF0YXN0b3JlLnYx",
-            "LkFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQ291bnRIABISCgVhbGlh",
-            "cxgHIAEoCUID4EEBGjgKBUNvdW50Ei8KBXVwX3RvGAEgASgLMhsuZ29vZ2xl",
-            "LnByb3RvYnVmLkludDY0VmFsdWVCA+BBAUIKCghvcGVyYXRvckIMCgpxdWVy",
-            "eV90eXBlIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkiIQoRUHJv",
-            "cGVydHlSZWZlcmVuY2USDAoEbmFtZRgCIAEoCSJGCgpQcm9qZWN0aW9uEjgK",
-            "CHByb3BlcnR5GAEgASgLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0",
-            "eVJlZmVyZW5jZSLRAQoNUHJvcGVydHlPcmRlchI4Cghwcm9wZXJ0eRgBIAEo",
-            "CzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlSZWZlcmVuY2USPwoJ",
-            "ZGlyZWN0aW9uGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0",
-            "eU9yZGVyLkRpcmVjdGlvbiJFCglEaXJlY3Rpb24SGQoVRElSRUNUSU9OX1VO",
-            "U1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoKREVTQ0VORElORxACIpkB",
-            "CgZGaWx0ZXISQAoQY29tcG9zaXRlX2ZpbHRlchgBIAEoCzIkLmdvb2dsZS5k",
-            "YXRhc3RvcmUudjEuQ29tcG9zaXRlRmlsdGVySAASPgoPcHJvcGVydHlfZmls",
-            "dGVyGAIgASgLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eUZpbHRl",
-            "ckgAQg0KC2ZpbHRlcl90eXBlIqkBCg9Db21wb3NpdGVGaWx0ZXISOQoCb3AY",
-            "ASABKA4yLS5nb29nbGUuZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlci5P",
-            "cGVyYXRvchIsCgdmaWx0ZXJzGAIgAygLMhsuZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5GaWx0ZXIiLQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQ",
-            "ABIHCgNBTkQQASLqAgoOUHJvcGVydHlGaWx0ZXISOAoIcHJvcGVydHkYASAB",
-            "KAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNlEjgK",
-            "Am9wGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eUZpbHRl",
-            "ci5PcGVyYXRvchIpCgV2YWx1ZRgDIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuVmFsdWUiuAEKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVE",
-            "EAASDQoJTEVTU19USEFOEAESFgoSTEVTU19USEFOX09SX0VRVUFMEAISEAoM",
-            "R1JFQVRFUl9USEFOEAMSGQoVR1JFQVRFUl9USEFOX09SX0VRVUFMEAQSCQoF",
-            "RVFVQUwQBRIGCgJJThAGEg0KCU5PVF9FUVVBTBAJEhAKDEhBU19BTkNFU1RP",
-            "UhALEgoKBk5PVF9JThANIqUCCghHcWxRdWVyeRIUCgxxdWVyeV9zdHJpbmcY",
-            "ASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiABKAgSSAoObmFtZWRfYmluZGlu",
-            "Z3MYBSADKAsyMC5nb29nbGUuZGF0YXN0b3JlLnYxLkdxbFF1ZXJ5Lk5hbWVk",
-            "QmluZGluZ3NFbnRyeRJDChNwb3NpdGlvbmFsX2JpbmRpbmdzGAQgAygLMiYu",
-            "Z29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFtZXRlchpcChJOYW1l",
-            "ZEJpbmRpbmdzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZhbHVlGAIgASgLMiYu",
-            "Z29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFtZXRlcjoCOAEiZAoR",
-            "R3FsUXVlcnlQYXJhbWV0ZXISKwoFdmFsdWUYAiABKAsyGi5nb29nbGUuZGF0",
-            "YXN0b3JlLnYxLlZhbHVlSAASEAoGY3Vyc29yGAMgASgMSABCEAoOcGFyYW1l",
-            "dGVyX3R5cGUijQQKEFF1ZXJ5UmVzdWx0QmF0Y2gSFwoPc2tpcHBlZF9yZXN1",
-            "bHRzGAYgASgFEhYKDnNraXBwZWRfY3Vyc29yGAMgASgMEkgKEmVudGl0eV9y",
-            "ZXN1bHRfdHlwZRgBIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5",
-            "UmVzdWx0LlJlc3VsdFR5cGUSOQoOZW50aXR5X3Jlc3VsdHMYAiADKAsyIS5n",
-            "b29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBISCgplbmRfY3Vyc29y",
-            "GAQgASgMEksKDG1vcmVfcmVzdWx0cxgFIAEoDjI1Lmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuUXVlcnlSZXN1bHRCYXRjaC5Nb3JlUmVzdWx0c1R5cGUSGAoQc25h",
-            "cHNob3RfdmVyc2lvbhgHIAEoAxItCglyZWFkX3RpbWUYCCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wIpgBCg9Nb3JlUmVzdWx0c1R5cGUSIQod",
-            "TU9SRV9SRVNVTFRTX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxOT1RfRklOSVNI",
-            "RUQQARIcChhNT1JFX1JFU1VMVFNfQUZURVJfTElNSVQQAhIdChlNT1JFX1JF",
-            "U1VMVFNfQUZURVJfQ1VSU09SEAQSEwoPTk9fTU9SRV9SRVNVTFRTEANCvAEK",
-            "F2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaPGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3Yx",
-            "O2RhdGFzdG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29n",
-            "bGVcQ2xvdWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RGF0YXN0",
-            "b3JlOjpWMWIGcHJvdG8z"));
+            "LnByb3RvIpECCgxFbnRpdHlSZXN1bHQSKwoGZW50aXR5GAEgASgLMhsuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5FbnRpdHkSDwoHdmVyc2lvbhgEIAEoAxIvCgtj",
+            "cmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LwoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEg4KBmN1cnNvchgDIAEoDCJRCgpSZXN1bHRUeXBlEhsKF1JFU1VMVF9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg4KClBST0pFQ1RJT04QAhIM",
+            "CghLRVlfT05MWRADIvICCgVRdWVyeRIzCgpwcm9qZWN0aW9uGAIgAygLMh8u",
+            "Z29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9qZWN0aW9uEjEKBGtpbmQYAyADKAsy",
+            "Iy5nb29nbGUuZGF0YXN0b3JlLnYxLktpbmRFeHByZXNzaW9uEisKBmZpbHRl",
+            "chgEIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRmlsdGVyEjEKBW9yZGVy",
+            "GAUgAygLMiIuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9wZXJ0eU9yZGVyEjsK",
+            "C2Rpc3RpbmN0X29uGAYgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5Qcm9w",
+            "ZXJ0eVJlZmVyZW5jZRIUCgxzdGFydF9jdXJzb3IYByABKAwSEgoKZW5kX2N1",
+            "cnNvchgIIAEoDBIOCgZvZmZzZXQYCiABKAUSKgoFbGltaXQYDCABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZSLWAgoQQWdncmVnYXRpb25RdWVy",
+            "eRIyCgxuZXN0ZWRfcXVlcnkYASABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "LlF1ZXJ5SAASTAoMYWdncmVnYXRpb25zGAMgAygLMjEuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MS5BZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uQgPgQQEasQEK",
+            "C0FnZ3JlZ2F0aW9uEkgKBWNvdW50GAEgASgLMjcuZ29vZ2xlLmRhdGFzdG9y",
+            "ZS52MS5BZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLkNvdW50SAASEgoF",
+            "YWxpYXMYByABKAlCA+BBARo4CgVDb3VudBIvCgV1cF90bxgBIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgPgQQFCCgoIb3BlcmF0b3JCDAoK",
+            "cXVlcnlfdHlwZSIeCg5LaW5kRXhwcmVzc2lvbhIMCgRuYW1lGAEgASgJIiEK",
+            "EVByb3BlcnR5UmVmZXJlbmNlEgwKBG5hbWUYAiABKAkiRgoKUHJvamVjdGlv",
+            "bhI4Cghwcm9wZXJ0eRgBIAEoCzImLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJv",
+            "cGVydHlSZWZlcmVuY2Ui0QEKDVByb3BlcnR5T3JkZXISOAoIcHJvcGVydHkY",
+            "ASABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5UmVmZXJlbmNl",
+            "Ej8KCWRpcmVjdGlvbhgCIAEoDjIsLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJv",
+            "cGVydHlPcmRlci5EaXJlY3Rpb24iRQoJRGlyZWN0aW9uEhkKFURJUkVDVElP",
+            "Tl9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQ",
+            "AiKZAQoGRmlsdGVyEkAKEGNvbXBvc2l0ZV9maWx0ZXIYASABKAsyJC5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLkNvbXBvc2l0ZUZpbHRlckgAEj4KD3Byb3BlcnR5",
+            "X2ZpbHRlchgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlG",
+            "aWx0ZXJIAEINCgtmaWx0ZXJfdHlwZSKxAQoPQ29tcG9zaXRlRmlsdGVyEjkK",
+            "Am9wGAEgASgOMi0uZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21wb3NpdGVGaWx0",
+            "ZXIuT3BlcmF0b3ISLAoHZmlsdGVycxgCIAMoCzIbLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjEuRmlsdGVyIjUKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lG",
+            "SUVEEAASBwoDQU5EEAESBgoCT1IQAiLqAgoOUHJvcGVydHlGaWx0ZXISOAoI",
+            "cHJvcGVydHkYASABKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3BlcnR5",
+            "UmVmZXJlbmNlEjgKAm9wGAIgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MS5Q",
+            "cm9wZXJ0eUZpbHRlci5PcGVyYXRvchIpCgV2YWx1ZRgDIAEoCzIaLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuVmFsdWUiuAEKCE9wZXJhdG9yEhgKFE9QRVJBVE9S",
+            "X1VOU1BFQ0lGSUVEEAASDQoJTEVTU19USEFOEAESFgoSTEVTU19USEFOX09S",
+            "X0VRVUFMEAISEAoMR1JFQVRFUl9USEFOEAMSGQoVR1JFQVRFUl9USEFOX09S",
+            "X0VRVUFMEAQSCQoFRVFVQUwQBRIGCgJJThAGEg0KCU5PVF9FUVVBTBAJEhAK",
+            "DEhBU19BTkNFU1RPUhALEgoKBk5PVF9JThANIqUCCghHcWxRdWVyeRIUCgxx",
+            "dWVyeV9zdHJpbmcYASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiABKAgSSAoO",
+            "bmFtZWRfYmluZGluZ3MYBSADKAsyMC5nb29nbGUuZGF0YXN0b3JlLnYxLkdx",
+            "bFF1ZXJ5Lk5hbWVkQmluZGluZ3NFbnRyeRJDChNwb3NpdGlvbmFsX2JpbmRp",
+            "bmdzGAQgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFt",
+            "ZXRlchpcChJOYW1lZEJpbmRpbmdzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZh",
+            "bHVlGAIgASgLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MS5HcWxRdWVyeVBhcmFt",
+            "ZXRlcjoCOAEiZAoRR3FsUXVlcnlQYXJhbWV0ZXISKwoFdmFsdWUYAiABKAsy",
+            "Gi5nb29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlSAASEAoGY3Vyc29yGAMgASgM",
+            "SABCEAoOcGFyYW1ldGVyX3R5cGUijQQKEFF1ZXJ5UmVzdWx0QmF0Y2gSFwoP",
+            "c2tpcHBlZF9yZXN1bHRzGAYgASgFEhYKDnNraXBwZWRfY3Vyc29yGAMgASgM",
+            "EkgKEmVudGl0eV9yZXN1bHRfdHlwZRgBIAEoDjIsLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjEuRW50aXR5UmVzdWx0LlJlc3VsdFR5cGUSOQoOZW50aXR5X3Jlc3Vs",
+            "dHMYAiADKAsyIS5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIS",
+            "CgplbmRfY3Vyc29yGAQgASgMEksKDG1vcmVfcmVzdWx0cxgFIAEoDjI1Lmdv",
+            "b2dsZS5kYXRhc3RvcmUudjEuUXVlcnlSZXN1bHRCYXRjaC5Nb3JlUmVzdWx0",
+            "c1R5cGUSGAoQc25hcHNob3RfdmVyc2lvbhgHIAEoAxItCglyZWFkX3RpbWUY",
+            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIpgBCg9Nb3JlUmVz",
+            "dWx0c1R5cGUSIQodTU9SRV9SRVNVTFRTX1RZUEVfVU5TUEVDSUZJRUQQABIQ",
+            "CgxOT1RfRklOSVNIRUQQARIcChhNT1JFX1JFU1VMVFNfQUZURVJfTElNSVQQ",
+            "AhIdChlNT1JFX1JFU1VMVFNfQUZURVJfQ1VSU09SEAQSEwoPTk9fTU9SRV9S",
+            "RVNVTFRTEANCvAEKF2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQgpRdWVyeVBy",
+            "b3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "ZGF0YXN0b3JlL3YxO2RhdGFzdG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3Rv",
+            "cmUuVjHKAhlHb29nbGVcQ2xvdWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpD",
+            "bG91ZDo6RGF0YXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "UpdateTime", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.EntityResult), global::Google.Cloud.Datastore.V1.EntityResult.Parser, new[]{ "Entity", "Version", "CreateTime", "UpdateTime", "Cursor" }, null, new[]{ typeof(global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Query), global::Google.Cloud.Datastore.V1.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery), global::Google.Cloud.Datastore.V1.AggregationQuery.Parser, new[]{ "NestedQuery", "Aggregations" }, new[]{ "QueryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Parser, new[]{ "Count", "Alias" }, new[]{ "Operator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count), global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types.Count.Parser, new[]{ "UpTo" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.KindExpression), global::Google.Cloud.Datastore.V1.KindExpression.Parser, new[]{ "Name" }, null, null, null, null),
@@ -159,6 +160,7 @@ namespace Google.Cloud.Datastore.V1 {
     public EntityResult(EntityResult other) : this() {
       entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       version_ = other.version_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       cursor_ = other.cursor_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -192,12 +194,12 @@ namespace Google.Cloud.Datastore.V1 {
     /// The version of the entity, a strictly positive number that monotonically
     /// increases with changes to the entity.
     ///
-    /// This field is set for [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity
-    /// results.
+    /// This field is set for
+    /// [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
     ///
-    /// For [missing][google.datastore.v1.LookupResponse.missing] entities in `LookupResponse`, this
-    /// is the version of the snapshot that was used to look up the entity, and it
-    /// is always set except for eventually consistent reads.
+    /// For [missing][google.datastore.v1.LookupResponse.missing] entities in
+    /// `LookupResponse`, this is the version of the snapshot that was used to look
+    /// up the entity, and it is always set except for eventually consistent reads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -208,13 +210,31 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time at which the entity was created.
+    /// This field is set for
+    /// [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
+    /// If this entity is missing, this field will not be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "update_time" field.</summary>
     public const int UpdateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// The time at which the entity was last changed.
-    /// This field is set for [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity
-    /// results.
+    /// This field is set for
+    /// [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
     /// If this entity is missing, this field will not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,6 +279,7 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (!object.Equals(Entity, other.Entity)) return false;
       if (Version != other.Version) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Cursor != other.Cursor) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -270,6 +291,7 @@ namespace Google.Cloud.Datastore.V1 {
       int hash = 1;
       if (entity_ != null) hash ^= Entity.GetHashCode();
       if (Version != 0L) hash ^= Version.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Cursor.Length != 0) hash ^= Cursor.GetHashCode();
       if (_unknownFields != null) {
@@ -306,6 +328,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(UpdateTime);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -332,6 +358,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(UpdateTime);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -347,6 +377,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (Version != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
@@ -374,6 +407,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.Version != 0L) {
         Version = other.Version;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
@@ -421,6 +460,13 @@ namespace Google.Cloud.Datastore.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 50: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
         }
       }
     #endif
@@ -456,6 +502,13 @@ namespace Google.Cloud.Datastore.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
             break;
           }
         }
@@ -1001,7 +1054,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// Datastore query for running an aggregation over a [Query][google.datastore.v1.Query].
+  /// Datastore query for running an aggregation over a
+  /// [Query][google.datastore.v1.Query].
   /// </summary>
   public sealed partial class AggregationQuery : pb::IMessage<AggregationQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1074,7 +1128,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation> aggregations_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation>();
     /// <summary>
-    /// Optional. Series of aggregations to apply over the results of the `nested_query`.
+    /// Optional. Series of aggregations to apply over the results of the
+    /// `nested_query`.
     ///
     /// Requires:
     ///
@@ -1346,7 +1401,8 @@ namespace Google.Cloud.Datastore.V1 {
         public const int AliasFieldNumber = 7;
         private string alias_ = "";
         /// <summary>
-        /// Optional. Optional name of the property to store the result of the aggregation.
+        /// Optional. Optional name of the property to store the result of the
+        /// aggregation.
         ///
         /// If not provided, Datastore will pick a default name following the format
         /// `property_&lt;incremental_id++>`. For example:
@@ -1378,7 +1434,8 @@ namespace Google.Cloud.Datastore.V1 {
         /// Requires:
         ///
         /// * Must be unique across all aggregation aliases.
-        /// * Conform to [entity property name][google.datastore.v1.Entity.properties] limitations.
+        /// * Conform to [entity property
+        /// name][google.datastore.v1.Entity.properties] limitations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1642,7 +1699,8 @@ namespace Google.Cloud.Datastore.V1 {
             private static readonly pb::FieldCodec<long?> _single_upTo_codec = pb::FieldCodec.ForStructWrapper<long>(10);
             private long? upTo_;
             /// <summary>
-            /// Optional. Optional constraint on the maximum number of entities to count.
+            /// Optional. Optional constraint on the maximum number of entities to
+            /// count.
             ///
             /// This provides a way to set an upper bound on the number of entities
             /// to scan, limiting latency and cost.
@@ -3223,6 +3281,10 @@ namespace Google.Cloud.Datastore.V1 {
         /// The results are required to satisfy each of the combined filters.
         /// </summary>
         [pbr::OriginalName("AND")] And = 1,
+        /// <summary>
+        /// Documents are required to satisfy at least one of the combined filters.
+        /// </summary>
+        [pbr::OriginalName("OR")] Or = 2,
       }
 
     }
@@ -3594,6 +3656,7 @@ namespace Google.Cloud.Datastore.V1 {
         /// Requires:
         ///
         /// * That `value` is an entity key.
+        /// * No other `HAS_ANCESTOR` is in the same query.
         /// </summary>
         [pbr::OriginalName("HAS_ANCESTOR")] HasAncestor = 11,
         /// <summary>
