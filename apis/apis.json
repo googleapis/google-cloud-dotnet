@@ -3317,6 +3317,7 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.3.0",
         "Google.Apis.CloudResourceManager.v1": "1.57.0.2677",
+        "Microsoft.Extensions.DependencyInjection": "6.0.0",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.4.1"
       },
