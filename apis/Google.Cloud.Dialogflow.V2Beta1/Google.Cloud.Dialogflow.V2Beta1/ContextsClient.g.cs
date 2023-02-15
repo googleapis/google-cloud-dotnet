@@ -1209,7 +1209,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,
@@ -1235,7 +1236,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,
@@ -1261,7 +1263,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,
@@ -1284,7 +1287,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,
@@ -1310,7 +1314,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,
@@ -1336,7 +1341,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// Deletes all active contexts in the specified session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the session to delete all contexts from. Supported formats:
+        /// Required. The name of the session to delete all contexts from. Supported
+        /// formats:
         /// - `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;,
         /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/sessions/&lt;Session
         /// ID&gt;`,

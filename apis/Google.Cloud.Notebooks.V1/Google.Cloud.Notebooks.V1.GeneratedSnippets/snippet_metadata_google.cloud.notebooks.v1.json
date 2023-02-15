@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListRuntimesResponse, Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Runtime",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Runtime",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Runtime",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.GetRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Runtime>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "runtimeId"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "runtimeId"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "runtimeId"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.CreateRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "runtimeId"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpdateRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.Runtime",
+            "name": "runtime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DeleteRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "StartRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StartRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StartRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "StartRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StartRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StartRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "StartRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StartRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1194,6 +1576,16 @@
         "shortName": "StartRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StartRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "StopRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StopRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StopRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1270,6 +1672,16 @@
         "shortName": "StopRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StopRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StopRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1308,6 +1720,16 @@
       "clientMethod": {
         "shortName": "StopRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StopRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1346,6 +1768,16 @@
         "shortName": "StopRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.StopRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1383,6 +1815,16 @@
       "clientMethod": {
         "shortName": "SwitchRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.SwitchRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SwitchRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1422,6 +1864,16 @@
         "shortName": "SwitchRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.SwitchRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SwitchRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1460,6 +1912,16 @@
       "clientMethod": {
         "shortName": "SwitchRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.SwitchRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1498,6 +1960,16 @@
         "shortName": "SwitchRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.SwitchRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1535,6 +2007,16 @@
       "clientMethod": {
         "shortName": "ResetRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ResetRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ResetRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1574,6 +2056,16 @@
         "shortName": "ResetRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ResetRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ResetRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1612,6 +2104,16 @@
       "clientMethod": {
         "shortName": "ResetRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ResetRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1650,6 +2152,16 @@
         "shortName": "ResetRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ResetRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1687,6 +2199,16 @@
       "clientMethod": {
         "shortName": "UpgradeRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1726,6 +2248,16 @@
         "shortName": "UpgradeRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1764,6 +2296,16 @@
       "clientMethod": {
         "shortName": "UpgradeRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1802,6 +2344,16 @@
         "shortName": "UpgradeRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.UpgradeRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1839,6 +2391,16 @@
       "clientMethod": {
         "shortName": "ReportRuntimeEvent",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1878,6 +2440,16 @@
         "shortName": "ReportRuntimeEventAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ReportRuntimeEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1916,6 +2488,16 @@
       "clientMethod": {
         "shortName": "ReportRuntimeEvent",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1954,6 +2536,16 @@
         "shortName": "ReportRuntimeEventAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -1991,6 +2583,16 @@
       "clientMethod": {
         "shortName": "ReportRuntimeEvent",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2029,6 +2631,16 @@
         "shortName": "ReportRuntimeEventAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.ReportRuntimeEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2066,6 +2678,16 @@
       "clientMethod": {
         "shortName": "RefreshRuntimeTokenInternal",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2105,6 +2727,16 @@
         "shortName": "RefreshRuntimeTokenInternalAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2143,6 +2775,20 @@
       "clientMethod": {
         "shortName": "RefreshRuntimeTokenInternal",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "vmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2181,6 +2827,20 @@
         "shortName": "RefreshRuntimeTokenInternalAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "vmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2218,6 +2878,20 @@
       "clientMethod": {
         "shortName": "RefreshRuntimeTokenInternal",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "vmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2256,6 +2930,20 @@
         "shortName": "RefreshRuntimeTokenInternalAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.RefreshRuntimeTokenInternalAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "vmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.RefreshRuntimeTokenInternalResponse>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2293,6 +2981,16 @@
       "clientMethod": {
         "shortName": "DiagnoseRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2332,6 +3030,16 @@
         "shortName": "DiagnoseRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnoseRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2370,6 +3078,20 @@
       "clientMethod": {
         "shortName": "DiagnoseRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2408,6 +3130,20 @@
         "shortName": "DiagnoseRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2445,6 +3181,20 @@
       "clientMethod": {
         "shortName": "DiagnoseRuntime",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2483,6 +3233,20 @@
         "shortName": "DiagnoseRuntimeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.ManagedNotebookServiceClient.DiagnoseRuntimeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Runtime, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "ManagedNotebookServiceClient",
@@ -2520,6 +3284,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListInstancesResponse, Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2559,6 +3333,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListInstancesResponse, Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2597,6 +3381,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListInstancesResponse, Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2635,6 +3437,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListInstancesResponse, Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2672,6 +3492,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Instance",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2711,6 +3541,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2749,6 +3589,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Instance",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2787,6 +3637,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Instance>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2824,6 +3684,16 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2863,6 +3733,16 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2901,6 +3781,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2939,6 +3837,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -2976,6 +3892,16 @@
       "clientMethod": {
         "shortName": "RegisterInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.RegisterInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RegisterInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3015,6 +3941,16 @@
         "shortName": "RegisterInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.RegisterInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RegisterInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3053,6 +3989,16 @@
       "clientMethod": {
         "shortName": "SetInstanceAccelerator",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceAccelerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceAcceleratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3092,6 +4038,16 @@
         "shortName": "SetInstanceAcceleratorAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceAcceleratorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceAcceleratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3130,6 +4086,16 @@
       "clientMethod": {
         "shortName": "SetInstanceMachineType",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceMachineType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceMachineTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3169,6 +4135,16 @@
         "shortName": "SetInstanceMachineTypeAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceMachineTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceMachineTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3207,6 +4183,16 @@
       "clientMethod": {
         "shortName": "UpdateInstanceConfig",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3246,6 +4232,16 @@
         "shortName": "UpdateInstanceConfigAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3284,6 +4280,16 @@
       "clientMethod": {
         "shortName": "UpdateShieldedInstanceConfig",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateShieldedInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateShieldedInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3323,6 +4329,16 @@
         "shortName": "UpdateShieldedInstanceConfigAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateShieldedInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateShieldedInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3361,6 +4377,16 @@
       "clientMethod": {
         "shortName": "SetInstanceLabels",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceLabels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3400,6 +4426,16 @@
         "shortName": "SetInstanceLabelsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.SetInstanceLabelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.SetInstanceLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3438,6 +4474,16 @@
       "clientMethod": {
         "shortName": "UpdateInstanceMetadataItems",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceMetadataItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3477,6 +4523,16 @@
         "shortName": "UpdateInstanceMetadataItemsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpdateInstanceMetadataItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.UpdateInstanceMetadataItemsResponse>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3515,6 +4571,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3554,6 +4620,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3592,6 +4668,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3630,6 +4716,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3667,6 +4763,16 @@
       "clientMethod": {
         "shortName": "StartInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.StartInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StartInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3706,6 +4812,16 @@
         "shortName": "StartInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.StartInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StartInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3744,6 +4860,16 @@
       "clientMethod": {
         "shortName": "StopInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.StopInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StopInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3783,6 +4909,16 @@
         "shortName": "StopInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.StopInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.StopInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3821,6 +4957,16 @@
       "clientMethod": {
         "shortName": "ResetInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ResetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ResetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3860,6 +5006,16 @@
         "shortName": "ResetInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ResetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ResetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3898,6 +5054,16 @@
       "clientMethod": {
         "shortName": "ReportInstanceInfo",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ReportInstanceInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ReportInstanceInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3937,6 +5103,16 @@
         "shortName": "ReportInstanceInfoAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ReportInstanceInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ReportInstanceInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -3975,6 +5151,16 @@
       "clientMethod": {
         "shortName": "IsInstanceUpgradeable",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.IsInstanceUpgradeable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.IsInstanceUpgradeableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.IsInstanceUpgradeableResponse",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4014,6 +5200,16 @@
         "shortName": "IsInstanceUpgradeableAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.IsInstanceUpgradeableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.IsInstanceUpgradeableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.IsInstanceUpgradeableResponse>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4052,6 +5248,16 @@
       "clientMethod": {
         "shortName": "GetInstanceHealth",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetInstanceHealthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.GetInstanceHealthResponse",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4091,6 +5297,16 @@
         "shortName": "GetInstanceHealthAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealthAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetInstanceHealthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.GetInstanceHealthResponse>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4129,6 +5345,16 @@
       "clientMethod": {
         "shortName": "GetInstanceHealth",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealth",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.GetInstanceHealthResponse",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4167,6 +5393,16 @@
         "shortName": "GetInstanceHealthAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealthAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.GetInstanceHealthResponse>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4204,6 +5440,16 @@
       "clientMethod": {
         "shortName": "GetInstanceHealth",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.GetInstanceHealthResponse",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4242,6 +5488,16 @@
         "shortName": "GetInstanceHealthAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetInstanceHealthAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.GetInstanceHealthResponse>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4279,6 +5535,16 @@
       "clientMethod": {
         "shortName": "UpgradeInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4318,6 +5584,16 @@
         "shortName": "UpgradeInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpgradeInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4356,6 +5632,16 @@
       "clientMethod": {
         "shortName": "RollbackInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.RollbackInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RollbackInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4395,6 +5681,16 @@
         "shortName": "RollbackInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.RollbackInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.RollbackInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4433,6 +5729,16 @@
       "clientMethod": {
         "shortName": "DiagnoseInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4472,6 +5778,16 @@
         "shortName": "DiagnoseInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnoseInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4510,6 +5826,20 @@
       "clientMethod": {
         "shortName": "DiagnoseInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4548,6 +5878,20 @@
         "shortName": "DiagnoseInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4585,6 +5929,20 @@
       "clientMethod": {
         "shortName": "DiagnoseInstance",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4623,6 +5981,20 @@
         "shortName": "DiagnoseInstanceAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DiagnoseInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.DiagnosticConfig",
+            "name": "diagnosticConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4660,6 +6032,16 @@
       "clientMethod": {
         "shortName": "UpgradeInstanceInternal",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpgradeInstanceInternal",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeInstanceInternalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4699,6 +6081,16 @@
         "shortName": "UpgradeInstanceInternalAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.UpgradeInstanceInternalAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.UpgradeInstanceInternalRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Instance, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4737,6 +6129,16 @@
       "clientMethod": {
         "shortName": "ListEnvironments",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListEnvironments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListEnvironmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListEnvironmentsResponse, Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4776,6 +6178,16 @@
         "shortName": "ListEnvironmentsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListEnvironmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListEnvironmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListEnvironmentsResponse, Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4814,6 +6226,24 @@
       "clientMethod": {
         "shortName": "ListEnvironments",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListEnvironments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListEnvironmentsResponse, Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4852,6 +6282,24 @@
         "shortName": "ListEnvironmentsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListEnvironmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListEnvironmentsResponse, Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4889,6 +6337,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Environment",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4928,6 +6386,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -4966,6 +6434,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Environment",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5004,6 +6482,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Environment>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5041,6 +6529,16 @@
       "clientMethod": {
         "shortName": "CreateEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Environment, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5080,6 +6578,16 @@
         "shortName": "CreateEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Environment, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5118,6 +6626,24 @@
       "clientMethod": {
         "shortName": "CreateEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "System.String",
+            "name": "environmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Environment, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5156,6 +6682,24 @@
         "shortName": "CreateEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "System.String",
+            "name": "environmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Environment, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5193,6 +6737,16 @@
       "clientMethod": {
         "shortName": "DeleteEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5232,6 +6786,16 @@
         "shortName": "DeleteEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5270,6 +6834,16 @@
       "clientMethod": {
         "shortName": "DeleteEnvironment",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5308,6 +6882,16 @@
         "shortName": "DeleteEnvironmentAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5345,6 +6929,16 @@
       "clientMethod": {
         "shortName": "ListSchedules",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5384,6 +6978,16 @@
         "shortName": "ListSchedulesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedulesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5422,6 +7026,24 @@
       "clientMethod": {
         "shortName": "ListSchedules",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5460,6 +7082,24 @@
         "shortName": "ListSchedulesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedulesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5497,6 +7137,24 @@
       "clientMethod": {
         "shortName": "ListSchedules",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5535,6 +7193,24 @@
         "shortName": "ListSchedulesAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListSchedulesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListSchedulesResponse, Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5572,6 +7248,16 @@
       "clientMethod": {
         "shortName": "GetSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Schedule",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5611,6 +7297,16 @@
         "shortName": "GetScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5649,6 +7345,16 @@
       "clientMethod": {
         "shortName": "GetSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Schedule",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5687,6 +7393,16 @@
         "shortName": "GetScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5724,6 +7440,16 @@
       "clientMethod": {
         "shortName": "GetSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Schedule",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5762,6 +7488,16 @@
         "shortName": "GetScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Schedule>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5799,6 +7535,16 @@
       "clientMethod": {
         "shortName": "DeleteSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5838,6 +7584,16 @@
         "shortName": "DeleteScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5876,6 +7632,16 @@
       "clientMethod": {
         "shortName": "DeleteSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5914,6 +7680,16 @@
         "shortName": "DeleteScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5951,6 +7727,16 @@
       "clientMethod": {
         "shortName": "DeleteSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -5989,6 +7775,16 @@
         "shortName": "DeleteScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6026,6 +7822,16 @@
       "clientMethod": {
         "shortName": "CreateSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6065,6 +7871,16 @@
         "shortName": "CreateScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6103,6 +7919,24 @@
       "clientMethod": {
         "shortName": "CreateSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "System.String",
+            "name": "scheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6141,6 +7975,24 @@
         "shortName": "CreateScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "System.String",
+            "name": "scheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6178,6 +8030,24 @@
       "clientMethod": {
         "shortName": "CreateSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "System.String",
+            "name": "scheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6216,6 +8086,24 @@
         "shortName": "CreateScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ScheduleName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "System.String",
+            "name": "scheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6253,6 +8141,16 @@
       "clientMethod": {
         "shortName": "TriggerSchedule",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.TriggerSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.TriggerScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6292,6 +8190,16 @@
         "shortName": "TriggerScheduleAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.TriggerScheduleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.TriggerScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Schedule, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6330,6 +8238,16 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6369,6 +8287,16 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6407,6 +8335,24 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6445,6 +8391,24 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6482,6 +8446,24 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6520,6 +8502,24 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Notebooks.V1.ListExecutionsResponse, Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6557,6 +8557,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Execution",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6596,6 +8606,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6634,6 +8654,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Execution",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6672,6 +8702,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6709,6 +8749,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Notebooks.V1.Execution",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6747,6 +8797,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Notebooks.V1.Execution>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6784,6 +8844,16 @@
       "clientMethod": {
         "shortName": "DeleteExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6823,6 +8893,16 @@
         "shortName": "DeleteExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.DeleteExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6861,6 +8941,16 @@
       "clientMethod": {
         "shortName": "DeleteExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6899,6 +8989,16 @@
         "shortName": "DeleteExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6936,6 +9036,16 @@
       "clientMethod": {
         "shortName": "DeleteExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -6974,6 +9084,16 @@
         "shortName": "DeleteExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.DeleteExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7011,6 +9131,16 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7050,6 +9180,16 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7088,6 +9228,24 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7126,6 +9284,24 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7163,6 +9339,24 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>",
         "client": {
           "shortName": "NotebookServiceClient",
@@ -7201,6 +9395,24 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Notebooks.V1.NotebookServiceClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Notebooks.V1.ExecutionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Notebooks.V1.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "System.String",
+            "name": "executionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Notebooks.V1.Execution, Google.Cloud.Notebooks.V1.OperationMetadata>>",
         "client": {
           "shortName": "NotebookServiceClient",

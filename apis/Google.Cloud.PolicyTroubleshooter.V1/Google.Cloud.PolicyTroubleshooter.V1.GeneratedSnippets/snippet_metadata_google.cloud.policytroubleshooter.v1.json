@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "TroubleshootIamPolicy",
         "fullName": "Google.Cloud.PolicyTroubleshooter.V1.IamCheckerClient.TroubleshootIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse",
         "client": {
           "shortName": "IamCheckerClient",
@@ -58,6 +68,16 @@
         "shortName": "TroubleshootIamPolicyAsync",
         "fullName": "Google.Cloud.PolicyTroubleshooter.V1.IamCheckerClient.TroubleshootIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse>",
         "client": {
           "shortName": "IamCheckerClient",

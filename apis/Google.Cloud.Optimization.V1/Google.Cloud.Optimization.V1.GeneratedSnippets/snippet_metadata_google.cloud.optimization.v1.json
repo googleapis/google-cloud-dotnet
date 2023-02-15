@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "OptimizeTours",
         "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.OptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Optimization.V1.OptimizeToursResponse",
         "client": {
           "shortName": "FleetRoutingClient",
@@ -58,6 +68,16 @@
         "shortName": "OptimizeToursAsync",
         "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.OptimizeToursAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Optimization.V1.OptimizeToursResponse>",
         "client": {
           "shortName": "FleetRoutingClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "BatchOptimizeTours",
         "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.BatchOptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Optimization.V1.BatchOptimizeToursResponse, Google.Cloud.Optimization.V1.AsyncModelMetadata>",
         "client": {
           "shortName": "FleetRoutingClient",
@@ -135,6 +165,16 @@
         "shortName": "BatchOptimizeToursAsync",
         "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.BatchOptimizeToursAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Optimization.V1.BatchOptimizeToursResponse, Google.Cloud.Optimization.V1.AsyncModelMetadata>>",
         "client": {
           "shortName": "FleetRoutingClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "RegisterDebuggee",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.RegisterDebuggee",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.RegisterDebuggeeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.RegisterDebuggeeResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -58,6 +68,16 @@
         "shortName": "RegisterDebuggeeAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.RegisterDebuggeeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.RegisterDebuggeeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "RegisterDebuggee",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.RegisterDebuggee",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.Debuggee",
+            "name": "debuggee"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.RegisterDebuggeeResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -134,6 +164,16 @@
         "shortName": "RegisterDebuggeeAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.RegisterDebuggeeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.Debuggee",
+            "name": "debuggee"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "ListActiveBreakpoints",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.ListActiveBreakpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -210,6 +260,16 @@
         "shortName": "ListActiveBreakpointsAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.ListActiveBreakpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -248,6 +308,16 @@
       "clientMethod": {
         "shortName": "ListActiveBreakpoints",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.ListActiveBreakpoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -286,6 +356,16 @@
         "shortName": "ListActiveBreakpointsAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.ListActiveBreakpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "UpdateActiveBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.UpdateActiveBreakpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -362,6 +452,16 @@
         "shortName": "UpdateActiveBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.UpdateActiveBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -400,6 +500,20 @@
       "clientMethod": {
         "shortName": "UpdateActiveBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.UpdateActiveBreakpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Cloud.Debugger.V2.Breakpoint",
+            "name": "breakpoint"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse",
         "client": {
           "shortName": "Controller2Client",
@@ -438,6 +552,20 @@
         "shortName": "UpdateActiveBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Controller2Client.UpdateActiveBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Cloud.Debugger.V2.Breakpoint",
+            "name": "breakpoint"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse>",
         "client": {
           "shortName": "Controller2Client",
@@ -475,6 +603,16 @@
       "clientMethod": {
         "shortName": "SetBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.SetBreakpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.SetBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.SetBreakpointResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -514,6 +652,16 @@
         "shortName": "SetBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.SetBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.SetBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.SetBreakpointResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -552,6 +700,24 @@
       "clientMethod": {
         "shortName": "SetBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.SetBreakpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Cloud.Debugger.V2.Breakpoint",
+            "name": "breakpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.SetBreakpointResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -590,6 +756,24 @@
         "shortName": "SetBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.SetBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "Google.Cloud.Debugger.V2.Breakpoint",
+            "name": "breakpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.SetBreakpointResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -627,6 +811,16 @@
       "clientMethod": {
         "shortName": "GetBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.GetBreakpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.GetBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.GetBreakpointResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -666,6 +860,16 @@
         "shortName": "GetBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.GetBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.GetBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.GetBreakpointResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -704,6 +908,24 @@
       "clientMethod": {
         "shortName": "GetBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.GetBreakpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "breakpointId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.GetBreakpointResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -742,6 +964,24 @@
         "shortName": "GetBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.GetBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "breakpointId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.GetBreakpointResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -779,6 +1019,16 @@
       "clientMethod": {
         "shortName": "DeleteBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.DeleteBreakpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.DeleteBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "Debugger2Client",
           "fullName": "Google.Cloud.Debugger.V2.Debugger2Client"
@@ -817,6 +1067,16 @@
         "shortName": "DeleteBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.DeleteBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.DeleteBreakpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "Debugger2Client",
@@ -855,6 +1115,24 @@
       "clientMethod": {
         "shortName": "DeleteBreakpoint",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.DeleteBreakpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "breakpointId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "Debugger2Client",
           "fullName": "Google.Cloud.Debugger.V2.Debugger2Client"
@@ -892,6 +1170,24 @@
         "shortName": "DeleteBreakpointAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.DeleteBreakpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "breakpointId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "Debugger2Client",
@@ -929,6 +1225,16 @@
       "clientMethod": {
         "shortName": "ListBreakpoints",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListBreakpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListBreakpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListBreakpointsResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -968,6 +1274,16 @@
         "shortName": "ListBreakpointsAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListBreakpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListBreakpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListBreakpointsResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -1006,6 +1322,20 @@
       "clientMethod": {
         "shortName": "ListBreakpoints",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListBreakpoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListBreakpointsResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -1044,6 +1374,20 @@
         "shortName": "ListBreakpointsAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListBreakpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "debuggeeId"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListBreakpointsResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -1081,6 +1425,16 @@
       "clientMethod": {
         "shortName": "ListDebuggees",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListDebuggees",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListDebuggeesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListDebuggeesResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -1120,6 +1474,16 @@
         "shortName": "ListDebuggeesAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListDebuggeesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Debugger.V2.ListDebuggeesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListDebuggeesResponse>",
         "client": {
           "shortName": "Debugger2Client",
@@ -1158,6 +1522,20 @@
       "clientMethod": {
         "shortName": "ListDebuggees",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListDebuggees",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Debugger.V2.ListDebuggeesResponse",
         "client": {
           "shortName": "Debugger2Client",
@@ -1196,6 +1574,20 @@
         "shortName": "ListDebuggeesAsync",
         "fullName": "Google.Cloud.Debugger.V2.Debugger2Client.ListDebuggeesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "clientVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Debugger.V2.ListDebuggeesResponse>",
         "client": {
           "shortName": "Debugger2Client",

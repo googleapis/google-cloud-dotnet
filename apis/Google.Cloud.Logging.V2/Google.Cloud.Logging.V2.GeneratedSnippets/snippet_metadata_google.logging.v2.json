@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListBucketsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -58,6 +68,16 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListBucketsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -134,6 +172,24 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -209,6 +283,24 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -246,6 +338,24 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -284,6 +394,24 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -321,6 +449,24 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -359,6 +505,24 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -396,6 +560,24 @@
       "clientMethod": {
         "shortName": "ListBuckets",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBuckets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.BillingAccountLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -434,6 +616,24 @@
         "shortName": "ListBucketsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListBucketsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.BillingAccountLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListBucketsResponse, Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -471,6 +671,16 @@
       "clientMethod": {
         "shortName": "GetBucket",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogBucket",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -510,6 +720,16 @@
         "shortName": "GetBucketAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetBucketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -548,6 +768,16 @@
       "clientMethod": {
         "shortName": "CreateBucket",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogBucket",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -587,6 +817,16 @@
         "shortName": "CreateBucketAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateBucketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -625,6 +865,16 @@
       "clientMethod": {
         "shortName": "UpdateBucket",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogBucket",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -664,6 +914,16 @@
         "shortName": "UpdateBucketAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateBucketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogBucket>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -702,6 +962,16 @@
       "clientMethod": {
         "shortName": "DeleteBucket",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -740,6 +1010,16 @@
         "shortName": "DeleteBucketAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteBucketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -778,6 +1058,16 @@
       "clientMethod": {
         "shortName": "UndeleteBucket",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UndeleteBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UndeleteBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -816,6 +1106,16 @@
         "shortName": "UndeleteBucketAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UndeleteBucketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UndeleteBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -854,6 +1154,16 @@
       "clientMethod": {
         "shortName": "ListViews",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListViewsResponse, Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -893,6 +1203,16 @@
         "shortName": "ListViewsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListViewsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListViewsResponse, Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -931,6 +1251,24 @@
       "clientMethod": {
         "shortName": "ListViews",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListViewsResponse, Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -969,6 +1307,24 @@
         "shortName": "ListViewsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListViewsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListViewsResponse, Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1006,6 +1362,16 @@
       "clientMethod": {
         "shortName": "GetView",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogView",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1045,6 +1411,16 @@
         "shortName": "GetViewAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1083,6 +1459,16 @@
       "clientMethod": {
         "shortName": "CreateView",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogView",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1122,6 +1508,16 @@
         "shortName": "CreateViewAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1160,6 +1556,16 @@
       "clientMethod": {
         "shortName": "UpdateView",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogView",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1199,6 +1605,16 @@
         "shortName": "UpdateViewAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogView>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1237,6 +1653,16 @@
       "clientMethod": {
         "shortName": "DeleteView",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -1275,6 +1701,16 @@
         "shortName": "DeleteViewAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1313,6 +1749,16 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListSinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1352,6 +1798,16 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListSinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1390,6 +1846,24 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1428,6 +1902,24 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1465,6 +1957,24 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1503,6 +2013,24 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1540,6 +2068,24 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1578,6 +2124,24 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1615,6 +2179,24 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1653,6 +2235,24 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1690,6 +2290,24 @@
       "clientMethod": {
         "shortName": "ListSinks",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1728,6 +2346,24 @@
         "shortName": "ListSinksAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListSinksResponse, Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1765,6 +2401,16 @@
       "clientMethod": {
         "shortName": "GetSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1804,6 +2450,16 @@
         "shortName": "GetSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1842,6 +2498,16 @@
       "clientMethod": {
         "shortName": "GetSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1880,6 +2546,16 @@
         "shortName": "GetSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1917,6 +2593,16 @@
       "clientMethod": {
         "shortName": "GetSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1955,6 +2641,16 @@
         "shortName": "GetSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -1992,6 +2688,16 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2031,6 +2737,16 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2069,6 +2785,20 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2107,6 +2837,20 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2144,6 +2888,20 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2182,6 +2940,20 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2219,6 +2991,20 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2257,6 +3043,20 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2294,6 +3094,20 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2332,6 +3146,20 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2369,6 +3197,20 @@
       "clientMethod": {
         "shortName": "CreateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2407,6 +3249,20 @@
         "shortName": "CreateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2444,6 +3300,16 @@
       "clientMethod": {
         "shortName": "UpdateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2483,6 +3349,16 @@
         "shortName": "UpdateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2521,6 +3397,24 @@
       "clientMethod": {
         "shortName": "UpdateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2559,6 +3453,24 @@
         "shortName": "UpdateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2596,6 +3508,24 @@
       "clientMethod": {
         "shortName": "UpdateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2634,6 +3564,24 @@
         "shortName": "UpdateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2671,6 +3619,20 @@
       "clientMethod": {
         "shortName": "UpdateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2709,6 +3671,20 @@
         "shortName": "UpdateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2746,6 +3722,20 @@
       "clientMethod": {
         "shortName": "UpdateSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogSink",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2784,6 +3774,20 @@
         "shortName": "UpdateSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogSink",
+            "name": "sink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogSink>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2821,6 +3825,16 @@
       "clientMethod": {
         "shortName": "DeleteSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -2859,6 +3873,16 @@
         "shortName": "DeleteSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteSinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2897,6 +3921,16 @@
       "clientMethod": {
         "shortName": "DeleteSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -2934,6 +3968,16 @@
         "shortName": "DeleteSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -2971,6 +4015,16 @@
       "clientMethod": {
         "shortName": "DeleteSink",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -3008,6 +4062,16 @@
         "shortName": "DeleteSinkAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogSinkName",
+            "name": "sinkName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3045,6 +4109,16 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListExclusionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3084,6 +4158,16 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListExclusionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3122,6 +4206,24 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3160,6 +4262,24 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3197,6 +4317,24 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3235,6 +4373,24 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3272,6 +4428,24 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3310,6 +4484,24 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3347,6 +4539,24 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3385,6 +4595,24 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3422,6 +4650,24 @@
       "clientMethod": {
         "shortName": "ListExclusions",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3460,6 +4706,24 @@
         "shortName": "ListExclusionsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListExclusionsResponse, Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3497,6 +4761,16 @@
       "clientMethod": {
         "shortName": "GetExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3536,6 +4810,16 @@
         "shortName": "GetExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3574,6 +4858,16 @@
       "clientMethod": {
         "shortName": "GetExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3612,6 +4906,16 @@
         "shortName": "GetExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3649,6 +4953,16 @@
       "clientMethod": {
         "shortName": "GetExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3687,6 +5001,16 @@
         "shortName": "GetExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3724,6 +5048,16 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3763,6 +5097,16 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3801,6 +5145,20 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3839,6 +5197,20 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3876,6 +5248,20 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3914,6 +5300,20 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3951,6 +5351,20 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -3989,6 +5403,20 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4026,6 +5454,20 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4064,6 +5506,20 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4101,6 +5557,20 @@
       "clientMethod": {
         "shortName": "CreateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4139,6 +5609,20 @@
         "shortName": "CreateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4176,6 +5660,16 @@
       "clientMethod": {
         "shortName": "UpdateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4215,6 +5709,16 @@
         "shortName": "UpdateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4253,6 +5757,24 @@
       "clientMethod": {
         "shortName": "UpdateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4291,6 +5813,24 @@
         "shortName": "UpdateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4328,6 +5868,24 @@
       "clientMethod": {
         "shortName": "UpdateExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogExclusion",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4366,6 +5924,24 @@
         "shortName": "UpdateExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusion",
+            "name": "exclusion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogExclusion>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4403,6 +5979,16 @@
       "clientMethod": {
         "shortName": "DeleteExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -4441,6 +6027,16 @@
         "shortName": "DeleteExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteExclusionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4479,6 +6075,16 @@
       "clientMethod": {
         "shortName": "DeleteExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -4516,6 +6122,16 @@
         "shortName": "DeleteExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4553,6 +6169,16 @@
       "clientMethod": {
         "shortName": "DeleteExclusion",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ConfigServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
@@ -4590,6 +6216,16 @@
         "shortName": "DeleteExclusionAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogExclusionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4627,6 +6263,16 @@
       "clientMethod": {
         "shortName": "GetCmekSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetCmekSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetCmekSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.CmekSettings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4666,6 +6312,16 @@
         "shortName": "GetCmekSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetCmekSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetCmekSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.CmekSettings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4704,6 +6360,16 @@
       "clientMethod": {
         "shortName": "UpdateCmekSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateCmekSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateCmekSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.CmekSettings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4743,6 +6409,16 @@
         "shortName": "UpdateCmekSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateCmekSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateCmekSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.CmekSettings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4781,6 +6457,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.Settings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4820,6 +6506,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4858,6 +6554,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.Settings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4896,6 +6602,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4933,6 +6649,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.Settings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -4971,6 +6697,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5008,6 +6744,16 @@
       "clientMethod": {
         "shortName": "UpdateSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.Settings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5047,6 +6793,16 @@
         "shortName": "UpdateSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5085,6 +6841,20 @@
       "clientMethod": {
         "shortName": "UpdateSettings",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.Settings",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5123,6 +6893,20 @@
         "shortName": "UpdateSettingsAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Settings>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5160,6 +6944,16 @@
       "clientMethod": {
         "shortName": "CopyLogEntries",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CopyLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CopyLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.CopyLogEntriesResponse, Google.Cloud.Logging.V2.CopyLogEntriesMetadata>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5199,6 +6993,16 @@
         "shortName": "CopyLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CopyLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CopyLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.CopyLogEntriesResponse, Google.Cloud.Logging.V2.CopyLogEntriesMetadata>>",
         "client": {
           "shortName": "ConfigServiceV2Client",
@@ -5237,6 +7041,16 @@
       "clientMethod": {
         "shortName": "DeleteLog",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LoggingServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
@@ -5275,6 +7089,16 @@
         "shortName": "DeleteLogAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5313,6 +7137,16 @@
       "clientMethod": {
         "shortName": "DeleteLog",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LoggingServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
@@ -5350,6 +7184,16 @@
         "shortName": "DeleteLogAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5387,6 +7231,16 @@
       "clientMethod": {
         "shortName": "DeleteLog",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogName",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LoggingServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client"
@@ -5424,6 +7278,16 @@
         "shortName": "DeleteLogAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogName",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5461,6 +7325,16 @@
       "clientMethod": {
         "shortName": "WriteLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.WriteLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5500,6 +7374,16 @@
         "shortName": "WriteLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.WriteLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5538,6 +7422,28 @@
       "clientMethod": {
         "shortName": "WriteLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.MonitoredResource",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Logging.V2.LogEntry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5576,6 +7482,28 @@
         "shortName": "WriteLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.MonitoredResource",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Logging.V2.LogEntry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5613,6 +7541,28 @@
       "clientMethod": {
         "shortName": "WriteLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogName",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.MonitoredResource",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Logging.V2.LogEntry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.WriteLogEntriesResponse",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5651,6 +7601,28 @@
         "shortName": "WriteLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogName",
+            "name": "logName"
+          },
+          {
+            "type": "Google.Api.MonitoredResource",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Logging.V2.LogEntry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.WriteLogEntriesResponse>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5688,6 +7660,16 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5727,6 +7709,16 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5765,6 +7757,32 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5803,6 +7821,32 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5840,6 +7884,32 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5878,6 +7948,32 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5915,6 +8011,32 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5953,6 +8075,32 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -5990,6 +8138,32 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6028,6 +8202,32 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6065,6 +8265,32 @@
       "clientMethod": {
         "shortName": "ListLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6103,6 +8329,32 @@
         "shortName": "ListLogEntriesAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "resourceNames"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "orderBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogEntriesResponse, Google.Cloud.Logging.V2.LogEntry>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6140,6 +8392,16 @@
       "clientMethod": {
         "shortName": "ListMonitoredResourceDescriptors",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6179,6 +8441,16 @@
         "shortName": "ListMonitoredResourceDescriptorsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse, Google.Api.MonitoredResourceDescriptor>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6217,6 +8489,16 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6256,6 +8538,16 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6294,6 +8586,24 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6332,6 +8642,24 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6369,6 +8697,24 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6407,6 +8753,24 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6444,6 +8808,24 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6482,6 +8864,24 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6519,6 +8919,24 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6557,6 +8975,24 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6594,6 +9030,24 @@
       "clientMethod": {
         "shortName": "ListLogs",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6632,6 +9086,24 @@
         "shortName": "ListLogsAsync",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogsResponse, System.String>",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6669,6 +9141,16 @@
       "clientMethod": {
         "shortName": "TailLogEntries",
         "fullName": "Google.Cloud.Logging.V2.LoggingServiceV2Client.TailLogEntries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LoggingServiceV2Client+TailLogEntriesStream",
         "client": {
           "shortName": "LoggingServiceV2Client",
@@ -6707,6 +9189,16 @@
       "clientMethod": {
         "shortName": "ListLogMetrics",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6746,6 +9238,16 @@
         "shortName": "ListLogMetricsAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLogMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6784,6 +9286,24 @@
       "clientMethod": {
         "shortName": "ListLogMetrics",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetrics",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6822,6 +9342,24 @@
         "shortName": "ListLogMetricsAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6859,6 +9397,24 @@
       "clientMethod": {
         "shortName": "ListLogMetrics",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetrics",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6897,6 +9453,24 @@
         "shortName": "ListLogMetricsAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLogMetricsResponse, Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6934,6 +9508,16 @@
       "clientMethod": {
         "shortName": "GetLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -6973,6 +9557,16 @@
         "shortName": "GetLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7011,6 +9605,16 @@
       "clientMethod": {
         "shortName": "GetLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7049,6 +9653,16 @@
         "shortName": "GetLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7086,6 +9700,16 @@
       "clientMethod": {
         "shortName": "GetLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7124,6 +9748,16 @@
         "shortName": "GetLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7161,6 +9795,16 @@
       "clientMethod": {
         "shortName": "CreateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7200,6 +9844,16 @@
         "shortName": "CreateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7238,6 +9892,20 @@
       "clientMethod": {
         "shortName": "CreateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7276,6 +9944,20 @@
         "shortName": "CreateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7313,6 +9995,20 @@
       "clientMethod": {
         "shortName": "CreateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7351,6 +10047,20 @@
         "shortName": "CreateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7388,6 +10098,16 @@
       "clientMethod": {
         "shortName": "UpdateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7427,6 +10147,16 @@
         "shortName": "UpdateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7465,6 +10195,20 @@
       "clientMethod": {
         "shortName": "UpdateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7503,6 +10247,20 @@
         "shortName": "UpdateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7540,6 +10298,20 @@
       "clientMethod": {
         "shortName": "UpdateLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Logging.V2.LogMetric",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7578,6 +10350,20 @@
         "shortName": "UpdateLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetric",
+            "name": "metric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.LogMetric>",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7615,6 +10401,16 @@
       "clientMethod": {
         "shortName": "DeleteLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MetricsServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client"
@@ -7653,6 +10449,16 @@
         "shortName": "DeleteLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLogMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7691,6 +10497,16 @@
       "clientMethod": {
         "shortName": "DeleteLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MetricsServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client"
@@ -7728,6 +10544,16 @@
         "shortName": "DeleteLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MetricsServiceV2Client",
@@ -7765,6 +10591,16 @@
       "clientMethod": {
         "shortName": "DeleteLogMetric",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetric",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MetricsServiceV2Client",
           "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client"
@@ -7802,6 +10638,16 @@
         "shortName": "DeleteLogMetricAsync",
         "fullName": "Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogMetricName",
+            "name": "metricName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MetricsServiceV2Client",

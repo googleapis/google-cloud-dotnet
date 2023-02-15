@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompany",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -246,6 +322,20 @@
       "clientMethod": {
         "shortName": "CreateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompany",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -284,6 +374,20 @@
         "shortName": "CreateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.CreateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -321,6 +425,16 @@
       "clientMethod": {
         "shortName": "GetCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -360,6 +474,16 @@
         "shortName": "GetCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "GetCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompany",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -436,6 +570,16 @@
         "shortName": "GetCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -473,6 +617,16 @@
       "clientMethod": {
         "shortName": "GetCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompanyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -511,6 +665,16 @@
         "shortName": "GetCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.GetCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompanyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -548,6 +712,16 @@
       "clientMethod": {
         "shortName": "UpdateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.UpdateCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -587,6 +761,16 @@
         "shortName": "UpdateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.UpdateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "UpdateCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.UpdateCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Company",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -663,6 +857,16 @@
         "shortName": "UpdateCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.UpdateCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Company",
+            "name": "company"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -700,6 +904,16 @@
       "clientMethod": {
         "shortName": "DeleteCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CompanyServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient"
@@ -738,6 +952,16 @@
         "shortName": "DeleteCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -776,6 +1000,16 @@
       "clientMethod": {
         "shortName": "DeleteCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompany",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CompanyServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient"
@@ -813,6 +1047,16 @@
         "shortName": "DeleteCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -850,6 +1094,16 @@
       "clientMethod": {
         "shortName": "DeleteCompany",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompany",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompanyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CompanyServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient"
@@ -887,6 +1141,16 @@
         "shortName": "DeleteCompanyAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.DeleteCompanyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompanyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -924,6 +1188,16 @@
       "clientMethod": {
         "shortName": "ListCompanies",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompanies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListCompaniesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -963,6 +1237,16 @@
         "shortName": "ListCompaniesAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListCompaniesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1001,6 +1285,24 @@
       "clientMethod": {
         "shortName": "ListCompanies",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompanies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1039,6 +1341,24 @@
         "shortName": "ListCompaniesAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1076,6 +1396,24 @@
       "clientMethod": {
         "shortName": "ListCompanies",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompanies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1114,6 +1452,24 @@
         "shortName": "ListCompaniesAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1151,6 +1507,24 @@
       "clientMethod": {
         "shortName": "ListCompanies",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompanies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1189,6 +1563,24 @@
         "shortName": "ListCompaniesAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompanyServiceClient.ListCompaniesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListCompaniesResponse, Google.Cloud.Talent.V4Beta1.Company>",
         "client": {
           "shortName": "CompanyServiceClient",
@@ -1226,6 +1618,16 @@
       "clientMethod": {
         "shortName": "CompleteQuery",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompletionClient.CompleteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.CompleteQueryResponse",
         "client": {
           "shortName": "CompletionClient",
@@ -1265,6 +1667,16 @@
         "shortName": "CompleteQueryAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.CompletionClient.CompleteQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.CompleteQueryResponse>",
         "client": {
           "shortName": "CompletionClient",
@@ -1303,6 +1715,16 @@
       "clientMethod": {
         "shortName": "CreateClientEvent",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateClientEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.ClientEvent",
         "client": {
           "shortName": "EventServiceClient",
@@ -1342,6 +1764,16 @@
         "shortName": "CreateClientEventAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateClientEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.ClientEvent>",
         "client": {
           "shortName": "EventServiceClient",
@@ -1380,6 +1812,20 @@
       "clientMethod": {
         "shortName": "CreateClientEvent",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.ClientEvent",
         "client": {
           "shortName": "EventServiceClient",
@@ -1418,6 +1864,20 @@
         "shortName": "CreateClientEventAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.ClientEvent>",
         "client": {
           "shortName": "EventServiceClient",
@@ -1455,6 +1915,20 @@
       "clientMethod": {
         "shortName": "CreateClientEvent",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.ClientEvent",
         "client": {
           "shortName": "EventServiceClient",
@@ -1493,6 +1967,20 @@
         "shortName": "CreateClientEventAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.ClientEvent>",
         "client": {
           "shortName": "EventServiceClient",
@@ -1530,6 +2018,20 @@
       "clientMethod": {
         "shortName": "CreateClientEvent",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEvent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.ClientEvent",
         "client": {
           "shortName": "EventServiceClient",
@@ -1568,6 +2070,20 @@
         "shortName": "CreateClientEventAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.EventServiceClient.CreateClientEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ClientEvent",
+            "name": "clientEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.ClientEvent>",
         "client": {
           "shortName": "EventServiceClient",
@@ -1605,6 +2121,16 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -1644,6 +2170,16 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1682,6 +2218,20 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -1720,6 +2270,20 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1757,6 +2321,20 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -1795,6 +2373,20 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1832,6 +2424,20 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -1870,6 +2476,20 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1907,6 +2527,16 @@
       "clientMethod": {
         "shortName": "BatchCreateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1946,6 +2576,16 @@
         "shortName": "BatchCreateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -1984,6 +2624,20 @@
       "clientMethod": {
         "shortName": "BatchCreateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2022,6 +2676,20 @@
         "shortName": "BatchCreateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2059,6 +2727,20 @@
       "clientMethod": {
         "shortName": "BatchCreateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2097,6 +2779,20 @@
         "shortName": "BatchCreateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2134,6 +2830,20 @@
       "clientMethod": {
         "shortName": "BatchCreateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2172,6 +2882,20 @@
         "shortName": "BatchCreateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchCreateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2209,6 +2933,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -2248,6 +2982,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2286,6 +3030,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -2324,6 +3078,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2361,6 +3125,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -2399,6 +3173,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2436,6 +3220,16 @@
       "clientMethod": {
         "shortName": "UpdateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.UpdateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -2475,6 +3269,16 @@
         "shortName": "UpdateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.UpdateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2513,6 +3317,16 @@
       "clientMethod": {
         "shortName": "UpdateJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.UpdateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Job",
         "client": {
           "shortName": "JobServiceClient",
@@ -2551,6 +3365,16 @@
         "shortName": "UpdateJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.UpdateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2588,6 +3412,16 @@
       "clientMethod": {
         "shortName": "BatchUpdateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2627,6 +3461,16 @@
         "shortName": "BatchUpdateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2665,6 +3509,20 @@
       "clientMethod": {
         "shortName": "BatchUpdateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2703,6 +3561,20 @@
         "shortName": "BatchUpdateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2740,6 +3612,20 @@
       "clientMethod": {
         "shortName": "BatchUpdateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2778,6 +3664,20 @@
         "shortName": "BatchUpdateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2815,6 +3715,20 @@
       "clientMethod": {
         "shortName": "BatchUpdateJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2853,6 +3767,20 @@
         "shortName": "BatchUpdateJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchUpdateJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Talent.V4Beta1.Job>",
+            "name": "jobs"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Talent.V4Beta1.JobOperationResult, Google.Cloud.Talent.V4Beta1.BatchOperationMetadata>>",
         "client": {
           "shortName": "JobServiceClient",
@@ -2890,6 +3818,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -2928,6 +3866,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -2966,6 +3914,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3003,6 +3961,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3040,6 +4008,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3077,6 +4055,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3114,6 +4102,16 @@
       "clientMethod": {
         "shortName": "BatchDeleteJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3152,6 +4150,16 @@
         "shortName": "BatchDeleteJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3190,6 +4198,20 @@
       "clientMethod": {
         "shortName": "BatchDeleteJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3227,6 +4249,20 @@
         "shortName": "BatchDeleteJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3264,6 +4300,20 @@
       "clientMethod": {
         "shortName": "BatchDeleteJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3301,6 +4351,20 @@
         "shortName": "BatchDeleteJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3338,6 +4402,20 @@
       "clientMethod": {
         "shortName": "BatchDeleteJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "JobServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient"
@@ -3375,6 +4453,20 @@
         "shortName": "BatchDeleteJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.BatchDeleteJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "JobServiceClient",
@@ -3412,6 +4504,16 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3451,6 +4553,16 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3489,6 +4601,28 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3527,6 +4661,28 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3564,6 +4720,28 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3602,6 +4780,28 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3639,6 +4839,28 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3677,6 +4899,28 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListJobsResponse, Google.Cloud.Talent.V4Beta1.Job>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3714,6 +4958,16 @@
       "clientMethod": {
         "shortName": "SearchJobs",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.SearchJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.SearchJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.SearchJobsResponse",
         "client": {
           "shortName": "JobServiceClient",
@@ -3753,6 +5007,16 @@
         "shortName": "SearchJobsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.SearchJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.SearchJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.SearchJobsResponse>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3791,6 +5055,16 @@
       "clientMethod": {
         "shortName": "SearchJobsForAlert",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.SearchJobsForAlert",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.SearchJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.SearchJobsResponse, Google.Cloud.Talent.V4Beta1.SearchJobsResponse+Types+MatchingJob>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3830,6 +5104,16 @@
         "shortName": "SearchJobsForAlertAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.JobServiceClient.SearchJobsForAlertAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.SearchJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.SearchJobsResponse, Google.Cloud.Talent.V4Beta1.SearchJobsResponse+Types+MatchingJob>",
         "client": {
           "shortName": "JobServiceClient",
@@ -3868,6 +5152,16 @@
       "clientMethod": {
         "shortName": "CreateTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -3907,6 +5201,16 @@
         "shortName": "CreateTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.CreateTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -3945,6 +5249,20 @@
       "clientMethod": {
         "shortName": "CreateTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -3983,6 +5301,20 @@
         "shortName": "CreateTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4020,6 +5352,20 @@
       "clientMethod": {
         "shortName": "CreateTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenant",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4058,6 +5404,20 @@
         "shortName": "CreateTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.CreateTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4095,6 +5455,16 @@
       "clientMethod": {
         "shortName": "GetTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4134,6 +5504,16 @@
         "shortName": "GetTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.GetTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4172,6 +5552,16 @@
       "clientMethod": {
         "shortName": "GetTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4210,6 +5600,16 @@
         "shortName": "GetTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4247,6 +5647,16 @@
       "clientMethod": {
         "shortName": "GetTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4285,6 +5695,16 @@
         "shortName": "GetTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.GetTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4322,6 +5742,16 @@
       "clientMethod": {
         "shortName": "UpdateTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.UpdateTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4361,6 +5791,16 @@
         "shortName": "UpdateTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.UpdateTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.UpdateTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4399,6 +5839,16 @@
       "clientMethod": {
         "shortName": "UpdateTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.UpdateTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Talent.V4Beta1.Tenant",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4437,6 +5887,16 @@
         "shortName": "UpdateTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.UpdateTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.Tenant",
+            "name": "tenant"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4474,6 +5934,16 @@
       "clientMethod": {
         "shortName": "DeleteTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TenantServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient"
@@ -4512,6 +5982,16 @@
         "shortName": "DeleteTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.DeleteTenantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4550,6 +6030,16 @@
       "clientMethod": {
         "shortName": "DeleteTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TenantServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient"
@@ -4587,6 +6077,16 @@
         "shortName": "DeleteTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4624,6 +6124,16 @@
       "clientMethod": {
         "shortName": "DeleteTenant",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TenantServiceClient",
           "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient"
@@ -4661,6 +6171,16 @@
         "shortName": "DeleteTenantAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.DeleteTenantAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.TenantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4698,6 +6218,16 @@
       "clientMethod": {
         "shortName": "ListTenants",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListTenantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4737,6 +6267,16 @@
         "shortName": "ListTenantsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenantsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Talent.V4Beta1.ListTenantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4775,6 +6315,24 @@
       "clientMethod": {
         "shortName": "ListTenants",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenants",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4813,6 +6371,24 @@
         "shortName": "ListTenantsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenantsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4850,6 +6426,24 @@
       "clientMethod": {
         "shortName": "ListTenants",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenants",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",
@@ -4888,6 +6482,24 @@
         "shortName": "ListTenantsAsync",
         "fullName": "Google.Cloud.Talent.V4Beta1.TenantServiceClient.ListTenantsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Talent.V4Beta1.ListTenantsResponse, Google.Cloud.Talent.V4Beta1.Tenant>",
         "client": {
           "shortName": "TenantServiceClient",

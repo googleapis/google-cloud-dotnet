@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudget",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.CreateBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "UpdateBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.UpdateBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "UpdateBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.UpdateBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "UpdateBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.UpdateBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -361,6 +471,20 @@
         "shortName": "UpdateBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.UpdateBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.Budget",
+            "name": "budget"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "GetBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.GetBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -437,6 +571,16 @@
         "shortName": "GetBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.GetBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "GetBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -513,6 +667,16 @@
         "shortName": "GetBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -550,6 +714,16 @@
       "clientMethod": {
         "shortName": "GetBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.BudgetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.Budgets.V1.Budget",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -588,6 +762,16 @@
         "shortName": "GetBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.GetBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.BudgetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "ListBudgets",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -664,6 +858,16 @@
         "shortName": "ListBudgetsAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -702,6 +906,24 @@
       "clientMethod": {
         "shortName": "ListBudgets",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -740,6 +962,24 @@
         "shortName": "ListBudgetsAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -777,6 +1017,24 @@
       "clientMethod": {
         "shortName": "ListBudgets",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -815,6 +1073,24 @@
         "shortName": "ListBudgetsAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.ListBudgetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse, Google.Cloud.Billing.Budgets.V1.Budget>",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "DeleteBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BudgetServiceClient",
           "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient"
@@ -890,6 +1176,16 @@
         "shortName": "DeleteBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -928,6 +1224,16 @@
       "clientMethod": {
         "shortName": "DeleteBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BudgetServiceClient",
           "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient"
@@ -965,6 +1271,16 @@
         "shortName": "DeleteBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BudgetServiceClient",
@@ -1002,6 +1318,16 @@
       "clientMethod": {
         "shortName": "DeleteBudget",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.BudgetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BudgetServiceClient",
           "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient"
@@ -1039,6 +1365,16 @@
         "shortName": "DeleteBudgetAsync",
         "fullName": "Google.Cloud.Billing.Budgets.V1.BudgetServiceClient.DeleteBudgetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.Budgets.V1.BudgetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BudgetServiceClient",

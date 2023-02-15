@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.CreateSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.CreateSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.CreateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "DeletePosixAccount",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.DeletePosixAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -284,6 +370,16 @@
         "shortName": "DeletePosixAccountAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.DeletePosixAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -322,6 +418,16 @@
       "clientMethod": {
         "shortName": "DeletePosixAccount",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -359,6 +465,16 @@
         "shortName": "DeletePosixAccountAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -396,6 +512,16 @@
       "clientMethod": {
         "shortName": "DeletePosixAccount",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.PosixAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -433,6 +559,16 @@
         "shortName": "DeletePosixAccountAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeletePosixAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.PosixAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -470,6 +606,16 @@
       "clientMethod": {
         "shortName": "DeleteSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -508,6 +654,16 @@
         "shortName": "DeleteSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -546,6 +702,16 @@
       "clientMethod": {
         "shortName": "DeleteSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -583,6 +749,16 @@
         "shortName": "DeleteSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -620,6 +796,16 @@
       "clientMethod": {
         "shortName": "DeleteSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OsLoginServiceClient",
           "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient"
@@ -657,6 +843,16 @@
         "shortName": "DeleteSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.DeleteSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -694,6 +890,16 @@
       "clientMethod": {
         "shortName": "GetLoginProfile",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.GetLoginProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.LoginProfile",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -733,6 +939,16 @@
         "shortName": "GetLoginProfileAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.GetLoginProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.LoginProfile>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -771,6 +987,16 @@
       "clientMethod": {
         "shortName": "GetLoginProfile",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.LoginProfile",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -809,6 +1035,16 @@
         "shortName": "GetLoginProfileAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.LoginProfile>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -846,6 +1082,16 @@
       "clientMethod": {
         "shortName": "GetLoginProfile",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.LoginProfile",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -884,6 +1130,16 @@
         "shortName": "GetLoginProfileAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetLoginProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.LoginProfile>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -921,6 +1177,16 @@
       "clientMethod": {
         "shortName": "GetSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -960,6 +1226,16 @@
         "shortName": "GetSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -998,6 +1274,16 @@
       "clientMethod": {
         "shortName": "GetSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1036,6 +1322,16 @@
         "shortName": "GetSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1073,6 +1369,16 @@
       "clientMethod": {
         "shortName": "GetSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1111,6 +1417,16 @@
         "shortName": "GetSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.GetSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1148,6 +1464,16 @@
       "clientMethod": {
         "shortName": "ImportSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1187,6 +1513,16 @@
         "shortName": "ImportSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1225,6 +1561,20 @@
       "clientMethod": {
         "shortName": "ImportSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1263,6 +1613,20 @@
         "shortName": "ImportSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1300,6 +1664,20 @@
       "clientMethod": {
         "shortName": "ImportSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1338,6 +1716,20 @@
         "shortName": "ImportSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1375,6 +1767,24 @@
       "clientMethod": {
         "shortName": "ImportSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1413,6 +1823,24 @@
         "shortName": "ImportSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1450,6 +1878,24 @@
       "clientMethod": {
         "shortName": "ImportSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1488,6 +1934,24 @@
         "shortName": "ImportSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.ImportSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1525,6 +1989,16 @@
       "clientMethod": {
         "shortName": "UpdateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1564,6 +2038,16 @@
         "shortName": "UpdateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1602,6 +2086,20 @@
       "clientMethod": {
         "shortName": "UpdateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1640,6 +2138,20 @@
         "shortName": "UpdateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1677,6 +2189,20 @@
       "clientMethod": {
         "shortName": "UpdateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1715,6 +2241,20 @@
         "shortName": "UpdateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1752,6 +2292,24 @@
       "clientMethod": {
         "shortName": "UpdateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1790,6 +2348,24 @@
         "shortName": "UpdateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1827,6 +2403,24 @@
       "clientMethod": {
         "shortName": "UpdateSshPublicKey",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsLogin.Common.SshPublicKey",
         "client": {
           "shortName": "OsLoginServiceClient",
@@ -1865,6 +2459,24 @@
         "shortName": "UpdateSshPublicKeyAsync",
         "fullName": "Google.Cloud.OsLogin.V1.OsLoginServiceClient.UpdateSshPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.OsLogin.Common.SshPublicKey",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.Common.SshPublicKey>",
         "client": {
           "shortName": "OsLoginServiceClient",

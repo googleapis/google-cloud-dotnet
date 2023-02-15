@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ExportEntities",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -58,6 +68,16 @@
         "shortName": "ExportEntitiesAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntitiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -96,6 +116,28 @@
       "clientMethod": {
         "shortName": "ExportEntities",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "System.String",
+            "name": "outputUrlPrefix"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -134,6 +176,28 @@
         "shortName": "ExportEntitiesAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntitiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "System.String",
+            "name": "outputUrlPrefix"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -171,6 +235,16 @@
       "clientMethod": {
         "shortName": "ImportEntities",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -210,6 +284,16 @@
         "shortName": "ImportEntitiesAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntitiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -248,6 +332,28 @@
       "clientMethod": {
         "shortName": "ImportEntities",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.String",
+            "name": "inputUrl"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -286,6 +392,28 @@
         "shortName": "ImportEntitiesAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntitiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.String",
+            "name": "inputUrl"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -323,6 +451,16 @@
       "clientMethod": {
         "shortName": "CreateIndex",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -362,6 +500,16 @@
         "shortName": "CreateIndexAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.CreateIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -400,6 +548,16 @@
       "clientMethod": {
         "shortName": "DeleteIndex",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -439,6 +597,16 @@
         "shortName": "DeleteIndexAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.DeleteIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -477,6 +645,16 @@
       "clientMethod": {
         "shortName": "GetIndex",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.Admin.V1.Index",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -516,6 +694,16 @@
         "shortName": "GetIndexAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.GetIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.Admin.V1.Index>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -554,6 +742,16 @@
       "clientMethod": {
         "shortName": "ListIndexes",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Datastore.Admin.V1.ListIndexesResponse, Google.Cloud.Datastore.Admin.V1.Index>",
         "client": {
           "shortName": "DatastoreAdminClient",
@@ -593,6 +791,16 @@
         "shortName": "ListIndexesAsync",
         "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ListIndexesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Datastore.Admin.V1.ListIndexesResponse, Google.Cloud.Datastore.Admin.V1.Index>",
         "client": {
           "shortName": "DatastoreAdminClient",

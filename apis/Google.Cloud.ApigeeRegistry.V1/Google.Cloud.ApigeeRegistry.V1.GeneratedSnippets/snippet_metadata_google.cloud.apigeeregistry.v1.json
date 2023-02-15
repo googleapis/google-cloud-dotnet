@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApigeeRegistry.V1.Instance, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -285,6 +387,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -361,6 +483,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -436,6 +578,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApigeeRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Instance",
         "client": {
           "shortName": "ProvisioningClient",
@@ -512,6 +674,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Instance>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -550,6 +722,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Instance",
         "client": {
           "shortName": "ProvisioningClient",
@@ -588,6 +770,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Instance>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -625,6 +817,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Instance",
         "client": {
           "shortName": "ProvisioningClient",
@@ -663,6 +865,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.ProvisioningClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Instance>",
         "client": {
           "shortName": "ProvisioningClient",
@@ -700,6 +912,16 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -739,6 +961,16 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -777,6 +1009,24 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -815,6 +1065,24 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -852,6 +1120,24 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApis",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -890,6 +1176,24 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApisResponse, Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -966,6 +1280,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1004,6 +1328,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1042,6 +1376,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1079,6 +1423,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1117,6 +1471,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1154,6 +1518,16 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1193,6 +1567,16 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1231,6 +1615,24 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1269,6 +1671,24 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1306,6 +1726,24 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApi",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1344,6 +1782,24 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1381,6 +1837,16 @@
       "clientMethod": {
         "shortName": "UpdateApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1420,6 +1886,16 @@
         "shortName": "UpdateApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1458,6 +1934,20 @@
       "clientMethod": {
         "shortName": "UpdateApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Api",
         "client": {
           "shortName": "RegistryClient",
@@ -1496,6 +1986,20 @@
         "shortName": "UpdateApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Api>",
         "client": {
           "shortName": "RegistryClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -1571,6 +2085,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -1609,6 +2133,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -1646,6 +2180,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -1683,6 +2227,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -1720,6 +2274,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -1757,6 +2321,16 @@
       "clientMethod": {
         "shortName": "ListApiVersions",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1796,6 +2370,16 @@
         "shortName": "ListApiVersionsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1834,6 +2418,24 @@
       "clientMethod": {
         "shortName": "ListApiVersions",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1872,6 +2474,24 @@
         "shortName": "ListApiVersionsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1909,6 +2529,24 @@
       "clientMethod": {
         "shortName": "ListApiVersions",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1947,6 +2585,24 @@
         "shortName": "ListApiVersionsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiVersionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -1984,6 +2640,16 @@
       "clientMethod": {
         "shortName": "GetApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2023,6 +2689,16 @@
         "shortName": "GetApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2061,6 +2737,16 @@
       "clientMethod": {
         "shortName": "GetApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2099,6 +2785,16 @@
         "shortName": "GetApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2136,6 +2832,16 @@
       "clientMethod": {
         "shortName": "GetApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2174,6 +2880,16 @@
         "shortName": "GetApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2211,6 +2927,16 @@
       "clientMethod": {
         "shortName": "CreateApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2250,6 +2976,16 @@
         "shortName": "CreateApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2288,6 +3024,24 @@
       "clientMethod": {
         "shortName": "CreateApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "apiVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2326,6 +3080,24 @@
         "shortName": "CreateApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "apiVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2363,6 +3135,24 @@
       "clientMethod": {
         "shortName": "CreateApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "apiVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2401,6 +3191,24 @@
         "shortName": "CreateApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "apiVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2438,6 +3246,16 @@
       "clientMethod": {
         "shortName": "UpdateApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2477,6 +3295,16 @@
         "shortName": "UpdateApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2515,6 +3343,20 @@
       "clientMethod": {
         "shortName": "UpdateApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
         "client": {
           "shortName": "RegistryClient",
@@ -2553,6 +3395,20 @@
         "shortName": "UpdateApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersion",
+            "name": "apiVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiVersion>",
         "client": {
           "shortName": "RegistryClient",
@@ -2590,6 +3446,16 @@
       "clientMethod": {
         "shortName": "DeleteApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -2628,6 +3494,16 @@
         "shortName": "DeleteApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -2666,6 +3542,16 @@
       "clientMethod": {
         "shortName": "DeleteApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -2703,6 +3589,16 @@
         "shortName": "DeleteApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -2740,6 +3636,16 @@
       "clientMethod": {
         "shortName": "DeleteApiVersion",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -2777,6 +3683,16 @@
         "shortName": "DeleteApiVersionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -2814,6 +3730,16 @@
       "clientMethod": {
         "shortName": "ListApiSpecs",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiSpecsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -2853,6 +3779,16 @@
         "shortName": "ListApiSpecsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiSpecsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -2891,6 +3827,24 @@
       "clientMethod": {
         "shortName": "ListApiSpecs",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -2929,6 +3883,24 @@
         "shortName": "ListApiSpecsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -2966,6 +3938,24 @@
       "clientMethod": {
         "shortName": "ListApiSpecs",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3004,6 +3994,24 @@
         "shortName": "ListApiSpecsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3041,6 +4049,16 @@
       "clientMethod": {
         "shortName": "GetApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3080,6 +4098,16 @@
         "shortName": "GetApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3118,6 +4146,16 @@
       "clientMethod": {
         "shortName": "GetApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3156,6 +4194,16 @@
         "shortName": "GetApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3193,6 +4241,16 @@
       "clientMethod": {
         "shortName": "GetApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3231,6 +4289,16 @@
         "shortName": "GetApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3268,6 +4336,16 @@
       "clientMethod": {
         "shortName": "GetApiSpecContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiSpecContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -3307,6 +4385,16 @@
         "shortName": "GetApiSpecContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiSpecContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -3345,6 +4433,16 @@
       "clientMethod": {
         "shortName": "GetApiSpecContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -3383,6 +4481,16 @@
         "shortName": "GetApiSpecContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -3420,6 +4528,16 @@
       "clientMethod": {
         "shortName": "GetApiSpecContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -3458,6 +4576,16 @@
         "shortName": "GetApiSpecContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiSpecContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -3495,6 +4623,16 @@
       "clientMethod": {
         "shortName": "CreateApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3534,6 +4672,16 @@
         "shortName": "CreateApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3572,6 +4720,24 @@
       "clientMethod": {
         "shortName": "CreateApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "System.String",
+            "name": "apiSpecId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3610,6 +4776,24 @@
         "shortName": "CreateApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "System.String",
+            "name": "apiSpecId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3647,6 +4831,24 @@
       "clientMethod": {
         "shortName": "CreateApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "System.String",
+            "name": "apiSpecId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3685,6 +4887,24 @@
         "shortName": "CreateApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "System.String",
+            "name": "apiSpecId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3722,6 +4942,16 @@
       "clientMethod": {
         "shortName": "UpdateApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3761,6 +4991,16 @@
         "shortName": "UpdateApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3799,6 +5039,20 @@
       "clientMethod": {
         "shortName": "UpdateApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -3837,6 +5091,20 @@
         "shortName": "UpdateApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
+            "name": "apiSpec"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -3874,6 +5142,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -3912,6 +5190,16 @@
         "shortName": "DeleteApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -3950,6 +5238,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -3987,6 +5285,16 @@
         "shortName": "DeleteApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -4024,6 +5332,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -4061,6 +5379,16 @@
         "shortName": "DeleteApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -4098,6 +5426,16 @@
       "clientMethod": {
         "shortName": "TagApiSpecRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.TagApiSpecRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.TagApiSpecRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -4137,6 +5475,16 @@
         "shortName": "TagApiSpecRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.TagApiSpecRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.TagApiSpecRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4175,6 +5523,16 @@
       "clientMethod": {
         "shortName": "ListApiSpecRevisions",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiSpecRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecRevisionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4214,6 +5572,16 @@
         "shortName": "ListApiSpecRevisionsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiSpecRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiSpecRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiSpecRevisionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4252,6 +5620,16 @@
       "clientMethod": {
         "shortName": "RollbackApiSpec",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.RollbackApiSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.RollbackApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -4291,6 +5669,16 @@
         "shortName": "RollbackApiSpecAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.RollbackApiSpecAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.RollbackApiSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4329,6 +5717,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpecRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiSpecRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -4368,6 +5766,16 @@
         "shortName": "DeleteApiSpecRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiSpecRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4406,6 +5814,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpecRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -4444,6 +5862,16 @@
         "shortName": "DeleteApiSpecRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4481,6 +5909,16 @@
       "clientMethod": {
         "shortName": "DeleteApiSpecRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiSpec",
         "client": {
           "shortName": "RegistryClient",
@@ -4519,6 +5957,16 @@
         "shortName": "DeleteApiSpecRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiSpecRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiSpec>",
         "client": {
           "shortName": "RegistryClient",
@@ -4556,6 +6004,16 @@
       "clientMethod": {
         "shortName": "ListApiDeployments",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4595,6 +6053,16 @@
         "shortName": "ListApiDeploymentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4633,6 +6101,24 @@
       "clientMethod": {
         "shortName": "ListApiDeployments",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4671,6 +6157,24 @@
         "shortName": "ListApiDeploymentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4708,6 +6212,24 @@
       "clientMethod": {
         "shortName": "ListApiDeployments",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4746,6 +6268,24 @@
         "shortName": "ListApiDeploymentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4783,6 +6323,16 @@
       "clientMethod": {
         "shortName": "GetApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -4822,6 +6372,16 @@
         "shortName": "GetApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4860,6 +6420,16 @@
       "clientMethod": {
         "shortName": "GetApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -4898,6 +6468,16 @@
         "shortName": "GetApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -4935,6 +6515,16 @@
       "clientMethod": {
         "shortName": "GetApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -4973,6 +6563,16 @@
         "shortName": "GetApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5010,6 +6610,16 @@
       "clientMethod": {
         "shortName": "CreateApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5049,6 +6659,16 @@
         "shortName": "CreateApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5087,6 +6707,24 @@
       "clientMethod": {
         "shortName": "CreateApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "apiDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5125,6 +6763,24 @@
         "shortName": "CreateApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "apiDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5162,6 +6818,24 @@
       "clientMethod": {
         "shortName": "CreateApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "apiDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5200,6 +6874,24 @@
         "shortName": "CreateApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "apiDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5237,6 +6929,16 @@
       "clientMethod": {
         "shortName": "UpdateApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5276,6 +6978,16 @@
         "shortName": "UpdateApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.UpdateApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5314,6 +7026,20 @@
       "clientMethod": {
         "shortName": "UpdateApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5352,6 +7078,20 @@
         "shortName": "UpdateApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.UpdateApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
+            "name": "apiDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5389,6 +7129,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -5427,6 +7177,16 @@
         "shortName": "DeleteApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -5465,6 +7225,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -5502,6 +7272,16 @@
         "shortName": "DeleteApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -5539,6 +7319,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -5576,6 +7366,16 @@
         "shortName": "DeleteApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -5613,6 +7413,16 @@
       "clientMethod": {
         "shortName": "TagApiDeploymentRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.TagApiDeploymentRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.TagApiDeploymentRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5652,6 +7462,16 @@
         "shortName": "TagApiDeploymentRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.TagApiDeploymentRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.TagApiDeploymentRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5690,6 +7510,16 @@
       "clientMethod": {
         "shortName": "ListApiDeploymentRevisions",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeploymentRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentRevisionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5729,6 +7559,16 @@
         "shortName": "ListApiDeploymentRevisionsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListApiDeploymentRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListApiDeploymentRevisionsResponse, Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5767,6 +7607,16 @@
       "clientMethod": {
         "shortName": "RollbackApiDeployment",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.RollbackApiDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.RollbackApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5806,6 +7656,16 @@
         "shortName": "RollbackApiDeploymentAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.RollbackApiDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.RollbackApiDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5844,6 +7704,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeploymentRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiDeploymentRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5883,6 +7753,16 @@
         "shortName": "DeleteApiDeploymentRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteApiDeploymentRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5921,6 +7801,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeploymentRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -5959,6 +7849,16 @@
         "shortName": "DeleteApiDeploymentRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -5996,6 +7896,16 @@
       "clientMethod": {
         "shortName": "DeleteApiDeploymentRevision",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.ApiDeployment",
         "client": {
           "shortName": "RegistryClient",
@@ -6034,6 +7944,16 @@
         "shortName": "DeleteApiDeploymentRevisionAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteApiDeploymentRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.ApiDeployment>",
         "client": {
           "shortName": "RegistryClient",
@@ -6071,6 +7991,16 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6110,6 +8040,16 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ListArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6148,6 +8088,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6186,6 +8144,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6223,6 +8199,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6261,6 +8255,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6298,6 +8310,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6336,6 +8366,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6373,6 +8421,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6411,6 +8477,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6448,6 +8532,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6486,6 +8588,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6523,6 +8643,24 @@
       "clientMethod": {
         "shortName": "ListArtifacts",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6561,6 +8699,24 @@
         "shortName": "ListArtifactsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ListArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeRegistry.V1.ListArtifactsResponse, Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6598,6 +8754,16 @@
       "clientMethod": {
         "shortName": "GetArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -6637,6 +8803,16 @@
         "shortName": "GetArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6675,6 +8851,16 @@
       "clientMethod": {
         "shortName": "GetArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -6713,6 +8899,16 @@
         "shortName": "GetArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6750,6 +8946,16 @@
       "clientMethod": {
         "shortName": "GetArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -6788,6 +8994,16 @@
         "shortName": "GetArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -6825,6 +9041,16 @@
       "clientMethod": {
         "shortName": "GetArtifactContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetArtifactContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -6864,6 +9090,16 @@
         "shortName": "GetArtifactContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.GetArtifactContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -6902,6 +9138,16 @@
       "clientMethod": {
         "shortName": "GetArtifactContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -6940,6 +9186,16 @@
         "shortName": "GetArtifactContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -6977,6 +9233,16 @@
       "clientMethod": {
         "shortName": "GetArtifactContents",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "RegistryClient",
@@ -7015,6 +9281,16 @@
         "shortName": "GetArtifactContentsAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.GetArtifactContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "RegistryClient",
@@ -7052,6 +9328,16 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7091,6 +9377,16 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.CreateArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7129,6 +9425,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7167,6 +9481,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7204,6 +9536,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7242,6 +9592,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7279,6 +9647,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7317,6 +9703,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7354,6 +9758,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7392,6 +9814,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7429,6 +9869,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7467,6 +9925,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiSpecName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7504,6 +9980,24 @@
       "clientMethod": {
         "shortName": "CreateArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7542,6 +10036,24 @@
         "shortName": "CreateArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.CreateArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ApiDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "System.String",
+            "name": "artifactId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7579,6 +10091,16 @@
       "clientMethod": {
         "shortName": "ReplaceArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ReplaceArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ReplaceArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7618,6 +10140,16 @@
         "shortName": "ReplaceArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ReplaceArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ReplaceArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7656,6 +10188,16 @@
       "clientMethod": {
         "shortName": "ReplaceArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ReplaceArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeRegistry.V1.Artifact",
         "client": {
           "shortName": "RegistryClient",
@@ -7694,6 +10236,16 @@
         "shortName": "ReplaceArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.ReplaceArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.Artifact",
+            "name": "artifact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApigeeRegistry.V1.Artifact>",
         "client": {
           "shortName": "RegistryClient",
@@ -7731,6 +10283,16 @@
       "clientMethod": {
         "shortName": "DeleteArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -7769,6 +10331,16 @@
         "shortName": "DeleteArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.DeleteArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -7807,6 +10379,16 @@
       "clientMethod": {
         "shortName": "DeleteArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -7844,6 +10426,16 @@
         "shortName": "DeleteArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",
@@ -7881,6 +10473,16 @@
       "clientMethod": {
         "shortName": "DeleteArtifact",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistryClient",
           "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient"
@@ -7918,6 +10520,16 @@
         "shortName": "DeleteArtifactAsync",
         "fullName": "Google.Cloud.ApigeeRegistry.V1.RegistryClient.DeleteArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeRegistry.V1.ArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistryClient",

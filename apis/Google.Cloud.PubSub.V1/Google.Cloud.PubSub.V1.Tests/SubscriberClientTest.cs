@@ -423,15 +423,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 // For exactly once delivery, only messages that succeed or fail permanently appear here, i.e., only messages whose status is finalized.
                 // The messages with temporary failures whose status may change in future appear here only when they succeed or fail permanently.
                 // In non exactly once delivery, we show status of every message as Success because every message acknowledgement is treated as fire and forget.
-                // If message failed with recoverable error, it will be re-queued and hence may appear again here with the same success status, so adding distinct items only.
                 Responses.Locked(() => Responses.AddRange(responses.Where(item => !Responses.Any(j => j.MessageId == item.MessageId))));
-
 
             public override void HandleNackResponses(IReadOnlyList<AckNackResponse> responses) =>
                 // For exactly once delivery, only messages that succeed or fail permanently appear here, i.e., only messages whose status is finalized.
                 // The messages with temporary failures whose status may change in future appear here only when they succeed or fail permanently.
                 // In non exactly once delivery, we show status of every message as Success because every message acknowledgement is treated as fire and forget.
-                // If message failed with recoverable error, it will be re-queued and hence may appear again here with the same success status, so adding distinct items only.
                 Responses.Locked(() => Responses.AddRange(responses.Where(item => !Responses.Any(j => j.MessageId == item.MessageId))));
         }
 

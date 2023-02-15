@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListGameServerClusters",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListGameServerClustersAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListGameServerClusters",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListGameServerClustersAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListGameServerClusters",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListGameServerClustersAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.ListGameServerClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerClustersResponse, Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.GetGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerCluster>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "gameServerClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "gameServerClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "gameServerClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.CreateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "gameServerClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "PreviewCreateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewCreateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "PreviewCreateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewCreateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.PreviewCreateGameServerClusterResponse>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -816,6 +1090,16 @@
         "shortName": "DeleteGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -854,6 +1138,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -892,6 +1186,16 @@
         "shortName": "DeleteGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -929,6 +1233,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -967,6 +1281,16 @@
         "shortName": "DeleteGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.DeleteGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1004,6 +1328,16 @@
       "clientMethod": {
         "shortName": "PreviewDeleteGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewDeleteGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1043,6 +1377,16 @@
         "shortName": "PreviewDeleteGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewDeleteGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.PreviewDeleteGameServerClusterResponse>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1081,6 +1425,16 @@
       "clientMethod": {
         "shortName": "UpdateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.UpdateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1120,6 +1474,16 @@
         "shortName": "UpdateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.UpdateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1158,6 +1522,20 @@
       "clientMethod": {
         "shortName": "UpdateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.UpdateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1196,6 +1574,20 @@
         "shortName": "UpdateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.UpdateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerCluster",
+            "name": "gameServerCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerCluster, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1233,6 +1625,16 @@
       "clientMethod": {
         "shortName": "PreviewUpdateGameServerCluster",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewUpdateGameServerCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1272,6 +1674,16 @@
         "shortName": "PreviewUpdateGameServerClusterAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerClustersServiceClient.PreviewUpdateGameServerClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.PreviewUpdateGameServerClusterResponse>",
         "client": {
           "shortName": "GameServerClustersServiceClient",
@@ -1310,6 +1722,16 @@
       "clientMethod": {
         "shortName": "ListGameServerConfigs",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1349,6 +1771,16 @@
         "shortName": "ListGameServerConfigsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1387,6 +1819,24 @@
       "clientMethod": {
         "shortName": "ListGameServerConfigs",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1425,6 +1875,24 @@
         "shortName": "ListGameServerConfigsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1462,6 +1930,24 @@
       "clientMethod": {
         "shortName": "ListGameServerConfigs",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1500,6 +1986,24 @@
         "shortName": "ListGameServerConfigsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.ListGameServerConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerConfigsResponse, Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1537,6 +2041,16 @@
       "clientMethod": {
         "shortName": "GetGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1576,6 +2090,16 @@
         "shortName": "GetGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1614,6 +2138,16 @@
       "clientMethod": {
         "shortName": "GetGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1652,6 +2186,16 @@
         "shortName": "GetGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1689,6 +2233,16 @@
       "clientMethod": {
         "shortName": "GetGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1727,6 +2281,16 @@
         "shortName": "GetGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.GetGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerConfig>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1764,6 +2328,16 @@
       "clientMethod": {
         "shortName": "CreateGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1803,6 +2377,16 @@
         "shortName": "CreateGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1841,6 +2425,20 @@
       "clientMethod": {
         "shortName": "CreateGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
+            "name": "gameServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1879,6 +2477,20 @@
         "shortName": "CreateGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
+            "name": "gameServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1916,6 +2528,20 @@
       "clientMethod": {
         "shortName": "CreateGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
+            "name": "gameServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1954,6 +2580,20 @@
         "shortName": "CreateGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.CreateGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfig",
+            "name": "gameServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerConfig, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -1991,6 +2631,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2030,6 +2680,16 @@
         "shortName": "DeleteGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2068,6 +2728,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2106,6 +2776,16 @@
         "shortName": "DeleteGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2143,6 +2823,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerConfig",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2181,6 +2871,16 @@
         "shortName": "DeleteGameServerConfigAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerConfigsServiceClient.DeleteGameServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerConfigsServiceClient",
@@ -2218,6 +2918,16 @@
       "clientMethod": {
         "shortName": "ListGameServerDeployments",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2257,6 +2967,16 @@
         "shortName": "ListGameServerDeploymentsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2295,6 +3015,24 @@
       "clientMethod": {
         "shortName": "ListGameServerDeployments",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2333,6 +3071,24 @@
         "shortName": "ListGameServerDeploymentsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2370,6 +3126,24 @@
       "clientMethod": {
         "shortName": "ListGameServerDeployments",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeployments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2408,6 +3182,24 @@
         "shortName": "ListGameServerDeploymentsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.ListGameServerDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListGameServerDeploymentsResponse, Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2445,6 +3237,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2484,6 +3286,16 @@
         "shortName": "GetGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2522,6 +3334,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2560,6 +3382,16 @@
         "shortName": "GetGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2597,6 +3429,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2635,6 +3477,16 @@
         "shortName": "GetGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeployment>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2672,6 +3524,16 @@
       "clientMethod": {
         "shortName": "CreateGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2711,6 +3573,16 @@
         "shortName": "CreateGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2749,6 +3621,20 @@
       "clientMethod": {
         "shortName": "CreateGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2787,6 +3673,20 @@
         "shortName": "CreateGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2824,6 +3724,20 @@
       "clientMethod": {
         "shortName": "CreateGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2862,6 +3776,20 @@
         "shortName": "CreateGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.CreateGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2899,6 +3827,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2938,6 +3876,16 @@
         "shortName": "DeleteGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -2976,6 +3924,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3014,6 +3972,16 @@
         "shortName": "DeleteGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3051,6 +4019,16 @@
       "clientMethod": {
         "shortName": "DeleteGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3089,6 +4067,16 @@
         "shortName": "DeleteGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3126,6 +4114,16 @@
       "clientMethod": {
         "shortName": "UpdateGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3165,6 +4163,16 @@
         "shortName": "UpdateGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3203,6 +4211,20 @@
       "clientMethod": {
         "shortName": "UpdateGameServerDeployment",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3241,6 +4263,20 @@
         "shortName": "UpdateGameServerDeploymentAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeployment",
+            "name": "gameServerDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3278,6 +4314,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3317,6 +4363,16 @@
         "shortName": "GetGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3355,6 +4411,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3393,6 +4459,16 @@
         "shortName": "GetGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3430,6 +4506,16 @@
       "clientMethod": {
         "shortName": "GetGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3468,6 +4554,16 @@
         "shortName": "GetGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.GetGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3505,6 +4601,16 @@
       "clientMethod": {
         "shortName": "UpdateGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3544,6 +4650,16 @@
         "shortName": "UpdateGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3582,6 +4698,20 @@
       "clientMethod": {
         "shortName": "UpdateGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout",
+            "name": "rollout"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3620,6 +4750,20 @@
         "shortName": "UpdateGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.UpdateGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout",
+            "name": "rollout"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.GameServerDeployment, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3657,6 +4801,16 @@
       "clientMethod": {
         "shortName": "PreviewGameServerDeploymentRollout",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.PreviewGameServerDeploymentRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3696,6 +4850,16 @@
         "shortName": "PreviewGameServerDeploymentRolloutAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.PreviewGameServerDeploymentRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.PreviewGameServerDeploymentRolloutResponse>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3734,6 +4898,16 @@
       "clientMethod": {
         "shortName": "FetchDeploymentState",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.FetchDeploymentState",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3773,6 +4947,16 @@
         "shortName": "FetchDeploymentStateAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.GameServerDeploymentsServiceClient.FetchDeploymentStateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.FetchDeploymentStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse>",
         "client": {
           "shortName": "GameServerDeploymentsServiceClient",
@@ -3811,6 +4995,16 @@
       "clientMethod": {
         "shortName": "ListRealms",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealms",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListRealmsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -3850,6 +5044,16 @@
         "shortName": "ListRealmsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.ListRealmsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -3888,6 +5092,24 @@
       "clientMethod": {
         "shortName": "ListRealms",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealms",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -3926,6 +5148,24 @@
         "shortName": "ListRealmsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -3963,6 +5203,24 @@
       "clientMethod": {
         "shortName": "ListRealms",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealms",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4001,6 +5259,24 @@
         "shortName": "ListRealmsAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.ListRealmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Gaming.V1Beta.ListRealmsResponse, Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4038,6 +5314,16 @@
       "clientMethod": {
         "shortName": "GetRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.Realm",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4077,6 +5363,16 @@
         "shortName": "GetRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.GetRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4115,6 +5411,16 @@
       "clientMethod": {
         "shortName": "GetRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.Realm",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4153,6 +5459,16 @@
         "shortName": "GetRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4190,6 +5506,16 @@
       "clientMethod": {
         "shortName": "GetRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.Realm",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4228,6 +5554,16 @@
         "shortName": "GetRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.GetRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.Realm>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4265,6 +5601,16 @@
       "clientMethod": {
         "shortName": "CreateRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4304,6 +5650,16 @@
         "shortName": "CreateRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.CreateRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4342,6 +5698,24 @@
       "clientMethod": {
         "shortName": "CreateRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "System.String",
+            "name": "realmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4380,6 +5754,24 @@
         "shortName": "CreateRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "System.String",
+            "name": "realmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4417,6 +5809,24 @@
       "clientMethod": {
         "shortName": "CreateRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealm",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "System.String",
+            "name": "realmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4455,6 +5865,24 @@
         "shortName": "CreateRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.CreateRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "System.String",
+            "name": "realmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4492,6 +5920,16 @@
       "clientMethod": {
         "shortName": "DeleteRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4531,6 +5969,16 @@
         "shortName": "DeleteRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.DeleteRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4569,6 +6017,16 @@
       "clientMethod": {
         "shortName": "DeleteRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4607,6 +6065,16 @@
         "shortName": "DeleteRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4644,6 +6112,16 @@
       "clientMethod": {
         "shortName": "DeleteRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4682,6 +6160,16 @@
         "shortName": "DeleteRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.DeleteRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.RealmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4719,6 +6207,16 @@
       "clientMethod": {
         "shortName": "UpdateRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.UpdateRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4758,6 +6256,16 @@
         "shortName": "UpdateRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.UpdateRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.UpdateRealmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4796,6 +6304,20 @@
       "clientMethod": {
         "shortName": "UpdateRealm",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.UpdateRealm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4834,6 +6356,20 @@
         "shortName": "UpdateRealmAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.UpdateRealmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.Realm",
+            "name": "realm"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Gaming.V1Beta.Realm, Google.Cloud.Gaming.V1Beta.OperationMetadata>>",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4871,6 +6407,16 @@
       "clientMethod": {
         "shortName": "PreviewRealmUpdate",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.PreviewRealmUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse",
         "client": {
           "shortName": "RealmsServiceClient",
@@ -4910,6 +6456,16 @@
         "shortName": "PreviewRealmUpdateAsync",
         "fullName": "Google.Cloud.Gaming.V1Beta.RealmsServiceClient.PreviewRealmUpdateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Gaming.V1Beta.PreviewRealmUpdateResponse>",
         "client": {
           "shortName": "RealmsServiceClient",

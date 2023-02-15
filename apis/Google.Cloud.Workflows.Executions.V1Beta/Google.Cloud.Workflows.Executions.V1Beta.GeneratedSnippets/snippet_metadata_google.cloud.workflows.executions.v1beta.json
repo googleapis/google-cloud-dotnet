@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -58,6 +68,16 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -134,6 +172,24 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListExecutions",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Common.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -209,6 +283,24 @@
         "shortName": "ListExecutionsAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Common.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -285,6 +387,16 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -323,6 +435,20 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -361,6 +487,20 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -398,6 +538,20 @@
       "clientMethod": {
         "shortName": "CreateExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Common.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -436,6 +590,20 @@
         "shortName": "CreateExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Common.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -473,6 +641,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -512,6 +690,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -550,6 +738,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -588,6 +786,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "GetExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -663,6 +881,16 @@
         "shortName": "GetExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "CancelExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -739,6 +977,16 @@
         "shortName": "CancelExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -777,6 +1025,16 @@
       "clientMethod": {
         "shortName": "CancelExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -815,6 +1073,16 @@
         "shortName": "CancelExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",
@@ -852,6 +1120,16 @@
       "clientMethod": {
         "shortName": "CancelExecution",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
         "client": {
           "shortName": "ExecutionsClient",
@@ -890,6 +1168,16 @@
         "shortName": "CancelExecutionAsync",
         "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
         "client": {
           "shortName": "ExecutionsClient",

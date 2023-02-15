@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListDockerImages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListDockerImages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse, Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -58,6 +68,16 @@
         "shortName": "ListDockerImagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListDockerImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse, Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListDockerImages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListDockerImages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse, Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -134,6 +172,24 @@
         "shortName": "ListDockerImagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListDockerImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse, Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "GetDockerImage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.DockerImage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -210,6 +276,16 @@
         "shortName": "GetDockerImageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -248,6 +324,16 @@
       "clientMethod": {
         "shortName": "GetDockerImage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.DockerImage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -286,6 +372,16 @@
         "shortName": "GetDockerImageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetDockerImage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DockerImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.DockerImage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -361,6 +467,16 @@
         "shortName": "GetDockerImageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetDockerImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DockerImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.DockerImage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "ListMavenArtifacts",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -437,6 +563,16 @@
         "shortName": "ListMavenArtifactsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -475,6 +611,24 @@
       "clientMethod": {
         "shortName": "ListMavenArtifacts",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -513,6 +667,24 @@
         "shortName": "ListMavenArtifactsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "ListMavenArtifacts",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -588,6 +778,24 @@
         "shortName": "ListMavenArtifactsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListMavenArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListMavenArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "GetMavenArtifact",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetMavenArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -664,6 +882,16 @@
         "shortName": "GetMavenArtifactAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetMavenArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -702,6 +930,16 @@
       "clientMethod": {
         "shortName": "GetMavenArtifact",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -740,6 +978,16 @@
         "shortName": "GetMavenArtifactAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -777,6 +1025,16 @@
       "clientMethod": {
         "shortName": "GetMavenArtifact",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.MavenArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.MavenArtifact",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -815,6 +1073,16 @@
         "shortName": "GetMavenArtifactAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetMavenArtifactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.MavenArtifactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.MavenArtifact>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -852,6 +1120,16 @@
       "clientMethod": {
         "shortName": "ListNpmPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -891,6 +1169,16 @@
         "shortName": "ListNpmPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -929,6 +1217,24 @@
       "clientMethod": {
         "shortName": "ListNpmPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -967,6 +1273,24 @@
         "shortName": "ListNpmPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1004,6 +1328,24 @@
       "clientMethod": {
         "shortName": "ListNpmPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1042,6 +1384,24 @@
         "shortName": "ListNpmPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListNpmPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListNpmPackagesResponse, Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1079,6 +1439,16 @@
       "clientMethod": {
         "shortName": "GetNpmPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetNpmPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1118,6 +1488,16 @@
         "shortName": "GetNpmPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetNpmPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1156,6 +1536,16 @@
       "clientMethod": {
         "shortName": "GetNpmPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1194,6 +1584,16 @@
         "shortName": "GetNpmPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1231,6 +1631,16 @@
       "clientMethod": {
         "shortName": "GetNpmPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.NpmPackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.NpmPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1269,6 +1679,16 @@
         "shortName": "GetNpmPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetNpmPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.NpmPackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.NpmPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1306,6 +1726,16 @@
       "clientMethod": {
         "shortName": "ListPythonPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1345,6 +1775,16 @@
         "shortName": "ListPythonPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1383,6 +1823,24 @@
       "clientMethod": {
         "shortName": "ListPythonPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1421,6 +1879,24 @@
         "shortName": "ListPythonPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1458,6 +1934,24 @@
       "clientMethod": {
         "shortName": "ListPythonPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1496,6 +1990,24 @@
         "shortName": "ListPythonPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPythonPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPythonPackagesResponse, Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1533,6 +2045,16 @@
       "clientMethod": {
         "shortName": "GetPythonPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetPythonPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1572,6 +2094,16 @@
         "shortName": "GetPythonPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetPythonPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1610,6 +2142,16 @@
       "clientMethod": {
         "shortName": "GetPythonPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1648,6 +2190,16 @@
         "shortName": "GetPythonPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1685,6 +2237,16 @@
       "clientMethod": {
         "shortName": "GetPythonPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PythonPackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.PythonPackage",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1723,6 +2285,16 @@
         "shortName": "GetPythonPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPythonPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PythonPackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.PythonPackage>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1760,6 +2332,16 @@
       "clientMethod": {
         "shortName": "ImportAptArtifacts",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ImportAptArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1799,6 +2381,16 @@
         "shortName": "ImportAptArtifactsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ImportAptArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.ImportAptArtifactsMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1837,6 +2429,16 @@
       "clientMethod": {
         "shortName": "ImportYumArtifacts",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ImportYumArtifacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1876,6 +2478,16 @@
         "shortName": "ImportYumArtifactsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ImportYumArtifactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsResponse, Google.Cloud.ArtifactRegistry.V1.ImportYumArtifactsMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1914,6 +2526,16 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1953,6 +2575,16 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -1991,6 +2623,24 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2029,6 +2679,24 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2066,6 +2734,24 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2104,6 +2790,24 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListRepositoriesResponse, Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2141,6 +2845,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Repository",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2180,6 +2894,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2218,6 +2942,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Repository",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2256,6 +2990,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2293,6 +3037,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Repository",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2331,6 +3085,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2368,6 +3132,16 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2407,6 +3181,16 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2445,6 +3229,24 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2483,6 +3285,24 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2520,6 +3340,24 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2558,6 +3396,24 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.Repository, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2595,6 +3451,16 @@
       "clientMethod": {
         "shortName": "UpdateRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Repository",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2634,6 +3500,16 @@
         "shortName": "UpdateRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2672,6 +3548,20 @@
       "clientMethod": {
         "shortName": "UpdateRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Repository",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2710,6 +3600,20 @@
         "shortName": "UpdateRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Repository>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2747,6 +3651,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2786,6 +3700,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2824,6 +3748,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2862,6 +3796,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2899,6 +3843,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2937,6 +3891,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -2974,6 +3938,16 @@
       "clientMethod": {
         "shortName": "ListPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3013,6 +3987,16 @@
         "shortName": "ListPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3051,6 +4035,24 @@
       "clientMethod": {
         "shortName": "ListPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3089,6 +4091,24 @@
         "shortName": "ListPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3126,6 +4146,24 @@
       "clientMethod": {
         "shortName": "ListPackages",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3164,6 +4202,24 @@
         "shortName": "ListPackagesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListPackagesResponse, Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3201,6 +4257,16 @@
       "clientMethod": {
         "shortName": "GetPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3240,6 +4306,16 @@
         "shortName": "GetPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetPackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3278,6 +4354,16 @@
       "clientMethod": {
         "shortName": "GetPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3316,6 +4402,16 @@
         "shortName": "GetPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3353,6 +4449,16 @@
       "clientMethod": {
         "shortName": "GetPackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Package",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3391,6 +4497,16 @@
         "shortName": "GetPackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetPackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Package>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3428,6 +4544,16 @@
       "clientMethod": {
         "shortName": "DeletePackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeletePackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3467,6 +4593,16 @@
         "shortName": "DeletePackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeletePackageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3505,6 +4641,16 @@
       "clientMethod": {
         "shortName": "DeletePackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3543,6 +4689,16 @@
         "shortName": "DeletePackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3580,6 +4736,16 @@
       "clientMethod": {
         "shortName": "DeletePackage",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3618,6 +4784,16 @@
         "shortName": "DeletePackageAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeletePackageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3655,6 +4831,16 @@
       "clientMethod": {
         "shortName": "ListVersions",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse, Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3694,6 +4880,16 @@
         "shortName": "ListVersionsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse, Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3732,6 +4928,24 @@
       "clientMethod": {
         "shortName": "ListVersions",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse, Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3770,6 +4984,24 @@
         "shortName": "ListVersionsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse, Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3807,6 +5039,16 @@
       "clientMethod": {
         "shortName": "GetVersion",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Version",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3846,6 +5088,16 @@
         "shortName": "GetVersionAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3884,6 +5136,16 @@
       "clientMethod": {
         "shortName": "GetVersion",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Version",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3922,6 +5184,16 @@
         "shortName": "GetVersionAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Version>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3959,6 +5231,16 @@
       "clientMethod": {
         "shortName": "DeleteVersion",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -3998,6 +5280,16 @@
         "shortName": "DeleteVersionAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4036,6 +5328,16 @@
       "clientMethod": {
         "shortName": "DeleteVersion",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4074,6 +5376,16 @@
         "shortName": "DeleteVersionAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.OperationMetadata>>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4111,6 +5423,16 @@
       "clientMethod": {
         "shortName": "ListFiles",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4150,6 +5472,16 @@
         "shortName": "ListFilesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4188,6 +5520,24 @@
       "clientMethod": {
         "shortName": "ListFiles",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4226,6 +5576,24 @@
         "shortName": "ListFilesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4263,6 +5631,24 @@
       "clientMethod": {
         "shortName": "ListFiles",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4301,6 +5687,24 @@
         "shortName": "ListFilesAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListFilesResponse, Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4338,6 +5742,16 @@
       "clientMethod": {
         "shortName": "GetFile",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4377,6 +5791,16 @@
         "shortName": "GetFileAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4415,6 +5839,16 @@
       "clientMethod": {
         "shortName": "GetFile",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4453,6 +5887,16 @@
         "shortName": "GetFileAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4490,6 +5934,16 @@
       "clientMethod": {
         "shortName": "GetFile",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.FileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.File",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4528,6 +5982,16 @@
         "shortName": "GetFileAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.FileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.File>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4565,6 +6029,16 @@
       "clientMethod": {
         "shortName": "ListTags",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListTagsResponse, Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4604,6 +6078,16 @@
         "shortName": "ListTagsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ListTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListTagsResponse, Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4642,6 +6126,24 @@
       "clientMethod": {
         "shortName": "ListTags",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListTags",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ArtifactRegistry.V1.ListTagsResponse, Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4680,6 +6182,24 @@
         "shortName": "ListTagsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ListTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ArtifactRegistry.V1.ListTagsResponse, Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4717,6 +6237,16 @@
       "clientMethod": {
         "shortName": "GetTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4756,6 +6286,16 @@
         "shortName": "GetTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4794,6 +6334,16 @@
       "clientMethod": {
         "shortName": "GetTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4832,6 +6382,16 @@
         "shortName": "GetTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4869,6 +6429,16 @@
       "clientMethod": {
         "shortName": "CreateTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4908,6 +6478,16 @@
         "shortName": "CreateTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.CreateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4946,6 +6526,24 @@
       "clientMethod": {
         "shortName": "CreateTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "System.String",
+            "name": "tagId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -4984,6 +6582,24 @@
         "shortName": "CreateTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.CreateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "System.String",
+            "name": "tagId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5021,6 +6637,16 @@
       "clientMethod": {
         "shortName": "UpdateTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5060,6 +6686,16 @@
         "shortName": "UpdateTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5098,6 +6734,20 @@
       "clientMethod": {
         "shortName": "UpdateTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.Tag",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5136,6 +6786,20 @@
         "shortName": "UpdateTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.Tag>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5173,6 +6837,16 @@
       "clientMethod": {
         "shortName": "DeleteTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ArtifactRegistryClient",
           "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
@@ -5211,6 +6885,16 @@
         "shortName": "DeleteTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.DeleteTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5249,6 +6933,16 @@
       "clientMethod": {
         "shortName": "DeleteTag",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ArtifactRegistryClient",
           "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
@@ -5286,6 +6980,16 @@
         "shortName": "DeleteTagAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.DeleteTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5323,6 +7027,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5362,6 +7076,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5400,6 +7124,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5439,6 +7173,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5477,6 +7221,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5516,6 +7270,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5554,6 +7318,16 @@
       "clientMethod": {
         "shortName": "GetProjectSettings",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetProjectSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5593,6 +7367,16 @@
         "shortName": "GetProjectSettingsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetProjectSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.ProjectSettings>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5631,6 +7415,16 @@
       "clientMethod": {
         "shortName": "GetProjectSettings",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5669,6 +7463,16 @@
         "shortName": "GetProjectSettingsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.ProjectSettings>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5706,6 +7510,16 @@
       "clientMethod": {
         "shortName": "GetProjectSettings",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ProjectSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5744,6 +7558,16 @@
         "shortName": "GetProjectSettingsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetProjectSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ProjectSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.ProjectSettings>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5781,6 +7605,16 @@
       "clientMethod": {
         "shortName": "UpdateProjectSettings",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateProjectSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateProjectSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5820,6 +7654,16 @@
         "shortName": "UpdateProjectSettingsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateProjectSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateProjectSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.ProjectSettings>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5858,6 +7702,20 @@
       "clientMethod": {
         "shortName": "UpdateProjectSettings",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateProjectSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
+            "name": "projectSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5896,6 +7754,20 @@
         "shortName": "UpdateProjectSettingsAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateProjectSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ProjectSettings",
+            "name": "projectSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.ProjectSettings>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5933,6 +7805,16 @@
       "clientMethod": {
         "shortName": "GetVPCSCConfig",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetVPCSCConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -5972,6 +7854,16 @@
         "shortName": "GetVPCSCConfigAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.GetVPCSCConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6010,6 +7902,16 @@
       "clientMethod": {
         "shortName": "GetVPCSCConfig",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6048,6 +7950,16 @@
         "shortName": "GetVPCSCConfigAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6085,6 +7997,16 @@
       "clientMethod": {
         "shortName": "GetVPCSCConfig",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VpcscConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6123,6 +8045,16 @@
         "shortName": "GetVPCSCConfigAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.GetVPCSCConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VpcscConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6160,6 +8092,16 @@
       "clientMethod": {
         "shortName": "UpdateVPCSCConfig",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6199,6 +8141,16 @@
         "shortName": "UpdateVPCSCConfigAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.UpdateVPCSCConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6237,6 +8189,20 @@
       "clientMethod": {
         "shortName": "UpdateVPCSCConfig",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+            "name": "vpcscConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
         "client": {
           "shortName": "ArtifactRegistryClient",
@@ -6275,6 +8241,20 @@
         "shortName": "UpdateVPCSCConfigAsync",
         "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.UpdateVPCSCConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VPCSCConfig",
+            "name": "vpcscConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ArtifactRegistry.V1.VPCSCConfig>",
         "client": {
           "shortName": "ArtifactRegistryClient",

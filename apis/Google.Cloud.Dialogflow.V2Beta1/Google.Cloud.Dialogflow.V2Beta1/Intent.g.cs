@@ -348,11 +348,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "dGVudHPKQS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIWZ29vZ2xlLnByb3Rv",
             "YnVmLlN0cnVjdBp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0",
             "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0s",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QqkB",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QqMB",
             "CiNjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMUILSW50ZW50",
-            "UHJvdG9QAVpJZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9kaWFsb2dmbG93L3YyYmV0YTE7ZGlhbG9nZmxvd/gBAaICAkRG",
-            "qgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRhMWIGcHJvdG8z"));
+            "UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYy",
+            "YmV0YTEvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYvgBAaICAkRGqgIfR29v",
+            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.ContextReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2Beta1.IntentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -505,7 +505,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private string name_ = "";
     /// <summary>
     /// Optional. The unique identifier of this intent.
-    /// Required for [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent] and [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents]
+    /// Required for
+    /// [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent]
+    /// and
+    /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents]
     /// methods.
     /// Supported formats:
     ///
@@ -839,9 +842,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Optional. The unique identifier of the parent intent in the
     /// chain of followup intents. You can set this field when creating an intent,
-    /// for example with [CreateIntent][google.cloud.dialogflow.v2beta1.Intents.CreateIntent] or
-    /// [BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents], in order to make this
-    /// intent a followup intent.
+    /// for example with
+    /// [CreateIntent][google.cloud.dialogflow.v2beta1.Intents.CreateIntent] or
+    /// [BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents],
+    /// in order to make this intent a followup intent.
     ///
     /// It identifies the parent followup intent.
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
@@ -861,8 +865,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         = pb::FieldCodec.ForMessage(146, global::Google.Cloud.Dialogflow.V2Beta1.Intent.Types.FollowupIntentInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.Intent.Types.FollowupIntentInfo> followupIntentInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.Intent.Types.FollowupIntentInfo>();
     /// <summary>
-    /// Output only. Information about all followup intents that have this intent as
-    /// a direct or indirect parent. We populate this field only in the output.
+    /// Output only. Information about all followup intents that have this intent
+    /// as a direct or indirect parent. We populate this field only in the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1523,7 +1527,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// so the training phrase is well formatted when the parts are concatenated.
         ///
         /// If the training phrase does not need to be annotated with parameters,
-        /// you just need a single part with only the [Part.text][google.cloud.dialogflow.v2beta1.Intent.TrainingPhrase.Part.text] field set.
+        /// you just need a single part with only the
+        /// [Part.text][google.cloud.dialogflow.v2beta1.Intent.TrainingPhrase.Part.text]
+        /// field set.
         ///
         /// If you want to annotate the training phrase, you must create multiple
         /// parts, where the fields of each part are populated in one of two ways:
@@ -9331,7 +9337,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           /// with media and suggestions.
           ///
           /// If you want to show a single card with more control over the layout,
-          /// please use [RbmStandaloneCard][google.cloud.dialogflow.v2beta1.Intent.Message.RbmStandaloneCard] instead.
+          /// please use
+          /// [RbmStandaloneCard][google.cloud.dialogflow.v2beta1.Intent.Message.RbmStandaloneCard]
+          /// instead.
           /// </summary>
           public sealed partial class RbmCarouselCard : pb::IMessage<RbmCarouselCard>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9587,8 +9595,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           /// Rich cards allow you to respond to users with more vivid content, e.g.
           /// with media and suggestions.
           ///
-          /// You can group multiple rich cards into one using [RbmCarouselCard][google.cloud.dialogflow.v2beta1.Intent.Message.RbmCarouselCard] but
-          /// carousel cards will give you less control over the card layout.
+          /// You can group multiple rich cards into one using
+          /// [RbmCarouselCard][google.cloud.dialogflow.v2beta1.Intent.Message.RbmCarouselCard]
+          /// but carousel cards will give you less control over the card layout.
           /// </summary>
           public sealed partial class RbmStandaloneCard : pb::IMessage<RbmStandaloneCard>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14054,7 +14063,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
 
           /// <summary>
-          /// Column properties for [TableCard][google.cloud.dialogflow.v2beta1.Intent.Message.TableCard].
+          /// Column properties for
+          /// [TableCard][google.cloud.dialogflow.v2beta1.Intent.Message.TableCard].
           /// </summary>
           public sealed partial class ColumnProperties : pb::IMessage<ColumnProperties>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14319,7 +14329,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
 
           /// <summary>
-          /// Row of [TableCard][google.cloud.dialogflow.v2beta1.Intent.Message.TableCard].
+          /// Row of
+          /// [TableCard][google.cloud.dialogflow.v2beta1.Intent.Message.TableCard].
           /// </summary>
           public sealed partial class TableCardRow : pb::IMessage<TableCardRow>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14543,7 +14554,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
 
           /// <summary>
-          /// Cell of [TableCardRow][google.cloud.dialogflow.v2beta1.Intent.Message.TableCardRow].
+          /// Cell of
+          /// [TableCardRow][google.cloud.dialogflow.v2beta1.Intent.Message.TableCardRow].
           /// </summary>
           public sealed partial class TableCardCell : pb::IMessage<TableCardCell>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14985,7 +14997,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.ListIntents][google.cloud.dialogflow.v2beta1.Intents.ListIntents].
+  /// The request message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.v2beta1.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsRequest : pb::IMessage<ListIntentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -15354,7 +15367,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Intents.ListIntents][google.cloud.dialogflow.v2beta1.Intents.ListIntents].
+  /// The response message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.v2beta1.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsResponse : pb::IMessage<ListIntentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -15580,7 +15594,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.GetIntent][google.cloud.dialogflow.v2beta1.Intents.GetIntent].
+  /// The request message for
+  /// [Intents.GetIntent][google.cloud.dialogflow.v2beta1.Intents.GetIntent].
   /// </summary>
   public sealed partial class GetIntentRequest : pb::IMessage<GetIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -15863,7 +15878,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.CreateIntent][google.cloud.dialogflow.v2beta1.Intents.CreateIntent].
+  /// The request message for
+  /// [Intents.CreateIntent][google.cloud.dialogflow.v2beta1.Intents.CreateIntent].
   /// </summary>
   public sealed partial class CreateIntentRequest : pb::IMessage<CreateIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16195,7 +16211,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent].
+  /// The request message for
+  /// [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent].
   /// </summary>
   public sealed partial class UpdateIntentRequest : pb::IMessage<UpdateIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16532,7 +16549,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.DeleteIntent][google.cloud.dialogflow.v2beta1.Intents.DeleteIntent].
+  /// The request message for
+  /// [Intents.DeleteIntent][google.cloud.dialogflow.v2beta1.Intents.DeleteIntent].
   /// </summary>
   public sealed partial class DeleteIntentRequest : pb::IMessage<DeleteIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -16733,7 +16751,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents].
+  /// The request message for
+  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsRequest : pb::IMessage<BatchUpdateIntentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17193,7 +17212,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The response message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents].
+  /// The response message for
+  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsResponse : pb::IMessage<BatchUpdateIntentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -17377,7 +17397,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2beta1.Intents.BatchDeleteIntents].
+  /// The request message for
+  /// [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2beta1.Intents.BatchDeleteIntents].
   /// </summary>
   public sealed partial class BatchDeleteIntentsRequest : pb::IMessage<BatchDeleteIntentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

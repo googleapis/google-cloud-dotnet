@@ -1399,6 +1399,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Cloud.Iam.V1": "3.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
       },
@@ -2724,7 +2725,7 @@
       "shortName": "mediatranslation",
       "serviceConfigFile": "mediatranslation_v1beta1.yaml",
       "restNumericEnums": true,
-      "transport": "grpc+rest"
+      "transport": "grpc"
     },
     {
       "id": "Google.Cloud.Memcache.V1",

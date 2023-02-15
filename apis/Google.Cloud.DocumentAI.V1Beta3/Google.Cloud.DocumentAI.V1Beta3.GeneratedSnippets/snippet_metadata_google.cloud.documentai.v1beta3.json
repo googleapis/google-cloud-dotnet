@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ProcessDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ProcessDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "ProcessDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "ProcessDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "ProcessDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocument",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "ProcessDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ProcessDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "BatchProcessDocuments",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.BatchProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "BatchProcessDocumentsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.BatchProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "BatchProcessDocuments",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -361,6 +451,16 @@
         "shortName": "BatchProcessDocumentsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -398,6 +498,16 @@
       "clientMethod": {
         "shortName": "BatchProcessDocuments",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocuments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -436,6 +546,16 @@
         "shortName": "BatchProcessDocumentsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.BatchProcessDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.BatchProcessResponse, Google.Cloud.DocumentAI.V1Beta3.BatchProcessMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -473,6 +593,16 @@
       "clientMethod": {
         "shortName": "FetchProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -512,6 +642,16 @@
         "shortName": "FetchProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -550,6 +690,16 @@
       "clientMethod": {
         "shortName": "FetchProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -588,6 +738,16 @@
         "shortName": "FetchProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -625,6 +785,16 @@
       "clientMethod": {
         "shortName": "FetchProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -663,6 +833,16 @@
         "shortName": "FetchProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.FetchProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.FetchProcessorTypesResponse>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -700,6 +880,16 @@
       "clientMethod": {
         "shortName": "ListProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -739,6 +929,16 @@
         "shortName": "ListProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -777,6 +977,24 @@
       "clientMethod": {
         "shortName": "ListProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -815,6 +1033,24 @@
         "shortName": "ListProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -852,6 +1088,24 @@
       "clientMethod": {
         "shortName": "ListProcessorTypes",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -890,6 +1144,24 @@
         "shortName": "ListProcessorTypesAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorTypesResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -927,6 +1199,16 @@
       "clientMethod": {
         "shortName": "GetProcessorType",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -966,6 +1248,16 @@
         "shortName": "GetProcessorTypeAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1004,6 +1296,16 @@
       "clientMethod": {
         "shortName": "GetProcessorType",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1042,6 +1344,16 @@
         "shortName": "GetProcessorTypeAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1079,6 +1391,16 @@
       "clientMethod": {
         "shortName": "GetProcessorType",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorType",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1117,6 +1439,16 @@
         "shortName": "GetProcessorTypeAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorType>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1154,6 +1486,16 @@
       "clientMethod": {
         "shortName": "ListProcessors",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1193,6 +1535,16 @@
         "shortName": "ListProcessorsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1231,6 +1583,24 @@
       "clientMethod": {
         "shortName": "ListProcessors",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1269,6 +1639,24 @@
         "shortName": "ListProcessorsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1306,6 +1694,24 @@
       "clientMethod": {
         "shortName": "ListProcessors",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessors",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1344,6 +1750,24 @@
         "shortName": "ListProcessorsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorsResponse, Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1381,6 +1805,16 @@
       "clientMethod": {
         "shortName": "GetProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1420,6 +1854,16 @@
         "shortName": "GetProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1458,6 +1902,16 @@
       "clientMethod": {
         "shortName": "GetProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1496,6 +1950,16 @@
         "shortName": "GetProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1533,6 +1997,16 @@
       "clientMethod": {
         "shortName": "GetProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1571,6 +2045,16 @@
         "shortName": "GetProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1608,6 +2092,16 @@
       "clientMethod": {
         "shortName": "TrainProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1647,6 +2141,16 @@
         "shortName": "TrainProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1685,6 +2189,20 @@
       "clientMethod": {
         "shortName": "TrainProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1723,6 +2241,20 @@
         "shortName": "TrainProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1760,6 +2292,20 @@
       "clientMethod": {
         "shortName": "TrainProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1798,6 +2344,20 @@
         "shortName": "TrainProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.TrainProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1835,6 +2395,16 @@
       "clientMethod": {
         "shortName": "GetProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1874,6 +2444,16 @@
         "shortName": "GetProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1912,6 +2492,16 @@
       "clientMethod": {
         "shortName": "GetProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1950,6 +2540,16 @@
         "shortName": "GetProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -1987,6 +2587,16 @@
       "clientMethod": {
         "shortName": "GetProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2025,6 +2635,16 @@
         "shortName": "GetProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2062,6 +2682,16 @@
       "clientMethod": {
         "shortName": "ListProcessorVersions",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2101,6 +2731,16 @@
         "shortName": "ListProcessorVersionsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2139,6 +2779,24 @@
       "clientMethod": {
         "shortName": "ListProcessorVersions",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2177,6 +2835,24 @@
         "shortName": "ListProcessorVersionsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2214,6 +2890,24 @@
       "clientMethod": {
         "shortName": "ListProcessorVersions",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2252,6 +2946,24 @@
         "shortName": "ListProcessorVersionsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListProcessorVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListProcessorVersionsResponse, Google.Cloud.DocumentAI.V1Beta3.ProcessorVersion>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2289,6 +3001,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2328,6 +3050,16 @@
         "shortName": "DeleteProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2366,6 +3098,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2404,6 +3146,16 @@
         "shortName": "DeleteProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2441,6 +3193,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2479,6 +3241,16 @@
         "shortName": "DeleteProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2516,6 +3288,16 @@
       "clientMethod": {
         "shortName": "DeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2555,6 +3337,16 @@
         "shortName": "DeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2593,6 +3385,16 @@
       "clientMethod": {
         "shortName": "DeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2631,6 +3433,16 @@
         "shortName": "DeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2668,6 +3480,16 @@
       "clientMethod": {
         "shortName": "DeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2706,6 +3528,16 @@
         "shortName": "DeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.DeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2743,6 +3575,16 @@
       "clientMethod": {
         "shortName": "UndeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2782,6 +3624,16 @@
         "shortName": "UndeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2820,6 +3672,16 @@
       "clientMethod": {
         "shortName": "UndeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2858,6 +3720,16 @@
         "shortName": "UndeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2895,6 +3767,16 @@
       "clientMethod": {
         "shortName": "UndeployProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2933,6 +3815,16 @@
         "shortName": "UndeployProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.UndeployProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.UndeployProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -2970,6 +3862,16 @@
       "clientMethod": {
         "shortName": "CreateProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.CreateProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3009,6 +3911,16 @@
         "shortName": "CreateProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.CreateProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3047,6 +3959,20 @@
       "clientMethod": {
         "shortName": "CreateProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.Processor",
+            "name": "processor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3085,6 +4011,20 @@
         "shortName": "CreateProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.Processor",
+            "name": "processor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3122,6 +4062,20 @@
       "clientMethod": {
         "shortName": "CreateProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessor",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.Processor",
+            "name": "processor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Processor",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3160,6 +4114,20 @@
         "shortName": "CreateProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.CreateProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.Processor",
+            "name": "processor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Processor>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3197,6 +4165,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3236,6 +4214,16 @@
         "shortName": "DeleteProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3274,6 +4262,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3312,6 +4310,16 @@
         "shortName": "DeleteProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3349,6 +4357,16 @@
       "clientMethod": {
         "shortName": "DeleteProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3387,6 +4405,16 @@
         "shortName": "DeleteProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DeleteProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DocumentAI.V1Beta3.DeleteProcessorMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3424,6 +4452,16 @@
       "clientMethod": {
         "shortName": "EnableProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EnableProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EnableProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EnableProcessorResponse, Google.Cloud.DocumentAI.V1Beta3.EnableProcessorMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3463,6 +4501,16 @@
         "shortName": "EnableProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EnableProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EnableProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EnableProcessorResponse, Google.Cloud.DocumentAI.V1Beta3.EnableProcessorMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3501,6 +4549,16 @@
       "clientMethod": {
         "shortName": "DisableProcessor",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DisableProcessor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DisableProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DisableProcessorResponse, Google.Cloud.DocumentAI.V1Beta3.DisableProcessorMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3540,6 +4598,16 @@
         "shortName": "DisableProcessorAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.DisableProcessorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DisableProcessorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.DisableProcessorResponse, Google.Cloud.DocumentAI.V1Beta3.DisableProcessorMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3578,6 +4646,16 @@
       "clientMethod": {
         "shortName": "SetDefaultProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.SetDefaultProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3617,6 +4695,16 @@
         "shortName": "SetDefaultProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.SetDefaultProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3655,6 +4743,16 @@
       "clientMethod": {
         "shortName": "ReviewDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3694,6 +4792,16 @@
         "shortName": "ReviewDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3732,6 +4840,16 @@
       "clientMethod": {
         "shortName": "ReviewDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "humanReviewConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3770,6 +4888,16 @@
         "shortName": "ReviewDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "humanReviewConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3807,6 +4935,16 @@
       "clientMethod": {
         "shortName": "ReviewDocument",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.HumanReviewConfigName",
+            "name": "humanReviewConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3845,6 +4983,16 @@
         "shortName": "ReviewDocumentAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ReviewDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.HumanReviewConfigName",
+            "name": "humanReviewConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentResponse, Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentOperationMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3882,6 +5030,16 @@
       "clientMethod": {
         "shortName": "EvaluateProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3921,6 +5079,16 @@
         "shortName": "EvaluateProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3959,6 +5127,16 @@
       "clientMethod": {
         "shortName": "EvaluateProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -3997,6 +5175,16 @@
         "shortName": "EvaluateProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4034,6 +5222,16 @@
       "clientMethod": {
         "shortName": "EvaluateProcessorVersion",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4072,6 +5270,16 @@
         "shortName": "EvaluateProcessorVersionAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.EvaluateProcessorVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "processorVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionMetadata>>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4109,6 +5317,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Evaluation",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4148,6 +5366,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4186,6 +5414,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Evaluation",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4224,6 +5462,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4261,6 +5509,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DocumentAI.V1Beta3.Evaluation",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4299,6 +5557,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4336,6 +5604,16 @@
       "clientMethod": {
         "shortName": "ListEvaluations",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4375,6 +5653,16 @@
         "shortName": "ListEvaluationsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4413,6 +5701,24 @@
       "clientMethod": {
         "shortName": "ListEvaluations",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4451,6 +5757,24 @@
         "shortName": "ListEvaluationsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4488,6 +5812,24 @@
       "clientMethod": {
         "shortName": "ListEvaluations",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",
@@ -4526,6 +5868,24 @@
         "shortName": "ListEvaluationsAsync",
         "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ListEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse, Google.Cloud.DocumentAI.V1Beta3.Evaluation>",
         "client": {
           "shortName": "DocumentProcessorServiceClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "BatchWriteSpans",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.BatchWriteSpansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TraceServiceClient",
           "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
@@ -57,6 +67,16 @@
         "shortName": "BatchWriteSpansAsync",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.BatchWriteSpansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TraceServiceClient",
@@ -95,6 +115,20 @@
       "clientMethod": {
         "shortName": "BatchWriteSpans",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TraceServiceClient",
           "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
@@ -132,6 +166,20 @@
         "shortName": "BatchWriteSpansAsync",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TraceServiceClient",
@@ -169,6 +217,20 @@
       "clientMethod": {
         "shortName": "BatchWriteSpans",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TraceServiceClient",
           "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
@@ -206,6 +268,20 @@
         "shortName": "BatchWriteSpansAsync",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TraceServiceClient",
@@ -243,6 +319,16 @@
       "clientMethod": {
         "shortName": "CreateSpan",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.CreateSpan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.Span",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Trace.V2.Span",
         "client": {
           "shortName": "TraceServiceClient",
@@ -282,6 +368,16 @@
         "shortName": "CreateSpanAsync",
         "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.CreateSpanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.Span",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V2.Span>",
         "client": {
           "shortName": "TraceServiceClient",

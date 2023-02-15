@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -58,6 +68,16 @@
         "shortName": "GetPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -134,6 +164,16 @@
         "shortName": "GetPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -209,6 +259,16 @@
         "shortName": "GetPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "UpdatePolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -285,6 +355,16 @@
         "shortName": "UpdatePolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdatePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "UpdatePolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -361,6 +451,16 @@
         "shortName": "UpdatePolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdatePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -398,6 +498,16 @@
       "clientMethod": {
         "shortName": "CreateAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.CreateAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -437,6 +547,16 @@
         "shortName": "CreateAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.CreateAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -475,6 +595,24 @@
       "clientMethod": {
         "shortName": "CreateAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attestorId"
+          },
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -513,6 +651,24 @@
         "shortName": "CreateAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attestorId"
+          },
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -550,6 +706,24 @@
       "clientMethod": {
         "shortName": "CreateAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestor",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attestorId"
+          },
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -588,6 +762,24 @@
         "shortName": "CreateAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.CreateAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attestorId"
+          },
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -625,6 +817,16 @@
       "clientMethod": {
         "shortName": "GetAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -664,6 +866,16 @@
         "shortName": "GetAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -702,6 +914,16 @@
       "clientMethod": {
         "shortName": "GetAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -740,6 +962,16 @@
         "shortName": "GetAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -777,6 +1009,16 @@
       "clientMethod": {
         "shortName": "GetAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.AttestorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -815,6 +1057,16 @@
         "shortName": "GetAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.GetAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.AttestorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -852,6 +1104,16 @@
       "clientMethod": {
         "shortName": "UpdateAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdateAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.UpdateAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -891,6 +1153,16 @@
         "shortName": "UpdateAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdateAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.UpdateAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -929,6 +1201,16 @@
       "clientMethod": {
         "shortName": "UpdateAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdateAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -967,6 +1249,16 @@
         "shortName": "UpdateAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.UpdateAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.Attestor",
+            "name": "attestor"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1004,6 +1296,16 @@
       "clientMethod": {
         "shortName": "ListAttestors",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1043,6 +1345,16 @@
         "shortName": "ListAttestorsAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1081,6 +1393,24 @@
       "clientMethod": {
         "shortName": "ListAttestors",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1119,6 +1449,24 @@
         "shortName": "ListAttestorsAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1156,6 +1504,24 @@
       "clientMethod": {
         "shortName": "ListAttestors",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestors",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1194,6 +1560,24 @@
         "shortName": "ListAttestorsAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.ListAttestorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse, Google.Cloud.BinaryAuthorization.V1Beta1.Attestor>",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1231,6 +1615,16 @@
       "clientMethod": {
         "shortName": "DeleteAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
           "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client"
@@ -1269,6 +1663,16 @@
         "shortName": "DeleteAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1307,6 +1711,16 @@
       "clientMethod": {
         "shortName": "DeleteAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestor",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
           "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client"
@@ -1344,6 +1758,16 @@
         "shortName": "DeleteAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1381,6 +1805,16 @@
       "clientMethod": {
         "shortName": "DeleteAttestor",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.AttestorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
           "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client"
@@ -1418,6 +1852,16 @@
         "shortName": "DeleteAttestorAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.BinauthzManagementServiceV1Beta1Client.DeleteAttestorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.AttestorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BinauthzManagementServiceV1Beta1Client",
@@ -1455,6 +1899,16 @@
       "clientMethod": {
         "shortName": "GetSystemPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetSystemPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",
@@ -1494,6 +1948,16 @@
         "shortName": "GetSystemPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.GetSystemPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",
@@ -1532,6 +1996,16 @@
       "clientMethod": {
         "shortName": "GetSystemPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",
@@ -1570,6 +2044,16 @@
         "shortName": "GetSystemPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",
@@ -1607,6 +2091,16 @@
       "clientMethod": {
         "shortName": "GetSystemPolicy",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BinaryAuthorization.V1Beta1.Policy",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",
@@ -1645,6 +2139,16 @@
         "shortName": "GetSystemPolicyAsync",
         "fullName": "Google.Cloud.BinaryAuthorization.V1Beta1.SystemPolicyV1Beta1Client.GetSystemPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BinaryAuthorization.V1Beta1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BinaryAuthorization.V1Beta1.Policy>",
         "client": {
           "shortName": "SystemPolicyV1Beta1Client",

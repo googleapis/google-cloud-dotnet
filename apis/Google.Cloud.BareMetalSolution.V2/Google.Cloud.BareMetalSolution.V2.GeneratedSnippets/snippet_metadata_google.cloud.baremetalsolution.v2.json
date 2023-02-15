@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -58,6 +68,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -134,6 +172,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -209,6 +283,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListInstancesResponse, Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Instance",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -285,6 +387,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Instance",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -361,6 +483,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Instance",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -436,6 +578,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Instance>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -512,6 +674,16 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -550,6 +722,20 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -588,6 +774,20 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -625,6 +825,16 @@
       "clientMethod": {
         "shortName": "ResetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -664,6 +874,16 @@
         "shortName": "ResetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -702,6 +922,16 @@
       "clientMethod": {
         "shortName": "ResetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -740,6 +970,16 @@
         "shortName": "ResetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -777,6 +1017,16 @@
       "clientMethod": {
         "shortName": "ResetInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -815,6 +1065,16 @@
         "shortName": "ResetInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.ResetInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -852,6 +1112,16 @@
       "clientMethod": {
         "shortName": "StartInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.StartInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -891,6 +1161,16 @@
         "shortName": "StartInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.StartInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -929,6 +1209,16 @@
       "clientMethod": {
         "shortName": "StartInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -967,6 +1257,16 @@
         "shortName": "StartInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1004,6 +1304,16 @@
       "clientMethod": {
         "shortName": "StartInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1042,6 +1352,16 @@
         "shortName": "StartInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StartInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StartInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1079,6 +1399,16 @@
       "clientMethod": {
         "shortName": "StopInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.StopInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1118,6 +1448,16 @@
         "shortName": "StopInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.StopInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1156,6 +1496,16 @@
       "clientMethod": {
         "shortName": "StopInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1194,6 +1544,16 @@
         "shortName": "StopInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1231,6 +1591,16 @@
       "clientMethod": {
         "shortName": "StopInstance",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1269,6 +1639,16 @@
         "shortName": "StopInstanceAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.StopInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.StopInstanceResponse, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1306,6 +1686,16 @@
       "clientMethod": {
         "shortName": "DetachLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.DetachLunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1345,6 +1735,16 @@
         "shortName": "DetachLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.DetachLunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1383,6 +1783,20 @@
       "clientMethod": {
         "shortName": "DetachLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "lun"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1421,6 +1835,20 @@
         "shortName": "DetachLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "lun"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1458,6 +1886,20 @@
       "clientMethod": {
         "shortName": "DetachLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.LunName",
+            "name": "lun"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1496,6 +1938,20 @@
         "shortName": "DetachLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.DetachLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.LunName",
+            "name": "lun"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Instance, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1533,6 +1989,16 @@
       "clientMethod": {
         "shortName": "ListVolumes",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListVolumesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1572,6 +2038,16 @@
         "shortName": "ListVolumesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListVolumesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1610,6 +2086,24 @@
       "clientMethod": {
         "shortName": "ListVolumes",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1648,6 +2142,24 @@
         "shortName": "ListVolumesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1685,6 +2197,24 @@
       "clientMethod": {
         "shortName": "ListVolumes",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1723,6 +2253,24 @@
         "shortName": "ListVolumesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListVolumesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListVolumesResponse, Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1760,6 +2308,16 @@
       "clientMethod": {
         "shortName": "GetVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Volume",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1799,6 +2357,16 @@
         "shortName": "GetVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1837,6 +2405,16 @@
       "clientMethod": {
         "shortName": "GetVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolume",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Volume",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1875,6 +2453,16 @@
         "shortName": "GetVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1912,6 +2500,16 @@
       "clientMethod": {
         "shortName": "GetVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Volume",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1950,6 +2548,16 @@
         "shortName": "GetVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Volume>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -1987,6 +2595,16 @@
       "clientMethod": {
         "shortName": "UpdateVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2026,6 +2644,16 @@
         "shortName": "UpdateVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2064,6 +2692,20 @@
       "clientMethod": {
         "shortName": "UpdateVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Volume",
+            "name": "volume"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2102,6 +2744,20 @@
         "shortName": "UpdateVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Volume",
+            "name": "volume"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2139,6 +2795,16 @@
       "clientMethod": {
         "shortName": "ResizeVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2178,6 +2844,16 @@
         "shortName": "ResizeVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2216,6 +2892,20 @@
       "clientMethod": {
         "shortName": "ResizeVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolume",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "volume"
+          },
+          {
+            "type": "System.Int64",
+            "name": "sizeGib"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2254,6 +2944,20 @@
         "shortName": "ResizeVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "volume"
+          },
+          {
+            "type": "System.Int64",
+            "name": "sizeGib"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2291,6 +2995,20 @@
       "clientMethod": {
         "shortName": "ResizeVolume",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "volume"
+          },
+          {
+            "type": "System.Int64",
+            "name": "sizeGib"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2329,6 +3047,20 @@
         "shortName": "ResizeVolumeAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ResizeVolumeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "volume"
+          },
+          {
+            "type": "System.Int64",
+            "name": "sizeGib"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Volume, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2366,6 +3098,16 @@
       "clientMethod": {
         "shortName": "ListNetworks",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2405,6 +3147,16 @@
         "shortName": "ListNetworksAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2443,6 +3195,24 @@
       "clientMethod": {
         "shortName": "ListNetworks",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2481,6 +3251,24 @@
         "shortName": "ListNetworksAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2518,6 +3306,24 @@
       "clientMethod": {
         "shortName": "ListNetworks",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2556,6 +3362,24 @@
         "shortName": "ListNetworksAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNetworksResponse, Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2593,6 +3417,16 @@
       "clientMethod": {
         "shortName": "ListNetworkUsage",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNetworkUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2632,6 +3466,16 @@
         "shortName": "ListNetworkUsageAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNetworkUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2670,6 +3514,16 @@
       "clientMethod": {
         "shortName": "ListNetworkUsage",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2708,6 +3562,16 @@
         "shortName": "ListNetworkUsageAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2745,6 +3609,16 @@
       "clientMethod": {
         "shortName": "ListNetworkUsage",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsage",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2783,6 +3657,16 @@
         "shortName": "ListNetworkUsageAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNetworkUsageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2820,6 +3704,16 @@
       "clientMethod": {
         "shortName": "GetNetwork",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Network",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2859,6 +3753,16 @@
         "shortName": "GetNetworkAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2897,6 +3801,16 @@
       "clientMethod": {
         "shortName": "GetNetwork",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetwork",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Network",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2935,6 +3849,16 @@
         "shortName": "GetNetworkAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -2972,6 +3896,16 @@
       "clientMethod": {
         "shortName": "GetNetwork",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Network",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3010,6 +3944,16 @@
         "shortName": "GetNetworkAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Network>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3047,6 +3991,16 @@
       "clientMethod": {
         "shortName": "UpdateNetwork",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Network, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3086,6 +4040,16 @@
         "shortName": "UpdateNetworkAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Network, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3124,6 +4088,20 @@
       "clientMethod": {
         "shortName": "UpdateNetwork",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Network",
+            "name": "network"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Network, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3162,6 +4140,20 @@
         "shortName": "UpdateNetworkAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.Network",
+            "name": "network"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.Network, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3199,6 +4191,16 @@
       "clientMethod": {
         "shortName": "GetLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetLunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Lun",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3238,6 +4240,16 @@
         "shortName": "GetLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetLunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3276,6 +4288,16 @@
       "clientMethod": {
         "shortName": "GetLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Lun",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3314,6 +4336,16 @@
         "shortName": "GetLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3351,6 +4383,16 @@
       "clientMethod": {
         "shortName": "GetLun",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.LunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.Lun",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3389,6 +4431,16 @@
         "shortName": "GetLunAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetLunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.LunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3426,6 +4478,16 @@
       "clientMethod": {
         "shortName": "ListLuns",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListLunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3465,6 +4527,16 @@
         "shortName": "ListLunsAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListLunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3503,6 +4575,24 @@
       "clientMethod": {
         "shortName": "ListLuns",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3541,6 +4631,24 @@
         "shortName": "ListLunsAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3578,6 +4686,24 @@
       "clientMethod": {
         "shortName": "ListLuns",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3616,6 +4742,24 @@
         "shortName": "ListLunsAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListLunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListLunsResponse, Google.Cloud.BareMetalSolution.V2.Lun>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3653,6 +4797,16 @@
       "clientMethod": {
         "shortName": "GetNfsShare",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShare",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.NfsShare",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3692,6 +4846,16 @@
         "shortName": "GetNfsShareAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShareAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3730,6 +4894,16 @@
       "clientMethod": {
         "shortName": "GetNfsShare",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShare",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.NfsShare",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3768,6 +4942,16 @@
         "shortName": "GetNfsShareAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShareAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3805,6 +4989,16 @@
       "clientMethod": {
         "shortName": "GetNfsShare",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShare",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NFSShareName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BareMetalSolution.V2.NfsShare",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3843,6 +5037,16 @@
         "shortName": "GetNfsShareAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.GetNfsShareAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NFSShareName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3880,6 +5084,16 @@
       "clientMethod": {
         "shortName": "ListNfsShares",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsShares",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNfsSharesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3919,6 +5133,16 @@
         "shortName": "ListNfsSharesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsSharesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.ListNfsSharesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3957,6 +5181,24 @@
       "clientMethod": {
         "shortName": "ListNfsShares",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsShares",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -3995,6 +5237,24 @@
         "shortName": "ListNfsSharesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsSharesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4032,6 +5292,24 @@
       "clientMethod": {
         "shortName": "ListNfsShares",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsShares",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4070,6 +5348,24 @@
         "shortName": "ListNfsSharesAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.ListNfsSharesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse, Google.Cloud.BareMetalSolution.V2.NfsShare>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4107,6 +5403,16 @@
       "clientMethod": {
         "shortName": "UpdateNfsShare",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNfsShare",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.NfsShare, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4146,6 +5452,16 @@
         "shortName": "UpdateNfsShareAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNfsShareAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.NfsShare, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4184,6 +5500,20 @@
       "clientMethod": {
         "shortName": "UpdateNfsShare",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNfsShare",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NfsShare",
+            "name": "nfsShare"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.NfsShare, Google.Cloud.BareMetalSolution.V2.OperationMetadata>",
         "client": {
           "shortName": "BareMetalSolutionClient",
@@ -4222,6 +5552,20 @@
         "shortName": "UpdateNfsShareAsync",
         "fullName": "Google.Cloud.BareMetalSolution.V2.BareMetalSolutionClient.UpdateNfsShareAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BareMetalSolution.V2.NfsShare",
+            "name": "nfsShare"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BareMetalSolution.V2.NfsShare, Google.Cloud.BareMetalSolution.V2.OperationMetadata>>",
         "client": {
           "shortName": "BareMetalSolutionClient",

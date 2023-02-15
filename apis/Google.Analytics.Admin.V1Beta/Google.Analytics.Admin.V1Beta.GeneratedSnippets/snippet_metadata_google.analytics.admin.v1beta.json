@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Account",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Account",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Account",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListAccounts",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListAccounts",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListAccountsResponse, Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "ListAccountsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListAccountsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListAccountsResponse, Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "DeleteAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -361,6 +451,16 @@
         "shortName": "DeleteAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -399,6 +499,16 @@
       "clientMethod": {
         "shortName": "DeleteAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -436,6 +546,16 @@
         "shortName": "DeleteAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -473,6 +593,16 @@
       "clientMethod": {
         "shortName": "DeleteAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -510,6 +640,16 @@
         "shortName": "DeleteAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -547,6 +687,16 @@
       "clientMethod": {
         "shortName": "UpdateAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Account",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -586,6 +736,16 @@
         "shortName": "UpdateAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -624,6 +784,20 @@
       "clientMethod": {
         "shortName": "UpdateAccount",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateAccount",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Account",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -662,6 +836,20 @@
         "shortName": "UpdateAccountAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Account",
+            "name": "account"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Account>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -699,6 +887,16 @@
       "clientMethod": {
         "shortName": "ProvisionAccountTicket",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ProvisionAccountTicket",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ProvisionAccountTicketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ProvisionAccountTicketResponse",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -738,6 +936,16 @@
         "shortName": "ProvisionAccountTicketAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ProvisionAccountTicketAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ProvisionAccountTicketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ProvisionAccountTicketResponse>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -776,6 +984,16 @@
       "clientMethod": {
         "shortName": "ListAccountSummaries",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListAccountSummaries",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListAccountSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListAccountSummariesResponse, Google.Analytics.Admin.V1Beta.AccountSummary>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -815,6 +1033,16 @@
         "shortName": "ListAccountSummariesAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListAccountSummariesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListAccountSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListAccountSummariesResponse, Google.Analytics.Admin.V1Beta.AccountSummary>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -853,6 +1081,16 @@
       "clientMethod": {
         "shortName": "GetProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetPropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -892,6 +1130,16 @@
         "shortName": "GetPropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetPropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetPropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -930,6 +1178,16 @@
       "clientMethod": {
         "shortName": "GetProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetProperty",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -968,6 +1226,16 @@
         "shortName": "GetPropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetPropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1005,6 +1273,16 @@
       "clientMethod": {
         "shortName": "GetProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1043,6 +1321,16 @@
         "shortName": "GetPropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetPropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1080,6 +1368,16 @@
       "clientMethod": {
         "shortName": "ListProperties",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListProperties",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListPropertiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListPropertiesResponse, Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1119,6 +1417,16 @@
         "shortName": "ListPropertiesAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListPropertiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListPropertiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListPropertiesResponse, Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1157,6 +1465,16 @@
       "clientMethod": {
         "shortName": "CreateProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreatePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1196,6 +1514,16 @@
         "shortName": "CreatePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreatePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreatePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1234,6 +1562,16 @@
       "clientMethod": {
         "shortName": "CreateProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Property",
+            "name": "property"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1272,6 +1610,16 @@
         "shortName": "CreatePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreatePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Property",
+            "name": "property"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1309,6 +1657,16 @@
       "clientMethod": {
         "shortName": "DeleteProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeletePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1348,6 +1706,16 @@
         "shortName": "DeletePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeletePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeletePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1386,6 +1754,16 @@
       "clientMethod": {
         "shortName": "DeleteProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteProperty",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1424,6 +1802,16 @@
         "shortName": "DeletePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeletePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1461,6 +1849,16 @@
       "clientMethod": {
         "shortName": "DeleteProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1499,6 +1897,16 @@
         "shortName": "DeletePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeletePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1536,6 +1944,16 @@
       "clientMethod": {
         "shortName": "UpdateProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdatePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1575,6 +1993,16 @@
         "shortName": "UpdatePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdatePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdatePropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1613,6 +2041,20 @@
       "clientMethod": {
         "shortName": "UpdateProperty",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Property",
+            "name": "property"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.Property",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1651,6 +2093,20 @@
         "shortName": "UpdatePropertyAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdatePropertyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.Property",
+            "name": "property"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.Property>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1688,6 +2144,16 @@
       "clientMethod": {
         "shortName": "CreateFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateFirebaseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.FirebaseLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1727,6 +2193,16 @@
         "shortName": "CreateFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateFirebaseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1765,6 +2241,20 @@
       "clientMethod": {
         "shortName": "CreateFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLink",
+            "name": "firebaseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.FirebaseLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1803,6 +2293,20 @@
         "shortName": "CreateFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLink",
+            "name": "firebaseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1840,6 +2344,20 @@
       "clientMethod": {
         "shortName": "CreateFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLink",
+            "name": "firebaseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.FirebaseLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1878,6 +2396,20 @@
         "shortName": "CreateFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLink",
+            "name": "firebaseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1915,6 +2447,16 @@
       "clientMethod": {
         "shortName": "DeleteFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteFirebaseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -1953,6 +2495,16 @@
         "shortName": "DeleteFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteFirebaseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -1991,6 +2543,16 @@
       "clientMethod": {
         "shortName": "DeleteFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -2028,6 +2590,16 @@
         "shortName": "DeleteFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2065,6 +2637,16 @@
       "clientMethod": {
         "shortName": "DeleteFirebaseLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -2102,6 +2684,16 @@
         "shortName": "DeleteFirebaseLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteFirebaseLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.FirebaseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2139,6 +2731,16 @@
       "clientMethod": {
         "shortName": "ListFirebaseLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListFirebaseLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2178,6 +2780,16 @@
         "shortName": "ListFirebaseLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListFirebaseLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2216,6 +2828,24 @@
       "clientMethod": {
         "shortName": "ListFirebaseLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2254,6 +2884,24 @@
         "shortName": "ListFirebaseLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2291,6 +2939,24 @@
       "clientMethod": {
         "shortName": "ListFirebaseLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2329,6 +2995,24 @@
         "shortName": "ListFirebaseLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListFirebaseLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListFirebaseLinksResponse, Google.Analytics.Admin.V1Beta.FirebaseLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2366,6 +3050,16 @@
       "clientMethod": {
         "shortName": "CreateGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2405,6 +3099,16 @@
         "shortName": "CreateGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2443,6 +3147,20 @@
       "clientMethod": {
         "shortName": "CreateGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2481,6 +3199,20 @@
         "shortName": "CreateGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2518,6 +3250,20 @@
       "clientMethod": {
         "shortName": "CreateGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2556,6 +3302,20 @@
         "shortName": "CreateGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2593,6 +3353,16 @@
       "clientMethod": {
         "shortName": "UpdateGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2632,6 +3402,16 @@
         "shortName": "UpdateGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2670,6 +3450,20 @@
       "clientMethod": {
         "shortName": "UpdateGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2708,6 +3502,20 @@
         "shortName": "UpdateGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLink",
+            "name": "googleAdsLink"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2745,6 +3553,16 @@
       "clientMethod": {
         "shortName": "DeleteGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -2783,6 +3601,16 @@
         "shortName": "DeleteGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteGoogleAdsLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2821,6 +3649,16 @@
       "clientMethod": {
         "shortName": "DeleteGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -2858,6 +3696,16 @@
         "shortName": "DeleteGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2895,6 +3743,16 @@
       "clientMethod": {
         "shortName": "DeleteGoogleAdsLink",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -2932,6 +3790,16 @@
         "shortName": "DeleteGoogleAdsLinkAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteGoogleAdsLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GoogleAdsLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -2969,6 +3837,16 @@
       "clientMethod": {
         "shortName": "ListGoogleAdsLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3008,6 +3886,16 @@
         "shortName": "ListGoogleAdsLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3046,6 +3934,24 @@
       "clientMethod": {
         "shortName": "ListGoogleAdsLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3084,6 +3990,24 @@
         "shortName": "ListGoogleAdsLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3121,6 +4045,24 @@
       "clientMethod": {
         "shortName": "ListGoogleAdsLinks",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3159,6 +4101,24 @@
         "shortName": "ListGoogleAdsLinksAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListGoogleAdsLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListGoogleAdsLinksResponse, Google.Analytics.Admin.V1Beta.GoogleAdsLink>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3196,6 +4156,16 @@
       "clientMethod": {
         "shortName": "GetDataSharingSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataSharingSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataSharingSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3235,6 +4205,16 @@
         "shortName": "GetDataSharingSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataSharingSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataSharingSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3273,6 +4253,16 @@
       "clientMethod": {
         "shortName": "GetDataSharingSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataSharingSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3311,6 +4301,16 @@
         "shortName": "GetDataSharingSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataSharingSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3348,6 +4348,16 @@
       "clientMethod": {
         "shortName": "GetDataSharingSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataSharingSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataSharingSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3386,6 +4396,16 @@
         "shortName": "GetDataSharingSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataSharingSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataSharingSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataSharingSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3423,6 +4443,16 @@
       "clientMethod": {
         "shortName": "GetMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3462,6 +4492,16 @@
         "shortName": "GetMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3500,6 +4540,16 @@
       "clientMethod": {
         "shortName": "GetMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3538,6 +4588,16 @@
         "shortName": "GetMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3575,6 +4635,16 @@
       "clientMethod": {
         "shortName": "GetMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3613,6 +4683,16 @@
         "shortName": "GetMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3650,6 +4730,16 @@
       "clientMethod": {
         "shortName": "ListMeasurementProtocolSecrets",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecrets",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3689,6 +4779,16 @@
         "shortName": "ListMeasurementProtocolSecretsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3727,6 +4827,24 @@
       "clientMethod": {
         "shortName": "ListMeasurementProtocolSecrets",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecrets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3765,6 +4883,24 @@
         "shortName": "ListMeasurementProtocolSecretsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3802,6 +4938,24 @@
       "clientMethod": {
         "shortName": "ListMeasurementProtocolSecrets",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecrets",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3840,6 +4994,24 @@
         "shortName": "ListMeasurementProtocolSecretsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListMeasurementProtocolSecretsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListMeasurementProtocolSecretsResponse, Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3877,6 +5049,16 @@
       "clientMethod": {
         "shortName": "CreateMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3916,6 +5098,16 @@
         "shortName": "CreateMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3954,6 +5146,20 @@
       "clientMethod": {
         "shortName": "CreateMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -3992,6 +5198,20 @@
         "shortName": "CreateMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4029,6 +5249,20 @@
       "clientMethod": {
         "shortName": "CreateMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4067,6 +5301,20 @@
         "shortName": "CreateMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4104,6 +5352,16 @@
       "clientMethod": {
         "shortName": "DeleteMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -4142,6 +5400,16 @@
         "shortName": "DeleteMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4180,6 +5448,16 @@
       "clientMethod": {
         "shortName": "DeleteMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -4217,6 +5495,16 @@
         "shortName": "DeleteMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4254,6 +5542,16 @@
       "clientMethod": {
         "shortName": "DeleteMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -4291,6 +5589,16 @@
         "shortName": "DeleteMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4328,6 +5636,16 @@
       "clientMethod": {
         "shortName": "UpdateMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4367,6 +5685,16 @@
         "shortName": "UpdateMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateMeasurementProtocolSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4405,6 +5733,20 @@
       "clientMethod": {
         "shortName": "UpdateMeasurementProtocolSecret",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateMeasurementProtocolSecret",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4443,6 +5785,20 @@
         "shortName": "UpdateMeasurementProtocolSecretAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateMeasurementProtocolSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret",
+            "name": "measurementProtocolSecret"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4480,6 +5836,16 @@
       "clientMethod": {
         "shortName": "AcknowledgeUserDataCollection",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.AcknowledgeUserDataCollection",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionResponse",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4519,6 +5885,16 @@
         "shortName": "AcknowledgeUserDataCollectionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.AcknowledgeUserDataCollectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionResponse>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4557,6 +5933,16 @@
       "clientMethod": {
         "shortName": "SearchChangeHistoryEvents",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.SearchChangeHistoryEvents",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsResponse, Google.Analytics.Admin.V1Beta.ChangeHistoryEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4596,6 +5982,16 @@
         "shortName": "SearchChangeHistoryEventsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.SearchChangeHistoryEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsResponse, Google.Analytics.Admin.V1Beta.ChangeHistoryEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4634,6 +6030,16 @@
       "clientMethod": {
         "shortName": "CreateConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4673,6 +6079,16 @@
         "shortName": "CreateConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4711,6 +6127,20 @@
       "clientMethod": {
         "shortName": "CreateConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4749,6 +6179,20 @@
         "shortName": "CreateConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4786,6 +6230,20 @@
       "clientMethod": {
         "shortName": "CreateConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4824,6 +6282,20 @@
         "shortName": "CreateConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4861,6 +6333,16 @@
       "clientMethod": {
         "shortName": "GetConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4900,6 +6382,16 @@
         "shortName": "GetConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4938,6 +6430,16 @@
       "clientMethod": {
         "shortName": "GetConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -4976,6 +6478,16 @@
         "shortName": "GetConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5013,6 +6525,16 @@
       "clientMethod": {
         "shortName": "GetConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.ConversionEvent",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5051,6 +6573,16 @@
         "shortName": "GetConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5088,6 +6620,16 @@
       "clientMethod": {
         "shortName": "DeleteConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -5126,6 +6668,16 @@
         "shortName": "DeleteConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5164,6 +6716,16 @@
       "clientMethod": {
         "shortName": "DeleteConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -5201,6 +6763,16 @@
         "shortName": "DeleteConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5238,6 +6810,16 @@
       "clientMethod": {
         "shortName": "DeleteConversionEvent",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -5275,6 +6857,16 @@
         "shortName": "DeleteConversionEventAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteConversionEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ConversionEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5312,6 +6904,16 @@
       "clientMethod": {
         "shortName": "ListConversionEvents",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEvents",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListConversionEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5351,6 +6953,16 @@
         "shortName": "ListConversionEventsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListConversionEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5389,6 +7001,24 @@
       "clientMethod": {
         "shortName": "ListConversionEvents",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5427,6 +7057,24 @@
         "shortName": "ListConversionEventsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5464,6 +7112,24 @@
       "clientMethod": {
         "shortName": "ListConversionEvents",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEvents",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5502,6 +7168,24 @@
         "shortName": "ListConversionEventsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListConversionEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListConversionEventsResponse, Google.Analytics.Admin.V1Beta.ConversionEvent>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5539,6 +7223,16 @@
       "clientMethod": {
         "shortName": "CreateCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5578,6 +7272,16 @@
         "shortName": "CreateCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5616,6 +7320,20 @@
       "clientMethod": {
         "shortName": "CreateCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5654,6 +7372,20 @@
         "shortName": "CreateCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5691,6 +7423,20 @@
       "clientMethod": {
         "shortName": "CreateCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5729,6 +7475,20 @@
         "shortName": "CreateCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5766,6 +7526,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5805,6 +7575,16 @@
         "shortName": "UpdateCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5843,6 +7623,20 @@
       "clientMethod": {
         "shortName": "UpdateCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5881,6 +7675,20 @@
         "shortName": "UpdateCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimension",
+            "name": "customDimension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5918,6 +7726,16 @@
       "clientMethod": {
         "shortName": "ListCustomDimensions",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensions",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListCustomDimensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5957,6 +7775,16 @@
         "shortName": "ListCustomDimensionsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListCustomDimensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -5995,6 +7823,24 @@
       "clientMethod": {
         "shortName": "ListCustomDimensions",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6033,6 +7879,24 @@
         "shortName": "ListCustomDimensionsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6070,6 +7934,24 @@
       "clientMethod": {
         "shortName": "ListCustomDimensions",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensions",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6108,6 +7990,24 @@
         "shortName": "ListCustomDimensionsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomDimensionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse, Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6145,6 +8045,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ArchiveCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -6183,6 +8093,16 @@
         "shortName": "ArchiveCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ArchiveCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6221,6 +8141,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -6258,6 +8188,16 @@
         "shortName": "ArchiveCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6295,6 +8235,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -6332,6 +8282,16 @@
         "shortName": "ArchiveCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6369,6 +8329,16 @@
       "clientMethod": {
         "shortName": "GetCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6408,6 +8378,16 @@
         "shortName": "GetCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetCustomDimensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6446,6 +8426,16 @@
       "clientMethod": {
         "shortName": "GetCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6484,6 +8474,16 @@
         "shortName": "GetCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6521,6 +8521,16 @@
       "clientMethod": {
         "shortName": "GetCustomDimension",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimension",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomDimension",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6559,6 +8569,16 @@
         "shortName": "GetCustomDimensionAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomDimensionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomDimensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomDimension>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6596,6 +8616,16 @@
       "clientMethod": {
         "shortName": "CreateCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6635,6 +8665,16 @@
         "shortName": "CreateCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6673,6 +8713,20 @@
       "clientMethod": {
         "shortName": "CreateCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6711,6 +8765,20 @@
         "shortName": "CreateCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6748,6 +8816,20 @@
       "clientMethod": {
         "shortName": "CreateCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6786,6 +8868,20 @@
         "shortName": "CreateCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6823,6 +8919,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6862,6 +8968,16 @@
         "shortName": "UpdateCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6900,6 +9016,20 @@
       "clientMethod": {
         "shortName": "UpdateCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6938,6 +9068,20 @@
         "shortName": "UpdateCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetric",
+            "name": "customMetric"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -6975,6 +9119,16 @@
       "clientMethod": {
         "shortName": "ListCustomMetrics",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetrics",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListCustomMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7014,6 +9168,16 @@
         "shortName": "ListCustomMetricsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListCustomMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7052,6 +9216,24 @@
       "clientMethod": {
         "shortName": "ListCustomMetrics",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetrics",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7090,6 +9272,24 @@
         "shortName": "ListCustomMetricsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7127,6 +9327,24 @@
       "clientMethod": {
         "shortName": "ListCustomMetrics",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetrics",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7165,6 +9383,24 @@
         "shortName": "ListCustomMetricsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListCustomMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListCustomMetricsResponse, Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7202,6 +9438,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ArchiveCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -7240,6 +9486,16 @@
         "shortName": "ArchiveCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ArchiveCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7278,6 +9534,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -7315,6 +9581,16 @@
         "shortName": "ArchiveCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7352,6 +9628,16 @@
       "clientMethod": {
         "shortName": "ArchiveCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetricName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -7389,6 +9675,16 @@
         "shortName": "ArchiveCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ArchiveCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetricName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7426,6 +9722,16 @@
       "clientMethod": {
         "shortName": "GetCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7465,6 +9771,16 @@
         "shortName": "GetCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetCustomMetricRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7503,6 +9819,16 @@
       "clientMethod": {
         "shortName": "GetCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetric",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7541,6 +9867,16 @@
         "shortName": "GetCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7578,6 +9914,16 @@
       "clientMethod": {
         "shortName": "GetCustomMetric",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetric",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetricName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.CustomMetric",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7616,6 +9962,16 @@
         "shortName": "GetCustomMetricAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetCustomMetricAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CustomMetricName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.CustomMetric>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7653,6 +10009,16 @@
       "clientMethod": {
         "shortName": "GetDataRetentionSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataRetentionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7692,6 +10058,16 @@
         "shortName": "GetDataRetentionSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataRetentionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataRetentionSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7730,6 +10106,16 @@
       "clientMethod": {
         "shortName": "GetDataRetentionSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7768,6 +10154,16 @@
         "shortName": "GetDataRetentionSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataRetentionSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7805,6 +10201,16 @@
       "clientMethod": {
         "shortName": "GetDataRetentionSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataRetentionSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7843,6 +10249,16 @@
         "shortName": "GetDataRetentionSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataRetentionSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataRetentionSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataRetentionSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7880,6 +10296,16 @@
       "clientMethod": {
         "shortName": "UpdateDataRetentionSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataRetentionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateDataRetentionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7919,6 +10345,16 @@
         "shortName": "UpdateDataRetentionSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataRetentionSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateDataRetentionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataRetentionSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7957,6 +10393,20 @@
       "clientMethod": {
         "shortName": "UpdateDataRetentionSettings",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataRetentionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
+            "name": "dataRetentionSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -7995,6 +10445,20 @@
         "shortName": "UpdateDataRetentionSettingsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataRetentionSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataRetentionSettings",
+            "name": "dataRetentionSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataRetentionSettings>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8032,6 +10496,16 @@
       "clientMethod": {
         "shortName": "CreateDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8071,6 +10545,16 @@
         "shortName": "CreateDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.CreateDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8109,6 +10593,20 @@
       "clientMethod": {
         "shortName": "CreateDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8147,6 +10645,20 @@
         "shortName": "CreateDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8184,6 +10696,20 @@
       "clientMethod": {
         "shortName": "CreateDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8222,6 +10748,20 @@
         "shortName": "CreateDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.CreateDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8259,6 +10799,16 @@
       "clientMethod": {
         "shortName": "DeleteDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -8297,6 +10847,16 @@
         "shortName": "DeleteDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DeleteDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8335,6 +10895,16 @@
       "clientMethod": {
         "shortName": "DeleteDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -8372,6 +10942,16 @@
         "shortName": "DeleteDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8409,6 +10989,16 @@
       "clientMethod": {
         "shortName": "DeleteDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
           "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
@@ -8446,6 +11036,16 @@
         "shortName": "DeleteDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.DeleteDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8483,6 +11083,16 @@
       "clientMethod": {
         "shortName": "UpdateDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8522,6 +11132,16 @@
         "shortName": "UpdateDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.UpdateDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8560,6 +11180,20 @@
       "clientMethod": {
         "shortName": "UpdateDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8598,6 +11232,20 @@
         "shortName": "UpdateDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.UpdateDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStream",
+            "name": "dataStream"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8635,6 +11283,16 @@
       "clientMethod": {
         "shortName": "ListDataStreams",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreams",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListDataStreamsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8674,6 +11332,16 @@
         "shortName": "ListDataStreamsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.ListDataStreamsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8712,6 +11380,24 @@
       "clientMethod": {
         "shortName": "ListDataStreams",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreams",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8750,6 +11436,24 @@
         "shortName": "ListDataStreamsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8787,6 +11491,24 @@
       "clientMethod": {
         "shortName": "ListDataStreams",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreams",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8825,6 +11547,24 @@
         "shortName": "ListDataStreamsAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.ListDataStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Beta.ListDataStreamsResponse, Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8862,6 +11602,16 @@
       "clientMethod": {
         "shortName": "GetDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8901,6 +11651,16 @@
         "shortName": "GetDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.GetDataStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8939,6 +11699,16 @@
       "clientMethod": {
         "shortName": "GetDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -8977,6 +11747,16 @@
         "shortName": "GetDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -9014,6 +11794,16 @@
       "clientMethod": {
         "shortName": "GetDataStream",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStream",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Admin.V1Beta.DataStream",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",
@@ -9052,6 +11842,16 @@
         "shortName": "GetDataStreamAsync",
         "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.GetDataStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.DataStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.DataStream>",
         "client": {
           "shortName": "AnalyticsAdminServiceClient",

@@ -1844,7 +1844,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1865,7 +1866,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1886,7 +1888,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1934,7 +1937,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -1970,7 +1974,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2006,7 +2011,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2038,7 +2044,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2074,7 +2081,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2110,7 +2118,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2142,7 +2151,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2176,7 +2186,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2210,7 +2221,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2240,7 +2252,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2274,7 +2287,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2308,7 +2322,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2895,7 +2910,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training
@@ -2919,7 +2935,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// 
         /// - `metadata`: An empty [Struct
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-        /// - `response`: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
+        /// - `response`:
+        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2beta1.BatchUpdateIntentsResponse]
         /// 
         /// Note: You should always train an agent prior to sending it queries. See the
         /// [training

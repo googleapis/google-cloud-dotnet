@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.CreateContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.CreateContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContact",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -246,6 +322,20 @@
       "clientMethod": {
         "shortName": "CreateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContact",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -284,6 +374,20 @@
         "shortName": "CreateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -321,6 +425,20 @@
       "clientMethod": {
         "shortName": "CreateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContact",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -359,6 +477,20 @@
         "shortName": "CreateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.CreateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -396,6 +528,16 @@
       "clientMethod": {
         "shortName": "UpdateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.UpdateContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.UpdateContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -435,6 +577,16 @@
         "shortName": "UpdateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.UpdateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.UpdateContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -473,6 +625,20 @@
       "clientMethod": {
         "shortName": "UpdateContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.UpdateContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -511,6 +677,20 @@
         "shortName": "UpdateContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.UpdateContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.Contact",
+            "name": "contact"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -548,6 +728,16 @@
       "clientMethod": {
         "shortName": "ListContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ListContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -587,6 +777,16 @@
         "shortName": "ListContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ListContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -625,6 +825,24 @@
       "clientMethod": {
         "shortName": "ListContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContacts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -663,6 +881,24 @@
         "shortName": "ListContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -700,6 +936,24 @@
       "clientMethod": {
         "shortName": "ListContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContacts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -738,6 +992,24 @@
         "shortName": "ListContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -775,6 +1047,24 @@
       "clientMethod": {
         "shortName": "ListContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContacts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -813,6 +1103,24 @@
         "shortName": "ListContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -850,6 +1158,24 @@
       "clientMethod": {
         "shortName": "ListContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContacts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -888,6 +1214,24 @@
         "shortName": "ListContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ListContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ListContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -925,6 +1269,16 @@
       "clientMethod": {
         "shortName": "GetContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.GetContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -964,6 +1318,16 @@
         "shortName": "GetContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.GetContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1002,6 +1366,16 @@
       "clientMethod": {
         "shortName": "GetContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1040,6 +1414,16 @@
         "shortName": "GetContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1077,6 +1461,16 @@
       "clientMethod": {
         "shortName": "GetContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ContactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EssentialContacts.V1.Contact",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1115,6 +1509,16 @@
         "shortName": "GetContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.GetContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ContactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1152,6 +1556,16 @@
       "clientMethod": {
         "shortName": "DeleteContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.DeleteContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EssentialContactsServiceClient",
           "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient"
@@ -1190,6 +1604,16 @@
         "shortName": "DeleteContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.DeleteContactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1228,6 +1652,16 @@
       "clientMethod": {
         "shortName": "DeleteContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContact",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EssentialContactsServiceClient",
           "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient"
@@ -1265,6 +1699,16 @@
         "shortName": "DeleteContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1302,6 +1746,16 @@
       "clientMethod": {
         "shortName": "DeleteContact",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ContactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EssentialContactsServiceClient",
           "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient"
@@ -1339,6 +1793,16 @@
         "shortName": "DeleteContactAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.DeleteContactAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ContactName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1376,6 +1840,16 @@
       "clientMethod": {
         "shortName": "ComputeContacts",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ComputeContacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ComputeContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EssentialContacts.V1.ComputeContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1415,6 +1889,16 @@
         "shortName": "ComputeContactsAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.ComputeContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.ComputeContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EssentialContacts.V1.ComputeContactsResponse, Google.Cloud.EssentialContacts.V1.Contact>",
         "client": {
           "shortName": "EssentialContactsServiceClient",
@@ -1453,6 +1937,16 @@
       "clientMethod": {
         "shortName": "SendTestMessage",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.SendTestMessage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.SendTestMessageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EssentialContactsServiceClient",
           "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient"
@@ -1491,6 +1985,16 @@
         "shortName": "SendTestMessageAsync",
         "fullName": "Google.Cloud.EssentialContacts.V1.EssentialContactsServiceClient.SendTestMessageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EssentialContacts.V1.SendTestMessageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EssentialContactsServiceClient",

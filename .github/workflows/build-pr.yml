@@ -33,7 +33,7 @@ jobs:
 
     - name: Detect CRLF files
       run: |
-        ! git ls-files --eol | grep crlf
+        ! git ls-files --eol | grep -e i/crlf -e i/mixed
 
     - name: Build and test
       run: |

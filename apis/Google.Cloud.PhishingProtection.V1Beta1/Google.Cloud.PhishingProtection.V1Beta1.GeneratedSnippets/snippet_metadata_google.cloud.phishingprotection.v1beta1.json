@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ReportPhishing",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",
@@ -58,6 +68,16 @@
         "shortName": "ReportPhishingAsync",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "ReportPhishing",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",
@@ -134,6 +168,20 @@
         "shortName": "ReportPhishingAsync",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "ReportPhishing",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishing",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",
@@ -209,6 +271,20 @@
         "shortName": "ReportPhishingAsync",
         "fullName": "Google.Cloud.PhishingProtection.V1Beta1.PhishingProtectionServiceV1Beta1Client.ReportPhishingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PhishingProtection.V1Beta1.ReportPhishingResponse>",
         "client": {
           "shortName": "PhishingProtectionServiceV1Beta1Client",

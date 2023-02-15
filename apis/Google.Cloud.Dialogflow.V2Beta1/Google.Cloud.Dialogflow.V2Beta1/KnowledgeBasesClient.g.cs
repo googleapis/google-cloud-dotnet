@@ -213,7 +213,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>KnowledgeBases client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [KnowledgeBases][google.cloud.dialogflow.v2beta1.KnowledgeBase].
+    /// Service for managing
+    /// [KnowledgeBases][google.cloud.dialogflow.v2beta1.KnowledgeBase].
     /// </remarks>
     public abstract partial class KnowledgeBasesClient
     {
@@ -1154,7 +1155,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
     /// <summary>KnowledgeBases client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for managing [KnowledgeBases][google.cloud.dialogflow.v2beta1.KnowledgeBase].
+    /// Service for managing
+    /// [KnowledgeBases][google.cloud.dialogflow.v2beta1.KnowledgeBase].
     /// </remarks>
     public sealed partial class KnowledgeBasesClientImpl : KnowledgeBasesClient
     {

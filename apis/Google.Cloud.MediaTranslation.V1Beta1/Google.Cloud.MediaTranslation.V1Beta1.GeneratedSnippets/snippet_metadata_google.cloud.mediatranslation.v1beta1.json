@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "StreamingTranslateSpeech",
         "fullName": "Google.Cloud.MediaTranslation.V1Beta1.SpeechTranslationServiceClient.StreamingTranslateSpeech",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.MediaTranslation.V1Beta1.SpeechTranslationServiceClient+StreamingTranslateSpeechStream",
         "client": {
           "shortName": "SpeechTranslationServiceClient",

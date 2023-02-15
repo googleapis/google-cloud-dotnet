@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "System.String",
+            "name": "conversationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "System.String",
+            "name": "conversationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversation",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "System.String",
+            "name": "conversationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "System.String",
+            "name": "conversationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "UpdateConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -285,6 +387,16 @@
         "shortName": "UpdateConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -323,6 +435,20 @@
       "clientMethod": {
         "shortName": "UpdateConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -361,6 +487,20 @@
         "shortName": "UpdateConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -398,6 +538,16 @@
       "clientMethod": {
         "shortName": "GetConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -437,6 +587,16 @@
         "shortName": "GetConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -475,6 +635,16 @@
       "clientMethod": {
         "shortName": "GetConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -513,6 +683,16 @@
         "shortName": "GetConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -550,6 +730,16 @@
       "clientMethod": {
         "shortName": "GetConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Conversation",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -588,6 +778,16 @@
         "shortName": "GetConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -625,6 +825,16 @@
       "clientMethod": {
         "shortName": "ListConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -664,6 +874,16 @@
         "shortName": "ListConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -702,6 +922,24 @@
       "clientMethod": {
         "shortName": "ListConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -740,6 +978,24 @@
         "shortName": "ListConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -777,6 +1033,24 @@
       "clientMethod": {
         "shortName": "ListConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -815,6 +1089,24 @@
         "shortName": "ListConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse, Google.Cloud.ContactCenterInsights.V1.Conversation>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -890,6 +1192,16 @@
         "shortName": "DeleteConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -928,6 +1240,16 @@
       "clientMethod": {
         "shortName": "DeleteConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -965,6 +1287,16 @@
         "shortName": "DeleteConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1002,6 +1334,16 @@
       "clientMethod": {
         "shortName": "DeleteConversation",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -1039,6 +1381,16 @@
         "shortName": "DeleteConversationAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteConversationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "CreateAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1115,6 +1477,16 @@
         "shortName": "CreateAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1153,6 +1525,20 @@
       "clientMethod": {
         "shortName": "CreateAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Analysis",
+            "name": "analysis"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1191,6 +1577,20 @@
         "shortName": "CreateAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Analysis",
+            "name": "analysis"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1228,6 +1628,20 @@
       "clientMethod": {
         "shortName": "CreateAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Analysis",
+            "name": "analysis"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1266,6 +1680,20 @@
         "shortName": "CreateAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Analysis",
+            "name": "analysis"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Analysis, Google.Cloud.ContactCenterInsights.V1.CreateAnalysisOperationMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1303,6 +1731,16 @@
       "clientMethod": {
         "shortName": "GetAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Analysis",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1342,6 +1780,16 @@
         "shortName": "GetAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1380,6 +1828,16 @@
       "clientMethod": {
         "shortName": "GetAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Analysis",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1418,6 +1876,16 @@
         "shortName": "GetAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1455,6 +1923,16 @@
       "clientMethod": {
         "shortName": "GetAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.AnalysisName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Analysis",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1493,6 +1971,16 @@
         "shortName": "GetAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.AnalysisName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1530,6 +2018,16 @@
       "clientMethod": {
         "shortName": "ListAnalyses",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalyses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1569,6 +2067,16 @@
         "shortName": "ListAnalysesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalysesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1607,6 +2115,24 @@
       "clientMethod": {
         "shortName": "ListAnalyses",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalyses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1645,6 +2171,24 @@
         "shortName": "ListAnalysesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalysesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1682,6 +2226,24 @@
       "clientMethod": {
         "shortName": "ListAnalyses",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalyses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1720,6 +2282,24 @@
         "shortName": "ListAnalysesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListAnalysesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ConversationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse, Google.Cloud.ContactCenterInsights.V1.Analysis>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1757,6 +2337,16 @@
       "clientMethod": {
         "shortName": "DeleteAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -1795,6 +2385,16 @@
         "shortName": "DeleteAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1833,6 +2433,16 @@
       "clientMethod": {
         "shortName": "DeleteAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -1870,6 +2480,16 @@
         "shortName": "DeleteAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1907,6 +2527,16 @@
       "clientMethod": {
         "shortName": "DeleteAnalysis",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.AnalysisName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -1944,6 +2574,16 @@
         "shortName": "DeleteAnalysisAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteAnalysisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.AnalysisName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -1981,6 +2621,16 @@
       "clientMethod": {
         "shortName": "BulkAnalyzeConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2020,6 +2670,16 @@
         "shortName": "BulkAnalyzeConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2058,6 +2718,24 @@
       "clientMethod": {
         "shortName": "BulkAnalyzeConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Single",
+            "name": "analysisPercentage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2096,6 +2774,24 @@
         "shortName": "BulkAnalyzeConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Single",
+            "name": "analysisPercentage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2133,6 +2829,24 @@
       "clientMethod": {
         "shortName": "BulkAnalyzeConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Single",
+            "name": "analysisPercentage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2171,6 +2885,24 @@
         "shortName": "BulkAnalyzeConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkAnalyzeConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Single",
+            "name": "analysisPercentage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkAnalyzeConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2208,6 +2940,16 @@
       "clientMethod": {
         "shortName": "IngestConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IngestConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2247,6 +2989,16 @@
         "shortName": "IngestConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IngestConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2285,6 +3037,16 @@
       "clientMethod": {
         "shortName": "IngestConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2323,6 +3085,16 @@
         "shortName": "IngestConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2360,6 +3132,16 @@
       "clientMethod": {
         "shortName": "IngestConversations",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2398,6 +3180,16 @@
         "shortName": "IngestConversationsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.IngestConversationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IngestConversationsResponse, Google.Cloud.ContactCenterInsights.V1.IngestConversationsMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2435,6 +3227,16 @@
       "clientMethod": {
         "shortName": "ExportInsightsData",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2474,6 +3276,16 @@
         "shortName": "ExportInsightsDataAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2512,6 +3324,16 @@
       "clientMethod": {
         "shortName": "ExportInsightsData",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2550,6 +3372,16 @@
         "shortName": "ExportInsightsDataAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2587,6 +3419,16 @@
       "clientMethod": {
         "shortName": "ExportInsightsData",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsData",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2625,6 +3467,16 @@
         "shortName": "ExportInsightsDataAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ExportInsightsDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataResponse, Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2662,6 +3514,16 @@
       "clientMethod": {
         "shortName": "CreateIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2701,6 +3563,16 @@
         "shortName": "CreateIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2739,6 +3611,20 @@
       "clientMethod": {
         "shortName": "CreateIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2777,6 +3663,20 @@
         "shortName": "CreateIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2814,6 +3714,20 @@
       "clientMethod": {
         "shortName": "CreateIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2852,6 +3766,20 @@
         "shortName": "CreateIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.IssueModel, Google.Cloud.ContactCenterInsights.V1.CreateIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2889,6 +3817,16 @@
       "clientMethod": {
         "shortName": "UpdateIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2928,6 +3866,16 @@
         "shortName": "UpdateIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.IssueModel>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -2966,6 +3914,20 @@
       "clientMethod": {
         "shortName": "UpdateIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3004,6 +3966,20 @@
         "shortName": "UpdateIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.IssueModel>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3041,6 +4017,16 @@
       "clientMethod": {
         "shortName": "GetIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3080,6 +4066,16 @@
         "shortName": "GetIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.IssueModel>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3118,6 +4114,16 @@
       "clientMethod": {
         "shortName": "GetIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3156,6 +4162,16 @@
         "shortName": "GetIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.IssueModel>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3193,6 +4209,16 @@
       "clientMethod": {
         "shortName": "GetIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.IssueModel",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3231,6 +4257,16 @@
         "shortName": "GetIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.IssueModel>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3268,6 +4304,16 @@
       "clientMethod": {
         "shortName": "ListIssueModels",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3307,6 +4353,16 @@
         "shortName": "ListIssueModelsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3345,6 +4401,16 @@
       "clientMethod": {
         "shortName": "ListIssueModels",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3383,6 +4449,16 @@
         "shortName": "ListIssueModelsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3420,6 +4496,16 @@
       "clientMethod": {
         "shortName": "ListIssueModels",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3458,6 +4544,16 @@
         "shortName": "ListIssueModelsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssueModelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3495,6 +4591,16 @@
       "clientMethod": {
         "shortName": "DeleteIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3534,6 +4640,16 @@
         "shortName": "DeleteIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3572,6 +4688,16 @@
       "clientMethod": {
         "shortName": "DeleteIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3610,6 +4736,16 @@
         "shortName": "DeleteIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3647,6 +4783,16 @@
       "clientMethod": {
         "shortName": "DeleteIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3685,6 +4831,16 @@
         "shortName": "DeleteIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3722,6 +4878,16 @@
       "clientMethod": {
         "shortName": "DeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3761,6 +4927,16 @@
         "shortName": "DeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3799,6 +4975,16 @@
       "clientMethod": {
         "shortName": "DeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3837,6 +5023,16 @@
         "shortName": "DeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3874,6 +5070,16 @@
       "clientMethod": {
         "shortName": "DeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3912,6 +5118,16 @@
         "shortName": "DeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.DeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.DeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3949,6 +5165,16 @@
       "clientMethod": {
         "shortName": "UndeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -3988,6 +5214,16 @@
         "shortName": "UndeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4026,6 +5262,16 @@
       "clientMethod": {
         "shortName": "UndeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4064,6 +5310,16 @@
         "shortName": "UndeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4101,6 +5357,16 @@
       "clientMethod": {
         "shortName": "UndeployIssueModel",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4139,6 +5405,16 @@
         "shortName": "UndeployIssueModelAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UndeployIssueModelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelResponse, Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelMetadata>>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4176,6 +5452,16 @@
       "clientMethod": {
         "shortName": "GetIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Issue",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4215,6 +5501,16 @@
         "shortName": "GetIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Issue>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4253,6 +5549,16 @@
       "clientMethod": {
         "shortName": "GetIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Issue",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4291,6 +5597,16 @@
         "shortName": "GetIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Issue>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4328,6 +5644,16 @@
       "clientMethod": {
         "shortName": "GetIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Issue",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4366,6 +5692,16 @@
         "shortName": "GetIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Issue>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4403,6 +5739,16 @@
       "clientMethod": {
         "shortName": "ListIssues",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssues",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4442,6 +5788,16 @@
         "shortName": "ListIssuesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4480,6 +5836,16 @@
       "clientMethod": {
         "shortName": "ListIssues",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4518,6 +5884,16 @@
         "shortName": "ListIssuesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4555,6 +5931,16 @@
       "clientMethod": {
         "shortName": "ListIssues",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssues",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4593,6 +5979,16 @@
         "shortName": "ListIssuesAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListIssuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4630,6 +6026,16 @@
       "clientMethod": {
         "shortName": "UpdateIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Issue",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4669,6 +6075,16 @@
         "shortName": "UpdateIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Issue>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4707,6 +6123,20 @@
       "clientMethod": {
         "shortName": "UpdateIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Issue",
+            "name": "issue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Issue",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4745,6 +6175,20 @@
         "shortName": "UpdateIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Issue",
+            "name": "issue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Issue>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4782,6 +6226,16 @@
       "clientMethod": {
         "shortName": "DeleteIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -4820,6 +6274,16 @@
         "shortName": "DeleteIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteIssueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4858,6 +6322,16 @@
       "clientMethod": {
         "shortName": "DeleteIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -4895,6 +6369,16 @@
         "shortName": "DeleteIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -4932,6 +6416,16 @@
       "clientMethod": {
         "shortName": "DeleteIssue",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -4969,6 +6463,16 @@
         "shortName": "DeleteIssueAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteIssueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5006,6 +6510,16 @@
       "clientMethod": {
         "shortName": "CalculateIssueModelStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5045,6 +6559,16 @@
         "shortName": "CalculateIssueModelStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5083,6 +6607,16 @@
       "clientMethod": {
         "shortName": "CalculateIssueModelStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStats",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5121,6 +6655,16 @@
         "shortName": "CalculateIssueModelStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5158,6 +6702,16 @@
       "clientMethod": {
         "shortName": "CalculateIssueModelStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5196,6 +6750,16 @@
         "shortName": "CalculateIssueModelStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateIssueModelStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.IssueModelName",
+            "name": "issueModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5233,6 +6797,16 @@
       "clientMethod": {
         "shortName": "CreatePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5272,6 +6846,16 @@
         "shortName": "CreatePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5310,6 +6894,20 @@
       "clientMethod": {
         "shortName": "CreatePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcher",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5348,6 +6946,20 @@
         "shortName": "CreatePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5385,6 +6997,20 @@
       "clientMethod": {
         "shortName": "CreatePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5423,6 +7049,20 @@
         "shortName": "CreatePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreatePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5460,6 +7100,16 @@
       "clientMethod": {
         "shortName": "GetPhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5499,6 +7149,16 @@
         "shortName": "GetPhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5537,6 +7197,16 @@
       "clientMethod": {
         "shortName": "GetPhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcher",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5575,6 +7245,16 @@
         "shortName": "GetPhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5612,6 +7292,16 @@
       "clientMethod": {
         "shortName": "GetPhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcherName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5650,6 +7340,16 @@
         "shortName": "GetPhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetPhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcherName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5687,6 +7387,16 @@
       "clientMethod": {
         "shortName": "ListPhraseMatchers",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5726,6 +7436,16 @@
         "shortName": "ListPhraseMatchersAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5764,6 +7484,24 @@
       "clientMethod": {
         "shortName": "ListPhraseMatchers",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5802,6 +7540,24 @@
         "shortName": "ListPhraseMatchersAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5839,6 +7595,24 @@
       "clientMethod": {
         "shortName": "ListPhraseMatchers",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5877,6 +7651,24 @@
         "shortName": "ListPhraseMatchersAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListPhraseMatchersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse, Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5914,6 +7706,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -5952,6 +7754,16 @@
         "shortName": "DeletePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -5990,6 +7802,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcher",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -6027,6 +7849,16 @@
         "shortName": "DeletePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6064,6 +7896,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcherName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -6101,6 +7943,16 @@
         "shortName": "DeletePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeletePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcherName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6138,6 +7990,16 @@
       "clientMethod": {
         "shortName": "UpdatePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdatePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdatePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6177,6 +8039,16 @@
         "shortName": "UpdatePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdatePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdatePhraseMatcherRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6215,6 +8087,20 @@
       "clientMethod": {
         "shortName": "UpdatePhraseMatcher",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdatePhraseMatcher",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6253,6 +8139,20 @@
         "shortName": "UpdatePhraseMatcherAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdatePhraseMatcherAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.PhraseMatcher",
+            "name": "phraseMatcher"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6290,6 +8190,16 @@
       "clientMethod": {
         "shortName": "CalculateStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6329,6 +8239,16 @@
         "shortName": "CalculateStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6367,6 +8287,16 @@
       "clientMethod": {
         "shortName": "CalculateStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStats",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6405,6 +8335,16 @@
         "shortName": "CalculateStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6442,6 +8382,16 @@
       "clientMethod": {
         "shortName": "CalculateStats",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStats",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6480,6 +8430,16 @@
         "shortName": "CalculateStatsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CalculateStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6517,6 +8477,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Settings",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6556,6 +8526,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Settings>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6594,6 +8574,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Settings",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6632,6 +8622,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Settings>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6669,6 +8669,16 @@
       "clientMethod": {
         "shortName": "GetSettings",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Settings",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6707,6 +8717,16 @@
         "shortName": "GetSettingsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Settings>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6744,6 +8764,16 @@
       "clientMethod": {
         "shortName": "UpdateSettings",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Settings",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6783,6 +8813,16 @@
         "shortName": "UpdateSettingsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Settings>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6821,6 +8861,20 @@
       "clientMethod": {
         "shortName": "UpdateSettings",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.Settings",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6859,6 +8913,20 @@
         "shortName": "UpdateSettingsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.Settings>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6896,6 +8964,16 @@
       "clientMethod": {
         "shortName": "CreateView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6935,6 +9013,16 @@
         "shortName": "CreateViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.CreateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -6973,6 +9061,20 @@
       "clientMethod": {
         "shortName": "CreateView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7011,6 +9113,20 @@
         "shortName": "CreateViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7048,6 +9164,20 @@
       "clientMethod": {
         "shortName": "CreateView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateView",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7086,6 +9216,20 @@
         "shortName": "CreateViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.CreateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7123,6 +9267,16 @@
       "clientMethod": {
         "shortName": "GetView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7162,6 +9316,16 @@
         "shortName": "GetViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.GetViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7200,6 +9364,16 @@
       "clientMethod": {
         "shortName": "GetView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7238,6 +9412,16 @@
         "shortName": "GetViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7275,6 +9459,16 @@
       "clientMethod": {
         "shortName": "GetView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7313,6 +9507,16 @@
         "shortName": "GetViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.GetViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7350,6 +9554,16 @@
       "clientMethod": {
         "shortName": "ListViews",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7389,6 +9603,16 @@
         "shortName": "ListViewsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViewsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ListViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7427,6 +9651,24 @@
       "clientMethod": {
         "shortName": "ListViews",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7465,6 +9707,24 @@
         "shortName": "ListViewsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViewsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7502,6 +9762,24 @@
       "clientMethod": {
         "shortName": "ListViews",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViews",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7540,6 +9818,24 @@
         "shortName": "ListViewsAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.ListViewsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ContactCenterInsights.V1.ListViewsResponse, Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7577,6 +9873,16 @@
       "clientMethod": {
         "shortName": "UpdateView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7616,6 +9922,16 @@
         "shortName": "UpdateViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7654,6 +9970,20 @@
       "clientMethod": {
         "shortName": "UpdateView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ContactCenterInsights.V1.View",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7692,6 +10022,20 @@
         "shortName": "UpdateViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UpdateViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.View",
+            "name": "view"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ContactCenterInsights.V1.View>",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7729,6 +10073,16 @@
       "clientMethod": {
         "shortName": "DeleteView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -7767,6 +10121,16 @@
         "shortName": "DeleteViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7805,6 +10169,16 @@
       "clientMethod": {
         "shortName": "DeleteView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -7842,6 +10216,16 @@
         "shortName": "DeleteViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",
@@ -7879,6 +10263,16 @@
       "clientMethod": {
         "shortName": "DeleteView",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ContactCenterInsightsClient",
           "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
@@ -7916,6 +10310,16 @@
         "shortName": "DeleteViewAsync",
         "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.DeleteViewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.ViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ContactCenterInsightsClient",

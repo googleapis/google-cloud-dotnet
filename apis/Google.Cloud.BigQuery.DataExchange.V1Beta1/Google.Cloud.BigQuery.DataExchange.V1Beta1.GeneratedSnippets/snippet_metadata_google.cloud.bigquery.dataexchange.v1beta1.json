@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListDataExchanges",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListDataExchangesAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListDataExchanges",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListDataExchangesAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListDataExchanges",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchanges",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListDataExchangesAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListDataExchangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListOrgDataExchanges",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListOrgDataExchanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "ListOrgDataExchangesAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListOrgDataExchangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListOrgDataExchanges",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListOrgDataExchanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "organization"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -361,6 +491,24 @@
         "shortName": "ListOrgDataExchangesAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListOrgDataExchangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "organization"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListOrgDataExchangesResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -398,6 +546,16 @@
       "clientMethod": {
         "shortName": "GetDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.GetDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -437,6 +595,16 @@
         "shortName": "GetDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.GetDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -475,6 +643,16 @@
       "clientMethod": {
         "shortName": "GetDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -513,6 +691,16 @@
         "shortName": "GetDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -550,6 +738,16 @@
       "clientMethod": {
         "shortName": "GetDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -588,6 +786,16 @@
         "shortName": "GetDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "CreateDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -664,6 +882,16 @@
         "shortName": "CreateDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -702,6 +930,20 @@
       "clientMethod": {
         "shortName": "CreateDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -740,6 +982,20 @@
         "shortName": "CreateDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -777,6 +1033,20 @@
       "clientMethod": {
         "shortName": "CreateDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -815,6 +1085,20 @@
         "shortName": "CreateDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "UpdateDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -891,6 +1185,16 @@
         "shortName": "UpdateDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -929,6 +1233,20 @@
       "clientMethod": {
         "shortName": "UpdateDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -967,6 +1285,20 @@
         "shortName": "UpdateDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange",
+            "name": "dataExchange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchange>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteDataExchangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1080,6 +1432,16 @@
       "clientMethod": {
         "shortName": "DeleteDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -1117,6 +1479,16 @@
         "shortName": "DeleteDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1154,6 +1526,16 @@
       "clientMethod": {
         "shortName": "DeleteDataExchange",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -1191,6 +1573,16 @@
         "shortName": "DeleteDataExchangeAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteDataExchangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1228,6 +1620,16 @@
       "clientMethod": {
         "shortName": "ListListings",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1267,6 +1669,16 @@
         "shortName": "ListListingsAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1305,6 +1717,24 @@
       "clientMethod": {
         "shortName": "ListListings",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1343,6 +1773,24 @@
         "shortName": "ListListingsAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1380,6 +1828,24 @@
       "clientMethod": {
         "shortName": "ListListings",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1418,6 +1884,24 @@
         "shortName": "ListListingsAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.ListListingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataExchange.V1Beta1.ListListingsResponse, Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1455,6 +1939,16 @@
       "clientMethod": {
         "shortName": "GetListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.GetListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1494,6 +1988,16 @@
         "shortName": "GetListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.GetListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1532,6 +2036,16 @@
       "clientMethod": {
         "shortName": "GetListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1570,6 +2084,16 @@
         "shortName": "GetListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1607,6 +2131,16 @@
       "clientMethod": {
         "shortName": "GetListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1645,6 +2179,16 @@
         "shortName": "GetListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1682,6 +2226,16 @@
       "clientMethod": {
         "shortName": "CreateListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1721,6 +2275,16 @@
         "shortName": "CreateListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.CreateListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1759,6 +2323,20 @@
       "clientMethod": {
         "shortName": "CreateListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1797,6 +2375,20 @@
         "shortName": "CreateListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1834,6 +2426,20 @@
       "clientMethod": {
         "shortName": "CreateListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1872,6 +2478,20 @@
         "shortName": "CreateListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.CreateListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1909,6 +2529,16 @@
       "clientMethod": {
         "shortName": "UpdateListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1948,6 +2578,16 @@
         "shortName": "UpdateListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.UpdateListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -1986,6 +2626,20 @@
       "clientMethod": {
         "shortName": "UpdateListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2024,6 +2678,20 @@
         "shortName": "UpdateListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.UpdateListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing",
+            "name": "listing"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.Listing>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2061,6 +2729,16 @@
       "clientMethod": {
         "shortName": "DeleteListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -2099,6 +2777,16 @@
         "shortName": "DeleteListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.DeleteListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2137,6 +2825,16 @@
       "clientMethod": {
         "shortName": "DeleteListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -2174,6 +2872,16 @@
         "shortName": "DeleteListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2211,6 +2919,16 @@
       "clientMethod": {
         "shortName": "DeleteListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AnalyticsHubServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient"
@@ -2248,6 +2966,16 @@
         "shortName": "DeleteListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.DeleteListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2285,6 +3013,16 @@
       "clientMethod": {
         "shortName": "SubscribeListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2324,6 +3062,16 @@
         "shortName": "SubscribeListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2362,6 +3110,16 @@
       "clientMethod": {
         "shortName": "SubscribeListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2400,6 +3158,16 @@
         "shortName": "SubscribeListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2437,6 +3205,16 @@
       "clientMethod": {
         "shortName": "SubscribeListing",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2475,6 +3253,16 @@
         "shortName": "SubscribeListingAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SubscribeListingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataExchange.V1Beta1.ListingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataExchange.V1Beta1.SubscribeListingResponse>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2512,6 +3300,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2551,6 +3349,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2589,6 +3397,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2628,6 +3446,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2666,6 +3494,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "AnalyticsHubServiceClient",
@@ -2705,6 +3543,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.BigQuery.DataExchange.V1Beta1.AnalyticsHubServiceClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "AnalyticsHubServiceClient",

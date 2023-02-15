@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "RunReportJob",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.RunReportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.RunReportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.RunReportJobResponse, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "RunReportJobAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.RunReportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.RunReportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.RunReportJobResponse, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "FetchReportResults",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.FetchReportResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "FetchReportResultsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.FetchReportResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -173,6 +213,24 @@
       "clientMethod": {
         "shortName": "FetchReportResults",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "reportJob"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -211,6 +269,24 @@
         "shortName": "FetchReportResultsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "reportJob"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -248,6 +324,24 @@
       "clientMethod": {
         "shortName": "FetchReportResults",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ReportJobName",
+            "name": "reportJob"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -286,6 +380,24 @@
         "shortName": "FetchReportResultsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.FetchReportResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ReportJobName",
+            "name": "reportJob"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.FetchReportResultsResponse, Google.Cloud.Channel.V1.Row>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "ListReports",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -362,6 +484,16 @@
         "shortName": "ListReportsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -400,6 +532,24 @@
       "clientMethod": {
         "shortName": "ListReports",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -438,6 +588,24 @@
         "shortName": "ListReportsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelReportsServiceClient.ListReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListReportsResponse, Google.Cloud.Channel.V1.Report>",
         "client": {
           "shortName": "CloudChannelReportsServiceClient",
@@ -475,6 +643,16 @@
       "clientMethod": {
         "shortName": "ListCustomers",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListCustomersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomersResponse, Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -514,6 +692,16 @@
         "shortName": "ListCustomersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListCustomersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomersResponse, Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -552,6 +740,16 @@
       "clientMethod": {
         "shortName": "GetCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -591,6 +789,16 @@
         "shortName": "GetCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -629,6 +837,16 @@
       "clientMethod": {
         "shortName": "GetCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -667,6 +885,16 @@
         "shortName": "GetCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -704,6 +932,16 @@
       "clientMethod": {
         "shortName": "GetCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -742,6 +980,16 @@
         "shortName": "GetCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -779,6 +1027,16 @@
       "clientMethod": {
         "shortName": "CheckCloudIdentityAccountsExist",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CheckCloudIdentityAccountsExist",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -818,6 +1076,16 @@
         "shortName": "CheckCloudIdentityAccountsExistAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CheckCloudIdentityAccountsExistAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -856,6 +1124,16 @@
       "clientMethod": {
         "shortName": "CreateCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -895,6 +1173,16 @@
         "shortName": "CreateCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -933,6 +1221,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -972,6 +1270,16 @@
         "shortName": "UpdateCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1010,6 +1318,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -1048,6 +1366,16 @@
         "shortName": "DeleteCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1086,6 +1414,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -1123,6 +1461,16 @@
         "shortName": "DeleteCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1160,6 +1508,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -1197,6 +1555,16 @@
         "shortName": "DeleteCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1234,6 +1602,16 @@
       "clientMethod": {
         "shortName": "ImportCustomer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ImportCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ImportCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Customer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1273,6 +1651,16 @@
         "shortName": "ImportCustomerAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ImportCustomerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ImportCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Customer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1311,6 +1699,16 @@
       "clientMethod": {
         "shortName": "ProvisionCloudIdentity",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ProvisionCloudIdentity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Customer, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1350,6 +1748,16 @@
         "shortName": "ProvisionCloudIdentityAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ProvisionCloudIdentityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Customer, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1388,6 +1796,16 @@
       "clientMethod": {
         "shortName": "ListEntitlements",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListEntitlementsResponse, Google.Cloud.Channel.V1.Entitlement>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1427,6 +1845,16 @@
         "shortName": "ListEntitlementsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListEntitlementsResponse, Google.Cloud.Channel.V1.Entitlement>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1465,6 +1893,16 @@
       "clientMethod": {
         "shortName": "ListTransferableSkus",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListTransferableSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListTransferableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListTransferableSkusResponse, Google.Cloud.Channel.V1.TransferableSku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1504,6 +1942,16 @@
         "shortName": "ListTransferableSkusAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListTransferableSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListTransferableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListTransferableSkusResponse, Google.Cloud.Channel.V1.TransferableSku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1542,6 +1990,16 @@
       "clientMethod": {
         "shortName": "ListTransferableOffers",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListTransferableOffers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListTransferableOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListTransferableOffersResponse, Google.Cloud.Channel.V1.TransferableOffer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1581,6 +2039,16 @@
         "shortName": "ListTransferableOffersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListTransferableOffersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListTransferableOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListTransferableOffersResponse, Google.Cloud.Channel.V1.TransferableOffer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1619,6 +2087,16 @@
       "clientMethod": {
         "shortName": "GetEntitlement",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Entitlement",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1658,6 +2136,16 @@
         "shortName": "GetEntitlementAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetEntitlementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Entitlement>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1696,6 +2184,16 @@
       "clientMethod": {
         "shortName": "CreateEntitlement",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1735,6 +2233,16 @@
         "shortName": "CreateEntitlementAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateEntitlementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1773,6 +2281,16 @@
       "clientMethod": {
         "shortName": "ChangeParameters",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1812,6 +2330,16 @@
         "shortName": "ChangeParametersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1850,6 +2378,16 @@
       "clientMethod": {
         "shortName": "ChangeRenewalSettings",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeRenewalSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1889,6 +2427,16 @@
         "shortName": "ChangeRenewalSettingsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeRenewalSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1927,6 +2475,16 @@
       "clientMethod": {
         "shortName": "ChangeOffer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeOffer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeOfferRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -1966,6 +2524,16 @@
         "shortName": "ChangeOfferAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ChangeOfferAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChangeOfferRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2004,6 +2572,16 @@
       "clientMethod": {
         "shortName": "StartPaidService",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.StartPaidService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.StartPaidServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2043,6 +2621,16 @@
         "shortName": "StartPaidServiceAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.StartPaidServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.StartPaidServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2081,6 +2669,16 @@
       "clientMethod": {
         "shortName": "SuspendEntitlement",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.SuspendEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.SuspendEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2120,6 +2718,16 @@
         "shortName": "SuspendEntitlementAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.SuspendEntitlementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.SuspendEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2158,6 +2766,16 @@
       "clientMethod": {
         "shortName": "CancelEntitlement",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CancelEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CancelEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2197,6 +2815,16 @@
         "shortName": "CancelEntitlementAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CancelEntitlementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CancelEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2235,6 +2863,16 @@
       "clientMethod": {
         "shortName": "ActivateEntitlement",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ActivateEntitlement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ActivateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2274,6 +2912,16 @@
         "shortName": "ActivateEntitlementAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ActivateEntitlementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ActivateEntitlementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.Entitlement, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2312,6 +2960,16 @@
       "clientMethod": {
         "shortName": "TransferEntitlements",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.TransferEntitlements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.TransferEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Channel.V1.TransferEntitlementsResponse, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2351,6 +3009,16 @@
         "shortName": "TransferEntitlementsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.TransferEntitlementsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.TransferEntitlementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Channel.V1.TransferEntitlementsResponse, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2389,6 +3057,16 @@
       "clientMethod": {
         "shortName": "TransferEntitlementsToGoogle",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.TransferEntitlementsToGoogle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Channel.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2428,6 +3106,16 @@
         "shortName": "TransferEntitlementsToGoogleAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.TransferEntitlementsToGoogleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Channel.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2466,6 +3154,16 @@
       "clientMethod": {
         "shortName": "ListChannelPartnerLinks",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse, Google.Cloud.Channel.V1.ChannelPartnerLink>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2505,6 +3203,16 @@
         "shortName": "ListChannelPartnerLinksAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse, Google.Cloud.Channel.V1.ChannelPartnerLink>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2543,6 +3251,16 @@
       "clientMethod": {
         "shortName": "GetChannelPartnerLink",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerLink",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2582,6 +3300,16 @@
         "shortName": "GetChannelPartnerLinkAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerLink>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2620,6 +3348,16 @@
       "clientMethod": {
         "shortName": "CreateChannelPartnerLink",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerLink",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2659,6 +3397,16 @@
         "shortName": "CreateChannelPartnerLinkAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerLink>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2697,6 +3445,16 @@
       "clientMethod": {
         "shortName": "UpdateChannelPartnerLink",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerLink",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2736,6 +3494,16 @@
         "shortName": "UpdateChannelPartnerLinkAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerLinkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerLink>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2774,6 +3542,16 @@
       "clientMethod": {
         "shortName": "GetCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2813,6 +3591,16 @@
         "shortName": "GetCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2851,6 +3639,16 @@
       "clientMethod": {
         "shortName": "GetCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2889,6 +3687,16 @@
         "shortName": "GetCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2926,6 +3734,16 @@
       "clientMethod": {
         "shortName": "GetCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -2964,6 +3782,16 @@
         "shortName": "GetCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3001,6 +3829,16 @@
       "clientMethod": {
         "shortName": "ListCustomerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3040,6 +3878,16 @@
         "shortName": "ListCustomerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListCustomerRepricingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3078,6 +3926,24 @@
       "clientMethod": {
         "shortName": "ListCustomerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3116,6 +3982,24 @@
         "shortName": "ListCustomerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3153,6 +4037,24 @@
       "clientMethod": {
         "shortName": "ListCustomerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3191,6 +4093,24 @@
         "shortName": "ListCustomerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListCustomerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListCustomerRepricingConfigsResponse, Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3228,6 +4148,16 @@
       "clientMethod": {
         "shortName": "CreateCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3267,6 +4197,16 @@
         "shortName": "CreateCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3305,6 +4245,20 @@
       "clientMethod": {
         "shortName": "CreateCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3343,6 +4297,20 @@
         "shortName": "CreateCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3380,6 +4348,20 @@
       "clientMethod": {
         "shortName": "CreateCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3418,6 +4400,20 @@
         "shortName": "CreateCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3455,6 +4451,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3494,6 +4500,16 @@
         "shortName": "UpdateCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3532,6 +4548,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3570,6 +4596,16 @@
         "shortName": "UpdateCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfig",
+            "name": "customerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.CustomerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3607,6 +4643,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -3645,6 +4691,16 @@
         "shortName": "DeleteCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteCustomerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3683,6 +4739,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -3720,6 +4786,16 @@
         "shortName": "DeleteCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3757,6 +4833,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -3794,6 +4880,16 @@
         "shortName": "DeleteCustomerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteCustomerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CustomerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3831,6 +4927,16 @@
       "clientMethod": {
         "shortName": "GetChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3870,6 +4976,16 @@
         "shortName": "GetChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.GetChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3908,6 +5024,16 @@
       "clientMethod": {
         "shortName": "GetChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3946,6 +5072,16 @@
         "shortName": "GetChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -3983,6 +5119,16 @@
       "clientMethod": {
         "shortName": "GetChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4021,6 +5167,16 @@
         "shortName": "GetChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.GetChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4058,6 +5214,16 @@
       "clientMethod": {
         "shortName": "ListChannelPartnerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4097,6 +5263,16 @@
         "shortName": "ListChannelPartnerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4135,6 +5311,24 @@
       "clientMethod": {
         "shortName": "ListChannelPartnerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4173,6 +5367,24 @@
         "shortName": "ListChannelPartnerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4210,6 +5422,24 @@
       "clientMethod": {
         "shortName": "ListChannelPartnerRepricingConfigs",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerLinkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4248,6 +5478,24 @@
         "shortName": "ListChannelPartnerRepricingConfigsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListChannelPartnerRepricingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerLinkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListChannelPartnerRepricingConfigsResponse, Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4285,6 +5533,16 @@
       "clientMethod": {
         "shortName": "CreateChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4324,6 +5582,16 @@
         "shortName": "CreateChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4362,6 +5630,20 @@
       "clientMethod": {
         "shortName": "CreateChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4400,6 +5682,20 @@
         "shortName": "CreateChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4437,6 +5733,20 @@
       "clientMethod": {
         "shortName": "CreateChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerLinkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4475,6 +5785,20 @@
         "shortName": "CreateChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.CreateChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerLinkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4512,6 +5836,16 @@
       "clientMethod": {
         "shortName": "UpdateChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4551,6 +5885,16 @@
         "shortName": "UpdateChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4589,6 +5933,16 @@
       "clientMethod": {
         "shortName": "UpdateChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4627,6 +5981,16 @@
         "shortName": "UpdateChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UpdateChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig",
+            "name": "channelPartnerRepricingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4664,6 +6028,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -4702,6 +6076,16 @@
         "shortName": "DeleteChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4740,6 +6124,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -4777,6 +6171,16 @@
         "shortName": "DeleteChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4814,6 +6218,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelPartnerRepricingConfig",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudChannelServiceClient",
           "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
@@ -4851,6 +6265,16 @@
         "shortName": "DeleteChannelPartnerRepricingConfigAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.DeleteChannelPartnerRepricingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ChannelPartnerRepricingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4888,6 +6312,16 @@
       "clientMethod": {
         "shortName": "LookupOffer",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.LookupOffer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.LookupOfferRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.Offer",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4927,6 +6361,16 @@
         "shortName": "LookupOfferAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.LookupOfferAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.LookupOfferRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.Offer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -4965,6 +6409,16 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListProductsResponse, Google.Cloud.Channel.V1.Product>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5004,6 +6458,16 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListProductsResponse, Google.Cloud.Channel.V1.Product>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5042,6 +6506,16 @@
       "clientMethod": {
         "shortName": "ListSkus",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkusResponse, Google.Cloud.Channel.V1.Sku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5081,6 +6555,16 @@
         "shortName": "ListSkusAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkusResponse, Google.Cloud.Channel.V1.Sku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5119,6 +6603,16 @@
       "clientMethod": {
         "shortName": "ListOffers",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListOffers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListOffersResponse, Google.Cloud.Channel.V1.Offer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5158,6 +6652,16 @@
         "shortName": "ListOffersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListOffersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListOffersResponse, Google.Cloud.Channel.V1.Offer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5196,6 +6700,16 @@
       "clientMethod": {
         "shortName": "ListPurchasableSkus",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListPurchasableSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListPurchasableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListPurchasableSkusResponse, Google.Cloud.Channel.V1.PurchasableSku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5235,6 +6749,16 @@
         "shortName": "ListPurchasableSkusAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListPurchasableSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListPurchasableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListPurchasableSkusResponse, Google.Cloud.Channel.V1.PurchasableSku>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5273,6 +6797,16 @@
       "clientMethod": {
         "shortName": "ListPurchasableOffers",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListPurchasableOffers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListPurchasableOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListPurchasableOffersResponse, Google.Cloud.Channel.V1.PurchasableOffer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5312,6 +6846,16 @@
         "shortName": "ListPurchasableOffersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListPurchasableOffersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListPurchasableOffersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListPurchasableOffersResponse, Google.Cloud.Channel.V1.PurchasableOffer>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5350,6 +6894,16 @@
       "clientMethod": {
         "shortName": "RegisterSubscriber",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.RegisterSubscriber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.RegisterSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.RegisterSubscriberResponse",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5389,6 +6943,16 @@
         "shortName": "RegisterSubscriberAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.RegisterSubscriberAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.RegisterSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.RegisterSubscriberResponse>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5427,6 +6991,16 @@
       "clientMethod": {
         "shortName": "UnregisterSubscriber",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UnregisterSubscriber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UnregisterSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Channel.V1.UnregisterSubscriberResponse",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5466,6 +7040,16 @@
         "shortName": "UnregisterSubscriberAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.UnregisterSubscriberAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.UnregisterSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.UnregisterSubscriberResponse>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5504,6 +7088,16 @@
       "clientMethod": {
         "shortName": "ListSubscribers",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSubscribers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSubscribersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSubscribersResponse, System.String>",
         "client": {
           "shortName": "CloudChannelServiceClient",
@@ -5543,6 +7137,16 @@
         "shortName": "ListSubscribersAsync",
         "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSubscribersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSubscribersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSubscribersResponse, System.String>",
         "client": {
           "shortName": "CloudChannelServiceClient",

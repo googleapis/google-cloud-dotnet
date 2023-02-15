@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetResource",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.GetResource",
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetResourceAsync",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.GetResourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "PostResource",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PostResource",
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "PostResourceAsync",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PostResourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "DeleteResource",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.DeleteResource",
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -212,6 +262,16 @@
         "shortName": "DeleteResourceAsync",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.DeleteResourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "PutResource",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PutResource",
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -289,6 +359,16 @@
         "shortName": "PutResourceAsync",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PutResourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "PatchResource",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PatchResource",
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "GatewayServiceClient",
@@ -366,6 +456,16 @@
         "shortName": "PatchResourceAsync",
         "fullName": "Google.Cloud.GkeConnect.Gateway.V1Beta1.GatewayServiceClient.PatchResourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "GatewayServiceClient",

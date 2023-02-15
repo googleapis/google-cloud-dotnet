@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigs",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -58,6 +68,16 @@
         "shortName": "ListInstanceConfigsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigs",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -134,6 +172,24 @@
         "shortName": "ListInstanceConfigsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigs",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -209,6 +283,24 @@
         "shortName": "ListInstanceConfigsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -285,6 +387,16 @@
         "shortName": "GetInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -361,6 +483,16 @@
         "shortName": "GetInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -436,6 +578,16 @@
         "shortName": "GetInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig",
+            "name": "instanceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -890,6 +1192,16 @@
         "shortName": "DeleteInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -928,6 +1240,16 @@
       "clientMethod": {
         "shortName": "DeleteInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -965,6 +1287,16 @@
         "shortName": "DeleteInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1002,6 +1334,16 @@
       "clientMethod": {
         "shortName": "DeleteInstanceConfig",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -1039,6 +1381,16 @@
         "shortName": "DeleteInstanceConfigAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigOperations",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1115,6 +1477,16 @@
         "shortName": "ListInstanceConfigOperationsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1153,6 +1525,24 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigOperations",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1191,6 +1581,24 @@
         "shortName": "ListInstanceConfigOperationsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1228,6 +1636,24 @@
       "clientMethod": {
         "shortName": "ListInstanceConfigOperations",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1266,6 +1692,24 @@
         "shortName": "ListInstanceConfigOperationsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstanceConfigOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1303,6 +1747,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1342,6 +1796,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1380,6 +1844,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1418,6 +1900,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1455,6 +1955,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1493,6 +2011,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse, Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1530,6 +2066,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1569,6 +2115,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1607,6 +2163,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1645,6 +2211,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1682,6 +2258,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1720,6 +2306,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.Instance>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1757,6 +2353,16 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1796,6 +2402,16 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1834,6 +2450,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1872,6 +2506,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1909,6 +2561,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1947,6 +2617,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -1984,6 +2672,16 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2023,6 +2721,16 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2061,6 +2769,20 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "fieldMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2099,6 +2821,20 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "fieldMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.Instance, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata>>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2136,6 +2872,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -2174,6 +2920,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2212,6 +2968,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -2249,6 +3015,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2286,6 +3062,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "InstanceAdminClient",
           "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
@@ -2323,6 +3109,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2360,6 +3156,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2399,6 +3205,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2437,6 +3253,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2475,6 +3305,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2512,6 +3356,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2550,6 +3408,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2587,6 +3459,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2626,6 +3508,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2664,6 +3556,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2702,6 +3604,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2739,6 +3651,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2777,6 +3699,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2814,6 +3746,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2853,6 +3795,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2891,6 +3843,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2929,6 +3895,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -2966,6 +3946,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "InstanceAdminClient",
@@ -3004,6 +3998,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "InstanceAdminClient",

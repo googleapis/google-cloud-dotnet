@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -58,6 +68,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -134,6 +168,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -209,6 +271,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -285,6 +371,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -361,6 +467,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -436,6 +562,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -512,6 +658,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -550,6 +706,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -588,6 +758,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -625,6 +809,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -663,6 +861,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -700,6 +912,16 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityOccurrencesSummary",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -739,6 +961,16 @@
         "shortName": "GetVulnerabilityOccurrencesSummaryAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -777,6 +1009,20 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityOccurrencesSummary",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummary",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -815,6 +1061,20 @@
         "shortName": "GetVulnerabilityOccurrencesSummaryAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary>",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -852,6 +1112,20 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityOccurrencesSummary",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummary",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary",
         "client": {
           "shortName": "ContainerAnalysisClient",
@@ -890,6 +1164,20 @@
         "shortName": "GetVulnerabilityOccurrencesSummaryAsync",
         "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary>",
         "client": {
           "shortName": "ContainerAnalysisClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.ReadRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -57,6 +67,16 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -94,6 +114,16 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -131,6 +161,20 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -168,6 +212,20 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -205,6 +263,16 @@
       "clientMethod": {
         "shortName": "SampleRowKeys",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.SampleRowKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -243,6 +311,16 @@
       "clientMethod": {
         "shortName": "SampleRowKeys",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -280,6 +358,16 @@
       "clientMethod": {
         "shortName": "SampleRowKeys",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -317,6 +405,20 @@
       "clientMethod": {
         "shortName": "SampleRowKeys",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -354,6 +456,20 @@
       "clientMethod": {
         "shortName": "SampleRowKeys",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.SampleRowKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+SampleRowKeysStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -391,6 +507,16 @@
       "clientMethod": {
         "shortName": "MutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.MutateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -430,6 +556,16 @@
         "shortName": "MutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.MutateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -468,6 +604,24 @@
       "clientMethod": {
         "shortName": "MutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -506,6 +660,24 @@
         "shortName": "MutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -543,6 +715,24 @@
       "clientMethod": {
         "shortName": "MutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -581,6 +771,24 @@
         "shortName": "MutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -618,6 +826,28 @@
       "clientMethod": {
         "shortName": "MutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -656,6 +886,28 @@
         "shortName": "MutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -693,6 +945,28 @@
       "clientMethod": {
         "shortName": "MutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.MutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -731,6 +1005,28 @@
         "shortName": "MutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.MutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -768,6 +1064,16 @@
       "clientMethod": {
         "shortName": "MutateRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.MutateRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -806,6 +1112,20 @@
       "clientMethod": {
         "shortName": "MutateRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.MutateRowsRequest+Types+Entry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -843,6 +1163,20 @@
       "clientMethod": {
         "shortName": "MutateRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.MutateRowsRequest+Types+Entry>",
+            "name": "entries"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -880,6 +1214,24 @@
       "clientMethod": {
         "shortName": "MutateRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.MutateRowsRequest+Types+Entry>",
+            "name": "entries"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -917,6 +1269,24 @@
       "clientMethod": {
         "shortName": "MutateRows",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.MutateRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.MutateRowsRequest+Types+Entry>",
+            "name": "entries"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+MutateRowsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -954,6 +1324,16 @@
       "clientMethod": {
         "shortName": "CheckAndMutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -993,6 +1373,16 @@
         "shortName": "CheckAndMutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1031,6 +1421,32 @@
       "clientMethod": {
         "shortName": "CheckAndMutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1069,6 +1485,32 @@
         "shortName": "CheckAndMutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1106,6 +1548,32 @@
       "clientMethod": {
         "shortName": "CheckAndMutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1144,6 +1612,32 @@
         "shortName": "CheckAndMutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1181,6 +1675,36 @@
       "clientMethod": {
         "shortName": "CheckAndMutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1219,6 +1743,36 @@
         "shortName": "CheckAndMutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1256,6 +1810,36 @@
       "clientMethod": {
         "shortName": "CheckAndMutateRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1294,6 +1878,36 @@
         "shortName": "CheckAndMutateRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.CheckAndMutateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.V2.RowFilter",
+            "name": "predicateFilter"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "trueMutations"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.Mutation>",
+            "name": "falseMutations"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1331,6 +1945,16 @@
       "clientMethod": {
         "shortName": "PingAndWarm",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.PingAndWarmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1370,6 +1994,16 @@
         "shortName": "PingAndWarmAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.PingAndWarmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1408,6 +2042,16 @@
       "clientMethod": {
         "shortName": "PingAndWarm",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1446,6 +2090,16 @@
         "shortName": "PingAndWarmAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1483,6 +2137,16 @@
       "clientMethod": {
         "shortName": "PingAndWarm",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1521,6 +2185,16 @@
         "shortName": "PingAndWarmAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1558,6 +2232,20 @@
       "clientMethod": {
         "shortName": "PingAndWarm",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1596,6 +2284,20 @@
         "shortName": "PingAndWarmAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1633,6 +2335,20 @@
       "clientMethod": {
         "shortName": "PingAndWarm",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.PingAndWarmResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1671,6 +2387,20 @@
         "shortName": "PingAndWarmAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PingAndWarmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PingAndWarmResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1708,6 +2438,16 @@
       "clientMethod": {
         "shortName": "ReadModifyWriteRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1747,6 +2487,16 @@
         "shortName": "ReadModifyWriteRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1785,6 +2535,24 @@
       "clientMethod": {
         "shortName": "ReadModifyWriteRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1823,6 +2591,24 @@
         "shortName": "ReadModifyWriteRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1860,6 +2646,24 @@
       "clientMethod": {
         "shortName": "ReadModifyWriteRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1898,6 +2702,24 @@
         "shortName": "ReadModifyWriteRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1935,6 +2757,28 @@
       "clientMethod": {
         "shortName": "ReadModifyWriteRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -1973,6 +2817,28 @@
         "shortName": "ReadModifyWriteRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2010,6 +2876,28 @@
       "clientMethod": {
         "shortName": "ReadModifyWriteRow",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2048,6 +2936,28 @@
         "shortName": "ReadModifyWriteRowAsync",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadModifyWriteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "rowKey"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>",
+            "name": "rules"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2085,6 +2995,16 @@
       "clientMethod": {
         "shortName": "GenerateInitialChangeStreamPartitions",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2123,6 +3043,16 @@
       "clientMethod": {
         "shortName": "GenerateInitialChangeStreamPartitions",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2160,6 +3090,16 @@
       "clientMethod": {
         "shortName": "GenerateInitialChangeStreamPartitions",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2197,6 +3137,20 @@
       "clientMethod": {
         "shortName": "GenerateInitialChangeStreamPartitions",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2234,6 +3188,20 @@
       "clientMethod": {
         "shortName": "GenerateInitialChangeStreamPartitions",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.GenerateInitialChangeStreamPartitions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+GenerateInitialChangeStreamPartitionsStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2271,6 +3239,16 @@
       "clientMethod": {
         "shortName": "ReadChangeStream",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.ReadChangeStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2309,6 +3287,16 @@
       "clientMethod": {
         "shortName": "ReadChangeStream",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2346,6 +3334,16 @@
       "clientMethod": {
         "shortName": "ReadChangeStream",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2383,6 +3381,20 @@
       "clientMethod": {
         "shortName": "ReadChangeStream",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
         "client": {
           "shortName": "BigtableServiceApiClient",
@@ -2420,6 +3432,20 @@
       "clientMethod": {
         "shortName": "ReadChangeStream",
         "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.ReadChangeStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "tableName"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient+ReadChangeStreamStream",
         "client": {
           "shortName": "BigtableServiceApiClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateReadSession",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.CreateReadSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateReadSessionAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.CreateReadSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.ReadSession>",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateReadSession",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
+            "name": "readSession"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxStreamCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateReadSessionAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
+            "name": "readSession"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxStreamCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.ReadSession>",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateReadSession",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSession",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
+            "name": "readSession"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxStreamCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateReadSessionAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.CreateReadSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadSession",
+            "name": "readSession"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxStreamCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.ReadSession>",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.ReadRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient+ReadRowsStream",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -284,6 +386,20 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.ReadRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "readStream"
+          },
+          {
+            "type": "System.Int64",
+            "name": "offset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient+ReadRowsStream",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -321,6 +437,20 @@
       "clientMethod": {
         "shortName": "ReadRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.ReadRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.ReadStreamName",
+            "name": "readStream"
+          },
+          {
+            "type": "System.Int64",
+            "name": "offset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient+ReadRowsStream",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -358,6 +488,16 @@
       "clientMethod": {
         "shortName": "SplitReadStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.SplitReadStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -397,6 +537,16 @@
         "shortName": "SplitReadStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryReadClient.SplitReadStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse>",
         "client": {
           "shortName": "BigQueryReadClient",
@@ -435,6 +585,16 @@
       "clientMethod": {
         "shortName": "CreateWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -474,6 +634,16 @@
         "shortName": "CreateWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -512,6 +682,20 @@
       "clientMethod": {
         "shortName": "CreateWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -550,6 +734,20 @@
         "shortName": "CreateWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -587,6 +785,20 @@
       "clientMethod": {
         "shortName": "CreateWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -625,6 +837,20 @@
         "shortName": "CreateWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.CreateWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -662,6 +888,16 @@
       "clientMethod": {
         "shortName": "AppendRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.AppendRows",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient+AppendRowsStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -700,6 +936,16 @@
       "clientMethod": {
         "shortName": "GetWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -739,6 +985,16 @@
         "shortName": "GetWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -777,6 +1033,16 @@
       "clientMethod": {
         "shortName": "GetWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -815,6 +1081,16 @@
         "shortName": "GetWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "GetWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.WriteStream",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -890,6 +1176,16 @@
         "shortName": "GetWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.GetWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.WriteStream>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -927,6 +1223,16 @@
       "clientMethod": {
         "shortName": "FinalizeWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -966,6 +1272,16 @@
         "shortName": "FinalizeWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1004,6 +1320,16 @@
       "clientMethod": {
         "shortName": "FinalizeWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStream",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1042,6 +1368,16 @@
         "shortName": "FinalizeWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1079,6 +1415,16 @@
       "clientMethod": {
         "shortName": "FinalizeWriteStream",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStream",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1117,6 +1463,16 @@
         "shortName": "FinalizeWriteStreamAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FinalizeWriteStreamAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1154,6 +1510,16 @@
       "clientMethod": {
         "shortName": "BatchCommitWriteStreams",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreams",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1193,6 +1559,16 @@
         "shortName": "BatchCommitWriteStreamsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1231,6 +1607,16 @@
       "clientMethod": {
         "shortName": "BatchCommitWriteStreams",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreams",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1269,6 +1655,16 @@
         "shortName": "BatchCommitWriteStreamsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1306,6 +1702,16 @@
       "clientMethod": {
         "shortName": "BatchCommitWriteStreams",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreams",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1344,6 +1750,16 @@
         "shortName": "BatchCommitWriteStreamsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.BatchCommitWriteStreamsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1381,6 +1797,16 @@
       "clientMethod": {
         "shortName": "FlushRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1420,6 +1846,16 @@
         "shortName": "FlushRowsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1458,6 +1894,16 @@
       "clientMethod": {
         "shortName": "FlushRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1496,6 +1942,16 @@
         "shortName": "FlushRowsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1533,6 +1989,16 @@
       "clientMethod": {
         "shortName": "FlushRows",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse",
         "client": {
           "shortName": "BigQueryWriteClient",
@@ -1571,6 +2037,16 @@
         "shortName": "FlushRowsAsync",
         "fullName": "Google.Cloud.BigQuery.Storage.V1.BigQueryWriteClient.FlushRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Storage.V1.WriteStreamName",
+            "name": "writeStream"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse>",
         "client": {
           "shortName": "BigQueryWriteClient",

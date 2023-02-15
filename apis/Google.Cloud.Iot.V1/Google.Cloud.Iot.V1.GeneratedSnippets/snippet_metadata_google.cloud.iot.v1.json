@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.CreateDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.CreateDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.GetDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -285,6 +371,16 @@
         "shortName": "GetDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.GetDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -361,6 +467,16 @@
         "shortName": "GetDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -436,6 +562,16 @@
         "shortName": "GetDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "UpdateDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -512,6 +658,16 @@
         "shortName": "UpdateDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -550,6 +706,20 @@
       "clientMethod": {
         "shortName": "UpdateDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceRegistry",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -588,6 +758,20 @@
         "shortName": "UpdateDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceRegistry",
+            "name": "deviceRegistry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "DeleteDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -663,6 +857,16 @@
         "shortName": "DeleteDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -701,6 +905,16 @@
       "clientMethod": {
         "shortName": "DeleteDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -738,6 +952,16 @@
         "shortName": "DeleteDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -775,6 +999,16 @@
       "clientMethod": {
         "shortName": "DeleteDeviceRegistry",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -812,6 +1046,16 @@
         "shortName": "DeleteDeviceRegistryAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceRegistryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -849,6 +1093,16 @@
       "clientMethod": {
         "shortName": "ListDeviceRegistries",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceRegistriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -888,6 +1142,16 @@
         "shortName": "ListDeviceRegistriesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceRegistriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -926,6 +1190,24 @@
       "clientMethod": {
         "shortName": "ListDeviceRegistries",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -964,6 +1246,24 @@
         "shortName": "ListDeviceRegistriesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1001,6 +1301,24 @@
       "clientMethod": {
         "shortName": "ListDeviceRegistries",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1039,6 +1357,24 @@
         "shortName": "ListDeviceRegistriesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceRegistriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDeviceRegistriesResponse, Google.Cloud.Iot.V1.DeviceRegistry>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1076,6 +1412,16 @@
       "clientMethod": {
         "shortName": "CreateDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.CreateDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1115,6 +1461,16 @@
         "shortName": "CreateDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.CreateDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1153,6 +1509,20 @@
       "clientMethod": {
         "shortName": "CreateDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1191,6 +1561,20 @@
         "shortName": "CreateDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1228,6 +1612,20 @@
       "clientMethod": {
         "shortName": "CreateDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1266,6 +1664,20 @@
         "shortName": "CreateDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.CreateDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1303,6 +1715,16 @@
       "clientMethod": {
         "shortName": "GetDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.GetDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1342,6 +1764,16 @@
         "shortName": "GetDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.GetDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1380,6 +1812,16 @@
       "clientMethod": {
         "shortName": "GetDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1418,6 +1860,16 @@
         "shortName": "GetDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1455,6 +1907,16 @@
       "clientMethod": {
         "shortName": "GetDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1493,6 +1955,16 @@
         "shortName": "GetDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1530,6 +2002,16 @@
       "clientMethod": {
         "shortName": "UpdateDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UpdateDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1569,6 +2051,16 @@
         "shortName": "UpdateDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UpdateDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1607,6 +2099,20 @@
       "clientMethod": {
         "shortName": "UpdateDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.Device",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1645,6 +2151,20 @@
         "shortName": "UpdateDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UpdateDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.Device",
+            "name": "device"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1682,6 +2202,16 @@
       "clientMethod": {
         "shortName": "DeleteDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeleteDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -1720,6 +2250,16 @@
         "shortName": "DeleteDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeleteDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1758,6 +2298,16 @@
       "clientMethod": {
         "shortName": "DeleteDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -1795,6 +2345,16 @@
         "shortName": "DeleteDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1832,6 +2392,16 @@
       "clientMethod": {
         "shortName": "DeleteDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DeviceManagerClient",
           "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient"
@@ -1869,6 +2439,16 @@
         "shortName": "DeleteDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.DeleteDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1906,6 +2486,16 @@
       "clientMethod": {
         "shortName": "ListDevices",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDevicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1945,6 +2535,16 @@
         "shortName": "ListDevicesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDevicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -1983,6 +2583,24 @@
       "clientMethod": {
         "shortName": "ListDevices",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2021,6 +2639,24 @@
         "shortName": "ListDevicesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2058,6 +2694,24 @@
       "clientMethod": {
         "shortName": "ListDevices",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2096,6 +2750,24 @@
         "shortName": "ListDevicesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDevicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iot.V1.ListDevicesResponse, Google.Cloud.Iot.V1.Device>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2133,6 +2805,16 @@
       "clientMethod": {
         "shortName": "ModifyCloudToDeviceConfig",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceConfig",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2172,6 +2854,16 @@
         "shortName": "ModifyCloudToDeviceConfigAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceConfig>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2210,6 +2902,20 @@
       "clientMethod": {
         "shortName": "ModifyCloudToDeviceConfig",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceConfig",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2248,6 +2954,20 @@
         "shortName": "ModifyCloudToDeviceConfigAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceConfig>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2285,6 +3005,20 @@
       "clientMethod": {
         "shortName": "ModifyCloudToDeviceConfig",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.DeviceConfig",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2323,6 +3057,20 @@
         "shortName": "ModifyCloudToDeviceConfigAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ModifyCloudToDeviceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.DeviceConfig>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2360,6 +3108,16 @@
       "clientMethod": {
         "shortName": "ListDeviceConfigVersions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2399,6 +3157,16 @@
         "shortName": "ListDeviceConfigVersionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2437,6 +3205,16 @@
       "clientMethod": {
         "shortName": "ListDeviceConfigVersions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2475,6 +3253,16 @@
         "shortName": "ListDeviceConfigVersionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2512,6 +3300,16 @@
       "clientMethod": {
         "shortName": "ListDeviceConfigVersions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2550,6 +3348,16 @@
         "shortName": "ListDeviceConfigVersionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceConfigVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2587,6 +3395,16 @@
       "clientMethod": {
         "shortName": "ListDeviceStates",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceStatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceStatesResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2626,6 +3444,16 @@
         "shortName": "ListDeviceStatesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.ListDeviceStatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceStatesResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2664,6 +3492,16 @@
       "clientMethod": {
         "shortName": "ListDeviceStates",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceStatesResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2702,6 +3540,16 @@
         "shortName": "ListDeviceStatesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceStatesResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2739,6 +3587,16 @@
       "clientMethod": {
         "shortName": "ListDeviceStates",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.ListDeviceStatesResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2777,6 +3635,16 @@
         "shortName": "ListDeviceStatesAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.ListDeviceStatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.ListDeviceStatesResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2814,6 +3682,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2853,6 +3731,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2891,6 +3779,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2929,6 +3831,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -2966,6 +3882,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3004,6 +3934,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3041,6 +3985,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3080,6 +4034,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3118,6 +4082,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3156,6 +4130,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3193,6 +4177,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3231,6 +4225,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3268,6 +4272,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3307,6 +4321,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3345,6 +4369,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3383,6 +4421,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3420,6 +4472,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3458,6 +4524,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3495,6 +4575,16 @@
       "clientMethod": {
         "shortName": "SendCommandToDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.SendCommandToDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.SendCommandToDeviceResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3534,6 +4624,16 @@
         "shortName": "SendCommandToDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.SendCommandToDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.SendCommandToDeviceResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3572,6 +4672,20 @@
       "clientMethod": {
         "shortName": "SendCommandToDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.SendCommandToDeviceResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3610,6 +4724,20 @@
         "shortName": "SendCommandToDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.SendCommandToDeviceResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3647,6 +4775,20 @@
       "clientMethod": {
         "shortName": "SendCommandToDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.SendCommandToDeviceResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3685,6 +4827,20 @@
         "shortName": "SendCommandToDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.SendCommandToDeviceResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3722,6 +4878,24 @@
       "clientMethod": {
         "shortName": "SendCommandToDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "System.String",
+            "name": "subfolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.SendCommandToDeviceResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3760,6 +4934,24 @@
         "shortName": "SendCommandToDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "System.String",
+            "name": "subfolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.SendCommandToDeviceResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3797,6 +4989,24 @@
       "clientMethod": {
         "shortName": "SendCommandToDevice",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDevice",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "System.String",
+            "name": "subfolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.SendCommandToDeviceResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3835,6 +5045,24 @@
         "shortName": "SendCommandToDeviceAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.SendCommandToDeviceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.DeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "binaryData"
+          },
+          {
+            "type": "System.String",
+            "name": "subfolder"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.SendCommandToDeviceResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3872,6 +5100,16 @@
       "clientMethod": {
         "shortName": "BindDeviceToGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.BindDeviceToGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.BindDeviceToGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3911,6 +5149,16 @@
         "shortName": "BindDeviceToGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.BindDeviceToGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.BindDeviceToGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3949,6 +5197,24 @@
       "clientMethod": {
         "shortName": "BindDeviceToGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.BindDeviceToGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -3987,6 +5253,24 @@
         "shortName": "BindDeviceToGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.BindDeviceToGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4024,6 +5308,24 @@
       "clientMethod": {
         "shortName": "BindDeviceToGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.BindDeviceToGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4062,6 +5364,24 @@
         "shortName": "BindDeviceToGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.BindDeviceToGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.BindDeviceToGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4099,6 +5419,16 @@
       "clientMethod": {
         "shortName": "UnbindDeviceFromGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4138,6 +5468,16 @@
         "shortName": "UnbindDeviceFromGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4176,6 +5516,24 @@
       "clientMethod": {
         "shortName": "UnbindDeviceFromGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4214,6 +5572,24 @@
         "shortName": "UnbindDeviceFromGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4251,6 +5627,24 @@
       "clientMethod": {
         "shortName": "UnbindDeviceFromGateway",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse",
         "client": {
           "shortName": "DeviceManagerClient",
@@ -4289,6 +5683,24 @@
         "shortName": "UnbindDeviceFromGatewayAsync",
         "fullName": "Google.Cloud.Iot.V1.DeviceManagerClient.UnbindDeviceFromGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iot.V1.RegistryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse>",
         "client": {
           "shortName": "DeviceManagerClient",

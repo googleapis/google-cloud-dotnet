@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "Lookup",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Lookup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.LookupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.LookupResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -58,6 +68,16 @@
         "shortName": "LookupAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.LookupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.LookupResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "Lookup",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Lookup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.ReadOptions",
+            "name": "readOptions"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.LookupResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -134,6 +172,24 @@
         "shortName": "LookupAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.ReadOptions",
+            "name": "readOptions"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.LookupResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "RunQuery",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RunQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.RunQueryResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -210,6 +276,16 @@
         "shortName": "RunQueryAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RunQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.RunQueryResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -248,6 +324,16 @@
       "clientMethod": {
         "shortName": "RunAggregationQuery",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunAggregationQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RunAggregationQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.RunAggregationQueryResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -287,6 +373,16 @@
         "shortName": "RunAggregationQueryAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RunAggregationQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RunAggregationQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.RunAggregationQueryResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -325,6 +421,16 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.BeginTransactionResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -364,6 +470,16 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.BeginTransactionResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -402,6 +518,16 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.BeginTransactionResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -440,6 +566,16 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.BeginTransactionResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -477,6 +613,16 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.CommitResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -516,6 +662,16 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.CommitResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -554,6 +710,28 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest+Types+Mode",
+            "name": "mode"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.CommitResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -592,6 +770,28 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest+Types+Mode",
+            "name": "mode"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.CommitResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -629,6 +829,24 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest+Types+Mode",
+            "name": "mode"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.CommitResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -667,6 +885,24 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Datastore.V1.CommitRequest+Types+Mode",
+            "name": "mode"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.CommitResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -704,6 +940,16 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.RollbackResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -743,6 +989,16 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.RollbackResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -781,6 +1037,20 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.RollbackResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -819,6 +1089,20 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.RollbackResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -856,6 +1140,16 @@
       "clientMethod": {
         "shortName": "AllocateIds",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.AllocateIds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.AllocateIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.AllocateIdsResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -895,6 +1189,16 @@
         "shortName": "AllocateIdsAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.AllocateIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.AllocateIdsResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -933,6 +1237,20 @@
       "clientMethod": {
         "shortName": "AllocateIds",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.AllocateIds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.AllocateIdsResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -971,6 +1289,20 @@
         "shortName": "AllocateIdsAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.AllocateIdsResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -1008,6 +1340,16 @@
       "clientMethod": {
         "shortName": "ReserveIds",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.ReserveIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.ReserveIdsResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -1047,6 +1389,16 @@
         "shortName": "ReserveIdsAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.V1.ReserveIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.ReserveIdsResponse>",
         "client": {
           "shortName": "DatastoreClient",
@@ -1085,6 +1437,20 @@
       "clientMethod": {
         "shortName": "ReserveIds",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Datastore.V1.ReserveIdsResponse",
         "client": {
           "shortName": "DatastoreClient",
@@ -1123,6 +1489,20 @@
         "shortName": "ReserveIdsAsync",
         "fullName": "Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>",
+            "name": "keys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.V1.ReserveIdsResponse>",
         "client": {
           "shortName": "DatastoreClient",

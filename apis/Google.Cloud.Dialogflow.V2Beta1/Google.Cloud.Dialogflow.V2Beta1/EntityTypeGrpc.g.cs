@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
-  /// Service for managing [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
+  /// Service for managing
+  /// [EntityTypes][google.cloud.dialogflow.v2beta1.EntityType].
   /// </summary>
   public static partial class EntityTypes
   {
@@ -263,7 +264,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+      /// - `response`:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -706,7 +708,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+      /// - `response`:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -731,7 +734,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+      /// - `response`:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -754,7 +758,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+      /// - `response`:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -779,7 +784,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       ///
       /// - `metadata`: An empty [Struct
       ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
-      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
+      /// - `response`:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2beta1.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training

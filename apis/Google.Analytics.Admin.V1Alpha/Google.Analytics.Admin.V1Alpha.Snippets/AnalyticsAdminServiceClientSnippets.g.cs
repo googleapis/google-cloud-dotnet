@@ -9036,6 +9036,1499 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateAccessBinding</summary>
+        public void CreateAccessBindingRequestObject()
+        {
+            // Snippet: CreateAccessBinding(CreateAccessBindingRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAccessBindingRequest request = new CreateAccessBindingRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                AccessBinding = new AccessBinding(),
+            };
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.CreateAccessBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBindingAsync</summary>
+        public async Task CreateAccessBindingRequestObjectAsync()
+        {
+            // Snippet: CreateAccessBindingAsync(CreateAccessBindingRequest, CallSettings)
+            // Additional: CreateAccessBindingAsync(CreateAccessBindingRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAccessBindingRequest request = new CreateAccessBindingRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                AccessBinding = new AccessBinding(),
+            };
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.CreateAccessBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBinding</summary>
+        public void CreateAccessBinding()
+        {
+            // Snippet: CreateAccessBinding(string, AccessBinding, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.CreateAccessBinding(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBindingAsync</summary>
+        public async Task CreateAccessBindingAsync()
+        {
+            // Snippet: CreateAccessBindingAsync(string, AccessBinding, CallSettings)
+            // Additional: CreateAccessBindingAsync(string, AccessBinding, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.CreateAccessBindingAsync(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBinding</summary>
+        public void CreateAccessBindingResourceNames1()
+        {
+            // Snippet: CreateAccessBinding(AccountName, AccessBinding, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.CreateAccessBinding(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBindingAsync</summary>
+        public async Task CreateAccessBindingResourceNames1Async()
+        {
+            // Snippet: CreateAccessBindingAsync(AccountName, AccessBinding, CallSettings)
+            // Additional: CreateAccessBindingAsync(AccountName, AccessBinding, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.CreateAccessBindingAsync(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBinding</summary>
+        public void CreateAccessBindingResourceNames2()
+        {
+            // Snippet: CreateAccessBinding(PropertyName, AccessBinding, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.CreateAccessBinding(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccessBindingAsync</summary>
+        public async Task CreateAccessBindingResourceNames2Async()
+        {
+            // Snippet: CreateAccessBindingAsync(PropertyName, AccessBinding, CallSettings)
+            // Additional: CreateAccessBindingAsync(PropertyName, AccessBinding, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.CreateAccessBindingAsync(parent, accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBinding</summary>
+        public void GetAccessBindingRequestObject()
+        {
+            // Snippet: GetAccessBinding(GetAccessBindingRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetAccessBindingRequest request = new GetAccessBindingRequest
+            {
+                AccessBindingName = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+            };
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.GetAccessBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBindingAsync</summary>
+        public async Task GetAccessBindingRequestObjectAsync()
+        {
+            // Snippet: GetAccessBindingAsync(GetAccessBindingRequest, CallSettings)
+            // Additional: GetAccessBindingAsync(GetAccessBindingRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAccessBindingRequest request = new GetAccessBindingRequest
+            {
+                AccessBindingName = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+            };
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.GetAccessBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBinding</summary>
+        public void GetAccessBinding()
+        {
+            // Snippet: GetAccessBinding(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/accessBindings/[ACCESS_BINDING]";
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.GetAccessBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBindingAsync</summary>
+        public async Task GetAccessBindingAsync()
+        {
+            // Snippet: GetAccessBindingAsync(string, CallSettings)
+            // Additional: GetAccessBindingAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/accessBindings/[ACCESS_BINDING]";
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.GetAccessBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBinding</summary>
+        public void GetAccessBindingResourceNames()
+        {
+            // Snippet: GetAccessBinding(AccessBindingName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AccessBindingName name = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]");
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.GetAccessBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccessBindingAsync</summary>
+        public async Task GetAccessBindingResourceNamesAsync()
+        {
+            // Snippet: GetAccessBindingAsync(AccessBindingName, CallSettings)
+            // Additional: GetAccessBindingAsync(AccessBindingName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccessBindingName name = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]");
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.GetAccessBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccessBinding</summary>
+        public void UpdateAccessBindingRequestObject()
+        {
+            // Snippet: UpdateAccessBinding(UpdateAccessBindingRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAccessBindingRequest request = new UpdateAccessBindingRequest
+            {
+                AccessBinding = new AccessBinding(),
+            };
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.UpdateAccessBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccessBindingAsync</summary>
+        public async Task UpdateAccessBindingRequestObjectAsync()
+        {
+            // Snippet: UpdateAccessBindingAsync(UpdateAccessBindingRequest, CallSettings)
+            // Additional: UpdateAccessBindingAsync(UpdateAccessBindingRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAccessBindingRequest request = new UpdateAccessBindingRequest
+            {
+                AccessBinding = new AccessBinding(),
+            };
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.UpdateAccessBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccessBinding</summary>
+        public void UpdateAccessBinding()
+        {
+            // Snippet: UpdateAccessBinding(AccessBinding, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = analyticsAdminServiceClient.UpdateAccessBinding(accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccessBindingAsync</summary>
+        public async Task UpdateAccessBindingAsync()
+        {
+            // Snippet: UpdateAccessBindingAsync(AccessBinding, CallSettings)
+            // Additional: UpdateAccessBindingAsync(AccessBinding, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccessBinding accessBinding = new AccessBinding();
+            // Make the request
+            AccessBinding response = await analyticsAdminServiceClient.UpdateAccessBindingAsync(accessBinding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBinding</summary>
+        public void DeleteAccessBindingRequestObject()
+        {
+            // Snippet: DeleteAccessBinding(DeleteAccessBindingRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAccessBindingRequest request = new DeleteAccessBindingRequest
+            {
+                AccessBindingName = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteAccessBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBindingAsync</summary>
+        public async Task DeleteAccessBindingRequestObjectAsync()
+        {
+            // Snippet: DeleteAccessBindingAsync(DeleteAccessBindingRequest, CallSettings)
+            // Additional: DeleteAccessBindingAsync(DeleteAccessBindingRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAccessBindingRequest request = new DeleteAccessBindingRequest
+            {
+                AccessBindingName = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteAccessBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBinding</summary>
+        public void DeleteAccessBinding()
+        {
+            // Snippet: DeleteAccessBinding(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/accessBindings/[ACCESS_BINDING]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteAccessBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBindingAsync</summary>
+        public async Task DeleteAccessBindingAsync()
+        {
+            // Snippet: DeleteAccessBindingAsync(string, CallSettings)
+            // Additional: DeleteAccessBindingAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "accounts/[ACCOUNT]/accessBindings/[ACCESS_BINDING]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteAccessBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBinding</summary>
+        public void DeleteAccessBindingResourceNames()
+        {
+            // Snippet: DeleteAccessBinding(AccessBindingName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AccessBindingName name = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteAccessBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccessBindingAsync</summary>
+        public async Task DeleteAccessBindingResourceNamesAsync()
+        {
+            // Snippet: DeleteAccessBindingAsync(AccessBindingName, CallSettings)
+            // Additional: DeleteAccessBindingAsync(AccessBindingName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccessBindingName name = AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteAccessBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindings</summary>
+        public void ListAccessBindingsRequestObject()
+        {
+            // Snippet: ListAccessBindings(ListAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccessBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccessBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindingsAsync</summary>
+        public async Task ListAccessBindingsRequestObjectAsync()
+        {
+            // Snippet: ListAccessBindingsAsync(ListAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAccessBindingsRequest request = new ListAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccessBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccessBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindings</summary>
+        public void ListAccessBindings()
+        {
+            // Snippet: ListAccessBindings(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            // Make the request
+            PagedEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccessBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccessBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindingsAsync</summary>
+        public async Task ListAccessBindingsAsync()
+        {
+            // Snippet: ListAccessBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            // Make the request
+            PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccessBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccessBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindings</summary>
+        public void ListAccessBindingsResourceNames1()
+        {
+            // Snippet: ListAccessBindings(AccountName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            // Make the request
+            PagedEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccessBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccessBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindingsAsync</summary>
+        public async Task ListAccessBindingsResourceNames1Async()
+        {
+            // Snippet: ListAccessBindingsAsync(AccountName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            // Make the request
+            PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccessBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccessBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindings</summary>
+        public void ListAccessBindingsResourceNames2()
+        {
+            // Snippet: ListAccessBindings(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccessBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccessBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccessBindingsAsync</summary>
+        public async Task ListAccessBindingsResourceNames2Async()
+        {
+            // Snippet: ListAccessBindingsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> response = analyticsAdminServiceClient.ListAccessBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccessBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccessBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccessBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccessBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccessBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAccessBindings</summary>
+        public void BatchCreateAccessBindingsRequestObject()
+        {
+            // Snippet: BatchCreateAccessBindings(BatchCreateAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateAccessBindingsRequest request = new BatchCreateAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new CreateAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateAccessBindingsResponse response = analyticsAdminServiceClient.BatchCreateAccessBindings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAccessBindingsAsync</summary>
+        public async Task BatchCreateAccessBindingsRequestObjectAsync()
+        {
+            // Snippet: BatchCreateAccessBindingsAsync(BatchCreateAccessBindingsRequest, CallSettings)
+            // Additional: BatchCreateAccessBindingsAsync(BatchCreateAccessBindingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateAccessBindingsRequest request = new BatchCreateAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new CreateAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateAccessBindingsResponse response = await analyticsAdminServiceClient.BatchCreateAccessBindingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetAccessBindings</summary>
+        public void BatchGetAccessBindingsRequestObject()
+        {
+            // Snippet: BatchGetAccessBindings(BatchGetAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            BatchGetAccessBindingsRequest request = new BatchGetAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                AccessBindingNames =
+                {
+                    AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+                },
+            };
+            // Make the request
+            BatchGetAccessBindingsResponse response = analyticsAdminServiceClient.BatchGetAccessBindings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetAccessBindingsAsync</summary>
+        public async Task BatchGetAccessBindingsRequestObjectAsync()
+        {
+            // Snippet: BatchGetAccessBindingsAsync(BatchGetAccessBindingsRequest, CallSettings)
+            // Additional: BatchGetAccessBindingsAsync(BatchGetAccessBindingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchGetAccessBindingsRequest request = new BatchGetAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                AccessBindingNames =
+                {
+                    AccessBindingName.FromAccountAccessBinding("[ACCOUNT]", "[ACCESS_BINDING]"),
+                },
+            };
+            // Make the request
+            BatchGetAccessBindingsResponse response = await analyticsAdminServiceClient.BatchGetAccessBindingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateAccessBindings</summary>
+        public void BatchUpdateAccessBindingsRequestObject()
+        {
+            // Snippet: BatchUpdateAccessBindings(BatchUpdateAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateAccessBindingsRequest request = new BatchUpdateAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new UpdateAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateAccessBindingsResponse response = analyticsAdminServiceClient.BatchUpdateAccessBindings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateAccessBindingsAsync</summary>
+        public async Task BatchUpdateAccessBindingsRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateAccessBindingsAsync(BatchUpdateAccessBindingsRequest, CallSettings)
+            // Additional: BatchUpdateAccessBindingsAsync(BatchUpdateAccessBindingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateAccessBindingsRequest request = new BatchUpdateAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new UpdateAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateAccessBindingsResponse response = await analyticsAdminServiceClient.BatchUpdateAccessBindingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteAccessBindings</summary>
+        public void BatchDeleteAccessBindingsRequestObject()
+        {
+            // Snippet: BatchDeleteAccessBindings(BatchDeleteAccessBindingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeleteAccessBindingsRequest request = new BatchDeleteAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new DeleteAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            analyticsAdminServiceClient.BatchDeleteAccessBindings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteAccessBindingsAsync</summary>
+        public async Task BatchDeleteAccessBindingsRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteAccessBindingsAsync(BatchDeleteAccessBindingsRequest, CallSettings)
+            // Additional: BatchDeleteAccessBindingsAsync(BatchDeleteAccessBindingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteAccessBindingsRequest request = new BatchDeleteAccessBindingsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new DeleteAccessBindingRequest(),
+                },
+            };
+            // Make the request
+            await analyticsAdminServiceClient.BatchDeleteAccessBindingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSet</summary>
+        public void GetExpandedDataSetRequestObject()
+        {
+            // Snippet: GetExpandedDataSet(GetExpandedDataSetRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetExpandedDataSetRequest request = new GetExpandedDataSetRequest
+            {
+                ExpandedDataSetName = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]"),
+            };
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.GetExpandedDataSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSetAsync</summary>
+        public async Task GetExpandedDataSetRequestObjectAsync()
+        {
+            // Snippet: GetExpandedDataSetAsync(GetExpandedDataSetRequest, CallSettings)
+            // Additional: GetExpandedDataSetAsync(GetExpandedDataSetRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetExpandedDataSetRequest request = new GetExpandedDataSetRequest
+            {
+                ExpandedDataSetName = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]"),
+            };
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.GetExpandedDataSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSet</summary>
+        public void GetExpandedDataSet()
+        {
+            // Snippet: GetExpandedDataSet(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/expandedDataSets/[EXPANDED_DATA_SET]";
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.GetExpandedDataSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSetAsync</summary>
+        public async Task GetExpandedDataSetAsync()
+        {
+            // Snippet: GetExpandedDataSetAsync(string, CallSettings)
+            // Additional: GetExpandedDataSetAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/expandedDataSets/[EXPANDED_DATA_SET]";
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.GetExpandedDataSetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSet</summary>
+        public void GetExpandedDataSetResourceNames()
+        {
+            // Snippet: GetExpandedDataSet(ExpandedDataSetName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ExpandedDataSetName name = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]");
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.GetExpandedDataSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExpandedDataSetAsync</summary>
+        public async Task GetExpandedDataSetResourceNamesAsync()
+        {
+            // Snippet: GetExpandedDataSetAsync(ExpandedDataSetName, CallSettings)
+            // Additional: GetExpandedDataSetAsync(ExpandedDataSetName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExpandedDataSetName name = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]");
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.GetExpandedDataSetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSets</summary>
+        public void ListExpandedDataSetsRequestObject()
+        {
+            // Snippet: ListExpandedDataSets(ListExpandedDataSetsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExpandedDataSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExpandedDataSetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSetsAsync</summary>
+        public async Task ListExpandedDataSetsRequestObjectAsync()
+        {
+            // Snippet: ListExpandedDataSetsAsync(ListExpandedDataSetsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListExpandedDataSetsRequest request = new ListExpandedDataSetsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExpandedDataSet item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExpandedDataSetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSets</summary>
+        public void ListExpandedDataSets()
+        {
+            // Snippet: ListExpandedDataSets(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExpandedDataSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExpandedDataSetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSetsAsync</summary>
+        public async Task ListExpandedDataSetsAsync()
+        {
+            // Snippet: ListExpandedDataSetsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExpandedDataSet item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExpandedDataSetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSets</summary>
+        public void ListExpandedDataSetsResourceNames()
+        {
+            // Snippet: ListExpandedDataSets(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExpandedDataSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExpandedDataSetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExpandedDataSetsAsync</summary>
+        public async Task ListExpandedDataSetsResourceNamesAsync()
+        {
+            // Snippet: ListExpandedDataSetsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> response = analyticsAdminServiceClient.ListExpandedDataSetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExpandedDataSet item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExpandedDataSetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExpandedDataSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExpandedDataSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExpandedDataSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSet</summary>
+        public void CreateExpandedDataSetRequestObject()
+        {
+            // Snippet: CreateExpandedDataSet(CreateExpandedDataSetRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateExpandedDataSetRequest request = new CreateExpandedDataSetRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ExpandedDataSet = new ExpandedDataSet(),
+            };
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.CreateExpandedDataSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSetAsync</summary>
+        public async Task CreateExpandedDataSetRequestObjectAsync()
+        {
+            // Snippet: CreateExpandedDataSetAsync(CreateExpandedDataSetRequest, CallSettings)
+            // Additional: CreateExpandedDataSetAsync(CreateExpandedDataSetRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateExpandedDataSetRequest request = new CreateExpandedDataSetRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ExpandedDataSet = new ExpandedDataSet(),
+            };
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.CreateExpandedDataSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSet</summary>
+        public void CreateExpandedDataSet()
+        {
+            // Snippet: CreateExpandedDataSet(string, ExpandedDataSet, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.CreateExpandedDataSet(parent, expandedDataSet);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSetAsync</summary>
+        public async Task CreateExpandedDataSetAsync()
+        {
+            // Snippet: CreateExpandedDataSetAsync(string, ExpandedDataSet, CallSettings)
+            // Additional: CreateExpandedDataSetAsync(string, ExpandedDataSet, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.CreateExpandedDataSetAsync(parent, expandedDataSet);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSet</summary>
+        public void CreateExpandedDataSetResourceNames()
+        {
+            // Snippet: CreateExpandedDataSet(PropertyName, ExpandedDataSet, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.CreateExpandedDataSet(parent, expandedDataSet);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExpandedDataSetAsync</summary>
+        public async Task CreateExpandedDataSetResourceNamesAsync()
+        {
+            // Snippet: CreateExpandedDataSetAsync(PropertyName, ExpandedDataSet, CallSettings)
+            // Additional: CreateExpandedDataSetAsync(PropertyName, ExpandedDataSet, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.CreateExpandedDataSetAsync(parent, expandedDataSet);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExpandedDataSet</summary>
+        public void UpdateExpandedDataSetRequestObject()
+        {
+            // Snippet: UpdateExpandedDataSet(UpdateExpandedDataSetRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateExpandedDataSetRequest request = new UpdateExpandedDataSetRequest
+            {
+                ExpandedDataSet = new ExpandedDataSet(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.UpdateExpandedDataSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExpandedDataSetAsync</summary>
+        public async Task UpdateExpandedDataSetRequestObjectAsync()
+        {
+            // Snippet: UpdateExpandedDataSetAsync(UpdateExpandedDataSetRequest, CallSettings)
+            // Additional: UpdateExpandedDataSetAsync(UpdateExpandedDataSetRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExpandedDataSetRequest request = new UpdateExpandedDataSetRequest
+            {
+                ExpandedDataSet = new ExpandedDataSet(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.UpdateExpandedDataSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExpandedDataSet</summary>
+        public void UpdateExpandedDataSet()
+        {
+            // Snippet: UpdateExpandedDataSet(ExpandedDataSet, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ExpandedDataSet response = analyticsAdminServiceClient.UpdateExpandedDataSet(expandedDataSet, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExpandedDataSetAsync</summary>
+        public async Task UpdateExpandedDataSetAsync()
+        {
+            // Snippet: UpdateExpandedDataSetAsync(ExpandedDataSet, FieldMask, CallSettings)
+            // Additional: UpdateExpandedDataSetAsync(ExpandedDataSet, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExpandedDataSet expandedDataSet = new ExpandedDataSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ExpandedDataSet response = await analyticsAdminServiceClient.UpdateExpandedDataSetAsync(expandedDataSet, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSet</summary>
+        public void DeleteExpandedDataSetRequestObject()
+        {
+            // Snippet: DeleteExpandedDataSet(DeleteExpandedDataSetRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteExpandedDataSetRequest request = new DeleteExpandedDataSetRequest
+            {
+                ExpandedDataSetName = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteExpandedDataSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSetAsync</summary>
+        public async Task DeleteExpandedDataSetRequestObjectAsync()
+        {
+            // Snippet: DeleteExpandedDataSetAsync(DeleteExpandedDataSetRequest, CallSettings)
+            // Additional: DeleteExpandedDataSetAsync(DeleteExpandedDataSetRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteExpandedDataSetRequest request = new DeleteExpandedDataSetRequest
+            {
+                ExpandedDataSetName = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteExpandedDataSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSet</summary>
+        public void DeleteExpandedDataSet()
+        {
+            // Snippet: DeleteExpandedDataSet(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/expandedDataSets/[EXPANDED_DATA_SET]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteExpandedDataSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSetAsync</summary>
+        public async Task DeleteExpandedDataSetAsync()
+        {
+            // Snippet: DeleteExpandedDataSetAsync(string, CallSettings)
+            // Additional: DeleteExpandedDataSetAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/expandedDataSets/[EXPANDED_DATA_SET]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteExpandedDataSetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSet</summary>
+        public void DeleteExpandedDataSetResourceNames()
+        {
+            // Snippet: DeleteExpandedDataSet(ExpandedDataSetName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ExpandedDataSetName name = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteExpandedDataSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExpandedDataSetAsync</summary>
+        public async Task DeleteExpandedDataSetResourceNamesAsync()
+        {
+            // Snippet: DeleteExpandedDataSetAsync(ExpandedDataSetName, CallSettings)
+            // Additional: DeleteExpandedDataSetAsync(ExpandedDataSetName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExpandedDataSetName name = ExpandedDataSetName.FromPropertyExpandedDataSet("[PROPERTY]", "[EXPANDED_DATA_SET]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteExpandedDataSetAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOut</summary>
         public void SetAutomatedGa4ConfigurationOptOutRequestObject()
         {

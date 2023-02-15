@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -58,6 +68,16 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -134,6 +172,24 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListRepositories",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -209,6 +283,24 @@
         "shortName": "ListRepositoriesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListRepositoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse, Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -285,6 +387,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -361,6 +483,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -436,6 +578,16 @@
         "shortName": "GetRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Repository",
         "client": {
           "shortName": "DataformClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Repository>",
         "client": {
           "shortName": "DataformClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -890,6 +1192,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -928,6 +1240,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -965,6 +1287,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -1002,6 +1334,16 @@
       "clientMethod": {
         "shortName": "DeleteRepository",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -1039,6 +1381,16 @@
         "shortName": "DeleteRepositoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "FetchRemoteBranches",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchRemoteBranches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchRemoteBranchesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.FetchRemoteBranchesResponse",
         "client": {
           "shortName": "DataformClient",
@@ -1115,6 +1477,16 @@
         "shortName": "FetchRemoteBranchesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchRemoteBranchesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchRemoteBranchesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.FetchRemoteBranchesResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -1153,6 +1525,16 @@
       "clientMethod": {
         "shortName": "ListWorkspaces",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1192,6 +1574,16 @@
         "shortName": "ListWorkspacesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1230,6 +1622,24 @@
       "clientMethod": {
         "shortName": "ListWorkspaces",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspaces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1268,6 +1678,24 @@
         "shortName": "ListWorkspacesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1305,6 +1733,24 @@
       "clientMethod": {
         "shortName": "ListWorkspaces",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1343,6 +1789,24 @@
         "shortName": "ListWorkspacesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkspacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse, Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1380,6 +1844,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1419,6 +1893,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1457,6 +1941,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1495,6 +1989,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1532,6 +2036,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1570,6 +2084,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1607,6 +2131,16 @@
       "clientMethod": {
         "shortName": "CreateWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1646,6 +2180,16 @@
         "shortName": "CreateWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1684,6 +2228,24 @@
       "clientMethod": {
         "shortName": "CreateWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1722,6 +2284,24 @@
         "shortName": "CreateWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1759,6 +2339,24 @@
       "clientMethod": {
         "shortName": "CreateWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.Workspace",
         "client": {
           "shortName": "DataformClient",
@@ -1797,6 +2395,24 @@
         "shortName": "CreateWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Workspace>",
         "client": {
           "shortName": "DataformClient",
@@ -1834,6 +2450,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -1872,6 +2498,16 @@
         "shortName": "DeleteWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -1910,6 +2546,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -1947,6 +2593,16 @@
         "shortName": "DeleteWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -1984,6 +2640,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkspace",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2021,6 +2687,16 @@
         "shortName": "DeleteWorkspaceAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2058,6 +2734,16 @@
       "clientMethod": {
         "shortName": "InstallNpmPackages",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.InstallNpmPackages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2097,6 +2783,16 @@
         "shortName": "InstallNpmPackagesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.InstallNpmPackagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2135,6 +2831,16 @@
       "clientMethod": {
         "shortName": "PullGitCommits",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.PullGitCommits",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2173,6 +2879,16 @@
         "shortName": "PullGitCommitsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.PullGitCommitsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2211,6 +2927,16 @@
       "clientMethod": {
         "shortName": "PushGitCommits",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.PushGitCommits",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2249,6 +2975,16 @@
         "shortName": "PushGitCommitsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.PushGitCommitsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2287,6 +3023,16 @@
       "clientMethod": {
         "shortName": "FetchFileGitStatuses",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchFileGitStatuses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2326,6 +3072,16 @@
         "shortName": "FetchFileGitStatusesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchFileGitStatusesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2364,6 +3120,16 @@
       "clientMethod": {
         "shortName": "FetchGitAheadBehind",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchGitAheadBehind",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2403,6 +3169,16 @@
         "shortName": "FetchGitAheadBehindAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchGitAheadBehindAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2441,6 +3217,16 @@
       "clientMethod": {
         "shortName": "CommitWorkspaceChanges",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CommitWorkspaceChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2479,6 +3265,16 @@
         "shortName": "CommitWorkspaceChangesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CommitWorkspaceChangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2517,6 +3313,16 @@
       "clientMethod": {
         "shortName": "ResetWorkspaceChanges",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ResetWorkspaceChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2555,6 +3361,16 @@
         "shortName": "ResetWorkspaceChangesAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ResetWorkspaceChangesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2593,6 +3409,16 @@
       "clientMethod": {
         "shortName": "FetchFileDiff",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchFileDiff",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2632,6 +3458,16 @@
         "shortName": "FetchFileDiffAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchFileDiffAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2670,6 +3506,16 @@
       "clientMethod": {
         "shortName": "QueryDirectoryContents",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryDirectoryContents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse+Types+DirectoryEntry>",
         "client": {
           "shortName": "DataformClient",
@@ -2709,6 +3555,16 @@
         "shortName": "QueryDirectoryContentsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryDirectoryContentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse, Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse+Types+DirectoryEntry>",
         "client": {
           "shortName": "DataformClient",
@@ -2747,6 +3603,16 @@
       "clientMethod": {
         "shortName": "MakeDirectory",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MakeDirectory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2786,6 +3652,16 @@
         "shortName": "MakeDirectoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MakeDirectoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2824,6 +3700,16 @@
       "clientMethod": {
         "shortName": "RemoveDirectory",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.RemoveDirectory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -2862,6 +3748,16 @@
         "shortName": "RemoveDirectoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.RemoveDirectoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -2900,6 +3796,16 @@
       "clientMethod": {
         "shortName": "MoveDirectory",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveDirectory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.MoveDirectoryResponse",
         "client": {
           "shortName": "DataformClient",
@@ -2939,6 +3845,16 @@
         "shortName": "MoveDirectoryAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveDirectoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.MoveDirectoryResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -2977,6 +3893,16 @@
       "clientMethod": {
         "shortName": "ReadFile",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ReadFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ReadFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.ReadFileResponse",
         "client": {
           "shortName": "DataformClient",
@@ -3016,6 +3942,16 @@
         "shortName": "ReadFileAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ReadFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ReadFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.ReadFileResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -3054,6 +3990,16 @@
       "clientMethod": {
         "shortName": "RemoveFile",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.RemoveFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RemoveFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3092,6 +4038,16 @@
         "shortName": "RemoveFileAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.RemoveFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RemoveFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -3130,6 +4086,16 @@
       "clientMethod": {
         "shortName": "MoveFile",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.MoveFileResponse",
         "client": {
           "shortName": "DataformClient",
@@ -3169,6 +4135,16 @@
         "shortName": "MoveFileAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.MoveFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.MoveFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.MoveFileResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -3207,6 +4183,16 @@
       "clientMethod": {
         "shortName": "WriteFile",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.WriteFile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WriteFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WriteFileResponse",
         "client": {
           "shortName": "DataformClient",
@@ -3246,6 +4232,16 @@
         "shortName": "WriteFileAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.WriteFileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WriteFileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WriteFileResponse>",
         "client": {
           "shortName": "DataformClient",
@@ -3284,6 +4280,16 @@
       "clientMethod": {
         "shortName": "ListCompilationResults",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListCompilationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3323,6 +4329,16 @@
         "shortName": "ListCompilationResultsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListCompilationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3361,6 +4377,24 @@
       "clientMethod": {
         "shortName": "ListCompilationResults",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3399,6 +4433,24 @@
         "shortName": "ListCompilationResultsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3436,6 +4488,24 @@
       "clientMethod": {
         "shortName": "ListCompilationResults",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3474,6 +4544,24 @@
         "shortName": "ListCompilationResultsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListCompilationResultsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3511,6 +4599,16 @@
       "clientMethod": {
         "shortName": "GetCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResult",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3550,6 +4648,16 @@
         "shortName": "GetCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3588,6 +4696,16 @@
       "clientMethod": {
         "shortName": "GetCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResult",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3626,6 +4744,16 @@
         "shortName": "GetCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3663,6 +4791,16 @@
       "clientMethod": {
         "shortName": "GetCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResult",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3701,6 +4839,16 @@
         "shortName": "GetCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3738,6 +4886,16 @@
       "clientMethod": {
         "shortName": "CreateCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResult",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3777,6 +4935,16 @@
         "shortName": "CreateCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3815,6 +4983,20 @@
       "clientMethod": {
         "shortName": "CreateCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResult",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3853,6 +5035,20 @@
         "shortName": "CreateCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3890,6 +5086,20 @@
       "clientMethod": {
         "shortName": "CreateCompilationResult",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResult",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
         "client": {
           "shortName": "DataformClient",
@@ -3928,6 +5138,20 @@
         "shortName": "CreateCompilationResultAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CompilationResult>",
         "client": {
           "shortName": "DataformClient",
@@ -3965,6 +5189,16 @@
       "clientMethod": {
         "shortName": "QueryCompilationResultActions",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryCompilationResultActions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResultAction>",
         "client": {
           "shortName": "DataformClient",
@@ -4004,6 +5238,16 @@
         "shortName": "QueryCompilationResultActionsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryCompilationResultActionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsResponse, Google.Cloud.Dataform.V1Beta1.CompilationResultAction>",
         "client": {
           "shortName": "DataformClient",
@@ -4042,6 +5286,16 @@
       "clientMethod": {
         "shortName": "ListWorkflowInvocations",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4081,6 +5335,16 @@
         "shortName": "ListWorkflowInvocationsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4119,6 +5383,24 @@
       "clientMethod": {
         "shortName": "ListWorkflowInvocations",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4157,6 +5439,24 @@
         "shortName": "ListWorkflowInvocationsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4194,6 +5494,24 @@
       "clientMethod": {
         "shortName": "ListWorkflowInvocations",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4232,6 +5550,24 @@
         "shortName": "ListWorkflowInvocationsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.ListWorkflowInvocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.ListWorkflowInvocationsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4269,6 +5605,16 @@
       "clientMethod": {
         "shortName": "GetWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4308,6 +5654,16 @@
         "shortName": "GetWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4346,6 +5702,16 @@
       "clientMethod": {
         "shortName": "GetWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4384,6 +5750,16 @@
         "shortName": "GetWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4421,6 +5797,16 @@
       "clientMethod": {
         "shortName": "GetWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4459,6 +5845,16 @@
         "shortName": "GetWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4496,6 +5892,16 @@
       "clientMethod": {
         "shortName": "CreateWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4535,6 +5941,16 @@
         "shortName": "CreateWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4573,6 +5989,20 @@
       "clientMethod": {
         "shortName": "CreateWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
+            "name": "workflowInvocation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4611,6 +6041,20 @@
         "shortName": "CreateWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
+            "name": "workflowInvocation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4648,6 +6092,20 @@
       "clientMethod": {
         "shortName": "CreateWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
+            "name": "workflowInvocation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
         "client": {
           "shortName": "DataformClient",
@@ -4686,6 +6144,20 @@
         "shortName": "CreateWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocation",
+            "name": "workflowInvocation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>",
         "client": {
           "shortName": "DataformClient",
@@ -4723,6 +6195,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4761,6 +6243,16 @@
         "shortName": "DeleteWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -4799,6 +6291,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4836,6 +6338,16 @@
         "shortName": "DeleteWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -4873,6 +6385,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4910,6 +6432,16 @@
         "shortName": "DeleteWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.WorkflowInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -4947,6 +6479,16 @@
       "clientMethod": {
         "shortName": "CancelWorkflowInvocation",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CancelWorkflowInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4985,6 +6527,16 @@
         "shortName": "CancelWorkflowInvocationAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CancelWorkflowInvocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataformClient",
@@ -5023,6 +6575,16 @@
       "clientMethod": {
         "shortName": "QueryWorkflowInvocationActions",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryWorkflowInvocationActions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocationAction>",
         "client": {
           "shortName": "DataformClient",
@@ -5062,6 +6624,16 @@
         "shortName": "QueryWorkflowInvocationActionsAsync",
         "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.QueryWorkflowInvocationActionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse, Google.Cloud.Dataform.V1Beta1.WorkflowInvocationAction>",
         "client": {
           "shortName": "DataformClient",

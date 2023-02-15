@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "System.String",
+            "name": "cdnKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "System.String",
+            "name": "cdnKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "System.String",
+            "name": "cdnKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "System.String",
+            "name": "cdnKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListCdnKeys",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListCdnKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "ListCdnKeysAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListCdnKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListCdnKeys",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -361,6 +491,24 @@
         "shortName": "ListCdnKeysAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListCdnKeys",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeys",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -436,6 +602,24 @@
         "shortName": "ListCdnKeysAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListCdnKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListCdnKeysResponse, Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -512,6 +706,16 @@
         "shortName": "GetCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -588,6 +802,16 @@
         "shortName": "GetCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -663,6 +897,16 @@
         "shortName": "GetCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "DeleteCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -738,6 +992,16 @@
         "shortName": "DeleteCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -776,6 +1040,16 @@
       "clientMethod": {
         "shortName": "DeleteCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -813,6 +1087,16 @@
         "shortName": "DeleteCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -850,6 +1134,16 @@
       "clientMethod": {
         "shortName": "DeleteCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -887,6 +1181,16 @@
         "shortName": "DeleteCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -924,6 +1228,16 @@
       "clientMethod": {
         "shortName": "UpdateCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -963,6 +1277,16 @@
         "shortName": "UpdateCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateCdnKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1001,6 +1325,20 @@
       "clientMethod": {
         "shortName": "UpdateCdnKey",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateCdnKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.CdnKey",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1039,6 +1377,20 @@
         "shortName": "UpdateCdnKeyAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateCdnKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CdnKey",
+            "name": "cdnKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.CdnKey>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "CreateVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateVodSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1115,6 +1477,16 @@
         "shortName": "CreateVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateVodSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1153,6 +1525,20 @@
       "clientMethod": {
         "shortName": "CreateVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSession",
+            "name": "vodSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1191,6 +1577,20 @@
         "shortName": "CreateVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSession",
+            "name": "vodSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1228,6 +1628,20 @@
       "clientMethod": {
         "shortName": "CreateVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSession",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSession",
+            "name": "vodSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1266,6 +1680,20 @@
         "shortName": "CreateVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSession",
+            "name": "vodSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1303,6 +1731,16 @@
       "clientMethod": {
         "shortName": "GetVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1342,6 +1780,16 @@
         "shortName": "GetVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1380,6 +1828,16 @@
       "clientMethod": {
         "shortName": "GetVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1418,6 +1876,16 @@
         "shortName": "GetVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1455,6 +1923,16 @@
       "clientMethod": {
         "shortName": "GetVodSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1493,6 +1971,16 @@
         "shortName": "GetVodSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1530,6 +2018,16 @@
       "clientMethod": {
         "shortName": "ListVodStitchDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1569,6 +2067,16 @@
         "shortName": "ListVodStitchDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1607,6 +2115,24 @@
       "clientMethod": {
         "shortName": "ListVodStitchDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetails",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1645,6 +2171,24 @@
         "shortName": "ListVodStitchDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1682,6 +2226,24 @@
       "clientMethod": {
         "shortName": "ListVodStitchDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1720,6 +2282,24 @@
         "shortName": "ListVodStitchDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodStitchDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodStitchDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1757,6 +2337,16 @@
       "clientMethod": {
         "shortName": "GetVodStitchDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodStitchDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodStitchDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1796,6 +2386,16 @@
         "shortName": "GetVodStitchDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodStitchDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1834,6 +2434,16 @@
       "clientMethod": {
         "shortName": "GetVodStitchDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetail",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodStitchDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1872,6 +2482,16 @@
         "shortName": "GetVodStitchDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1909,6 +2529,16 @@
       "clientMethod": {
         "shortName": "GetVodStitchDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodStitchDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodStitchDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1947,6 +2577,16 @@
         "shortName": "GetVodStitchDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodStitchDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodStitchDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodStitchDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -1984,6 +2624,16 @@
       "clientMethod": {
         "shortName": "ListVodAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2023,6 +2673,16 @@
         "shortName": "ListVodAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2061,6 +2721,24 @@
       "clientMethod": {
         "shortName": "ListVodAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetails",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2099,6 +2777,24 @@
         "shortName": "ListVodAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2136,6 +2832,24 @@
       "clientMethod": {
         "shortName": "ListVodAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2174,6 +2888,24 @@
         "shortName": "ListVodAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListVodAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListVodAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2211,6 +2943,16 @@
       "clientMethod": {
         "shortName": "GetVodAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodAdTagDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2250,6 +2992,16 @@
         "shortName": "GetVodAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetVodAdTagDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2288,6 +3040,16 @@
       "clientMethod": {
         "shortName": "GetVodAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetail",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2326,6 +3088,16 @@
         "shortName": "GetVodAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2363,6 +3135,16 @@
       "clientMethod": {
         "shortName": "GetVodAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodAdTagDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.VodAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2401,6 +3183,16 @@
         "shortName": "GetVodAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetVodAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.VodAdTagDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.VodAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2438,6 +3230,16 @@
       "clientMethod": {
         "shortName": "ListLiveAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2477,6 +3279,16 @@
         "shortName": "ListLiveAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2515,6 +3327,24 @@
       "clientMethod": {
         "shortName": "ListLiveAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetails",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2553,6 +3383,24 @@
         "shortName": "ListLiveAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2590,6 +3438,24 @@
       "clientMethod": {
         "shortName": "ListLiveAdTagDetails",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2628,6 +3494,24 @@
         "shortName": "ListLiveAdTagDetailsAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListLiveAdTagDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse, Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2665,6 +3549,16 @@
       "clientMethod": {
         "shortName": "GetLiveAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetLiveAdTagDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2704,6 +3598,16 @@
         "shortName": "GetLiveAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetLiveAdTagDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2742,6 +3646,16 @@
       "clientMethod": {
         "shortName": "GetLiveAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetail",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2780,6 +3694,16 @@
         "shortName": "GetLiveAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2817,6 +3741,16 @@
       "clientMethod": {
         "shortName": "GetLiveAdTagDetail",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveAdTagDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2855,6 +3789,16 @@
         "shortName": "GetLiveAdTagDetailAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveAdTagDetailAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveAdTagDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveAdTagDetail>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2892,6 +3836,16 @@
       "clientMethod": {
         "shortName": "CreateSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2931,6 +3885,16 @@
         "shortName": "CreateSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -2969,6 +3933,24 @@
       "clientMethod": {
         "shortName": "CreateSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "System.String",
+            "name": "slateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3007,6 +3989,24 @@
         "shortName": "CreateSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "System.String",
+            "name": "slateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3044,6 +4044,24 @@
       "clientMethod": {
         "shortName": "CreateSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "System.String",
+            "name": "slateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3082,6 +4100,24 @@
         "shortName": "CreateSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "System.String",
+            "name": "slateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3119,6 +4155,16 @@
       "clientMethod": {
         "shortName": "ListSlates",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListSlatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3158,6 +4204,16 @@
         "shortName": "ListSlatesAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.ListSlatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3196,6 +4252,24 @@
       "clientMethod": {
         "shortName": "ListSlates",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3234,6 +4308,24 @@
         "shortName": "ListSlatesAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3271,6 +4363,24 @@
       "clientMethod": {
         "shortName": "ListSlates",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3309,6 +4419,24 @@
         "shortName": "ListSlatesAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.ListSlatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Stitcher.V1.ListSlatesResponse, Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3346,6 +4474,16 @@
       "clientMethod": {
         "shortName": "GetSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3385,6 +4523,16 @@
         "shortName": "GetSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3423,6 +4571,16 @@
       "clientMethod": {
         "shortName": "GetSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3461,6 +4619,16 @@
         "shortName": "GetSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3498,6 +4666,16 @@
       "clientMethod": {
         "shortName": "GetSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.SlateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3536,6 +4714,16 @@
         "shortName": "GetSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.SlateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3573,6 +4761,16 @@
       "clientMethod": {
         "shortName": "UpdateSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3612,6 +4810,16 @@
         "shortName": "UpdateSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.UpdateSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3650,6 +4858,20 @@
       "clientMethod": {
         "shortName": "UpdateSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.Slate",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3688,6 +4910,20 @@
         "shortName": "UpdateSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.UpdateSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.Slate",
+            "name": "slate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.Slate>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3725,6 +4961,16 @@
       "clientMethod": {
         "shortName": "DeleteSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -3763,6 +5009,16 @@
         "shortName": "DeleteSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.DeleteSlateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3801,6 +5057,16 @@
       "clientMethod": {
         "shortName": "DeleteSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -3838,6 +5104,16 @@
         "shortName": "DeleteSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3875,6 +5151,16 @@
       "clientMethod": {
         "shortName": "DeleteSlate",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.SlateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "VideoStitcherServiceClient",
           "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient"
@@ -3912,6 +5198,16 @@
         "shortName": "DeleteSlateAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.DeleteSlateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.SlateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3949,6 +5245,16 @@
       "clientMethod": {
         "shortName": "CreateLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateLiveSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -3988,6 +5294,16 @@
         "shortName": "CreateLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.CreateLiveSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4026,6 +5342,20 @@
       "clientMethod": {
         "shortName": "CreateLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSession",
+            "name": "liveSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4064,6 +5394,20 @@
         "shortName": "CreateLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSession",
+            "name": "liveSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4101,6 +5445,20 @@
       "clientMethod": {
         "shortName": "CreateLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSession",
+            "name": "liveSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4139,6 +5497,20 @@
         "shortName": "CreateLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSession",
+            "name": "liveSession"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4176,6 +5548,16 @@
       "clientMethod": {
         "shortName": "GetLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4215,6 +5597,16 @@
         "shortName": "GetLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4253,6 +5645,16 @@
       "clientMethod": {
         "shortName": "GetLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4291,6 +5693,16 @@
         "shortName": "GetLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4328,6 +5740,16 @@
       "clientMethod": {
         "shortName": "GetLiveSession",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Stitcher.V1.LiveSession",
         "client": {
           "shortName": "VideoStitcherServiceClient",
@@ -4366,6 +5788,16 @@
         "shortName": "GetLiveSessionAsync",
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.GetLiveSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Stitcher.V1.LiveSession>",
         "client": {
           "shortName": "VideoStitcherServiceClient",

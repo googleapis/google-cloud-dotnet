@@ -666,19 +666,23 @@ namespace Google.Cloud.Spanner.Data
             await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
+        // Note: this pragma shouldn't be required, but appears to be a compiler bug when using an interpolated string literal
+        // in ObsoleteAttribute.
+#pragma warning disable CS0618 // Type or member is obsolete
         /// <summary>
         /// Retrieves the database-specific statistics for the session pool associated with the connection string. The connection string must
         /// include a database name.
         /// </summary>
         /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
         /// for the database specified in the connection string.</returns>
-        [Obsolete("Use GetSessionPoolStatistics instead. Both methods return the same data, but the GetSessionPoolStatistics name better reflects the fact that sessions are pooled on aspects other than database name.")]
+        [Obsolete($"Use {nameof(GetSessionPoolSegmentStatistics)} instead. Both methods return the same data, but the ${nameof(GetSessionPoolSegmentStatistics)} name better reflects the fact that sessions are pooled on aspects other than database name.")]
         public SessionPool.DatabaseStatistics GetSessionPoolDatabaseStatistics()
         {
             DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{nameof(GetSessionPoolDatabaseStatistics)} cannot be used without a database.");
             return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), databaseName);
         }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <summary>
         /// Retrieves statistics for the session pool associated with the corresponding <see cref="SessionPoolSegmentKey"/>. The connection string must

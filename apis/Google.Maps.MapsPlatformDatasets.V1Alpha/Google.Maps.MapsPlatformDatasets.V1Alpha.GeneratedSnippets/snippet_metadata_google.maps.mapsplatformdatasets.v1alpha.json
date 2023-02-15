@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "UpdateDatasetMetadata",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.UpdateDatasetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -285,6 +371,16 @@
         "shortName": "UpdateDatasetMetadataAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.UpdateDatasetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "UpdateDatasetMetadata",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -361,6 +471,20 @@
         "shortName": "UpdateDatasetMetadataAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.UpdateDatasetMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -437,6 +571,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -513,6 +667,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -550,6 +714,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -588,6 +762,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "ListDatasetVersions",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -664,6 +858,16 @@
         "shortName": "ListDatasetVersionsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -702,6 +906,24 @@
       "clientMethod": {
         "shortName": "ListDatasetVersions",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -740,6 +962,24 @@
         "shortName": "ListDatasetVersionsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -777,6 +1017,24 @@
       "clientMethod": {
         "shortName": "ListDatasetVersions",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -815,6 +1073,24 @@
         "shortName": "ListDatasetVersionsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetVersionsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -891,6 +1177,16 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -929,6 +1225,24 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -967,6 +1281,24 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1004,6 +1336,24 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1042,6 +1392,24 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.MapsPlatformDatasets.V1Alpha.ListDatasetsResponse, Google.Maps.MapsPlatformDatasets.V1Alpha.Dataset>",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1079,6 +1447,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1117,6 +1495,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1155,6 +1543,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1192,6 +1590,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1229,6 +1637,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1266,6 +1684,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1303,6 +1731,16 @@
       "clientMethod": {
         "shortName": "DeleteDatasetVersion",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DeleteDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1341,6 +1779,16 @@
         "shortName": "DeleteDatasetVersionAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DeleteDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1379,6 +1827,16 @@
       "clientMethod": {
         "shortName": "DeleteDatasetVersion",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1416,6 +1874,16 @@
         "shortName": "DeleteDatasetVersionAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
@@ -1453,6 +1921,16 @@
       "clientMethod": {
         "shortName": "DeleteDatasetVersion",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",
           "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient"
@@ -1490,6 +1968,16 @@
         "shortName": "DeleteDatasetVersionAsync",
         "fullName": "Google.Maps.MapsPlatformDatasets.V1Alpha.MapsPlatformDatasetsV1AlphaClient.DeleteDatasetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MapsPlatformDatasetsV1AlphaClient",

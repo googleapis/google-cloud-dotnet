@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "EnableService",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.EnableService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.EnableServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.EnableServiceResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -58,6 +68,16 @@
         "shortName": "EnableServiceAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.EnableServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.EnableServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.EnableServiceResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "DisableService",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.DisableService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.DisableServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.DisableServiceResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -135,6 +165,16 @@
         "shortName": "DisableServiceAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.DisableServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.DisableServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.DisableServiceResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceUsage.V1.Service",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -212,6 +262,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceUsage.V1.Service>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceUsage.V1.ListServicesResponse, Google.Cloud.ServiceUsage.V1.Service>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -289,6 +359,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceUsage.V1.ListServicesResponse, Google.Cloud.ServiceUsage.V1.Service>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "BatchEnableServices",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.BatchEnableServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.BatchEnableServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.BatchEnableServicesResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -366,6 +456,16 @@
         "shortName": "BatchEnableServicesAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.BatchEnableServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.BatchEnableServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceUsage.V1.BatchEnableServicesResponse, Google.Cloud.ServiceUsage.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -404,6 +504,16 @@
       "clientMethod": {
         "shortName": "BatchGetServices",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.BatchGetServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.BatchGetServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceUsage.V1.BatchGetServicesResponse",
         "client": {
           "shortName": "ServiceUsageClient",
@@ -443,6 +553,16 @@
         "shortName": "BatchGetServicesAsync",
         "fullName": "Google.Cloud.ServiceUsage.V1.ServiceUsageClient.BatchGetServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceUsage.V1.BatchGetServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceUsage.V1.BatchGetServicesResponse>",
         "client": {
           "shortName": "ServiceUsageClient",

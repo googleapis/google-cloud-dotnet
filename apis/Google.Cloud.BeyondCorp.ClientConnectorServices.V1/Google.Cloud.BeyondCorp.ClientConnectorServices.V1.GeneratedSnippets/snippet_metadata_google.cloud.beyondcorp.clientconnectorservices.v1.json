@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListClientConnectorServices",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListClientConnectorServicesAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListClientConnectorServices",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListClientConnectorServicesAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListClientConnectorServices",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServices",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListClientConnectorServicesAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.ListClientConnectorServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ListClientConnectorServicesResponse, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.GetClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.GetClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.GetClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.CreateClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.CreateClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "System.String",
+            "name": "clientConnectorServiceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "System.String",
+            "name": "clientConnectorServiceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "System.String",
+            "name": "clientConnectorServiceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.CreateClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "System.String",
+            "name": "clientConnectorServiceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.UpdateClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.UpdateClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.UpdateClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService",
+            "name": "clientConnectorService"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorService, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.DeleteClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.DeleteClientConnectorServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteClientConnectorService",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteClientConnectorServiceAsync",
         "fullName": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServicesServiceClient.DeleteClientConnectorServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.ClientConnectorServices.V1.ClientConnectorServiceOperationMetadata>>",
         "client": {
           "shortName": "ClientConnectorServicesServiceClient",

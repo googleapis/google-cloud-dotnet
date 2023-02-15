@@ -67,12 +67,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "bnQvZnVsZmlsbG1lbnR9OgtmdWxmaWxsbWVudNpBF2Z1bGZpbGxtZW50LHVw",
             "ZGF0ZV9tYXNrGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0",
             "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCrgEK",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCqAEK",
             "I2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQhBGdWxmaWxs",
-            "bWVudFByb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExO2RpYWxvZ2Zsb3f4AQGi",
-            "AgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3Rv",
-            "Mw=="));
+            "bWVudFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9h",
+            "cGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoC",
+            "H0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -615,8 +614,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         public const int IsCloudFunctionFieldNumber = 5;
         private bool isCloudFunction_;
         /// <summary>
-        /// Optional. Indicates if generic web service is created through Cloud Functions
-        /// integration. Defaults to false.
+        /// Optional. Indicates if generic web service is created through Cloud
+        /// Functions integration. Defaults to false.
         ///
         /// is_cloud_function is deprecated. Cloud functions can be configured by
         /// its uri as a regular web service now.
@@ -1073,7 +1072,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Fulfillments.GetFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.GetFulfillment].
+  /// The request message for
+  /// [Fulfillments.GetFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.GetFulfillment].
   /// </summary>
   public sealed partial class GetFulfillmentRequest : pb::IMessage<GetFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1272,7 +1272,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   }
 
   /// <summary>
-  /// The request message for [Fulfillments.UpdateFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.UpdateFulfillment].
+  /// The request message for
+  /// [Fulfillments.UpdateFulfillment][google.cloud.dialogflow.v2beta1.Fulfillments.UpdateFulfillment].
   /// </summary>
   public sealed partial class UpdateFulfillmentRequest : pb::IMessage<UpdateFulfillmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

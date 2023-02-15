@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -58,6 +68,16 @@
         "shortName": "GetOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrence",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -134,6 +164,16 @@
         "shortName": "GetOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -209,6 +259,16 @@
         "shortName": "GetOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -285,6 +355,16 @@
         "shortName": "ListOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -323,6 +403,28 @@
       "clientMethod": {
         "shortName": "ListOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrences",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -361,6 +463,28 @@
         "shortName": "ListOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -398,6 +522,28 @@
       "clientMethod": {
         "shortName": "ListOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -436,6 +582,28 @@
         "shortName": "ListOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -473,6 +641,16 @@
       "clientMethod": {
         "shortName": "DeleteOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.DeleteOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -511,6 +689,16 @@
         "shortName": "DeleteOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.DeleteOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -549,6 +737,16 @@
       "clientMethod": {
         "shortName": "DeleteOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrence",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -586,6 +784,16 @@
         "shortName": "DeleteOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -623,6 +831,16 @@
       "clientMethod": {
         "shortName": "DeleteOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -660,6 +878,16 @@
         "shortName": "DeleteOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -697,6 +925,16 @@
       "clientMethod": {
         "shortName": "CreateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.CreateOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -736,6 +974,16 @@
         "shortName": "CreateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.CreateOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -774,6 +1022,20 @@
       "clientMethod": {
         "shortName": "CreateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrence",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -812,6 +1074,20 @@
         "shortName": "CreateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -849,6 +1125,20 @@
       "clientMethod": {
         "shortName": "CreateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -887,6 +1177,20 @@
         "shortName": "CreateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -924,6 +1228,16 @@
       "clientMethod": {
         "shortName": "BatchCreateOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.BatchCreateOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateOccurrencesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -963,6 +1277,16 @@
         "shortName": "BatchCreateOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.BatchCreateOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateOccurrencesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1001,6 +1325,20 @@
       "clientMethod": {
         "shortName": "BatchCreateOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrences",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Grafeas.V1.Occurrence>",
+            "name": "occurrences"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateOccurrencesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -1039,6 +1377,20 @@
         "shortName": "BatchCreateOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Grafeas.V1.Occurrence>",
+            "name": "occurrences"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateOccurrencesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1076,6 +1428,20 @@
       "clientMethod": {
         "shortName": "BatchCreateOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Grafeas.V1.Occurrence>",
+            "name": "occurrences"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateOccurrencesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -1114,6 +1480,20 @@
         "shortName": "BatchCreateOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Grafeas.V1.Occurrence>",
+            "name": "occurrences"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateOccurrencesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1151,6 +1531,16 @@
       "clientMethod": {
         "shortName": "UpdateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.UpdateOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -1190,6 +1580,16 @@
         "shortName": "UpdateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.UpdateOccurrenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1228,6 +1628,24 @@
       "clientMethod": {
         "shortName": "UpdateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrence",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -1266,6 +1684,24 @@
         "shortName": "UpdateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1303,6 +1739,24 @@
       "clientMethod": {
         "shortName": "UpdateOccurrence",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrence",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Occurrence",
         "client": {
           "shortName": "GrafeasClient",
@@ -1341,6 +1795,24 @@
         "shortName": "UpdateOccurrenceAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateOccurrenceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Occurrence",
+            "name": "occurrence"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1378,6 +1850,16 @@
       "clientMethod": {
         "shortName": "GetOccurrenceNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetOccurrenceNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1417,6 +1899,16 @@
         "shortName": "GetOccurrenceNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetOccurrenceNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1455,6 +1947,16 @@
       "clientMethod": {
         "shortName": "GetOccurrenceNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1493,6 +1995,16 @@
         "shortName": "GetOccurrenceNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1530,6 +2042,16 @@
       "clientMethod": {
         "shortName": "GetOccurrenceNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1568,6 +2090,16 @@
         "shortName": "GetOccurrenceNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetOccurrenceNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.OccurrenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1605,6 +2137,16 @@
       "clientMethod": {
         "shortName": "GetNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1644,6 +2186,16 @@
         "shortName": "GetNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.GetNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1682,6 +2234,16 @@
       "clientMethod": {
         "shortName": "GetNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1720,6 +2282,16 @@
         "shortName": "GetNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1757,6 +2329,16 @@
       "clientMethod": {
         "shortName": "GetNote",
         "fullName": "Grafeas.V1.GrafeasClient.GetNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -1795,6 +2377,16 @@
         "shortName": "GetNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.GetNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1832,6 +2424,16 @@
       "clientMethod": {
         "shortName": "ListNotes",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotes",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1871,6 +2473,16 @@
         "shortName": "ListNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1909,6 +2521,28 @@
       "clientMethod": {
         "shortName": "ListNotes",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1947,6 +2581,28 @@
         "shortName": "ListNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -1984,6 +2640,28 @@
       "clientMethod": {
         "shortName": "ListNotes",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotes",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2022,6 +2700,28 @@
         "shortName": "ListNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNotesResponse, Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2059,6 +2759,16 @@
       "clientMethod": {
         "shortName": "DeleteNote",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.DeleteNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -2097,6 +2807,16 @@
         "shortName": "DeleteNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.DeleteNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -2135,6 +2855,16 @@
       "clientMethod": {
         "shortName": "DeleteNote",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -2172,6 +2902,16 @@
         "shortName": "DeleteNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -2209,6 +2949,16 @@
       "clientMethod": {
         "shortName": "DeleteNote",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GrafeasClient",
           "fullName": "Grafeas.V1.GrafeasClient"
@@ -2246,6 +2996,16 @@
         "shortName": "DeleteNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.DeleteNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GrafeasClient",
@@ -2283,6 +3043,16 @@
       "clientMethod": {
         "shortName": "CreateNote",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.CreateNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2322,6 +3092,16 @@
         "shortName": "CreateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.CreateNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2360,6 +3140,24 @@
       "clientMethod": {
         "shortName": "CreateNote",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "noteId"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2398,6 +3196,24 @@
         "shortName": "CreateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "noteId"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2435,6 +3251,24 @@
       "clientMethod": {
         "shortName": "CreateNote",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "noteId"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2473,6 +3307,24 @@
         "shortName": "CreateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.CreateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "noteId"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2510,6 +3362,16 @@
       "clientMethod": {
         "shortName": "BatchCreateNotes",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotes",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.BatchCreateNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateNotesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -2549,6 +3411,16 @@
         "shortName": "BatchCreateNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.BatchCreateNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateNotesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2587,6 +3459,20 @@
       "clientMethod": {
         "shortName": "BatchCreateNotes",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Grafeas.V1.Note>",
+            "name": "notes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateNotesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -2625,6 +3511,20 @@
         "shortName": "BatchCreateNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Grafeas.V1.Note>",
+            "name": "notes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateNotesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2662,6 +3562,20 @@
       "clientMethod": {
         "shortName": "BatchCreateNotes",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotes",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Grafeas.V1.Note>",
+            "name": "notes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.BatchCreateNotesResponse",
         "client": {
           "shortName": "GrafeasClient",
@@ -2700,6 +3614,20 @@
         "shortName": "BatchCreateNotesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.BatchCreateNotesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Grafeas.V1.Note>",
+            "name": "notes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.BatchCreateNotesResponse>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2737,6 +3665,16 @@
       "clientMethod": {
         "shortName": "UpdateNote",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.UpdateNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2776,6 +3714,16 @@
         "shortName": "UpdateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.UpdateNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2814,6 +3762,24 @@
       "clientMethod": {
         "shortName": "UpdateNote",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2852,6 +3818,24 @@
         "shortName": "UpdateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2889,6 +3873,24 @@
       "clientMethod": {
         "shortName": "UpdateNote",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNote",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Grafeas.V1.Note",
         "client": {
           "shortName": "GrafeasClient",
@@ -2927,6 +3929,24 @@
         "shortName": "UpdateNoteAsync",
         "fullName": "Grafeas.V1.GrafeasClient.UpdateNoteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "Grafeas.V1.Note",
+            "name": "note"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Grafeas.V1.Note>",
         "client": {
           "shortName": "GrafeasClient",
@@ -2964,6 +3984,16 @@
       "clientMethod": {
         "shortName": "ListNoteOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListNoteOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -3003,6 +4033,16 @@
         "shortName": "ListNoteOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.ListNoteOccurrencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -3041,6 +4081,28 @@
       "clientMethod": {
         "shortName": "ListNoteOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrences",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -3079,6 +4141,28 @@
         "shortName": "ListNoteOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -3116,6 +4200,28 @@
       "clientMethod": {
         "shortName": "ListNoteOccurrences",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrences",
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
@@ -3154,6 +4260,28 @@
         "shortName": "ListNoteOccurrencesAsync",
         "fullName": "Grafeas.V1.GrafeasClient.ListNoteOccurrencesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Grafeas.V1.NoteName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Grafeas.V1.ListNoteOccurrencesResponse, Grafeas.V1.Occurrence>",
         "client": {
           "shortName": "GrafeasClient",
