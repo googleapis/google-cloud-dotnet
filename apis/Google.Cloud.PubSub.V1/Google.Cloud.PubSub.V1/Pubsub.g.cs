@@ -4774,7 +4774,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
     /// the subscriber to acknowledge receipt before resending the message. In the
     /// interval after the message is delivered and before it is acknowledged, it
-    /// is considered to be &lt;i>outstanding&lt;/i>. During that time period, the
+    /// is considered to be _outstanding_. During that time period, the
     /// message will not be redelivered (on a best-effort basis).
     ///
     /// For pull subscriptions, this value is used as the initial value for the ack
@@ -4847,8 +4847,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
-    /// managing labels&lt;/a>.
+    /// See [Creating and managing
+    /// labels](https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6464,7 +6464,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
     ///
     /// For example:
-    /// &lt;pre>&lt;code>attributes { "x-goog-version": "v1" } &lt;/code>&lt;/pre>
+    /// `attributes { "x-goog-version": "v1" }`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9389,7 +9389,8 @@ namespace Google.Cloud.PubSub.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
     /// Received Pub/Sub messages. The list will be empty if there are no more
-    /// messages available in the backlog. For JSON, the response can be entirely
+    /// messages available in the backlog, or if no messages could be returned
+    /// before the request timeout. For JSON, the response can be entirely
     /// empty. The Pub/Sub system may return fewer than the `maxMessages` requested
     /// even if there are more messages available in the backlog.
     /// </summary>
@@ -11604,9 +11605,9 @@ namespace Google.Cloud.PubSub.V1 {
     /// Required. User-provided name for this snapshot. If the name is not provided
     /// in the request, the server will assign a random name for this snapshot on
     /// the same project as the subscription. Note that for REST API requests, you
-    /// must specify a name.  See the &lt;a
-    /// href="https://cloud.google.com/pubsub/docs/admin#resource_names"> resource
-    /// name rules&lt;/a>. Format is `projects/{project}/snapshots/{snap}`.
+    /// must specify a name.  See the [resource name
+    /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
+    /// is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11646,8 +11647,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
-    /// managing labels&lt;/a>.
+    /// See [Creating and managing
+    /// labels](https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
