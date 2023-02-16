@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.V1
             /// <summary>
             /// The statistics broken down by <see cref="SessionPoolSegmentKey"/>. This is never null, but may be empty.
             /// </summary>
-            [Obsolete("Use PerSegmentStatistics instead. Both properties return the same data, but PerSegmentStatistics name" +
+            [Obsolete($"Use {nameof(PerSegmentStatistics)} instead. Both properties return the same data, but the {nameof(PerSegmentStatistics)} name" +
                 " better represents the fact that sessions are pooled based on aspects other than database name.")]
             public IReadOnlyList<DatabaseStatistics> PerDatabaseStatistics => PerSegmentStatistics.Select(s => new DatabaseStatistics(s)).ToList().AsReadOnly();
 

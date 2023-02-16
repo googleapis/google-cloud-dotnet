@@ -170,7 +170,10 @@ namespace Google.Cloud.Spanner.Data
             return targetedPool?.SessionPoolOrNull?.GetSegmentStatisticsSnapshot(key);
         }
 
-        [Obsolete("We still need to call this method for implementing the obsolete SpannerConnection.GetSessionPoolDatabaseStatistics()")]
+        // Note: this pragma shouldn't be required, but appears to be a compiler bug when using an interpolated string literal
+        // in ObsoleteAttribute.
+#pragma warning disable CS0618 // Type or member is obsolete
+        [Obsolete($"We still need to call this method for implementing the obsolete SpannerConnection.{nameof(SpannerConnection.GetSessionPoolDatabaseStatistics)}()")]
         internal SessionPool.DatabaseStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, DatabaseName databaseName)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
@@ -178,6 +181,7 @@ namespace Google.Cloud.Spanner.Data
             _targetedPools.TryGetValue(options, out var targetedPool);
             return targetedPool?.SessionPoolOrNull?.GetStatisticsSnapshot(databaseName);
         }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         // TODO: We *may* want a method to get the session pool statistics for a specific database,
         // e.g. GetStatistics(SessionPoolOptions, DatabaseName) but we don't currently have a need for it.

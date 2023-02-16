@@ -23,7 +23,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// A snapshot of statistics for a <see cref="SessionPoolSegmentKey"/> within a <see cref="SessionPool"/>.
         /// </summary>
-        [Obsolete("Use Google.Cloud.Spanner.V1.SessionPool.SessionPoolSegmentStatistics instead. The behavior of both classes is the same, but the new class name better reflects the fact that sessions are now pooled by aspects other than database name.")]
+        [Obsolete($"Use Google.Cloud.Spanner.V1.SessionPool.{nameof(SessionPoolSegmentStatistics)} instead. The behavior of both classes is the same, but the new class name better reflects the fact that sessions are now pooled by aspects other than database name.")]
         public sealed class DatabaseStatistics
         {
             /// <summary>

@@ -519,7 +519,7 @@ namespace Google.Cloud.Spanner.Data
         /// Must not be null.</param>
         /// <param name="credentials">The credential to use for the connection. May be null.</param>
         /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
-        [Obsolete("Use overloads accepting credentials, then set the SessionPoolManager property", error: false)]
+        [Obsolete($"Use overloads accepting credentials, then set the {nameof(SessionPoolManager)} property", error: false)]
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager) : this()
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));

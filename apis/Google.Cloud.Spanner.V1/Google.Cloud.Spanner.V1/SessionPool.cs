@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.V1
         /// with a null database role.
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>
-        [Obsolete("Use the overload GetPoolStatisticsSnapshot(DatabaseName) instead.")]
+        [Obsolete($"Use the overload {nameof(GetSegmentStatisticsSnapshot)}(DatabaseName) instead.")]
         public DatabaseStatistics GetStatisticsSnapshot(DatabaseName databaseName)
         {
             var poolStatistics = GetSegmentStatisticsSnapshot(databaseName);
