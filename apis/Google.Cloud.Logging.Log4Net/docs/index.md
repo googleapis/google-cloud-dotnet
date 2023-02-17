@@ -10,9 +10,15 @@ Logging](https://cloud.google.com/logging/) with
 
 {{auth}}
 
+Alternatively, credentials can be provided when configuring
+`GoogleStackdriverAppender`. See the [configuration guide](configuration.md)
+for details, specifically the `CredentialFile` and `CredentialJson`
+options.
+
 ## Getting started
 
-See the [configuration guide](configuration.md) for details of all GoogleStackdriverAppender configuration options.
+See the [configuration guide](configuration.md) for details of all
+`GoogleStackdriverAppender` configuration options.
 
 ## ASP.NET
 

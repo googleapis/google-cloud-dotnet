@@ -31,7 +31,7 @@ log.Info("An exciting log entry!");
 ## Custom configuration
 
 Within a `GoogleStackdriverAppender` the following options are
-available (see also [the GoogleStackdriverAppender reference documentation](api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#properties)
+available (see also [the GoogleStackdriverAppender reference documentation](Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#properties)
 for more details):
 
 ### projectId
@@ -52,7 +52,9 @@ On GCE and GAE the project ID will be auto-detected from the platform.
 
 Must be present. The log ID given is any string that is recorded as the name of the log, which can be used for simple filtering when viewing log entries.
 
-### withMetaData
+### Additional metadata
+
+(Added with the `AddWithMetaData` method.)
 
 ```xml
 <withMetaData value="<various, see below>"/>
@@ -68,7 +70,9 @@ By default no extra metadata is logged. `withMetaData` specifies which extra met
  * `LoggerName`: The name of the log4net logger that created this log entry.
  * `Label`: The name of the log4net logging level that caused this log entry (e.g. "FATAL")
 
-### customLabel
+### Custom labels
+
+(Added via the `AddCustomLabel` method.)
 
 ```xml
 <customLabel>
@@ -88,7 +92,7 @@ Defaults to `false`. Setting this to `true` enables `PatternLayout` use in custo
 All the standard patterns documented for Log4Net `PatternLayout` are available.
 Custom pattern conversions are not possible.
 
-### resourceType
+### ResourceType
 
 ```xml
 <resourceType value="<your resource type>"/>
@@ -104,7 +108,7 @@ If unset, the default value depends on the detected platform:
 
 (See [MonitoredResourceBuilder.cs](https://github.com/googleapis/gax-dotnet/blob/main/src/Google.Api.Gax.Grpc/MonitoredResourceBuilder.cs) for details)
 
-### resourceLabel
+### ResourceLabel
 
 ```xml
 <resourceLabel>
@@ -123,7 +127,26 @@ If `resourceType` has been manually set, then `resourceLabel` is used to specify
 
 Defaults to `false`. Setting this to `true` disables automatic `resourceType` setting based on platform detection.
 
-### Complete configuration example
+### CredentialFile
+
+```xml
+<credentialFile value="path/to/credential.json" />
+```
+
+Specifies the path to a JSON file containing credentials.
+
+### CredentialJson
+
+```xml
+<credentialJson value="{ inline JSON credentials }" />
+```
+
+Specifies JSON credentials directly in the configuration.
+This can be useful if credentials are obtained out-of-band (e.g.
+from a key store) to avoid the data ever needing to be stored in the
+file system.
+
+## Complete configuration examples
 
 So, for example, a complete configuration might look like this:
 
@@ -199,7 +222,7 @@ Log entries in Google Cloud Logging either have a text payload or a
 JSON payload. By default, the
 `Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender` uses a text
 payload. However, you can implement the
-[IJsonLayout](api/Google.Cloud.Logging.Log4Net.IJsonLayout.html) interface and configure
+[IJsonLayout](Google.Cloud.Logging.Log4Net.IJsonLayout.html) interface and configure
 the appender to use that. The JSON payload is expressed as a
 Protocol Buffers `Struct` message. If the `IJsonLayout.Format`
 method returns null from your layout, the appender will create a
