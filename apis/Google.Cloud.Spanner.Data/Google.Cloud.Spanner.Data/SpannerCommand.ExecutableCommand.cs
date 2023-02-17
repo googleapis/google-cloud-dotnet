@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -106,9 +106,9 @@ namespace Google.Cloud.Spanner.Data
                 ValidateConnectionAndCommandTextBuilder();
                 ValidateCommandBehavior(behavior);
 
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Read)
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Read && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Dml)
                 {
-                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries and reads.");
+                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries, reads and dmls.");
                 }
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
@@ -435,6 +435,9 @@ namespace Google.Cloud.Spanner.Data
                         break;
                     case SpannerCommandType.Read:
                         request = ReadOrQueryRequest.FromReadRequest(GetReadRequest());
+                        break;
+                    case SpannerCommandType.Dml: // TODO: This may need to be verified and rectified.
+                        request = ReadOrQueryRequest.FromQueryRequest(GetExecuteSqlRequest());
                         break;
                     default:
                         throw new InvalidOperationException($"Implementation error: Invalid command type ${CommandTextBuilder.SpannerCommandType} for read or query. This should not happen.");
