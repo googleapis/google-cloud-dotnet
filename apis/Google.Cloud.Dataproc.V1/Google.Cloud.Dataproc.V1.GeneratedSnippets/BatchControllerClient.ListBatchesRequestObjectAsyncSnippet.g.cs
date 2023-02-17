@@ -42,6 +42,8 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             ListBatchesRequest request = new ListBatchesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListBatchesResponse, Batch> response = batchControllerClient.ListBatchesAsync(request);

@@ -36,10 +36,11 @@ namespace Google.Cloud.Dataproc.V1 {
             "aBgCIAEoCzIfLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5CYXRjaEID4EEC",
             "EhUKCGJhdGNoX2lkGAMgASgJQgPgQQESFwoKcmVxdWVzdF9pZBgEIAEoCUID",
             "4EEBIkYKD0dldEJhdGNoUmVxdWVzdBIzCgRuYW1lGAEgASgJQiXgQQL6QR8K",
-            "HWRhdGFwcm9jLmdvb2dsZWFwaXMuY29tL0JhdGNoInwKEkxpc3RCYXRjaGVz",
-            "UmVxdWVzdBI1CgZwYXJlbnQYASABKAlCJeBBAvpBHxIdZGF0YXByb2MuZ29v",
-            "Z2xlYXBpcy5jb20vQmF0Y2gSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoK",
-            "cGFnZV90b2tlbhgDIAEoCUID4EEBImAKE0xpc3RCYXRjaGVzUmVzcG9uc2US",
+            "HWRhdGFwcm9jLmdvb2dsZWFwaXMuY29tL0JhdGNoIqgBChJMaXN0QmF0Y2hl",
+            "c1JlcXVlc3QSNQoGcGFyZW50GAEgASgJQiXgQQL6QR8SHWRhdGFwcm9jLmdv",
+            "b2dsZWFwaXMuY29tL0JhdGNoEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcK",
+            "CnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARIV",
+            "CghvcmRlcl9ieRgFIAEoCUID4EEBImAKE0xpc3RCYXRjaGVzUmVzcG9uc2US",
             "MAoHYmF0Y2hlcxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5C",
             "YXRjaBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiSQoSRGVsZXRlQmF0Y2hS",
             "ZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodZGF0YXByb2MuZ29vZ2xl",
@@ -115,7 +116,7 @@ namespace Google.Cloud.Dataproc.V1 {
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateBatchRequest), global::Google.Cloud.Dataproc.V1.CreateBatchRequest.Parser, new[]{ "Parent", "Batch", "BatchId", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetBatchRequest), global::Google.Cloud.Dataproc.V1.GetBatchRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListBatchesRequest), global::Google.Cloud.Dataproc.V1.ListBatchesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListBatchesRequest), global::Google.Cloud.Dataproc.V1.ListBatchesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListBatchesResponse), global::Google.Cloud.Dataproc.V1.ListBatchesResponse.Parser, new[]{ "Batches", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteBatchRequest), global::Google.Cloud.Dataproc.V1.DeleteBatchRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch), global::Google.Cloud.Dataproc.V1.Batch.Parser, new[]{ "Name", "Uuid", "CreateTime", "PysparkBatch", "SparkBatch", "SparkRBatch", "SparkSqlBatch", "RuntimeInfo", "State", "StateMessage", "StateTime", "Creator", "Labels", "RuntimeConfig", "EnvironmentConfig", "Operation", "StateHistory" }, new[]{ "BatchConfig" }, new[]{ typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory), global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory.Parser, new[]{ "State", "StateMessage", "StateStartTime" }, null, null, null, null),
@@ -214,8 +215,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int BatchIdFieldNumber = 3;
     private string batchId_ = "";
     /// <summary>
-    /// Optional. The ID to use for the batch, which will become the final component of
-    /// the batch's resource name.
+    /// Optional. The ID to use for the batch, which will become the final
+    /// component of the batch's resource name.
     ///
     /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
     /// </summary>
@@ -519,7 +520,9 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the batch to retrieve.
+    /// Required. The fully qualified name of the batch to retrieve
+    /// in the format
+    /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -703,6 +706,8 @@ namespace Google.Cloud.Dataproc.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -760,6 +765,52 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. A filter for the batches to return in the response.
+    ///
+    /// A filter is a logical expression constraining the values of various fields
+    /// in each batch resource. Filters are case sensitive, and may contain
+    /// multiple clauses combined with logical operators (AND/OR).
+    /// Supported fields are `batch_id`, `batch_uuid`, `state`, and `create_time`.
+    ///
+    /// e.g. `state = RUNNING and create_time &lt; "2023-01-01T00:00:00Z"`
+    /// filters for batches in state RUNNING that were created before 2023-01-01
+    ///
+    /// See https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed
+    /// description of the filter syntax and a list of supported comparisons.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Field(s) on which to sort the list of batches.
+    ///
+    /// Currently the only supported sort orders are unspecified (empty) and
+    /// `create_time desc` to sort by most recently created batches first.
+    ///
+    /// See https://google.aip.dev/132#ordering for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -778,6 +829,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -788,6 +841,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -818,6 +873,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -840,6 +903,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -858,6 +929,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -879,6 +956,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -907,6 +990,14 @@ namespace Google.Cloud.Dataproc.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -932,6 +1023,14 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
             break;
           }
         }
@@ -1217,7 +1316,9 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the batch resource to delete.
+    /// Required. The fully qualified name of the batch to retrieve
+    /// in the format
+    /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2703,8 +2804,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MainPythonFileUriFieldNumber = 1;
     private string mainPythonFileUri_ = "";
     /// <summary>
-    /// Required. The HCFS URI of the main Python file to use as the Spark driver. Must
-    /// be a .py file.
+    /// Required. The HCFS URI of the main Python file to use as the Spark driver.
+    /// Must be a .py file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2996,7 +3097,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A configuration for running an [Apache Spark](http://spark.apache.org/)
+  /// A configuration for running an [Apache Spark](https://spark.apache.org/)
   /// batch workload.
   /// </summary>
   public sealed partial class SparkBatch : pb::IMessage<SparkBatch>
@@ -3073,8 +3174,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "main_class" field.</summary>
     public const int MainClassFieldNumber = 2;
     /// <summary>
-    /// Optional. The name of the driver main class. The jar file that contains the class
-    /// must be in the classpath or specified in `jar_file_uris`.
+    /// Optional. The name of the driver main class. The jar file that contains
+    /// the class must be in the classpath or specified in `jar_file_uris`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3461,9 +3562,9 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> args_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The arguments to pass to the Spark driver. Do not include arguments
-    /// that can be set as batch properties, such as `--conf`, since a collision
-    /// can occur that causes an incorrect batch submission.
+    /// Optional. The arguments to pass to the Spark driver. Do not include
+    /// arguments that can be set as batch properties, such as `--conf`, since a
+    /// collision can occur that causes an incorrect batch submission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3679,7 +3780,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// A configuration for running
-  /// [Apache Spark SQL](http://spark.apache.org/sql/) queries as a batch workload.
+  /// [Apache Spark SQL](https://spark.apache.org/sql/) queries as a batch
+  /// workload.
   /// </summary>
   public sealed partial class SparkSqlBatch : pb::IMessage<SparkSqlBatch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3731,7 +3833,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int QueryFileUriFieldNumber = 1;
     private string queryFileUri_ = "";
     /// <summary>
-    /// Required. The HCFS URI of the script that contains Spark SQL queries to execute.
+    /// Required. The HCFS URI of the script that contains Spark SQL queries to
+    /// execute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
