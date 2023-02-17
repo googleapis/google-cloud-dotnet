@@ -320,6 +320,48 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest> __Marshaller_google_analytics_admin_v1alpha_CreateAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AccessBinding> __Marshaller_google_analytics_admin_v1alpha_AccessBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AccessBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest> __Marshaller_google_analytics_admin_v1alpha_GetAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest> __Marshaller_google_analytics_admin_v1alpha_ListAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse> __Marshaller_google_analytics_admin_v1alpha_ListAccessBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest> __Marshaller_google_analytics_admin_v1alpha_BatchCreateAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse> __Marshaller_google_analytics_admin_v1alpha_BatchCreateAccessBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest> __Marshaller_google_analytics_admin_v1alpha_BatchGetAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse> __Marshaller_google_analytics_admin_v1alpha_BatchGetAccessBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest> __Marshaller_google_analytics_admin_v1alpha_BatchUpdateAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse> __Marshaller_google_analytics_admin_v1alpha_BatchUpdateAccessBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest> __Marshaller_google_analytics_admin_v1alpha_BatchDeleteAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_GetExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> __Marshaller_google_analytics_admin_v1alpha_ExpandedDataSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest> __Marshaller_google_analytics_admin_v1alpha_ListExpandedDataSetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse> __Marshaller_google_analytics_admin_v1alpha_ListExpandedDataSetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_CreateExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse.Parser));
@@ -1009,6 +1051,118 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_RunAccessReportResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding> __Method_CreateAccessBinding = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAccessBinding",
+        __Marshaller_google_analytics_admin_v1alpha_CreateAccessBindingRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AccessBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding> __Method_GetAccessBinding = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAccessBinding",
+        __Marshaller_google_analytics_admin_v1alpha_GetAccessBindingRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AccessBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding> __Method_UpdateAccessBinding = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAccessBinding",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateAccessBindingRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AccessBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAccessBinding = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAccessBinding",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteAccessBindingRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse> __Method_ListAccessBindings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAccessBindings",
+        __Marshaller_google_analytics_admin_v1alpha_ListAccessBindingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListAccessBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse> __Method_BatchCreateAccessBindings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateAccessBindings",
+        __Marshaller_google_analytics_admin_v1alpha_BatchCreateAccessBindingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BatchCreateAccessBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse> __Method_BatchGetAccessBindings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchGetAccessBindings",
+        __Marshaller_google_analytics_admin_v1alpha_BatchGetAccessBindingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BatchGetAccessBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse> __Method_BatchUpdateAccessBindings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateAccessBindings",
+        __Marshaller_google_analytics_admin_v1alpha_BatchUpdateAccessBindingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BatchUpdateAccessBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteAccessBindings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteAccessBindings",
+        __Marshaller_google_analytics_admin_v1alpha_BatchDeleteAccessBindingsRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> __Method_GetExpandedDataSet = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExpandedDataSet",
+        __Marshaller_google_analytics_admin_v1alpha_GetExpandedDataSetRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ExpandedDataSet);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest, global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse> __Method_ListExpandedDataSets = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest, global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExpandedDataSets",
+        __Marshaller_google_analytics_admin_v1alpha_ListExpandedDataSetsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListExpandedDataSetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> __Method_CreateExpandedDataSet = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateExpandedDataSet",
+        __Marshaller_google_analytics_admin_v1alpha_CreateExpandedDataSetRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ExpandedDataSet);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> __Method_UpdateExpandedDataSet = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExpandedDataSet",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateExpandedDataSetRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ExpandedDataSet);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteExpandedDataSet = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteExpandedDataSet",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteExpandedDataSetRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Method_SetAutomatedGa4ConfigurationOptOut = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1524,7 +1678,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// Acknowledges the terms of user data collection for the specified property.
       ///
       /// This acknowledgement must be completed (either in the Google Analytics UI
-      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// or through this API) before MeasurementProtocolSecret resources may be
+      /// created.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2137,6 +2292,179 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse> RunAccessReport(global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AccessBinding> CreateAccessBinding(global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about an access binding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AccessBinding> GetAccessBinding(global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AccessBinding> UpdateAccessBinding(global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccessBinding(global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all access bindings on an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse> ListAccessBindings(global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates information about multiple access bindings to an account or
+      /// property.
+      ///
+      /// This method is transactional. If any AccessBinding cannot be created, none
+      /// of the AccessBindings will be created.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse> BatchCreateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about multiple access bindings to an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse> BatchGetAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates information about multiple access bindings to an account or
+      /// property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes information about multiple users' links to an account or property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> GetExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ExpandedDataSets on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse> ListExpandedDataSets(global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> CreateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> UpdateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4106,7 +4434,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// Acknowledges the terms of user data collection for the specified property.
       ///
       /// This acknowledgement must be completed (either in the Google Analytics UI
-      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// or through this API) before MeasurementProtocolSecret resources may be
+      /// created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4122,7 +4451,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// Acknowledges the terms of user data collection for the specified property.
       ///
       /// This acknowledgement must be completed (either in the Google Analytics UI
-      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// or through this API) before MeasurementProtocolSecret resources may be
+      /// created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4136,7 +4466,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// Acknowledges the terms of user data collection for the specified property.
       ///
       /// This acknowledgement must be completed (either in the Google Analytics UI
-      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// or through this API) before MeasurementProtocolSecret resources may be
+      /// created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4152,7 +4483,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// Acknowledges the terms of user data collection for the specified property.
       ///
       /// This acknowledgement must be completed (either in the Google Analytics UI
-      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// or through this API) before MeasurementProtocolSecret resources may be
+      /// created.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -6587,6 +6919,698 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_RunAccessReport, null, options, request);
       }
       /// <summary>
+      /// Creates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding CreateAccessBinding(global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding CreateAccessBinding(global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> CreateAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> CreateAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about an access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding GetAccessBinding(global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about an access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding GetAccessBinding(global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about an access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> GetAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about an access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> GetAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding UpdateAccessBinding(global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AccessBinding UpdateAccessBinding(global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> UpdateAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AccessBinding> UpdateAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAccessBinding(global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAccessBinding(global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an access binding on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAccessBindingAsync(global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists all access bindings on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse ListAccessBindings(global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all access bindings on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse ListAccessBindings(global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists all access bindings on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse> ListAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all access bindings on an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse> ListAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Creates information about multiple access bindings to an account or
+      /// property.
+      ///
+      /// This method is transactional. If any AccessBinding cannot be created, none
+      /// of the AccessBindings will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse BatchCreateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates information about multiple access bindings to an account or
+      /// property.
+      ///
+      /// This method is transactional. If any AccessBinding cannot be created, none
+      /// of the AccessBindings will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse BatchCreateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Creates information about multiple access bindings to an account or
+      /// property.
+      ///
+      /// This method is transactional. If any AccessBinding cannot be created, none
+      /// of the AccessBindings will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse> BatchCreateAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates information about multiple access bindings to an account or
+      /// property.
+      ///
+      /// This method is transactional. If any AccessBinding cannot be created, none
+      /// of the AccessBindings will be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse> BatchCreateAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about multiple access bindings to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse BatchGetAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about multiple access bindings to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse BatchGetAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchGetAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about multiple access bindings to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse> BatchGetAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchGetAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about multiple access bindings to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse> BatchGetAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchGetAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Updates information about multiple access bindings to an account or
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse BatchUpdateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates information about multiple access bindings to an account or
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse BatchUpdateAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Updates information about multiple access bindings to an account or
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates information about multiple access bindings to an account or
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Deletes information about multiple users' links to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes information about multiple users' links to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteAccessBindings(global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Deletes information about multiple users' links to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes information about multiple users' links to an account or property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteAccessBindingsAsync(global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet GetExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExpandedDataSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet GetExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> GetExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExpandedDataSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> GetExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Lists ExpandedDataSets on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse ListExpandedDataSets(global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExpandedDataSets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ExpandedDataSets on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse ListExpandedDataSets(global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExpandedDataSets, null, options, request);
+      }
+      /// <summary>
+      /// Lists ExpandedDataSets on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse> ListExpandedDataSetsAsync(global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExpandedDataSetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ExpandedDataSets on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse> ListExpandedDataSetsAsync(global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExpandedDataSets, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet CreateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExpandedDataSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet CreateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> CreateExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExpandedDataSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ExpandedDataSet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> CreateExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet UpdateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExpandedDataSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet UpdateExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> UpdateExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExpandedDataSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet> UpdateExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExpandedDataSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExpandedDataSet(global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteExpandedDataSet, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExpandedDataSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ExpandedDataSet on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExpandedDataSetAsync(global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteExpandedDataSet, null, options, request);
+      }
+      /// <summary>
       /// Sets the opt out status for the automated GA4 setup process for a UA
       /// property.
       /// Note: this has no effect on GA4 property.
@@ -6892,6 +7916,20 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetAttributionSettings, serviceImpl.GetAttributionSettings)
           .AddMethod(__Method_UpdateAttributionSettings, serviceImpl.UpdateAttributionSettings)
           .AddMethod(__Method_RunAccessReport, serviceImpl.RunAccessReport)
+          .AddMethod(__Method_CreateAccessBinding, serviceImpl.CreateAccessBinding)
+          .AddMethod(__Method_GetAccessBinding, serviceImpl.GetAccessBinding)
+          .AddMethod(__Method_UpdateAccessBinding, serviceImpl.UpdateAccessBinding)
+          .AddMethod(__Method_DeleteAccessBinding, serviceImpl.DeleteAccessBinding)
+          .AddMethod(__Method_ListAccessBindings, serviceImpl.ListAccessBindings)
+          .AddMethod(__Method_BatchCreateAccessBindings, serviceImpl.BatchCreateAccessBindings)
+          .AddMethod(__Method_BatchGetAccessBindings, serviceImpl.BatchGetAccessBindings)
+          .AddMethod(__Method_BatchUpdateAccessBindings, serviceImpl.BatchUpdateAccessBindings)
+          .AddMethod(__Method_BatchDeleteAccessBindings, serviceImpl.BatchDeleteAccessBindings)
+          .AddMethod(__Method_GetExpandedDataSet, serviceImpl.GetExpandedDataSet)
+          .AddMethod(__Method_ListExpandedDataSets, serviceImpl.ListExpandedDataSets)
+          .AddMethod(__Method_CreateExpandedDataSet, serviceImpl.CreateExpandedDataSet)
+          .AddMethod(__Method_UpdateExpandedDataSet, serviceImpl.UpdateExpandedDataSet)
+          .AddMethod(__Method_DeleteExpandedDataSet, serviceImpl.DeleteExpandedDataSet)
           .AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl.SetAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl.FetchAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_GetBigQueryLink, serviceImpl.GetBigQueryLink)
@@ -6989,6 +8027,20 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.GetAttributionSettings));
       serviceBinder.AddMethod(__Method_UpdateAttributionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAttributionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.AttributionSettings>(serviceImpl.UpdateAttributionSettings));
       serviceBinder.AddMethod(__Method_RunAccessReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.RunAccessReportRequest, global::Google.Analytics.Admin.V1Alpha.RunAccessReportResponse>(serviceImpl.RunAccessReport));
+      serviceBinder.AddMethod(__Method_CreateAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(serviceImpl.CreateAccessBinding));
+      serviceBinder.AddMethod(__Method_GetAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(serviceImpl.GetAccessBinding));
+      serviceBinder.AddMethod(__Method_UpdateAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAccessBindingRequest, global::Google.Analytics.Admin.V1Alpha.AccessBinding>(serviceImpl.UpdateAccessBinding));
+      serviceBinder.AddMethod(__Method_DeleteAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteAccessBindingRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAccessBinding));
+      serviceBinder.AddMethod(__Method_ListAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse>(serviceImpl.ListAccessBindings));
+      serviceBinder.AddMethod(__Method_BatchCreateAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse>(serviceImpl.BatchCreateAccessBindings));
+      serviceBinder.AddMethod(__Method_BatchGetAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse>(serviceImpl.BatchGetAccessBindings));
+      serviceBinder.AddMethod(__Method_BatchUpdateAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse>(serviceImpl.BatchUpdateAccessBindings));
+      serviceBinder.AddMethod(__Method_BatchDeleteAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchDeleteAccessBindingsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteAccessBindings));
+      serviceBinder.AddMethod(__Method_GetExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.GetExpandedDataSet));
+      serviceBinder.AddMethod(__Method_ListExpandedDataSets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsRequest, global::Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse>(serviceImpl.ListExpandedDataSets));
+      serviceBinder.AddMethod(__Method_CreateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.CreateExpandedDataSet));
+      serviceBinder.AddMethod(__Method_UpdateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.UpdateExpandedDataSet));
+      serviceBinder.AddMethod(__Method_DeleteExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExpandedDataSet));
       serviceBinder.AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.SetAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.FetchAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_GetBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.GetBigQueryLink));

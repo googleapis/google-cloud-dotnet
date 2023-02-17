@@ -15816,6 +15816,2577 @@
       ]
     },
     {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_sync",
+      "title": "CreateAccessBindingRequestObject",
+      "description": "Snippet for CreateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_async",
+      "title": "CreateAccessBindingRequestObjectAsync",
+      "description": "Snippet for CreateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_sync_flattened",
+      "title": "CreateAccessBinding",
+      "description": "Snippet for CreateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_async_flattened",
+      "title": "CreateAccessBindingAsync",
+      "description": "Snippet for CreateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_sync_flattened_resourceNames1",
+      "title": "CreateAccessBindingResourceNames1",
+      "description": "Snippet for CreateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_async_flattened_resourceNames1",
+      "title": "CreateAccessBindingResourceNames1Async",
+      "description": "Snippet for CreateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_sync_flattened_resourceNames2",
+      "title": "CreateAccessBindingResourceNames2",
+      "description": "Snippet for CreateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_async_flattened_resourceNames2",
+      "title": "CreateAccessBindingResourceNames2Async",
+      "description": "Snippet for CreateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAccessBindingResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_sync",
+      "title": "GetAccessBindingRequestObject",
+      "description": "Snippet for GetAccessBinding",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_async",
+      "title": "GetAccessBindingRequestObjectAsync",
+      "description": "Snippet for GetAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_sync_flattened",
+      "title": "GetAccessBinding",
+      "description": "Snippet for GetAccessBinding",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_async_flattened",
+      "title": "GetAccessBindingAsync",
+      "description": "Snippet for GetAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_sync_flattened_resourceNames",
+      "title": "GetAccessBindingResourceNames",
+      "description": "Snippet for GetAccessBinding",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAccessBinding_async_flattened_resourceNames",
+      "title": "GetAccessBindingResourceNamesAsync",
+      "description": "Snippet for GetAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.GetAccessBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAccessBinding_sync",
+      "title": "UpdateAccessBindingRequestObject",
+      "description": "Snippet for UpdateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.UpdateAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAccessBinding_async",
+      "title": "UpdateAccessBindingRequestObjectAsync",
+      "description": "Snippet for UpdateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAccessBinding_sync_flattened",
+      "title": "UpdateAccessBinding",
+      "description": "Snippet for UpdateAccessBinding",
+      "file": "AnalyticsAdminServiceClient.UpdateAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAccessBinding",
+        "resultType": "Google.Analytics.Admin.V1Alpha.AccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateAccessBinding_async_flattened",
+      "title": "UpdateAccessBindingAsync",
+      "description": "Snippet for UpdateAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_sync",
+      "title": "DeleteAccessBindingRequestObject",
+      "description": "Snippet for DeleteAccessBinding",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_async",
+      "title": "DeleteAccessBindingRequestObjectAsync",
+      "description": "Snippet for DeleteAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_sync_flattened",
+      "title": "DeleteAccessBinding",
+      "description": "Snippet for DeleteAccessBinding",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_async_flattened",
+      "title": "DeleteAccessBindingAsync",
+      "description": "Snippet for DeleteAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_sync_flattened_resourceNames",
+      "title": "DeleteAccessBindingResourceNames",
+      "description": "Snippet for DeleteAccessBinding",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBinding",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBinding",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAccessBinding_async_flattened_resourceNames",
+      "title": "DeleteAccessBindingResourceNamesAsync",
+      "description": "Snippet for DeleteAccessBindingAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAccessBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccessBindingAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAccessBindingAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccessBinding",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAccessBinding",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_sync",
+      "title": "ListAccessBindingsRequestObject",
+      "description": "Snippet for ListAccessBindings",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_async",
+      "title": "ListAccessBindingsRequestObjectAsync",
+      "description": "Snippet for ListAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_sync_flattened",
+      "title": "ListAccessBindings",
+      "description": "Snippet for ListAccessBindings",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_async_flattened",
+      "title": "ListAccessBindingsAsync",
+      "description": "Snippet for ListAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_sync_flattened_resourceNames1",
+      "title": "ListAccessBindingsResourceNames1",
+      "description": "Snippet for ListAccessBindings",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_async_flattened_resourceNames1",
+      "title": "ListAccessBindingsResourceNames1Async",
+      "description": "Snippet for ListAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_sync_flattened_resourceNames2",
+      "title": "ListAccessBindingsResourceNames2",
+      "description": "Snippet for ListAccessBindings",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindings",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAccessBindings_async_flattened_resourceNames2",
+      "title": "ListAccessBindingsResourceNames2Async",
+      "description": "Snippet for ListAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.ListAccessBindingsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAccessBindingsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAccessBindingsResponse, Google.Analytics.Admin.V1Alpha.AccessBinding>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchCreateAccessBindings_sync",
+      "title": "BatchCreateAccessBindingsRequestObject",
+      "description": "Snippet for BatchCreateAccessBindings",
+      "file": "AnalyticsAdminServiceClient.BatchCreateAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchCreateAccessBindings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchCreateAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchCreateAccessBindings_async",
+      "title": "BatchCreateAccessBindingsRequestObjectAsync",
+      "description": "Snippet for BatchCreateAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.BatchCreateAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchCreateAccessBindingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchCreateAccessBindingsResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchCreateAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchGetAccessBindings_sync",
+      "title": "BatchGetAccessBindingsRequestObject",
+      "description": "Snippet for BatchGetAccessBindings",
+      "file": "AnalyticsAdminServiceClient.BatchGetAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchGetAccessBindings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchGetAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchGetAccessBindings_async",
+      "title": "BatchGetAccessBindingsRequestObjectAsync",
+      "description": "Snippet for BatchGetAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.BatchGetAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchGetAccessBindingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchGetAccessBindingsResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchGetAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchGetAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchUpdateAccessBindings_sync",
+      "title": "BatchUpdateAccessBindingsRequestObject",
+      "description": "Snippet for BatchUpdateAccessBindings",
+      "file": "AnalyticsAdminServiceClient.BatchUpdateAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchUpdateAccessBindings",
+        "resultType": "Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchUpdateAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchUpdateAccessBindings_async",
+      "title": "BatchUpdateAccessBindingsRequestObjectAsync",
+      "description": "Snippet for BatchUpdateAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.BatchUpdateAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchUpdateAccessBindingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchUpdateAccessBindingsResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchUpdateAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchDeleteAccessBindings_sync",
+      "title": "BatchDeleteAccessBindingsRequestObject",
+      "description": "Snippet for BatchDeleteAccessBindings",
+      "file": "AnalyticsAdminServiceClient.BatchDeleteAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteAccessBindings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchDeleteAccessBindings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchDeleteAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchDeleteAccessBindings_async",
+      "title": "BatchDeleteAccessBindingsRequestObjectAsync",
+      "description": "Snippet for BatchDeleteAccessBindingsAsync",
+      "file": "AnalyticsAdminServiceClient.BatchDeleteAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteAccessBindingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchDeleteAccessBindingsAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteAccessBindings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchDeleteAccessBindings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_sync",
+      "title": "GetExpandedDataSetRequestObject",
+      "description": "Snippet for GetExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_async",
+      "title": "GetExpandedDataSetRequestObjectAsync",
+      "description": "Snippet for GetExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_sync_flattened",
+      "title": "GetExpandedDataSet",
+      "description": "Snippet for GetExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_async_flattened",
+      "title": "GetExpandedDataSetAsync",
+      "description": "Snippet for GetExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_sync_flattened_resourceNames",
+      "title": "GetExpandedDataSetResourceNames",
+      "description": "Snippet for GetExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetExpandedDataSet_async_flattened_resourceNames",
+      "title": "GetExpandedDataSetResourceNamesAsync",
+      "description": "Snippet for GetExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.GetExpandedDataSetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_sync",
+      "title": "ListExpandedDataSetsRequestObject",
+      "description": "Snippet for ListExpandedDataSets",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSets",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_async",
+      "title": "ListExpandedDataSetsRequestObjectAsync",
+      "description": "Snippet for ListExpandedDataSetsAsync",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSetsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_sync_flattened",
+      "title": "ListExpandedDataSets",
+      "description": "Snippet for ListExpandedDataSets",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSets",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_async_flattened",
+      "title": "ListExpandedDataSetsAsync",
+      "description": "Snippet for ListExpandedDataSetsAsync",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSetsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_sync_flattened_resourceNames",
+      "title": "ListExpandedDataSetsResourceNames",
+      "description": "Snippet for ListExpandedDataSets",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSets",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSets",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListExpandedDataSets_async_flattened_resourceNames",
+      "title": "ListExpandedDataSetsResourceNamesAsync",
+      "description": "Snippet for ListExpandedDataSetsAsync",
+      "file": "AnalyticsAdminServiceClient.ListExpandedDataSetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExpandedDataSetsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsAsync",
+        "async": true,
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListExpandedDataSetsResponse, Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListExpandedDataSets",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListExpandedDataSets",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_sync",
+      "title": "CreateExpandedDataSetRequestObject",
+      "description": "Snippet for CreateExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_async",
+      "title": "CreateExpandedDataSetRequestObjectAsync",
+      "description": "Snippet for CreateExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_sync_flattened",
+      "title": "CreateExpandedDataSet",
+      "description": "Snippet for CreateExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_async_flattened",
+      "title": "CreateExpandedDataSetAsync",
+      "description": "Snippet for CreateExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_sync_flattened_resourceNames",
+      "title": "CreateExpandedDataSetResourceNames",
+      "description": "Snippet for CreateExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateExpandedDataSet_async_flattened_resourceNames",
+      "title": "CreateExpandedDataSetResourceNamesAsync",
+      "description": "Snippet for CreateExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.CreateExpandedDataSetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateExpandedDataSet_sync",
+      "title": "UpdateExpandedDataSetRequestObject",
+      "description": "Snippet for UpdateExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.UpdateExpandedDataSetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateExpandedDataSet_async",
+      "title": "UpdateExpandedDataSetRequestObjectAsync",
+      "description": "Snippet for UpdateExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateExpandedDataSetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateExpandedDataSet_sync_flattened",
+      "title": "UpdateExpandedDataSet",
+      "description": "Snippet for UpdateExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.UpdateExpandedDataSetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateExpandedDataSet",
+        "resultType": "Google.Analytics.Admin.V1Alpha.ExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateExpandedDataSet_async_flattened",
+      "title": "UpdateExpandedDataSetAsync",
+      "description": "Snippet for UpdateExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateExpandedDataSetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ExpandedDataSet>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_sync",
+      "title": "DeleteExpandedDataSetRequestObject",
+      "description": "Snippet for DeleteExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_async",
+      "title": "DeleteExpandedDataSetRequestObjectAsync",
+      "description": "Snippet for DeleteExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_sync_flattened",
+      "title": "DeleteExpandedDataSet",
+      "description": "Snippet for DeleteExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_async_flattened",
+      "title": "DeleteExpandedDataSetAsync",
+      "description": "Snippet for DeleteExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_sync_flattened_resourceNames",
+      "title": "DeleteExpandedDataSetResourceNames",
+      "description": "Snippet for DeleteExpandedDataSet",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSet",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSet",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteExpandedDataSet_async_flattened_resourceNames",
+      "title": "DeleteExpandedDataSetResourceNamesAsync",
+      "description": "Snippet for DeleteExpandedDataSetAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteExpandedDataSetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExpandedDataSetAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteExpandedDataSetAsync",
+        "async": true,
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExpandedDataSet",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteExpandedDataSet",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_sync",
       "title": "SetAutomatedGa4ConfigurationOptOutRequestObject",
       "description": "Snippet for SetAutomatedGa4ConfigurationOptOut",
