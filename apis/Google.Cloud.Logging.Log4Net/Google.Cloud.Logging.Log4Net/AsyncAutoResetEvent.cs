@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ namespace Google.Cloud.Logging.Log4Net
 {
     internal sealed class AsyncAutoResetEvent
     {
-        private SemaphoreSlim _sem = new SemaphoreSlim(0, 1);
+        private readonly SemaphoreSlim _sem = new SemaphoreSlim(0, 1);
 
         public void Set()
         {
