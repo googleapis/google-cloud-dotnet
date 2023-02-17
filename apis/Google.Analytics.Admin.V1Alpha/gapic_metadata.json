@@ -46,10 +46,22 @@
                 "AuditUserLinksAsync"
               ]
             },
+            "BatchCreateAccessBindings": {
+              "methods": [
+                "BatchCreateAccessBindings",
+                "BatchCreateAccessBindingsAsync"
+              ]
+            },
             "BatchCreateUserLinks": {
               "methods": [
                 "BatchCreateUserLinks",
                 "BatchCreateUserLinksAsync"
+              ]
+            },
+            "BatchDeleteAccessBindings": {
+              "methods": [
+                "BatchDeleteAccessBindings",
+                "BatchDeleteAccessBindingsAsync"
               ]
             },
             "BatchDeleteUserLinks": {
@@ -58,10 +70,22 @@
                 "BatchDeleteUserLinksAsync"
               ]
             },
+            "BatchGetAccessBindings": {
+              "methods": [
+                "BatchGetAccessBindings",
+                "BatchGetAccessBindingsAsync"
+              ]
+            },
             "BatchGetUserLinks": {
               "methods": [
                 "BatchGetUserLinks",
                 "BatchGetUserLinksAsync"
+              ]
+            },
+            "BatchUpdateAccessBindings": {
+              "methods": [
+                "BatchUpdateAccessBindings",
+                "BatchUpdateAccessBindingsAsync"
               ]
             },
             "BatchUpdateUserLinks": {
@@ -74,6 +98,12 @@
               "methods": [
                 "CancelDisplayVideo360AdvertiserLinkProposal",
                 "CancelDisplayVideo360AdvertiserLinkProposalAsync"
+              ]
+            },
+            "CreateAccessBinding": {
+              "methods": [
+                "CreateAccessBinding",
+                "CreateAccessBindingAsync"
               ]
             },
             "CreateAudience": {
@@ -118,6 +148,12 @@
                 "CreateDisplayVideo360AdvertiserLinkProposalAsync"
               ]
             },
+            "CreateExpandedDataSet": {
+              "methods": [
+                "CreateExpandedDataSet",
+                "CreateExpandedDataSetAsync"
+              ]
+            },
             "CreateFirebaseLink": {
               "methods": [
                 "CreateFirebaseLink",
@@ -154,6 +190,12 @@
                 "CreateUserLinkAsync"
               ]
             },
+            "DeleteAccessBinding": {
+              "methods": [
+                "DeleteAccessBinding",
+                "DeleteAccessBindingAsync"
+              ]
+            },
             "DeleteAccount": {
               "methods": [
                 "DeleteAccount",
@@ -182,6 +224,12 @@
               "methods": [
                 "DeleteDisplayVideo360AdvertiserLinkProposal",
                 "DeleteDisplayVideo360AdvertiserLinkProposalAsync"
+              ]
+            },
+            "DeleteExpandedDataSet": {
+              "methods": [
+                "DeleteExpandedDataSet",
+                "DeleteExpandedDataSetAsync"
               ]
             },
             "DeleteFirebaseLink": {
@@ -224,6 +272,12 @@
               "methods": [
                 "FetchAutomatedGa4ConfigurationOptOut",
                 "FetchAutomatedGa4ConfigurationOptOutAsync"
+              ]
+            },
+            "GetAccessBinding": {
+              "methods": [
+                "GetAccessBinding",
+                "GetAccessBindingAsync"
               ]
             },
             "GetAccount": {
@@ -298,6 +352,12 @@
                 "GetDisplayVideo360AdvertiserLinkProposalAsync"
               ]
             },
+            "GetExpandedDataSet": {
+              "methods": [
+                "GetExpandedDataSet",
+                "GetExpandedDataSetAsync"
+              ]
+            },
             "GetGlobalSiteTag": {
               "methods": [
                 "GetGlobalSiteTag",
@@ -332,6 +392,12 @@
               "methods": [
                 "GetUserLink",
                 "GetUserLinkAsync"
+              ]
+            },
+            "ListAccessBindings": {
+              "methods": [
+                "ListAccessBindings",
+                "ListAccessBindingsAsync"
               ]
             },
             "ListAccountSummaries": {
@@ -394,6 +460,12 @@
                 "ListDisplayVideo360AdvertiserLinksAsync"
               ]
             },
+            "ListExpandedDataSets": {
+              "methods": [
+                "ListExpandedDataSets",
+                "ListExpandedDataSetsAsync"
+              ]
+            },
             "ListFirebaseLinks": {
               "methods": [
                 "ListFirebaseLinks",
@@ -454,6 +526,12 @@
                 "SetAutomatedGa4ConfigurationOptOutAsync"
               ]
             },
+            "UpdateAccessBinding": {
+              "methods": [
+                "UpdateAccessBinding",
+                "UpdateAccessBindingAsync"
+              ]
+            },
             "UpdateAccount": {
               "methods": [
                 "UpdateAccount",
@@ -500,6 +578,12 @@
               "methods": [
                 "UpdateDisplayVideo360AdvertiserLink",
                 "UpdateDisplayVideo360AdvertiserLinkAsync"
+              ]
+            },
+            "UpdateExpandedDataSet": {
+              "methods": [
+                "UpdateExpandedDataSet",
+                "UpdateExpandedDataSetAsync"
               ]
             },
             "UpdateGoogleAdsLink": {
