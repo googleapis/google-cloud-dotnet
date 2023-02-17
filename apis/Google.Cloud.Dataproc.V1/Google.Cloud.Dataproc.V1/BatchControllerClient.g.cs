@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -53,6 +54,7 @@ namespace Google.Cloud.Dataproc.V1
             GetBatchSettings = existing.GetBatchSettings;
             ListBatchesSettings = existing.ListBatchesSettings;
             DeleteBatchSettings = existing.DeleteBatchSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -123,6 +125,11 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteBatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BatchControllerSettings"/> object.</returns>
@@ -265,6 +272,9 @@ namespace Google.Cloud.Dataproc.V1
         /// <summary>The underlying gRPC BatchController client</summary>
         public virtual BatchController.BatchControllerClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Creates a batch workload that executes asynchronously.
         /// </summary>
@@ -328,8 +338,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -353,8 +363,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -378,8 +388,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -398,8 +408,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -423,8 +433,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -448,8 +458,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Required. The batch to create.
         /// </param>
         /// <param name="batchId">
-        /// Optional. The ID to use for the batch, which will become the final component of
-        /// the batch's resource name.
+        /// Optional. The ID to use for the batch, which will become the final
+        /// component of the batch's resource name.
         /// 
         /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
         /// </param>
@@ -489,7 +499,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -503,7 +515,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -517,7 +531,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -528,7 +544,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -542,7 +560,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -556,7 +576,9 @@ namespace Google.Cloud.Dataproc.V1
         /// Gets the batch workload resource representation.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch to retrieve.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -712,7 +734,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -727,7 +751,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -742,7 +768,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -754,7 +782,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -769,7 +799,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -784,7 +816,9 @@ namespace Google.Cloud.Dataproc.V1
         /// the delete fails and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the batch resource to delete.
+        /// Required. The fully qualified name of the batch to retrieve
+        /// in the format
+        /// "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -818,6 +852,7 @@ namespace Google.Cloud.Dataproc.V1
             BatchControllerSettings effectiveSettings = settings ?? BatchControllerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateBatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBatchOperationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateBatch = clientHelper.BuildApiCall<CreateBatchRequest, lro::Operation>("CreateBatch", grpcClient.CreateBatchAsync, grpcClient.CreateBatch, effectiveSettings.CreateBatchSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBatch);
             Modify_CreateBatchApiCall(ref _callCreateBatch);
@@ -847,6 +882,9 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>The underlying gRPC BatchController client</summary>
         public override BatchController.BatchControllerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateBatchRequest(ref CreateBatchRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -981,6 +1019,22 @@ namespace Google.Cloud.Dataproc.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class BatchController
+    {
+        public partial class BatchControllerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

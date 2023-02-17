@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -55,6 +56,7 @@ namespace Google.Cloud.Dataproc.V1
             UpdateJobSettings = existing.UpdateJobSettings;
             CancelJobSettings = existing.CancelJobSettings;
             DeleteJobSettings = existing.DeleteJobSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -213,6 +215,11 @@ namespace Google.Cloud.Dataproc.V1
         /// </remarks>
         public gaxgrpc::CallSettings DeleteJobSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="JobControllerSettings"/> object.</returns>
         public JobControllerSettings Clone() => new JobControllerSettings(this);
@@ -353,6 +360,9 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>The underlying gRPC JobController client</summary>
         public virtual JobController.JobControllerClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Submits a job to a cluster.
@@ -1094,6 +1104,7 @@ namespace Google.Cloud.Dataproc.V1
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>("SubmitJob", grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callSubmitJob);
             Modify_SubmitJobApiCall(ref _callSubmitJob);
@@ -1138,6 +1149,9 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>The underlying gRPC JobController client</summary>
         public override JobController.JobControllerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_SubmitJobRequest(ref SubmitJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1356,6 +1370,22 @@ namespace Google.Cloud.Dataproc.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class JobController
+    {
+        public partial class JobControllerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
