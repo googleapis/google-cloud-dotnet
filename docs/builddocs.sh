@@ -33,11 +33,11 @@ build_api_docs() {
     dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   cp filterConfig.yml output/$api
-  dotnet docfx metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
+  dotnet docfx metadata --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Build metadata for devsite
-  dotnet docfx metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
+  dotnet docfx metadata --logLevel Warning output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Unescape the metadata files for both devsite and googleapis.dev
