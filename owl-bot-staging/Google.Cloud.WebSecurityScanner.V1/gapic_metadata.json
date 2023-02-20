@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.websecurityscanner.v1",
+  "libraryPackage": "Google.Cloud.WebSecurityScanner.V1",
+  "services": {
+    "WebSecurityScanner": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WebSecurityScannerClient",
+          "rpcs": {
+            "CreateScanConfig": {
+              "methods": [
+                "CreateScanConfig",
+                "CreateScanConfigAsync"
+              ]
+            },
+            "DeleteScanConfig": {
+              "methods": [
+                "DeleteScanConfig",
+                "DeleteScanConfigAsync"
+              ]
+            },
+            "GetFinding": {
+              "methods": [
+                "GetFinding",
+                "GetFindingAsync"
+              ]
+            },
+            "GetScanConfig": {
+              "methods": [
+                "GetScanConfig",
+                "GetScanConfigAsync"
+              ]
+            },
+            "GetScanRun": {
+              "methods": [
+                "GetScanRun",
+                "GetScanRunAsync"
+              ]
+            },
+            "ListCrawledUrls": {
+              "methods": [
+                "ListCrawledUrls",
+                "ListCrawledUrlsAsync"
+              ]
+            },
+            "ListFindingTypeStats": {
+              "methods": [
+                "ListFindingTypeStats",
+                "ListFindingTypeStatsAsync"
+              ]
+            },
+            "ListFindings": {
+              "methods": [
+                "ListFindings",
+                "ListFindingsAsync"
+              ]
+            },
+            "ListScanConfigs": {
+              "methods": [
+                "ListScanConfigs",
+                "ListScanConfigsAsync"
+              ]
+            },
+            "ListScanRuns": {
+              "methods": [
+                "ListScanRuns",
+                "ListScanRunsAsync"
+              ]
+            },
+            "StartScanRun": {
+              "methods": [
+                "StartScanRun",
+                "StartScanRunAsync"
+              ]
+            },
+            "StopScanRun": {
+              "methods": [
+                "StopScanRun",
+                "StopScanRunAsync"
+              ]
+            },
+            "UpdateScanConfig": {
+              "methods": [
+                "UpdateScanConfig",
+                "UpdateScanConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
