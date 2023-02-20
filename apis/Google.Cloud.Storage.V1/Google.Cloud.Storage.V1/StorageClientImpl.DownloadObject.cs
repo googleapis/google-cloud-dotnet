@@ -131,10 +131,7 @@ namespace Google.Cloud.Storage.V1
                 progress.Report(InitialDownloadProgress.Instance);
             }
             var result = downloader.Download(uri, destination);
-            if (result.Status == DownloadStatus.Failed)
-            {
-                throw result.Exception;
-            }
+            result.ThrowOnFailure();
             // This will have been populated by the downloader.
             return metadata;
         }
@@ -160,10 +157,7 @@ namespace Google.Cloud.Storage.V1
                     progress.Report(InitialDownloadProgress.Instance);
                 }
                 var result = await downloader.DownloadAsync(uri, destination, cancellationToken).ConfigureAwait(false);
-                if (result.Status == DownloadStatus.Failed)
-                {
-                    throw result.Exception;
-                }
+                result.ThrowOnFailure();
                 // This will have been populated by the downloader.
                 return metadata;
             });

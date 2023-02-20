@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using Google.Apis.Upload;
-using Google.Cloud.Storage.V1;
 using System;
 using System.IO;
 using System.Threading;
@@ -149,7 +148,7 @@ namespace Google.Cloud.Storage.V1
             internal Object Execute()
             {
                 _mediaUpload.Upload();
-                CheckFinalProgress();
+                _mediaUpload.GetProgress().ThrowOnFailure();
                 var result = _mediaUpload.ResponseBody;
                 var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
                 if (hash != result.Crc32c)
@@ -171,7 +170,7 @@ namespace Google.Cloud.Storage.V1
             internal async Task<Object> ExecuteAsync(CancellationToken cancellationToken)
             {
                 await _mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
-                CheckFinalProgress();
+                _mediaUpload.GetProgress().ThrowOnFailure();
                 var result = _mediaUpload.ResponseBody;
                 var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
                 if (hash != result.Crc32c)
@@ -191,15 +190,6 @@ namespace Google.Cloud.Storage.V1
                     throw new UploadValidationException(hash, result, additionalFailures);
                 }
                 return result;
-            }
-            
-            private void CheckFinalProgress()
-            {
-                var finalProgress = _mediaUpload.GetProgress();
-                if (finalProgress.Exception != null)
-                {
-                    throw finalProgress.Exception;
-                }
             }
         }
     }
