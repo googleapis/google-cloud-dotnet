@@ -132,6 +132,20 @@ namespace Google.Analytics.Admin.V1Alpha
             GetAttributionSettingsSettings = existing.GetAttributionSettingsSettings;
             UpdateAttributionSettingsSettings = existing.UpdateAttributionSettingsSettings;
             RunAccessReportSettings = existing.RunAccessReportSettings;
+            CreateAccessBindingSettings = existing.CreateAccessBindingSettings;
+            GetAccessBindingSettings = existing.GetAccessBindingSettings;
+            UpdateAccessBindingSettings = existing.UpdateAccessBindingSettings;
+            DeleteAccessBindingSettings = existing.DeleteAccessBindingSettings;
+            ListAccessBindingsSettings = existing.ListAccessBindingsSettings;
+            BatchCreateAccessBindingsSettings = existing.BatchCreateAccessBindingsSettings;
+            BatchGetAccessBindingsSettings = existing.BatchGetAccessBindingsSettings;
+            BatchUpdateAccessBindingsSettings = existing.BatchUpdateAccessBindingsSettings;
+            BatchDeleteAccessBindingsSettings = existing.BatchDeleteAccessBindingsSettings;
+            GetExpandedDataSetSettings = existing.GetExpandedDataSetSettings;
+            ListExpandedDataSetsSettings = existing.ListExpandedDataSetsSettings;
+            CreateExpandedDataSetSettings = existing.CreateExpandedDataSetSettings;
+            UpdateExpandedDataSetSettings = existing.UpdateExpandedDataSetSettings;
+            DeleteExpandedDataSetSettings = existing.DeleteExpandedDataSetSettings;
             SetAutomatedGa4ConfigurationOptOutSettings = existing.SetAutomatedGa4ConfigurationOptOutSettings;
             FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
             GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
@@ -1729,6 +1743,314 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateAccessBinding</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetAccessBinding</c> and <c>AnalyticsAdminServiceClient.GetAccessBindingAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateAccessBinding</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteAccessBinding</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListAccessBindings</c> and
+        /// <c>AnalyticsAdminServiceClient.ListAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.BatchCreateAccessBindings</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchCreateAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.BatchGetAccessBindings</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchGetAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchGetAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.BatchUpdateAccessBindings</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchUpdateAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.BatchDeleteAccessBindings</c> and
+        /// <c>AnalyticsAdminServiceClient.BatchDeleteAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetExpandedDataSet</c> and
+        /// <c>AnalyticsAdminServiceClient.GetExpandedDataSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetExpandedDataSetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListExpandedDataSets</c> and
+        /// <c>AnalyticsAdminServiceClient.ListExpandedDataSetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListExpandedDataSetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateExpandedDataSet</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateExpandedDataSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateExpandedDataSetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateExpandedDataSet</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateExpandedDataSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExpandedDataSetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteExpandedDataSet</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteExpandedDataSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteExpandedDataSetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut</c> and
         /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync</c>.
         /// </summary>
@@ -2351,8 +2673,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated. Field names must be in snake
-        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
-        /// replace the entire entity, use one path with the string "*" to match all
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
         /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2373,8 +2695,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated. Field names must be in snake
-        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
-        /// replace the entire entity, use one path with the string "*" to match all
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
         /// fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2395,8 +2717,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated. Field names must be in snake
-        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
-        /// replace the entire entity, use one path with the string "*" to match all
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
         /// fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5428,7 +5750,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Acknowledges the terms of user data collection for the specified property.
         /// 
         /// This acknowledgement must be completed (either in the Google Analytics UI
-        /// or via this API) before MeasurementProtocolSecret resources may be created.
+        /// or through this API) before MeasurementProtocolSecret resources may be
+        /// created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5440,7 +5763,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Acknowledges the terms of user data collection for the specified property.
         /// 
         /// This acknowledgement must be completed (either in the Google Analytics UI
-        /// or via this API) before MeasurementProtocolSecret resources may be created.
+        /// or through this API) before MeasurementProtocolSecret resources may be
+        /// created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5452,7 +5776,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Acknowledges the terms of user data collection for the specified property.
         /// 
         /// This acknowledgement must be completed (either in the Google Analytics UI
-        /// or via this API) before MeasurementProtocolSecret resources may be created.
+        /// or through this API) before MeasurementProtocolSecret resources may be
+        /// created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -10473,6 +10798,1353 @@ namespace Google.Analytics.Admin.V1Alpha
             RunAccessReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding CreateAccessBinding(CreateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(CreateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(CreateAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            CreateAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding CreateAccessBinding(string parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBinding(new CreateAccessBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(string parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBindingAsync(new CreateAccessBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(string parent, AccessBinding accessBinding, st::CancellationToken cancellationToken) =>
+            CreateAccessBindingAsync(parent, accessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding CreateAccessBinding(AccountName parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBinding(new CreateAccessBindingRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(AccountName parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBindingAsync(new CreateAccessBindingRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(AccountName parent, AccessBinding accessBinding, st::CancellationToken cancellationToken) =>
+            CreateAccessBindingAsync(parent, accessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding CreateAccessBinding(PropertyName parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBinding(new CreateAccessBindingRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(PropertyName parent, AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccessBindingAsync(new CreateAccessBindingRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="accessBinding">
+        /// Required. The access binding to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> CreateAccessBindingAsync(PropertyName parent, AccessBinding accessBinding, st::CancellationToken cancellationToken) =>
+            CreateAccessBindingAsync(parent, accessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding GetAccessBinding(GetAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(GetAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(GetAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding GetAccessBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessBinding(new GetAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessBindingAsync(new GetAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding GetAccessBinding(AccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessBinding(new GetAccessBindingRequest
+            {
+                AccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(AccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccessBindingAsync(new GetAccessBindingRequest
+            {
+                AccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the access binding to retrieve.
+        /// Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> GetAccessBindingAsync(AccessBindingName name, st::CancellationToken cancellationToken) =>
+            GetAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding UpdateAccessBinding(UpdateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> UpdateAccessBindingAsync(UpdateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> UpdateAccessBindingAsync(UpdateAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="accessBinding">
+        /// Required. The access binding to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccessBinding UpdateAccessBinding(AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAccessBinding(new UpdateAccessBindingRequest
+            {
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="accessBinding">
+        /// Required. The access binding to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> UpdateAccessBindingAsync(AccessBinding accessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAccessBindingAsync(new UpdateAccessBindingRequest
+            {
+                AccessBinding = gax::GaxPreconditions.CheckNotNull(accessBinding, nameof(accessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="accessBinding">
+        /// Required. The access binding to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccessBinding> UpdateAccessBindingAsync(AccessBinding accessBinding, st::CancellationToken cancellationToken) =>
+            UpdateAccessBindingAsync(accessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAccessBinding(DeleteAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(DeleteAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(DeleteAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAccessBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessBinding(new DeleteAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessBindingAsync(new DeleteAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAccessBinding(AccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessBinding(new DeleteAccessBindingRequest
+            {
+                AccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(AccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccessBindingAsync(new DeleteAccessBindingRequest
+            {
+                AccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Formats:
+        /// - accounts/{account}/accessBindings/{accessBinding}
+        /// - properties/{property}/accessBindings/{accessBinding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAccessBindingAsync(AccessBindingName name, st::CancellationToken cancellationToken) =>
+            DeleteAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(ListAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(ListAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindings(new ListAccessBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindingsAsync(new ListAccessBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindings(new ListAccessBindingsRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(AccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindingsAsync(new ListAccessBindingsRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindings(new ListAccessBindingsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Formats:
+        /// - accounts/{account}
+        /// - properties/{property}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAccessBindingsAsync(new ListAccessBindingsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates information about multiple access bindings to an account or
+        /// property.
+        /// 
+        /// This method is transactional. If any AccessBinding cannot be created, none
+        /// of the AccessBindings will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateAccessBindingsResponse BatchCreateAccessBindings(BatchCreateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates information about multiple access bindings to an account or
+        /// property.
+        /// 
+        /// This method is transactional. If any AccessBinding cannot be created, none
+        /// of the AccessBindings will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAccessBindingsResponse> BatchCreateAccessBindingsAsync(BatchCreateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates information about multiple access bindings to an account or
+        /// property.
+        /// 
+        /// This method is transactional. If any AccessBinding cannot be created, none
+        /// of the AccessBindings will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAccessBindingsResponse> BatchCreateAccessBindingsAsync(BatchCreateAccessBindingsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateAccessBindingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about multiple access bindings to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchGetAccessBindingsResponse BatchGetAccessBindings(BatchGetAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about multiple access bindings to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetAccessBindingsResponse> BatchGetAccessBindingsAsync(BatchGetAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about multiple access bindings to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchGetAccessBindingsResponse> BatchGetAccessBindingsAsync(BatchGetAccessBindingsRequest request, st::CancellationToken cancellationToken) =>
+            BatchGetAccessBindingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates information about multiple access bindings to an account or
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateAccessBindingsResponse BatchUpdateAccessBindings(BatchUpdateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates information about multiple access bindings to an account or
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindingsAsync(BatchUpdateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates information about multiple access bindings to an account or
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindingsAsync(BatchUpdateAccessBindingsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateAccessBindingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes information about multiple users' links to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteAccessBindings(BatchDeleteAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes information about multiple users' links to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteAccessBindingsAsync(BatchDeleteAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes information about multiple users' links to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteAccessBindingsAsync(BatchDeleteAccessBindingsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteAccessBindingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet GetExpandedDataSet(GetExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(GetExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(GetExpandedDataSetRequest request, st::CancellationToken cancellationToken) =>
+            GetExpandedDataSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet GetExpandedDataSet(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExpandedDataSet(new GetExpandedDataSetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExpandedDataSetAsync(new GetExpandedDataSetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetExpandedDataSetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet GetExpandedDataSet(ExpandedDataSetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExpandedDataSet(new GetExpandedDataSetRequest
+            {
+                ExpandedDataSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(ExpandedDataSetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExpandedDataSetAsync(new GetExpandedDataSetRequest
+            {
+                ExpandedDataSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Audience to get.
+        /// Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(ExpandedDataSetName name, st::CancellationToken cancellationToken) =>
+            GetExpandedDataSetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(ListExpandedDataSetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(ListExpandedDataSetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListExpandedDataSets(new ListExpandedDataSetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListExpandedDataSetsAsync(new ListExpandedDataSetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListExpandedDataSets(new ListExpandedDataSetsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListExpandedDataSetsAsync(new ListExpandedDataSetsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet CreateExpandedDataSet(CreateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(CreateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(CreateExpandedDataSetRequest request, st::CancellationToken cancellationToken) =>
+            CreateExpandedDataSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet CreateExpandedDataSet(string parent, ExpandedDataSet expandedDataSet, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExpandedDataSet(new CreateExpandedDataSetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(string parent, ExpandedDataSet expandedDataSet, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExpandedDataSetAsync(new CreateExpandedDataSetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(string parent, ExpandedDataSet expandedDataSet, st::CancellationToken cancellationToken) =>
+            CreateExpandedDataSetAsync(parent, expandedDataSet, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet CreateExpandedDataSet(PropertyName parent, ExpandedDataSet expandedDataSet, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExpandedDataSet(new CreateExpandedDataSetRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(PropertyName parent, ExpandedDataSet expandedDataSet, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExpandedDataSetAsync(new CreateExpandedDataSetRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(PropertyName parent, ExpandedDataSet expandedDataSet, st::CancellationToken cancellationToken) =>
+            CreateExpandedDataSetAsync(parent, expandedDataSet, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet UpdateExpandedDataSet(UpdateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> UpdateExpandedDataSetAsync(UpdateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> UpdateExpandedDataSetAsync(UpdateExpandedDataSetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExpandedDataSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to update.
+        /// The resource's `name` field is used to identify the ExpandedDataSet to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExpandedDataSet UpdateExpandedDataSet(ExpandedDataSet expandedDataSet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExpandedDataSet(new UpdateExpandedDataSetRequest
+            {
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to update.
+        /// The resource's `name` field is used to identify the ExpandedDataSet to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> UpdateExpandedDataSetAsync(ExpandedDataSet expandedDataSet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExpandedDataSetAsync(new UpdateExpandedDataSetRequest
+            {
+                ExpandedDataSet = gax::GaxPreconditions.CheckNotNull(expandedDataSet, nameof(expandedDataSet)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="expandedDataSet">
+        /// Required. The ExpandedDataSet to update.
+        /// The resource's `name` field is used to identify the ExpandedDataSet to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExpandedDataSet> UpdateExpandedDataSetAsync(ExpandedDataSet expandedDataSet, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateExpandedDataSetAsync(expandedDataSet, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteExpandedDataSet(DeleteExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(DeleteExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(DeleteExpandedDataSetRequest request, st::CancellationToken cancellationToken) =>
+            DeleteExpandedDataSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteExpandedDataSet(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExpandedDataSet(new DeleteExpandedDataSetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExpandedDataSetAsync(new DeleteExpandedDataSetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteExpandedDataSetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteExpandedDataSet(ExpandedDataSetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExpandedDataSet(new DeleteExpandedDataSetRequest
+            {
+                ExpandedDataSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(ExpandedDataSetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExpandedDataSetAsync(new DeleteExpandedDataSetRequest
+            {
+                ExpandedDataSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Example format: properties/1234/expandedDataSets/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteExpandedDataSetAsync(ExpandedDataSetName name, st::CancellationToken cancellationToken) =>
+            DeleteExpandedDataSetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the opt out status for the automated GA4 setup process for a UA
         /// property.
         /// Note: this has no effect on GA4 property.
@@ -10952,6 +12624,34 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> _callRunAccessReport;
 
+        private readonly gaxgrpc::ApiCall<CreateAccessBindingRequest, AccessBinding> _callCreateAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<GetAccessBindingRequest, AccessBinding> _callGetAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<UpdateAccessBindingRequest, AccessBinding> _callUpdateAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<DeleteAccessBindingRequest, wkt::Empty> _callDeleteAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<ListAccessBindingsRequest, ListAccessBindingsResponse> _callListAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateAccessBindingsRequest, BatchCreateAccessBindingsResponse> _callBatchCreateAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<BatchGetAccessBindingsRequest, BatchGetAccessBindingsResponse> _callBatchGetAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateAccessBindingsRequest, BatchUpdateAccessBindingsResponse> _callBatchUpdateAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteAccessBindingsRequest, wkt::Empty> _callBatchDeleteAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<GetExpandedDataSetRequest, ExpandedDataSet> _callGetExpandedDataSet;
+
+        private readonly gaxgrpc::ApiCall<ListExpandedDataSetsRequest, ListExpandedDataSetsResponse> _callListExpandedDataSets;
+
+        private readonly gaxgrpc::ApiCall<CreateExpandedDataSetRequest, ExpandedDataSet> _callCreateExpandedDataSet;
+
+        private readonly gaxgrpc::ApiCall<UpdateExpandedDataSetRequest, ExpandedDataSet> _callUpdateExpandedDataSet;
+
+        private readonly gaxgrpc::ApiCall<DeleteExpandedDataSetRequest, wkt::Empty> _callDeleteExpandedDataSet;
+
         private readonly gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> _callSetAutomatedGa4ConfigurationOptOut;
 
         private readonly gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> _callFetchAutomatedGa4ConfigurationOptOut;
@@ -11224,6 +12924,48 @@ namespace Google.Analytics.Admin.V1Alpha
             _callRunAccessReport = clientHelper.BuildApiCall<RunAccessReportRequest, RunAccessReportResponse>("RunAccessReport", grpcClient.RunAccessReportAsync, grpcClient.RunAccessReport, effectiveSettings.RunAccessReportSettings).WithGoogleRequestParam("entity", request => request.Entity);
             Modify_ApiCall(ref _callRunAccessReport);
             Modify_RunAccessReportApiCall(ref _callRunAccessReport);
+            _callCreateAccessBinding = clientHelper.BuildApiCall<CreateAccessBindingRequest, AccessBinding>("CreateAccessBinding", grpcClient.CreateAccessBindingAsync, grpcClient.CreateAccessBinding, effectiveSettings.CreateAccessBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAccessBinding);
+            Modify_CreateAccessBindingApiCall(ref _callCreateAccessBinding);
+            _callGetAccessBinding = clientHelper.BuildApiCall<GetAccessBindingRequest, AccessBinding>("GetAccessBinding", grpcClient.GetAccessBindingAsync, grpcClient.GetAccessBinding, effectiveSettings.GetAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAccessBinding);
+            Modify_GetAccessBindingApiCall(ref _callGetAccessBinding);
+            _callUpdateAccessBinding = clientHelper.BuildApiCall<UpdateAccessBindingRequest, AccessBinding>("UpdateAccessBinding", grpcClient.UpdateAccessBindingAsync, grpcClient.UpdateAccessBinding, effectiveSettings.UpdateAccessBindingSettings).WithGoogleRequestParam("access_binding.name", request => request.AccessBinding?.Name);
+            Modify_ApiCall(ref _callUpdateAccessBinding);
+            Modify_UpdateAccessBindingApiCall(ref _callUpdateAccessBinding);
+            _callDeleteAccessBinding = clientHelper.BuildApiCall<DeleteAccessBindingRequest, wkt::Empty>("DeleteAccessBinding", grpcClient.DeleteAccessBindingAsync, grpcClient.DeleteAccessBinding, effectiveSettings.DeleteAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAccessBinding);
+            Modify_DeleteAccessBindingApiCall(ref _callDeleteAccessBinding);
+            _callListAccessBindings = clientHelper.BuildApiCall<ListAccessBindingsRequest, ListAccessBindingsResponse>("ListAccessBindings", grpcClient.ListAccessBindingsAsync, grpcClient.ListAccessBindings, effectiveSettings.ListAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAccessBindings);
+            Modify_ListAccessBindingsApiCall(ref _callListAccessBindings);
+            _callBatchCreateAccessBindings = clientHelper.BuildApiCall<BatchCreateAccessBindingsRequest, BatchCreateAccessBindingsResponse>("BatchCreateAccessBindings", grpcClient.BatchCreateAccessBindingsAsync, grpcClient.BatchCreateAccessBindings, effectiveSettings.BatchCreateAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateAccessBindings);
+            Modify_BatchCreateAccessBindingsApiCall(ref _callBatchCreateAccessBindings);
+            _callBatchGetAccessBindings = clientHelper.BuildApiCall<BatchGetAccessBindingsRequest, BatchGetAccessBindingsResponse>("BatchGetAccessBindings", grpcClient.BatchGetAccessBindingsAsync, grpcClient.BatchGetAccessBindings, effectiveSettings.BatchGetAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchGetAccessBindings);
+            Modify_BatchGetAccessBindingsApiCall(ref _callBatchGetAccessBindings);
+            _callBatchUpdateAccessBindings = clientHelper.BuildApiCall<BatchUpdateAccessBindingsRequest, BatchUpdateAccessBindingsResponse>("BatchUpdateAccessBindings", grpcClient.BatchUpdateAccessBindingsAsync, grpcClient.BatchUpdateAccessBindings, effectiveSettings.BatchUpdateAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateAccessBindings);
+            Modify_BatchUpdateAccessBindingsApiCall(ref _callBatchUpdateAccessBindings);
+            _callBatchDeleteAccessBindings = clientHelper.BuildApiCall<BatchDeleteAccessBindingsRequest, wkt::Empty>("BatchDeleteAccessBindings", grpcClient.BatchDeleteAccessBindingsAsync, grpcClient.BatchDeleteAccessBindings, effectiveSettings.BatchDeleteAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteAccessBindings);
+            Modify_BatchDeleteAccessBindingsApiCall(ref _callBatchDeleteAccessBindings);
+            _callGetExpandedDataSet = clientHelper.BuildApiCall<GetExpandedDataSetRequest, ExpandedDataSet>("GetExpandedDataSet", grpcClient.GetExpandedDataSetAsync, grpcClient.GetExpandedDataSet, effectiveSettings.GetExpandedDataSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetExpandedDataSet);
+            Modify_GetExpandedDataSetApiCall(ref _callGetExpandedDataSet);
+            _callListExpandedDataSets = clientHelper.BuildApiCall<ListExpandedDataSetsRequest, ListExpandedDataSetsResponse>("ListExpandedDataSets", grpcClient.ListExpandedDataSetsAsync, grpcClient.ListExpandedDataSets, effectiveSettings.ListExpandedDataSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListExpandedDataSets);
+            Modify_ListExpandedDataSetsApiCall(ref _callListExpandedDataSets);
+            _callCreateExpandedDataSet = clientHelper.BuildApiCall<CreateExpandedDataSetRequest, ExpandedDataSet>("CreateExpandedDataSet", grpcClient.CreateExpandedDataSetAsync, grpcClient.CreateExpandedDataSet, effectiveSettings.CreateExpandedDataSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateExpandedDataSet);
+            Modify_CreateExpandedDataSetApiCall(ref _callCreateExpandedDataSet);
+            _callUpdateExpandedDataSet = clientHelper.BuildApiCall<UpdateExpandedDataSetRequest, ExpandedDataSet>("UpdateExpandedDataSet", grpcClient.UpdateExpandedDataSetAsync, grpcClient.UpdateExpandedDataSet, effectiveSettings.UpdateExpandedDataSetSettings).WithGoogleRequestParam("expanded_data_set.name", request => request.ExpandedDataSet?.Name);
+            Modify_ApiCall(ref _callUpdateExpandedDataSet);
+            Modify_UpdateExpandedDataSetApiCall(ref _callUpdateExpandedDataSet);
+            _callDeleteExpandedDataSet = clientHelper.BuildApiCall<DeleteExpandedDataSetRequest, wkt::Empty>("DeleteExpandedDataSet", grpcClient.DeleteExpandedDataSetAsync, grpcClient.DeleteExpandedDataSet, effectiveSettings.DeleteExpandedDataSetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteExpandedDataSet);
+            Modify_DeleteExpandedDataSetApiCall(ref _callDeleteExpandedDataSet);
             _callSetAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>("SetAutomatedGa4ConfigurationOptOut", grpcClient.SetAutomatedGa4ConfigurationOptOutAsync, grpcClient.SetAutomatedGa4ConfigurationOptOut, effectiveSettings.SetAutomatedGa4ConfigurationOptOutSettings);
             Modify_ApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
             Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
@@ -11409,6 +13151,34 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_RunAccessReportApiCall(ref gaxgrpc::ApiCall<RunAccessReportRequest, RunAccessReportResponse> call);
 
+        partial void Modify_CreateAccessBindingApiCall(ref gaxgrpc::ApiCall<CreateAccessBindingRequest, AccessBinding> call);
+
+        partial void Modify_GetAccessBindingApiCall(ref gaxgrpc::ApiCall<GetAccessBindingRequest, AccessBinding> call);
+
+        partial void Modify_UpdateAccessBindingApiCall(ref gaxgrpc::ApiCall<UpdateAccessBindingRequest, AccessBinding> call);
+
+        partial void Modify_DeleteAccessBindingApiCall(ref gaxgrpc::ApiCall<DeleteAccessBindingRequest, wkt::Empty> call);
+
+        partial void Modify_ListAccessBindingsApiCall(ref gaxgrpc::ApiCall<ListAccessBindingsRequest, ListAccessBindingsResponse> call);
+
+        partial void Modify_BatchCreateAccessBindingsApiCall(ref gaxgrpc::ApiCall<BatchCreateAccessBindingsRequest, BatchCreateAccessBindingsResponse> call);
+
+        partial void Modify_BatchGetAccessBindingsApiCall(ref gaxgrpc::ApiCall<BatchGetAccessBindingsRequest, BatchGetAccessBindingsResponse> call);
+
+        partial void Modify_BatchUpdateAccessBindingsApiCall(ref gaxgrpc::ApiCall<BatchUpdateAccessBindingsRequest, BatchUpdateAccessBindingsResponse> call);
+
+        partial void Modify_BatchDeleteAccessBindingsApiCall(ref gaxgrpc::ApiCall<BatchDeleteAccessBindingsRequest, wkt::Empty> call);
+
+        partial void Modify_GetExpandedDataSetApiCall(ref gaxgrpc::ApiCall<GetExpandedDataSetRequest, ExpandedDataSet> call);
+
+        partial void Modify_ListExpandedDataSetsApiCall(ref gaxgrpc::ApiCall<ListExpandedDataSetsRequest, ListExpandedDataSetsResponse> call);
+
+        partial void Modify_CreateExpandedDataSetApiCall(ref gaxgrpc::ApiCall<CreateExpandedDataSetRequest, ExpandedDataSet> call);
+
+        partial void Modify_UpdateExpandedDataSetApiCall(ref gaxgrpc::ApiCall<UpdateExpandedDataSetRequest, ExpandedDataSet> call);
+
+        partial void Modify_DeleteExpandedDataSetApiCall(ref gaxgrpc::ApiCall<DeleteExpandedDataSetRequest, wkt::Empty> call);
+
         partial void Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> call);
 
         partial void Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> call);
@@ -11589,6 +13359,34 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateAttributionSettingsRequest(ref UpdateAttributionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunAccessReportRequest(ref RunAccessReportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAccessBindingRequest(ref CreateAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAccessBindingRequest(ref GetAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAccessBindingRequest(ref UpdateAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAccessBindingRequest(ref DeleteAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAccessBindingsRequest(ref ListAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateAccessBindingsRequest(ref BatchCreateAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchGetAccessBindingsRequest(ref BatchGetAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateAccessBindingsRequest(ref BatchUpdateAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteAccessBindingsRequest(ref BatchDeleteAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetExpandedDataSetRequest(ref GetExpandedDataSetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListExpandedDataSetsRequest(ref ListExpandedDataSetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateExpandedDataSetRequest(ref CreateExpandedDataSetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExpandedDataSetRequest(ref UpdateExpandedDataSetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteExpandedDataSetRequest(ref DeleteExpandedDataSetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref SetAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -12542,7 +14340,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Acknowledges the terms of user data collection for the specified property.
         /// 
         /// This acknowledgement must be completed (either in the Google Analytics UI
-        /// or via this API) before MeasurementProtocolSecret resources may be created.
+        /// or through this API) before MeasurementProtocolSecret resources may be
+        /// created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12557,7 +14356,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Acknowledges the terms of user data collection for the specified property.
         /// 
         /// This acknowledgement must be completed (either in the Google Analytics UI
-        /// or via this API) before MeasurementProtocolSecret resources may be created.
+        /// or through this API) before MeasurementProtocolSecret resources may be
+        /// created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -13785,6 +15585,352 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AccessBinding CreateAccessBinding(CreateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAccessBindingRequest(ref request, ref callSettings);
+            return _callCreateAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AccessBinding> CreateAccessBindingAsync(CreateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAccessBindingRequest(ref request, ref callSettings);
+            return _callCreateAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AccessBinding GetAccessBinding(GetAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccessBindingRequest(ref request, ref callSettings);
+            return _callGetAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about an access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AccessBinding> GetAccessBindingAsync(GetAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccessBindingRequest(ref request, ref callSettings);
+            return _callGetAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AccessBinding UpdateAccessBinding(UpdateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAccessBindingRequest(ref request, ref callSettings);
+            return _callUpdateAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AccessBinding> UpdateAccessBindingAsync(UpdateAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAccessBindingRequest(ref request, ref callSettings);
+            return _callUpdateAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAccessBinding(DeleteAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAccessBindingRequest(ref request, ref callSettings);
+            _callDeleteAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an access binding on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAccessBindingAsync(DeleteAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAccessBindingRequest(ref request, ref callSettings);
+            return _callDeleteAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccessBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindings(ListAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccessBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAccessBindingsRequest, ListAccessBindingsResponse, AccessBinding>(_callListAccessBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all access bindings on an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccessBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAccessBindingsResponse, AccessBinding> ListAccessBindingsAsync(ListAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccessBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAccessBindingsRequest, ListAccessBindingsResponse, AccessBinding>(_callListAccessBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates information about multiple access bindings to an account or
+        /// property.
+        /// 
+        /// This method is transactional. If any AccessBinding cannot be created, none
+        /// of the AccessBindings will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateAccessBindingsResponse BatchCreateAccessBindings(BatchCreateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchCreateAccessBindings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates information about multiple access bindings to an account or
+        /// property.
+        /// 
+        /// This method is transactional. If any AccessBinding cannot be created, none
+        /// of the AccessBindings will be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateAccessBindingsResponse> BatchCreateAccessBindingsAsync(BatchCreateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchCreateAccessBindings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about multiple access bindings to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchGetAccessBindingsResponse BatchGetAccessBindings(BatchGetAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchGetAccessBindings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about multiple access bindings to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchGetAccessBindingsResponse> BatchGetAccessBindingsAsync(BatchGetAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchGetAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchGetAccessBindings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates information about multiple access bindings to an account or
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateAccessBindingsResponse BatchUpdateAccessBindings(BatchUpdateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchUpdateAccessBindings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates information about multiple access bindings to an account or
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateAccessBindingsResponse> BatchUpdateAccessBindingsAsync(BatchUpdateAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchUpdateAccessBindings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes information about multiple users' links to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void BatchDeleteAccessBindings(BatchDeleteAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteAccessBindingsRequest(ref request, ref callSettings);
+            _callBatchDeleteAccessBindings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes information about multiple users' links to an account or property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task BatchDeleteAccessBindingsAsync(BatchDeleteAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteAccessBindingsRequest(ref request, ref callSettings);
+            return _callBatchDeleteAccessBindings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExpandedDataSet GetExpandedDataSet(GetExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExpandedDataSetRequest(ref request, ref callSettings);
+            return _callGetExpandedDataSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExpandedDataSet> GetExpandedDataSetAsync(GetExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExpandedDataSetRequest(ref request, ref callSettings);
+            return _callGetExpandedDataSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public override gax::PagedEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSets(ListExpandedDataSetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExpandedDataSetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListExpandedDataSetsRequest, ListExpandedDataSetsResponse, ExpandedDataSet>(_callListExpandedDataSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ExpandedDataSets on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExpandedDataSet"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListExpandedDataSetsResponse, ExpandedDataSet> ListExpandedDataSetsAsync(ListExpandedDataSetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExpandedDataSetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExpandedDataSetsRequest, ListExpandedDataSetsResponse, ExpandedDataSet>(_callListExpandedDataSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExpandedDataSet CreateExpandedDataSet(CreateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExpandedDataSetRequest(ref request, ref callSettings);
+            return _callCreateExpandedDataSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ExpandedDataSet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExpandedDataSet> CreateExpandedDataSetAsync(CreateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExpandedDataSetRequest(ref request, ref callSettings);
+            return _callCreateExpandedDataSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExpandedDataSet UpdateExpandedDataSet(UpdateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExpandedDataSetRequest(ref request, ref callSettings);
+            return _callUpdateExpandedDataSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExpandedDataSet> UpdateExpandedDataSetAsync(UpdateExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExpandedDataSetRequest(ref request, ref callSettings);
+            return _callUpdateExpandedDataSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteExpandedDataSet(DeleteExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExpandedDataSetRequest(ref request, ref callSettings);
+            _callDeleteExpandedDataSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ExpandedDataSet on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteExpandedDataSetAsync(DeleteExpandedDataSetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExpandedDataSetRequest(ref request, ref callSettings);
+            return _callDeleteExpandedDataSet.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Sets the opt out status for the automated GA4 setup process for a UA
         /// property.
         /// Note: this has no effect on GA4 property.
@@ -13957,6 +16103,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListAccessBindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListExpandedDataSetsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBigQueryLinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -14095,6 +16249,22 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<SearchAds360Link> GetEnumerator() => SearchAds360Links.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAccessBindingsResponse : gaxgrpc::IPageResponse<AccessBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AccessBinding> GetEnumerator() => AccessBindings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListExpandedDataSetsResponse : gaxgrpc::IPageResponse<ExpandedDataSet>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ExpandedDataSet> GetEnumerator() => ExpandedDataSets.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

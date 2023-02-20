@@ -1044,6 +1044,356 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class GetAccessBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AccessBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AccessBindingName AccessBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AccessBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchGetAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AccessBindingName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AccessBindingName> AccessBindingNames
+        {
+            get => new gax::ResourceNameList<AccessBindingName>(Names, s => string.IsNullOrEmpty(s) ? null : AccessBindingName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ListAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAccessBindingRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAccessBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AccessBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AccessBindingName AccessBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AccessBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchDeleteAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateExpandedDataSetRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteExpandedDataSetRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ExpandedDataSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::ExpandedDataSetName ExpandedDataSetName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ExpandedDataSetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetExpandedDataSetRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ExpandedDataSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::ExpandedDataSetName ExpandedDataSetName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ExpandedDataSetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListExpandedDataSetsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetBigQueryLinkRequest
     {
         /// <summary>

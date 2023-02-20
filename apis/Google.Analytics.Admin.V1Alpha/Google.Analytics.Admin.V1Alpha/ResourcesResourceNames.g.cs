@@ -4360,6 +4360,276 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(AttributionSettingsName a, AttributionSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AccessBinding</c> resource.</summary>
+    public sealed partial class AccessBindingName : gax::IResourceName, sys::IEquatable<AccessBindingName>
+    {
+        /// <summary>The possible contents of <see cref="AccessBindingName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>accounts/{account}/accessBindings/{access_binding}</c>.
+            /// </summary>
+            AccountAccessBinding = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/accessBindings/{access_binding}</c>.
+            /// </summary>
+            PropertyAccessBinding = 2,
+        }
+
+        private static gax::PathTemplate s_accountAccessBinding = new gax::PathTemplate("accounts/{account}/accessBindings/{access_binding}");
+
+        private static gax::PathTemplate s_propertyAccessBinding = new gax::PathTemplate("properties/{property}/accessBindings/{access_binding}");
+
+        /// <summary>Creates a <see cref="AccessBindingName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccessBindingName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AccessBindingName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AccessBindingName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AccessBindingName"/> with the pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>.
+        /// </summary>
+        /// <param name="accountId">The <c>Account</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AccessBindingName"/> constructed from the provided ids.</returns>
+        public static AccessBindingName FromAccountAccessBinding(string accountId, string accessBindingId) =>
+            new AccessBindingName(ResourceNameType.AccountAccessBinding, accountId: gax::GaxPreconditions.CheckNotNullOrEmpty(accountId, nameof(accountId)), accessBindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(accessBindingId, nameof(accessBindingId)));
+
+        /// <summary>
+        /// Creates a <see cref="AccessBindingName"/> with the pattern
+        /// <c>properties/{property}/accessBindings/{access_binding}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AccessBindingName"/> constructed from the provided ids.</returns>
+        public static AccessBindingName FromPropertyAccessBinding(string propertyId, string accessBindingId) =>
+            new AccessBindingName(ResourceNameType.PropertyAccessBinding, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), accessBindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(accessBindingId, nameof(accessBindingId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>.
+        /// </summary>
+        /// <param name="accountId">The <c>Account</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>.
+        /// </returns>
+        public static string Format(string accountId, string accessBindingId) =>
+            FormatAccountAccessBinding(accountId, accessBindingId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>.
+        /// </summary>
+        /// <param name="accountId">The <c>Account</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>.
+        /// </returns>
+        public static string FormatAccountAccessBinding(string accountId, string accessBindingId) =>
+            s_accountAccessBinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(accountId, nameof(accountId)), gax::GaxPreconditions.CheckNotNullOrEmpty(accessBindingId, nameof(accessBindingId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>properties/{property}/accessBindings/{access_binding}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccessBindingName"/> with pattern
+        /// <c>properties/{property}/accessBindings/{access_binding}</c>.
+        /// </returns>
+        public static string FormatPropertyAccessBinding(string propertyId, string accessBindingId) =>
+            s_propertyAccessBinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(accessBindingId, nameof(accessBindingId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccessBindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accounts/{account}/accessBindings/{access_binding}</c></description></item>
+        /// <item><description><c>properties/{property}/accessBindings/{access_binding}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AccessBindingName"/> if successful.</returns>
+        public static AccessBindingName Parse(string accessBindingName) => Parse(accessBindingName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccessBindingName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accounts/{account}/accessBindings/{access_binding}</c></description></item>
+        /// <item><description><c>properties/{property}/accessBindings/{access_binding}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AccessBindingName"/> if successful.</returns>
+        public static AccessBindingName Parse(string accessBindingName, bool allowUnparsed) =>
+            TryParse(accessBindingName, allowUnparsed, out AccessBindingName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccessBindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accounts/{account}/accessBindings/{access_binding}</c></description></item>
+        /// <item><description><c>properties/{property}/accessBindings/{access_binding}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccessBindingName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accessBindingName, out AccessBindingName result) =>
+            TryParse(accessBindingName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccessBindingName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accounts/{account}/accessBindings/{access_binding}</c></description></item>
+        /// <item><description><c>properties/{property}/accessBindings/{access_binding}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccessBindingName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accessBindingName, bool allowUnparsed, out AccessBindingName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(accessBindingName, nameof(accessBindingName));
+            gax::TemplatedResourceName resourceName;
+            if (s_accountAccessBinding.TryParseName(accessBindingName, out resourceName))
+            {
+                result = FromAccountAccessBinding(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_propertyAccessBinding.TryParseName(accessBindingName, out resourceName))
+            {
+                result = FromPropertyAccessBinding(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(accessBindingName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AccessBindingName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string accessBindingId = null, string accountId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AccessBindingId = accessBindingId;
+            AccountId = accountId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AccessBindingName"/> class from the component parts of pattern
+        /// <c>accounts/{account}/accessBindings/{access_binding}</c>
+        /// </summary>
+        /// <param name="accountId">The <c>Account</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="accessBindingId">The <c>AccessBinding</c> ID. Must not be <c>null</c> or empty.</param>
+        public AccessBindingName(string accountId, string accessBindingId) : this(ResourceNameType.AccountAccessBinding, accountId: gax::GaxPreconditions.CheckNotNullOrEmpty(accountId, nameof(accountId)), accessBindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(accessBindingId, nameof(accessBindingId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AccessBinding</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AccessBindingId { get; }
+
+        /// <summary>
+        /// The <c>Account</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string AccountId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.AccountAccessBinding: return s_accountAccessBinding.Expand(AccountId, AccessBindingId);
+                case ResourceNameType.PropertyAccessBinding: return s_propertyAccessBinding.Expand(PropertyId, AccessBindingId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AccessBindingName);
+
+        /// <inheritdoc/>
+        public bool Equals(AccessBindingName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(AccessBindingName a, AccessBindingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(AccessBindingName a, AccessBindingName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>BigQueryLink</c> resource.</summary>
     public sealed partial class BigQueryLinkName : gax::IResourceName, sys::IEquatable<BigQueryLinkName>
     {
@@ -4839,6 +5109,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::AttributionSettingsName AttributionSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::AttributionSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AccessBinding
+    {
+        /// <summary>
+        /// <see cref="gaav::AccessBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AccessBindingName AccessBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AccessBindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
